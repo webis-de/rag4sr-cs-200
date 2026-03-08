@@ -1,0 +1,631 @@
+{
+  "id": "W4393066628",
+  "metadata": {
+    "title": "Blockchain Use Cases in the Sports Industry: A Systematic Review",
+    "n_sections": 6,
+    "n_subsections": 8,
+    "n_subsubsections": 13,
+    "n_tables": 15
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Nowadays, sports are more than just athletic competitions; they are a thriving industry that employs over seven million people and generates an estimated 600\u2013700 billion dollars in revenue when infrastructure, events, hospitality, training, manufacturing, and retail sales of sporting goods are all taken into account [W4237889026]. Despite sports' prosperity, we cannot ignore the fact that the sports industry is considered one of the most traditional and conservative industries, and that is in order to maintain a healthy level of competition between athletes and prevent monopolistic behavior [W4237889026]. However, to thrive in the increasingly digital global business environment, sports organizations need to consider technology as an evolutionary way to keep up to date with change. Hence, there is an ongoing paradigm shift where technology is starting to play a paramount role in the sports industry [W4237889026]. In particular, athletes are increasingly turning to new technologies to improve their performance and gain competitive advantages [W4237889026], these technologies include performance-tracking sensors, smart pills, and implants, to name but a few. This intersection of sports and technology or sportstech as commonly known [W4237889026], affects many fields of the sports industry beyond improving athletes' performance discussed above, sports-tech also has an impact on a variety of other aspects of the sports industry, such as sports broadcasting, sports sponsorship, event management, smart stadiums, and fan interaction. Through innovations like the goal-line technology in football, the shot clock in basketball, the hawk-eye in tennis, and the video-assisted referee (VAR), technology has also made it easier to adhere to the laws of sports. These lucrative opportunities offered through sportstech have caught the attention of investors and scholars, where it is reported that more than 12 billion USD were invested between 2014 and 2019 with the world's biggest tech companies such as Apple, Cisco, and IBM entering the space at an increasing pace, while in academia, it is reported that the research on sports tech has increased significantly over the years [W4237889026, W4237889026, W4237889026].\n\nHowever, despite this significant progress, the sports industry continues to face numerous obstacles and inefficiencies that hinder its growth and lead to widespread scandals. For example, the detention of FIFA's top executives illustrates how the lack of transparency and centralization can breed corruption, bribery, vote rigging, and unscrupulous financial dealings in sports [UNMAPPED:5]. Another major concern is doping, where existing anti-doping protocols frequently fall short, as numerous doping scandals have revealed [W4388908840]. This is despite initiatives by the World Anti-Doping Agency, such as the Anti-Doping Administration and Management System, which grapple with typical centralized systems issues like lack of transparency, data manipulation, and inadequate privacy [W4285596361]. Furthermore, traditional funding models for sports clubs and athletes are fraught with problems arising from their centralized nature, including excessive intermediary fees, and a deficit in transparency and trust. Similarly, player contracts and transfer dealings are often mired in disputes due to a highly centralized management approach, compounded by transparency and trust deficiencies [UNMAPPED:8]. Additionally, while advancements in the Internet of Things and information technology have significantly enhanced sports statistics and analytics, security and privacy concerns are arising across all facets of these areas, encompassing, data acquisition and storage, privacy-preserving data mining, as well as the security of both hardware and software systems employed in these sensors [W3085403588]. All of which are subject to distinct constraints, where for instance, the management of the collected data still depends on centralized databases, which are vulnerable to typical centralization problems like single points of failure, data tampering risks, and a lack of transparency and traceability [W4388908840]. The sector of sports event management also faces numerous hurdles, including frequent incidents of ticket counterfeiting and scalping attributed to the limitations in the current ticketing systems [W4388427235]. Likewise, the market for sports memorabilia is plagued by authenticity issues and counterfeit items, stemming from a lack of transparency and traceability [W4237889026].\n\nWith its origin as a white paper submitted in 2008 by Satoshi Nakamoto [UNMAPPED:12], it wasn't until 2009 that the first bitcoin Blockchain was implemented which constituted the first generation of blockchain. The initial generation of blockchain technology was primarily employed for cryptocurrency and financial transactions. However, with the emergence of the Ethereum blockchain, which introduced smart contracts, blockchain has evolved into a versatile technology with applications across various industries and use cases. These include but are not limited to the Internet of Things, supply chain management, healthcare, smart grid, and insurance [W3163305940, W3210840115, W2901598045].\n\nBlockchain technology, with its distinctive features, holds the potential to be a transformative force in the sports industry, addressing its various challenges and inefficiencies. This technology paves the way for a shift from the current, globally fragmented centralized systems to a decentralized peer-to-peer network, enhancing transparency and auditability. The process of timestamping, encrypting, and linking data in a blockchain ensures its immutability, which significantly improves the ability to track, trace, and certify within the industry. Moreover, blockchain offers numerous benefits, including the reduction of cybersecurity concerns and enhanced data protection through cryptographic techniques and encryption. It also eliminates central points of failure and reduces the reliance on intermediaries found in centralized systems, thanks to its decentralized nature and the implementation of automation through smart contracts.\n\nMany sports companies have teamed up with top-tier clubs and players to offer blockchain-based applications including fan tokens, Non-Funguble Tokens (NFT) collectibles, sports tickets, sports gambling, and many more [W4237889026]. The first sports blockchain, \"BraveLog\" was presented by tech giant Microsoft in 2017. This solution intends to securely record athletes' performance data using blockchain, creating a sports CV of the athletes that will aid them in understanding their talents and efficiently managing their individual training [UNMAPPED:16]. Another example is Blocksport, which is a company that provides blockchain-based technical solutions to clubs and leagues like ticketing, voting, and loyalty programs [W4237889026]. Other examples include Chiliz which helps top soccer clubs sell fan tokens to supporters, while Bethereum, 1XBit, and Decent are companies that offer blockchain-based sports betting platforms [W4237889026]. Even big sports governing bodies such as FIFA is starting to use the blockchain to manage big Football events [UNMAPPED:17].\n\nNonetheless, blockchain's adoption within the sports industry remains constrained [UNMAPPED:18], despite the widespread theoretical advantages attributed to it. The practical utilization and real-world impact of blockchain in the sports sector remain relatively unexplored. While there have been two reviews examining the integration of blockchain technology in sports, we argue that these reviews do not comprehensively address the subject and its potential applications. In the research conducted by Schillinger et al. [UNMAPPED:18], the authors successfully identified and categorized blockchain use cases in sports. However, the technical implementation details and practical aspects of employing blockchain in this domain receive limited coverage. Conversely, in the study by Lopez et al. [W4283800799], blockchain's role in sports is extensively discussed, albeit solely within the context of one application area (athlete data management). Conversely, our work differs from the available literature as shown in Table 1, where we not only identify the application areas of blockchain in the sports industry and explain the rationale for adopting this technology in these areas, but we also aim to help researchers and practitioners to understand the limitations of developing blockchain-based sports applications as well as shed light on the current technical approaches and considerations employed in developing these applications. The main contributions of this systematic review are threefold:\n\n- Identify the application area of blockchain in the sports industry.\n- Explore the implementation details of the proposed systems.\n- Identify the barriers to its implementation and propose potential solutions to enhance the adoption of blockchain in the sports industry.\n\nThe remainder of this paper is organized as follows. Section 2 provides a technical overview of the blockchain technology. Section 3 describes the applied research methodology. In Sect. 4 we present the obtained results. In Sect. 5 we discuss our results and in Sect. 6 we present the conclusion.",
+      "citations": [
+        "W4237889026",
+        "W4237889026",
+        "W4388908840",
+        "W4285596361",
+        "W3085403588",
+        "W4388427235",
+        "W4237889026",
+        "W4283800799"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "5",
+        "8",
+        "12",
+        "16",
+        "17",
+        "18"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Blockchain Overview",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "To understand this work, it is essential to provide the concepts of blockchain technology, its features, and applications. Being the technology behind cryptocurrencies, blockchain is usually misunderstood as one. In essence, a blockchain is a distributed, append-only ledger that is organized into a linked list of blocks and disseminated across several nodes, and unlike traditional ledgers where there is a central authority that oversees all transactions, in blockchain, each user (referred to as a node) functions as an independent oversight authority [W4313502814]. The interaction between nodes in the blockchain is done via a pair of keys; public and private Public keys are used to generate users' addresses, meanwhile, the private keys are used to sign the transactions. When a user wants to send a transaction he first signs it with his private key, then this transaction is broadcasted to all nodes in the network. These transactions are subsequently combined into a time-stamped candidate block by a set of network nodes known as miners. This candidate block must be mined using a certain consensus technique to be included in the network [W4313502814]. Figure 1 depicts the process of how a blockchain works.\n\nBlockchain is typically categorized as public or permissioned. A public blockchain is fully decentralized where anyone can access and join. Meanwhile, permissioned blockchains are partially decentralized (managed by one or multiple organizations) where only pre-authorized people join the network.\n\nThe potential for disruption is what drives the buzz surrounding this technology, which is further reinforced by its trust-building capabilities, which do away with the need for a third-party authority. To begin with, it offers security by timestamping and hashing each block to create an unalterable ledger linked to preceding blocks. Secondly, its decentralized nature ensures transparency among all participants in the shared ledger. Lastly, its distribution across numerous nodes enhances security by increasing resistance to malicious activities [W3210840115].\n\nTo better understand the working mechanism of blockchain we proceed to introduce the main components that make up its architecture which include Nodes, Ledger, Transactions, Blocks, Cryptographic hash functions, public key cryptography, Miners, and Consensus.\n\n**Nodes**: Nodes are the devices forming the backbone of a blockchain. They keep all copies of the ledger in sync. Nodes can be classified into two broad types Full nodes and Light nodes. Full nodes are responsible for preserving a full copy of the blockchain's transaction history while also validating new blocks creating a trustworthy ledger. Meanwhile, light nodes only serve simple processing of transactions and depend on full nodes to function, as they do not store the entire blockchain [W3210840115].\n\n**Ledgers**: A ledger is used by a blockchain to maintain records. As it is decentralized, every node on the blockchain has a complete copy of the same ledger.\n\n**Blocks**: A distributed ledger contains a chain of blocks linked together where the first block is called the genesis block. In essence, a block is an assembly of ordered transactions. Blocks generally consist of a block body and a block header, where the block body includes the various transactions and the block header contains the block's metadata [W3210840115].\n\n**Transactions**: A transaction is a transfer of assets (financial or non-financial) or an interaction with a smart contract. Transactions are always signed by their corresponding emitter before being sent to the blockchain. Eventually, miners proceed to validate them before adding them to blocks in the blockchain. A transaction is refused in case its signature is invalid or if it conflicts with the ledger history [W3210840115].\n\n**Miners**: When transactions are created, miners are responsible for verifying these transactions before putting them on the ledger following a consensus algorithm. Since mining is a computationally heavy process, miners get rewarded when they succeed to mine a block in the form of cryptocurrency [W3210840115].\n\n**Cryptographic hash functions**: Hash algorithms map an arbitrary amount of data and produce a digest of fixed size. It is used to guarantee data integrity.\n\n**Asymmetric-key cryptography**: To provide certainty between the transacting parties who are dubious of each other's integrity, public-key cryptography is utilized. Asymmetric-key cryptography employs a pair of keys to guarantee data security and confidentiality.\n\n**Consensus**: A consensus can be identified as a decision-making criterion. It ensures that a block is validated by every node and that there are no unauthorized duplicates in the ledger [W3163305940]. Table 2 below lists a few consensus protocols.\n\nWhile the first generation of blockchain consisted mainly of the transfer of cryptocurrencies, the emergence of programmable blockchain which introduced smart contracts allowed blockchain technology to unravel new opportunities and application areas. These \"smart contracts\" are described as blockchain-based computer programs that digitally enable, validate, and uphold contracts formed between two or more parties. Being event-driven, smart contracts are activated as soon as the predefined conditions are satisfied. However, smart contracts are architecturally isolated from the external world [W4237818511], meaning they are restricted to using resources on the blockchain network and are unable to access external data. To address this, blockchain oracles come into play [W3023266124]. Simply put, oracles are trusted entities that bring data from the outside world into the blockchain which allows it to be more dynamic [W3023266124].\n\n---\n\n**TABLE 1** Previous review studies on Blockchain in the sports industry\n\n{{TABLE:tbl_01}}\n\n---\n\n**FIGURE 1** Blockchain workflow\n\n*[Image description: A circular diagram illustrating the blockchain workflow with six steps. Step 1: User A requests a transaction. Step 2: Requested transaction is broadcasted to a peer-to-peer network comprising nodes. Step 3: The nodes involved validate the transaction. Step 4: Once verified, the transaction is combined with other transactions to create a new block. Step 5: New block is added to the existing chain. Step 6: The transaction is complete.]*\n\n---\n\n**TABLE 2** Comparison of some consensus protocols\n\n{{TABLE:tbl_02}}\n\n---",
+      "citations": [
+        "W4313502814",
+        "W3210840115",
+        "W3163305940",
+        "W4237818511",
+        "W3023266124"
+      ],
+      "tables_in_text": [
+        "tbl_01",
+        "tbl_02"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Research Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Research Questions",
+          "subsubsections": [],
+          "text": "As recommended by the PRISMA protocol, we have defined our research questions, which aim to analyze and demystify the state-of-the-art research on the topic of the use case of blockchain technology in the sports industry as presented in Table 3.\n\n**TABLE 3** Research questions\n\n{{TABLE:tbl_03}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Search Strategy",
+          "subsubsections": [],
+          "text": "To accumulate pertinent literature for this systematic review, a search strategy was formulated. Reflecting the scope and aims of the research. The search strings were set within two primary domains: 'blockchain' and 'sports industry'. For the 'blockchain' domain, keyword variations such as \"blockchain*\" and \"block chain\" were incorporated. In the 'sports industry' domain, the terms \"sports industry\" and \"sports\" were included. The search algorithm was constructed by intertwining these two domains with an 'AND' operator, resulting in the following search phrase: (\"blockchain\" OR \"block chain\") AND (\"sports industry\" OR \"sports\") To ensure a thorough exploration, multiple searches were conducted across four databases. The selected databases included DOAJ, Science Direct, PubMed, and IEEE Xplore, all known for housing an extensive collection of pertinent articles. Additionally, we included other papers through manual searches on Google Scholar to encompass a broader range of literature. The eligibility criteria protocol for the selection of papers in this review is shown in Table 4.\n\n**TABLE 4** Literature selection criteria\n\n{{TABLE:tbl_04}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_04"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Data Selection",
+          "subsubsections": [],
+          "text": "The search across three distinct databases yielded a cumulative total of 841 papers, as depicted in the PRISMA [W4214443] flowchart (Fig. 2). This chart delineates the process through stages of identification, screening, and inclusion. From the initial 841 records, 3 papers were non-English literature, 6 were retracted papers, while 30 were identified as duplicates and subsequently removed, leaving 802 for the initial screening. Adhering to the PRISMA [W4214443] guidelines, this preliminary screening involved: (1) assessing titles and abstracts for relevance; followed by (2) evaluating the full texts for eligibility. Post the initial screening, 757 articles were discarded due to irrelevance to the subjects of blockchain or the sports industry, or relevance to only one of the topics. The subsequent full-text assessment of the remaining 45 articles led to the exclusion of an additional 7 records. Exclusion criteria included a superficial treatment of blockchain technology, often conflated with other technologies such as IoT, AI, Big Data, etc., or the term blockchain is only mentioned in the abstract. Ultimately, 38 records met all criteria and were selected for inclusion in this systematic literature review (SLR) for comprehensive data analysis, and synthesis.\n\n---\n\n**FIGURE 2** Flow diagram of the systematic review according to PRISMA guidelines\n\n*[Image description: A PRISMA flow chart showing the selection process. Identification: Articles identified through database searching (841). Exclusion of Non-English literature (03), Retracted papers excluded (6). Records imported into citations manager (832). Duplicates removed (30). Screening: Title and abstract screening (802). Articles excluded based on titles and abstract (757). Eligibility: Full-text articles assessed for eligibility (45). Full-text articles excluded (7). Included: Total number of article included (38).]*\n\n---",
+          "citations": [
+            "W4214443",
+            "W4237889026",
+            "W4237889026",
+            "W4388908840",
+            "W4207068574",
+            "W4285596361",
+            "W3170322419"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "841",
+            "03",
+            "832",
+            "30",
+            "802",
+            "757"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Data Analysis, Synthesis, and Reporting",
+          "subsubsections": [],
+          "text": "During the final phase, data extraction from each study that met the inclusion criteria was performed, followed by an analysis pertinent to the research questions. The fundamental attributes of the studies were thoroughly extracted and examined to address the research questions. To respond to the initial research question, we analyzed the proposal of each paper and provided a taxonomy of the proposed use cases and the targeted stakeholders. While a partial response to the second research question can be found in the first response, a more comprehensive synthesis of the studies was required to extract the implementation details. In addressing the third and fourth research questions, we identified barriers and challenges associated with the adoption of blockchain technology in the sports industry, as derived from the analyzed articles, and discussed how these limitations are being addressed. The insights from this systematic review are detailed in Sect. 4.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "To address the objectives of the study, a systematic review of the literature was undertaken. This method, grounded in an evidence-based approach, is instrumental in collecting pertinent research, exploring the contemporary landscape of the research subject through a thorough examination of existing scholarly findings, thereby ensuring an unbiased perspective. The choice of Systematic Literature Review (SLR) as our research method was driven by the overarching objective of examining the extent and function of blockchain technology in the sports industry. The methodological foundation of this review article adheres to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines [W4294215472], as well as the guidelines for systematic literature review and systematic mapping study [W4214443, UNMAPPED:24]. This combination of guidelines ensures a thorough analysis of both quantitative and qualitative research, leading to a more robust data synthesis. Our systematic review process entailed four stages: (1) formulating research questions; (2) developing a search strategy; (3) selecting data; and (4) data analysis, synthesis, and reporting.",
+      "citations": [
+        "W4294215472",
+        "W4214443",
+        "W4237889026",
+        "W4237889026",
+        "W4237889026",
+        "W4237889026"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "24"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 What are the Use Cases and Targeted stakeholders of Blockchain in the Sports Industry?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.1.1 Type of Papers",
+              "parent_subsection_id": "s_4_1",
+              "text": "For the type of paper, we have identified two broad types; reports and technical papers. Reports refer to papers that discuss the use of blockchain in the sports industry in a broad way; giving examples and ideas without any technical contributions or implementations. On the contrary, technical papers provide concrete technical contributions. 21 (48%) of the collected papers are technical papers while 17 (52%) are reports as illustrated in Fig. 5a.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.1.2 The Field of Sports",
+              "parent_subsection_id": "s_4_1",
+              "text": "As we aimed to better examine the adoption of Blockchain in sports, the collected articles were further analyzed from the perspective of the field of sports they discuss, where we have classified the adoption area of our papers into traditional sports and digital sports. Traditional sports are characterized as physical activity involving competition between athletes or teams as well as recreational sports, such as football, tennis, handball, taekwondo, running...etc. Thus papers in this class propose use cases in these sports from different angles (performance improvement, management and governing, fan engagement... etc.). Meanwhile, the digital sports category encompasses three application areas; sports gambling, fantasy sports, and Esports. We have found that our included sources predominantly discuss traditional sports use cases with 34 (81%) papers, meanwhile, only 8 papers (19%) discuss digital sports use cases as shown in Fig. 5b.\n\n**TABLE 6** Overview of the proposal of the selected papers\n\n{{TABLE:tbl_09}}\n\n---\n\n**FIGURE 5** (a) Selected papers type. (b) Type of sports\n\n*(a)*\n{{TABLE:tbl_10}}\n\n*(b)*\n{{TABLE:tbl_11}}\n\n---",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_09",
+                "tbl_10",
+                "tbl_11"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.1.3 The Proposed Use Cases of Blockchain in the Sports Industry",
+              "parent_subsection_id": "s_4_1",
+              "text": "In terms of the proposed use cases of blockchain technology in the sports industry, we have identified 10 different use cases; where The use of blockchain technology for athletes' data management is mentioned in most publications (20 sources), the second most prevalent application area is sports finance and crowdfunding with 9 papers, followed by sports collectibles & products with 8 papers, and sports events management and fan engagement with 7 works each. Other application areas are sports gambling (6 articles), Esports (3 articles), sports copyright protection (3 articles), anti-doping (2 articles), and fantasy sports (2 articles) as detailed in the Fig. 6.\n\n**FIGURE 6** Distribution of the papers by the application area\n\n{{TABLE:tbl_12}}\n\n---\n\nSince each paper addresses one or more use cases, we provide the following analysis where we discuss each blockchain application area in the sports industry, explain the rationale for adopting this technology in these areas, and discuss the examples of blockchain-based solutions presented in our resource pool.",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_12"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Athlete's Data Management",
+              "parent_subsection_id": "s_4_1",
+              "text": "Athletes' performance and fitness metrics are an important key that reflects the physical health and competitive level of athletes allowing them to get recruitment/sponsorship contracts, and government funding and incredibly beneficial for setting up training plans, avoiding injuries, and making sports predictions. Therefore, it is crucial to ensure its integrity and transparency, however, currently, this information is stored on centralized databases which suffer from the inherent issues of centralized systems such as single point of failure, the possibility of data tampering, and the lack of transparency and traceability [W4226191521]. Blockchain's characteristics of decentralization, immutability, transparency, and privacy have been reported as key features that allow it to serve as a reliable data bank of athletes' performance data [W4388908840, W2970577369, W4237889026, W4244919316, W4283269834, UNMAPPED:26].\n\nIn 2017 [UNMAPPED:16] tech-giant Microsoft unveiled the first sports blockchain \"BraveLog\", which runs on the Microsoft Azure platform. This solution aims to record athletes' performance statistics securely using blockchain, establishing a sports CV of the athletes, which will help them, understand their capabilities and manage their personal training effectively.\n\nCarlsson-Wall et al. [W4237889026] mentioned many applications that fit this use case in the sportstech market, for example, Peerspoint which is a company that incorporates blockchain to collect and store athletes' performance during training sessions and games, to help recruiters and coaches compare individual players and identify young talent. Furthermore, it offers tools to predict sports injuries and enhance performance. Similarly, Playmaker chain provides a blockchain-based solution to store players' performance during training using IoT devices to provide clubs and recruiters authentic data for the assessment of players before recruiting them. It is worth noting that the Playmaker chain introduces a custom blockchain with higher throughput than the standard Ethereum blockchain [UNMAPPED:58].\n\nNingning He [W4226191521] proposed the construction of a blockchain-based sports archive system. Such a model can effectively tackle the issues of conventional sports archive systems that stem from the limitations of centralized systems which are prone to single point of failure, data tampering, and lack transparency and traceability, and that is thanks to blockchain's unique characteristics. The application values of this system according to the author include intelligent identity authentication, and better data authenticity, security, and traceability. The author put forward some basic design and implementation ideas such as blockchain platform selection where he proposed to use a consortium blockchain and highlighted the main difficulty in designing which resides mainly on the data sets stored in blockchain nodes and the process of its collection and fusion. Unfortunately, no implementation is proposed.\n\nThe authors in [W3173080041] presented a blockchain-enabled system for the real-time collection and management of athlete's fitness data where the blockchain is used to render the collected data streaming from IoT devices more private and secure, which are later used to enable the athletes to understand their abilities and allow coaches to handle personal training plans more effectively. Similarly, [UNMAPPED:33] proposed a blockchain-based fitness management system. The system consists of a data perception layer where IoT devices collect athlete physiological data, a transmission layer for the transmission of the collected data, and finally, an application layer that receives data from the former layer stores them in the blockchain, and handles access requests for the data that will be used to assess player's performance and improve their training techniques.\n\nIn their study, the authors in [W4302846360] introduced B-PEIS, a blockchain-based system designed to securely handle students' physical data in the realm of physical education. The system's architecture incorporates Hyperledger, establishing three distinct channels within the B-PEIS framework to regulate access for students, teachers, and regulators. Additionally, the system leverages smart contracts to contract to manage access control. A notable aspect of their research involves the application of the Hyperledger Caliper tool to assess the system's performance. The findings highlight that the system sustains robust throughput and latency even as the user base expands.\n\nShifting the emphasis to performance prediction. In [W3134885440], the authors combined blockchain and predictive algorithms to build a system capable of making precise performance predictions in sports tournaments based on athletes' training and performance data. The authors used the blockchain to establish a secure and transparent platform dedicated to collecting, storing, and analyzing athletes' data. Similarly, the authors in [UNMAPPED:16] proposed a collaborative system of blockchain, big data, and AI to manage athletes' performance. In this system athletes' skills and performance in-game and outside of-game are recorded and stored in the blockchain in real-time and delivered to the interested stakeholders (coaches, managers, doctors, athletes...) to improve athletes' performance, and make accurate predictions. The authors in this work opted to use Hyperledger Fabric to add more security and accountability to the recorded data. However, the lack of detailed discussion of the technical aspects of implementation and performance testing is a major drawback of this work.\n\nIn the pursuit of establishing a sports injury rehabilitation monitoring system, the authors in [W4380483446] proposed a blockchain-enabled sports rehabilitation injury monitoring system using neural networks. The study involved a thorough analysis and design of the proposed system which introduces an advanced neural network algorithm and implements blockchain technology to store athlete's related data. The neural networks, through the analysis and interpretation of these data sets, are capable of identifying patterns and trends that could indicate the effectiveness of specific rehabilitation programs, offering valuable insights and recommendations for the optimization of rehabilitation strategies. The integration of blockchain technology, coupled with IPFS, ensures the integrity and immutability of the collected data, thereby providing a reliable and trustworthy record of the rehabilitation process. Experimental verification demonstrated the system's high monitoring accuracy.\n\nThe authors in [W4388469901] introduced Block-Deep, a novel hybrid model integrating blockchain and deep learning technologies, aimed at refining conventional fracture detection methods which are typically expensive, time-intensive, and susceptible to inaccuracies, while also lacking robust security measures for safeguarding athletes' sensitive information. Block-Deep encompasses several critical phases, including data gathering, blockchain-empowered secure data storage and access control using smart contracts, feature extraction via Capsule Network, and final classification through a Visual Transformer-based transfer learning approach. The empirical assessment of the model underscores its outstanding performance, although it does not include specific evaluations related to the blockchain component.\n\nIn contrast to the previous papers where the term sports is used in a general sense. Ma [W3135109590] proposed a running training auxiliary system based on blockchain and wireless sensor technology. In this model, sportsman gait information and heart rate are collected using wireless sensors, and leverages blockchain technology to design data transmission and storage schemes for the protection and analysis of user-related data. The author reported that the use of blockchain for privacy protection introduces computational overhead which increases as security requirements increase. In [W4286209276], the authors developed a system to improve training plans in Basketball, in which players' physiological data throughout the training sessions are recorded in real-time using IoT devices and stored in the blockchain, furnishing coaches with invaluable insights for tracking training programs quality and making well-informed decisions. Meanwhile, the authors in [W3116530429] developed a platform to track Taekwondo belt promotion exams where the blockchain is used to assure the transparency and immutability of the recorded results. In this system, the authors proposed a web-based solution to interact with the system, although the web-based technology stacks utilized are not discussed. Also, no performance tests are included. Finally, a system for performance prediction of cricket players is presented in [W4388488056]. In this system, the authors used Hidden Markov Model (HMM) to make accurate performance predictions for batsmen in cricket, while leveraging InterPlanetary File System (IPFS) and blockchain for data storage to ensure data integrity, security, and decentralization. The inclusion of IPFS aims to alleviate the burden of storage from the blockchain; where only the corresponding data hashes and prediction results are stored in the blockchain to prevent data tampering and to ensure data privacy and confidentiality. Unfortunately, like the previous studies, little information about the technical details of implementation are provided.\n\nIn order to understand football sports injuries and propose efficient recovery plans, the authors in [W4360610402] proposed to improve traditional football player injury cycle management and monitoring systems by integrating blockchain and machine learning. In the proposed system, the blockchain is used to store the data of football players' injury cycle to add more security and immutability, while the machine learning algorithm analyzes this data and generates treatment and rehabilitation plans for football players. Experimental results show that the proposed system provides better data security, data comprehensiveness, and data carrying capacity than the traditional system, however, no blockchain-related performance is provided.",
+              "citations": [
+                "W4226191521",
+                "W4388908840",
+                "W2970577369",
+                "W4237889026",
+                "W4244919316",
+                "W4283269834",
+                "W4237889026",
+                "W3173080041",
+                "W4302846360",
+                "W3134885440",
+                "W4380483446",
+                "W4388469901",
+                "W3135109590",
+                "W4286209276",
+                "W3116530429",
+                "W4388488056",
+                "W4360610402"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "26",
+                "16",
+                "58",
+                "33"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "Sports Events Management",
+              "parent_subsection_id": "s_4_1",
+              "text": "Another application of the blockchain in the sports industry is in the field of sports events management where we found many papers that propose ticketing systems powered by blockchain, which can stamp out fraud and add more privacy and transparency [W3173331217]. Unlike cryptocurrencies that are mutually interchangeable and fungible, Non-fungible tokens (NFTs) represent unique assets that have been tokenized via a blockchain, where each NFT is assigned a unique identification code and metadata that distinguish it from other tokens. Tokenizing sports tickets in the form of NFTs in the blockchain would allow sports event organizers to completely eliminate ticket forgery since NFTs inherit blockchain characteristics of immutability and transparency, therefore these tokens cannot be forged and their authenticity is easily verified [W4293483530]. Furthermore, through the utilization of smart contracts and Non-Fungible Tokens (NFTs), it becomes feasible to establish automated conditions for each ticket, effectively addressing issues related to scalping and speculative secondary sales. One potential measure involves setting a maximum limit on the number of tickets that can be owned by a single wallet, thereby significantly impeding the operations of automated bots within the digital ticketing system sphere. Additionally, measures could be implemented to restrict ticket resale to a price that does not exceed the initial purchase price. Moreover, royalties can be seamlessly incorporated into the system, with automatic payments to the NFT creator [W4388427235].\n\nUnder the background of issues observed in the ticketing system during the 2018 Asian games, the authors in [W3206674863] proposed the integration of blockchain and RFID in building a sports ticketing system. In the new proposed system the blockchain is used to maintain tamperproof tickets and act as a transaction validator, subsequently, the spectators are provided with a unique RFID wristband containing their ticket number, which would trigger a smart contract once they pass by the RFID gate readers to check the validity of their ticket. This system would eliminate ticket counterfeiting as well as reduce physical contact due to the outbreak of the COVID-19 pandemic.\n\nIn the study by Regner et al. [UNMAPPED:28], the prevalent issues in sports ticketing systems, including ticket fraud and inadequate regulation of secondary markets, were tackled. The researchers introduced a blockchain-based system where event tickets are digitally issued as non-fungible tokens (NFTs), ensuring authenticity and preventing duplication. The system's architecture utilizes an Ethereum smart contract, enabling purchasers to acquire tickets directly from the blockchain. These tickets are issued as NFT tokens, and immediately transferred to the buyer's wallet upon transaction verification, thereby circumventing intermediary costs and counterfeit risks. Furthermore, the integration of NFTs with smart contracts streamlines refund processes and grants event organizers comprehensive oversight over ticket transfers. This includes the ability to impose resale price ceilings and to earn a share from each resale transaction.",
+              "citations": [
+                "W3173331217",
+                "W4293483530",
+                "W4388427235",
+                "W3206674863"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "28"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "Anti-doping",
+              "parent_subsection_id": "s_4_1",
+              "text": "The information concerning state-sponsored doping in the former Soviet Union from the 1980s to the present day that was made public at the 2016 Olympic Games in Rio de Janeiro did a lot of damage to sports and showed that existing anti-doping mechanisms are ineffective [UNMAPPED:59]. Blockchain's characteristics of transparency, tamper proof, and privacy as well as smart contracts offer sports regulators an innovative platform to fight against doping [W4388908840, W2970577369].\n\nThe authors in [W4285596361] identified many challenges and vulnerabilities pertaining to the current Anti-Doping Administration & Management System (ADAMS) belonging to the World Anti-Doping Agency (WADA) namely, over-centralized data management paradigms, non-digitalized processes, and Insufficient Anonymization and Privacy, which led to many incidents over the years and still jeopardize the efficacy of the agency. Therefore, the authors investigated the incorporation of blockchain to resolve these challenges where they proposed a new design for the request of Therapeutic Use Exemptions (TUEs), which is a highly sensitive data-sharing process within the AD ecosystem based on permissioned blockchain. This new model offers more security, and democratization compared to the current process. However, unfortunately, no implementation is provided although it is planned for future scope.",
+              "citations": [
+                "W4388908840",
+                "W2970577369",
+                "W4285596361"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "59"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "Sports Collectibles and Products",
+              "parent_subsection_id": "s_4_1",
+              "text": "Sports collectibles and products is an enormous market, but it suffers from fraud, and the process to prove the authenticity of items is hard and dubious [W4237889026]. A number of papers in our review proposed the use of blockchain to certify the authenticity and track the ownership of sports collectibles and products, thanks to its characteristics of immutability and transparency thus eliminating fraud, which will have a profound impact on this market [W3085403588, W4237889026, W3173331217].\n\nTo add more transparency to NBA digital cards online trading and eliminate counterfeit, Chang et al. [W4294958080] proposed a blockchain-driven NBA digital trading card management system. The proposed system consists of 6 phases (1) Registration, (2) Manufacturing Authorization, (3) Review, (4) Issue, (5) Identity Verification and Invoicing, (6) Payment and (7) Browse and Access, where each phase triggers smart contract that verifies and stores key information pertaining to the origin, issuance, purchase, and ownership of the digital trading cards, which provides transparent, auditable and tamper-proof evidence and trails for the authenticity of digital cards and its ownership protecting collectors in case of disputes. This solution employs hyperledger Fabric as a blockchain platform which provides among other things better security, access control, and scalability over public blockchains.\n\nThe authors in [W4327772891] discuss the design of a digital sales platform for sports products, with particular emphasis on the consensus algorithm. Within this framework, a reputation-based delegated proof of stake (RDPoS) consensus algorithm is introduced, incorporating a structure of ordinary nodes, proxy nodes, and miner nodes, aiming to optimize throughput and ensure privacy. The empirical evaluation of the algorithm's throughput during transactions substantiates the superior performance of the RDPoS algorithm.\n\nIn addition to the trust and transparency it brings to the sports collectibles and products market, blockchain introduces a new type of digital sports collectibles powered by non-fungible tokens (NFTs) whose uniqueness and authenticity can be verified by the blockchain technology. For instance, in collaboration with Dapper Labs, the NBA launched \"NBA Top Shot\", which is an online platform where users can buy, collect, and exchange NBA NFTs that show match highlights. Player's signatures, and trading cards from top basketball players minted on the blockchain in the form of NFTs [W4293483530]. Carlsson-Wall et al. [W4237889026] identified many companies that formed partnerships with sports clubs and federations to launch NFT-based digital collectibles. For example, Pro Exp Media, which works with an NHL club, named LA Kings, Stryking.io has a partnership with football club Bayern M\u00fcnchen, and EX Sports, which focuses mainly on martial arts and have a partnership with Jiu Jitsu and Muay Thai federations.",
+              "citations": [
+                "W4237889026",
+                "W3085403588",
+                "W4237889026",
+                "W3173331217",
+                "W4294958080",
+                "W4327772891",
+                "W4293483530",
+                "W4237889026",
+                "W4237889026",
+                "W4237889026",
+                "W4237889026",
+                "W4388908840",
+                "W4285596361"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "5"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_8",
+              "subsubsection_index": 8,
+              "subsubsection_label": "Fan Engagement",
+              "parent_subsection_id": "s_4_1",
+              "text": "Blockchain technology can help sports teams and athletes strengthen their fan engagement effortlessly through the use of fan tokens. The idea, in general, is that fans buy their favorite team's tokens in the form of cryptocurrencies (ERC-20), and In exchange, they get unique benefits such as VIP game passes, sports collectibles and products, and access to meet-and-greet events with the players. Fan tokens also empower fans and give them a sense of involvement in the club's decision-making and governance through voting rights, for example, they allow fans to recommend the design of the jersey or even vote on potential recruits [W4237889026, W2970577369, UNMAPPED:26]. For example, Chiliz.com/Socios.com is a company that is cooperating with top football clubs to assist them reach their fan base and sell their fan tokens to supporters, where the more tokens the fan owns, the more influence one can have on the decisions open for supporters to vote on [W4237889026, W4367359547]. Another interesting initiative that takes fan engagement to another level is the FCFL (Fan Controlled Football League). As its name indicates, the FCFL represents the first American football sports league where all team decisions on and off the field starting from drafting players until play-calling decisions, are all made by fans via the league's blockchain. With the FCFL platform, fans can buy fan tokens to level up and gain voting rights for their favorite team, and the more fan tokens one owns the more influence he has over the team's decisions [UNMAPPED:26].\n\nFurthermore, the integration of NFTs into the realm of sports events presents new avenues for enhancing fan engagement. One notable example of NFT use in fan engagement is the Proof of Attendance Protocol (POAPs). This protocol issues NFTs as verifiable proof of attending an event, allowing fans to redeem these NFTs to access real-life experiences, win merchandise, and secure tickets for future events [W4388427235]. Also, tickets that remain unsold could be allocated for an exclusive sale reserved for fans who possess a specified quantity of NFTs symbolizing tickets from past events. This strategy would serve as a means to acknowledge and reward fan loyalty which not only has the potential to generate supplementary income for organizations but also fosters a sense of appreciation among loyal supporters [W4388427235].\n\nIn addition to fan tokens and NFTs, blockchain's salient characteristics can increase trust and transparency between clubs and fans by creating transparent and accountable platforms for sports news dissemination [W4283269834]. In this context, Liu et al. [W3170322419] discussed how the non-transparency in football's player transfer market reduces fans' satisfaction and trust, and in order the remedy that, they provided a blockchain-based model to allow fans to make sure that the different parties involved in the player transfer deal did not take part in money laundering while guaranteeing club privacy. In this system, the blockchain is used to store the involved parties' financial indexes, which are used in conjunction with locality-sensitive hashing techniques to evaluate the legitimacy of the transfer operation.",
+              "citations": [
+                "W4237889026",
+                "W2970577369",
+                "W4367359547",
+                "W4388427235",
+                "W4283269834",
+                "W3170322419"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "26"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_9",
+              "subsubsection_index": 9,
+              "subsubsection_label": "Sports Financing and Crowdfunding",
+              "parent_subsection_id": "s_4_1",
+              "text": "Blockchain technology not only allows clubs and athletes to unlock new income streams such as fan-tokens and NFTs [W2970577369, W4293483530, W4207068574] but also due to its decentralized nature, immutability, and use of cryptographic protocols, blockchain technology provides new opportunities to promote interorganizational business processes which can enhance, and improve the actual financing system of sports clubs. In this context, the authors in [W4207068574] evaluated 200 innovation indicators from 50 companies in the sports industry. Of these, 15 utilize blockchain, whereas 35 do not. The authors came to the conclusion from their research that listed sports companies that employ blockchain technology have a clear edge over companies that have not implemented the technology in terms of innovation efficiency, as blockchain solves fundamental problems in the current business model of the sports industry such as inefficient centralized paradigm and high fees imposed by intermediaries and lack of transparency.\n\nOther papers in our resource poll discussed how blockchain could help manage players' salaries and sponsor contracts [W4237889026, W3173331217, UNMAPPED:8, UNMAPPED:26], where they proposed a new financing scheme using smart contracts instead of traditional contracts, which can effectively reduce disputes and third-party expenses; where no party can breach their contractual obligations and issues like late payments, pricing differences, and refusal to pay can all be eliminated with smart contracts. Additionally, this will enable athletes to have immediate access to their funds. Furthermore, this smart contract-based compensation scheme could be enriched with athletes' analytics enabling a performance-based contract where athletes' compensation is calculated based on their performance and triggered automatically thanks to smart contracts, which would provide a better incentive for them, and sustainable development for the clubs. Bernstein [UNMAPPED:26] mentions PowerAgent, which is a blockchain platform for creating and managing athlete contracts where they offer a variety of smart contracts suitable for many types of sports.\n\nFurthermore, blockchain offers also an opportunity to help athletes raise funds to finance their careers, especially amateur athletes who seek to pursue a professional career. In this financing scheme, investors can examine athletes' statistics and subsequently contribute instant funds in exchange for a share of the athlete's future earnings [W4237889026, UNMAPPED:26]. In addition, this new framework of crowdfunding and fundraising can effectively eliminate the lack of transparency and intermediary costs reported in conventional crowdfunding [W2970577369]. Several companies that offer blockchain-based platforms to help athletes finance their careers have been reported. For example, Sportyco.io is a blockchain-based sports crowdfunding platform where athletes, clubs, and sports organizations can create a profile and share their achievements, projects, and expectations to attract investors. Sportyco introduces a cryptocurrency called Sportyco-SPF, which is used by investors to fund athletes and clubs in exchange for a share of their future earnings [W4237889026, UNMAPPED:26]. Similarly, Globaltalent.com is a blockchain-based marketplace for trading and funding athletes and clubs, where athletes can raise funds to finance their careers in exchange for a cut of their earnings, while clubs can raise funds by giving investors a percentage of ticket sales, and television rights [W4237889026].",
+              "citations": [
+                "W2970577369",
+                "W4293483530",
+                "W4207068574",
+                "W4237889026",
+                "W3173331217",
+                "W4237889026"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "8",
+                "26"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_10",
+              "subsubsection_index": 10,
+              "subsubsection_label": "Esports",
+              "parent_subsection_id": "s_4_1",
+              "text": "The blockchain offers a new opportunity to enhance the Esports experience by introducing cryptocurrencies that can be used for in-game transactions and help creates decentralized betting and competition platforms backed by the blockchain and smart contracts [UNMAPPED:30]. integrating blockchain in sports would also provide gamers with an opportunity to give their in-game intangible assets a real-world value by converting them into NFTs which can be sold and traded outside the game network [W3112539098].\n\nAnother promising application is presented in [W3112539098], where the authors proposed a decentralized computation and token infrastructure for gaming networks. In this system, the authors integrated IPFS and Ethereum blockchain to distribute the computation in competitive games instead of using centralized game servers that suffer from a single point of failure and latency issues. By migrating to this new architecture, gaming networks would have better performance and transparency, also this model allows to implement fraud detection mechanisms in gaming by leveraging the transparent and tamper-proof nature of blockchain. The authors also proposed to implement smart contracts that allow players to mint their in-game items and achievement into NFTs which can be traded in markets outside the game network.",
+              "citations": [
+                "W3112539098"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "30"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_11",
+              "subsubsection_index": 11,
+              "subsubsection_label": "Sports Gambling and Fantasy Sport",
+              "parent_subsection_id": "s_4_1",
+              "text": "The blockchain offers an opportunity to remedy the many challenges that Sports gambling and fantasy sports suffer from such as the lack of transparency and trust in addition to the high third-party commissions. Technically, blockchain smart contracts are used to replace the bookmaker who accepts bets regarding the result of sports games and autonomously rewards the winners according to the terms of agreement, thus eliminating intermediaries and ensuring trust, transparency, and anonymity and the players can have instant access to their earnings when using cryptocurrencies [W4237889026, UNMAPPED:26].\n\nTo address the drawbacks associated with traditional sports betting platforms, which often include issues such as lack of trust, susceptibility to online fraud, and privacy concerns, the authors in [W4283727805] proposed BetNation, a decentralized application developed in the Ethereum blockchain. In this platform, users can interact either as bookmakers or stakers on cricket games, where it employs Ethereum smart contracts to manage various pools and stakes, and to execute payment settlements in a transparent and decentralized manner, thereby enhancing trust and privacy. However, the authors did not address the implementation of oracles for integrating real-world game outcomes into the blockchain system. Conversely, the authors in [W4296442231] highlighted the constraints of current oracles in verifying outcomes of real-world events and proposed Fortuna as a solution. Fortuna is a decentralized platform on which sports real-world event outcomes can be determined in a robust and low-cost manner. The platform features an innovative staked voting algorithm, incentivizing users to accurately report event outcomes, where winning bettors have to vote on the outcome of another pool to claim their rewards. If the user votes with the majority, their winnings will be released, however, those voting against the majority will forfeit their winnings, which creates a fully distributed, self-regulated sports betting platform.\n\nCarlsson-Wall et al. [W4237889026] found in their grey literature search 18 companies that offer blockchain-based sports betting platforms, making it the largest market segment, where they reported that some of these companies focus on sports betting in general while others focus on Esports competitions.",
+              "citations": [
+                "W4237889026",
+                "W4283727805",
+                "W4296442231",
+                "W4237889026"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "26"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_12",
+              "subsubsection_index": 12,
+              "subsubsection_label": "Sports Copyrights Protection",
+              "parent_subsection_id": "s_4_1",
+              "text": "Another identified use case of blockchain is in sports copyright protection, particularly in sports broadcast copyright protection where blockchain's inherent characteristics of transparency and immutability can confirm sports content copyright ownership and ensure that it will not be infringed [W4283269834]. Jun-Ming et al. [W3170322419] discussed the integration of blockchain technology to remedy the shortcomings of the current copyright protection mechanisms of sports events and safeguard the copyright owner's interests. Some of the major prospective advantages that they identified include facilitating evidence collection in case of copyright violation and reducing the costs of copyright management. Blockchain offers also a new business model for Sports Streaming Services in which sports networks and rights owners can sell to viewers a single event or content within a given period, which replaces prepaid long-term expenses. This on-demand model is reinforced by blockchain's transparency and smart contracts that release the content to the viewer once payment is received, and which holds much promise for viewers and networks alike [W4237889026, W3170322419].",
+              "citations": [
+                "W4283269834",
+                "W3170322419",
+                "W4237889026"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_1_13",
+              "subsubsection_index": 13,
+              "subsubsection_label": "4.1.4 The Targeted Stakeholders",
+              "parent_subsection_id": "s_4_1",
+              "text": "Finally, in terms of the targeted stakeholder we consider three different user groups following the SportsTech Matrix developed by Frevel et al. [W4237889026] (it offers a framework that encapsulates the intersection of sports and technology) which are described as follows:\n\n**Athletes**: This user group comprises anyone who practices sports, whether professionally or recreationally, Typical applications where blockchain can benefit athletes include improving training, performance prediction, recovery, injury prevention, motivation, financing, and fundraising, among others.\n\n**Consumers**: This user group comprises Anyone who consumes sports, which includes all conceivable forms of engaging with sports without actually practicing it. Basically, it is about how fans interact with teams, athletes, and other fans. For the blockchain, the contribution for this user group includes fan tokens, collectibles and memorabilia, sports betting, ticketing, and broadcast services.\n\n**Management**: This user group includes entities with any organizational or administrative responsibilities in the sports sector. It ranges from sports executives and coaches who lead professional clubs to policymakers, governing bodies, and sponsors. The contribution of blockchain for this group includes the integration of blockchain for the management of leagues, clubs, and teams as well as regulatory institutions. It also encapsulates streamlining the management of sports events, venues, facilities, betting platforms, and ticketing and broadcast platforms.\n\nAs illustrated in Fig. 7, the most targeted stakeholder is the management group with 37 works followed by Athletes then Consumers with 25 and 21 works respectively.\n\n---\n\n**FIGURE 7** Targeted stakeholders in the selected papers\n\n{{TABLE:tbl_13}}\n\n---",
+              "citations": [
+                "W4237889026"
+              ],
+              "tables_in_text": [
+                "tbl_13"
+              ]
+            }
+          ],
+          "text": "For the sake of answering the first research question, we have coded our resource pool (n = 38) based on the following characteristics: type of paper, the field of sports, the proposed use case, and the targeted stakeholder, as shown in Table 6.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 What Blockchain-Based Applications Have Been Developed Considering the Identified Use Cases?",
+          "subsubsections": [],
+          "text": "Of the collected papers, we found only 18 papers that translated their propositions into working prototypes covering 6 out of the 10 application areas, although it is worth noting that most of the prototypes are just for testing purposes and are not market-ready. As shown in the Table 7, most of the developed applications fall under the field of Athlete data management with 11 papers, followed by sports collectibles and products and sports gambling with 2 papers, while sports event management, Fan engagement, and Esports with 1 paper each. However, some other papers are still at a conceptual level where prototypes are scheduled in future scopes, such as the use of blockchain in sports regulations (anti-doping) [W4285596361]. These findings prove that the application of blockchain in sports industry is still in its infancy and needs more work to fully reach its full potential.\n\n**TABLE 7** Use cases and example applications\n\n{{TABLE:tbl_14}}\n\n---\n\nTo gain more insight into the developed prototypes, we explore the different implementation aspects considered in these prototypes. While there might be a number of different types of aspects to consider during implementation, we mostly focus on blockchain-focused aspects such as blockchain platform, deployment scheme, performance analysis, and the use of smart contracts and oracles. Reviewing these aspects will give us a clear picture of the effectiveness, feasibility, and implementation level of the systems presented in our resource pool.\n\nThe different implementation aspects of the reviewed works are summarised in Table 8. We note that only 8 out of the 18 papers mention the platform used for implementation. [W3112539098, W4283727805, W4327772891, W4388488056, UNMAPPED:28] used Ethereum blockchain, [W3116530429] used Vexanium blockchain which is a public blockchain that uses Delegated Proof of Stake (DPoS) consensus algorithm, while [W4294958080, W4302846360] used Hyperledger fabric, meanwhile other four works [W3135109590, W4286209276, W4380483446, W4388469901] implemented private blockchain without specifying the platform used. In terms of blockchain performance analysis, which is important for testing system scalability and viability, unfortunately, only four works [W3135109590, W4294958080, W4302846360, W4327772891] report performance testing. Remarkably, the works in [W4294958080, W4302846360] have provided performance testing using Hyperledger Caliper; a tool for benchmarking Hyperledger applications. Finally, regarding the use of smart contracts and oracles, only eight papers [W3112539098, W4283727805, W4296442231, W4294958080, W4302846360, W4327772891, W4380483446, UNMAPPED:28] mention the use of smart contracts while only one of the papers [W4296442231] explicitly mentions the use of oracles.\n\n**TABLE 8** Implementation aspects used in the selected studies\n\n{{TABLE:tbl_15}}\n\n---",
+          "citations": [
+            "W4285596361",
+            "W3112539098",
+            "W4283727805",
+            "W4327772891",
+            "W4388488056",
+            "W3116530429",
+            "W4294958080",
+            "W4302846360",
+            "W3135109590",
+            "W4286209276",
+            "W4380483446",
+            "W4388469901",
+            "W4296442231"
+          ],
+          "tables_in_text": [
+            "tbl_14",
+            "tbl_15"
+          ],
+          "citations_unmapped": [
+            "28"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3 Does Blockchain Introduce New Challenges to Software Development in the Sports Industry?",
+          "subsubsections": [],
+          "text": "We have identified many limitations that bottleneck the development of blockchain-based applications in the sports industry, mainly scalability and latency, privacy, isolation, interoperability, and non-compliance with data protection laws.\n\nScalability is a major drawback in blockchain, for instance, Bitcoin processes 7\u201310 transactions per second and Ethereum 1.0 can do 15\u201320 transactions per second [UNMAPPED:12], which is a fraction of what a centralized system can perform, which severely limits the adoption of blockchain especially in time-sensitive applications [W4285596361, W3112539098, W4319585953]. Apart from the throughput, space is also an issue, since blockchain is not ideal for handling large amounts of data like athletes' performance data due to its computational and network limitations [W4285596361, W3112539098].\n\nMoreover, the problem of blockchain privacy and data confidentiality in the sports industry is causing a lot of worry among different stakeholders [W4283269834], which is understandable given the fact that the data is distributed across many nodes where any user can access it, especially in public configuration. Moreover, despite the anonymity in public blockchains it is still possible to infer sensitive data regarding the identity of the clients [UNMAPPED:28].\n\nWhile smart contracts inherit blockchain's core characteristics of immutability, transparency, and decentralization, they inherit also blockchain's isolation from the outside world. Blockchains are siloed environment that has no access to real-world data, therefore smart contracts involving real-world data cannot be enforced [W3023266124, UNMAPPED:26]. This isolation is due to the blockchain's deterministic nature which implies an agreement among all nodes should always be reached following any recalculation of transactions on the blockchain at any given moment. However off-chain data, such as API requests, are always changing and bound to fail which can compromise the deterministic nature of blockchain [W4237818511, W3023266124].\n\nTable 6 lists a number of blockchain initiatives, some of which are similar and have the ability to completely change the sports industry. However, one distinction that stands out is that these initiatives utilize various blockchain platforms (table 8), which leads us to the issue of blockchain interoperability. In Blockchain interoperability means the cross-communication between the different types of blockchains (Ethereum, Bitcoin, HyperLedger...) which is unfortunately impossible due to their heterogeneity which hinders standardization [W2967244362, W2969044608].\n\nAnother issue that stems from the nature of blockchain is the noncompliance with data protection laws [W4285596361]. This incompatibility stems from the distributed peer-to-peer network architecture of blockchain, which places it at odds with the centralized-based data processing paradigm in data protection laws. This contrast can make it challenging to attune current data protection laws with blockchain's core elements of decentralization, transparency, and immutability. The latter, for instance, does not fit with the GDPR's right to erasure (Articles 17 & 19 of the GDPR) also known as the right to be forgotten [UNMAPPED:62]. We note that none of the discussed papers report compliance with data protection laws.\n\nHash functions and public-key encryption are the fundamental cryptographic components at the core of Blockchain technology, serving a pivotal role in authenticating transactions and ensuring immutability. In the early stages of Blockchain development, the possibility of quantum computing appeared remote. However, the rapid progress in this domain has compelled a thorough reevaluation of cryptographic security where the emergence of quantum computers with significant computational power has the potential to make algorithms like the Elliptic Curve Digital Signature Algorithm (ECDSA) vulnerable [UNMAPPED:63, UNMAPPED:64], potentially jeopardizing the security of virtually all Blockchain systems.\n\nApart from the technical aspects discussed above, the lack of blockchain legal regulations as well as cryptocurrency volatility can represent a financial stability risk impeding the full adaptation of blockchain in the sports industry [W4283269834, UNMAPPED:26, UNMAPPED:28].",
+          "citations": [
+            "W4285596361",
+            "W3112539098",
+            "W4319585953",
+            "W4283269834",
+            "W3023266124",
+            "W4237818511",
+            "W2967244362",
+            "W2969044608"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "12",
+            "28",
+            "26",
+            "62",
+            "63",
+            "64"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4 How Are These Challenges Currently Being Addressed?",
+          "subsubsections": [],
+          "text": "Some solutions have been proposed and applied to alleviate the challenges facing the application of blockchain in the sports industry. Regarding the problem of scalability, the choice of consensus algorithms affects significantly the throughput, for example, using the Proof Of Stake consensus algorithm which provides superior performance than Proof of Work (PoW) consensus algorithm has been proposed [W3112539098]. In this regard, we note that the Ethereum blockchain officially switched to Proof of Stake (PoS) consensus mechanism, which makes it more suitable for building distributed applications [UNMAPPED:65]. Whereas Mulyati et al. [W3116530429] and Ma [W3135109590] used Delegated Proof of Stake (DPOS) algorithm which is more efficient in performance and energy [W3116530429]. Meanwhile, the authors in [W4327772891] proposed reputation-based delegated proof of stake (RDPoS) consensus algorithm which demonstrated high transaction throughput. Another design decision is to use permissioned blockchains (HyperLedger Fabric) which offer higher throughput than public blockchain solutions [W4285596361]. Outside academia, the company PlayMaker Chain proposes a custom blockchain that uses Proof-of-Authority as a consensus algorithm to achieve higher throughput [UNMAPPED:58].\n\nAnother solution is Sharding, while it hasn't been proposed in the collected papers, it is a fundamental part of the new generation of the Ethereum blockchain. Sharding is the process of splitting the chain into smaller chunks called shards across many nodes, which allows transactions to be processed simultaneously since each shard chain works independently from the other which significantly improves the network performance through parallel processing [UNMAPPED:66]. Continuing with scalability solution in the Ethereum network, Regner et al. [UNMAPPED:28] proposed to use state channels [UNMAPPED:67], which is a layer 2 scalability solution that can significantly boost the performance of the network by delegating transaction processing off-chain. Similarly, The authors in [W4367359547] reported that the architecture of the Socios platform for sports fan tokens, as being composed of two layers: a public Ethereum blockchain and a permissioned sidechain. Ethereum is utilized as the base for issuing Chiliz cryptocurrency, a utility token for purchasing fan tokens. The sidechain, a specialized form of permissioned blockchain, manages the fan tokens' lifecycle, encompassing issuance, voting, and transfers. Employing a sidechain with a Proof of Authority (PoA) consensus mechanism aids in lowering transaction fees and improving both network latency and scalability.\n\nMeanwhile, to address blockchain's storage limitation, a typical solution is to store large-scale data in external storage (off-chain) while keeping its hash in the blockchain. This design consideration provides better performance and scalability without compromising the tamper-resistant nature of the blockchain since the on-chain hashes allow integrity checks of the off-chain data [W4285596361]. A more practical implementation is to use Interplanetary File System (IPFS) for off-chain storage which provides a distributed file system, which ensures the high availability of the data [W3112539098, W4380483446, W4388469901]. Rollups is another promising layer-two solution [W4388427235]. Blockchain rollups move the computation and storage off-chain while retaining only the minimum amount of data required to validate the rollups transaction in the blockchain, which significantly improves the scalability of a blockchain [UNMAPPED:67].\n\nTo overcome the issue of confidentiality and privacy, a common solution is the encryption of data using different encryption schemes before saving it in the blockchain, which would prevent unauthorized people from accessing it. For instance, Pinto et al. proposed an attribute-based encryption scheme that provides a granular access control [W4285596361]. Moreover, in order to improve anonymity and unlinkability in the blockchain Regner et al. [UNMAPPED:28] and Pinto et al. [W4285596361] proposed to use Zero-knowledge-proof cryptography. Subsequently, other works [W4285596361, W4226191521, W4294958080, W4302846360, UNMAPPED:16] propose using permissioned blockchain, specifically HyperLedger Fabric which provides better privacy and confidentiality by using identity management and channels. While identity management ensures that only pre-authorized members can join the network, channels are private communication pathways in the network where the data on a channel is only available to the members of that channel, and not to the other peers in the network [W4285596361].\n\nWe can program smart contracts to rely on information from the outside world such as weather information, player statistics, and fixtures results by using oracles [W3023266124]. Oracles are a middleware between the blockchain and the external world that allows to fetch external data on the blockchain, however, the use of oracles brings back centralization which negates the decentralized nature of blockchain and eventually can present a single point of failure and risks bringing corrupt, or inaccurate data, which is commonly known as the oracle problem. Hence, many oracles proposals, and platforms have emerged recently to solve this problem [W4237818511, W3023266124]. Provable is an oracle service utilized by numerous blockchains, including Ethereum, Hyperledger Fabric, Corda, and others. To solve the Oracle problem, Provable uses Trusted Execution Environments to build authenticity proofs of the external data [W3023266124]. ChainLink is another promising solution that offers a decentralized oracle network that ensures trustworthy data feeds and connectivity between smart contracts and external data sources [W3023266124].\n\nMeanwhile, to address the problem of interoperability, There are several initiatives and projects that solve this issue from various perspectives and have varying levels of development, including PolkaDot, Cosmos, and DeXTT [W2967244362, W2969044608]. However, most of these solutions are still proof of concepts and lack real-world validation.\n\nFurthermore, to circumvent the non-compliance with data regulations and especially the \"right to be forgotten\" clause, Pinto et al. [W4285596361] proposed some workarounds. One solution is to use an off-chain storage scheme for personal data with on-chain pointers (representing the hash value of personal data), allowing the real data to be removed upon request. Another architectural concept is crypto shredding, which involves destroying decryption keys once the data retention period has expired. However, none of these workarounds fully meet GDPR requirements [W4285596361].\n\nIn response to the quantum computing challenge, there is currently substantial work is dedicated to evaluating and establishing standards for post-quantum cryptographic primitives [W3215796653, W3215796653, W4308734160]. Quantum-resistant strategies in the realm of Blockchain are starting to emerge. For instance, Kiktenko et al. [UNMAPPED:74] introduced a Blockchain platform designed to be quantum-safe, relying on information-theoretically secure authentication through a quantum key distributed via an urban fiber network. In a more recent development, Rajan and Visser [UNMAPPED:75] introduced a concept of a quantum networked time machine, where the Blockchain is encoded into a non-simultaneously coexisting photon state known as a secular Greenberger-Horne-Zeilinger state.",
+          "citations": [
+            "W3112539098",
+            "W3116530429",
+            "W3135109590",
+            "W4327772891",
+            "W4285596361",
+            "W4367359547",
+            "W4380483446",
+            "W4388469901",
+            "W4388427235",
+            "W4226191521",
+            "W4294958080",
+            "W4302846360",
+            "W3023266124",
+            "W4237818511",
+            "W2967244362",
+            "W2969044608"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "65",
+            "58",
+            "66",
+            "28",
+            "67",
+            "16",
+            "74",
+            "75"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Using our search protocol, and applying our exclusion criteria we were able to get 38 articles. Table 5 provides a simplified view of the selected literature. Regarding the date of publication, although Satoshi Nakamoto introduced blockchain in 2008, all the selected papers were published after 2017, where one paper was published in 2018, two in 2019, 9 papers in 2020, 8 in 2021, 11 in 2022 and 7 in 2023 as shown in Fig. 3a. The articles are further distributed according to the publication type, where 21 (58%) of the selected papers are journal articles, 13 (36%) are conference proceedings, and 4 (6%) are book chapters, as illustrated in Fig. 3b.\n\nIn terms of the author's affiliation. Geographically, 9 countries have been represented, where China is predominantly the most productive with 19 Papers followed distantly by the USA with 7 papers, India with 3 papers, Indonesia and Germany with 2 papers, and finally the UK, Sweden, Italy, Saudi Arabia, and Australia with one paper each as illustrated in Fig. 4.\n\n**TABLE 5** Bibliographic distribution of the selected papers\n\n{{TABLE:tbl_05}}\n\n---\n\n**FIGURE 3** (a) Evolution of the selected studies over the years. (b) Type of publication\n\n*(a)*\n{{TABLE:tbl_06}}\n\n*(b)*\n{{TABLE:tbl_07}}\n\n---\n\n**FIGURE 4** Distribution of the papers by the countries of the authors\n\n{{TABLE:tbl_08}}\n\n---",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_05",
+        "tbl_06",
+        "tbl_07",
+        "tbl_08"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this systematic review, we explored the literature relating to the implementation of blockchain technology in the field of the sports industry, using the search strategy in section 2. We were able to extract 38 papers from 2018 until 2023. This limited number of articles as illustrated in Fig. 3a indicates that this topic is still in its infancy and rather underrepresented compared to the application of blockchain in other fields such as healthcare, IoT, and supply chain management [W3163305940, W3210840115, W3134885440].\n\nThrough this study, we have identified 10 different application areas of blockchain in the sports industry as shown in detail in Fig. 6. Predominantly athlete data management (29%), sports financing (13%), sports collectibles and products (12%), and fan engagement and sports events management (10%) among others such as sports gambling, Esports, sports copyright protection, fantasy sports, and anti-doping. However, the number of papers and the relevance of topics over time show that the use of blockchain technology in the sports industry is still in the early stage of exploration, and many of the proposed use cases are still in the stage of imagination and concept as more than 50% of the papers are just reports discussing the benefits of blockchain in sports as shown in Fig. 5. Drawing upon the findings of this systematic review, we were able to discover promising but under-explored application areas such as Esports, fan engagement, anti-doping, sports copyright protection, and fantasy sports, as well as other promising avenues that have not been identified in the literature such as sports refereeing and sports manufacturing. In fact, according to our classification scheme, 81% of the articles propose traditional sports use cases as shown in Fig. 5. In contrast, only 8 papers propose digital sports applications (sports gambling, e-sports, and fantasy sports). This implies that most of the existing studies have examined the adoption of Blockchain technologies in the sports industry from the lens of traditional sports with little attention paid to digital sports. However, while most of the papers propose traditional sports use cases only 7 papers specify the type of sports (basketball [W4286209276], running [W3116530429], taekwondo [W3116530429], snow sports [W3173080041], football [W4360610402], and cricket [W4283727805, W4388488056]), meanwhile the rest use the term \"sports\" and \"athletes\" in a general way. Therefore, further research might consider the adoption of blockchain with other specific types of sports such as car racing, archery, tennis, etc.\n\nIn terms of the targeted stakeholders, as shown in Fig. 7, all stakeholders identified in the SportsTech matrix have been targeted, dominantly the management group with 37 works followed by Athletes with 25 works, and lastly Consumers with 21 works. However, we stress that many important stakeholders in the management group have not been targeted such as referees, Doctors, Pharmaceutical physicians, and insurance companies.\n\nTo better understand the primary contribution of the analyzed studies, we have explored the applications that have been developed considering the identified use cases, where found only 18 studies that successfully transformed their theoretical concepts into functional prototypes, addressing only 6 of the 10 application domains. Notably, the domain of athletes' data management was the most represented, with 11 papers [W3116530429, W3135109590, W3173080041, W3134885440, W4286209276, W4302846360, W4380483446, W4388469901, W4388488056, W4360610402, UNMAPPED:33]. This finding underscores a significant shortfall in the implementation of blockchain in the suggested use cases outside of this domain, particularly given the documentation of over 70 blockchain-based applications in the sports technology sector within the surveyed literature. Although many of these ventures were abandoned due to financial constraints [W4237889026], the disparity is pronounced, which underscores a lack of proactive engagement from the academic sector and highlights the necessity for more dedicated efforts in this field.\n\nFurthermore, we evaluated the developed applications across various implementation aspects and observed that the majority exhibit a shallow level of technological development and testing and provide little information about implementation aspects such as the type of blockchain used, the consensus algorithm, and the use of smart contracts and oracles.\n\nWe also observed a deficiency in the incorporation and discussion of cryptographic protocols to safeguard sensor devices, which are prone to elevated risk of security breaches that undermine the security and privacy of the applications under development [UNMAPPED:71]. Hence, our suggestion is to utilize lightweight cryptography(LWC), which is better suited for ensuring the security of resource-constrained devices while still delivering excellent throughput, efficiency, and energy utilization [W4377233271]. ASCON is a lightweight cryptographic protocol that has been chosen as the LWC (Lightweight Cryptography) standard by the National Institute of Standards and Technology (NIST). It is intentionally designed to offer robust security, exceptional efficiency, and ease of use. Its minimal gate count and well-established security features make it a highly suitable choice for securing IoT devices [W4377233271, UNMAPPED:73].\n\nConversely, our examination of the existing body of research on Blockchain has enabled us to identify the obstacles impeding its wider acceptance and to suggest potential remedies. Recognizing and incorporating these solutions in the deployment of Blockchains could significantly enhance their uptake. It's crucial to acknowledge that the adoption of Blockchain faces several technological challenges, including scalability [W4285596361, W3112539098, W4319585953], privacy concerns [W4283269834], interoperability issues [W2967244362, W2969044608], and conflicts with data regulation laws due to its immutability [W4285596361]. Among the solutions proposed are the adoption of sophisticated consensus algorithms [W3116530429, W3135109590, W4327772891], the utilization of layer-Two solutions for scalability [W4388427235, W4367359547], the integration of IPFS for storage [W3112539098, W4380483446, W4388488056], the application of encryption techniques [W4285596361], and leveraging the advancement in oracles [W3023266124] and cross-chain communication protocols [W2967244362, W2969044608], all of which are essential in addressing the fundamental limitations of blockchain technology. A detailed examination of these strategies will offer a thorough insight into the prevailing scenarios and the ongoing initiatives aimed at refining the incorporation of blockchain in the realm of sports.\n\nWe have also emphasized the dilemma posed by quantum computing, which risks to jeopardize the security of blockchain systems, where have highlighted the extensive efforts dedicated to assessing and setting standards for post-quantum cryptographic primitives [W3215796653, W3215796653, W4308734160], as well as the existing endeavors that aim to design blockchain platforms suitable for the post-quantum era [UNMAPPED:74, UNMAPPED:75].",
+      "citations": [
+        "W3163305940",
+        "W3210840115",
+        "W3134885440",
+        "W4286209276",
+        "W3116530429",
+        "W3173080041",
+        "W4360610402",
+        "W4283727805",
+        "W4388488056",
+        "W4237889026",
+        "W4377233271",
+        "W4285596361",
+        "W3112539098",
+        "W4319585953",
+        "W4283269834",
+        "W2967244362",
+        "W2969044608",
+        "W3135109590",
+        "W4327772891",
+        "W4388427235",
+        "W4367359547",
+        "W4380483446",
+        "W3023266124"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "71",
+        "73",
+        "74",
+        "75"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6 Conclusion and Future Works",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Since it was initially introduced to the public through Bitcoin, blockchain technology has evolved into a general-purpose technology with applications in many industries including the sports industry. To shed light on the state-of-the-art of the application of blockchain technology in the sports industry and to fulfill the objectives of the study, we conducted a systematic review following the PRISMA guidance where we collected 38 papers covering the period from 2018 to 2023. Effectively, the objectives of this study are to identify the application areas of blockchain in the sports industry, identify the applications that have been developed in these areas, their implementation details, and what are the blockchain-related challenges for developing these solutions and how are these challenges and limitations currently being addressed.\n\nAlthough the application of blockchain in the sports industry is still in its infancy, we have identified many application areas including the management of Athlete data, anti-doping, sports financing and crowdfunding, the management of sports events, and sports collectibles and products and products as well as Esports and sports gambling, targeting different stakeholder, primary, clubs, athletes, fans, and sports regulators.\n\nBlockchain has a significant potential to resolve many challenges and limitations in the sports industry such as managing sportsmen's training and recruiting, fighting doping, thwarting counterfeit sports tickets and collectibles, and protecting sports copyright by providing a transparent, decentralized, and tamper-proof platform for data management and sharing. Blockchain also has the potential to drive more fan engagement and open new income streams by introducing fan tokens and NFT collectibles, while smart contracts allow for automating athletes' financing and compensations and managing sports betting and broadcast platforms. However, most of these use cases are still in the early stage of exploration and concept, where only a limited number of these use cases have been translated into working prototypes, and most of them have a shallow level of technological development and testing and provide little information about implementation aspects such as the type of blockchain used, the consensus algorithm, and the use of smart contracts and oracles. Therefore, there is still room to evaluate and bring the full potential of blockchain to develop applications in this field.\n\nNevertheless, being a novel technology, adopting blockchain to develop applications in the sports industry introduces many challenges and limitations which mainly relate to throughput, storage, privacy, isolation, interoperability, and the non-compliance with data regulations laws. For which we discussed the proposed technical designs implemented to address these challenges which include the choice of the blockchain platform and consensus algorithm, leveraging off-chain storage, and using encryption and cryptoshredding. We also note that as a new technology, blockchain is still evolving, where newer versions of blockchain like Ethereum 2.0 provide better performance by utilizing new consensus algorithms and implementing new scalability solutions like sharding, state channels, and rollups. Thus, as the maturity of Blockchain increases, it will become more qualified to be applied in the sports industry.\n\nThrough this work, we have discovered potential areas for future exploration. Specifically, we have recognized the potential of utilizing smart contracts and distributed oracles to automate player salaries, taking advantage of the development in sports statistics to create more granular and automated sports contracts. Another avenue of research involves harnessing blockchain technology to improve supply chain management, with a particular focus on the pharmaceutical supply chain within the realm of sports.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4393066628_tables.md"
+}

@@ -1,0 +1,184 @@
+{
+  "id": "W2203872619",
+  "metadata": {
+    "title": "Barriers faced by newcomers to open source projects: a systematic review",
+    "n_sections": 6,
+    "n_subsections": 6,
+    "n_subsubsections": 0,
+    "n_tables": 1
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Some open source software (OSS) communities composed of volunteers from different parts of the globe contributing and collaborating. According to Qureshi and Fang [W2102322333], motivate, engage, and retain new developers is the way to promote a sustainable amount of developers in a project. However, newcomers often face difficulties and obstacles when onboarding to a project [W2123945507]. This obstacles can lead newcomers to give up their collaboration. Therefore, a major challenge for OSS projects is to provide ways to support the joining of newcomers.\n\nTo reduce these problems, newcomers generally post questions and request help to choose their tasks in forums and mailing list or send emails to developers who have central roles in the project (e.g. owners, project leaders) [W2123834217, W3124560715]. However, receiving replies that do not offer guidance or unpolished answers can result in newcomers to give up contributing [W2122676969]. Given this scenario, it is important to understand the OSS newcomers needs. This understanding may enable the creation of mechanisms and tools to offer a better support for newcomers.\n\nThe objective of this research is to identify the barriers faced by newcomers when onboarding to OSS projects. Onboarding is the stage in which an outsider decides to contribute to a project. Onboarding is highly impacted by a steep learning curve as well as reception and expectation breakdowns [W357252121].\n\nIn this paper, the methodology chosen to collect these issues is the Systematic Literature Review. From the best of our knowledge, there is no study that directly focused on problems or barriers encountered by newcomers of Open Source Software projects. On the other hand, several articles report these barriers as a side product of the studies. Thus, knowledge is spread across the literature. This study main contribution is aggregating the barriers evidenced by different studies and creating a model with them.",
+      "citations": [
+        "W2102322333",
+        "W2123945507",
+        "W2123834217",
+        "W3124560715",
+        "W2122676969",
+        "W357252121"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Research Method",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "To perform our systematic review, we defined the following question: What are the barriers that influence newcomers' onboarding to OSS projects? By answering this question, we aim to capture the barriers that a newcomer can face when contributing to an OSS project. We are not interested in newcomers' motivation to join a project, but in the issues they can face after deciding to contribute.\n\nAfter using different synonyms and combinations to refine our search, the query presented below was used to retrieve the studies from the following digital libraries: ACM, IEEE, Scopus and Springer Link. These libraries were selected because they index the most relevant venues of computer sciences, mostly written on English, they support searching using boolean expression and provide access to the complete text of the paper. We also consulted specialists for conferences, workshops, journals, and websites that could provide relevant studies for our research. However, no new source was added after their advices.\n\n((OSS OR \"Open Source\" OR \"Free Software\" OR FLOSS OR FOSS) AND\n\n(newcomer OR \"joining process\" OR newbie OR \"new developer\" OR \"new contributor\" OR \"new member\" OR \"new committer\" OR novice OR beginner OR \"potential participant\" OR retention OR joiner OR onboarding))\n\nFor each selected paper obtained from digital libraries, we conducted snowball sampling checking if the authors of the selected studies published other relevant studies not retrieved from the Digital Libraries. We checked their profiles in ACM, IEEE, DBLP, and personal homepages (when available).\n\nWe considered for selection the papers that were available for download, written in English, that dealt with newcomers onboarding in open source software projects, that presented experimental results, and that were published in journals or workshop/conference proceedings.\n\nSubsequent to the definition of the primary studies list, the researchers read the full documents. To classify the barriers we followed an \u201cinductive coding\u201d approach [W2150104072], which is widely applied in qualitative studies of different knowledge areas. In this kind of approach, the evaluator identifies text segments that contain meaningful units and creates a label for a new category to which the text segment is assigned. Afterwards, connections between the codes are identified and they are grouped according to their properties to represent categories.\n\nThe results of the selection and screening are as follows. After running the query on the digital libraries systems, we got 291 candidate papers. For each paper, title, abstract and keywords were analyzed by two independent researchers.\n\nIn a consensus meeting, we came to 33 candidate papers. We checked other papers published by the authors of these 33 candidate studies, finding 20 other candidate papers. After analyzing the abstract of these papers we selected 9 relevant papers, coming to a total of 42 candidate papers. After further analysis, a total of 21 papers were considered relevant to this review and were considered to extract relevant data.",
+      "citations": [
+        "W2150104072"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Barriers faced by newcomers",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Social interactions",
+          "subsubsections": [],
+          "text": "This category represents the barriers related to the way newcomers interact with the community, including who are the members they exchange messages, the size of their contact network, how they communicate and how the community communicate with them.\n\n**Socializing with project members** The study conducted by [W2136421959] highlights the influence of social and political organization for newcomers willing to become a core developer. The author analyzes mailing list discussions and conducts an in-depth analysis of the socialization of a successful developer. He emphasizes the need to build an identity in the project: \"what the newcomer has to learn is how to participate and how to build an identity that will help get his ideas accepted and integrated.\" Other authors also report the importance of socializing with central members. For example, Bird [W2060771918] quantitatively analyzed mailing lists and report that \"the social network measure, indegree,...had a significant effect on immigration.\"\n\nAll studies that analyzed the centrality/importance of the contacts found that the closer the newcomer is to the center of the community, the more successful the newcomer is. However, the newcomer usually does not choose who will answer her questions. So, when the most appropriate community members receive the newcomers, the chance of retention is higher.\n\n**Receiving (timely and proper) response** The answers received from the community play an important role during newcomers onboarding. There are evidences of this barrier in seven studies found in this review. Some of them [W2139888022, W3147233559, W3124560715, W4205670560] report only the impact of receiving a (timely) response from the community as a barrier. Other researchers [W2130550876, W2122676969, W2142170130] also report the impact of the content of responses (properness).\n\nOne of the studies that analyze the impact of the answer contents found that \u201calmost all non-returning newcomers can be attributed to not receiving a response or receiving a condescending response\u201d [W2130550876]. Regarding the studies that analyze the timely response, [W2139888022] analyzed mailing list archives and found that \u201cnearly 80% of newbie posts received replies, and that receiving timely responses, especially within 48 hours, was positively correlated with future participation.\u201d\n\nWe can see that community social skills can influence newcomers' decision to contribute to the project. Generally, newcomers demand attention and friendly hands to start contributing. We understand that core members need to stop their main tasks to receive newcomers with no guarantee that they will contribute. However, a good reception can be crucial to retain more newcomers.\n\n**Sending a correct/meaningful message** [W2130550876] reported a problem related to newcomers' communication behavior. By analyzing the history of a support forum they found that \"the newcomers who used informative subject lines for their first message improved chances of getting responses as well as getting their problems solved by the community \u2026 if the newcomer does not post comprehensible messages or uses a language that the forum responders do not understand\u2026.\" Therefore, newcomers who want to be welcomed by the community should focus on the quality of their community-oriented initial interactions.\n\n**Finding mentorship/expertise** Easiness to find an expert or a mentor is also evidenced in some studies [W2157071571, W2125889680]. Cubranic et al. [W2125889680] report that \u201cIt can be difficult for newcomers to join such groups [OSS projects] because it is hard to obtain effective mentoring.\u201d To alleviate it, Canfora et al. [W2157071571] proposed a tool that recommends mentors to newcomers. They evaluated the tool by surveying some project members and found that mentoring is important to newcomers.\n\nMentorship is presented as be a good way to help newcomers. However, its actual applicability need to be studied in deep. It is not clear if this kind of policy can be applied in OSS communities, as it depends on experienced volunteers to do this specific task.",
+          "citations": [
+            "W2136421959",
+            "W2060771918",
+            "W2139888022",
+            "W3147233559",
+            "W3124560715",
+            "W4205670560",
+            "W2130550876",
+            "W2122676969",
+            "W2142170130",
+            "W2157071571",
+            "W2125889680"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Finding a Way to Start",
+          "subsubsections": [],
+          "text": "This category represents the barriers related to difficulties that newcomers face when trying to find the right place to start contributing.\n\n**Finding appropriate issue/task** Finding the appropriate task to work on was classified as a barrier. Park and Jensen [W2123834217] reported that \"...subjects expressed a need for information specific to newcomers, for instance, how to get involved and become active (e.g. communication channels, available sources of information for starters, etc.), what to contribute to (e.g. open issues, required features, sample tasks to start with), and working practices.\"\n\nVon Krogh et al. [W3124560715] also report on this issue. They found that \u201cin 56.7% of the cases members of the community encouraged the new participants to find some part of the software architecture to work on that would match with their specialized knowledge. In only 16.7% of the cases new participants were both encouraged to join and given specific technical tasks to work on.\u201d This occurs because, according to their interviews, the community expects new participants to find their own task to work on instead of receiving a specific piece of work.\n\nCommunities point of view is that newcomers should be able to find the most appropriate task themselves, as reported by [W3124560715]. However, other researches show that the projects should give special attention to this issue [W2079706832, W1487379053, W2123834217].\n\n**Finding the correct artifacts to fix an issue** When the newcomer finds a task to work on, another issue can impact his contribution: how to find the correct artifacts. Cubranic et al. [W2125889680] proposed Hipikat, a tool that recommends artifacts that are relevant to a task that a newcomer is trying to perform. When conducting an experiment with Eclipse project, they found that \"newcomers can use the information presented by Hipikat to achieve results comparable in quality and correctness to those of more experienced members of the team.\"\n\nNewcomers really need support on finding code artifacts related to the chosen task, as projects' structure/architecture are not always trivial and straightforward. So, projects would benefit from tools like Hipikat to support newcomers first steps, as evidenced by the study conducted by Cubranic et al. [W2125889680].",
+          "citations": [
+            "W2123834217",
+            "W3124560715",
+            "W2079706832",
+            "W1487379053",
+            "W2125889680"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Code Issues",
+          "subsubsections": [],
+          "text": "This category comprises the barriers that are related to the source code of the products. To contribute a newcomer usually needs to change existing source code. Therefore, it is necessary for the newcomers to have enough knowledge about the code to start their contributions.\n\n**Dealing with Code Complexity/Instability** Some studies focus on how code complexity can affect the newcomers to OSS projects. Studying Source-Forge projects Midha et al. [W4319599796] show that \u201ccognitive [code] complexity has a strong negative influence on the number of contributions from new developers.\u201d Stol et al. [W2142170130] highlight some complaints of newcomers about project structure/architecture of Open Source projects.\n\n**Understanding the Project structure/architecture** Stol et al. [W2142170130] highlight some complaints of newcomers about project structure of OSS projects. One subject reported that \u201cthe hierarchy of the source code directory was counterintuitive for someone with little architecting experience.\u201d Cubranic and Murphy [W4241947741] also present an issue faced during their experiment: \u201cWe also had reports of a pair missing a relevant suggestion because they lacked knowledge about the overall structure of the system\u2026\u201d\n\nPark and Jensen [W2123834217] analyzed \u201cthe potential benefits of information visualization in supporting newcomers through a controlled experiment.\u201d They reported that \u201cproviding visual information such as the class diagrams or dependency views \u2026 would help new developers understand the structure of existing code and find problems to work on.\u201d\n\nThe main complain regarding code is that its structure is hard to understand, and learning it would take too much time. The use of visualization [W2123834217], or even artifact recommendation tools [W2125889680] can alleviate this problem.\n\n**Setting up Local Workspace** The feedback obtained by Stol et al. [W2142170130] evidenced that newcomers have difficulties when setting up their environment. They reported some obstacles, for example: \"a challenge was that some [subjects] did not have any experience or knowledge on checking out source code from the version control system.\" To welcome newcomers, the communities should provide easy access to tutorials and step-by-step cookbooks on how to obtain the code, setup up and build a local workspace.",
+          "citations": [
+            "W4319599796",
+            "W2142170130",
+            "W4241947741",
+            "W2123834217",
+            "W2125889680"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Documentation Problems",
+          "subsubsections": [],
+          "text": "Project documentation was also explored by some studies. Newcomers need to learn technical and social aspects of the project to contribute. Thus, problems related to documentation were recurrently reported.\n\n**Outdated Documentation** Steinmacher et al [W4205670560] report some issues faced by newcomers regarding outdated information: \"We can see many demotivating facts that occurred in this case:... outdated information in the issue tracker made the developers waste time on an already existent feature and on checking each issue they pick to address...\" Stol et al. [W2142170130] also report issues regarding outdated documentation. They report that the subjects \"... were uncertain whether the available diagrams were still up to date and relevant for the current version of the software... Another reported challenge was the uncertainty whether the available documentation was up to date for the current version of the software.\" Finding outdated documentation can make the newcomer gave up onboarding. So, documentation provided by projects must be up-to-date enough to support new developers.\n\n**Information overload** [W2123834217, W4241947741] conduct experiments to assess the benefits that tools that support dealing with information overload can bring to newcomers. Cubranic et al. [W4241947741, W2125889680] presents a tool called Hipikat that aims at recommending source code artifacts that should be related to the issue a newcomer is working on. Park and Jensen [W2123834217] evaluate the use visualization tools to alleviate problems with overload and report that \u201c[the tools] provided more efficient ways to handle large amounts of data and understand dependencies in source code, reducing the learning curve and information overload experienced\u2026\u201d A rich documentation is essential for newcomers trying to understand the projects. However, just providing a bunch of documentation leads to information overload. So, the project should provide easy ways to find this documentation.\n\n**Code Comments not Clear** In addition to outdated information and information overload, Stol et al. [W2142170130] report a problem related code comments. \u201cIt was reported that the code was not very well documented, which made it more difficult to understand the source code.\u201d",
+          "citations": [
+            "W4205670560",
+            "W2142170130",
+            "W2123834217",
+            "W4241947741",
+            "W2125889680"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5 Newcomers' Previous Experience",
+          "subsubsections": [],
+          "text": "This category comprises the barriers related to the experience of the newcomers regarding the project and the way they show this experience when joining the projects.\n\n**Lacking of Process and Practices** We found just one study presenting evidence of learning project practices as a barriers that can hinder the newcomers onboarding. The study conducted by Schilling et al. [W2107226556] found that previous knowledge regarding the project practices influence newcomer first steps. They report that \u201cfamiliarity with the coordination practices of the project team has a strong association with the time they spend on their projects after GSoC.\u201d\n\n**Lacking of Domain expertise** Von Krogh et al. [W3124560715] claim that \u201cfeature gifts by newcomers emerge from the newcomers prior domain knowledge and user experience.\u201d In the study conducted by Stol et al. [W2142170130], the subjects \u201creported their unfamiliarity with the domain to be a hindrance.\u201d So, newcomers who present previous domain knowledge have more chances to have a successful onboarding and to be well received by the community.\n\n**Lacking of Technical expertise** Schilling et al. [W2107226556] reported that \u201c\u2026level of practical development experience is strongly associated with their continued permanence.\u201d Some studies report sending messages or patches to mailing list or issue tracker presenting previous technical skills can benefit the newcomer when joining. Stol et al. [W2142170130] evinced that \u201cwhen newcomers mentioned that they had already tried some options to fix their problem and have put efforts to look for a solution in the forums \u2026 then the responders were quick to respond and were very helpful.\u201d\n\nDucheneaut [W2136421959] reports that \u201cexpertise is not enough to become a core member in Python: one also has to create material artifacts\u2026\u201d Bird et al. [W2060771918] also investigate the impact of sending patches when start the contribution and found that \u201cdemonstrated skill level via patch submission plays an important role in Python and Postgres.\u201d All studies evidence that the newcomer who wish to contribute must check if the technical skills required for a given task or project match with their skills. Newcomers can be proactive and search for the required background, but the project must also provide ways for a newcomer to search which tasks fit to his technical profile.",
+          "citations": [
+            "W2107226556",
+            "W3124560715",
+            "W2142170130",
+            "W2136421959",
+            "W2060771918"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6 Summary",
+          "subsubsections": [],
+          "text": "Considering the model defined in the Figure 1, based upon barriers identified by using inductive coding through out the selected studies, we can summarize the evidences for each barrier as shown in Table 1. The category more thoroughly studied is social interaction, accounting for 13 studies while the others range from 8 to 9 related studies each.\n\nDue to the nature of the approach to establish the model, there is at least one paper associated with a barrier. Considering the most studied one, we found that the most evidenced barriers are newcomers' previous technical experience, from Previous Experience category, and aspects regarding social network characteristics and response reception, from Social Interaction category.\n\n**Table 1.** Studies that evidence each barrier\n\n{{TABLE:tbl_01}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The main purpose of this systematic review was to find what are the barriers faced by newcomers to open source projects reported by the literature. For each selected study, we analyzed any barrier reported that was empirically identified or evaluated. We extracted the barriers from the selected studies, and organized them as a hierarchy of barriers, as shown in Figure 1. The figure presents five categories: Social Interactions, Finding a Way to Start, Documentation Problems, Code Issues, and Newcomers' Knowledge.\n\n**FIGURE 1.** Hierarchical map of barriers found in the literature.\n\n![Hierarchical map of barriers](imgs/img_in_image_box_276_585_943_829.jpg)\n\n*Socializing with project members (7 studies) Receiving (timely and proper) response (7 studies) Sending a correct/ meaningful message (2 studies) Finding Help - Expert/Mentor (3 studies) Outdated Documentation (2 studies) Information Overload (3 studies) Code comments not clear (1 study) Social Interactions (15 studies 4 factors) Documentation Problems (4 studies 3 factors) Onboarding Barriers Dealing with Code complexity / instability (2 studies) Code Issues (6 studies 2 factors) Understanding Project Architecture / Code Structure (3 studies) Setting up Local Workspace (1 study) Finding a way to Start (5 studies 2 factors) Finding Appropriate issue / task (4 studies) Finding the correct artifacts to fix an issue (1 study) Newcomers Previous Knowledge (8 studies 3 factors) Lacking of knowledge on processes and practices (1 study) Lacking of Previous Technical Experience (7 studies) Lacking of Domain Expertise (2 studies)*",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Threats to Validity",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This review may have missed some papers that address barriers encountered by newcomers to OSS projects, since we did not search into every possible source and some relevant papers may not contain the chosen terms. To reduce bias, we contacted some specialists in OSS domain. We adjusted the criteria to cover all relevant papers that were of our knowledge and conducted pilot studies.\n\nMost part of the studies analyzed do not present as main focus analyzing the newcomers needs or the problems they face during their first steps. The papers that aim to analyze newcomers obstacles and problems focus on very specific problems. We know that it would be hard \u2013 or even impossible \u2013 to identify every problem that can affect newcomers. However, keeping the analysis to just some specific problems restricts the value of the outcomes and their applicability.\n\nThe findings of this review may have also been affected as the classification is a human process and it is based on some subjective criteria. In particular, the terms of the area do not have a common definition among all studies. The problems were classified based on inductive coding approach, which also relies on manual classification. To reduce interpretation bias related to human process, this review involved two researchers cross checking each paper for inclusion, and a third researcher responsible for reviewing and discussing the information generated after each step.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this paper we identified 21 studies that evidence barriers that can hinder newcomers' onboarding in OSS projects. We aggregated the barriers evidenced across the literature in a single place. By using an inductive coding approach to organize the barriers, we proposed a model that relies on five categories: finding a way to start, social interactions, code issues, documentation problems and newcomers' knowledge. This model is the main contribution of this systematic review.\n\nAs a result of this classification we found that the most evidenced barriers are newcomers' lack of previous technical experience, receiving improper response from community, socializing with project members and finding the appropriate task/issue. This classification provides a baseline for further researches related to newcomers onboarding.\n\nAs future work we aim to conduct qualitative studies to confirm the barriers evidenced by the literature. We are conducting some interviews with OSS experienced developers and newcomers to verify what are the main barriers faced by newcomers from their perspective. We plan to refine the classification model based on the results of the interviews. Additionally, based on this model it is possible to propose strategies to offer a better support for newcomers, and study how these mechanisms can benefit newcomers.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The authors thank Fundacao Araucaria and CNPq (process 477831/2013-3) for the financial support. Marco Gerosa receives a grant from the CNPq and FAPESP. Igor Steinmacher receives grant from CAPES (BEX 2038-13-7).",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2203872619_tables.md"
+}

@@ -1,0 +1,265 @@
+{
+  "id": "W2468432558",
+  "metadata": {
+    "title": "Security Challenges in Healthcare Cloud Computing: A Systematic Review",
+    "n_sections": 7,
+    "n_subsections": 9,
+    "n_subsubsections": 2,
+    "n_tables": 3
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In the recent century, information technology has created the ability to electronically store and transfer health information to improve the quality of health care and increase the effectiveness and efficiency of health care services organization [UNMAPPED:1]. Health information should be available to authorized healthcare providers (including researchers who are trying to find the causes, treatments, and cure patients) [W4392878255]. Moreover, healthcare organizations with large volumes of data are the most critical areas that require powerful calculation tools. Physicians must complete medical information to provide complete and accurate treatment to patients [W2127121011] and so medicine is an increasingly data-intensive and collaborative endeavor [W2083057888].\n\nCurrent developments in remote healthcare system, has been influenced by the development of IT industry and it will provide health services everywhere and in an easy way. These systems provide a platform for sharing medical information systems, infrastructure and applications in a format with the ability to provide automatic subscription. Communications security and confidentiality of healthcare information is one of the aspects that will increase the confidence of users in such tele-health systems [W1989218295]. Also, advances in health care information systems generate considerable amounts of data to be processed and stored. Secondary use of clinical data with text or data mining algorithms requires dynamic and scalable resources. Cloud computing is the perfect solution to fulfill these demands [W2046560792]. Cloud computing is a set of IT services that are provided to a customer over a network on a leased basis and with the ability to scale up or down their service requirements [W4387608880].\n\nThe emergence of cloud computing technology with significant advantages is one of the current major challenges. This is a new prototyping technology based on the \u201cpay on demand\u201d for the use of information communications and technology [W1655795635]. The National Institute of Standards and Technology in the United States has targeted three models of cloud computing: software as a service, platform as a service and infrastructure as a service [W2056348028]. In a healthcare cloud computing for internal communications, extensive number of computers and servers are specifically dedicated to meet the needs of the medical care industry. Health care services can pass to users (patients or physicians) through the Internet connection [W249783398].\n\nThe cloud service empowered registered users to access the hardware and software through a third section in remote locations. It has conveyed fundamental changes in the way the information is stored and accessed [W1655795635]. Despite all the benefits of cloud computing, there are several challenges that delay the migration of customer software and data to the cloud [W2099688605]. Control and data protection are among the most important challenges that have to be considered in the development of cloud network [W877640216] and there will be potential gains achieved from the cloud computing. Security is one of the main obstacles to the growth of cloud computing in the health field, because of the need for high level of data integration, interoperability, and sharing among different healthcare physicians and organizations, various hospitals should be able to create standard guidelines and identify security challenges for improving information security in healthcare cloud computing [W4392878255, W4387608880]. The aim of this study was to review published articles in the field of health care cloud computing security to study the current challenges in this field.",
+      "citations": [
+        "W4392878255",
+        "W2127121011",
+        "W2083057888",
+        "W1989218295",
+        "W2046560792",
+        "W4387608880",
+        "W1655795635",
+        "W2056348028",
+        "W249783398",
+        "W2099688605",
+        "W877640216"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Research Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Research Aim",
+          "subsubsections": [],
+          "text": "The aim of this study was to investigate the security challenges in cloud computing. Reframing to healthcare field is the difference of this study from other similar researches. So, this paper introduces a detailed review of the healthcare cloud computing security issues and explores the main challenges focusing on the compliance concerns and ensuring trust data security with a systematic review of 210 articles.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Research Questions",
+          "subsubsections": [],
+          "text": "- What are the security concerns in the healthcare cloud computing?\n- How can we ensure trust data security in cloud computing infrastructures?\n- How healthcare cloud computing is protected currently?",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Research Strategy",
+          "subsubsections": [],
+          "text": "In this phase, we found relevant sources where searches for particular studies should have been executed. The selection of sources should be related to both security challenges and healthcare cloud computing. To identify published, original research that reported the security challenges in the healthcare cloud computing, an organized search was conducted with the following search keywords: Cloud computing security, Cloud computing and information security, Healthcare cloud computing security, Healthcare information security and cloud computing, Healthcare cloud computing and security. A systematic search was conducted including PubMed, Science direct, Embase, ProQuest, Web of Science, Cochrane, Emerald, and Scopus databases from 2000 to 2015 (Figure 1).",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4 Criteria for Paper Selection and Evaluation",
+          "subsubsections": [],
+          "text": "Following criteria were considered for selecting the studies related to security in the healthcare cloud computing:\n\n- Key words in the title or abstract: The key words might be used in a paper as common words, therefore, only full text papers with the keywords in the title or abstracts were selected.\n- Date of publication: The studies published between 2000 and 2015 were reviewed.\n- Language: Only studies published in English were evaluated.\n- Type of a study: The research papers and review articles were reviewed, and we excluded resources such as editorial letters, newspapers, and other types of sources.\n\n**Figure 1. Study source selection**\n\n```\nKey Words: Cloud computing security, Cloud computing and information security, Healthcare cloud computing security, Healthcare information security and cloud computing, Healthcare cloud computing and security\nPubMed, Science direct, Embase, ProQuest, Web of Science, Cochrane, Emerald, Scopus\n |\n v\nReading title & abstract\nApply inclusion and exclusion criteria\nRemove duplicates\n |\n v\nRemove after full text reading\n |\n v\nFinal included studies\n```",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5 Results",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_5_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.5.1 Information Extraction",
+              "parent_subsection_id": "s_2_5",
+              "text": "Table 2 shows final articles that were used for the purpose of analysis and investigation of research questions.\n\n**Table 2. Summary of final studied articles and their relevance to the research questions**\n\n{{TABLE:tbl_02}}\n\n**Table 2. Summary of final studied articles and their relevance to the research questions (Continued)**\n\n{{TABLE:tbl_03}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_02",
+                "tbl_03"
+              ]
+            }
+          ],
+          "text": "All articles from 2000 to 2015 were taken into account for the purpose of searching in different databases. Using the strategies described above, 666 references were retrieved (for research question one 365, research question two 201, and research question three 100 references). Searched articles were compared based on their titles and abstracts. Comparison of the searched articles showed that, even though, different keywords have been used, most of the articles were duplicated. To identify more relevant articles for our purpose, the abstracts were considered by which 210 articles were selected. By going through the full texts of these papers, 52 articles were found to be more related to the questions of this paper from which 48 articles are included. Moreover, from all the articles referenced in this paper, 21 articles are used for the purpose of analysis and investigation of research questions (Table 1).\n\n**Table 1. Search results from different databases**\n\n{{TABLE:tbl_01}}\n\nNote. RQ1 = Research Question 1, RQ2 = Research Question 2, RQ3 = Research Question 3",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Research Question 1",
+          "subsubsections": [],
+          "text": "Despite the potential benefits of cloud computing in e-health services, information security is still questionable and a security problem have become more complex in the cloud models and requires additional investments to implement data management policies [W1915763716, UNMAPPED:1]. For all the predictable or informative events in health care cloud computing, basic data (what, where, when, risks and consequences) must be registered and approved by the relevant people so that they can propose and/or take the necessary measures [W2068569336].\n\nThe data stored in cloud virtualized environment can be accessed or managed through many of people [W403195763]; thus, use of healthcare cloud computing has several major issues and concerns, including data transmission and access control [W2056348028]. On the other hand, when users store and transfer their information on the cloud, the integrity of data protection and issues related to how to transfer healthcare data is challenging task [W2330030795, W1535066241]. However, by storing healthcare information in the cloud, the patients lose physical control to their personal information [W1542399824].\n\nData motion and transmission from one organization to another is worrisome; such that the consumers need to be vigilant in understanding the risks of data breaches in this new environment [W4387608880]. To the best of our knowledge, currently there is no existing anonymous secure data exchange solution in healthcare cloud environment [W2053845484]. Data mobility and inability to locate or process, are the main challenges of cloud computing in healthcare. Data stored in the cloud is often placed in a virtual environment and a virtual server space cloud is shared with other customers of cloud service providers. Healthcare organizations that transmit sensitive and regulated data into the cloud should ensure that the data is encrypted and secured.\n\nAnother concern of shared computing resources within cloud infrastructures is the identity and access management. Modern technology, increase their functionality and accessibility and it introduces additional needs in terms of information security, particularly authentication. Authentication using widely documented PINs is designed as a solution to overcome the fundamental issues that are usable and to secure through biometric-based techniques to user identity [W2106953071]. In the conventional authentication process for access management there might be illegal use of data if the password is disclosed to an unauthorized person [UNMAPPED:12]. Current identification and authentication methods in healthcare organizations may not be applicable in cloud computing and if these have a combination of unique username/password for certain and sensitive applications, they will present a poor link in the security structure. In the cloud, identity management helps to maintain security, identification and control and focuses on identity and access control.\n\nInternet-based access is another significant challenge in healthcare cloud computing. Clouds are on Internet; therefore, all the security concerns related to Internet, including frauds and attacks by hackers, may happen [W2015330276]. When multiple organizations share resources on Internet-based environment, there is a threat of data misuse and breaches [W403195763]. Use of internet in healthcare services delivery outside the clinic or hospital provides vital benefits to providers and patients equally. However, access to health care data in unsecured virtual environments, creates challenges such as theft or loss of data and regulatory noncompliance. Increasing use of the Internet in healthcare area is required to use cybernetic management solutions for the secure transmission of data, providing solutions across broadband networks, protecting devices from data breaches and unauthorized access.",
+          "citations": [
+            "W1915763716",
+            "W2068569336",
+            "W403195763",
+            "W2056348028",
+            "W2330030795",
+            "W1535066241",
+            "W1542399824",
+            "W4387608880",
+            "W2053845484",
+            "W2106953071",
+            "W2015330276"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1",
+            "12"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Research Question 2",
+          "subsubsections": [],
+          "text": "Data security in the cloud computing consistently had been a major issue because the data is transferred in different places. Ensure data security protection is the main issue of user\u2019s concern in the cloud technology, therefore, data security protection is becoming more important for the future expansion of cloud computing technology in healthcare organizations [W2028065906]. Due to interoperability features, concerning when data transferred to an external provider, moving to cloud computing in healthcare organizations is the major challenge rather than other areas. This is due to adopting a variety of data modeling structures on Medicare organizations that lead to different database designs, implementation, management, operating systems, programming languages and incompatible systems [W2189158159].\n\nTo ensure data security in cloud computing infrastructures, health care organizations should have direct control on many aspects of security. In this area, health care providers usually have great confidence in cloud service providers. Cloud service providers have a vital role in the execution incident response, including transaction analysis, access control, data protection, rehabilitation and services integration. For sensitive and regulatory agencies such as health care organizations, should organize and implement data management tools to recognize and ensure data security policies within cloud virtual environment. Besides, to ensure data security in cloud computing, providing authentication, authorization and access control for data stored in the cloud virtual space is important. Authentication and Authorization are two important issues to health information security management across virtual environment. Authentication in health care cloud infrastructures encompasses both health information and identities of users (health care providers, physicians and patients).\n\nAccess control scheme is a safe technique to trust to data security in cloud computing infrastructures. With Lagrange interpolation polynomial to establish a secure and effective healthcare information access scheme, it allows to accurately accessing control and is suitable for enormous multi-users [W2087065364]. Although, user\u2019s identity, multi-biometric based encryption mechanism, and data auditing to verify the correctness of healthcare data are other ensure ways to security assurances of information stored in cloud environment [W1989218295, UNMAPPED:36]. The user\u2019s identity should be verified at the entry of all accesses using username and password allocated by the cloud providers. Authorization is a critical security requirement to control access priority, permissions and users sources ownership in the cloud. Cloud users are permitted rights on their account to access to information. But it does not conflict with the patients\u2019 rights and they can accept or reject sharing information with other physicians or health care organizations.\n\nFor patients\u2019 consents in a health care system, there may be donation rights to users who have a role in healthcare providing. Access control primarily refers to data security policies. For health care providers, the staff can have access to part of the data according to their organization security policies. To protect data from unauthorized users, the data security policies must be strictly followed. Since Internet-based access is given for all cloud users, it is necessary to define privileged user access. Users can use data encrypt and protection mechanisms to evade security risks.\n\nThere are different approaches for trust of security aspects in cloud computing. A taxonomy approach that classifies security issues is an applicable way that covers eight categories: software, storage and computing, virtualization, Internet and services, network, access, trust, and compliance and legality [W2005013836]. In addition to healthcare organizations should be propose a framework to apply a set of security constraints and access control that guarantee integrity, confidentiality, and privacy of healthcare data in cloud environment. Accredited healthcare providers, physicians, and patients are authorized by the Cloud Service Providers (CSPs) at different levels of privilege and permissions to secure access and retrieve patients\u2019 information [W2330944764].",
+          "citations": [
+            "W2028065906",
+            "W2189158159",
+            "W2087065364",
+            "W1989218295",
+            "W2005013836",
+            "W2330944764"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "36"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Research Question 3",
+          "subsubsections": [],
+          "text": "One of the most important changes in the health care area over the past two decades was the increasing investment in healthcare information security and confidentiality. Protecting healthcare information security, privacy and confidentiality is a continuous process and serious responsibility of every health care organization [W2075838923]. Despite the attractive aspects and features that cloud offers, the move toward cloud technology and its use is relatively slow, mainly due to the inherent security challenges related to the technology. These challenges include data privacy, transparency, risk management, compliance and information security [W2125212367, W2109026747, W2106136255].\n\nThe healthcare industry is a highly disciplined environment and the nature of cloud computing infrastructures\u2014sharing software and servers and communicates via Internet\u2014increases concerns about privacy, security, access and compliance. Sharing medical and personal information beyond the secure milieu of the healthcare organization, and accessing it by a collection of devices and from various sites, leads to many compliance issues. Internet-based virtual infrastructure is a large system with great potential for information security breaches. Cyber-attacks and lack of knowledge of authorized users are the important risks in the healthcare systems. Hackers use various methods to change confidentiality, integrity, and information accessibility, while users intentionally or through negligence are a significant danger for information security [W657411145].\n\nRecent security protection ways in healthcare cloud computing includes in Hybrid Execution Model, Vehicular Cloud Computing (VCC) Service-oriented Security Framework (VCC-SSF), sHype Hypervisor Security Architecture, Identity Management, and Resource Isolation approaches. A new execution model for security protection in cloud computing is the Hybrid Execution model. This model provides a unified way for an organization to utilize their own infrastructure for sensitive, private data and computation [W3090172217]. Vehicular Cloud Computing (VCC) Service-oriented Security Framework (VCC-SSF) to address the limitations and security threats is the other way for protection of healthcare cloud computing. This framework considers security for suitable and efficient services of VCC and includes new user-oriented payment management and active accident management services. Furthermore, it provides authentication, encryption, access control, confidentiality, integrity, and privacy protection for user personal healthcare data [W2048965461].\n\nThe sHype hypervisor security architecture, which enforced isolation at the granularity of a cloud virtual environment, is a particular approach that can isolate the more sensitive and private information to stronger protection [W2026532973]. For cybercriminals, cloud virtual infrastructure produces a potential attack surface than a traditional data center. Cyber-attacks using malware and other acts cloud infect healthcare cloud system components such as operating systems and spread throughout the environment. Protection of healthcare cloud computing from malware and other security threats requires identity management at network boundaries to ensure that only authorized users can access the system. Also, securing server and clients\u2019 platform is possible through systems integration. Integrity in healthcare systems means maintaining accuracy and consistency of the transmitted data. This feature is requirement for healthcare cloud computing and in this area, integration refers to the statement that healthcare information in virtual environment has not been accessed by unauthorized users. Resource isolation is the another approach to provide security isolation in the shared cloud infrastructure, this method helps to achieve resource isolation among virtual networks, which was per-slice shaping and per-link policing [W2026532973].",
+          "citations": [
+            "W2075838923",
+            "W2125212367",
+            "W2109026747",
+            "W2106136255",
+            "W657411145",
+            "W3090172217",
+            "W2048965461",
+            "W2026532973"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Conclusion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Recommendations",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.1.1 Recommendations for Future Work",
+              "parent_subsection_id": "s_4_1",
+              "text": "- Review the security status of remote communication systems\n- Providing security solutions for cloud computing\n- Review information security policies in health care organizations\n- Review security policies on the healthcare cloud",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "We have perceived that for ensuring trust data security in cloud computing infrastructures; healthcare organizations should have direct control over many aspects of security. Following recommendations proposed for secure communication and interoperability in virtualized healthcare cloud environments:\n\n- Development and application of security policies in physical, virtual and private healthcare cloud computing environment for the prevention of cyber attacks\n- Collaborate with cloud service providers to implement appropriate security controls in a cloud virtual environment\n- Use of encryption and data protection mechanisms to authenticate authorized users and licensing\n- Consider information security as a set of adaptive services integrated with compliance requirements and healthcare cloud architecture/design\n- Maintain separation of duties between security policy enforcement and IT operations",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "It is clear that the security issue has played the most important role in hindering cloud computing acceptance. Issues such as identity management and access control for virtual cloud environment, Internet-based access, authentication and authorization and cybercriminals are major concerns in healthcare cloud computing. Putting your data, running your software on someone else\u2019s hard disk using someone else\u2019s CPU appears daunting to many. Most important security challenges in cloud computing technology such as data mobility, multi-tenancy and access control pose serious threats to sensitive information and software in healthcare organizations. Thus, many involved events such as Hybrid Execution Model, VCC-SSF, sHype Hypervisor Security Architecture, Identity Management, and Resource Isolation approaches have to be defined for using cloud computing threat management processes. On the other hand, all involved parties and their interactions in healthcare cloud computing should be defined to ensure secure information exchange. Cloud service providers and healthcare organizations should be defined clear processes for maintaining security in cloud environments. Protecting sensitive electronic medical data is one of the most essential responsibilities of healthcare organizations, and one of the most tightly regulated in cloud area. An essential procedure to improve security and conquest in its threats is the comprehensive understanding and the effective execution of dependent concerns and data protection in healthcare cloud computing.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Acknowledgments",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This study was funded and supported by Tehran University of Medical Sciences (TUMS).",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Authors\u2019 Contributions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Mehraeen E. proposed, started and conceived of the study and participated in the design of the study.\nGhazisaeedi M. provides instruction at various steps of study. Farzi J. & Mirshekari S. were responsible for searching keywords on search engines and drafting the manuscript.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Competing Interests Statement",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The authors declare that the funding mentioned in the Acknowledgments section do not lead to any conflict of interest. Additionally, the authors declare that there is no conflict of interest regarding the publication of this manuscript.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_5",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2468432558_tables.md"
+}

@@ -1,0 +1,541 @@
+{
+  "id": "W4303184156",
+  "metadata": {
+    "title": "Characteristics of Blockchain and Smart Services for Smart Governments: A Systematic Review of the Literature",
+    "n_sections": 6,
+    "n_subsections": 12,
+    "n_subsubsections": 14,
+    "n_tables": 8
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Keywords",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "blockchain; e-government; smart-government; government service; smart service; e-service",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Nowadays we are witnessing the boom of various emerging technologies that are not only affecting our lives but also dramatically change the way that many things are being done. Scholars such as Oliveira et al. [W3015464895] and Akram et al. [W3016402324] have suggested that the effect of these new technologies is to disrupt the ways in which businesses are running their processes and delivering services. Since an unknown entity calling itself Nakamoto first introduced it in a mysterious white paper that ultimately led to the creation of cryptocurrency [W2760993484], blockchain has gained global attention. It solved a known problem in cryptography that emerged in the 1980s and 1990s: how to verify time stamps and prevent double-spending [W2782478122]. \u00d8lnes et al. [W2766800499] stressed that blockchain technology was still immature and should be analysed and experimented with to avoid wasting resources on failure. Similarly, a paper presented by Potts [W3014923465] confirmed that we are still at an early stage of applying blockchain in the public sector. When we reach the next stage where all the sectors complement each other, the innovations in the government sector will be noticed [W3014923465].\n\nGovernments worldwide provide the major infrastructure services in their domains, as seen in their transportation systems, roads, ports, airports, etc. Government public services are also in touch with all citizens, providing them as customers with various services, such as licensure, regulatory frameworks and finance. With this commitment, governments seek to streamline their processes and services by adopting smart systems and to transform their bureaucratic procedures by digital formatting. Researchers have highlighted the promise for smart government services that is inherent in blockchain technology of securing and using the inexpensive management of huge databases [W2507423119, W2755153065, UNMAPPED:9]. Blockchain and smart government services both rely heavily on technology, making them the best fit for each other. Many scholars have mentioned the benefits yielded by applying these two technologies together, building upon the features of each one. In fact, many governments such as Estonia, Spain, the UAE, the UK, the USA, Korea and Singapore have already started to implement blockchain technology in their smart services [UNMAPPED:10, UNMAPPED:11]. The decentralizing nature of blockchain can facilitate the interaction between government institutions, citizens and economic agents, improving the processes of information registration and exchange. Blockchain can considerably reduce government administrative tasks, allowing all the information storage and exchange to take place through blockchain protocols and leaving only a supervisory role for the government [W2766800499, UNMAPPED:11]. Alketbi et al. [W3014805838] have divided the potential uses of blockchain technology in smart government services into three main applications, namely, monetary uses (such as e-payments), contracts (such as smart contracts and stocks) and social applications (such as education and health). Allessie et al. [UNMAPPED:11] from a similar perspective have identified five main uses for blockchain in the government sector: citizen ID management, tax reports, development management, e-voting and regulatory.\n\nWith the above in mind, this study aimed to answer the following research questions:\n\nQ1: What is blockchain technology and what are its most important characteristics?\n\nQ2: What are smart government services and their most important characteristics?\n\nQ3: What are the implications of blockchain for smart governments?\n\nThe contribution of this paper can be summarized in three points. First, the current study provides what is, to the best of our knowledge, the first literature review to highlight the most prominent characteristics of blockchain technology in the literature that have the greatest impact on smart service delivery, specifically in the government sector. It also provides an insight into the literature into the most prominent features of smart government services required for efficient service delivery. Second, it provides an overview of the implications of blockchain technology for smart government services by citing cases from all over the world. Third, it draws on these implications and provides a SWOT analysis for the use of blockchain technology in smart government services which provides further insights into the role of blockchain technology in smart government services.\n\nThe rest of this article is structured as follows. In Section 2, we present the methodology used to conduct this systematic review. Section 3 provides an overview of the treatment in the reviewed literature of blockchain and smart government services and their characteristics and implications. In Section 4, we analyse the data using statistical graphs and SWOT analysis. Finally, section 5 gives our concluding remarks as well as the limitations and implications of our paper and recommendations for future research.",
+      "citations": [
+        "W3015464895",
+        "W3016402324",
+        "W2760993484",
+        "W2782478122",
+        "W2766800499",
+        "W3014923465",
+        "W3014805838"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "10",
+        "11"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "2. Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Defining the Scope",
+          "subsubsections": [],
+          "text": "The taxonomy presented by Cooper [W2085230034] was used to define the scope of our literature review. This taxonomy consists of six characteristics representing different categories, namely, focus, goal, organization, perspective, audience, and coverage. Table 1 below shows the categories that characterize our literature review.\n\n**TABLE 1**\nTaxonomy of our literature review adopted from Cooper [W2085230034].\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W2085230034"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Conceptualization of Topics",
+          "subsubsections": [],
+          "text": "To formulate our search keywords, we started by using our main keywords \"Blockchain\" and \"Smart Services\" in the Scopus database, since it is considered one of the best-known databases. We searched for records using these two terms in the title, abstract, or keywords and conducted a concept map to find related search terms. We found some additional keywords, such as \"e-service\" and \"smart government\", used in these records that were applicable to our study.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Literature Search",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.3.1. Inclusion and Exclusion Criteria",
+              "parent_subsection_id": "s_3_3",
+              "text": "To ensure that the best available papers to fit the purpose of our study were collected, we engaged in three stages of exclusion, as follows:\n\n1. Title and abstract: the title and abstract for each paper were read carefully to decide the relevance of the paper to our research objectives and that it includes more than one characteristic of blockchain or smart government service. At this stage, all the duplicated records resulting from the use of different databases were deleted. In addition, records not written in the English language were excluded.\n2. Type of publication: we included only records from journal papers, conference papers and books. All other types of records such as white papers, letters and patents were excluded. Moreover, records dealing with the engineering aspect of blockchain and smart services such as computer-based modelling or cryptocurrencies were excluded and only papers dealing with the social aspect were included (since the focus of the paper is on the social aspect).\n3. Time: the time-frame for blockchain publications was chosen to be between 2016 and 2022 because 2016 was the year that witnessed the development of decentralized applications through blockchain using smart contracts in the public services [W2905779713, W3017089210]. However, e-Government history emerged in the late 1990s [W45402271], and it, therefore, seemed logical to review the literature on smart services associated with this period and to confine the search for smart services to the 21st century, i.e., 2001 to 2022. Additionally, according to Xiao and Watson [W2750168540], more recent literature can be more relevant to the current situation and thus provide more useful insights.\n\nAt the end of these three stages, seventy-seven papers were chosen to be the sources of our research. The classification of papers used in this research according to the year of publication and type of paper is presented in Figure 1 below, which shows that more than 70% of the publications were recorded between the years 2015 and 2022. This reflects the breakthrough achieved in blockchain technology for public services during this period.\n\n**FIGURE 1**\nClassification of records according to the type and year of publication.\n\n{{TABLE:tbl_02}}",
+              "citations": [
+                "W2905779713",
+                "W3017089210",
+                "W45402271",
+                "W2750168540"
+              ],
+              "tables_in_text": [
+                "tbl_02"
+              ]
+            }
+          ],
+          "text": "Next, we conducted a refined search of the database including all the keywords that we obtained. The main keywords used in this research were \"Blockchain\", \"Smart Service\", \"e-Service\", \"e-Government\" and \"Smart Government\". As Werner suggested [W4244349305], these keywords were used in different combinations to go through other digital databases. The databases used in this study are IEEE explore, SpringerLink, ScienceDirect and Google Scholar. A total of 510 titles were collected, each containing one or more of the researched keywords. Additionally, some records were obtained from backward and forward searching. All the records were collected and processed using the Mendeley citation manager.",
+          "citations": [
+            "W4244349305"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Analysis of the Literature",
+          "subsubsections": [],
+          "text": "At this stage, data were extracted through the use of deductive coding to divide the papers under the heading of themes as recommended by Xiao and Watson [W2750168540]. Three themes stood out: one presents the blockchain characteristics, one concerns the characteristics of smart services, and one focused on the impact of blockchain on smart government services. The first two themes were placed in tables, as shown in Tables 3 and 4. The third theme was used to tie the previous two themes together. To analyse the data effectively, concept mapping was used as recommended by Vom Brocke et al. [UNMAPPED:13] and the three chosen themes were treated as units of analysis. It is worth mentioning here that the features and characteristics of blockchain and smart government services addressed in this study do not constitute an exhaustive list; rather the study presents the most frequent features and characteristics mentioned in the literature. Figure 2 below shows the steps taken in conducting our systematic review of the literature.\n\n**FIGURE 2**\nBlock flow diagram for research methodology adopted from Vom Brocke et al. [UNMAPPED:13].\n\n*[Image Description: A flow diagram showing the five steps of the research methodology. Step 1: Scope definition. Step 2: Conceptualization of topics (Define research key: Smart Government, Smart Service). Step 3: Literature search (Search academic databases: IEEE, ScienceDirect, Google Scholar; Papers exclusion and inclusion in 3 stages: Title and abstract - Not relevant to research objectives, duplicated or not written in English; Type of publication - Only journal papers, conference papers and books, dealing with social aspect; Time - For Blockchain: 2016 to 2022, For Smart government services: 2001 to 2022). Step 4: Analysis of the literature (Extract literature from collected papers; Three Themes Created: Blockchain Themes - 25 Papers, Smart Service Theme - 25 Papers, Implication of Blockchain in Smart Governments Theme - 27 Papers). Step 5: Formulation of the research agenda (Analyse the data).]*",
+          "citations": [
+            "W2750168540"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "13"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The systematic literature review was carried out using the framework of Vom Brocke et al. [UNMAPPED:13]. This framework was deemed most appropriate for our study because it was formulated on the basis of information systems (IS) literature. It consists of five stages \u2013 the definition of the review scope, conceptualization of the topic, literature search, analysis of the literature and formulation of the research agenda \u2013 connected in a circular manner. The first four steps are discussed in the methodology section, while the fifth step is discussed in section 5.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "13"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "3. Literature Review",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Blockchain Technology",
+          "subsubsections": [],
+          "text": "Blockchain is a technological concept consisting of a distributed digital ledger in a decentralized network. The name originated from its nature, where individual records (called squares), are connected in a single rundown, called a chain [W2578476968, W2624953603, W2290426788, UNMAPPED:20, UNMAPPED:24]. It verifies the integrity of the data through a cryptographic mechanism [W2624953603, UNMAPPED:20, UNMAPPED:24]. Blockchain forms a structured distributed system which makes sure that every exchange is legitimate before being added to the chain. This guarantees that no invalid squares are included. It also guarantees that the chain is never broken and that each square is recorded all the time [UNMAPPED:20].\n\nIn blockchain technology, every exchange added to the chain is approved by many computers on the network, called its nodes. These nodes hold a copy of the ledger throughout the network. They are governed by frameworks designed to screen certain explicit types of blockchain exchange [UNMAPPED:20]. These frameworks are classified into three main types, namely, public blockchain, private blockchain and hybrid blockchain [W2290426788, W2754529701]. Since its inception, blockchain has evolved in distinct phases year by year in major ways. Researchers have divided these phases into four main generations, going from blockchain 1.0 up to blockchain 4.0. Table 2 below shows the major changes that blockchain experienced in each phase [W2905779713, W3017089210].\n\n**TABLE 2**\nBlockchain technology evolution [W2905779713, W3017089210].\n\n{{TABLE:tbl_03}}",
+          "citations": [
+            "W2624953603",
+            "W2290426788",
+            "W2754529701",
+            "W2905779713",
+            "W3017089210"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ],
+          "citations_unmapped": [
+            "20",
+            "24"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Blockchain Features and Characteristics",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1. Decentralization",
+              "parent_subsection_id": "s_4_2",
+              "text": "The Peer-to-Peer (P2P) methodologies that blockchain employs play a significant role in protecting its users by improving the decentralized applications installed in many devices. Since it is P2P, it is not constrained by any single unifying element [W2624953603]. Therefore, digital currency is simply one of the potential uses of this innovation. In general, blockchain exhibits three aspects of innovation: cryptography, distributed conventions and information stockpiling. When we join these aspects together, they progressively decentralize its applications, which is the essence of blockchain's innovation [UNMAPPED:24].",
+              "citations": [
+                "W2624953603"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "24"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2. Trust",
+              "parent_subsection_id": "s_4_2",
+              "text": "Blockchain technology is interesting, simply because it casts doubt on the way in which human interactions have hitherto been directed, every one of which depends on trust. By eradicating the need for intermediaries, blockchain technology promotes trust [UNMAPPED:24]. Through blockchain technology, all processes take their course without the need of a third-party facilitator and each exchange is straightforward and reported to all [W2527800909].",
+              "citations": [
+                "W2527800909"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "24"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.2.3. Shared and Public",
+              "parent_subsection_id": "s_4_2",
+              "text": "Blockchain is like a world in which data are installed in computerized code and stored in straightforward and shared databases, protected from any change. Anyone can publish a transaction and join the system by following a set of rules guided by the information that the controlling party provides. Each modification will have an advanced and unique record that can be traced [W2578476968], blockchain's power to reproduce the record ensures that it does not get lost. The more places a thing occupies, the less dependable it becomes, and the possibility of it being permanently lost increases. This is one of blockchain technology's weaknesses [UNMAPPED:27].",
+              "citations": [
+                "W2578476968"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "27"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.2.4. Immutability",
+              "parent_subsection_id": "s_4_2",
+              "text": "Crosby and Nachiappan [UNMAPPED:20] stated that the significance of blockchain is in the security and the protection that it provides, permitting clients to give decentralized evidence of records that cannot be changed by any outsider. The unchanging nature of blockchain and its immutability are what give blockchain its uniqueness, making it a perfect solution for transactions in digital currencies. This is because of its capacity to announce a reality universally and with no focal point of power, unaffected by any other individual effort to change its truth [W2290426788]. Additionally, data are conveyed in a non-participatory way, precluding faulty security positions [W2771122023]. However, this should not imply that blockchain is beyond a change in any circumstances. According to Atzei et al. [W2604844934], the history of blockchain can be altered by the controlling parties.",
+              "citations": [
+                "W2290426788",
+                "W2771122023",
+                "W2604844934"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "20"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "3.2.5. Redundancy",
+              "parent_subsection_id": "s_4_2",
+              "text": "Blockchain repeats the record in order to preserve it from loss. For example, storing an element in N spots requires as much as N times stockpiling as well as system transfer speed to impart the information to every one of the spots. The additional redundancy is unlikely to benefit the capacity, the cost or the speed of the system transfer [UNMAPPED:27]. From another point of view, adaptability is an issue facing blockchain; for example, when the quantity of transfers increases, the blockchain becomes bigger and it ends by being slow and costly to store [W2624953603].\n\n**TABLE 3**\nBlockchain technology characteristics in the reviewed literature.\n\n{{TABLE:tbl_04}}",
+              "citations": [
+                "W2624953603"
+              ],
+              "tables_in_text": [
+                "tbl_04"
+              ],
+              "citations_unmapped": [
+                "27"
+              ]
+            }
+          ],
+          "text": "Many characteristics of blockchain technology can positively impact on business processes. These characteristics make blockchain a possible solution to many problems and challenges in current systems. Table 3 below shows the most frequently mentioned characteristics in the literature that we reviewed.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Blockchain and Smart Contracts",
+          "subsubsections": [],
+          "text": "One of the major highlights in the blockchain 2.0 phase was the development of smart contracts which is considered the main enabler for blockchain in smart governments [W2905779713, W3017089210]. A smart contract is a program that keeps running on blockchain. The blockchain performs services by means of these smart contracts eliminating the need for a third-party facilitator. It has rules for exchange and transfer, which cannot be changed during the execution, nor can any of the stakeholders meddle with it without the others' knowledge. To avoid conflict and guarantee trust, the contract may cite what others need to affirm in the exchange before the agreement is executed [W2766800499]. Furthermore, it has its right of execution authorized by the agreement convention. An agreement can encode any set of guidelines in its programming language. Smart contracts permit a wide range of uses; they can count budgetary instruments, e.g., money-related subordinates, and self-upholding or self-sufficient administration applications such as decentralized betting [W2539190473]. Therefore, smart contracts hold the key to implementing blockchain in smart governments, because they resolve any trust-related issues and provide an easy solution for any conflict that may arise.",
+          "citations": [
+            "W2905779713",
+            "W3017089210",
+            "W2766800499",
+            "W2539190473"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Smart Government Services",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.4.1. Smart Services and Smart Governments",
+              "parent_subsection_id": "s_4_4",
+              "text": "A research paper by Marquardt [46, P. 794] has defined smart service as used in the Smart Urban Services project: \"services tailored to specific customer used cases, with the help of data and intelligent processing\". These smart services rely on smart data which are effectively extracted from big data. They also use the concept of machine learning and information to analyse and process these smart data [UNMAPPED:47]. New terminology has come up that gives the name 'smart government' to the phenomenon of a government's use of these smart services. Smart government means the execution of many business forms; it encourages data innovations which empower data to stream consistently crosswise over government offices and projects to end by naturally giving extremely efficient resident administration [W106345042]. Governments adopt these technologies in developing policies and measures for sustainable development models, rapid economic growth and a better quality of living for their citizens.\n\nSmart services are considered the main driver for smart governments. They are being used to improve public services and administration functions by making use of big data, intelligent processing and digital technologies to serve the public and provide people with a high level of customization. According to Marquardt [W2746232388], a smart service required some conditions to be fulfilled in advance, namely:\n\n- The service should be customer-centred and solution-oriented.\n- The service should be electronically integrated with the product that performs the service.\n- Big data and secured data such as IoT should be collected and analysed by a computer.\n\nFurther requirements were added by Gil-Garcia et al. [W1992236347], in the context of smart government service; they considered the integration of technologies, information and innovation, coupled with an advanced thinking mindset in the government to be necessary for implementing smart services in a smart government. The implementation of smart services offers ample opportunities to the government sector and its digital transformation, such as greater efficiency, cost reduction, improved customer satisfaction and faster decision making [W2746232388].",
+              "citations": [
+                "W106345042",
+                "W2746232388",
+                "W1992236347"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "47"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.4.2. Smart Services' Applications",
+              "parent_subsection_id": "s_4_4",
+              "text": "For a smart city to be constructed, Su et al. [W2054632425] identified three levels in a system that were required, namely, public infrastructure, a platform for the public use of services and the availability of application systems. They proposed that by providing this layered system, a platform could be created for inclusive planning, emergency responses and administrative services, thus creating a single-stop service system. A research paper by B\u00e4tagan [UNMAPPED:51] suggested many applications whereby governments could use these smart services, for example, systems for processing documents, administrative services and electronic information services for citizens. These applications together with changes in the model of governance have led to a smart-growth phenomenon, which is a combination of several changes in the way that public administration is conducted, resulting in several initiatives. These are servitization (developing the capacity to provide service, unlike traditional products), informatization (becoming a knowledge-based society), innovation (focusing on innovations and entrepreneurship) and digitalization (using technological advances) [W2126622864].",
+              "citations": [
+                "W2054632425",
+                "W2126622864"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "51"
+              ]
+            }
+          ],
+          "text": "With the arrival of industrial revolution 4.0, which brought some technologies such as blockchain, artificial intelligence, automation and the Internet of Things (IoT), amongst many others, we are witnessing a complete change in the way services can be delivered. It is difficult to imagine what the face of service delivery in the next five years will be, as organizations create and implement the latest trends in rapid technological marvels. As a result, governments are also taking active measures to ensure the use of these technologies in delivering public services and meeting their customers' needs effectively by means of what is called smart service.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5. Smart Government Services Characteristics and Features",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_5_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.5.1. Participation",
+              "parent_subsection_id": "s_4_5",
+              "text": "Participation of the citizens in smart government services can be considered a type of co-production (with the government) of services. Service co-production refers to the deep involvement and participation of the citizens in service delivery and decision-making. It involves the use of ICT (Information and Communications Technology) and is often labelled e-participation [W2016851153, W1965258521, W2489039118]. Co-production is particularly important because it provides opportunities for cost reduction and improved efficiency for these smart services [W2489039118, W2982969386]. Another concept of co-production and participation in smart services is citizen-sourcing, where the government collects information from citizens about the services provided. The service quality can be improved by governments sharing ideas and feedback with the public or by the public requesting services and reporting problems with the system [W2982969386].",
+              "citations": [
+                "W2489039118",
+                "W2982969386"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_5_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.5.2. Trust",
+              "parent_subsection_id": "s_4_5",
+              "text": "The aspect of trust is considered too wide and complex a concept to be confined to one definition or a certain set of elements [W2042214850]. However, the trust factor in using new technologies has been discussed widely throughout the literature, especially when dealing with the intention to adopt or actual adoption [W2130006747, W2105945325, W1965608668, W2034798257, W3097632497, UNMAPPED:64]. Having confidence in both the government and the technology used by the services forms a fundamental part of citizens' engagement and their adoption of these services [W2130006747]. According to Zucker [W2768557931], trust in the economic environment is one of three kinds: institutional, characteristic and processional, the last being considered the most important, since it is based on previous experience and interaction.",
+              "citations": [
+                "W2042214850",
+                "W2130006747",
+                "W2768557931"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_5_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.5.3. Reliability",
+              "parent_subsection_id": "s_4_5",
+              "text": "Smart services use technology to execute their processes. If it enables them to provide the service efficiently and responsively when needed, it can be called reliable [W2336464046]. Reliability is considered a direct determinant of service quality because it largely affects the customer's perception of its quality [W4240969601, W2011854045]. It is defined as the amount of variability in the service attributes [W2080299575, W2053837191]. According to Zeithaml [UNMAPPED:75], reliability is the most important factor in the adoption of smart services. Reliability can represent the availability, durability, or consistency of a service quality over time; it also represents the ability of the service to perform what is promised every time [W4240969601, W2053837191].",
+              "citations": [
+                "W2336464046",
+                "W4240969601",
+                "W2011854045",
+                "W2080299575",
+                "W2053837191"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "75"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_5_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.5.4. Speed",
+              "parent_subsection_id": "s_4_5",
+              "text": "Nowadays, the speed of service delivery has become an important aspect of our daily lives; this is because of the technological advances in speed that the world is witnessing [W2978323691]. The speed of service delivery refers to the rate at which the service is delivered or processed [W2046669440]. In a study by Shamdasani [UNMAPPED:78] on self-service internet technologies, he found that the speed of service delivery significantly influences customers' perceptions of quality. Government services often deal with enormous numbers of transactions per day, making the requirement of fast and efficient transactions crucial.",
+              "citations": [
+                "W2978323691",
+                "W2046669440"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "78"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_5_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "3.5.5. Transparency",
+              "parent_subsection_id": "s_4_5",
+              "text": "Transparency and trust are often mentioned together in the literature as desired features for government services. Open data and the co-production of the service offer examples of transparency in smart services. Customers need to know what is being done with their private information when they trustingly share it with the government in order to use its services [W2982969386]. Moreover, transparency plays an important role in opposing corruption, especially through the use of ICT [W2096870307].\n\n**TABLE 4**\nSmart services characteristics for smart governments in the reviewed literature.\n\n{{TABLE:tbl_05}}",
+              "citations": [
+                "W2982969386",
+                "W2096870307"
+              ],
+              "tables_in_text": [
+                "tbl_05"
+              ]
+            }
+          ],
+          "text": "Citizens of any nation can enjoy the various features which come naturally with citizenship, such as access to public services and the rights sanctioned by those in power in the land. In this sense, the smart government model of governance gives citizens a very important role in the administration of services [W2031879208, W2160196038]. Smart government systems have become more relevant today because they provide a more cost-effective and efficient system of governance than previous models did, improve the trust of citizens in the government and thus increase the participation of citizens in their governance [UNMAPPED:55].\n\nSmart government services have several key characteristics, such as trust, civil partnership, accessibility, reliability and speed of delivery [W2031879208, W2143299545, UNMAPPED:57]. A study by Alawadhi and Morris [W2143299545] using the unified theory of acceptance and use of technology (UTAT) model has identified reliability, trust, speed of delivery and peer influence as the service-facilitating factors responsible for the adoption of smart services. The most frequently mentioned characteristics in the reviewed literature are listed in Table 4 below.",
+          "citations": [
+            "W2031879208",
+            "W2160196038",
+            "W2143299545"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "55",
+            "57"
+          ]
+        },
+        {
+          "subsection_id": "s_4_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6. Blockchain in Government Services",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_6_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.6.1. Blockchain and Smart Government Services Globally",
+              "parent_subsection_id": "s_4_6",
+              "text": "Governments are launching blockchain technologies in projects that could transform compliance with regulatory systems and identity management and could maintain government records. Moreover, they are initiating these transformations in election processes and other democratic voting models [W2885351631]. Singapore's Signpass is an example of the investment in these transformations. Signpass allows access to many governmental services, like electronic health records. Another example is the Georgian government with Bitfury, the Bitcoin company which established a system for registering land titles using blockchain. Blockchain's inherent cryptography which requires permission to access may prevent corruption and reduce the amount paid in customs duties by combating fake export invoices. The process may prevent fraud worth around 10 billion dollars [W2799090997].\n\nAnother interesting finding is that the Chinese government saw that the characteristics of blockchain, such as distributed ledger and smart contracts, meet the functional requirements of photovoltaic (PV) in many respects, notably automated accounting and the settlement of funds. The integration of blockchain technology with distributed photovoltaic energy (PV) breaks the current centralized pattern and mode of business, which implies that the amount of profit will change accordingly. The blockchain distributed concept and smart contract cover the three bottlenecks of future distributed PV when there are many stakeholders with many disparate standards and when the participants do not trust one another. Hence, blockchain technology reduces transaction costs and also makes transactions more efficient [W2793926897].\n\nSaudi Arabia's SADAD digital payment system and Smart Dubai are other Gov-tech initiatives that use blockchain technology. Dubai has established the Global Blockchain Council to provide affordable, simple, easy and efficient services for its citizens and residents by analysing recent and future blockchain applications. Dubai launched seven blockchain trails covering business registration, title transfer, diamond trade, health records, digital wills, tourism engagement and shipping [W2885351631]. On another level, Estonia has already started using blockchain technology in several government sector services such as voting, taxes, medical records, identity checks and banking [W2902191980]. It initiated the e-Residency program to create a transactional digital identity for anyone in the world [W2327198637]. The leaders of Estonia, interestingly, mentioned that if the country was ever invaded by any other country, all government operations could still be operated remotely through Estonia's online blockchain smart government system [W2902191980].\n\nAccording to Kshetri and Voas [W2799090997], many properties are illegally owned without any contracts in many developing countries, such as India, Ghana and Honduras. This makes the prospect of blockchain technology very welcome in developing countries, for it has the power to combat corruption, protect property rights and help disadvantaged groups like refugees or displaced persons.",
+              "citations": [
+                "W2885351631",
+                "W2799090997",
+                "W2793926897",
+                "W2902191980",
+                "W2327198637"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "New revolutions in governmental systems are among the major topics of discussion all over the world [W2885351631]. The applications of data science technologies such as Artificial Intelligence (AI), the Internet of Things (IoT), Big Data, Predictive Analysis and blockchain show the way to extract the new generation of smart governments [W2885351631]. Establishing smart cities by combining Building Information Modelling (BIM), IoT and blockchain are the major bequests of the new technologies in our own day. BIM will provide the required information about the available facilities and infrastructure, IoT will combine these facilities intelligently through fixed devices and blockchain distributed ledger technology will ensure information security while blockchain smart contracts operate the system [W2885351631].\n\nBig data auditing is a requirement to ensure that smart government activities are running smoothly. Blockchain data auditing (BDA) could be established to avoid any risk of the presence of third-party auditing (TPA), protect the privacy and avoid subsequent cyber-attacks [W2905871206]. Many governments around the world have already engaged in innovative technological initiatives across their platforms. For instance, in New York City, Predictive Data Analysis is used to determine which buildings may be fire hazards so as to take all the appropriate safety measures. In Seoul, cell phones and geospatial data are used to operate night bus services with only 30 available vehicles in a city with a population of 10 million. Barcelona, the European capital of innovation, has around 100 smart city projects [W2885351631].\n\nBlockchain distributed ledger and smart contracts are considered the major elements to combine with other types of technology such as big data and IoT in the provision of trust and the keeping of records. It is also considered the nucleus of a decentralized, low-cost and more efficient way of restructuring public services. A research paper by Jun [W2790414559] asked why blockchain technology had been installed by different countries and found that in applying this technology in public services the main principle of blockchain technology lay in its social effect, because the consensus mechanism forms the core of blockchain. Many researchers, such as N\u00e4sulea [W2889412645], consider blockchain to be a disruptive technology. This is particularly apposite when we look at its potential to change the concept of the delivery of services. At the same time, however, it implies a negative perspective because the old systems and models are not yet designed for this type of technology and this encourages resistance to its introduction.",
+          "citations": [
+            "W2885351631",
+            "W2905871206",
+            "W2790414559",
+            "W2889412645"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "4. Analysis and Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Among the characteristics of blockchain as a technology are decentralization, trust, being shared and being public, immutability and redundancy. The literature reviewed in the present study revealed that researchers most commonly identified the characteristics of decentralization (29%) followed by being shared and being public (20%) as shown in Figure 3 (a). These findings agree with other researchers' findings; for instance, Seebacher and Sch\u00fcritz [W2604528753] found in their research on blockchain technology in the service domain that the most important characteristics were decentralization and being shared and being public. Alkhateeb [W3166241921], for his part, found that the most important characteristics of blockchain technology that best suited the healthcare sector services were its transparency, decentralized character, immutability and anonymity.\n\nThe blockchain characteristics shown in Table 3 are the most often mentioned as being expected to provide the highest value to citizens when a government implements them. However, certain other characteristics are considered equally important but are not for the most part addressed in the literature. Among them are its democratization (being publicly available) [W3017089210], reliability (allowing transactions without human or machine errors) [UNMAPPED:24], tokenization (transforming \"real world\" resources such as cash and stocks to blockchains) [W3017089210], and being chronological and time-stamped (trial of transactions), etc. [W2792565633].\n\n**FIGURE 3**\n(a) blockchain characteristics, (b) Smart-government services characteristics in the reviewed literature.\n\n{{TABLE:tbl_06}}\n\n(a)\n\n{{TABLE:tbl_07}}\n\n(b)\n\nWith regard to characteristics of smart government services, writers give the highest importance to speed (22% of writers did this) followed by trust and participation (21% of writers did this), as shown in Figure 3 (b). These results reflect the findings of the majority of researchers; for instance, Carter and Belanger [W2130006747], surveying 140 students in the USA, concluded that trust and accessibility were the two most important reasons for citizens to adopt the use of smart services offered by governments. Another (quantitative) study of the smart service features that persuaded citizens to adopt them was conducted by Lean et al. [W2034798257], who concluded that trust, perceived usefulness, perceived relative advantage and perceived image had the highest impact on adoption. Moreover, others such as Hung et al. [W1965608668] and Nowacki [W842500324] found in their research that perceived usefulness, ease of use, perceived risks, trustworthiness and compatibility were the reasons why people accepted smart services.\n\nApart from the smart government services characteristics mentioned above and shown in Table 4, there are some characteristics that smart government services ought to include for the sake of efficiency which are addressed in the literature but less frequently. For instance, one of the main challenges that blockchain technology faces is interoperability which is the integration with existing data management systems for smart services [W2746232388]. For smart government services to be integrated successfully with blockchain, smart services systems should feature interoperability [W3200259039]. In addition, smart services have other desired characteristics that are not highlighted in this study because they are not widely mentioned in the literature such as effectiveness (ensuring the effective delivery of quality services) [W3097632497], compatibility (being compatible with citizens' lifestyles) [UNMAPPED:57] and innovation (in the modes of service) [UNMAPPED:88], etc.\n\nThe use of blockchain technology in government services is promising and could be an important element in the quest by various governments to become a smart city. However, this technology is still nascent and various security and technical issues must be addressed before it can be implemented on a large scale and become fully accepted by the public. The lack of standards, scalability, change management and cybersecurity are the major issues with blockchain technology and further research is required to resolve them [W2885351631]. Most of the discussions about blockchain technology in the literature focus on the possibilities and issues of the technology itself but ignore issues except those at the extremes, such as those to do with implementation, trade-offs, limitations and governance [W2766800499].\n\nTaking the e-Residency project in Estonia as an example, we believe that it should be undertaken with stricter regulations such as limiting first registration to those located in Estonia at the time. For instance, it would not be possible to encourage the UK or any other country to go ahead now with an e-Identity project on the grounds that it had succeeded in Estonia, because Estonia and the UK differ so widely in their culture and the size of their population; managing to collect 1.3 million identities electronically is not at all the same as managing to collect around 70 million. Proactively, researchers such as Sullivan and Burger [W2327198637] discussed the risks of initiating smart residency in Estonia. They mentioned that the authentication process for e-Residency does not meet the international standards set by AML/CTF (Anti-Money Laundering and Counter-Terrorism Financing Act). For instance, no face-to-face interview is required in Estonia before e-Residency is certified and this opens the door to money laundering; this is why its banks now demand face-to-face interviews to open new accounts [W2327198637].\n\nScholars such as Peters and Panayi [W2176225732] reflected in their research on several issues \u2013 authorization, data certainty, data protection and data validity \u2013 that need to be explored when blockchain financial applications are being made. Moreover, other academics such as \u00d8lnes [W2507423119] and Carson et al. [UNMAPPED:10] argued that the attention on blockchain technology has focused merely on financial capabilities and strengths and overlooked its underlying abilities and opportunities as a technology that can be applied from several perspectives such as those of a smart government. Similarly, a paper by Crosby et al. [UNMAPPED:20] argued that the financial and non-financial aspects of blockchain show different capabilities and predicted significant adoption of it in the coming years. However, it will be taken up slowly due to the risks and threats which are associated with it. To reap the benefits of implementing blockchain technology, many changes in the design of processes, responsibilities and governance will have to be made [W2766800499]. Allessie et al. [UNMAPPED:11] argued this point by linking it to governance since the decentralized nature of blockchain technology is expected to create uncertainties over the stability of the network. It removes central control from the government and therefore makes it obligatory to re-engineer government processes in response [W2766800499, UNMAPPED:11].\n\nAs with any new technology, smart government services face many challenges and obstacles owing to the nature of these services and their high dependency on technology. Marquardt [W2746232388] finds that among these challenges are the lack of standardization, lack of skilled workers, high investment requirements, security and data ownership as well as deficiencies in data analysis and technology. Looking at these challenges from a closer perspective, we see many other challenges that may not be related to the technology itself but rather relate to the mindset of the people involved. For instance, Harsh and Nikhil [W106345042] highlighted the challenges facing governments that appear during the transformation of government services into smart services, identifying the cultural challenge and fear of failure as two of the greatest. In the same context, Marquardt [W2746232388] identified other challenges affecting the implementation of blockchain, such as the absence of change management approaches and lack of vision. Interestingly, all authors agree that the unavailability of models and frameworks to help assess the transformation, in terms of implementation [W106345042] and in terms of measuring the social and economic impact of open data [W2746232388], represent a big proportion of these challenges.\n\nTo generalize these aspects more widely, SWOT analysis of the strengths, weaknesses, opportunities, and threats, in the reviewed literature was performed (see Figure 4) to assess the implementation of blockchain in smart governments. The core strength of this technology is the security and privacy that it offers. Yet the vulnerability of this technology lies in the fact that it is a newly born technology and has not yet been fully explored, posing some threats to its implementations. Even so, we cannot ignore the vast array of opportunities that it provides to governments mainly in reducing costs and providing services of better quality.\n\n**FIGURE 4**\nSWOT analysis for blockchain implementation.\n\n{{TABLE:tbl_08}}",
+      "citations": [
+        "W2604528753",
+        "W3166241921",
+        "W3017089210",
+        "W2792565633",
+        "W2130006747",
+        "W2034798257",
+        "W1965608668",
+        "W842500324",
+        "W2746232388",
+        "W3200259039",
+        "W3097632497",
+        "W2885351631",
+        "W2766800499",
+        "W2327198637",
+        "W2176225732",
+        "W2507423119",
+        "W106345042"
+      ],
+      "tables_in_text": [
+        "tbl_06",
+        "tbl_07",
+        "tbl_08"
+      ],
+      "citations_unmapped": [
+        "24",
+        "57",
+        "88",
+        "10",
+        "20",
+        "11"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "5. Conclusion, Implications and Future Research",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1. Implications",
+          "subsubsections": [],
+          "text": "From a research point of view, this study helps in identifying the most important characteristics of blockchain and smart government services that can be used to create the highest value for stakeholders. Moreover, it highlights the challenges to blockchain adoption in smart government and the opportunities it brings to this sector. From a practical point of view, this study will aid governments that are seeking to adopt this technology to better understand the requirements for successfully implementing it in the government sector in terms of its characteristics. This will be particularly useful to ensure the compatibility of these smart services with blockchain technology before its adoption.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2. Limitations, Challenges and Recommendations for Future Research",
+          "subsubsections": [],
+          "text": "The main limitation of this study is the very limited literature on the challenges of adopting blockchain technology specifically in government services. Hence, more extensive studies should be made on this topic to facilitate the adoption of blockchain in government services. More robust research should focus on measuring the readiness of governments to adopt blockchain technology and defining the barriers to a successful adoption. Moreover, there should be more intensive research on the implications of blockchain in smart government and smart services. Value co-creation through blockchain is another subject that can be explored, to discover how blockchain creates value for citizens through smart services.\n\nAmong the major challenges facing the implementation of blockchain in smart government services are trust, reliability and citizen partnership; therefore, it is recommended not to drive the integration of technologies with the sole purpose of increasing efficiency. Citizens should also by this means be allowed to be part of decision-making in matters related to their data. Therefore, this area can be further explored to find how to improve trust in the services offered by the governments and the impact of governments on these services.\n\nThe present research surveyed the research papers published in the English language in the periods 2016-2022 and 2001-2022 specifically on blockchain technology and smart government services respectively; as a result, we may have missed some high-quality publications published in articles in other languages or outside the specified timeframe mentioned above. Additionally, although the selection and reading process of the literature was conducted carefully, it may be subject to some bias in its selection and information extraction process. Moreover, it did not include all the available literature on blockchain and smart government services that have ever been written. Therefore, future research may benefit from the use of such analytic techniques as the \"Citation Graph\" and the \"Density Map\" which enable researchers to process and review a great number of articles and studies.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Blockchain as a technology has enormous capabilities in different fields and as such, has aroused immense interest due to the chance to adopt it in other areas beyond the financial. Its capacity can be used in the field of information security, to exchange data and information efficiently. However, at this stage, the adoption of this technology is advancing at a slow pace.\n\nWithin the literature, the characteristic of blockchain technology found most common was decentralization, whereas for smart government services the most common characteristic was found to be speed. This literature review concludes that even though there are still some weaknesses in blockchain technology arising from the fact that it is still in its initial stages, adopting blockchain technology in government services is now showing great potential and creating many opportunities especially by reducing overall cost, speed up services and improving both quality and customer satisfaction. It is expected that innovative technologies such as blockchain will have a significant impact on everyday life in the coming decade.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4303184156_tables.md"
+}

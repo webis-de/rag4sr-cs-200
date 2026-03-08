@@ -1,0 +1,480 @@
+{
+  "id": "W2154535415",
+  "metadata": {
+    "title": "A systematic review of domain analysis tools",
+    "n_sections": 17,
+    "n_subsections": 10,
+    "n_subsubsections": 6,
+    "n_tables": 8
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Nowadays, companies are seeking for ways to improve their competitiveness, which involves less time-to-market and high quality for the products. The adoption of software reuse [W2294861651] is an option to obtain these benefits. Although the benefits of software reuse are promising; it is a complex task to put it into practice. A way to maximize these possible benefits is through the adoption of a systematic reuse approach, which is domain focused, based on a repeatable process, and concerned with reuse of higher level life cycle artifacts [W1965037638].\n\nReuse can be obtained in all kinds of assets, such as requirements and use cases, architecture, frameworks. However, the most common is the source code. On the other hand, reuse focused only on source code libraries is insufficient and the key to successful reuse lies in understanding and defining the application domain for a collection of assets [W119386502]. This can be obtained through a domain analysis (DA), which identifies common and variable characteristics of systems in a specific domain.\n\nTo achieve an effective result with this process, it is necessary to collect, organize and analyze several sources of information about different applications in the domain. This task involves distinct phases and activities. The analysis of the existing products from the domain and their correlation, to identify the domain scope, is one example. These activities involve the management of interrelated artifacts that have to be kept traceable and consistent. Due to this, using only human expertise in industrial projects without automation can contribute to risks in a project, such as incomplete information, lack of support for information management, project delays, or degraded productivity. Thus, it is necessary to have tool support to aid the organization's domain analyst during the execution of the process [W2100742239, UNMAPPED:4, UNMAPPED:5].\n\nFurthermore, tool support should assist the complete process, and not just some functionalities, because it would lead to the need to use several tools and information traceability among them would, probably, have to be done manually by the domain analyst. Therefore, it is necessary to evaluate the current domain analysis tools in order to verify the degree to which they support the process. This article presents a systematic review of domain analysis tools conducted to address this goal.\n\nThis review also provides a starting point either for new research aimed at developing new DA tools, or for investigating the processes that follow domain analysis and make use of DA outputs (e.g. domain design, implementation and application engineering). In addition, the review should benefit companies interested in purchasing a DA tool.",
+      "citations": [
+        "W2294861651",
+        "W1965037638",
+        "W119386502"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Domain analysis concepts",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Domain analysis is part of the domain engineering process \u2013 which is the activity of collecting, organizing and storing past experience in building systems or parts of systems in a particular domain in a form of reusable assets [W1561114351], and also encompasses domain design and domain implementation. The results of domain engineering will be reused in application engineering, which is the process of producing systems with the reusable assets developed during the domain engineering.\n\nThe term Domain Analysis was first defined by Neighbor's [W2068780663] as \"the activity of identifying objects and operations of a class of similar systems in a particular problem domain\", where he compares single system analysis with domain analysis. The main point is that single systems analysis is concerned with actions and functionalities of just one system while domain analysis is concerned with actions and functionalities of several systems within an application area [W2049075653].\n\nNowadays, several domain analysis processes have been created \u2013 such as [W1571254960, W2037600745, W2171602494, W2098270941, W2129842352, W1539419865, W1487120682], providing different guidelines for identifying common and variable characteristics of a domain. In 1994, Arango [UNMAPPED:17] performed a study of eight existing domain analysis processes. He presented, as his results, a set of activities that are common to the analyzed processes:\n\n- Domain scoping. Feasibility analysis and planning of the domain.\n- Data collection. Data collection from different sources, which can vary from experts to documents.\n- Data analysis. Descriptions of reusable elements, identifying the similarities and differences between them.\n- Classification. Refinement of the information, clustering similar descriptions, abstracting relevant common features from the descriptions in each cluster and a vocabulary construction.\n- Evaluation of the domain model. Domain model evaluation, and correction of any defects found.\n\nEven though this evaluation was performed 15 years ago, our review shows that the common activities are still relevant.\n\nThe next section describes some previous studies of domain analysis tools.",
+      "citations": [
+        "W1561114351",
+        "W2068780663",
+        "W2049075653"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "17"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Related work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Analysis of existing domain analysis tools has been performed in previous studies, such as the ones detailed below.\n\nSucci et al. [UNMAPPED:5] define some requirements for a domain analysis tool, focusing on the functionalities that a tool should possess in order to have a consistent environment, such as traceability, consistency checking and tool integration. Later, they discuss how existing domain analysis tools satisfy these requirements.\n\nGomaa and Shin [W2102414872] propose a set of requirements for effective variability management in product lines. These define some views that are responsible for specific functionalities, such as feature model, metamodel, consistency checking and product derivation. They also propose a multiple product line view and a product line repository. Their requirements are not only for the domain analysis phase, but for the whole domain and application engineering processes. On the other hand, these requirements are not tested on other tools, just on their prototype.\n\nHowever, these studies need updating and they focus on analyzing only a pre-defined set of requirements. Furthermore, other studies have looked at restricted aspects of the process, such as variability modeling. These studies are described next.\n\nCapilla et al. [UNMAPPED:19] describe a set of concepts for variability modeling and management, and analyze several existing tools based on these concepts. Their analysis focused on the complete software product line and domain engineering processes. As a result, they defined the current limits of tool support for the processes and what should be expected for the next generation of tools.\n\nSinnema and Deelstra [W2160616025] define criteria for comparing variability modeling notations and techniques and other criteria for analyzing the tools. These were selected based on the process they supported. However, the results focus on the techniques and not on the tool support.\n\nEven though several tools were analyzed in these studies, they were not the studies' focus; in addition, these analyses were also performed according to a pre-defined set of requirements.",
+      "citations": [
+        "W2102414872",
+        "W2160616025"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "5",
+        "19"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Motivation",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The available analyses of domain analysis tools - described in Section 3 \u2013 did not intend to find out how the existing domain analysis tools support the domain analysis process. Instead, they define a set of functionalities and analyze the tools according to them.\n\nAnother characteristic of previous studies is that they do not explain how the requirements were defined, if these requirements are sufficient to fulfill a complete domain analysis process, nor if they are focused just on a few functionalities, nor how the tools were selected. In addition, the studies are usually described as a way of introducing a new tool, like [W2102414872, UNMAPPED:5].\n\nTherefore, this review intends to identify how the available tools support the DA process in a systematic way, in order to discover if the available tools are fully supporting the process or if there are still gaps.",
+      "citations": [
+        "W2102414872"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "5"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Method",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1. Research question",
+          "subsubsections": [],
+          "text": "As described before, the objective of this review is to find out how the available tools for domain analysis are providing support to the process. However, this question is too generic for a complete evaluation. Thus, it was further divided into sub-questions (SQ), focusing on specific aspects of the evaluation.\n\nSQ1: Do the tools support a specific or a generic process? The idea of not being focused in a specific domain analysis process increases the chances of adopting a tool, since an organization does not need to adopt a new process just to use the tool.\n\nSQ2: What are the main functionalities of the tools? The second SQ is concerned with how the tool supports the process guidelines, identifying its characteristics. The analysis did not focus on the strengths nor on the weaknesses of the tools, because the goal was to identify what the tools do and compare them. Thus, it is possible to map how the process is supported.\n\nSQ3: Where the tools were developed and used? The last SQ aims at identifying where the tools were developed and how they have been used. Through these descriptions, it is possible to map the current adoption of the tools.\n\nAccording to the systematic review process [W2032860265], the question structure is divided into four aspects (PICO):\n\n- Population: people, projects and application types affected by the intervention. They should be directly related to the question;\n- Intervention: software technology, tool or procedure, which generates the outcomes;\n- Comparison: some other type of intervention \u2013 if applicable \u2013 and.\n- Outcomes: technology impact in relevant information terms for practical professionals.\n\nAnd, the structure for this research question is:\n\nPopulation: this question refers to the support of the domain analysis tools to the process. The population is composed by domain analysts and/or domain experts seeking a way to have a more automated process support, and by researchers in domain engineering/software product line areas aiming at the development of new tools.\n\nIntervention: this review must search for indications that the domain analysis process can be fully supported.\n\nOutcomes: the objective of this study is to map how tools are supporting a domain analysis process and if the process is not fully supported, i.e. there are many gaps in the existing tools, or if there is a necessity of using several tools in the whole process, in which cases the necessity for a new DA tool increases.",
+          "citations": [
+            "W2032860265"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2. Search strategy",
+          "subsubsections": [],
+          "text": "Based on the structure and the research question, some keywords were extracted and used to search the primary study sources. The initial set of keywords was: domain analysis, tool and domain engineering. However, after a preliminary search, which aimed at finding available systematic reviews and assessing the volume of potentially relevant studies [W2032860265], other keywords were added. Some of them were derived from concepts of the domain analysis, such as feature modeling and variability modeling, while others were identified after the analysis of the preliminary search results, like software product line and requirements.\n\nFurthermore, sophisticated search strings could then be constructed using boolean AND and OR operators. Since the review aims at identifying tools, the keyword tool was included in every search string, because in the preliminary searches several results referred only to processes and not tools. The main search strings were \"domain analysis AND tool\" and \"software product line AND tool\", and also other keywords, such as \"(feature modeling OR variability modeling) AND tool\", \"software product lines AND requirements AND tool\", \"(software product lines OR domain analysis) AND tool\", \"domain engineering AND tool\" and \"feature modeling AND variability AND tool\".\n\nThe search for primary studies was based on the following digital libraries: ACM Digital Library, IEEE Computer Society Digital Library, Science@Direct and Springer Link. These searches had as target some journals and conferences, which are detailed in Appendix A, but if relevant results from different journals or conferences were found, they were not discarded. These libraries were chosen because they are some of the most relevant sources in software engineering [W2118328848, W2034971763].\n\nEach search string was used in all digital libraries, and the strings results in each digital library are detailed in the web material at http://www.rise.com.br/research/personal/liana/systematicreview.\n\nAdditionally, the described search engines are focused on academic results; given the fact that the goal was to find the largest number of tools as possible, and these engines would not find commercial tools (as long as they do not have any paper or journal published), these keywords were also used in web search engines, such as Google. In the web engines, the search was targeted at tools information and their grey literature (i.e. technical reports, white papers, manuals and works in progress).\n\nWebsites of researchers and research groups active in this area, such as Alexandria, Fraunhofer IESE, RWTH Aachen and SEI, were also reviewed. In addition to the search in digital libraries and web engines, the references of the primary studies were also read in order to identify other tools.\n\nEven though the contact with research groups and the use of web search engines depart from a systematic process \u2013 thus making it harder to replicate the review \u2013 they were necessary in order to have a more complete set of information and references about the tools.\n\nSince the goal was to find tools that support the domain analysis process, the availability of tools' executables was also investigated, such as prototypes and/or demos. Thus, a wider analysis of the tools could be undertaken, especially for identifying the functionalities. These executables, sometimes, had their download link available in research papers, while others were found through a search in web engines and some were found through research groups' websites or through the direct contact with the tool's developers.\n\nAfter obtaining the documentation about all the tools (papers and website), another search was performed on web engines with the particular information of every tool in order to find more documentation and/or executables.\n\nBased on these sources, there are two types of objects in this review. The first is concerned with the executables, through which the reviewers could test the functionalities of the tool; and the second involves the written documentation found, for instance, conference papers, manuals, white papers and journals.\n\n**Table 1** \nSearch documentation process.\n\n{{TABLE:tbl_01}}\n\nAt the end of the search, a total of 31 potentially relevant tools were selected, of which four only had the information available on the websites and their executables (i.e. no written reports).\n\nThese searches were performed in January, 2008 by a M.Sc. and a Ph.D. students; the achieved results were crossed and then validated. All the results of the search process are documented in the web material. Therefore, it is clear to others how thorough the search was, and how they can find the same documents.\n\nThe adopted documentation template for the results is shown in Table 1.",
+          "citations": [
+            "W2032860265",
+            "W2118328848",
+            "W2034971763"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "5.3. Study selection",
+          "subsubsections": [],
+          "text": "Once the potentially relevant primary studies have been obtained, they need to be assessed for their actual relevance. To achieve that, criteria for inclusion and exclusion of the objects in this review were defined.\n\nSince the goal of the review was on the tools, all the available information achieved in the search \u2013 i.e. executables, papers, grey literature and journals \u2013 were grouped according to the tool they referred to. Due to this, it was possible for a tool to be discussed in more than one paper. For the sake of simplicity, whenever the word tool is used in the rest of the review, it means the written documentation and the executable.\n\nThe inclusion criteria were:\n\n(a) Tools that offer support to the domain analysis phase: the encountered tools must support some functionality in the DA process. If the tool supports functionalities that are not from the DA process, these functionalities will not be evaluated, but the tool might still be selected.\n\n(b) Tools with available executables: with its prototype, demo or finalized product, it is possible to test how the tool realizes the process.\n\n(c) Tools with documentation describing their functionalities: if the written documentation of the tool's functionalities was clear and useful, they were considered too.\n\nNot all of these criteria must be present for every tool. However, at least two of them, the DA support (a) and some other, are necessary, because not every tool has the information from both (b) and (c) available. If all criteria were mandatory, the number of selected tools would decrease significantly.\n\nThe exclusion criteria were:\n\n(a) Tools supporting functionalities that are from steps after domain analysis: tools supporting only activities that are not part of the domain analysis process, but that need its results \u2013 such as product configuration and domain design \u2013 were not considered in the review.\n\n(b) Tools supporting only variability management: tools focusing only on managing variabilities and not on supporting commonalities were not included, since the definition of domain analysis involves the identification of what is common and what is variable in the systems of a specific domain [W2068780663].\n\n(c) Tools with written documentation with no usable information: tools with written documentation that did not have usable description about its functionalities were discarded.\n\n(d) Tools describing only a few functionalities: tools with only written documentation that did not focus on explaining the supported process and the functionalities, but only a singular functionality, were also discarded.\n\nAlso, tools with only white papers could not be selected, because they usually contain just marketing material, therefore another data source should exist in other to validate their information.",
+          "citations": [
+            "W2068780663"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "5.4. Data extraction",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_5_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "5.4.1. Data extraction procedure",
+              "parent_subsection_id": "s_5_4",
+              "text": "Every decision about including/excluding a tool was made after the full reading of the written documentation (except for those where the title and the abstract clearly indicated its content) and conducting some tests with the executables.\n\nOne problem faced during the review was that, sometimes, there were contradictions among the available information of the tools. This happened when a tool had different sources with some years between them. In this case the oldest sources were discarded.\n\nIn cases when there was no agreement between the researchers about a specific tool, there was a discussion in which the researchers related his/her reasons to include or not the tool. If even after this discussion an agreement was not achieved, a third researcher analyzed the available information about the tool and discussed with the other reviewers in order to achieve a consensus.\n\n**Table 2** \nNumber of tools selected in each category.\n\n{{TABLE:tbl_02}}\n\nThis review protocol was revised by the Reuse in Software Engineering (RiSE) group in its weekly discussions and seminars. This group has over 30 members among Ph.D. and M.Sc. students and more than 4 years of experience in state-of-the-art/practice in software reuse.",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_02"
+              ]
+            }
+          ],
+          "text": "The objective of this stage is to design data extraction forms to accurately record the information obtained by the researchers from the primary studies [W2032860265]. The form for data extraction provides some standard information:\n\n- Name of the tool:\n- Date of data extraction:\n- Title, authors, journal, publication details (if available);\n- Prototype information (if available);\n- Website (if available); and\n- A list of each conclusion and statement encountered for each sub-question.\n\nThe template of the form can be found in the web material.\n\nMoreover, the form contains a specific space for each sub-question, from SQ1 to SQ3. For SQ1, the expected answer was the name of the process supported by the tool, or if it supported a generic one. SQ2 is answered with a list of the identified functionalities, while SQ3 was further divided with the information regarding the name and type of the institution that developed the tool, and where it was used.\n\nIn addition, extra information could also be included. These pieces of information usually referred to the tools functionalities that were not related to the domain analysis support.",
+          "citations": [
+            "W2032860265"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "There are several reasons to perform a systematic review, and the usual ones are [W2032860265, W2034971763]:\n\n- To review existing evidences about a treatment or a technology;\n- To identify gaps in current research;\n- To provide a framework/background for new research activities; and\n- To support the generation of new hypotheses.\n\nBased on the motivation described above, the second reason fits the purpose of this review. Furthermore, the results achieved with the review can also provide a background for new researchers interested in domain analysis tools or work products to be expected in the following phases of the process (domain design and implementation).\n\nThe systematic review described here was based on Kitchenham and Charters' [W2032860265] guidelines, which is divided into three main phases:\n\n- Planning the review. Has the goal of developing a protocol that specifies the plan that the systematic review will follow to identify, assess, and collate evidence.\n- Conducting the review. Responsible for executing the protocol planned in the previous phase.\n- Reporting the review. Responsible for relating the review steps to the community and it is fulfilled with this review report.\n\nEach of these phases contains a sequence of stages, but the execution of the overall process involves iteration, feedback, and refinement of the defined process [W2032860265]. Furthermore, as it is described next, some of these stages were adapted from Kitchenham and Charters' definition for more complete results.",
+      "citations": [
+        "W2032860265",
+        "W2034971763"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "6.1. Tools selection",
+          "subsubsections": [],
+          "text": "The tool selection process was performed by a M.Sc., two Ph.D. students and a Ph.D. in conjunction with the RiSE group. It intended to improve the tools' questionnaires completion and analysis.\n\nAfter the analyses of the inclusion and exclusion criteria, from the 31 potentially relevant tools, 19 were selected. Among these tools, 36 written reports, 9 executables and 11 websites were kept for further analysis. The number of selected tools with each type (written documentation, executables and websites) of available information is described in Table 2.\n\nA brief description about the selected tools is presented below in alphabetical order and the available information about each tool is depicted in Table 3.\n\n001. The 001 tool was developed at Hamilton Technologies, Inc. in 1986. The Software Engineering Institute (SEI) developed its integration to domain analysis in 1993.\n\nAmi Eddi. Ami Eddi was developed at the University of Applied Sciences Kaiserslautern, Germany, in 2000.\n\nASADAL. ASADAL (A System Analysis and Design Aid Tool) was developed at the Pohang University of Science and Technology, Korea in 2003.\n\nCaptainFeature. CaptainFeature was developed at the Fachhochschule Kaiserslautern in Germany, 2002.\n\nDARE. The Domain Analysis and Reuse Environment (DARE) was developed in 1998 by the companies Reuse Inc. and Software Engineering Guild, US. The tool is currently in its third prototype.\n\nDecimal. Decimal was developed at the Iowa State University, US in 2002.\n\nDomain. In 1995 Loral federal Systems, US developed Domain as part of a project sponsored by the US Department of Defense (DoD) and the US air force.\n\nDOORS extension. It is an extension to Telelogic's DOORS. The extension was developed in 2005 at the Institute for Computer Science and Business Information Systems (ICB), University of Duisburg-Essen, Germany.\n\nDREAM. The Domain Requirement Asset Manager in product lines (DREAM) was developed by the Pusan National University, Korea in 2004.\n\n**Table 3** \nThe analyzed information of each tool.\n\n{{TABLE:tbl_03}}\n\n**Figure 1** \nSelected tools timeline.\n\nSegment 1/2: 1993 001 Domain 1995 Domain 1996 Domain 1997 Domain 1998 DARE 1998 Holmes 1999 Holmes 1999 Ami Eddi 2000 Ami Eddi 2000 PuLSE-BEAT 2000 PuLSE-BEAT 2001 GEARS 2001 GEARS 2001 GEARS 2002 Odysey 2002 CaptainFeature 2002 CaptainFeature 2002 \nSegment 2/2: 1 RS 2002 2002 decimal 2002 2002 2002 decimal 2002 2002 2002 decimal 2002 2002 2002 decimal 2002 2002 decimal 2002 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002 decimal 2002\n\nExtracted text: 93 1995 1998 1999 2000 2001 2005 1 Domain DARE Holmes Ami Eddi 2002 20C2 DECIMAL 2004 Pure::Varian GEARS Odyssey FeaturePlugin 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 R 2004 2000 2002 2003 DREI PuLSE-BEAT CaptainFeature ASADAL\n\nFeaturePlugin. It was implemented at the University of Waterloo, Canada in 2004.\n\nFeatureIDE. Otto-von-Guericke-University Magdeburg, Germany developed the FeatureIDE in 2005.\n\nGEARS. GEARS was developed by BigLever, US, in 2001.\n\nHolmes. Holmes was implemented by the University of Calgary, Canada in 1999.\n\nOdyssey. It is a software development environment whose goal is to construct a reuse infrastructure based on domain models and component based development. It was developed by the Federal University of Rio de Janeiro, Brazil, in 2002.\n\nPluss toolkit. It is a set of extensions for the Telelogic DOORS and the IBM-Rational Rose developed in 2005 by the Umes University and Land Systems HSgglunds, both from Sweden.\n\nPuLSE-BEAT. Developed by the Institut Experimentelles Software Engineering (IESE), Germany in 2000, the Product Line Software Engineering \u2013 Basic Eco Assistance Tool (PuLSE-BEAT) is part of the Product Line Software Engineering \u2013 PuLSE methodology, which is an approach to product line engineering.\n\nPure::Variants. Implemented by Pure-Systems' company in Germany in 2003, Pure::Variants has three kinds of license, a free one and two paid ones: a professional and an enterprise. The analysis was done with its free license.\n\nRequiLine. The Research Group Software Construction (RWTH), Germany, developed it in 2005.\n\nXFeature. It was developed in 2005 by an association of P&P Software Company with Swiss Federal Institute of Technology (ETH).\n\nFig. 1 details the selected tools in the chronological order. Through this figure, it is possible to verify that the number of tools offering support to domain analysis is increasing, with almost half of them released in the last four years.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "6.2. Research question result",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_6_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "6.2.1. Domain analysis support",
+              "parent_subsection_id": "s_6_2",
+              "text": "Based on the 19 tools analyzed, it was possible to identify that the tools are usually developed to support a specific process, under the justification that there are no tools supporting all functionalities of a specific process. These tools correspondent to more than 78% of the total (15 tools, as shown in Table 4).\n\nAmong the tools supporting specific processes, five support the same process \u2013 the Feature Oriented Domain Analysis (FODA) process [W2099213660]. This process defines several activities for domain analysis, such as context model, feature model, entity-relationship, functional models and architectural models. Among these five tools, three support only the feature model activity; while the other two tools support the whole FODA process (one of them supports an extension of the FODA process \u2013 the Feature Oriented Reuse Method [W1591726984]).\n\n**Table 4** \nThe type and name of the processes each tool supports.\n\n{{TABLE:tbl_04}}\n\nFeature Plugin and FeatureIDE tools support generic processes. Their processes are based on a mix of several processes; however, FeatureIDE describes that the supported process has to be feature-oriented. Finally, Pure::Variants and XFeature do not specify which process they support, but they do offer support to an activity similar to feature modeling.",
+              "citations": [
+                "W2099213660",
+                "W1591726984"
+              ],
+              "tables_in_text": [
+                "tbl_04"
+              ]
+            },
+            {
+              "subsubsection_id": "s_6_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "6.2.2. Main functionalities",
+              "parent_subsection_id": "s_6_2",
+              "text": "Even though the tools' developers justify the construction of a new tool because the available ones do not support a specific domain analysis process, this review identified that the majority of the analyzed tools have similar functionalities.\n\nMoreover, the extracted functionalities have analogous goals, so it was possible to group them. This classification matched the DA process subdivision that some processes have [W2171602494, W1539419865]. In this review, the same names used in [W1539419865] were adopted. The groups are:\n\n- Planning: It is responsible for collecting the data needed to define the domain scope. These data refer to information already available from the domain being analyzed, such as legacy systems, experts and customer objectives. The collection of this information aids at identifying the characteristics of the domain towards the definition of its scope.\n- Modeling: It represents the domain scope in another way, which can be through diagrams, tables and others. It presents commonalities and variabilities of the domain, and it is responsible for creating the constraints between the domain's characteristics.\n- Validation: This group refers to functionalities responsible to validate the domain. These functionalities included documentation and reports.\n\nThe functionality of each group is detailed next. Table 5 shows which functionalities each tool offers support to. The roman numbers refer to the functionalities described next and the grey columns separate each group of functionalities (Planning, Modeling, Validation and Extras, respectively). This table facilitates the identification of the gaps in the selected tools, and, in addition, it can help to discover which tool best satisfies the need of the company.",
+              "citations": [
+                "W2171602494",
+                "W1539419865"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "After the selection and data extraction of the tools, each tool analysis was confronted with the research question and similar conclusions about the data were grouped.\n\nFor the rest of this section, the results of the systematic review conducted with the objective of mapping how the available tools for domain analysis are offering the support to the process are presented.\n\nSince the research question was further divided into three sub-questions, each one of them has its conclusion presented first. After the results of the SQs, a summary relating to the main question is presented.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Based on the search results and on the inclusion and exclusion criteria, a set of tools were selected, as described below.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Planning functionalities",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The identified functionalities and their explanation are:\n\n(i) Pre-analysis documentation: stores and retrieves the information in order to help the identification of what characteristics should be part of the domain. This information can be obtained from stakeholders and market analysis, constraints, objectives definition and data collection.\n\n(ii) Matrix of the domain: represents the relationship between the characteristics of the domain, also called features, and the applications included in the domain. It is represented using rows and columns, where the former represents the features and the latter the applications. This matrix aids in the identification of which features are common or variable in the domain.\n\n(iii) Evaluation functions: responsible for the process metrics. They are divided into characterization and benefit functions. The former evaluates characteristics for the applications, while the latter uses the results of the former to decide the best characteristics and best products for the domain analysis to cover [W2171602494].\n\n(iv) Scope definition: identifies the features that should be part of the reuse infrastructure of the domain.\n\nIn accordance with the processes, this group consists of functionalities that should be executed in a domain analysis first.",
+      "citations": [
+        "W2171602494"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Modeling functionalities",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The modeling group represents the domain scope defined in the planning phase. Its functionalities are:\n\n(v) Domain representation: represents the defined scope. This representation can be through tables, models, trees and others. This model attempts to formalize the variations in the domain.\n\n(vi) Variability: represents the variabilities a feature can have. The possible types are optional \u2013 it can or not be present in the product; alternative \u2013 from a group of features only one feature will be in the product; and or \u2013 from a group of features at least one feature will be in the product.\n\n(vii) Mandatory features: represent the features that will always be in the products.\n\n(viii) Composition rules: create restrictions in the domain for representing and relating the features. They can be mutual exclusion and dependency, regular expressions, or artificial intelligence, among others.\n\n(ix) Feature group identification: classifies the features according to the type of information they represent. They can be capability, domain technology, implementation techniques and operation environment [W2072561921].\n\n(x) Relationship types: provides different types of relationships between the features. They can be composition, generalization/specification and implementation.\n\n(xi) Feature attributes: permits the inclusion of specific information for each feature. It can also represent a variation point, if the number of variants for it is too big, providing a more concise feature model.\n\nAs it is seen in Table 5, almost every tool supports the first four functionalities in this group; because of that, they were further classified as \"common functionalities\". This means that every domain analysis tool should always have them, even if the DA process being supported does not.",
+      "citations": [
+        "W2072561921"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Validation functionalities",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The functionalities of the validation group are not dependent on the previous groups, but they provide a greater understanding of the domain. They are:\n\n(xii) Domain documentation: provides documentation about the domain, consisting of: description, context, dependencies between systems in the domain, among others. Each tool provides a different set of fields for documentation.\n\n(xiii) Feature documentation: provides documentation to every feature of the domain, with information such as: description; rationale; priorities, etc. Each tool provides a different set of fields for documentation.\n\n(xiv) Requirements management: provides support for the inclusion of requirements and/or use cases in the tool.\n\n(xv) Relationship between features and requirements: relates the existing features of a domain to the requirements (functional or non-functional) and/or use cases defined. Through this relationship it is possible to maintain the traceability between the artifacts produced in the domain.\n\n(xvi) Dictionary: identifies and defines the words commonly used in the domain and mostly found during pre-analysis.\n\n(xvii) Reports: generates reports about the information available in the domain. The reports can represent, for example, the number of possible combinations; the frequency in which features appear in the product; the documentation of the artifacts.\n\n(xviii) Consistency check: verifies if the generated domain follows the composition rules created.\n\nSince the consistency check is supported by most of the tools (see Table 5), it was also classified as a common functionality.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "Extra functionalities",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In addition to the functionalities described in the previous groups, which are intrinsic to domain analysis, two other functionalities that refer to a step after the domain, i.e. the product derivation, were included. They are:\n\n(xix) Product derivation: identifies the features that belong to a product according to the features defined for the domain.\n\n(xx) Product documentation: provides documentation to every product with information such as product description and domain version.\n\nEven though they are not part of the domain analysis process, the product derivation function is supported by the majority of the analyzed tools.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_11",
+      "section_index": 11,
+      "section_label": "Usability requirements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Through the analysis of the selected tools \u2013 considering only the ones that had the executables available \u2013 some usability requirements were identified. These requirements aim at providing an easier and more intuitive environment for the tool's users. However, they are not presented in Table 5, because not all tools had executables and some of them were identified due to its non-existence in the executables, making it harder to use the tool.\n\nThe identified requirements are detailed next:\n\n- Tutorial: the goal of the tutorial is to describe the first execution steps in the tool in order to support the domain analysis process.\n- Graphical user interface (GUI): the existence of a graphical interface makes the environment more intuitive to the users.\n- Help/manual: the help/manual existence, usually, provides a detailed explanation of its functionalities.\n- Example solutions: example solutions of domains already analyzed in the tool are useful to help in the process of identifying the expected input and output, besides showing a real case to be consulted.\n- Import/export from/to other applications: imports and/or exports the generated documentation to/from other file types, such as XML, XMI, PDF, XLS, JPEG and GIF. Furthermore, it allows the visualization of domain data in other tools.\n\nThe requirements Tutorial and Example solutions are mainly important for users that do not have any kind of previous training before the tool usage, because these requirements show how the user can start domain analysis. And the lack of training was the case of this review; therefore the tools with these requirements were easily analyzed.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_12",
+      "section_index": 12,
+      "section_label": "Functionalities summary",
+      "subsections": [],
+      "subsubsections": [
+        {
+          "subsubsection_id": "s_12_0_1",
+          "subsubsection_index": 1,
+          "subsubsection_label": "6.2.3. Tools development and usage",
+          "parent_subsection_id": null,
+          "text": "Most of the selected tools were developed in the academic environment \u2013 12 \u2013 while 4 were developed exclusively in the industry and the remaining three tools were developed in both environments, academic and industrial, as shown in Fig. 2.\n\nHowever, for the second part of this sub-question \u2013 where the tools were used? \u2013 there were some difficulties in finding this information for some tools. For several tools, especially the ones from the academia, this information was not available at all.\n\nSince there was information in which environment the tool was developed, it was assumed that the tool was used at least once in this environment, even without a report detailing it. Table 6 shows in which environments the tools were used, and it includes the reports found confirming them. Whenever a dash appears in the report column, it means that the analyzed reports do not describe any use of the tool.\n\n**Figure 2** \nWhere the tools were developed.\n\nAcademia: 12 \nIndustry: 4 \nBoth: 3\n\n**Table 6** \nWhere the tools were developed and used.\n\n{{TABLE:tbl_06}}\n\nThe possible results for the used and the developed columns (Table 6) are: Academia (A), Industry (I) and Both (B).\n\nEven though the majority of the tools were developed in academia, five of them were also used in the industrial environment. Furthermore, one of the tools that was developed in an industry environment was also used in academia. The rest were used in the same environment they were developed.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_06"
+          ]
+        },
+        {
+          "subsubsection_id": "s_12_0_2",
+          "subsubsection_index": 2,
+          "subsubsection_label": "6.2.4. Research question result summary",
+          "parent_subsection_id": null,
+          "text": "In this section, the results of the review are summarized according to the ones extracted from the sub-questions. As described in SQ1, the development of a tool usually comes from the necessity of supporting a specific process and not a generic one. However, this usually obliges a company that wishes to use the tool to modify or adapt the process it already uses. Thus, the learning curve and the impact it will cause to the company's development life cycle is higher.\n\nConsidering the functionalities in SQ2, the tools are mainly focused on the modeling phase due to the common functionalities (see Table 5). However, considering only the functionalities not classified as common, just three tools offer some kind of support to the modeling phase. That is similar to the support rate of the planning group functionalities, in which only the domain matrix is supported by all the tools with functionalities in this group. Regarding the common functionalities, from the 19 tools supporting the domain representation in the modeling phase, seven support this functionality using feature models.\n\nAnalyzing Table 5, for the validation group, it is possible to observe that the tools do not provide much support to the documentation activities, even though domain analysis is a process whose results depend on the analysis and management of information from various sources [W2113770490]. In addition, 13 tools support the product derivation \u2013 among the extra functionalities \u2013 for the domain, but only three offer support to product documentation.\n\nThrough the results obtained for SQ3, it is clear that, even with the increasing adoption of software product lines and/or domain engineering by organizations [UNMAPPED:4], the majority of tools are still being developed and used in an academic environment. Although there are other industrial tools that were excluded due to the defined criteria or because they are developed and used only by their companies [W1929222868, W1486076990], tools are still too focused on academic issues, and this is not desirable if the tools are to achieve wider usage.",
+          "citations": [
+            "W2113770490",
+            "W1929222868",
+            "W1486076990"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "4"
+          ]
+        }
+      ],
+      "text": "In Table 5, apart from the common functionalities, the other identified functionalities are rarely implemented in the same tool.\n\nIn the planning group, the identified functionalities were available only in 4 tools, and the maximum number of functionalities supported by one tool is 3. This suggests that many tools would benefit from additional functionalities.\n\nAlthough we identified that the common functionalities are supported by almost every tool, the way these functionalities are supported vary significantly from tool to tool. For example, the domain representation can vary from a descriptive visualization \u2013 through a table view \u2013 to a diagram view \u2013 using the feature model defined by [W2099213660]. The functionalities description details some of the variabilities encountered. Apart from the common functionalities, the remaining ones for the modeling group are also seldom supported; particularly the feature group identification, which is supported by a single tool.\n\nRegarding the validation group, only one tool (Ami Eddi) does not support any functionality, in spite of this, not all functionalities are provided by a single tool. RequiLine provides most functionalities, but omits a dictionary. Otherwise, only 2 tools support more than half of the requirements for this group.\n\n**Table 5** \nFunctionalities each tool supports.\n\n{{TABLE:tbl_05}}",
+      "citations": [
+        "W2099213660"
+      ],
+      "tables_in_text": [
+        "tbl_05"
+      ]
+    },
+    {
+      "section_id": "s_13",
+      "section_index": 13,
+      "section_label": "7. Functionalities priority",
+      "subsections": [
+        {
+          "subsection_id": "s_13_1",
+          "subsection_index": 1,
+          "subsection_label": "7.1. Essential priority",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_12_0_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "6.2.5. Discussion and implications",
+              "parent_subsection_id": null,
+              "text": "Even though the majority of tools support a specific process, analyzing the processes they support \u2013 along with the activities \u2013 the Feature Model activity from the FODA process [W2099213660] stands out. Excluding the 5 tools that support the FODA, two other tools also have activities similar to the feature model. Although these results suggest that the feature model aspect of FODA is generic, this does not imply that FODA itself is generic.\n\nThe idea that the feature model activity can be considered generic is reinforced by the number of tools that implement domain representation through feature models, as described in the previous section.\n\nOther conclusion can be drawn when comparing the black dots in the validation group with the tools' development year (detailed in Section 6.1). It becomes clear that documentation functionalities are being more explored in more recent tools.\n\nFurthermore, based on Table 5, it is clear that there are many functionalities that are supported by only a few tools. No tool provides complete coverage of all functionalities in each group, indicating that existing tools are functionally incomplete.\n\nThis lack of full support for DA has a potential impact on tool adoption. Companies wanting tool support for DA may be forced to use several different tools to automate the entire process. This is exactly the scenario that must be avoided, since it probably forces the domain analyst to manually perform the data traceability, increasing the chances of errors in the analysis. There are reports saying that the existence of different tools during the process, without standardization on data format, increases staff effort and reduces data traceability and consistency, therefore delaying the project execution [W1594113366, W2102167746].\n\nAnother outcome for this review, based on the functionalities identified, is the definition of the priority to be given to different functionalities. The priorities for different functionalities are discussed below.\n\n\nAfter identifying the functionalities that are supported by the tools, it was clear that not all of them are necessary for domain analysis. Therefore, the following priority categories were used to classify each functionality:\n\n- Essential. It represents the indispensable and high-priority requirements that must be carried out. The lack of these functionalities means the application is unable to support domain analysis at all.\n- Important. It represents the medium-priority requirements that are strongly advisable for better usage of the tool.\n- Low. It represents the low-priority requirements that are required for particular situations but are not essential for a useful DA tool.\n\nThis categorization was based on the experience of the participants involved in the review and on the number of tools supporting each functionality, which is depicted in Fig. 3. Therefore, the largest number of tools support should indicate that the functionality is mandatory in every domain analysis project.\n\nIn Fig. 3, the functionality \"relationship between feature and requirements\" had to be renamed to \"feature and requirements\" due to the lack of space in the graph.\n\nFig. 3 and the priority classifications provide a prioritized list of functionalities that should be useful for DA tool developers, researchers and companies looking for DA tool support.\n\n\nThe first functionalities to be defined as essential are the ones defined as common, because the majority of tools already support them and they are also present in many domain analysis processes [W2134690746, W1629083871, W2244360923, UNMAPPED:17]. Additionally, other functionalities, from planning and validation, were set as essential, because they are key functions in the domain analysis process.\n\nThe complete set of essential functionalities is: Domain Matrix, Domain Representation, Variability, Mandatory, Composition Rules, Consistency Check and Domain Documentation.\n\nEven though the Product Derivation functionality is supported by 13 out of 19 tools; this activity is not a part of the domain analysis process, therefore, it was not defined as essential, but as an important priority.",
+              "citations": [
+                "W2099213660",
+                "W1594113366",
+                "W2102167746",
+                "W2134690746",
+                "W1629083871",
+                "W2244360923"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "17"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_13_2",
+          "subsection_index": 2,
+          "subsection_label": "7.2. Important priority",
+          "subsubsections": [],
+          "text": "In addition to the Product Derivation, the other important functionalities are: Scope Definition, Feature Documentation, Requirements Management, Dictionary, Reports and Product Documentation.\n\n**Figure 3** \nNumber of Tools per Functionality.\n\n{{TABLE:tbl_07}}\n\nMoreover, the Tutorial and GUI functionalities from the usability requirements were also considered as important priorities, because they are directly related to the tool usage, and CASE tools should provide an easy-to-learn interface [W2073153654].",
+          "citations": [
+            "W2073153654"
+          ],
+          "tables_in_text": [
+            "tbl_07"
+          ]
+        },
+        {
+          "subsection_id": "s_13_3",
+          "subsection_index": 3,
+          "subsection_label": "7.3. Low priority",
+          "subsubsections": [],
+          "text": "The remaining functionalities had their priority defined as Low. It does not mean that these functionalities do not aggregate value to the domain analysis process, however their results do not have a major impact on the final artifacts of domain analysis.\n\nThe complete set of low functionalities is: Pre Analysis Documentation, Evaluation Functions, Feature Group Identification, Relationship Types, Feature Attributes, Relationship between Requirements and Features, and the usability functionalities Example Solutions, Import/Export and Help/Manual.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_13_4",
+          "subsection_index": 4,
+          "subsection_label": "7.4. Priority support per tools",
+          "subsubsections": [],
+          "text": "After the definition of which tools support the functionalities and their priority, it was possible to compare the number of priority functionalities each tool delivers. This is depicted in Table 7, in which the tools are ordered according to the number of essential priorities they support. However, this table does not include usability functionalities, i.e. it has only the functionalities shown in Table 5.\n\nThe first two rows refer to the tools that fulfill more requirements \u2013 RequiLine and Holmes. Since this report did not focus on comparing how the functionalities are implemented, the evaluation only refers to the number of functionalities they support.\n\n**Table 7** \nFunctionalities each tool support per priority.\n\n{{TABLE:tbl_08}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_08"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_14",
+      "section_index": 14,
+      "section_label": "8. Threats to validity",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The main threats to validity identified in the review are described next:\n\nMissing important primary studies. The search for the tools information was conducted in several digital libraries and on web search engines and it was focused not only on journals but also on conferences. According to [W2118328848, W2034971763], the selected digital libraries are some of the most relevant sources in software engineering. In addition, the web search engines were included in order to provide a more complete set of information and references about the tools, specially the ones in the industrial environment.\n\nTools selection. A possible threat in such review is to exclude some relevant tool. In order to reduce this possibility, the selection of tools was based on a strict search strategy described in Section 5. Furthermore, the defined criteria intended to select relevant tools to the domain analysis process support and not just tools supporting a few requirements. The only tools we have knowingly omitted are those with inadequate documentation (e.g. marketing white papers). So we do not believe that we have omitted any tools were capable of being analyzed.\n\nReviewers reliability. All the reviewers of this study are researchers in the software reuse field, focused on the domain engineering and software product line, and none of the tools information was written/developed by us. Therefore, we are not aware of any bias we may have introduced during the analyses, but it might be possible that the conclusions might have been affected by our personal interest and opinions.\n\nData extraction. Another threat for this review refers to how the data were extracted from the tools, since not all the information was obvious to answer the questions and some data had to be interpreted. Therefore, in order to ensure the validity, multiple sources of data were analyzed, i.e. papers, prototypes, technical reports, white papers and manuals, in addition to the tools' executables. Furthermore, in the event of a disagreement between the two primary reviewers, a third reviewer acted as an arbitrator to ensure full agreement was reached.\n\nFunctionality fulfillment. Even though the support of functionalities is the main goal of this review, it was not verified how they are fulfilled by the tools. In spite of that, the functionality descriptions include some of the ways that they vary among the tools, such as: the domain representation can be implemented through a table, tree or model. Consequently, the functionalities fulfillment can be verified in a future review.\n\nQuality assessment. A quality assessment was not performed in this review because its inclusion could restrict even more the available tools and the goal of the review was to identify the tool support to the process, especially their functionalities. However, we are aware that the quality assessment can provide more insights and explanations to the findings of the review; therefore they should be included in a future review.",
+      "citations": [
+        "W2118328848",
+        "W2034971763"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_15",
+      "section_index": 15,
+      "section_label": "9. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The execution of a domain analysis process without a tool support can lead to an unsuccessful result, due to the complexity of interrelated activities and work products. However, the use of any tool will not necessarily lead to an effective result. A useful tool must assist the whole process, and not just some individual sub-processes.\n\nThus, aiming to define the first step for identifying what support a tool should provide for the domain analysis process, this paper presented a systematic review of domain analysis tools. It was done according to the defined main question and its sub-questions, which involved the identification of external characteristics about the tools and of the functionalities they support.\n\nSeveral of the functionalities identified in this review were also identified in previous studies; however other researchers first defined the functionalities to be analyzed in each tool to later verify if the tools supported them. This type of approach restricts a complete mapping of the tool support scenario, such as the one reported here.\n\nThrough the results obtained in this review, it is clear that the tools differ in process and functionalities being supported, and confirms that there are gaps in the support for domain analysis process in all the tools we investigated. Such gaps in functionality can make it difficult for industry to adopt a DA tool or to have a successful result in the DA process. Thus our review suggests that there are opportunities for the development of new tools and/or extending existing tools, and both identifies and prioritizes the required functionalities.\n\nThis study, along with RiSE's group expertise, was the rationale for the development of a domain analysis tool called ToolDAy [W2012154778] in a cooperation project between CESAR and the Federal University of Pernambuco. This tool is currently being used in an industrial case inside CESAR.",
+      "citations": [
+        "W2012154778"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_16",
+      "section_index": 16,
+      "section_label": "Acknowledgement",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We thank Barbara Kitchenham's help for her comments about this report. This work was partially supported by the National Institute of Science and Technology for Software Engineering (INES), funded by CNPq and FACEPE, Grants 573964/2008-4 and APQ-1037-1.03/08 and Brazilian Agency (CNPq process number 475743/2007-5).",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_17",
+      "section_index": 17,
+      "section_label": "Appendix A. Journals and conferences",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The target journals were:\n\n- ACM Computing Survey;\n- Annals of Software Engineering;\n- Automated Software Engineering;\n- IEEE Software;\n- IEEE Transactions on Software Engineering;\n- Information and Software Technology;\n- Journal of Systems and Software;\n- Software and System Modeling;\n- Software Process: Improvement and Practice; and\n- Software Practice and Experience.\n\nAnd the target conferences were:\n\n- Computer Software and Applications Conference (COMPSAC);\n- Generative Programming and Component Engineering (GPCE);\n- International Conference on Software Engineering (ICSE);\n- International Conference on Software Reuse (ICSR);\n- Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA);\n- Software Product-Family Engineering (PFE);\n- Software Product Line Conference (SPLC);\n- Variability Modeling of Software-intensive Systems (VaMoS).",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_12",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_12",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_13",
+      "source_subsection_id": "s_13_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_13",
+      "source_subsection_id": "s_13_4",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2154535415_tables.md"
+}

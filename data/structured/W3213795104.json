@@ -1,0 +1,545 @@
+{
+  "id": "W3213795104",
+  "metadata": {
+    "title": "Recommendation Systems on E-Learning and Social Learning: A Systematic Review",
+    "n_sections": 7,
+    "n_subsections": 23,
+    "n_subsubsections": 4,
+    "n_tables": 15
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1. Context and Work Purposes",
+          "subsubsections": [],
+          "text": "Our study is situated within the context of recommender systems supporting distance learning. Learners are the primary beneficiaries of recommender systems as long as these systems seek to provide high-quality recommendations. To this extent, our work tends towards a comprehensive study on the type of recommender systems that have been proposed in the field of distance learning, on the points that have been addressed, on the aspects that remain to be addressed in future work and on their contribution to the learning process and education in general. In this sense, we propose in the following section a set of research questions that we aim to answer through the analysis performed.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_1_2",
+          "subsection_index": 2,
+          "subsection_label": "1.2. Research Questions",
+          "subsubsections": [],
+          "text": "Our present analysis is carried out with the aim of scrutinizing the situation of recommendation systems in e-learning, and to study the main aspects that have not been adapted in these studies. The research questions we aim to answer are:\n\n1. What are the general gaps and missing points not addressed in these studies?\n2. What are the main similarities and contradictions of the reported studies?\n3. What are the particular gaps to mention for each type of educational recommender system?\n4. What is the impact of selected recommender systems on learners?\n5. How the results and findings contribute to online learning?",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "E-learning, a developed learning approach, allows a learner to study at his own pace, from any destination, with a variety of teaching resources at his disposal. The purpose remains to improve their knowledge and enable them to learn remotely [W3121259882]. Among the most widespread types of web-based learning are social learning. Unlike traditional e-learning, which consists of simply transmitting information from the trainer to the learners, social learning promotes interaction and collaboration between learners. In the presence of a wide variety of educational content, social environments are faced with the need to adopt an approach to manage these different resources, it is due to the significant amount of learning objects learners are confronted with [W1985019003]. The recommendation system adopted in several disciplines is an imperative tool in online learning environments as it promotes distance learning and grants the opportunity to individual learners for managing their time and focusing on the learning process [W2101187153]. It is thus more appropriate to offer learners materials that meet their needs and requirements according to their profiles, activities and orientations. In this regard, several researchers approached recommendation systems in terms of e-learning and social learning by referring to several known techniques, including content-based techniques, techniques based on collaborative filtering, hybrid systems, etc. Researchers are adapting content-based recommendation systems to assist learners [W2109546091, W2466110284]. Other researchers propose collaborative filtering-based recommendation systems focusing on the preferences of all learners [W2127683714]. Machine learning has likewise been addressed to increase the performance of recommendation systems [W2922387336].\n\nMany researchers have therefore addressed recommender systems to improve the quality of recommendations provided to learners. The learner is always the main component when it comes to distance learning. The learner's level of motivation and interest in the online courses is also of paramount importance to the success of the learning process. It is within this perspective that researchers are constantly seeking to develop more effective and relevant recommender systems and to improve the quality of the recommendations provided. Researchers are attempting to act on sophisticated techniques to be adduced and existing techniques to be improved. Hence, we constantly need to address the ongoing development to study the real needs of learners, especially in terms of recommendations. Although a large number of scientists have proposed high-performance recommendation systems for learning recommendations, there are still several aspects that need to be questioned and enhanced in order to propose more performing systems. The objective of this work is to outline a general view of some works performed between 2007 and 2020, including some studies conducted in 2021 as well. A general descriptive study on the techniques deployed, the data analysed and the final results is carried out. The selected works are then divided based on several aspects: the approach used, the geographical affiliation, the size of the databases concerned, distribution according to e-learning and social learning, and by type of publication. The main intention is to recognize the added value of the selected works in terms of online learning, and then to highlight the aspects still to be addressed, which will be the subject of forthcoming research work. Several research questions are raised concerning the added value brought by the selected works in distance learning, but also the shortcomings identified, whether they are general shortcomings or specific shortcomings for each type of approach proposed in the selected works. In this study, we focus on several aspects, including: (1) identifying the techniques involved in each type of recommendation, namely content-based approaches, collaborative filtering-based approaches, and hybrid approaches, (2) the size of the databases considered in the evaluation of the recommendation systems, (3) the ability of the proposed recommendation systems to generate relevant recommendations, (4) identifying the most covered techniques in terms of recommendations. 51 articles were selected from 100 works carried out from 2007. We opted to undertake this selection from 2007 onwards, since this was the year when recommendation systems started to gain momentum in e-learning. And since then, the number of works carried out in this direction is growing steadily.\n\nThe paper is divided into several parts. The first part defines the research questions and outlines a general vision of the major types of existing recommendation systems. The second part consists in defining the research methodology considered. The following part conducts a descriptive analysis of the selected works by classifying them according to the types of recommendations. Then, a statistical analysis is performed to partition the selected works according to several parameters: the size of the database, the type of publication, etc. Finally, we propose practical answers to the research questions we raised previously.",
+      "citations": [
+        "W3121259882",
+        "W1985019003",
+        "W2101187153",
+        "W2109546091",
+        "W2466110284",
+        "W2127683714",
+        "W2922387336"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Background",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Recommendation Systems",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.1.1. Content-Based Approach",
+              "parent_subsection_id": "s_2_1",
+              "text": "This type of recommendation system is mainly based on content analyzing documents, resources and objects previously evaluated by users [W2134834365, W2803478834]. This analysis allows to build a recommendation model based on the interests of different users. It is by referring to the profiles of the various users that the recommendations are calculated.",
+              "citations": [
+                "W2134834365",
+                "W2803478834"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.1.2. Collaborative Filtering Approach",
+              "parent_subsection_id": "s_2_1",
+              "text": "This kind of recommendation system has been widely exploited in several fields and its application is widespread [W2189367493, UNMAPPED:12]. In contrast to content-based recommendation systems, recommendation systems based on collaborative filtering consider the assessment made by all users in order to recommend items to a specific learner. Typically, the collaborative filtering approach is divided into two main collaborative approaches:\n\n- **Memory-based collaborative filtering:** This type of collaborative filtering essentially relies on the set of user profiles to calculate similarity between users. In this case, it is the similarity parameter between users that will be invoked to calculate recommendations to the different users.\n\n- **Model-based collaborative filtering:** This type of collaborative filtering is based on the calculation of similarity between the different items in order to calculate the recommendations for the individual users.",
+              "citations": [
+                "W2189367493"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "12"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.1.3. Hybrid Approach",
+              "parent_subsection_id": "s_2_1",
+              "text": "Hybrid approaches aim to combine the qualities of the various existing approaches and mitigate their limitations [W2799775562, W2916787571, W2020458351]. The best-known hybrid approach in terms of recommendations is the one that combines the content-based approach and the collaborative filtering approach. However, there are other types of hybrid approaches with other aspects, the main point is to integrate or combine several techniques simultaneously to be able to discuss a hybrid system.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "2.1.4. Approaches Based on Supervised and Unsupervised Machine Learning",
+              "parent_subsection_id": "s_2_1",
+              "text": "Nowadays, machine Learning is considered as one of the most widely used tools in terms of recommendations in all areas, particularly for prediction, classification, clustering, etc. [W2900122876]. Several algorithms have been developed in terms of Machine Learning to improve system performance. Thus, the two most frequent types of machine learning in terms of recommendation systems are supervised learning and unsupervised learning:\n\n- **Supervised learning:** The algorithm or learning is made to be supervised when the input data is already classified and it is necessary to predict the outputs based on the input elements.\n\n- **Unsupervised learning:** This type of learning makes it possible to analyse data that are neither classified nor labelled with the objective of classifying and categorizing them according to predefined attributes and criteria.",
+              "citations": [
+                "W2900122876"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "A recommendation system is defined as a system that makes proposals to the user (films, music, different types of content) that are likely to interest him [W1899437607]. In our context of social learning, the intention is to filter information for learners or scientists in order to help them discover new contents or elements. A recommendation system can take many forms based on many concepts:",
+          "citations": [
+            "W1899437607"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. E-Learning and Social Learning",
+          "subsubsections": [],
+          "text": "E-learning is one of the fastest growing of learning styles due to rapid technological development. It's about acquiring diverse knowledge in a wide range of fields and to enable learning for a large part of the community. Some of the outstanding advantages of e-learning include:\n\n- Ease of use and accessibility by computer, telephone (...).\n- Online monitoring and organized controls.\n- Considering the rhythm of learning.\n\nMany researchers have likewise emphasised the various factors influencing e-learning in general, including: the cost of the Internet, the technology used [UNMAPPED:17], the design of the course, the role of educators [W2784846085], etc. The purpose is thus to maximize learning by engaging learners in the learning process [UNMAPPED:19].\n\nIt is thus important to assume the social dimension in the learning process and learners must be able to learn in an interactive and collaborative environment. Thus, social learning emerges as a key factor in the interaction of learners with each other to foster collaborative work. The concept of community turns out to be very relevant to social learning [W2710557879]. Today, with the possible and easy access to different social networks and social environments in general, it is possible for a learner to interact easily with other learners. Thus, social networks bring many advantages in terms of learning:\n\n- Foster interaction between learners.\n- Encourage interaction between learners and the instructor.\n- Facilitate communication among different members of the learning environment.\n- Express themselves and help each other easily and freely.",
+          "citations": [
+            "W2784846085",
+            "W2710557879"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "17",
+            "19"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Research Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Data Collection",
+          "subsubsections": [],
+          "text": "In order to collect conferences and journal papers, we relied on a collection of journals, conferences and electronic databases, including IEEE, Science Direct, RECYS conference, ResearchGate, Scopus, etc. We collected 51 papers from the databases mentioned above.\n\n**TABLE 1:** Source databases for collected papers\n\n{{TABLE:tbl_01}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Search Terms",
+          "subsubsections": [],
+          "text": "The search terms used for this article can be divided into two groups. The first group includes terms related to e-learning: e-learning, e-learning, distance learning, learners, online education. The second group includes terms that refer to recommendation systems and their different types: recommendation system, recommendation, content, collaborative filtering, hybrid system.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Selection of Articles to Be Included",
+          "subsubsections": [],
+          "text": "To be regarded as suitable for this study, research articles must meet the following criteria:\n\n- The article must be published in journals or conferences published between 2007 and the first part of 2021. The objective is to include recent studies in terms of recommendation systems and e-learning.\n- All articles must be written in English.\n\n**FIGURE 1:** Illustration of aspects to be addressed within hybrid recommendation systems\n\n![Select N=100 based on modern e-learning research on the different databases mentioned. Selecting searches based on keywords: -recommendation systems, e-learning, social learning, etc. Perform a review on N=51 Find the analysis criteria for the different studies: - Data considered in evaluation. - Approaches considered.]",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Description of the Studies Selected in Terms of the Different Recommendation Approaches",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Content-Based Recommendation Systems",
+          "subsubsections": [],
+          "text": "Numerous studies have been carried out on the level of recommendation systems based on E-learning content as well as social learning. [W2109546091] outline a recommendation system approach based on the content and grades of particularly good learners. The test database of 95 students is spread over the different tests carried out, of which only 24 students are selected to test the proposed approach. [UNMAPPED:21] propose a recommendation system that emphasizes content-based semantic filtering as well as negative evaluations in order to recommend messages that are adapted to the needs and profiles of learners. The database consists of N > 1000 learners and 57153 assessments. [W2608595146] propose a recommender system architecture aiming to combine three essential models in an m-learning context:\n\n- The first model aims at studying teaching knowledge.\n- The second model involving the learner profile and the learning context.\n- The third model including the rules for combining the learning modules.\n\n[W2169485898] highlight a recommendation system capable of processing learners' requests and, based on these requests, providing them with the most appropriate support. [W2466110284] suggest a recommender system that analyzes learners' opinions on content and then, based on these opinions, recommends to teachers to modify the hardest parts according to the learners. [UNMAPPED:25] highlight AFEL-REC, a recommendation system in social learning and based on social data in the form of effective social labels to improve the recommendation system. The database considers 1274858 users, 35346 educational resources and 1879761 interactions. [UNMAPPED:26] propose a recommendation system based on the preferences of previous students on a content. [UNMAPPED:27] propose a course recommendation system developed at University College Maastricht, Netherlands for liberal arts degree students. This recommendation system is intended to encourage students to make choices that fit their program. The approach is based on a sparse predictive model of grade based on students' past academic performance and level of academic expertise. The study was carried out on the transcripts of 2526 students of the liberal arts program between 2008 and 2019 with a total of 79,245 course enrolments.\n\nThe first database only considers a total of 95 learners for testing, while the second database tests a set of more than 1000 learners. Another database examines 1274858 learners, which is estimated to be a very high number capable of proving the performance of the system. It therefore appears that there is a significant difference in the volume of data involved in the tests, and that using a large database proves that the system is more reliable.\n\nThe content-based recommender system contributes hugely to e-learning. It allows the integration of all learner data, including profile, preferences, by collecting all information related to the learner. Hence, this model does not need data from all learners to recommend items to a specific learner, i.e. to calculate recommendations for a specific learner, we only need his personal data and characteristics. The content-based approach system is capable of capturing the data and preferences specific to each learner, and recommending the most appropriate items for that learner's data and preferences, even if these items are generally not too recommended or not too common in the learning environment. In addition, a learner can receive recommendations based solely on his personal data without the need for further interaction with the learning environment.\n\nHowever, few researchers addressed social learning as a meaningful terminology in their work. When searching for social learning as a keyword related to content-based recommender systems, we found only one paper [UNMAPPED:25].",
+          "citations": [
+            "W2109546091",
+            "W2608595146",
+            "W2169485898",
+            "W2466110284"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "21",
+            "25",
+            "26",
+            "27"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Recommendation Systems Based on Collaborative Filtering",
+          "subsubsections": [],
+          "text": "On the other hand, a number of studies have been carried out on recommendation systems based on collaborative filtering, either based on traditional collaborative filtering or combining other aspects with collaborative filtering.\n\n[W2579393094] propose an approach based on ontology and a decision algorithm. It is divided into 4 parts:\n\n- Creation of the ontology.\n- Measuring the similarity of evaluations.\n- Generating the best items.\n- Apply the decision algorithm on the proposed items.\n\n[W2042228598] highlight a recommendation system focuses on the learners with the highest scores to model the recommendation approach. The database was extracted from MovieLens due to the lack of an e-learning database that meets the requirements of the proposed approach. [UNMAPPED:30] propose a recommendation system based on collaborative filtering and ontology as well. A database of 300 learners and 450 pedagogical resources was used to evaluate the performance of the recommender system. [W2127683714] The proposed system is mainly based on collaborative filtering and four key modules:\n\n- Recommendation template database.\n- Recommendation system database.\n- Recommendation management.\n- Data management.\n\n[UNMAPPED:31] developed a collaborative filtering service for a community of teachers in Europe. The study relied on 2554 evaluations related to 899 learning resources. [W2121350625] propose a recommendation system based on learner community structures and collaborative filtering. The approach was evaluated by considering 500 users with 300 elements. [W3084118563] discuss the analysis of activities in collaborative filtering within the educational field. This work aims to use ontology and the semantic web to provide efficient recommendations. [W3118797191] focus on collaborative filtering with the intention of recommending courses to students to help them in their course selection. The history of students' course selection records is exploited to compute the improved cosine similarity. This paper evaluates 18457 records from 2022 students and actual data from 309 courses.\n\nRecommendation systems based on collaborative filtering have a particularity of making the learner reliant on other learners. In other words, based on the existing similarity between two or more learners, recommendations are generated. This creates a certain connection between the different profiles and considers all learners instead of considering each learner individually in spite of the others. This will help to study the set of similar learners and to get an idea of the commonalities and differences between one learner and another. From another point, in collaborative filtering, we don't need a large amount of data as is the case with the content-based system. It's then possible to offer recommendations that are based mainly on the preferences of the learners closest to the learner in question, and therefore the system tends to study the preferences of learners who have, for instance, points in common with the learner in question with the aim of better satisfying his needs. On the other hand, by generating recommendations based on similar profiles, the learner will feel more involved in the learning process, and therefore more interested and motivated by the content offered.\n\nRegarding our research on collaborative filtering, social learning has not been identified in any of the selected papers. Researchers still address distance learning in a general way without focusing specifically on social learning.",
+          "citations": [
+            "W2579393094",
+            "W2042228598",
+            "W2127683714",
+            "W2121350625",
+            "W3084118563",
+            "W3118797191"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "30",
+            "31"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Hybrid Recommendation Systems",
+          "subsubsections": [],
+          "text": "Among the systems that have proven their high performance are hybrid systems. A hybrid system consists of combining and merging many recommendation approaches simultaneously to create a more efficient approach. Several scientists have proposed hybrid recommendation systems with respect to distance learning by explaining the process involved and the different techniques used. The purpose of this section is to highlight some work carried out in terms of hybrid systems in e-learning.\n\n[UNMAPPED:35] provide a Learningfitll recommendation system that can be adapted to the learner's different dynamic preferences. The goal is in fact to merge the two aspects of Data Mining: K-nearest neighbors and association rules. The test was carried out on a database of 163 learners. [W2746137170] implement a recommendation system that will allow the contextual data of learners to be exploited using both the SPM algorithm and collaborative filtering techniques. The evaluation database contains 1200 learners and 57153 assessments. [W2084362416] consider the attributes of the learning material to give recommendations to learners. The database is formed by 676 learners, 16345 assessments and 3763 resources. [W1994510396] suggest a recommender approach that group similar learning styles and then apply the AprioriAll algorithm. The evaluation database is containing 440 learners against 6 contents. [W2914866826] tend towards the establishment of a system that takes into consideration the creation of clusters based on the influence of learners and the propagation of information. The analysis was made on a database of 119 learners from 6 universities. [W2891027238] make it possible to exploit learning styles with the various functionalities of the web page to incorporate all the data present at the web page level and create a more efficient system. [W2728754320] propose a recommender system which is mainly based on the exploitation of data. The three main steps of this approach are the collection of implicit and explicit data, the processing of collected data, the measurement of similarity between learners and content, and finally the creation of a recommendation log with the purpose of organizing the recommendations by learner. The study was conducted on a database of 700 learners, 70512 assessments and 1000 resources. [W2795085083] suggest a recommendation system based on content, collaborative filtering and good learners. A database of 43 learners and 4644 assessments was used as an evaluation database. [W2594815996] propose A CodERS recommendation system as part of an interactive programming learning platform. The test was performed on only 12 users. [W2135793722] combine recommendations based on the content of the ontology and recommendations based on the rules of the ontology by testing it on a HyperManyMedia platform. The analysis was conducted on 10 user profiles. [W3087984476] guide learners in developed countries to select more appropriate resources. Calculations are based on developed knowledge and rating predictions for 1237 students. A hybrid recommendation system is proposed by a group of researchers [W3124806927], which consists in analyzing and learning automatically the styles and characteristics of learners. Thus, learning styles are handled by clustering based on several strategies.\n\nIn the case of hybrid recommendation systems, the databases used range from 43 learners to 1200 learners. The database with 43 learners remains the weakest database compared to the others, while only one database exceeds 1000 learners.\n\nWhat makes hybrid recommender systems distinguishable in online learning from other types of recommenders is the hybrid aspect of combining several approaches simultaneously. Learners will get more versatile and interesting recommendations incorporating their characteristics, preferences and many other parameters. The fact of considering all these aspects in a single recommendation system is a huge asset for the learner as he will get access to more adapted recommendations.",
+          "citations": [
+            "W2746137170",
+            "W2084362416",
+            "W1994510396",
+            "W2914866826",
+            "W2891027238",
+            "W2728754320",
+            "W2795085083",
+            "W2594815996",
+            "W2135793722",
+            "W3087984476",
+            "W3124806927"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "35"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Recommendation Systems Based on Supervised and Unsupervised Learning",
+          "subsubsections": [],
+          "text": "Machine Learning is regarded as one of the most widely used tools in all fields, including economics, industry, education and forecasting, as well as in recommendation systems. In terms of recommendation systems, Machine Learning is exploited to provide more relevant recommendations and to be able to respond to different learner requirements. Many researchers have addressed Machine Learning algorithms in educational recommendation systems, including k-means, neural networks, etc., and the use of Machine Learning algorithms in educational recommendation systems has been discussed by many researchers. **TABLE 4** summarizes the different proposals of researchers at this level and their proposed approaches and algorithms:\n\n**TABLE 4:** Some recommendation systems based on supervised and unsupervised learning\n\n{{TABLE:tbl_02}}\n\nFor recommendation systems based on supervised and unsupervised learning, three databases with more than 1000 learners. The other databases include only a limited number of learners not exceeding 100. **FIGURE 2** configures the distribution of some Machine Learning algorithms in the studies mentioned at the level of recommendation systems. It turns out that association rules and classification algorithms, including decision trees, are the most propagated in the mentioned studies. For machine learning based recommender systems, there has not been much emphasis on social learning. [W2739622022] focused on supervised learning algorithms to support a social learning environment.\n\nThe application of machine learning algorithms is of major importance to learners, including the use of association rules, k-means algorithms, and classification. This will result in more accurate prediction of recommendations and better performance. Since the ultimate goal is to meet the needs of learners, the use of machine learning algorithms has a tremendous impact on learner satisfaction.\n\n**FIGURE 2:** The distribution of algorithms for supervised and unsupervised learning at the level of recommendation systems\n\n{{TABLE:tbl_03}}",
+          "citations": [
+            "W2739622022"
+          ],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "4.5. Other Recommendation Systems",
+          "subsubsections": [],
+          "text": "In this section, we present alternative recommendation systems based on other approaches and concepts.\n\n[W2593513841] propose a recommendation system that suggests free e-learning platforms that meet the needs of different institutions and learners according to their objectives and specifications. [W2093692570] propose a reading recommendation system that is based on experts' knowledge of English and their opinions. The evaluation data was performed on 25 learners. [W2001168787] implemented a personalised recommendation system based on the preferences and level of knowledge of the learners. The experiment was conducted on 3 groups:\n\n- Group 1: 42 learners.\n- Group 2: 33 learners.\n- Group 3: 33 learners.\n\n[UNMAPPED:60] propose a new approach to help users learn SQL easily. The analysis was performed on a database of 93 learners. [W2886052956] propose a recommender approach based on the concept of reputation to ensure personalized recommendations. The recommender system was evaluated based on a questionnaire for 30 learners. [W2886231839] present a solution to support learners participating in a programming context by recommending the next problem to undertake. [W2900234979] carried out a study on the work carried out between 2001-2017 and concerning the different application software developed for learning as well as the evaluation parameters used. [W2167889736] proposes a self-assessment system with a recommendation system to adapt the platform to the needs of the learners.\n\n[W1988419322] combine the two approaches, personalized and non-customized. The personalized approach is based on two implicit and explicit profiles, while the non-customized approach is based on the characteristics of the objects. The experiment is carried out on 943 users for 1682 items (MoviLens). [UNMAPPED:66] develop a personalized recommendation system based mainly on ontology using the java programming language. 100 learners was considered during the evaluation. [W2977181819] address learning style and level of knowledge in their recommender approach. The approach contains four modules relating to courses and learners, and consider 612 reports. [W3046888520] propose an ontology-based solution to multiple challenges such as cold start. To overcome this problem, the user has to give a sequence of scores and assign them to a set of k factors. The proposed system achieves a 95% accuracy. The study was conducted on 118 students.",
+          "citations": [
+            "W2593513841",
+            "W2093692570",
+            "W2001168787",
+            "W2886052956",
+            "W2886231839",
+            "W2900234979",
+            "W2167889736",
+            "W1988419322",
+            "W2977181819",
+            "W3046888520"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "60",
+            "66"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "When addressing the development of online learning environments, the learner is faced with a diversity of information and educational resources, whether on traditional learning platforms or in social learning environments. In this respect, it is crucial to consider an optimal way to manage the different pedagogical resources within learning environments and to enable the learner to better acquire knowledge in a specific domain. Recommendation systems are therefore the best way to manage the different resources and to enable the learner to target his needs and objectives in a more concrete way. In the literature, many works have been proposed in this direction, and those considering learners' personal information, preferences, activities, actions taken by instructors, etc., have been developed. In our study, we will classify the systems of recommendations proposed in terms of E-learning and social learning into 4 categories:\n\n- Content-based recommendation systems.\n- Recommendation systems based on collaborative filtering.\n- Hybrid recommendation systems.\n- Recommendation systems based on Machine Learning algorithms.\n- Other recommendation approaches.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Results Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1. Papers Classification",
+          "subsubsections": [],
+          "text": "**TABLE 6** sets out the different types of articles involved: articles proposing approaches with experimentation, articles in the form of a survey, articles proposing approaches without experimentation. **FIGURE 3** summarizes the distribution according to whether experiments were performed or not. According to our analysis, we note that most of the articles included in our study fall within the framework of articles proposing approaches with experimentation, since the experimentation and validation of approaches with recommendations is essential in order to show the performance and reliability of their proposals. On the other hand, questionnaire-based articles exhibit the lowest percentage because the evaluation of a recommender system through questionnaires remains the most underperforming and underutilized tool in recommender systems research.\n\n**TABLE 6:** Papers divided according to the presence or absence of tests carried out\n\n{{TABLE:tbl_04}}\n\n**FIGURE 3:** Distribution of selected papers according to the type of article\n\n{{TABLE:tbl_05}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_04",
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2. Papers by Year",
+          "subsubsections": [],
+          "text": "In this section, we will present all of those we have cited in our study according to the years of implementation from 2007 to 2020 in **TABLE 7** and **FIGURE 4**. We recognise that during the period between 2017 and 2020 is the most active period in terms of research carried out on e-learning recommendation systems. This is a reflection of the major evolution in recommendation systems over the last few years. Beyond 2009, recommendation systems are increasingly gaining importance in e-learning. It was only after 2010 onwards that researchers started to orient recommendation systems towards improving e-learning environments. We also note that recommendation systems based essentially on supervised and unsupervised algorithms have been among the most propagated approaches from 2013 to 2019 since most scientists are beginning to move towards Machine Learning algorithms.\n\n**TABLE 7:** The recommendation systems according to the completion year of the article\n\n{{TABLE:tbl_06}}\n\n**FIGURE 4:** Distribution of selected papers according to the year interval\n\n{{TABLE:tbl_07}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_06",
+            "tbl_07"
+          ]
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "5.3. Classification by Approaches",
+          "subsubsections": [],
+          "text": "In this section, we will describe the distribution of the different approaches to recommendations in our study in **TABLE 8** and **FIGURE 5**. Based on the analysis performed, we note that the strongest responses are hybrid approaches and approaches based on supervised and unsupervised learning. This comes back to the fact that hybrid approaches and approaches based on Machine Learning algorithms have shown their great performance, and that Machine Learning algorithms have become the most widely used at all levels and in all disciplines.\n\n**TABLE 8:** Distribution of the recommendation systems proposed in this article by approaches\n\n{{TABLE:tbl_08}}\n\n**FIGURE 5:** Distribution of selected papers according to the type of recommender system\n\n{{TABLE:tbl_09}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_08",
+            "tbl_09"
+          ]
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "5.4. Classification by E-Learning and Social Learning",
+          "subsubsections": [],
+          "text": "According to **TABLE 9** and **FIGURE 6**, we notice that studies conducted on distance learning that promote collaboration and interaction between learners show a very low percentage of studies compared to studies conducted on traditional learning platforms that do not address the social or interaction aspect in their work.\n\n**TABLE 9:** Distribution of papers according to e-learning and social learning\n\n{{TABLE:tbl_10}}\n\n**FIGURE 6:** Distribution of papers regarding e-learning and social learning based on papers collected\n\n{{TABLE:tbl_11}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_10",
+            "tbl_11"
+          ]
+        },
+        {
+          "subsection_id": "s_5_5",
+          "subsection_index": 5,
+          "subsection_label": "5.5. Database Volume Classification",
+          "subsubsections": [],
+          "text": "Based on **TABLE 10** and **FIGURE 7**, we notice that the majority of studies do not go beyond a test database of 1000 learners, and many of the researches carried out are satisfied with a total number of no more than 100 learners. We have not included all studies since they do not all cite the volume of data tested. We can note that most studies focus only on a number that is considered limited to prove the performance and reliability of the proposed approach. On the other hand, a significant number of studies have conducted tests on large databases (>1000).\n\n**TABLE 10:** Distribution of recommendation systems according to the volume of the test databases\n\n{{TABLE:tbl_12}}\n\n**FIGURE 7:** Distribution of selected papers according to the database size\n\n{{TABLE:tbl_13}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_12",
+            "tbl_13"
+          ]
+        },
+        {
+          "subsection_id": "s_5_6",
+          "subsection_index": 6,
+          "subsection_label": "5.6. Demographic Classification",
+          "subsubsections": [],
+          "text": "In this section we discuss the demographic distribution of the selected studies, focusing on the continents. The dominating continent in the selected research is ASIA (**FIGURE 8**). The Asian countries are noticeably involved, especially China and India. As for the European continent, it stands in second place with a significant contribution from Netherlands. Africa is also distinguished by the presence of the maghrebian countries such as Morocco. However, not many papers have been selected in America.\n\n**FIGURE 8:** Distribution of selected papers according to location of the research laboratory\n\n{{TABLE:tbl_14}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_14"
+          ]
+        },
+        {
+          "subsection_id": "s_5_7",
+          "subsection_index": 7,
+          "subsection_label": "5.7. Classification by Type of Publication",
+          "subsubsections": [],
+          "text": "The selected works in this article are partitioned between journals and conferences with a slight difference making the number of journals exceed the number of conferences (**FIGURE 9**). The journals are characterized by a high involvement of Elsevier as an editorial group, then the MDPI and DBLP databases, as well as springer and IEEE. As for conferences, most of them are supported by IEEE, Springer and then ACM in terms of scientific publications.\n\n**FIGURE 9:** Distribution of selected papers by type of publication\n\n{{TABLE:tbl_15}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_15"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "6.1. Question 1: What Are the General Gaps Not Addressed in These Studies?",
+          "subsubsections": [],
+          "text": "However, although the recommendation systems mentioned were able to deal with several aspects to better manage teaching resources and adapt them to the needs of learners, our analysis revealed that there are several points that were not covered:\n\n- Social learning has not been sufficiently addressed in research studies regarding recommendation systems, particularly for social networks that can have a broad impact on learning. Most of the proposed recommendation approaches have been dedicated to traditional online learning environments. **FIGURE 3** shows the distribution of articles dedicated to E-learning vs. articles dedicated to social learning, the difference is significant: 3 research studies carried out at the level of social learning vs. 39 studies carried out at the level of E-learning learning environments.\n\n- Learners carry out a large number of activities and events within learning environments, especially in social environments as it promotes learner interaction and collaboration. It is therefore important to envision an enduring aspect that has not been mentioned in these articles which is the aspect of existing relationships between these different events, and how these connections may affect the performance and quality of the recommendations provided.\n\n- The cold start problem: We can encounter this problem on two levels. First, for a new learner on whom we have virtually no information about, it would be difficult to recommend resources to him since we have no information about him. Second, when we have new resources, no information is yet available about it.\n\n- Problems of missing data at the matrix level: When we do not have enough data collected about learners, such as their activities, logs, events performed or ratings for resources or items, this will be a challenging task for calculating recommendations.\n\n- Increasing input data: The recommendation system must always remain efficient and reliable even as the number of learners or learning resources in the learning environment increases.\n\n- New teaching resources or elements: Need to integrate new teaching resources into the recommendations despite the lack of information on these resources.\n\n- Problem of erroneous data: Sometimes learners may give arbitrary ratings or ratings that are not based on their true personal opinion, or perhaps they do not even have access to a given learning resource to annotate it.\n\n- Isolation problem: Sometimes a learner may have a taste or preference that is not like any other learner, so in collaborative filtering, this may cause a problem in the calculation of recommendations.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "6.2. Question 2: What Are the Main Similarities and Contradictions of the Studies Carried Out?",
+          "subsubsections": [],
+          "text": "After our analysis carried out on several types of recommendation systems: content-based, collaborative filtering-based, hybrid and Machine Learning-based, we illustrated many advantages and disadvantages according to our interpretation of the mentioned studies. The mentioned research carried out on recommendation systems in E-learning and social learning has highlighted several aspects concerning the recommendations given to learners:\n\n- Many techniques were examined, including content-based techniques, collaborative filtering, Machine Learning and hybrid techniques.\n- The different types of data related to learners, including their interactions, personal information, characteristics, activities performed, etc.\n- The level of performance of the proposed approaches and their evaluation.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "6.3. Question 3: What Is the Impact of Selected Recommender Systems on Learners?",
+          "subsubsections": [],
+          "text": "Recommender systems in Computational Environments for Human Learning intend to develop a recommendation strategy based on the characteristics of the learning context. The goal is to support learners in their learning process to achieve their learning goals. Recommender systems in HIEs recommend a wide variety of items such as learning resources, software, courses, tips, peer learners and learning sequences and activities. The work discusses the existence of several positive effects that recommender systems can exert on learning such as learning performance, learner performance and motivation to learn. The results of selected works confirm these positive effects. Thus, recommender systems can help improve learners' effectiveness and motivation. The main objective in the deployment of recommender systems in the learning context is to guide users to appropriate resources to achieve the learning objective in a minimum amount of time. According to the selected studies, the proposed recommender systems are found to have a significant impact on education:\n\n- **Learner performance:** Regarding learners, the main benefit is to identify better quality resources and achieve the learning objective. The proposed learning recommendation systems can also identify students with particular difficulties. Thus, learners navigate in the knowledge hyperspace and get good feedback. This is beneficial for adjusting the content of the learning resources found in the learning platform. The proposed content-based recommendation systems can thus help promote personalized learning. It is about adapting the content to the needs of the learners based on what the system knows about them.\n\n- **Motivation:** Selected educational recommender systems impact positively on the motivation of learners by maintaining their interest. In addition, these systems improve the atmosphere of the learning environment as well as the interaction between learners and with the learning contents within the learning environment.\n\n- **Learning enhancement:** Selected recommendation systems based on collaborative filtering promote interaction and social navigation. This helps to find willing learners with similar ideas and preferences and to enhance the experiences within the existing communities.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_4",
+          "subsection_index": 4,
+          "subsection_label": "6.4. Question 4: How the Results and Findings Contribute in E-Learning and Social Learning?",
+          "subsubsections": [],
+          "text": "The papers we selected for this analysis were tremendously fruitful in order to identify in which direction these papers have contributed to remote e-learning. Each proposed recommender system is characterized by its specific features and refers to its own machine learning techniques or algorithms for example. Hybrid recommendation systems and those based on machine learning provide the opportunity to hybridize several techniques simultaneously and above all to use multiple algorithms concurrently in order to improve the quality of the recommendations generated. Moreover, researchers are not restricted to using one algorithm but generally combine several algorithms, such as association rules, k-means and KNN. This continuous improvement of the recommendation systems in terms of e-learning is the main reason why the quality of the recommendations is remarkably increasing.\n\nOn the other hand, we performed an analysis according to several parameters:\n\n- The geographical distribution of the selected works.\n- The classification of the studies according to the type of the recommendation system.\n- Classification according to the size of the used database.\n- Classification by publication period\n\nIn this regard, we were able to highlight several points from the selected work and the analysis performed in the article:\n\n- The importance of combining several recommendation approaches to improve the quality of recommendations.\n- The diversity of approaches used in recommender systems.\n- The identification of the most active period in terms of proposed recommender systems.\n- The identification of the most prevalent approaches used.\n- Identify the most active continents in terms of research on recommender systems in online learning.\n- Comparing the frequency of works addressed in traditional e-learning vs. social learning.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "At the outset, it was mentioned that the purpose of this study is to analyse the recommendation-based approaches used in terms of e-learning and social learning. By making the appropriate selection, we were able to obtain a significant number of studies for analysis and to answer the questions we asked at the beginning. In the following section, we will develop our proposed answers in response to the questions we asked.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "7. Conclusion and Outlook",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this article, we explored a few studies carried out in terms of recommendation systems in e-learning. The method consists in selecting a number of researches based on well-defined criteria and on several article databases. Each work is part of a specific type of recommendation. On this basis, we divided the selected works into several types of recommendations: content-based approaches, collaborative filtering-based approaches, hybrid approaches and supervised and unsupervised learning-based approaches.\n\nThe most active period in terms of research work lies between 2017 and 2021. This is due to the ongoing development of e-learning recommender systems and the increasing interest of researchers in this area. On the other hand, the percentage of hybrid recommender systems and approaches based on supervised and unsupervised learning is the highest compared to other types of approaches. This reflects the high performance of hybrid and machine learning based approaches.\n\nIt is also worth mentioning that the size of the database is of great importance in the evaluation of a recommender system. For the selected works, there are studies where the size of the concerned database is not significant enough, which can lead to less reliable results. Another important point to mention is the type of data involved in the recommender systems. The majority of studies address the learners' explicit data and their evaluations, which is a point to be improved in future studies. It is worth investigating other more reliable types of data in recommender systems, such as actions performed by learners.\n\nFocusing on the actions performed by learners will generate more relevant recommendations according to the learners' own learning pace. It is always necessary to ascertain whether the proposed recommendation system is capable of providing recommendations that are likely to steer learners and improve their skills and motivation. The concern in e-learning to date is that learners may lack motivation. Generating recommendations corresponding to their expectations will automatically boost their motivation, and thus their interactivity within the e-learning experience.\n\nOn the other hand, there is still a noticeable lack of studies dedicated to social learning, especially recommendation systems adapted to social learning networks. That said, there is a more urgent need to focus on this side and propose recommender systems incorporating community detection, since social networks are characterized by communities of friends, communities of similar learners, and other types of communities. Community detection in recommender systems can be performed in several ways, such as detecting communities of friends, detecting communities of similar learners in terms of preferences. This allows to treat each community separately to generate recommendations that are adapted to the characteristics of each community.\n\nThe research we discussed deals with several types of recommendations regarding distance learning. However, they do not address the concept of communities, bearing in mind that this is a highly crucial aspect of recommendations that can actually contribute to making a difference. It will be worth digging in this direction and focusing on the discipline of community detection in recommendations. The majority of the research included in this systematic review focuses solely on distance learning in general without addressing social networks in learning or graph analysis in recommender systems. This kind of research is now possible since social networks have spread to learning as well and because of the amount of interaction that exists between learners. This interaction allows to generate very large graphs, and thus large communities as well. It is more appropriate to divide learners into communities before addressing the recommendations than to consider learners as a whole community.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_6",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_7",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3213795104_tables.md"
+}

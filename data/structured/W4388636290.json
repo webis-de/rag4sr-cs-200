@@ -1,0 +1,419 @@
+{
+  "id": "W4388636290",
+  "metadata": {
+    "title": "Research on Wearable Technologies for Learning: A Systematic Review",
+    "n_sections": 8,
+    "n_subsections": 4,
+    "n_subsubsections": 4,
+    "n_tables": 10
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "KEYWORDS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "wearable technologies, wearables, learning, education, design, review, survey",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The desktop-bound paradigm of user interaction with technologies is rapidly losing its mainstream status to make way for a mode of interaction that is marked by mobility, persistence, and ubiquity. While mobile technologies kickstarted this new paradigm, wearable technologies are a class of devices where the benefits of this new mode of interaction can be truly evident. Research has explored the use of wearable devices for a variety of purposes. Some of the primary use cases have included, for example, medicine, healthcare and well-being, business, and military where the sensor capabilities of wearables enable useful tracking features. However, a good amount of work has also explored the potential of wearable devices in the domain of education. Although work in that area is still relatively scarce compared to wearables for health, there are now enough contributions to the literature to warrant a systematic review. Section 2 provides the context of such a review, and makes explicit the need for it.\n\nThe overarching goal of this paper is to provide the reader with a picture of the landscape of the literature on educational wearables, to assess its current status, and to identify potential directions for future research in that space. The results would be particularly useful for researchers who are new to the topic of wearables for learning, and practitioners (designers and educators) interested in understanding how the research community has engaged the issue thus far. The main research question that we addressed in our review is: How have wearables been used to support learning in existing research? We study this question with respect to: (a) the prevalence of research on wearables for learning over time; (b) the types of wearables used; (c) the populations targeted; and (d) the types of learning settings that the research is situated in.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "2. Related Work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Work on wearable technologies for learning, or educational wearables, has advanced with few attempts at integration. Many reviews on wearables exist, but they address either wearables at a general level (i.e., aspects of wearables that are independent of application domain areas) (e.g., [W2017151706], [W2512140266], [W2557695132]), or wearables in the areas of healthcare ([W2124458090], [W2085063828], [W2057109277]), assistive technologies (e.g., [W2123436043], [UNMAPPED:112]), or security ([W2522146934], [W2920553042]). Our literature search uncovered 10 survey or review papers that can be considered as being related to wearables for learning.\n\nThe earliest review is a report published as part of the JISC Technology and Standards Watch Report ([W152787812]). It describes characteristics of wearable devices, provides examples of wearables available at the time, and describes some case studies of how wearable technologies combined with mobile devices had been used in higher education settings. The report wraps up with some considerations, such as battery life, that need to be taken for the use of wearable and mobile devices in education. The next relevant survey paper authored by [UNMAPPED:81] in the journal of ICT Management, focuses on analyzing how some selected work have applied the use of wearables in education, and thereafter proposes two application models for how smart glasses and smartwatches can be combined in e-learning.\n\nIn 2015, there were three survey papers related to wearables for learning. [UNMAPPED:96] published a four-page paper reviewing some work on how wearables have been used to support teaching and learning, but focused mainly on the use of GoogleGlass. The paper was part of the 2014 proceedings of the International Conference on Technology in Education (ICTE). [UNMAPPED:97] published another four-page paper reviewing work on wearables used in learning, this time with a broader scope, in ICTE 2015. One conclusion from the paper is that \"very little was found in the literature on the question of the use of wearables for large-scale projects.\" The last 2015 survey paper is by [W2115146825] in the Journal of Digital Learning in Teacher Education. The focus of the paper was to review the value and potential drawbacks of using wearable technologies in education. The authors identified some key themes for both value (e.g., student engagement, universal design for learning) and drawbacks (e.g., student safety, security and privacy), highlighting example work supporting each theme. The paper wraps up with a call to action for researchers and educators to think of the theory of change that wearable technologies bring with respect to learning, and for more resources to be allocated to this topic.\n\nIn a volume of the International Journal of Information and Education Technology, [W2779143214] published a survey that first describes some wearables available at the time (e.g., GoogleGlass, Oculus Rift, Muse), and then focuses on discussing the challenges associated with the use of wearable computing in education. Some limitations highlighted include distraction to students, cost, usability and fear of the technology, and the requirement of most wearables to be tethered to smartphones.\n\n[W2954802039] conducted a survey that perhaps comes the closest to the review presented in this paper. Based on a review of a number of recent and current wearable technology projects, they identified the forms of support that wearables can provide for learning as including: (i) the promotion of personal expression; (ii) the integration of digital information into social interactions; (iii) the support of educative role-play; (iv) the provision of just-in-time notification in a learning environment; and (v) the production of records of bodily experience for subsequent inspection, reflection, and interpretation.\n\nAnd finally, [W3036553455] conducted a meta-analysis of the effect sizes found in quantitative wearables for learning research. Their analysis included 12 studies. They also coded for various aspects of these studies, including the types of wearables used, and the pedagogical strategies used. They found that the majority of the studies (seven out of 12) used head-mounted displays, followed by fitness trackers and smartwatches. They classified the types of learning outcomes as being of a cognitive, affective, psychomotor, and motivational nature, with an overall weighted mean effect size for study outcomes of 0.6373, a medium effect according to [W612372977].\n\nThe survey that we present in this paper is distinct from the previous surveys related to wearables for learning in that it focuses on how wearables have been used for learning, it is systematic in nature and more comprehensive, and covers a longer time period. **TABLE 1** shows the distinctions between our survey in this paper and previous surveys on wearables for learning.\n\n**TABLE 1** Comparison of previous surveys on wearables for learning.\n{{TABLE:tbl_01}}",
+      "citations": [
+        "W2017151706",
+        "W2512140266",
+        "W2557695132",
+        "W2124458090",
+        "W2085063828",
+        "W2057109277",
+        "W2123436043",
+        "W2522146934",
+        "W2920553042",
+        "W152787812",
+        "W2115146825",
+        "W2779143214",
+        "W2954802039",
+        "W3036553455",
+        "W612372977"
+      ],
+      "tables_in_text": [
+        "tbl_01"
+      ],
+      "citations_unmapped": [
+        "112",
+        "81",
+        "96",
+        "97"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "3. Obtaining the Paper Set",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Paper Search Process",
+          "subsubsections": [],
+          "text": "Three approaches were used to search for relevant papers:\n(i) A researcher went through the entire proceedings/issues of eight selected conferences and five selected journals for the last 13 years (2007\u2013April 2020) and identified potentially relevant papers by reading the paper titles and quickly skimming the paper abstracts. The conferences and journals were selected because of the likelihood that their topic coverage may include wearables and education. The list of selected conferences were as follows (refer to **TABLE 2** for full names of acronyms): CHI; SIGCSE; UbiComp; ISWC; MobileHCI; ACM International Conference on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT); ACM Annual Conference on Innovation and Technology in Computer Science Education (ITCSE); ACM International Conference on Advances in Mobile Computing and Multimedia (MoMM). The list of selected journals were as follows: Computers in Human Behavior; Computers and Education; IEEE Transactions on Education; IEEE Transactions on Learning Technologies; Learning, Media and Technology.\n(ii) A search was performed using the Google Scholar search engine with combinations of the following search terms: \"wearable,\" \"wearables,\" \"wearable computing,\" \"learning,\" \"education,\" \"smart glasses,\" \"e-textile,\" \"smartwatch,\" \"smartwatches,\" \"wristbands,\" and \"smart jewelry.\" Thus, a search phrase was for example \"wearables learning.\" The search results pages for each search terms combination were reviewed until results began to appear irrelevant or repetitive. We note that searches through this approach was not limited by year of publication; and\n(iii) The researcher reviewed the list of references of the papers found from the first and second approaches, as well as papers that cited those papers using the Google Scholar \"cited by\" function. As for the previous approach, searches here were not limited by publication year.\n\nA total of 349 papers were collected through the three approaches described above. From reviewing selected conference and journal proceedings, 203 papers were found. From the Google Scholar search and reviewing the citations and references of papers found, 146 papers were found.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Paper Selection",
+          "subsubsections": [],
+          "text": "Out of the total 349 papers, 246 papers were excluded based on the following criteria: (i) non-relevance to wearables and education. A paper had to be relevant to both wearable technologies and education or learning to be included; and (ii) papers that did not include sufficient content for us to determine the overall scope of the work. These were often abstracts or poster papers. After the paper selection process, a total of 103 papers were kept for inclusion in the review.\n\n**TABLE 2** lists the venues where we found the most number of relevant papers. Other conferences include conferences where only single relevant papers were found, and similarly for other journals.\n\n**FIGURE 1** Flow diagram of paper identification and selection process.\n> Records identified through selected proceedings and archives searching (N = 203)\n> Additional records identified through ad hoc keywords search and reference trails (N = 146)\n> Full-text assessed for eligibility (N = 349)\n> Full-text articles excluded, with reasons (N = 246)\n> Studies included in synthesis (N = 103)\n\n**TABLE 2** Number of papers included in review from selected conferences and journals proceedings.\n{{TABLE:tbl_02}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "We describe the steps that we took to search for and review relevant papers below. We followed the PRISMA guidelines for conducting a systematic literature review ([W4236476849]). Our process is illustrated in **FIGURE 1**.",
+      "citations": [
+        "W4236476849"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "4. Analysis Process",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Details of all the papers were extracted into a spreadsheet. These included author names, paper titles, year of publication, keywords listed, and publication venue. Basic descriptive statistics were ran on the paper details, such as calculating the number of papers published per year. All papers were then analyzed to identify the following:\n* Paper type (what the main contributions of the paper addressed);\n* Paper description (a short description of the main topic of the paper);\n* Paper findings (a short description of the main findings or contributions of the paper);\n* Type of wearable (the type of wearable(s) addressed in the paper);\n* Relationship of wearable and learning (description of how the wearable(s) was used in relation to learning);\n* Subject of learning (the subject(s) that the learning addressed, if specifically mentioned);\n* Research type (if the paper was an empirical study, whether the paper used a qualitative, quantitative, or mixed methodology);\n* Population details (details about the target population addressed\u2014age, race, gender, sample size); and\n* Study setting (if relevant, the setting or physical context in which the work was conducted).\n\nThe analysis for the above fields was first done by two coders, who developed an initial coding scheme for appropriate fields. All the papers were distributed among five coders (including the two initial coders) in batches of 10 papers. After each batch was analyzed, the group of five coders met as a team to discuss any uncertainties in interpretation and codes that were potentially problematic, and the coding schemes for relevant fields were updated. After all the papers were analyzed for the fields listed above, two coders performed a thematic coding process on the \"relationship of wearable and learning\" field for all the papers. The two coders performed an initial coding pass independently, and then met together to discuss the codes that each obtained. A final coding scheme was settled on, and one of the two coders did a second coding pass on all the papers using the coding scheme.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "5. Findings",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1. How Wearables Have Been Used for Learning",
+          "subsubsections": [],
+          "text": "We found seven main ways in which wearables were used or proposed for use to support learning in the papers reviewed. **FIGURE 2** shows the numbers of papers in each of the categories. We describe each category of use below, with example papers. Supplementary Table A provides a complete list of all papers with references that were classified in each category. We note that papers were allowed to be classified in more than one category if they addressed more than one manner of wearable use.\n\n**TABLE 3** Number of papers in coded categories of how wearables have been used for learning. Seven papers were tagged with two categories.\n{{TABLE:tbl_03}}\n\nThe most common category was the use of wearables to guide the structure of learning. These papers propose using wearables to create some sort of framework to guide a learning activity, or to help students through the procedures of a learning task. For example, in the work by [UNMAPPED:1], smartwatches or smartphones strapped as armbands were used to provide instructions to students as they engaged in multiplayer embodied games aimed to help them learn Math concepts (e.g., number sense). The smartwatch instructions guided the students to keep the intended pace of the games, and provided feedback and support for individual players. [UNMAPPED:59] developed a GoogleGlass app that guided students step-by-step through the process of a science experiment (determining the relationship between sound frequency and the amount of water in a glass). The GoogleGlass also assisted the students in interpreting the results of their experiment through image processing of the video stream obtained through the smart glasses. In the work of [W2898841720], high school students in an English course were given smartwatches to assist them in writing entries into paper-based diaries on what happened to them during their day. A key function used on the smartwatches was a dictionary to translate vocabulary that students then used in their diary entries. Row numbers 38\u201360 in the Supplementary Table A list all the papers for this manner of wearable use. These papers are [W2091521181], [W2922816379], [W2161256964], [W1454774440], [W2271091173], [W2209773240], [UNMAPPED:59], [W1785832507], [UNMAPPED:99], [W2467414726], [W2549145790], [W2340502699], [UNMAPPED:106], [UNMAPPED:1], [UNMAPPED:40], [UNMAPPED:107], [W2888844225], [UNMAPPED:23], [W2898841720], [W2789337376], [W2507528279], [UNMAPPED:118], and [W2949380986].\n\nThe second category of wearable use is to help capture data to inform learning. In those cases, wearables are used to collect data in some form from users performing or engaging in a learning activity. The data is used either to inform the design of the learning activity in real-time, to allow for evaluation of the user performance by the users themselves or by researchers at a later time, or to allow the users (students or teachers) to review their learning. For example, [W2011915906] provided nurses with GoogleGlasses coupled with smartwatches and smartphones while they engaged in a simulated CPR training exercise. The smart glasses captured a variety of data such as head movement and orientation, while the smartwatch captured hand-related motions. The authors proposed that the data could be used both to answer interesting research questions about emergency training situations, as well as to provide feedback to the nurses about their performance. In the work by [UNMAPPED:99], a GoogleGlass and a smartwatch allowed students performing biology wet lab experiments to both automatically (e.g., by recording procedures performed through motion capture) and manually take notes (e.g., triggering a video or photo capture through the GoogleGlass) about their experiments. The study by [W2899994351] had high school students in an Advanced Physics course wear the Empatica E4 wristband to track their electrodermal activity as an index to their levels of arousal as they work collaboratively during class. Results showed that only small parts of group work are collaborative based on synchronicity of arousal levels. Row numbers 1\u201325 in the Supplementary Table A list all papers classified in this category. These papers are [W2101335795], [W2319057001], [W2166492609], [W2166492609], [W2278008712], [W2084060803], [W2086682806], [UNMAPPED:9], [UNMAPPED:10], [UNMAPPED:17], [W2011915906], [UNMAPPED:21], [W2316116374], [UNMAPPED:36], [W2338918660], [W2793185901], [W2599755607], [UNMAPPED:103], [UNMAPPED:26], [UNMAPPED:15], [UNMAPPED:16], [W2913973155], [W2899994351], and [W3000702677], [W2996667664].\n\nThe third most prevalent category was the use of wearables as a platform to learn STEM (Science, Technology, Engineering, Math). Many papers in this category address computer science or general engineering education, such as the learning of programming, or the learning of circuitry. These papers positioned wearables as a target platform or device for students to write code for. Common motivations for doing so include the proposition that students tend to express greater interest in wearables as opposed to other more typical platforms, especially in lower grades, and the fact that wearables possess many hardware limitations (e.g., processing speed, memory management) that students, especially at higher grades, should learn to handle in their computing education. For instance, [W2038097002] proposed a curriculum for a mobile development course for undergraduate students centered on programming for smartwatches. A large number of work in this category engages students in the development of e-textiles. For example, [UNMAPPED:49] designed and organized a programming course that focused on wearables in fashion and design for middle school students. Students built lighted patterns on tshirts and embedded different kinds of sensors on textiles. The authors reported that their course was partially successful at increasing the students' interest in science and computing. In a similar direction, [UNMAPPED:38] developed a toolkit for designing wearable e-textile prototypes called \"Wearable Bits,\" and had 26 participants of varying ages used the toolkit to build prototypes of wearable e-textiles in workshop settings. Row numbers 86\u2013103 in the Supplementary Table A list all the papers in this category. These papers are [W3148611567], [UNMAPPED:91], [W2038962563], [UNMAPPED:90], [UNMAPPED:49], [W2142094635], [UNMAPPED:70], [UNMAPPED:71], [UNMAPPED:47], [UNMAPPED:92], [W2038097002], [W2250803676], [W2559541679], [W2471346569], [W2559746616], [W2591687996], [W2619119631], and [UNMAPPED:38].\n\nThe category of making knowledge visible is an interesting one. Here, wearables are used to support learning by making explicit and/or visible abstract concepts or information that typically has no physical representation. For instance, [UNMAPPED:74] created tshirts with sewn-on designs of the human anatomy parts (liver, heart, intestine, etc.). The tshirts were embedded with electronic LED circuits to highlight different aspects of the internal organs. Their study showed that by wearing and interacting with the tshirts, students aged 6\u201312 learned more about the sizes, positions, and functions of different human organs. Making knowledge explicit does not necessarily only need to be through visual means. [W3029281629] rendered one's mentors' collected words of wisdom explicit through vocalization delivered through smart glasses based on the user's detected context. And [W3008536585] armed university students with see-through smartglasses that provided augmented reality views anchored to real objects (e.g., metal rods, heating unit) in a Physics laboratory experiment setup on heat conduction. The study did not find greater learning gains for the AR condition over the non-AR condition, but did seem to find lower self-reported cognitive load in the AR condition. Row numbers 73\u201385 in the Supplementary Table A list all the papers for this manner of wearable use. These papers are [UNMAPPED:79], [W113060500], [UNMAPPED:95], [UNMAPPED:74], [W2282339469], [UNMAPPED:48], [W2339060713], [W2485772107], [UNMAPPED:72], [W2511549470], [W2951738939], [W3029281629], and [W3008536585].\n\nThe category of guiding embodied behaviors includes papers that make use of wearables to support learning through embodied processes such as haptic feedback. [UNMAPPED:37], for example, developed a wearable motion capture jacket that provides vibrotactile feedback to guide users in adopting the correct position when learning to play the violin. Similarly, [W2535735454] developed gloves that provide vibrations on the users' fingers corresponding to the notes that need to be played for a particular song on the piano. [W2895475505] had participants learn Morse code through vibrations delivered by a smartwatch. The preliminary study results showed that participants were able to learn and recall Morse code for different words through haptic stimuli. Row numbers 26\u201337 in the Supplementary Table A list all the papers in this category. These papers are [W2535735454], [UNMAPPED:37], [W1979467848], [W1977560626], [UNMAPPED:31], [W1963839125], [W2008810811], [W2288085147], [UNMAPPED:68], [W2895703797], [W2895475505], and [W2978043399].\n\nIn the category of helping teachers to learn about the class or the students, wearables are designed to support teachers in the different tasks that they have to perform in teaching. The two most common tasks that we saw addressed were to help in classroom management and to help teachers understand the status of their students. Papers in this category often include analytics dashboards or wearable notifications. An example of a paper in this category is [UNMAPPED:88] in which they presented findings from co-design sessions with teachers about possible uses of wearable technologies, and implemented a prototype smartwatch application. Some example use cases of the smartwatch app for teachers included sending reminders about anticipated scheduling and logistical arrangements for a particular lesson, and real-time notifications about students' submitted assignments and contributions. Another example is the work of [UNMAPPED:62] who had teachers wear indoor positioning badges to track their movements around the class. Proxies of student positions (student tables, experimental setups, etc.) were also recorded via sensors. The paper describe the teachers' reflections on the potential benefits and concerns with the use of such movement data to support teaching. Row numbers 64\u201372 in the Supplementary Table A list all the papers for this manner of wearable use. These papers are [W2161879360], [W2342547196], [W2519687167], [UNMAPPED:88], [W2586503463], [UNMAPPED:34], [UNMAPPED:44], and [W2793197442], [UNMAPPED:62].\n\nWhile wearables are designed to be used by teachers in the category of helping teachers in the classroom, the category of guiding student classroom behaviors addresses the use of wearables to help students regulate their own behaviors in learning environments. For example, [UNMAPPED:122] designed, developed and tested a smartwatch application that provides different types of notifications to students with intellectual and developmental disabilities to help them integrate in a regular classroom setting. A notification on the smartwatch app, for instance, reminds the students that they have to raise their hands to talk, or to moderate their voice volume when they speak. [W2058306715] developed badge-shaped wearable sensors that students wore to track their physical activity level as well as their face-to-face interactions. Significant correlations between activity levels and academic performance, and face-to-face interactions and performance were found, suggesting that interventions related to students' physical behaviors can perhaps be used to improve academic performance. Row numbers 61\u201363 in the Supplementary Table A list the papers for this category. These papers are [W2058306715], [UNMAPPED:123], and [UNMAPPED:122].\n\n**TABLE 4** Number of papers on wearables for learning by year of publication.\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W2898841720",
+            "W2091521181",
+            "W2922816379",
+            "W2161256964",
+            "W1454774440",
+            "W2271091173",
+            "W2209773240",
+            "W1785832507",
+            "W2467414726",
+            "W2549145790",
+            "W2340502699",
+            "W2888844225",
+            "W2789337376",
+            "W2507528279",
+            "W2949380986",
+            "W2011915906",
+            "W2899994351",
+            "W2101335795",
+            "W2319057001",
+            "W2166492609",
+            "W2166492609",
+            "W2278008712",
+            "W2084060803",
+            "W2086682806",
+            "W2316116374",
+            "W2338918660",
+            "W2793185901",
+            "W2599755607",
+            "W2913973155",
+            "W3000702677",
+            "W2996667664",
+            "W2038097002",
+            "W3148611567",
+            "W2038962563",
+            "W2142094635",
+            "W2250803676",
+            "W2559541679",
+            "W2471346569",
+            "W2559746616",
+            "W2591687996",
+            "W2619119631",
+            "W3029281629",
+            "W3008536585",
+            "W113060500",
+            "W2282339469",
+            "W2339060713",
+            "W2485772107",
+            "W2511549470",
+            "W2951738939",
+            "W2535735454",
+            "W2895475505",
+            "W1979467848",
+            "W1977560626",
+            "W1963839125",
+            "W2008810811",
+            "W2288085147",
+            "W2895703797",
+            "W2978043399",
+            "W2161879360",
+            "W2342547196",
+            "W2519687167",
+            "W2586503463",
+            "W2793197442",
+            "W2058306715"
+          ],
+          "tables_in_text": [
+            "tbl_03",
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "1",
+            "59",
+            "99",
+            "106",
+            "40",
+            "107",
+            "23",
+            "118",
+            "9",
+            "10",
+            "17",
+            "21",
+            "36",
+            "103",
+            "26",
+            "15",
+            "16",
+            "49",
+            "38",
+            "91",
+            "90",
+            "70",
+            "71",
+            "47",
+            "92",
+            "74",
+            "79",
+            "95",
+            "48",
+            "72",
+            "37",
+            "31",
+            "68",
+            "88",
+            "62",
+            "34",
+            "44",
+            "122",
+            "123"
+          ]
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2. Perspectives on Ways of Wearable Use for Learning",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_6_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "5.2.1. Historical Perspective",
+              "parent_subsection_id": "s_6_2",
+              "text": "**FIGURE 3** shows the distribution of all papers related to wearables for learning over the years, ranging from 2002 to 2020. Research on the use of wearables for learning purposes began to rapidly increase as from 2014, peaking in 2015 and 2016. This is probably due to the public release of the GoogleGlass in 2014 and the Apple Watch in 2015, both accompanied with much hype and bringing the idea of wearables to the forefront of public imagination. **FIGURE 4** shows the breakdown of the papers by the seven ways of wearable use for learning that we identified. The use of wearables to capture data to inform learning was one of the early uses of wearables that was researched, followed by the use of wearables as an accessible and motivating platform to help students learn programming. During the peak of research on the topic, research focused on the use of wearables to guide the structure of learning, and in recent years, we see a return to intensive research on wearable use to capture data for learning.\n\n**TABLE 5** Publication year by ways of use for learning.\n{{TABLE:tbl_05}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_05"
+              ]
+            },
+            {
+              "subsubsection_id": "s_6_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "5.2.2. Types of Wearables",
+              "parent_subsection_id": "s_6_2",
+              "text": "In terms of the types of wearables that the reviewed papers involved, **FIGURE 5** shows that much research focused on the use of smart glasses or headsets (e.g., [W1963839125]; [W2271091173]; [UNMAPPED:44]), with the bulk of the papers using them to guide the structure of student learning. Smart glasses are followed by smartwatches (e.g., [W2898841720]; [UNMAPPED:122]), which have been used for a diversity of purposes across the seven ways of wearable use. Smart clothing (e.g., [UNMAPPED:91]; [UNMAPPED:74]) is dominated by its use as a platform to learn programming, especially in the form of e-textiles. Custom wearable devices were also built in some research, such as in the work by [UNMAPPED:95]. Smart wristbands, which differ from smartwatches in that they do not possess a screen display, most commonly consisted of fitness trackers, such as the FitBits used in [W2485772107]. Researchers sometimes directly instrumented participants with wearable sensors (e.g., [W2793185901]), or designed gloves instrumented with sensors (e.g., [UNMAPPED:68]). Others only addressed wearables in general without explicitly referencing any specific types (e.g., [UNMAPPED:48]). And last but not least, some papers built wearables specifically in the form of badges (e.g., [W2101335795]; [W2058306715]).\n\n**TABLE 6** Types of wearables by ways of use for learning.\n{{TABLE:tbl_06}}\n*(Note: Totals in original text table may vary slightly due to multi-category tagging)*",
+              "citations": [
+                "W1963839125",
+                "W2271091173",
+                "W2898841720",
+                "W2485772107",
+                "W2793185901",
+                "W2101335795",
+                "W2058306715"
+              ],
+              "tables_in_text": [
+                "tbl_06"
+              ],
+              "citations_unmapped": [
+                "44",
+                "122",
+                "91",
+                "74",
+                "95",
+                "68",
+                "48"
+              ]
+            },
+            {
+              "subsubsection_id": "s_6_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "5.2.3. Target Populations",
+              "parent_subsection_id": "s_6_2",
+              "text": "We analyzed the reviewed papers for populations that they target or address with respect to the use of wearables for learning. We first categorized broadly the population types into students or teachers. The bulk of the papers addressed only students (80 papers or 77.7%). Only 11 papers (10.7%) addressed only teachers, and 12 other papers addressed both students and teachers (11.7%). Among the papers that addressed students (including those addressing both students and teachers), we coded the age levels of the students. The following scheme was used for coding: (i) <6 years old or <Grade 1 was coded as PreK; (ii) 6\u201312 years old or Grades 1\u20135 was coded using the term Elementary school; (iii) 14\u201315 years old or Grades 6\u20139 was coded as Middle school; (iv) 16\u201318 years old or Grades 10\u201312 was coded as High school; (v) 19\u201322 years old was coded as Undergraduates; (vi) 23\u201350 years old was coded as Adults; and (vii) >50 years old was coded as Older adults. References to non-US school systems such as \"primary school\" were appropriately converted. When neither the average age, age ranges or grade levels of the students were mentioned in the paper, conjectures as to an appropriate level were made based on the complexity of the topic being addressed, if at all possible. For example, a paper addressing the study of gravitational physics is likely to target undergraduate students, even if the population age range was not explicitly specified. If an informed conjecture was not possible, the target population was coded as Not specified.\n\n**FIGURE 6** shows the distribution of papers by target populations and ways of wearable use. Some trends are made evident. Most noticeably, while wearable use to capture data to inform learning and to guide learning structure have been explored across the range of age levels, research on other ways of learning are concentrated at some age levels. For example, wearables as a platform to learn programming tend to be used mostly at the elementary school-aged level, and wearables to make knowledge visible are applied mostly at the elementary and undergraduate levels.\n\n**TABLE 7** Target populations by ways of use for learning. Papers were classified in multiple categories if they addressed more than one population.\n{{TABLE:tbl_07}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_07"
+              ]
+            },
+            {
+              "subsubsection_id": "s_6_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "5.2.4. Learning Settings",
+              "parent_subsection_id": "s_6_2",
+              "text": "Looking at the types of settings that the papers on wearables for learning addressed, we found that most papers involved formal settings, followed by lab-based settings and semi-formal settings. Informal settings, together with the conduct of workshops, were less common. No setting was specified or could be identified in 28 of the papers. In our classification, formal settings consisted of mostly school or classroom environments (e.g., [UNMAPPED:88]), and sometimes, learning centers (e.g., [W2278008712]). Lab settings were constrained, controlled environments typically in research labs (e.g., [W2084060803]). We grouped a number of settings in the category of semi-formal settings (e.g., [W2209773240]; [UNMAPPED:40]). These settings included afterschool programs, summer camps, museums, libraries and art galleries. Semi-formal settings were characterized by the presence of some sort of structure to guide learning, although the rigidity of that structure varied and was often flexible. The category Anywhere was when wearables could be used by participants across a variety of settings, or anywhere that they desired (e.g., at home, in vehicle, in the yard, etc.). Workshops entailed researcher-organized sessions where the activities are predetermined (e.g., [UNMAPPED:47]). We considered the actual location of where the workshop was held to be irrelevant since the nature of the setting was defined much more by its type of organization. Informal settings were settings that were informal in the context of learning, i.e., where learning is not the main goal and could happen incidentally or in an unstructured manner, e.g., surgical room ([W1963839125]; [W2282339469]; [W1785832507]), dance hall ([UNMAPPED:31]), indoor ski resort ([W1979467848]).\n\n**FIGURE 7** shows how these setting types are distributed across the seven ways of wearable use. Of note, using wearables to guide embodied behaviors has mostly been studied in lab settings, and research is scarce in informal settings and unconstrained, everyday environments (anywhere).\n\n**TABLE 8** Learning settings by ways of wearable use. Papers were classified in multiple categories if they involved more than one setting type.\n{{TABLE:tbl_08}}",
+              "citations": [
+                "W2278008712",
+                "W2084060803",
+                "W2209773240",
+                "W1963839125",
+                "W2282339469",
+                "W1785832507",
+                "W1979467848"
+              ],
+              "tables_in_text": [
+                "tbl_08"
+              ],
+              "citations_unmapped": [
+                "88",
+                "40",
+                "47",
+                "31"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "We first present our analysis findings answering our research question, and then present different perspectives on the findings based on some of the more interesting dimensions extracted from the data.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "6. Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We conducted a systematic survey of research that has been carried out thus far on wearables for learning or for educational purposes. Our key findings are summarized in **TABLE 9**. We identified seven ways of how wearables are used for learning in the research reviewed. Based on these ways or manners of wearable use, we propose a framework that can help to make sense of the overall design space of wearable use for learning.\n\nOur proposed framework consists of five main components that wearables for learning research seem to involve: Learning content A (essentially, the target content to be learned\u2014the subject area); Learning content B (other content to be learned that is not the main target content\u2014sub-topic); Meta content (content that frames the content to be learned\u2014instructions, guides, context information, etc.); User info (data or information about the user); and Student behaviors (how students behave in the learning context either generally or with respect to specific behaviors). The seven manners of use address different combinations of the five components in different ways, as illustrated in **FIGURE 8**. The framework thus also helps to make explicit what components have not been combined so far, and thus what aspects of the design space remain to be explored.\n\nA common use of wearables is to \"guide the structure of a learning activity\" (I. in **FIGURE 8**) by providing Meta Content, such as instructions, prompts or frameworks, mainly using visual means (text and graphics) to assist the learning of Learning Content A. This manner of use is similar to \"guiding embodied behaviors\" (V), but in the latter case, the guidance is provided through haptics instead of visual means. \"Capturing data to inform learning\" (II) collects User Information, such as physiological data, through wearables, and uses that information to adjust Learning Content A either through automatic methods or through researcher intervention. In the use of wearables as a \"platform to learn STEM\" (III), an additional topic to be learned (Learning Content B) is added. Students learn about wearables, and through doing so, learn about the main content (Learning Content A), which is typically a STEM subject most often programming or computer science. Using wearables to \"make knowledge visible\" (IV) involves only one component of the framework. Wearables are directly used to make Learning Content A explicit to students. In the manner of use of \"helping teachers to learn about their classes or students\" (VI), wearables collect and provide User Information (e.g., attention level) to the teacher, who is responsible to adjust the learning content or intervene with respect to student behaviors using whatever means he/she sees fit. And in the last manner of use of \"guiding students' classroom behaviors\" (VII), wearables collect and provide User Information (e.g., class participation level) to students themselves, who may use whatever means they see fit to regulate their own behaviors in the learning context.\n\n**TABLE 9** Summary of review findings.\n{{TABLE:tbl_09}}\n\n**FIGURE 8** Design space based on the seven identified ways of wearable use for learning.\n> I. Guide structure of learning\n> II. Capture data to inform learning\n> III. As a platform to learn STEM\n> IV. Make knowledge visible\n> V. Guide embodied behaviors\n> VI. Help teacher learn about class/students\n> VII. Guide students' classroom behaviors\n\nWhile we are not able to derive conclusions with regards to effectiveness of these different approaches to wearables for learning, we did see in our findings that the use of wearables for \"data capture to inform learning\" is the most prevalent approach with 25.2% of papers (26 out of 103 papers) falling into that category. This is followed closely by the use of wearables to \"guide learning structure\" (23.3% or 24 out of 103 papers). The other approaches to wearables for learning are noticeably less prevalent. These results are evidently limited by the timeframe in which the analysis was conducted and are likely to change over time, but they do indicate that the research community tend to find research endeavors in these two approaches to be worthwhile.\n\nWe now discuss findings on the different ways of wearable use for learning with respect to various dimensions analyzed. From a historical perspective, we see that research on wearables for learning peaked in 2015 and 2016. As we mentioned, it is highly likely that this peak was due to the release of accessible and market-ready wearables, such as the GoogleGlass. This shows how research can be driven by technological innovation. However, there was a rapid decrease in research after the peak in 2016. A possible explanation may be that development in terms of the capabilities of wearables flattened out after 2016. After all, the GoogleGlass was quickly retired from public access, and the Apple Smartwatch was immediately touted more as a general healthcare-focused device. On another note, it is also possible that no strong rationale has yet to be developed in research to justify why wearables should be used for learning. In other words, many may find the likelihood of finding \"killer wearable applications\" for education to be low. Yet, the space of educational wearables is less than fully explored, as our review results show. The use of wearables to capture data to inform learning seems currently to be strengthening with the rise of learning analytics. But there are opportunities to explore further across all of the other ways of wearable use we identified. In the discussion of the rest of our review findings below, we highlight potential open areas where future research may be needed. These proposed future directions are summarized in **TABLE 10**.\n\nIn terms of types of wearables, the most commonly addressed was smart glasses or headsets, particularly for the purpose of guiding learning structure. Although neither glasses nor headsets are commonly used in practice for learning currently, research on these wearables types dominates. A reason could be because of the exciting interaction possibilities that this form factor offers such as augmented reality (AR) and speech-based interaction. Beyond the initial focus on the Google Glass, the recent release of new virtual reality hardware such as the Oculus Quest and the Valve Index now allow new applications for AR to be easily developed and employed, perpetuating the research emphasis on smart glasses and headsets. It would be interesting to see, however, whether and how to translate the research with smart glasses to authentic real-world uses. Another point of interest is with regards to smart clothing research, which primarily addresses the engagement of students in the development of e-textiles to allow them to learn STEM subjects such as computer programming or electronics. There are many possibilities to explore the use of smart clothing beyond as a platform to learn programming. Some research has been done on the use of smart clothing to guide embodied behaviors, but guiding students' classroom behaviors and helping the teacher in instruction are unexplored uses.\n\n**TABLE 10** Summary of proposed open research directions.\n{{TABLE:tbl_10}}\n\nIn terms of target populations, research on wearables for learning has mostly targeted college-aged populations. This is not surprising since college students are the most convenient sample for many research fields. Wearables for learning research has also significantly involved students at the elementary school level, focusing on the transition phase of cognitive development in the 9\u201312 age range, especially to assist in learning programming and STEM in general. Less research has targeted users at the high school level surprisingly, and few projects address learning for older adults. We see thus the potential for wearables for learning research to address more lifelong learning that occurs across one's lifespan, or beyond learning, to support general cognitive health as it applies to older people.\n\nAnd finally, with respect to learning settings, most of the studies are done in formal settings that provide an existing structure to the learning process and predetermined activities, especially for the purpose of capturing data through wearables. An aspect that seems to be under-addressed is explorations of wearables to address learning that is more pervasive in nature, i.e., learning that can happen anywhere and in a variety of informal settings. Certainly, this comes with more challenges (both technical and pragmatic) given the uncontrolled environments that this type of learning suggests, but may be possible nowadays with technological advances in areas such as machine learning and data science. Such research could be more rewarding, and perhaps lead to a stronger rationale that appears to be currently lacking in order to catalyze research on wearables for learning further.",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_09",
+        "tbl_10"
+      ]
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "7. Conclusion and Limitations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This paper presented a systematic survey of research on wearable technologies for the purpose of learning. Designing for learning results in very different requirements than designing for health management, which is currently the predominant application of wearables. After all, cognitive advancement and health is as critical as physical health. A key value that our work brings is that through a systematic review, we have identified specific ways in which wearables have been used to support learning so far in the literature, and proposed a framework identifying the main components addressed such that future research directions are more evident. Our hope is that this review will help to accelerate research on wearables for learning in terms of developing suitable theoretical foundations, new wearable designs, new implementation techniques, and more refined evaluation studies.\n\nThe work in this paper has the following limitations: in terms of paper selection, papers that utilize wearables as a small part of a larger system for educational purposes may not have been included in the review. Our paper selection process only covered research where an emphasis, full or partial, was made on wearables. Furthermore, our results are evidently limited by the scope of the paper search that was conducted. We opted to use a targeted approach in our search process, and selected specific publication venues that are most likely to contain relevant papers. Consequently, some papers that relate to the topic outside of these publication venues may have been missed. We also recognize that learning can be conceptualized in many different ways. We did not identify nuances in how the various papers understood learning, but toward a view of being more inclusive, we included any conceptualization of learning, from the more ambiguous to the more specific, in our review. Despite the limitations, we believe that the key contributions of this paper (the design space and research directions) are relevant and will be highly useful to future researchers.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4388636290_tables.md"
+}

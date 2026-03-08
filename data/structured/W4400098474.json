@@ -1,0 +1,366 @@
+{
+  "id": "W4400098474",
+  "metadata": {
+    "title": "Exploring the Impact of Artificial Intelligence in Teaching and Learning of Science: A Systematic Review of Empirical Research",
+    "n_sections": 8,
+    "n_subsections": 12,
+    "n_subsubsections": 0,
+    "n_tables": 5
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Artificial Intelligence (AI) is a broad field encompassing various technologies that have been developed over the past 50 years to enable machines to perform tasks traditionally requiring human intelligence, such as perceiving, reasoning, learning, and interacting [UNMAPPED:1]. However, recent advancements in generative AI (GenAI), particularly models like ChatGPT, have brought unprecedented attention to AI's transformative potential across multiple industries [W4320503479, W2888909284]. Unlike predictive (pre-generative) AI which focuses predictions and decision making through a variety of machine learning and modelling techniques, Generative AI specializes in creating new content, such as text, images, and codes by using models of deep learning [W4295946053, UNMAPPED:5]. This distinction is essential to understand the breadth of AI applications in education.\n\nArtificial intelligence in education (AIEd) is an evolving interdisciplinary arena incorporating AI technologies to renovate and enhance teaching and learning environments. Particularly, the application of AI in science teaching and learning is becoming more popular, even as interest in AI's effects on general education is growing [W4313425238, W2596069950]. More specifically, machine learning, a specific artificial intelligence technology, has been applied to automatically evaluate scientific models used in the education sector. Zhai et al. [W4226315886] employed machine learning techniques to assess the quality of these models after gathering student responses to activities. Their research demonstrates how artificial intelligence can be used to automate assessment procedures and provide students with timely and detailed feedback on their work in the area of science education [W4226315886, W3091828467, W3012071850]. Similarly, Popenici and Kerr [W2770717476] conducted a study to investigate the impact of AI on the teaching-learning process in higher education settings. Their study focused on how intelligent technologies are affecting student learning and traditional teaching approaches in education. Their research presents valuable insights into the incorporation of AI within science education contexts.\n\nZawacki-Richter et al. [W2981863007], in their systematic assessment of AI applications in higher education, focused on the vital role that teachers can play in this domain. Their results suggest how important it is to explore and understand the needs and perceptions of teachers when integrating these technologies into teaching-learning settings. Likewise, Xu and Ouyang [W3210166594] employed a systematic literature review method to identify and summarize research studies and classify the roles of AI in the educational system. Their findings advocate the use of AI is within the education environment to support its role in three ways: (1) AI as a new subject, (2) AI as an immediate mediator, and AI as a complementary aid to impact the teacher-learner, learner-self, and learner-learner relationships.\n\nThough artificial intelligence has flourished in numerous domains within the education system, a comprehensive analysis of its role, advantages, and challenges in science education must be further explored through empirical investigations. This knowledge gap might prompt teachers, policymakers, and educational administrators to base decisions on patchy as well as limited information, lacking potential opportunities to enhance science teaching and learning with the help of AI. To fill this gap, the present paper provides a systematic review that comprehensively examines and consolidates AI's impact on science education, evidenced by the empirical publications published from 2014 to 2023. While GenAI represents a significant leap in AI capabilities, this review considers the full spectrum of AI technologies, including both pre-GenAI and GenAI developments. In this way, we attempt to provide a holistic perspective on the current landscape, aiding stakeholders in leveraging AI's potential while also considering its challenges and ethical implications for educational domains. The overarching objective of this review is to provide insights that could guide future research endeavors and advocate for evidence-based practices to enrich science education through the effective utilization of artificial intelligence.",
+      "citations": [
+        "W4320503479",
+        "W2888909284",
+        "W4295946053",
+        "W4313425238",
+        "W2596069950",
+        "W4226315886",
+        "W2770717476",
+        "W2981863007",
+        "W3210166594"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "5"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Research Background",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "Overview of Science Education",
+          "subsubsections": [],
+          "text": "The goal of science education is not only to teach scientific knowledge but also to develop a scientifically literate populace capable of engaging in scientific reasoning and decision-making [W4206489327, UNMAPPED:14]. This aligns with the \"Science for All\" movement, emphasizing the importance of science education for all students, not just those pursuing careers in science [W4229376378, W2097797198]. Students' scientific literacy and critical thinking abilities are developed through the teaching and learning of scientific theories, procedures, and experiments in science education [W4281886677, W4388916995, W4318827084, UNMAPPED:18].\n\nThe nature of science education extends beyond content-based instruction to include student-centered activities and the development of scientific literacy for citizenship [W4229376378, W2137201031, W2121411546]. National development hinges significantly on robust contributions from the scientific community, driving economic growth and propelling the overall advancement of a nation [W4213236997, W2149389737]. The \"Call to Action\" for science education highlights a compelling necessity to improve educational approaches and make them consistent with the demands of the 21st century [W3199041192, W2800786311]. It is essential for developing students' foundational knowledge, intriguing their curiosity, and getting them ready for STEM careers as per the contemporary world's needs. Through AI incorporation, science education can be made more interesting, approachable, and pertinent for students of all ages and backgrounds by emphasizing experiential learning.",
+          "citations": [
+            "W4206489327",
+            "W4229376378",
+            "W2097797198",
+            "W2137201031",
+            "W2121411546",
+            "W4213236997",
+            "W2149389737",
+            "W3199041192",
+            "W2800786311"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "14"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "Prospects of Incorporating AI in Science Learning",
+          "subsubsections": [],
+          "text": "With AI technology's continuous evolution and popularity, the possibilities for its application in science education are promising but not without challenges. AI has the capability to transform the way science is taught and learned. One of the most compelling applications of AI in science education is its ability to simulate scientific experiments and provide virtual laboratory experiences to science learners. This ensures that students can practice and develop their scientific skills in a safe and controlled environment, potentially saving expenses and offering new opportunities for exploring scientific concepts that may not be feasible in traditional laboratory settings [W3004481624]. However, these virtual experiences may lack the tactile and hands-on aspects of interaction with the physical world [W4392003959], which are crucial for certain types of learning.\n\nBy leveraging AI, educators can also move away from traditional, one-size-fits-all approaches to education and instead provide personalized and interactive learning experiences for students. AI-powered algorithms can go beyond simply providing recommendations and assessments to conducting deep analyses of students' learning patterns, allowing for highly personalized learning experiences [W3091828467, W3101804645]. However, the effectiveness of these personalized learning systems depends heavily on the quality and representativeness of the data they are trained on, which can sometimes introduce biases and perpetuate existing inequities.\n\nIn addition, students can also benefit from immediate feedback and adaptive learning pathways, ensuring that they are able to address any misconceptions or gaps in their understanding of scientific phenomena [W2592478209]. AI can also help science educators track and monitor students' progress more effectively, allowing for targeted interventions and support where necessary. Moreover, the use of AI can enable the development of interactive and immersive learning environments, making science education more engaging and accessible to students with diverse learning styles and needs. As AI continues to advance, the potential for its integration into science learning is likely to grow, presenting exciting opportunities to transform and elevate the science education experiences for students at all levels.",
+          "citations": [
+            "W3004481624",
+            "W4392003959",
+            "W3091828467",
+            "W3101804645",
+            "W2592478209"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "Anticipated Benefits of AI Implementation in Science Teaching",
+          "subsubsections": [],
+          "text": "Artificial intelligence (AI) has numerous benefits in science education, profoundly affecting teaching and learning for science subjects. AI programs can study how students learn and change the material to fit each student's needs, skills, and the way they learn. This way of creating educational material helps students learn better and faster. It lets them go at their own speed and in a way that matches how they like to learn [W2981863007]. Also, AI-powered data analysis can help science teachers understand how well their students are doing in specific scientific subjects and where they might need extra help.\n\nAnother significant advantage is the improvement of exploratory learning through virtual labs and reenactments. AI-powered instruments have the potential to recreate complex logical tests, which may be illogical or hazardous to conduct in a conventional classroom setting. These virtual situations offer hands-on learning encounters and permit understudies to try distinctive scenarios, improving their understanding of scientific concepts [W2800786311]. This approach was not as supportive of extending understudy engagement but too valuable to democratize access to high-quality science instruction. AI devices can interface understudies and teachers over diverse geographies, empowering the trade of logical thoughts and cultivating a worldwide point of view on logical issues. This interconnecting also permits integrating differing datasets into the educational modules, uncovering understudies to real-world logical challenges and datasets [W4327518725].",
+          "citations": [
+            "W2981863007",
+            "W2800786311",
+            "W4327518725"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "Ethical Considerations of AI Integration in Education",
+          "subsubsections": [],
+          "text": "Even though artificial intelligence (AI) in education has bright futures, important ethical issues need to be resolved when integrating AI in the classroom. Many researchers have stressed considering the ethical implications and the need for character education in the era of AI [W2584883659, W4366205857]. The lack of critical reflection on the pedagogical and ethical implications and the risks of implementing AI applications in higher education underscores the need for a comprehensive ethical framework [W3119191159].\n\nAdditionally, the integration of AI into educational settings presents new ethical obligations for teachers, necessitating a revaluation of ethical frameworks and responsibilities [W4293318902]. Moreover, the introduction of ethics courses in academic training and capacity building of AI development actors can facilitate the integration of ethical values and the development of responsible AI [W3202021736]. The ethical implications of AI in education extend beyond technical considerations to encompass broader societal impacts, such as privacy protection and social justice [W4321453738].\n\nEducators and students must understand, evaluate, and familiarize themselves with the uses of generative AI tools and consider their potential impacts on academic integrity. This involves recognizing when and how AI is used, assessing the reliability and validity of AI-generated outputs, and understanding the ethical and social implications of AI applications [W3199189488]. Moreover, the application of AI in education brings questions about educational equity and access to the fore. Systemic biases in AI algorithms and data can perpetuate inequities, making it crucial to address these biases effectively [W4293318902].",
+          "citations": [
+            "W2584883659",
+            "W4366205857",
+            "W3119191159",
+            "W4293318902",
+            "W3202021736",
+            "W4321453738",
+            "W3199189488"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Purpose of the Study",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The primary goal of the present study is to highlight the potential benefits as well as any disparities that might result from the widespread use of AI in science subjects. These discrepancies could be related to gaps in infrastructure, preparedness in the region, or accessibility. Eventually, the present investigation aims to furnish all relevant stakeholders\u2014i.e., educators, learners, policymakers, and curriculum designers\u2014with a deeper understanding of the current interaction between AI and science education.\n\nThe following research questions are addressed in this systematic review:\n\n1. **Impact on Learning Outcomes:** How do AI tools impact student learning outcomes and engagement in science education?\n2. **Contexts of AI Adoption:** What are the potential disparities in the uptake of AI tools within science education, considering differences among countries, educational levels, and subject areas?\n3. **Student and Teacher Perceptions:** What are the perceptions and attitudes of students and educators towards the use of AI tools in science education?\n4. **Pedagogical Challenges:** What are the identified challenges associated with using AI in science education?",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Search Strategy",
+          "subsubsections": [],
+          "text": "We accessed a range of prominent digital repositories and databases to search the relevant literature. Particularly, IEEE Xplore, Springer, Taylor and Francis, ERIC (U.S. Dept. of Education), Science Direct, and Wiley were targeted to search the relevant literature. We also used Google Scholar and Google to make sure that we didn't miss any important information. We used advanced search features to limit our search results to papers published between 2014 and 2023, ensuring that our search was focused and up to date [UNMAPPED:41].\n\nWe utilized a smart search strategy along with a range of search terms and operators to accomplish this. Our search strategy used a combination of key terms such as \"artificial intelligence\", \"AI\", \"generative AI\", \"ChatGPT\", \"machine learning\", \"robotics\", \"intelligent system,\" and \"expert system\" paired with descriptors like \"science education,\" \"science learning,\" or simply \"science\". These combinations, along with their possible variations, were systematically applied to search within the papers' titles, keywords, and abstracts. This search strategy was created with the aim to identify and consider a broad range of empirical work relating to the use of artificial intelligence in the teaching and learning of science.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "41"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Eligibility Criteria",
+          "subsubsections": [],
+          "text": "Describing clear eligibility (inclusion and exclusion) criteria allows for setting boundaries for a systematic literature review. These criteria were aimed at creating a structured framework that facilitates the inclusion of studies meeting essential prerequisites while excluding those that don't align with our research objectives. The inclusion criteria are as follows:\n\n- The paper must have employed empirical methods, such as quantitative, qualitative, or/and mixed methods, warranting a rigorous data collection and analysis approach.\n- The paper should have conducted research in an educational setting, encircling primary, middle, secondary, or higher education, emphasizing the applicability of the findings in educational environments.\n- A pivotal criterion necessitates the use of artificial intelligence in the study. This AI practice should have been applied to the teaching-learning process, and empirical data collected and integrated into the study.\n- Studies should be related to a science-related content area, spanning courses like chemistry, physics, biology, engineering, health sciences, or other related disciplines, ensuring applicability to the research topic.\n- The timeframe specified for publication years, from 2014 to 2023, targets to capture relevant studies within the past decade, ensuring the examination of recent developments in AI-based learning.\n\nOur exclusion criteria were as follows:\n\n- Excluding studies that are not empirical in nature, such as theoretical papers, reviews, editorials, or opinion pieces, to maintain the focus on empirical research.\n- Studies written in languages other than English.\n- Studies that did not explicitly mention the AI use within a learning context.\n- Excluding studies that are solely available in abstract form and lack full-length publications.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "The Screening Process",
+          "subsubsections": [],
+          "text": "In the months of November and December 2023, we went on a thorough hunt for the required information. We started by searching through loads of databases and found 5,121 articles. After getting rid of duplicates, checking publication dates and titles, and looking at abstracts to see if they met the eligibility criteria for the present study, we ended up with 128 articles. From there, we excluded 41 studies because they didn't really dive into science education. That left us with 87 articles that we pored over super carefully. We made sure they fit our criteria and answered our research questions before diving into them. From the pool of these 87 articles, 13 studies were identified as lacking clear empirical evidence regarding the use of artificial intelligence and were subsequently excluded. This process resulted in a final dataset of 74 articles that were included in the systematic review. See **TABLE 1** for the list of studies included in our review. **FIGURE 1** demonstrates a quick preview of the search strategy and the screening process.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "Coding and Analysis",
+          "subsubsections": [],
+          "text": "We used a mix of qualitative and quantitative content analysis techniques to synthesize the findings of the empirical papers. To ensure inter-rater reliability in relation to the quality of article coding procedures, a small random sample consisting of 20 selected articles was independently coded by multiple raters. The calculated reliability level exceeded 92%, signifying a high degree of agreement across coding categories. We conducted a comprehensive examination of the studies from various perspectives. Firstly, we analyzed the characteristics of the data set, including the country where the studies were conducted, the journal name, the content area, and the educational level.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The authors worked diligently to explore how artificial intelligence contributes to science education thoroughly. We followed a structured process suggested by the widely used review methodology called Preferred Reporting Items for Systematic Reviews and Meta-Analyses [W4236476849]. The review approach of the current study comprised various stages \u2013 defining the study's purpose along with specific research questions, formulating a protocol, an extensive literature search, a systematic screening process, extracting pertinent data, and synthesizing the findings. The sections below specifically mention how each of these steps was carried out for this study.",
+      "citations": [
+        "W4236476849"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Findings",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "RQ1: Impact on Outcomes Comparison",
+          "subsubsections": [],
+          "text": "The first research question of the current study specifically addressed the primary intention of this systematic research, i.e., analyzing the reported impact of AI-enhanced learning on students' learning outcomes in science education. The empirical papers reviewed showed that artificial intelligence has been used within science education for a variety of purposes, such as engaging students in the learning process with a strong sense of motivation and interest [W2789905984], generating tests of science subjects [W1969346491, W4324139371], scoring and providing personalized feedback on students' assignments [W2940725132, W3143722809, W3007803772], and predicting student performance [W2123536472, W2945646438, W4290992098].\n\nAI-based tools were found to have a positive influence on student's learning outcomes in science-related courses. The experimental group that was exposed to AI integration in their learning environments exhibited significantly higher scores in their academic tests compared to the control group who experienced traditional learning environments [W4381188835, W3020875770]. Ledesma and Garc\u00eda [W2604250295] and Lamb et al. [W3106056336] highlighted AI's capacity to identify complex concepts and enhance problem-solving skills significantly in subjects. Ferrarelli and Iocchi [W3137696531], Cochran et al. [W4381956168], and Figueiredo and Paix\u00e3o [W2182207079] showcased how AI is helpful in fostering improved subject understanding and heightened motivation among students, particularly in physics and chemistry.\n\nLee et al. [W4289260799] argue that AI-based tools such as chatbots can help students become cognitively more active in the learning process. Likewise, Azcona [W2940725132] suggests that personalized learning facilitated by AI can help reduce the gap between lower- and higher-performing students. Moreover, AI-powered education can empower students to predict their learning outcomes and strategically regulate their learning behavior [W2945646438].\n\nThe effectiveness of different AI models varied across studies. Nguyen et al. [UNMAPPED:59] highlighted the performance disparities among AI models like Google Bard, ChatGPT, and Bing Chat in addressing biology problems for Vietnamese students. While chatbots positively influenced online learning experiences, their impact on academic achievement remained variable [W4210863414, W3177215441]. In essence, these findings underscore the potential of AI to augment science education by enhancing student understanding, motivation, and engagement. However, they also underscore the importance of addressing challenges related to AI's adaptability to subject matter and context and the need for continued exploration into AI's comparative impact on academic achievement vis-\u00e0-vis traditional teaching methods in science education. Daher et al. [W4384616371] pointed to AI's limitations in comprehending specific subject matter, which could impact its effectiveness in aiding student learning. Cooper [W4360980141] emphasized the need for educators to critically evaluate and adapt AI-generated resources to suit diverse teaching contexts.",
+          "citations": [
+            "W2789905984",
+            "W1969346491",
+            "W4324139371",
+            "W4381188835",
+            "W3020875770",
+            "W2604250295",
+            "W3106056336",
+            "W3137696531",
+            "W4381956168",
+            "W2182207079",
+            "W4289260799",
+            "W2940725132",
+            "W2945646438",
+            "W4210863414",
+            "W3177215441",
+            "W4384616371",
+            "W4360980141"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "59"
+          ]
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "RQ2: Contexts of AI Adoption",
+          "subsubsections": [],
+          "text": "In our second research question, we aimed to explore the potential disparities in the uptake of AI tools within science education, considering differences among countries, educational levels, and subject areas. The results disclosed that artificial intelligence has been incorporated in a variety of subject areas within science education, including physical and natural sciences. The studies reviewed were highly dominated by investigations that did not specify any particular domain of science (n = 15, 20.30%), but they preferred to use \"Science\" as the subject area in their papers. Next in line, was the subject of Physics with the second-highest number of papers (n = 10, 13.50%). The list was continued by Biology and Programming with nine (n = 9, 12.16%) and eight (n = 8, 10.81%) papers, respectively. The subjects of Mathematics and Engineering occupied about 16% (with 06 papers each) of the total papers. Out of 74 studies, only five (05) studies were conducted to investigate the use of AI for AI education. The subjects of Computers/technology were focused on in four papers. Lastly, only one paper was centered around the use of artificial intelligence in Statistics and Earth Science. **FIGURE 3** provides a summary of the content areas that were the focus of the papers included in our review.\n\n**FIGURE 3** Studies distributed around subject areas within science education\n\n{{TABLE:tbl_03}}\n\nWhile examining the various educational levels that benefited from the integration of artificial intelligence in some manner, we found that nearly half of the studies (n = 35, 47%) belonged to undergraduate level, followed by high schools (n = 15, 20%) and middle schools (n = 7, 10%) respectively. Out of the total 74 papers, about 8% of the studies (n = 6) were conducted in secondary school contexts. Likewise, 8% of the studies involved multiple levels of educational settings. In contrast, three of the studies (about 4%) were conducted in elementary school. Only 2% of the papers belonged to the college level, and only one study was conducted at the postgraduate and college levels. **FIGURE 4** provides a quick distribution of the students in various educational contexts.\n\n**FIGURE 4** Studies distributed across various educational levels\n\n{{TABLE:tbl_04}}\n\nSimilarly, country-wise categorization of the papers exposed that about 38% of the studies (n = 25) were conducted in the context of the United States. Germany ranked second in the list with six studies (8%). This was followed by four studies (5.4%) carried out in Turkey and Australia. UAE and Malaysia followed in the race, each with three papers. Eight countries, including Sweden, China, Mexico, Saudi Arabia, Spain, the Netherlands, Israel, and Taiwan, contributed about 21.6% of the total papers, each with two studies. The rest of the papers (n = 10, 13.51%) were written in the context of 10 different countries across the globe (see **FIGURE 5** for details).\n\n**FIGURE 5** Country of research context\n\n{{TABLE:tbl_05}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03",
+            "tbl_04",
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "05"
+          ]
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "RQ3: Student and Teacher Perceptions",
+          "subsubsections": [],
+          "text": "With our third research question, we attempted to explore science teachers' and students' perceptions regarding the integration of AI. The studies revealed multifaceted perspectives on the integration of AI in science education among both students and teachers. The effectiveness of AI tools in augmenting learning experiences garnered students' attention. Students showcased increased engagement and improved subject understanding through AI-based interventions, indicating positive perceptions of AI's efficacy in enhancing learning outcomes [W3137696531, W2604250295]. For example, Bitzenbauer [UNMAPPED:64] found that ChatGPT's use in Physics classrooms favorably influenced students' perceptions in Germany. Avelino et al. [W2775745190] echoed this sentiment for undergraduate students in the United States.\n\nStudents reported their increased interest in science courses when AI was integrated into the learning environments. Students particularly admired the AI's power to provide prediction and personalized feedback [W2940725132]. According to Elkhodr et al. [W4380836944], science students perceive AI-based tools as useful and enjoyable learning resources, while most students showed a willingness to use them in the future.\n\nOur analysis suggests that science teachers hold a high level of acceptance and positive attitudes toward AI's utilization in the classroom. Teachers welcome its use with positive correlations to self-efficacy, ease of use, and behavioral intentions [W4319754774]. They perceive this technology as the need of the hour to boost student engagement [W4210863414, UNMAPPED:68]. Empirical papers included in the current study exposed fluctuating degrees of comfort and adaptability among educators and students in incorporating AI into their teaching and learning processes. Al Darayseh [W4319754774] noted that science teachers exhibited favorable attitudes toward AI's integration, possibly due to the perceived reduced effort in its utilization and their confidence in their essential skills to incorporate AI effectively.\n\nThere are several factors that influence teachers' intentions and behavior regarding the use of AI, including self-esteem, expected benefits, ease of utilization, and their overall attitude toward AI applications. Teachers' favorable disposition towards AI use is also due to their perception of reduced effort in its utilization [W4386780061]. Overall, teachers consider AI tools like ChatGPT to be helpful in designing science units, rubrics, and quizzes [W4360980141]. Yet, challenges associated with AI integration could influence students' and teachers' perceptions of AI's reliability and accuracy in supporting educational goals, posing potential barriers to widespread acceptance and utilization.",
+          "citations": [
+            "W3137696531",
+            "W2604250295",
+            "W2775745190",
+            "W2940725132",
+            "W4380836944",
+            "W4319754774",
+            "W4210863414",
+            "W4386780061",
+            "W4360980141"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "64",
+            "68"
+          ]
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "RQ4: Pedagogical Challenges",
+          "subsubsections": [],
+          "text": "Our analysis uncovered several challenges associated with the integration of AI in terms of complexities and limitations of its use within this particular domain of the education system. One prevalent challenge revolved around AI's capability to comprehend and effectively address specific subject matter. Daher et al. [W4384616371] highlighted instances where AI, like ChatGPT, encountered difficulties in understanding complex concepts in chemistry. They argue that the information provided by AI tools such as ChatGPT is limited because it depends on the data it was taught with. It might not have access to the latest or most complete knowledge in a particular domain.\n\nAdaptability and contextual relevance emerged as significant concerns regarding the use of AI within science teaching. Cooper [W4360980141] stressed that teachers critically evaluate AI-based resources and adapt them to their teaching contexts. He suggested that a one-size-fits-all approach might not suffice in accommodating the intricacies of varied educational environments. Another challenge pertained to the effectiveness and performance variability of different AI models. Nguyen et al. [UNMAPPED:59] showcased the varying performance levels of different AI models, indicating disparities in their ability to address specific subject-related challenges. This variability in performance, as seen in different studies, implies the need for thorough evaluation and selection of appropriate AI tools tailored to the needs of specific subject areas. Furthermore, ethical considerations and limitations in AI's current capabilities were notable concerns. Kieser et al. [W4387936944] raised ethical issues regarding students using AI to fabricate data for class assignments. Addressing these challenges requires a nuanced approach that acknowledges the potential and constraints of AI while striving to optimize its role in enhancing science education effectively.",
+          "citations": [
+            "W4384616371",
+            "W4360980141",
+            "W4387936944"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "59"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this comprehensive review of the literature, we carefully evaluated seventy-four (74) empirical studies that deal with the incorporation of AI into science education. Numerous research approaches, such as mixed, qualitative, and quantitative approaches, were used in these studies. Examining the publication dates of the included papers revealed that they were dispersed over the review study's 10-year focal period (2014 to 2023). The year 2023, with twenty-seven (27) papers, led the way, demonstrating researchers' strong interest in the most recent research on the application of artificial intelligence in science education. This was followed by ten (10) studies in 2022, eight (08) studies in 2021, and nine (09) studies in year 2020. For more information on the year-wise publication, see **FIGURE 2**.\n\n**TABLE 1** Articles included in the systematic review\n\n{{TABLE:tbl_01}}\n\n**FIGURE 1** PRISMA review process\n\n```\nRecords identified through initial\ndatabase searching\n(n = 5,121)\n |\n |\n v\nRecords screened\n(n = 5,011)\n |\n | Records excluded:\n | Title review, availability,\n | duplicates, and publication date\n | (n = 4,883)\n v\nRecords assessed for relativeness\n(n = 128)\n |\n | Full-text records excluded:\n | Unrelated to Science education topics\n | (n = 41)\n v\nFull-text articles assessed for eligibility\n(n = 87)\n |\n | Full-text records excluded:\n | Not clear empirical evidence\n | (n = 13)\n v\nStudies included in the synthesis\n(n = 74)\n```\n\n**FIGURE 2** Year-wise publications\n\n{{TABLE:tbl_02}}",
+      "citations": [
+        "W2800786311",
+        "W3012071850"
+      ],
+      "tables_in_text": [
+        "tbl_01",
+        "tbl_02"
+      ],
+      "citations_unmapped": [
+        "74",
+        "08",
+        "09"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Discussions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The primary objective of this review was to investigate the interaction between artificial intelligence and science education. Our study uncovered a diverse landscape of AI usage within science education. Our results suggested that integrating AI tools in science education consistently improves students' academic performance. This was evident in higher test scores and a better understanding of complex concepts compared to those in traditional learning environments [W4381188835, W3020875770, W2885869279].\n\nLiterature suggests that integrating artificial intelligence into the teaching-learning process facilitates understanding complex scientific topics [W2604250295, W3106056336]. It also helps develop problem-solving skills considerably, leading to a better understanding of subjects, particularly in fields like physics and chemistry. Furthermore, it was revealed that science teachers use AI-driven tools to engage students effectively and foster their motivation and interest in science-related subjects [W2789905984]. Personalized learning through AI tools helps bridge performance gaps between lower and higher-performing students [W2940725132], contributing to a more equitable learning environment. AI-generated personalized feedback also contributed to students' increased engagement in the learning process [W2940725132, W3143722809, W3007803772].\n\nThe current systematic review suggests that the distribution of studies within various subject areas in science education showcases a dominant focus on science in general, followed by physics, biology, programming, and other specific science subjects. Some specific domains, like earth science and statistics, received comparatively the least attention in the reviewed literature.\n\nThe distribution of research papers across countries demonstrates certain disparities. The United States had a significantly higher number of studies compared to other nations. Germany ranked second on the list. Turkey and Australia followed, while UAE, Malaysia, and Canada contributed with a moderate number of studies. Several countries had minimal representation, with a diverse spread across multiple nations. Concentration of studies in certain countries like the United States and Germany might suggest varying levels of research infrastructure or prioritization of AI in education compared to other nations with fewer studies. This could potentially lead to disparities in the implementation and impact of AI tools in science education among different regions globally.\n\nOur analysis found that students exhibit increased engagement and interest in science courses when AI tools are integrated into learning environments. This heightened interest is attributed to AI's ability to provide predictions and personalized feedback [W4290992098], making learning more engaging and enjoyable [W4213236997]. Students perceive AI-based tools as useful and beneficial for their learning experiences. They acknowledge AI's effectiveness in improving subject understanding and express a willingness to continue using such tools in the future [W4380836944].\n\nSimilar to students, science teachers also demonstrate positive attitudes and acceptance of AI tools in the classroom, correlating with perceived benefits in student engagement and their own teaching efficacy. Teachers view AI integration as a means to enhance student engagement, with some perceiving it as a way to reduce effort while teaching, leading to increased confidence in utilizing AI effectively [W4319754774]. Specifically, teachers perceive ChatGPT as a valuable resource for designing science units, rubrics, quizzes, and teaching aids, offering convenience and potential enhancement to their teaching methodologies.\n\nWhile AI showed promise in improving learning outcomes, there are challenges related to its adaptability to subject matter and context. Some studies pointed out limitations in comprehending specific subjects, potentially impacting the effectiveness of AI in aiding student learning. Previous research suggests that AI tools like ChatGPT face difficulties in comprehending and addressing complex concepts in specific subject areas, as seen in instances within chemistry [W4384616371]. The dependency on the data it was trained with limits its access to the latest or most comprehensive knowledge in particular domains. A uniform approach might not adequately cater to the complexities and nuances of varied educational environments, emphasizing the need for adaptable solutions [W4360980141]. Addressing these challenges requires a balanced approach that acknowledges AI's potential and constraints in science education. Thus, teachers are advised to critically evaluate AI-generated resources and tailor them to diverse teaching contexts.\n\nOur research provides important implications for teacher preparation and in-service professional development regarding AI in our society and implementing AI tools and processes in K-12 education [W4295132046]. As a whole, integrating artificial intelligence positively enhances the process and outcome of science education. However, there are certain limitations and challenges associated with its use. Providing training and support to educators to effectively utilize AI tools can enhance their confidence and capabilities in integrating these technologies into teaching practices. Moreover, establishing clear ethical guidelines and frameworks for the responsible use of AI in education can mitigate the risk of misuse and ensure ethical practices among students and educators.",
+      "citations": [
+        "W4381188835",
+        "W3020875770",
+        "W2885869279",
+        "W2604250295",
+        "W3106056336",
+        "W2789905984",
+        "W2940725132",
+        "W4290992098",
+        "W4213236997",
+        "W4380836944",
+        "W4319754774",
+        "W4384616371",
+        "W4360980141",
+        "W4295132046"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Limitations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Some of the inherent limitations of this research review are discussed in this section. First, just like with other reviews, the search terms and strategies determine which research papers are included. Although a thorough and methodologically rigorous search was the goal, using different search terms might have turned up more articles that could have been included in the review. Furthermore, a few particular research databases were searched in order to find pertinent empirical literature for inclusion in this research review. An alternative methodological strategy would have involved restricting the search for research to a predetermined list of scholarly, peer-reviewed journals. A smaller sample of literature for inclusion may have occurred due to this strategy. However, greater control over validity, reliability, and credibility during the search and inclusion processes was sought to the best level. Lastly, we may have missed some grey literature, such as dissertations and conference proceedings, that was not indexed in the databases/repositories that we used.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This systematic review examined the impact, perceptions, and challenges associated with the integration of Artificial Intelligence (AI) in the teaching and learning of science. Our analysis uncovered a landscape rich in prospective benefits and challenges. The usage of AI in science education steadily established positive impacts on student learning outcomes. It encourages participation in the educational process, enhances comprehension of the subject, and boosts motivation in the students. Both students and teachers showed positive views of AI's effectiveness and ease of use. Both acknowledged its potential to boost learning experiences. Nevertheless, issues arose from AI's limited ability to understand particular subject matter, its inability to adjust to various educational contexts, and the variation in performance between various AI models. Ethical considerations regarding responsible use also appeared to be an important concern. Addressing these challenges demands a careful approach that considers thorough evaluation and adaptation to diverse contexts. Educators and policymakers should navigate these complexities to join the potential of AI in science education while ensuring ethical practices and maximizing its impact on students' learning journey worldwide.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4400098474_tables.md"
+}

@@ -1,0 +1,546 @@
+{
+  "id": "W4378594123",
+  "metadata": {
+    "title": "Learning from cyber security incidents: A systematic review and future research agenda",
+    "n_sections": 5,
+    "n_subsections": 20,
+    "n_subsubsections": 0,
+    "n_tables": 6
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The rapid digitalisation of our society has created complex webs of interwoven and interdependent systems across commerce, education, health and governments [UNMAPPED:1]. Recent headlines about vulnerabilities in software such as Solar Winds, Kaseya and Log4j have heightened organisations' awareness of their dependence on suppliers and the intricate nesting of software within their systems [UNMAPPED:2]. These risks are increasingly being exploited by financially motivated criminal enterprises and by state-sponsored actors to leverage political influence or cause disruption [W2960902621]. Despite an expected spend of $170 billion on investment in security and risk management in 2022 [UNMAPPED:4], the number and impact of incidents continues to grow. Statistics on the rate of incidents are fraught with challenges around definitions and most reports produced are from those in the business of selling security services. However, in one of the few independent reports, the UK government's 2022 survey of 1200 businesses and charities found around half had experienced at least one cyber security incident in the past year (72% if phishing incidents are included) [UNMAPPED:5].\n\nUnfortunately, it is essential for today's organisations to acknowledge that incidents will occur, and they need to be prepared to respond and then learn from them. In addition to the rise in incidents, many organisations now face more security regulations, higher consumer expectations and new reporting requirements related to data privacy and infrastructure resilience. Therefore, to address the increased incident risks they cannot just work harder particularly as many face a shortage of cyber security skills [UNMAPPED:6]. Learning from incidents is a vital strategy that can help improve risk awareness, protective measures, and organisation response capability [W2960902621]. An organisation's ability to learn requires systemic thinking and recognising incidents can have multiple, and sometimes less than obvious, causes [UNMAPPED:7]. By resolving the underlying causes, security teams can stop the increase in incidents, which in turn will help them manage their workload [W1607548417, W2168670961].\n\nMany studies have been conducted into organisational learning and although the literature has been summarised [W4254219547, W2106919063, W4229963196, UNMAPPED:12] there is no generally accepted definition. Argote [W4229963196] described it as a change in the organisation's knowledge as a function of experience. Fiol and Lyles [W4254219547] in their definition of organisational learning include translating this new knowledge into actions taken by the organisation. Argote and Ophir [UNMAPPED:14] refer to it as a process where changes are made as a result of experiences. The research into general organisational learning is vast and much of it has focused on using knowledge to improve the productivity or competitiveness of organisations (for example, Peter Senge's popular 1990 business book The Fifth Discipline: The art and practice of the learning organization [UNMAPPED:15]) or, it has focused on enhancing skills and emergent team learning [W2768019387]. Rather than an extensive review of the theories of organisational learning in this paper, we have sought to leverage existing models which fit our research focus.\n\nTo understand learning from cyber security incidents, we needed to look at research into how organisations intentionally identified and implemented lessons learned from incidents. Research into how organisations learn specifically from incidents has been focused in the safety discipline, with prominent studies into public disasters such as the Deepwater Horizon Macondo oil rig, the Challenger space shuttle and the Fukushima nuclear power plant [W2973793871].\n\nSafety has a more established field of research into learning from incidents with many years of research exploring how to reduce the number and impact of incidents [W2041791179, W2031911638]. It shares many similarities with cyber security as they both seek to reduce the risk of incidents. Evans et al. [W2892649456] recognised the value of applying the techniques developed in the safety field to understand human reliability causes of safety incidents applied to security incidents. Similarly, other authors [W3201224643, UNMAPPED:21, UNMAPPED:23] have commented that cyber security can learn from safety science research particularly in how to address human causes of incidents. There is an opportunity to borrow concepts from research on learning from safety incidents to advance the field of cyber security [W2290082588]. Murphy et al. [W3201224643] defined three interconnected forms of learning from incidents, firstly at the individual level and then at both the formal and informal organisational learning levels. Schilling and Kluge [W1995011808] also modelled learning at distinct levels, from the individual to organisational level. Individual learning is part of the process, but for an organisation to learn, it needs to go beyond and include shared knowledge interpreted in an organisational way [W1966443598].\n\nThis systematic literature review (SLR) will focus on formal learning at the organisational level from cyber security incidents, as our focus is on the changes to systems, procedures and technology as a result of an incident. This review exclusively covers cyber security incidents, rather than generic IT incidents such as hardware failures and performance issues. The objective is to help organisations improve their overall security posture by understanding and addressing the complex causes of incidents. Therefore, this review analyses how organisations learn post-incident rather than learning in real time during incident response. For transparency, it excludes; operational technology, including industrial control systems or home devices, digital forensics techniques and national security or warfare.\n\nShedden et al. [UNMAPPED:27] reviewed the literature available in 2010 to understand how organisational learning research could be applied to security incident response. At the time there had been scant research into how organisations learn from cyber security incidents. More recent literature reviews have studied the complete security incident management process and, whilst also partially covering learning briefly, they do not cover the topic in depth [W2290082588, W2746743258, W2195194378]. In our SLR we address this gap by building upon previous research to provide an up-to-date overview of the literature focused specifically on learning from incidents. From this analysis we identified many areas of learning from security incidents, which remain unstudied which we used to highlight future research avenues.\n\nThis SLR presents a critical review of the academic literature on learning from incidents and proposes an agenda for further research. It enables academics to explore these research gaps and it allows practitioners to consider opportunities for improvements. By contributing to the knowledge of how to improve the resilience of organisations against security incidents, this research aims to help reduce the security risks society faces from its dependence on technology. To do this, it addresses the following research questions (RQs):\n\n(1) What research has been conducted on learning from cyber security incidents?\n(2) What learning practices in organisations have been found by research and what improvements have been recommended?\n(3) What further research is needed in organisational learning from incidents?\n\nThe remainder of this paper is structured as follows. In Section 2 we present the research method used in this study. The results outlining existing research are detailed in Section 3 while Section 4 discusses the organisational learning practices found by research and the gaps identified from our systematic search of the literature to explore future research opportunities and provide future research questions. In this section we also outline the practical implications of this work and the limitations. Finally, in Section 5 we conclude by summarising the insights of our work for security researchers and practitioners.",
+      "citations": [
+        "W2960902621",
+        "W1607548417",
+        "W2168670961",
+        "W4229963196",
+        "W4254219547",
+        "W2768019387",
+        "W2973793871",
+        "W2041791179",
+        "W2031911638",
+        "W2892649456",
+        "W2290082588",
+        "W3201224643",
+        "W1995011808",
+        "W1966443598",
+        "W2746743258",
+        "W2195194378"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "2",
+        "4",
+        "5",
+        "6",
+        "7",
+        "14",
+        "15",
+        "27"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Research method",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Search strategy",
+          "subsubsections": [],
+          "text": "Following the principles of repeatability described by Kitchenham et al. [W2145906963], this section gives transparency to the search approach used. Our approach adopts the PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) framework to explain our rationale for the decisions taken on the search strategy, sources, eligibility criteria, selection process, and how the studies were analysed [W2156098321]. PRISMA is now a common technique used in cyber security research [W3177310074, W4283783947].\n\nThe search terms used were refined iteratively. We began with terms which naturally link to the topic ('security incident' and 'learning'), then refined these search terms according to the results. This refinement was also guided by a set of gold standard papers on the topic (i.e., those on our exact topic area) which were discovered early on in our search. An example of a search refinement was as follows: the term 'learning' returns many results related to machine learning rather than organisational learning; therefore, terms such as 'organisational learning' and 'lessons learned' were used. After this refinement process, the final search string was defined, which combined several critical search terms: (\"security incident\" OR \"incident response\" OR CSIRT) AND (\"organisational learning\" OR \"organizational learning\" OR \"lessons learned\" OR \"lessons learnt\"). This allowed us to balance being too narrow and missing publications or being too broad and generating unwieldy initial results. Full text searches were conducted and there were no date restrictions or other filters applied. The searches were conducted in September 2022. For transparency, details of the exact search strings and databases searched are included (see Appendix A).",
+          "citations": [
+            "W2145906963",
+            "W2156098321",
+            "W3177310074",
+            "W4283783947"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Eligibility criteria",
+          "subsubsections": [],
+          "text": "The returned papers were reviewed using the screening criteria set out in **TABLE 1** and were included if the research covered learning from incidents even if this was not their main focus.\n\n**TABLE 1. Screening criteria.**\n\n{{TABLE:tbl_01}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Information sources",
+          "subsubsections": [],
+          "text": "We selected the following online sources to conduct the search: ACM Guide to Computing Literature, IEEE Xplore, ScienceDirect, Wiley Online Library, SpringerLink, ProQuest One Literature and Publicly available content Database (excluding Global Theses and Dissssertations), Scopus, and the Web of Science Core Collection. These sources include both journals and conferences aimed specifically at cyber security, as well as other disciplines which may have covered organisational learning in a cyber security context. This increased the chances of finding relevant peer-reviewed studies which met our inclusion criteria 1 and 2, in **TABLE 1**. Google Scholar was not included due to the limitations of its search functionality, such as a lack of full Boolean operator support and inconsistent reproducibility [W2981077025].",
+          "citations": [
+            "W2981077025"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Study selection",
+          "subsubsections": [],
+          "text": "The results of the database searches identified 3,986 papers which were screened according to exclusion criteria 1\u20134, in **TABLE 1**. Firstly, 664 duplicate studies were discarded. Another 11 papers not written in English or those where the full text was not accessible, and 861 non-academic and non-peer reviewed articles were removed. Titles, abstracts and keywords were reviewed for the remaining 2450 articles to assess their relevance in answering our research questions. This resulted in 2333 studies being excluded and another 95 excluded after a full-text review, leaving 22 papers selected through the initial search.\n\nThere are no perfect search terms and it is particularly challenging for IT research, as the terms are constantly evolving and the publication databases can treat search terms differently [W2133933998]. Therefore, the initial search string results were enhanced through a process of interpretation and understanding [W175588260]. This extra process included searching journal databases, inspecting the table of contents of known cyber security journals and examining relevant conference proceedings. We also reviewed the citations of articles on the topic and used Connected Papers and Web of Science to identify relevant articles citing those already found. The Google Scholar Author pages for all the authors of the selected articles were also reviewed to identify missed articles. The search results were compared with the bibliographies of existing literature reviews [W2290082588, W2746743258, W2597314919, W2195194378, UNMAPPED:27] to ensure that all previously identified articles were found in the search process. The additional articles identified through these supplementary methods were then also reviewed against the eligibility criteria in **TABLE 1**. This resulted in 8 additional papers being added to the list. **FIGURE 2** illustrates a PRISMA flow diagram of the selection process to obtain the final 30 articles.",
+          "citations": [
+            "W2133933998",
+            "W175588260",
+            "W2290082588",
+            "W2746743258",
+            "W2597314919",
+            "W2195194378"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "27"
+          ]
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5. Data collection",
+          "subsubsections": [],
+          "text": "As directed by PRISMA, the data items collected against each research question are set out in **TABLE 2**. To present an overview of the types of research conducted and published in this area, the selected articles were analysed by original publication details and by the research methods used. To understand how researchers have assessed the learning practices for cyber security incidents, we reviewed the foundation they used to frame their studies.\n\nTo analyse which cyber security learning incident practices the studies had covered we looked at how other researchers had described the practices of learning from incidents. We found those which were most relevant to learning from cyber security incidents were studies into learning from safety incidents [W2597314919, W639458491, W1546669399, UNMAPPED:38]. These practices are also applicable to learning from cyber security incidents due to the similarities between safety and security recognised by several authors [W228254845, W1992208352, W2902517162, UNMAPPED:21].\n\nThere have been a range of models used within safety research aligned to the different angles from which the topic has been studied [W2041791179]. Murphy et al. [W3201224643] analysed learning from safety incidents using the 3-P model of workplace learning. This has three phases: presage, process and product. Their study was focused on the perspective of the frontline worker. In contrast, Le Coze [W2041791179] in his overview of research into learning from safety incidents used a broad framework covering: industry, countries' nations, actors, intensity of event, disciplines and steps. It is the steps element which is more relevant for this study as it includes the learning activities; reporting, selection, investigation, dissemination and prevention. For this review we wanted to analyse the learning process in more depth to understand the activities the organisation conducted to learn from incidents so identified learning process models with more depth. Drupsteen et al. [W1546669399] developed a learning from incidents process model based on a review of safety literature and consulting with safety experts from industry. This model provided more emphasis on investigating the cause to acquire the knowledge and then how that knowledge is translated into actions. This included an evaluation step to assess the effectiveness of implementing the lessons learnt.\n\n**TABLE 2. Data items collected.**\n\n{{TABLE:tbl_02}}\n\nISO/IEC 27035 information security incident management [UNMAPPED:45, UNMAPPED:46, UNMAPPED:47, UNMAPPED:48, UNMAPPED:98, UNMAPPED:99] and National Institute of Standards and Technology SP 800-61 Computer Security Incident Handling Guide [UNMAPPED:49].\n\nLukic et al. [W2048821136] also developed a framework for learning from safety incidents based on the literature and validated the model at two organisations. Littlejohn et al. [W2597314919] built on this model in their more recent study and included input from other sites and companies and sharing lessons learned with others. They also looked at the learning process through the context, participants, type of incident and knowledge. Despite safety research being relatively mature compared to cyber security research on learning from incidents, it has yet to develop a unifying theory [W2973793871]. To create a practical tool to collect data on the learning practices, the process definitions were combined from both the Littlejohn et al. [W2597314919] and Drupsteen et al. [W1546669399] studies to include the end-to-end process, as these two studies provided the most comprehensive analysis of the learning process activities organisations can perform.\n\nTo provide more insight into the coverage of the research for cyber security, the interventions or actions step was split into two parts: incident response improvements and overall security improvements. This was to distinguish studies that only covered improvements to an organisation's incident response capability, from those which also studied how lessons led to changes in the wider security posture. This created five categories; participation in the learning process, causal analysis, incident response improvements, overall security improvements, and evaluation of the learning process.\n\nParticipation in the learning process includes how the learning might be organised and the involvement of different areas of the organisation. Causal analysis includes reporting incidents, categorising incidents and analysing the causes. Both these improvement categories include determining and prioritising actions, allocating accountability, dedicating resources and tracking the actions to completion. The participation of different teams and the learning approach taken will impact the breadth of causes considered and the causes found will impact the improvements made. How these are implemented can impact the security of the organisation. The final learning evaluation phase includes ensuring that actions are taken, as well as confirming that the action actually enabled the anticipated improvement. It also evaluates how well the organisation is learning from incidents. Insights from this phase help an organisation to improve its learning process. A poor learning process would be evident through recurrence of incidents which have similar causes or similar impacts and the organisation has not adapted its protection, detection and response capabilities.\n\nThe phases of the learning process set out in **FIGURE 1** were used to collect the data in **TABLE 2** using a deductive approach to examine and describe the coverage of learning.",
+          "citations": [
+            "W2597314919",
+            "W639458491",
+            "W1546669399",
+            "W228254845",
+            "W1992208352",
+            "W2902517162",
+            "W2041791179",
+            "W3201224643",
+            "W2048821136",
+            "W2973793871"
+          ],
+          "tables_in_text": [
+            "tbl_02"
+          ],
+          "citations_unmapped": [
+            "38",
+            "21",
+            "49"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Research and publication details",
+          "subsubsections": [],
+          "text": "All selected articles were published in the last 16 years. There is no distinct trend in the timing of the publications; there was a relative flurry of publications between 2014 and 2016, but with small numbers such variation is expected. There has been a continued level of interest in the topic; as illustrated in **FIGURE 3**. The most common publication venue was the Computers & Security journal with four studies published on the topic but, overall, there was a wide range of venues (for example, the International Journal of Information Management and Hawaii International Conference on System Sciences).\n\nThe geographical location in which the studies were conducted is shown in **TABLE 3**. The majority of the selected studies were conducted in four countries and in only four sectors; Norwegian energy industry [W2031911638, W2031911638, W2203263325, W2402196826, UNMAPPED:52], Australian [W2031999883, W2195194378, W2982205235, W3177310074, UNMAPPED:55] and UK financial services [W2746743258, W2746743258, UNMAPPED:59], and Chinese [W2111300538, W2118857637, W2568368320, UNMAPPED:60] and UK healthcare [W3207879748]. There were 8 studies where the location was not specified or not applicable (for example, articles presenting literature reviews).\n\n**TABLE 3. Geographical location where the analysed studies were conducted.**\n\n{{TABLE:tbl_03}}\n\n**TABLE 4** shows the wide range of research methods which have been applied to studying the topic. Studies reviewing existing literature include Shedden et al.'s [UNMAPPED:27] study on organisational learning, T\u00f8ndel et al.'s [W2055127755] review of the current practice of incident management and Line and Albrechtsen's [W2290082588] paper on how the theories and techniques from industrial safety could be applied to the cyber security field. The study by Grispos et al. [W2746743258] evaluated the standards for incident management and is focused on using Agile concepts in incident management yet does highlight the importance of learning and encourages organisations to learn throughout the incident lifecycle. Horne et al. [W2195194378] reviewed academic literature and industry standards focusing on the governance of incident response, but they also drew attention to the lessons learnt phases in both the standards and the literature. Additionally, there were theoretical studies which whilst they commented on existing literature, they also introduced new models or approaches to analysing the topic [W2118857637, UNMAPPED:68, UNMAPPED:60]. Other studies developed models and applied them to a fictitious case study or publicly available data [W2982205235, W3207879748].\n\n**TABLE 4. Research methods used by the articles analysed.**\n\n{{TABLE:tbl_04}}\n\nMany studies used interviews or focus groups [W2031911638, W2746743258, W2111300538, W2203263325, W2775217505, W2793054839, W3177310074, UNMAPPED:55, UNMAPPED:60]. Interviews are a valuable method to understand social processes and the views of participants, but responses must be carefully interpreted within the context in which they are given [W2605935138]. As they are quicker to conduct than an in-depth case study, they can allow more organisations to be studied [W2031911638, W2203263325, W2775217505, W3177310074] or to give a wider perspective by interviewing multiple participants from the same organisation [W2746743258, W2111300538, W2793054839, UNMAPPED:60].\n\nMost of the research has used case studies [W2892649456, W2031999883, W2104840983, W2195194378, W2402196826, W2568368320, W2746743258, W3037161813, UNMAPPED:52, UNMAPPED:59]. Case studies were also applied in combination with other research methods [W2031911638]. They are a useful method to understand real-world perspectives of the practices organisations follow to answer how or why research questions [UNMAPPED:50]. Although the ability to generalise the findings of one case study is constrained, as there have been multiple case studies with similar findings about learning from incidents, it enables researchers to construct a more general view of how organisations approach learning. It can be difficult to gain access to organisations to perform this type of work, particularly since there can be sensitivity around the confidentiality of incidents that have occurred [W2031999883, W2402196826].\n\nThe frequent use of case studies has given insight into how organisations perform learning from incidents. However, most of this research was conducted five to ten years ago, when the frequency and severity of incidents were lower for many organisations. In addition, few concentrated specifically on learning and the majority only commented on the lessons learned as a small part of a wider study. Considering the pace of change in cyber security, there is the need for more recent research specifically focusing on learning from incidents.",
+          "citations": [
+            "W2031911638",
+            "W2031911638",
+            "W2203263325",
+            "W2402196826",
+            "W2746743258",
+            "W2746743258",
+            "W3207879748",
+            "W2055127755",
+            "W2290082588",
+            "W2195194378",
+            "W2118857637",
+            "W2982205235",
+            "W2111300538",
+            "W2775217505",
+            "W2793054839",
+            "W3177310074",
+            "W2605935138",
+            "W2892649456",
+            "W2031999883",
+            "W2104840983",
+            "W2195194378",
+            "W2568368320",
+            "W3037161813"
+          ],
+          "tables_in_text": [
+            "tbl_03",
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "52",
+            "59",
+            "27",
+            "68",
+            "60",
+            "55",
+            "50"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Research foundations",
+          "subsubsections": [],
+          "text": "To gain insight into how researchers had designed their studies, we analysed the foundations used to frame the research. **TABLE 5** shows safety research was the most common foundation applied to frame existing studies. Management science was the next most common research foundation others made use of IT standards to structure their research and some have applied constructs from software engineering, with a few adopting psychology approaches.\n\nBoth ISO/IEC 27035 and NIST 800-61 have frequently been utilised within our selected studies: ISO/IEC 27035 [W2031911638, W2203263325, W2402196826, W2568368320, UNMAPPED:52] and NIST 800-61 [W2746743258, W2982205235]. As they have learning as part of their end-to-end processes, this has encouraged studies to gather information on this step. For example, Grispos et al. [W2746743258] conducted a case study in a global Fortune 500 financial organisation in the UK, which included an exploratory set of interviews using the NIST 800-61 phases as a framework to present the Security Incident Response Criteria (SIRC), which can be employed to evaluate cyber security incident response solutions.\n\n**TABLE 5. Research foundations used to frame the studies.**\n\n{{TABLE:tbl_05}}\n\n*Note: some researchers applied multiple models in the same study [W2031911638, W2568368320, W2982205235].*\n\nThe ISO/IEC 27035 lessons learnt phase encourages organisations to identify lessons which could improve their controls and risk assessments, as well as their incident management. It also suggests identifying trends that could give an early warning of potential future incidents. NIST 800-61 and ISO/IEC 27035 both list questions to ask in the post-incident meeting, but these questions are only aimed at improving incident response. As these two standards do not cover learning in much detail, studies that have applied them to structure their research have borrowed models from management science [W2168670961, W2031999883, W2195194378, W2982205235, UNMAPPED:27, UNMAPPED:55] or the safety discipline [W2031911638, W2892649456, W2111300538, W2118857637, W2568368320, UNMAPPED:68, UNMAPPED:60].\n\nFor example, many of our studies refer to the concept of 'double-loop learning', which originates from the work of Argyris in the 1970s [W2014672616]. Although Argyris was writing in 1976 and not specifically about learning from incidents, his observation that as \"problems become increasingly complex and ill-structured, the need for learning increases, but so does the difficulty in carrying out effective learning\" [W2014672616] [Page 365] could be applicable to the cyber security space today. His research at the time found that people in organisations were encouraged to learn as long as they did not question the \"fundamental design, goals and activities of their organisations\", which is single-loop learning. Double-loop learning is used to understand not only the governing variables that led to the immediate obvious consequences, but also to dig deeper to understand what factors may have contributed to or enabled the incident, see **FIGURE 4**. In a cyber security context, single loop learning would be indentifying the cause of an incident, such as an unpatched software package, and taking an action, such as to apply the patch. Double loop learning would be questioning the governing variables which prevented the timely patching. Addressing these underlying factors would reduce the likelihood of recurring problems, such as of any software remaining unpatched in the future. The double-loop model has been applied to learning from incidents in studies included in our selection [W2031999883, W2982205235, UNMAPPED:27, UNMAPPED:55]. For example, Ahmad et al.'s [W2031999883] study builds on a model from safety incidents Cooke [UNMAPPED:76] and is inspired by double-loop model, to develop a model of a cyber security incident learning system.\n\nThis double-loop learning theme is continued in a subsequent study by Ahmad et al. [W2195194378] which uses the 4I (intuiting, interpreting, integrating, institutionalizing) organisational learning framework, building on work by Zietsma [UNMAPPED:97] in management science. One of the reasons this model was selected was its use of double-loop learning principles enabling the challenge of an organisations' norms. The model has three layers that cover stakeholders, learning processes, and learning activities that embed learning within the organisation. This attempts to explain how learning can happen within an organisational context. Ahmad et al.'s [W2982205235] study again highlights the importance of double-loop learning. Using the analogy of a shield, the paper describes single-loop learning as fixing holes in the shield and double-loop learning as changing the shape and thickness of the shield. The models of double-loop learning have been recommended by cyber security researchers [W2031999883, W2982205235, UNMAPPED:27, UNMAPPED:55], yet the models themselves give little guidance to practitioners in how to move an organisation towards this type of learning. Grispos et al. [W2746743258] explained without a commitment to learning, the organisation did not act to address the underlying causes. For an organisation unfamiliar with causal analysis and organisational learning, it may be a challenge to successfully implement the model without further support.\n\nThe Norwegian oil and gas industry developed a method for Incident Response MANagement (IRMA) incorporating Argyris's [W2014672616] double-loop learning concept. This IRMA model uses phases from the ISO 27035 and NIST 800-61 standards. It emphasised the post-incident learning phase from the Sequential Timed Events Plotting (STEP) method introduced in 1986 by Hendrick and Benner in their 'Investigating Accidents with STEP' book [UNMAPPED:77]. The model aimed to help teams identify root causes and weak points in the barriers they have implemented to prevent incidents.\n\n**FIGURE 4. Double loop learning adapted from [UNMAPPED:74].**\n\nBernsmed and T\u00f8ndel [UNMAPPED:68] adapted the Resilience based Early Warning Indicators (REWI) method employed to address safety incidents in the Norwegian energy sector to cyber security incidents. REWI categorised the attributes needed for resiliency against incidents as risk awareness, response capacity and support (technical, human and organisational). It emphasised that it is important for organisations to learn from incidents, including the success stories, as resilience is about enhancing the capacity of an organisation to respond.\n\nIn five studies, He et al. [UNMAPPED:60], He et al. [UNMAPPED:60], He and Johnson [W2111300538], He et al. [W2118857637], He and Johnson [W2568368320] explored the use of the Goal Structuring Notations (GSN) safety engineering approach, which was extended from applications in safety-critical systems, as a technique to understand the potential causes of cyber security incidents. GSN was developed over several years by the Safety-Critical Systems Club to enable organisations to build safety cases for critical infrastructure [UNMAPPED:79]. The aim of the notation is to demonstrate the causes of incidents in terms of failures of controls or policies.\n\nHe et al. [UNMAPPED:60] conducted two studies with students, the first training them in GSN techniques and asking them to evaluate it. The second asked students to map the causes of a simplified incident using the GSN template to build a safety case. GSN was then trialled at a Chinese healthcare provider [W2568368320, UNMAPPED:60]. Feedback was mixed; while they found it could be a valuable template for some groups such as those within the incident response team, it had some limitations for use with a wider audience. It is a technique to explain the hierarchy of causes where these are clearly defined. Drawing on a mechanistic perspective, it represents incidents as a failure in a component of the system. It assumes the relationship between components is known and linear, as it was designed to assess infrastructure rather than to elicit underlying and more socio-technical causes.\n\nOthers have borrowed the Agile approach from software engineering [W2746743258, W2746743258, W3207879748]. The Manifesto for Agile Software Development has gained popularity in the development of software products [UNMAPPED:78]. Grispos et al. [W2746743258] conducted a trial of using it to learn from security incidents. Whilst agility in incident response is essential, the application of some elements of the Agile approach is challenged by the core principles of design and planning products versus the inherently reactive nature of incident response. Agile does emphasize continuous learning and refinement of the product and this learning focus could be useful in engaging software developers familiar with the Agile philosophy in learning from incidents.\n\nSeveral researchers have applied psychology models. Lakshmi et al. [W3177310074] borrowed the lens of sensemaking which is typically used to analyse socio-cognitive and socio-organisational activities. They included the socio-technical perspective as they applied it to Cyber Security Incident Response Teams (CSIRT) activities. The study did not go into depth on learning from incidents but did explain how people created their own narratives about what happened. They found the incident responders made sense during the incident response through \"Enactment\", \"Selection\" and \"Retention\". Van der Kleij et al. [W2775217505] applied four needs assessment categories: Organisation, Team, Individual and Instruments, as a tool to understand the skills CSIRTs needed. They found organisational learning from incidents needed to be improved and recommended improving performance by implementing a lessons learnt procedure. Tatu et al. [W2793054839] adapted involvement theory to apply it to security, and in particular the \"knowledge\" dimension became \"experience sharing\" and included lessons learned from security incidents. They studied an organisation which had experienced a ransomware incident and found people's security awareness had improved, which could protect the organisation from similar incidents. Overall, the literature has used a variety of models; yet, there has not been a comparison of models proposed by researchers or recommendations on which approach organisations should adopt in specific scenarios.",
+          "citations": [
+            "W2031911638",
+            "W2203263325",
+            "W2402196826",
+            "W2568368320",
+            "W2746743258",
+            "W2982205235",
+            "W2168670961",
+            "W2031999883",
+            "W2195194378",
+            "W2031911638",
+            "W2892649456",
+            "W2111300538",
+            "W2118857637",
+            "W2014672616",
+            "W2746743258",
+            "W3207879748",
+            "W3177310074",
+            "W2775217505",
+            "W2793054839"
+          ],
+          "tables_in_text": [
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "52",
+            "27",
+            "55",
+            "68",
+            "60",
+            "76",
+            "97",
+            "77",
+            "74",
+            "79",
+            "78"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Learning practices",
+          "subsubsections": [],
+          "text": "The selected articles coverage of the learning process was assessed using the five phases set out in **FIGURE 1**.\n\nThe coverage of the five parts of the learning process, shown in **FIGURE 1**, is represented using the following graphic symbols:\n(a) \"Substantial coverage\" represents articles that fully cover this part of the process.\n(b) \"Partial coverage\" where the topic is discussed but not all relevant aspects are mentioned, for example, suggesting an approach to causal analysis but not considering how this would be conducted in the context of organisational politics and agendas, or suggesting improvements without including prioritisation or tracking of actions.\n(c) \"Light touch\" when a paper only briefly comments on the topic, such as only referring to the distribution of a post-incident report to management, but not covering any other aspects of participation, such as who was involved in analysing the causes or deciding the lessons learned.\n(d) \u2610 \"None\" there is no explicit mention of the topic.\n\nThe lack of consensus on a framework for researching learning practices results in inconsistent approaches to describing the learning expected or found by researchers, as can be seen in **TABLE 6**.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Participation in the learning process",
+          "subsubsections": [],
+          "text": "Most researchers did not comment on who in the organisation participated in learning from incidents, with less than a third covering it in any depth. Those who looked at this aspect of the learning process found that formal learning from incidents was reserved for major incidents [W2031999883, W2195194378, W2203263325, UNMAPPED:52]. Researchers recommended organisations consider the learning opportunities from a wider range of incidents. Ahmad et al. [W2195194378] emphasised the chance to learn about critical assets, technology risks and the causal structures of security incidents from a wider selection of incidents. These major incident reviews were also restricted to those directly involved with the specific incident [W2031911638, W2031999883, W2195194378, W2746743258]. For example, Ahmad et al. [W2031999883, W2195194378] found only the technical teams were involved in the post-incident learning, which may restrict the identification of underlying causes to those of a technical nature. Grispos et al. [W2746743258] recognised the limitation of the incident response team not developing actions on the lessons learnt for areas outside their responsibility. Bartnes et al. [W2402196826] suggested that organisations should consider the use of trained facilitators to help the effectiveness of looking back to identify lessons from an incident although how this may help has yet to be studied.\n\nFurthermore, the researchers found that the identified lessons were not shared beyond incident teams [W2031911638, W2031999883, W2195194378, W2746743258]. Line et al. [W2031911638] emphasises the importance that lessons from incidents are shared with all parts of the organisation including management, suppliers and employees. There were some exceptions where the lessons were shared. He and Johnson [W2568368320] found the healthcare provider they studied held informal meetings to share the lessons learned with different stakeholders. Baskerville et al.'s [W2104840983] case study of three organisations (rail, postal, and military) found the postal organisation also began sharing more incident data with its competitors following a serious incident.\n\nThe impact of sharing the lessons with different stakeholders and peers was not covered in the literature. Jaatun et al. [W2031911638] advocate the importance of learning from incidents and recommend the IRMA model, in which learning is fed back into the preparation step. However, when Jaatun et al. [W2031911638] conducted their field work, few of the respondents had experienced a security incident. For those which had experienced an incident, the time between incidents was between one and two years, which gave the authors fewer actual examples to study [W2031911638]. The study did additionally find there was a cultural hesitancy to report incidents, so potentially the respondents may not have been aware of all the incidents that were happening. The learning phase was considered important by many of the interviewees, but not all, as some felt it would have little effect and would quickly be forgotten [W2031911638]. It is unclear why there was a difference in opinion.\n\nThe organisations studied by Bartnes et al. [W2402196826] also had not experienced any major cyber security incidents, but since the organisations conducted post-incident reviews for other types of incidents, they expected that they would do so for security incidents, if they were to occur. The main issues identified were; not prioritising learning activities, the limited efforts to understand the underlying causes, and missing the opportunity to apply lessons to improve the whole security posture of the organisation. Bartnes et al. [W2402196826] highlighted minor incidents could be a source of lessons for organisations and recommended they explore double-loop learning when they do experience even minor incidents. The benefits of analysing minor incidents was not studied. In a study by Shedden et al. [UNMAPPED:55], informal learning within CSIRTs is explored through a focus group of five security professionals. They saw an opportunity for organisations to embrace both formal and informal learning as these two learning approaches reinforce each other. While it encourages organisations to leverage their informal learning capability, this paper does not provide specific details on how to enable it.",
+          "citations": [
+            "W2031999883",
+            "W2195194378",
+            "W2203263325",
+            "W2031911638",
+            "W2746743258",
+            "W2402196826",
+            "W2031911638",
+            "W2568368320",
+            "W2104840983"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "52",
+            "55"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5. Causal analysis",
+          "subsubsections": [],
+          "text": "This part of the learning process from incidents received the most attention from researchers. In several studies, respondents supported the need for learning, but researchers found little evidence of thorough investigations to find the underlying causes [W2031911638, W2031999883]. Grispos et al. [W2746743258] found seven out of ten respondents said root cause analysis was performed post-incident and all ten saw an opportunity to improve security measures using post-incident analysis.\n\nShedden et al. [UNMAPPED:27] found most research on incident response had been technically focused and there was an opportunity to apply double-loop learning principles to identify underlying causes which could be addressed to strengthen incident response and the security of organisations. Baskerville et al. [W2104840983] found that in one of the three companies studied, double-loop learning was applied after serious incidents, although there are few details on this in the article. In a more recent study, Ahmad et al. [W2982205235] explored the theme of how two teams, security management and incident response, could be better integrated using a double-loop learning model. Using a theoretical incident, they developed a conceptual framework to demonstrate that if the two teams were more integrated, they created better learning opportunities, which improved the security of the organisation. Ahmad et al. [W2982205235] explained how double-loop learning assists organisations in reassessing the assumptions underpinning their information security management system. Lakshmi et al. [W3177310074] found post-incident reviews can update the mental maps incident responders hold in their heads of the causes, which can help them make sense of subsequent incidents.\n\nEvans et al. [W2892649456] adapted the Human Error Assessment and Reduction Technique (HEART) to analyse human error and underlying causes for a year's worth of security incidents reported at a service provider. This data was utilised to calculate human error probabilities. They found the actual likelihood of an incident being caused by human error was lower than the predictions and there would need to be further recalibrations to enable more accurate predictions. Based on the causes identified in the post-incident reports, they found just over half were caused by human error. The article recommends that organisations dig deeper into the causes to identify the conditions which allow errors to occur to enable them to prevent future incidents. Although how organisations investigate the causes of incidents was studied, a deeper analysis into which tools and techniques are the most effective was not covered in the literature.",
+          "citations": [
+            "W2031911638",
+            "W2031999883",
+            "W2746743258",
+            "W2104840983",
+            "W2982205235",
+            "W3177310074",
+            "W2892649456"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "27"
+          ]
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6. Incident response improvements",
+          "subsubsections": [],
+          "text": "While most studies covered the benefits to security that could be derived from lessons learned, more attention was paid to improving the incident response team compared to broader changes to security measures [W2775217505, W3177310074, UNMAPPED:27, UNMAPPED:68]. The Agile retrospectives in Grispos et al. [W2746743258] helped the incident response teams identify incident response related improvements. There is little detail in the literature on how organisations decided on the improvements to make, prioritised resources or tracked progress. There appears to be an implicit assumption that once a team has identified the causes they will naturally implement the improvements required. Whereas the definition of organisational learning by Fiol and Lyles [W4254219547] makes a clear distinction between knowledge and action.",
+          "citations": [
+            "W2775217505",
+            "W3177310074",
+            "W2746743258",
+            "W4254219547"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "27",
+            "68"
+          ]
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7. Overall security improvements",
+          "subsubsections": [],
+          "text": "In the company studied by Ahmad et al. [W2195194378], there was no link between post-incident analysis and the information security team, which some respondents in the study saw as a missed opportunity to improve policies based on lessons from incidents. The researchers suggest that the reason could be cost pressures. Line and Albrechtsen [W2290082588], looking at the literature through the lens of ISO/IEC 27035, urged organisations to consider using more adaptive approaches rather than update incident management standards or add more procedures. They recommended further empirical research on adapting industrial safety approaches to managing cyber security incidents.",
+          "citations": [
+            "W2195194378",
+            "W2290082588"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_8",
+          "subsection_index": 8,
+          "subsection_label": "3.8. Evaluating the learning",
+          "subsubsections": [],
+          "text": "While the existing research assessed the learning practices, there was little discussion of the learning process itself and how organisations evaluated how well they were learning. Grispos et al. [W2746743258] trialled lightweight Agile retrospectives in a financial organisation. They introduced two types of retrospectives, the first explored what worked and what did not during the incident response and the second type 'meta-retrospectives' looked back on the effectiveness of implementing the lessons from the incidents. They found the retrospectives did help enhance the identification of post-incident actions to improve security measures [W2746743258]. Bartnes et al. [W2402196826] found that the organisations they studied did not invest in learning to improve their incident response capability. The study suggested that management commitment is an essential enabler of learning. Although they acknowledged as the organisations had not experienced significant incidents at the time, they perhaps did not yet recognise the risk and therefore the value of investing time in learning.\n\nNone of the studies reported that the organisations were exploring how to learn better or had any measures in place to assess their ability to learn and the effectiveness of the improvements made following incidents [W2195194378, UNMAPPED:52]. However, it is unclear whether the researchers had sought data on evaluation practices directly. In the Ahmad et al. [W2031999883] study, the company attributed the significant reduction in incidents to their learning practices although how this was measured is not detailed in the paper. In their paper on incident response metrics, Line et al. [W2031911638] proposed using a five orders of feedback model based on work by van Court Hare [UNMAPPED:97] on learning from experience. They also suggested incorporating a learning metric across organisations, but neither were empirically tested with organisations.",
+          "citations": [
+            "W2746743258",
+            "W2402196826",
+            "W2195194378",
+            "W2031999883",
+            "W2031911638"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "52",
+            "97"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The structured literature review resulted in the identification of 30 relevant papers as shown in the PRISMA flowchart in **FIGURE 2**. These are analysed in this section to present the research conducted on the topic of organisational learning from cyber security incidents. Despite the rise in cyber security incidents there have been surprisingly few dedicated studies on how organisations can learn from them to reduce their impact and frequency. Studies are only reported against a data collection category if it is clear from the article. For some studies, there are multiple articles on the same piece of empirical work.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Discussion and research agenda",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Learning practices",
+          "subsubsections": [],
+          "text": "Whilst it is generally agreed that organisations would benefit from improving how they learn from incidents, there is less consensus on how best to achieve this or what is good practice. There is a lack of consensus on a consistent model and a common nomenclature to describe learning, which slows the sharing of ideas and the propagation of good practice. This is not unusual for a relatively new field of research such as cyber security and even in established fields such as management science, the use of models evolves over time [UNMAPPED:94]. However, without any coalescing around a shared view of how to assess learning from incidents, the progress of both academic research and the adoption by practitioners will be slower.\n\nThere are opportunities to expand the research on learning practices to more industries and countries. In particular, research in less regulated and process-orientated organisations is needed, as the current literature has predominantly focused on the energy, finance and healthcare sectors. For instance, the public sector, technology and critical national infrastructure, where the impact of incidents could be significant, are important to study. T\u00f8ndel et al. [W2055127755] also recommended collecting data from more organisations and studying them over a longer time frame.\n\nFuture research questions:\n\u2022 What learning from incident practices are the most commonly used?\n\u2022 How do organisations in the public sector / technology sector / critical national infrastructure sector learn from incidents?",
+          "citations": [
+            "W2055127755"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "94"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Evaluating the learning capability",
+          "subsubsections": [],
+          "text": "There has been little attention to-date on how organisations examine how effective they are at learning. It is unclear how organisations should reflect on their own learning capability and continuously improve it. There has been extensive research into learning organisations in the management science field such as Garvin et al. [UNMAPPED:83] who recommended enhancing learning capability by creating a supportive learning environment, establishing learning processes and ensuring leadership reinforces learning. However, we are not aware of any studies yet to assess if these approaches would also apply to how cyber security teams can improve their learning from cyber security incidents. To fully understand this, future research needs to assess whether the measures implemented due to lessons from incidents actually reduce the prevalence of future incidents.\n\nIn the selected studies, none reported an attempt to measure how learning from incidents improved security or reported the organisations studied evaluated their own ability to learn. Granted as already mentioned, it is difficult to robustly measure incidents, but much of the research conducted is based on an implicit assumption that learning from incidents is positive without seeking explicit evidence to confirm this view. Researchers found that post-incident reviews are typically only conducted on major incidents and not necessarily those with the greatest learning opportunities or time invested in learning from systemic causes [W2195194378, W2402196826]. Few studies acknowledge the dilemmas faced by organisations in taking the time and resources to invest in learning. Ahmad et al. [W2195194378] suggested that further research is needed on the competing priorities of security management and incident response teams to understand how these can be balanced to maximise the security of an organisation's technology. Whilst researchers have urged organisations to not only focus on high impact incidents and have wider participation, more research is needed to understand the sweet-spot where investment in learning activities is outweighed by the benefits. This could be studied by comparing organisations or divisions within organisations which have invested different amounts of time in learning activities and assessing the impact on the prevalence of incidents. However, the ability to make comparisons would need each organisation to be facing a similar volume of incidents as a baseline.\n\nHowever, using data to measure the efficacy of learning in reducing the number of future incidents is extremely difficult due to the lack of independent or reliable sources of incident data readily available to academic researchers [UNMAPPED:84]. As Ryan and Jefferson [W3123054992] concluded \"In the information security arena, there is no reliable data upon which to base decisions. Unfortunately, there is unreliable data that is masquerading as reliable data\". Even though this study was nearly twenty years ago, not much has changed and similar challenges were found in a study published by Neto et al. [W639458491]. Measuring the impact is a challenge, but perhaps future studies could explore whether the investment in learning led to fewer significant incidents within an organisation based on their own incident metrics on frequency and impact, as well as other performance indicators such as time to restore. Another option would be an exploration of repeat incidents or recurrent types of causes which could indicate improvements were needed to the learning process (for example, several incidents attributed to vulnerabilities being introduced through insecure coding practices). Furthermore, research could be expanded to study the perspective of other stakeholders in the organisation, such as audit and risk committees, business leaders, boards, and regulators.\n\nOrganisations need to balance the effort between learning from incidents with responding to them. However, addressing underlying causes, if they have been correctly identified, should reduce the number of incidents. Sveen et al. [W2168670961] and Gonzalez [W1607548417] drawing on systems thinking, map this feedback loop in their systems diagrams of incident response teams but none of the research has studied this trade-off within organisations to understand the optimal balance. Researchers could adopt a design science approach to test how to address the practical challenges of balancing incident response with taking the time to investigate and learn from incidents.\n\nFuture research questions:\n\u2022 How do organisations examine how effective they are at learning from incidents?\n\u2022 How effective is learning from incidents in reducing the prevalence of future incidents?\n\u2022 What are the perspectives of stakeholders outside of cyber security incident response teams on the effectiveness of learning from incidents?\n\u2022 What is the optimal investment of time and resources in learning from incident activities and how is this determined?",
+          "citations": [
+            "W2195194378",
+            "W2402196826",
+            "W3123054992",
+            "W639458491",
+            "W2168670961",
+            "W1607548417"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "83",
+            "84"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Participation in learning",
+          "subsubsections": [],
+          "text": "The studies report the broader organisation is rarely involved with post-incident reviews and reports are often not shared beyond the incident response team and their immediate management [W2031999883, W2195194378]. Lukic et al. [W2048821136] found with safety incidents there was a contradiction in people wanted to be included in the learning activities but were concerned about the extra effort. This further highlights the importance of researchers considering the commercial reality of investing time and resources in learning. Except for the work by He et al. [UNMAPPED:60], most studies have concentrated on incident response teams, not the wider organisations outside of IT, who can also learn from incidents [W2100352819]. In the organisation Tatu et al. [W2793054839] studied, they did find user awareness improved following a ransomware incident, however, more studies are required into how the lessons from cyber security incidents can be learnt by the wider organisation. More exploration is required to ascertain the value of different participants in investigating the causes of incidents, including the effects of involving people from other parts of IT, legal, HR, frontline staff and third party experts, as well as the ideal mix of seniority.\n\nJaatun et al. [W2031911638] pointed to the inadequacy of involving suppliers in post incident learning. Increasingly, organisations depend on an eco-system of suppliers. More research is needed to clarify the relationships that organisations have with suppliers on learning from incidents, including contractual terms, participation in post-incident reviews, sharing of information and implementing the lessons learned. Further case-studies and observation of post-incident reviews would be help to give insights into the challenges organisations face in learning from incidents.\n\nFuture research questions:\n\u2022 What is the value of participants from different functions and levels of seniority in investigating the causes of incidents?\n\u2022 Which strategies are effective in working with suppliers on learning from incidents?",
+          "citations": [
+            "W2031999883",
+            "W2195194378",
+            "W2048821136",
+            "W2100352819",
+            "W2793054839",
+            "W2031911638"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "60"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Investigating the causes",
+          "subsubsections": [],
+          "text": "Studies researching the incident management process have often applied the ISO/IEC 27035 or the NIST SP-800-61 standards. This is good as these standards include lessons learnt as a critical step which has broadened the studies that have included learning in their research. While the standards prescribe learning they fall short of explaining how to effectively extract the lessons and, crucially, to actually use them to reduce the likelihood and impact of incidents in the future [W2982205235]. The standards appear to presume organisations are able to identify valuable lessons without guidance on the optimal approach to elicit them. It is as if they imply the lessons are there waiting to be collected and reported, rather than the reality of how the lessons are co-created by those performing the investigation [W2005490048, W1798033376].\n\nTo study how lessons are identified, researchers have borrowed models from psychology, management science, or safety science (which also build on organisational learning with the use of double-loop learning) [W2031911638, W2031911638, W2031999883, W2195194378, W2982205235, UNMAPPED:27]. Some take the lessons from existing incident reports to present the findings in a new format [W2111300538, W2118857637, W2568368320, UNMAPPED:60]. In cyber security research to-date there is little discussion of the politics and other organisational barriers to effective learning, which have been studied by safety researchers [W1995011808, W2596133911, UNMAPPED:96]. Grispos et al. [W2746743258] found retrospectives helped as a tool to identify underlying causes, but even though they had this additional causal information it was not employed to improve security and further work is needed to understand what prevented better learning.\n\nThere seems to be broad agreement across researchers that tackling the underlying causes is essential to reducing the likelihood of future incidents. Although double-loop learning was frequently mentioned in the studies and its importance in addressing underlying causes, researchers found little evidence of it happening in practice. The literature indicated this shared thread has enabled a theme to emerge that organisations studied are not delving into the underlying causes. Despite the recommended double-loop learning models adapted for cyber security incidents by researchers, most have not been validated through further empirical research in organisations to test eliciting the underlying causes of security incidents. He and Johnson [W2111300538] and He et al. [W2118857637] did evaluate the use of the GSN approach to represent causes in a healthcare provider, but these diagrams were based on the causes already identified by the organisation.\n\nFurther investigation is needed to identify the most effective mechanisms to identify lessons. Such studies could evaluate the tools recommended in the CREST guidance [UNMAPPED:80] or those tools used in accident investigations. For example, Franco et al. [UNMAPPED:81] applied the AcciMap tool to analyse a Denial of Service (DoS) attack on a telecoms operator and found it enabled more lessons to be identified. However, they found it required significant effort to perform and it can be a challenge to avoid blame being assigned during the discussions. Another avenue is to use sociology tools to understand the narratives assigned to risks, which allowed the underlying causes to exist and the incident to occur, similar to safety studies such as the challenger shuttle launch by Vaughan [UNMAPPED:82].\n\nMany of the studies recognised the potential value in learning from incidents to tackle underlying issues which could improve the broader security of the organisation. Yet, as the greatest coverage of the learning process was in the causal analysis phase, Ahmad et al. [W2982205235] stated \"there has been little recognition of the potential role of incident response as a tool for learning and feedback for wider organisational objectives in particular security management\".\n\nFuture research questions:\n\u2022 What are the most effective mechanisms and tools to identify lessons from incidents?\n\u2022 In what ways do organisations allow the underlying causes to exist and incidents to occur?",
+          "citations": [
+            "W2982205235",
+            "W2005490048",
+            "W1798033376",
+            "W2031911638",
+            "W2031911638",
+            "W2031999883",
+            "W2195194378",
+            "W2111300538",
+            "W2118857637",
+            "W2568368320",
+            "W1995011808",
+            "W2596133911",
+            "W2746743258"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "27",
+            "60",
+            "96",
+            "80",
+            "81",
+            "82"
+          ]
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "4.5. Organisation structure and culture",
+          "subsubsections": [],
+          "text": "Ahmad et al. [W2982205235] suggested there was an opportunity to integrate the incident response and security management teams to improve learning opportunities. However, this may not be a solution for all institutions, as which team structure works best varies according to different organisations depending on a number of factors. The interpretation of the organisation structures by employees and the relationship of their leaders with the team and other stakeholders can have a greater impact than only the official structure [UNMAPPED:7]. More research is needed to better understand optimal organisation governance structures to enable decision making and accountability for improvements based on lessons learned.\n\nIt is also recognised that much of the research to-date has centred on the technical aspects of incident management rather than learning [W2031999883, UNMAPPED:27]. The existing research has not established the organisational conditions which determine effective learning such as a culture which values reflection and experimentation [UNMAPPED:7]. Whilst there have been many studies on cyber security culture [W3177310074], these have not addressed how culture impacts an organisation's ability to learn from incidents. Structured observation and analysis of learning process artefacts could provide insights into how an organisation's behavioural norms shape their approach to learning from incidents.\n\nAdditionally, studies that determine how to overcome barriers that prevent learning would be valuable. One angle to explore this through is to identify particular organisations or industries which are learning from incidents and study what has enabled this to happen. Unlike safety's review of High Reliability Organisations (HRO), to understand how some high risk organisations manage to maintain a low level of safety incidents [W3015604092], remarkably there appears to be scant research into organisations which learn from cyber incidents and adapt well. Ahmad et al., [W2982205235] suggested the use of their conceptual framework to study cyber security in HROs.\n\nFuture research questions:\n\u2022 What are the optimal governance structures to enable decision-making and accountability for implementing lessons learned?\n\u2022 How does culture impact the ability of an organisation to learn from incidents?\n\u2022 What are the barriers that prevent organisations learning from incidents and how might these be overcome?\n\u2022 When compared, what enables some organisations / some industries to be more effective at learning from incidents than others?",
+          "citations": [
+            "W2982205235",
+            "W2031999883",
+            "W3177310074",
+            "W3015604092"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "7",
+            "27"
+          ]
+        },
+        {
+          "subsection_id": "s_4_6",
+          "subsection_index": 6,
+          "subsection_label": "4.6. Practical implications",
+          "subsubsections": [],
+          "text": "Researchers have found little evidence of organisational learning beyond the incident management team improving their processes. The incident management industry standards intentionally allow organisations the flexibility to determine how to implement them and they are centred on incident management rather than how lessons could improve the overall security posture of an organisation. However, if incident management teams do not take accountability for learning from incidents they can find themselves overwhelmed with an increasing number of incidents with rising severity, as the underlying causes are not being addressed [W1607548417]. In contrast to safety science, how organisations learn to learn from cyber security incidents or the barriers to such learning has not been explicitly studied. It is evident more research in this area would be valuable.\n\nMost of the publications analysed have advocated for a more thorough causal analysis to identify the underlying causes. This is even more important in today's complex and entwined IT systems within the context of an organisation and their IT providers. Organisations need to consider the social aspects of incident investigations and how to facilitate the most beneficial causal analysis [UNMAPPED:90, UNMAPPED:91]. There is a risk of organisations assembling a team of people involved in a specific incident and unintentional hindsight bias leads them to miss critical contributory factors [W2002406956]. Security practitioners can start by evaluating how well their organisation has been learning from incidents using the process outlined in **FIGURE 1**. This will enable them to consider; if the right people are involved (as this impacts the potential lessons learned), how well systematic causes are identified and addressed, and then assess if this helps to reduce the prevalence of incidents.",
+          "citations": [
+            "W1607548417",
+            "W2002406956"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "90",
+            "91"
+          ]
+        },
+        {
+          "subsection_id": "s_4_7",
+          "subsection_index": 7,
+          "subsection_label": "4.7. Limitations",
+          "subsubsections": [],
+          "text": "This study focused on learning from cyber security incidents. It is possible research in other fields of technology, safety, natural disasters and other types of incidents could offer additional insights. Whilst steps were taken to ensure all relevant papers within the cyber security domain were identified, there remains a possibility some were missed due to the reliance on search strings, the indexing, categorisation, and search capabilities of the online databases. We only included articles written in English for which the full text was accessible, which resulted in 11 papers being excluded. Therefore, there is a risk some conclusions about the research in this area were missed. However, considering the number of studies reviewed and the similarity of findings, it is assumed this had a minimal impact on our assertions.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section highlights gaps in the current academic literature and, from these, presents avenues for future research and future research questions. There have been few studies into specifically how organisations learn from incidents and many of the articles explicitly call for further research into how organisations can learn from incidents [W2290082588, W2055127755, UNMAPPED:27, UNMAPPED:60].",
+      "citations": [
+        "W2290082588",
+        "W2055127755"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "27",
+        "60"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Security incidents pose a huge threat to society. There is more data than ever before, and the complex web of systems and suppliers means we are more vulnerable to incidents. The standards used by practitioners recommend learning from incidents, but these documents do not provide much guidance on how to do this well. Yet there has been relatively few studies on this topic in cyber security. This Systematic Literature Review (SLR) and research agenda have structured the existing research into how organisations learn from cyber security incidents and suggested where future research is needed to propel the field forward. By providing an overview of the topic, we hope the analysis of the literature will serve as a valuable resource for those researchers interested in exploring the future research opportunities highlighted.\n\nThe literature has more emphasis on acquiring knowledge through post-incident investigations with less attention on the implementation of the lessons. There has been no consistent model applied to assess how organisations learn from incidents. Those studies which have been conducted, recommend organisations should improve learning from incidents with wider participation and sharing of post-incident reports, often suggesting using double-loop learning in the investigations to address systemic causes. The research has shown organisations are not yet benefitting as much as possible from learning from incidents and are not evaluating if their learning is effective.\n\nThe analysis of the literature highlighted unanswered questions which were organised into a future research agenda. Fourteen research questions have been suggested and how these could be studied discussed. Further studies are recommended to explore what prevents organisations from understanding the underlying causes to identify the improvements needed and to implement them to reduce the risk of incidents in the future. In addition, approaching it from the opposite side and researching High Reliability Organisations (HRO) that learn well would be beneficial.\n\nIdentifying the valuable lessons within an organisation's social and political environment requires effort. Ensuring the lessons lead to useful changes that prevent further incidents requires organisations to evaluate how well they are learning. Further research is needed to identify how organisations can invest in learning to see the greatest benefits. By improving how organisations learn from incidents it is hoped they can reduce the likelihood and impact of cyber security incidents happening in the future. This will help to reduce the risks society faces from its dependence on IT.\n\n**TABLE A1. Literature search queries.**\n\n{{TABLE:tbl_06}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_06"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4378594123_tables.md"
+}

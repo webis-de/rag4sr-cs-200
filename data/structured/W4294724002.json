@@ -1,0 +1,428 @@
+{
+  "id": "W4294724002",
+  "metadata": {
+    "title": "Lost in Digitization \u2013 A Systematic Review About the Diagnostic Test Accuracy of Digital Pathology Solutions",
+    "n_sections": 10,
+    "n_subsections": 9,
+    "n_subsubsections": 4,
+    "n_tables": 6
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Contents",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "{{TABLE:tbl_01}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In the era of precision medicine, pathology departments face multiple challenges in relation to the complexity of companion diagnostics, and strict deadlines for timely diagnoses within cancer, chronic inflammatory, and degenerative diseases [W2791382460], yielding an increased workload. Many departments in different countries are using digital pathology for their routine work as one potential solution to the above challenges [W2888793895]. In Denmark, for instance, healthcare policy documents claim that this digital solution could facilitate faster response rates, better collaboration with clinicians, and in the future the opportunity to use artificial intelligence to assist diagnosis [UNMAPPED:3].\n\nDigital pathology, based on whole slide imaging (WSI) technologies, encompasses mainly 3 major components: information systems, image management system (IMS), and image analysis tools [UNMAPPED:4]. There are several advantages of using WSI for clinical purposes, such as fast consultations (specialists providing second opinions or supervision of residents), remote interpretation of frozen sections in surgical pathology, and telepathology for primary diagnosis [W1656766859]. Other advantages that make digital pathology appealing are biomarker research [W2921675148] and the potential advantages of using artificial intelligence (AI) [W2943370629].\n\nUsing this technology for in vitro diagnostics (IVD), entails a validation process regarding the reliability, safety, and accuracy of these devices [W2912250273]. The new European regulation for IVD medical devices (2017/746), stipulates that they require a performance evaluation to be approved for clinical use. This evaluation entails 3 main reported steps: scientific validity, analytical performance, and clinical performance [W2912250273]. The latter is based on diagnostic test accuracy (DTA) indicators as also elaborated in the Cochrane collaboration [UNMAPPED:9]. The most commonly referred measures of DTA are sensitivity, specificity, predictive values (of negative or positive test results), likelihood ratios, receiver operating characteristics (ROC) curves, and area under the ROC curve (AUC).\n\nThe Food and Drug Agency [UNMAPPED:10] (FDA) puts forth additional guidelines for the validation process of WSI based on College of American Pathologists (CAP) recommendations [W2166581609], such as pathologists trained with WSI, a representative number of cases, an adequate time interval between the use of LM and WSI for the same case, diagnostic concordance (i.e., intraobserver variability), and that all the material in the glass slide is present in the digital format. In the evaluation and approval of the Philips IntelliSite Pathology Solution (PIPS), FDA considered the diagnostic concordance (96.5%) of WSI as non-inferior to LM in the clinical performance report [UNMAPPED:12]. We have selected the studies for review based on the accuracy measurements as elaborated in both European and US regulations.\n\nHowever, the use of devices with high resolution potentially introduces a risk of overdiagnosis. Overdiagnosis is detecting a cancer, for instance, that will not progress (or progress very slowly) to harm the patient or be the cause of death [UNMAPPED:13]. In relation to high resolution imaging devices, the presence of overdiagnosis will cause the sensitivity and the positive-predictive value to be artificially inflated. If there is a substantial risk of overdiagnosis, the traditional DTA measures would be distorted resulting in biased performance of the diagnostic test [W2499749267, W2057668260]. The main problem is that overdiagnosis cannot be captured in the traditional accuracy measurements based on the Bayesian (2x2) table as misdiagnosis or underdiagnosis, as it fulfills the pathological criteria of abnormality [W2785165589].\n\nTherefore, our research question was: what is the diagnostic performance, including the degree of overdiagnosis, of WSI compared to conventional LM? Thus, the aim of this study was to evaluate the performance through diagnostic test accuracy (DTA) indicators, degree of overdiagnosis, diagnostic concordance, and observer variability as a secondary outcome. This was done through a systematic review of validation studies of WSI versus LM.",
+      "citations": [
+        "W2791382460",
+        "W2888793895",
+        "W1656766859",
+        "W2921675148",
+        "W2943370629",
+        "W2912250273",
+        "W2166581609",
+        "W2499749267",
+        "W2057668260",
+        "W2785165589"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "3",
+        "4",
+        "9",
+        "10",
+        "12",
+        "13"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Materials and Methods",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This systematic review was based on PRISMA-P guidelines [W2169205464], with the protocol registered in PROSPERO (CRD42021243403). A PRISMA flow diagram was created to present the selection process for this systematic review (Figure 1). Two authors (CVR and OK), independently from each other, screened the databases, extracted the data, assessed the quality of the studies, analyzed, and provided a synthesis for the results. In cases of disagreements during these steps, JBB was consulted to arbitrate for these cases.\n\nThe evaluation of WSI versus LM, was based on 3 main outcomes: DTA indicators [UNMAPPED:9], diagnostic concordance, and degree of overdiagnosis. For the latter, we screened for its 2 main causes: overdetection and overdefinition. The first is defined as finding pathological abnormalities that will never progress to do any harm or progress very slowly, thus not being the cause of death [W2785165589]. Overdefinition, the other subtype, can either be lowering the threshold for a risk factor without evidence of any beneficial effects or expanding the disease definition including, e.g., milder symptoms [W2785165589]. The additional outcome included here was observer variability.\n\nOur focus was only on human pathology, including all the tissue specimen preparations such as biopsies, resected specimens, frozen sections, and cytology samples; and all the stains used for diagnostic purposes, such as hematoxylin and eosin (HE), immunohistochemical stains (IHC), and special stains. Only WSI systems were considered and no additional system tools, i.e., image analysis algorithms [UNMAPPED:4]. We included only peer-reviewed articles regarding clinical evaluation or validation studies and no gray literature.\n\nWe searched 4 databases during May, and August\u2013October 2021: PubMed, EMBASE, Cochrane Library, and Web of Science \u2013 including articles published during the period 2010\u20132021. The main simplified search string was: Digital Pathology (whole slide imaging OR digital microscope OR virtual microscope) OR Digital Slides (digitized slides OR virtual slides) AND Diagnostic Accuracy (DTA OR diagnostic performance OR accuracy) AND NOT Image Processing, Computer Assisted [Mesh terms] (machine learning OR artificial intelligence OR algorithms).\n\n**FIGURE 1**\n\nFlowchart based on Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA [W2169205464]) guidelines.\n\n*[Image: PRISMA Flow Diagram]*\n\n*Identification:*\n* Records identified through database searching (n = 2720)\n* Additional records identified through other sources (n = 0)\n\n*Screening:*\n* Records after duplicates removed (n = 2402)\n* Records screened (n = 605)\n* Records excluded (n = 534), because either: They were no WSI; No comparison with LM; Used machine learning or artificial intelligence algorithms\n\n*Eligibility:*\n* Full-text articles assessed for eligibility (n = 71)\n* Full-text articles excluded (n = 59), because: No diagnostic test accuracy indicators (n = 48); No comparison to reference standard (n = 4); Not the right intervention (n = 2); Problematic study design (n = 2); Image analysis, use of excluded sample preparation (tissue microarrays), and not a validation study (n = 3)\n\n*Included:*\n* Studies included in qualitative synthesis (n = 12)\n* Studies included in quantitative synthesis (meta-analysis) (n = N/A)\n\nThe figure was drafted based on a freely available template at http://prisma-statement.org/documents/PRISMA%202009%20flow%20diagram.pdf.\n\nThe quality of the selected studies was assessed through the modified Quality Assessment of Diagnostic Accuracy Studies (QUADAS-2) tool [W2107638293]. The assessment of bias in the studies was based on 4 domains: patient selection, index test, reference standard, flow of patients in the study, and timing of the intervention(s) [UNMAPPED:19].\n\nPrimary and secondary outcomes are reported in a tabular form, while the other data extracted as supplementary material. We did not conduct a meta-analysis because of the studies heterogeneity.",
+      "citations": [
+        "W2169205464",
+        "W2785165589",
+        "W2107638293"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "9",
+        "4",
+        "19"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Study Characteristics and Quality Assessment",
+          "subsubsections": [],
+          "text": "We identified 2402 unique records in our literature search of which 71 articles were included for full text reading and possible eligibility for the study (Figure 1). Among the 71 articles, 12 fulfilled the main selection criteria for our study that is reporting at least 2 of the primary outcomes (i.e., DTA indicators, diagnostic concordance, and overdiagnosis). From the 12 studies in our review, 4 did not specify the kind of study [W2568799344, W3081242624, W2326550013, W2044627291]; 3 were retrospective studies [W2947687341, W2004199515, W1492808942]; 2 comparative studies [W3112825461, W2038589416]; and the remaining 3 randomized [W2595564133], evaluation [W2095000512], and validation study [W2897533498], respectively. The characteristics of the studies are presented in the Supplementary Tables 1 and 2.\n\nOf emphasis concerning digitization of slides is that only 2 studies reported minor technical discrepancies. One study elaborated on a technical issue where 11 of 124 slides needed a rescan and 4 were excluded due to failed digitization [W2897533498]; while another stated that 6 slides had loss of diagnostic material on the fine needle biopsy [W3081242624]. The most used WSI scanner as reported in 4 studies, was Aperio ScanScope XT (Aperio Technologies, Vista, Calif., USA) [W2326550013, W2947687341, W1492808942, W2038589416], followed by iScan Coreo (Ventana, Tucson, Ariz., USA) used in 3 studies [W2568799344, W2044627291, W2595564133]. In the remaining studies, there were diverse scanners used such as Mirax scanner (Carl Zeiss MicroImaging, Jena, Germany) [W2004199515, W2095000512], NanoZoomer S260 (Hamamatsu photonics, Japan) [W3112825461], Navigo (Visia Imaging, Arezzo, Italy) [W2897533498], and digital camera with NetCam software (Olympus America, Center Valley, PA) [W3081242624].\n\nRegarding the quality assessment of the selected studies, overall there was a low risk of bias and applicability concerns (for more details see Tables 1 and 2, and Figure 2).\n\n**TABLE 1** Judgement for Risk of Bias Summarized for Domains (QUADAS 2) [W2107638293].\n\n{{TABLE:tbl_02}}\n\n*Note: Table adapted from the freely available template at https://view.officeapps.live.com/op/view.aspx?src=http%3A%2F%2Fwww.bristol.ac.uk%2Fmedialibrary%2Fsites%2Fquadas%2Fmigrated%2Fdocuments%2Ftable.docx&wdOrigin=BROWSELINK.*\n\n**TABLE 2** Applicability Concerns for the Respective Domains (QUADAS 2) [W2107638293].\n\n{{TABLE:tbl_03}}\n\n*Note: Table adapted from the freely available templates at https://view.officeapps.live.com/op/view.aspx?src=http%3A%2F%2Fwww.bristol.ac.uk%2Fmedia-library%2Fsites%2Fquadas%2Fmigrated%2Fdocuments%2Ftable.docx&wdOrigin=BROWSELINK.*\n\n[^b]: Because final FS-FFPE diagnosis based on frozen sections (FS) or formalin-fixed and paraffin embedded (FFPE) biopsies may differ from the original assessment even during routine use of LM with frozen section.\n[^c]: This refers to the comparison of accuracy of WSI with LM to identify microorganisms and not human cells.\n\n**FIGURE 2** The Proportion of the Risk of Bias and Applicability Concerns (QUADAS 2) [W2107638293].\n\n{{TABLE:tbl_04}}\n\n*Note: The drafted figure is a template freely available at https://view.officeapps.live.com/op/view.aspx?src=http%3A%2F%2Fwww.bristol.ac.uk%2Fmedia-library%2Fsites%2Fquadas%2Fmigrated%2Fdocuments%2Fgraphs.xlsx&wdOrigin=BROWSELINK.*",
+          "citations": [
+            "W3112825461",
+            "W2038589416",
+            "W2595564133",
+            "W2095000512",
+            "W2897533498",
+            "W3081242624",
+            "W2326550013",
+            "W2947687341",
+            "W1492808942",
+            "W2568799344",
+            "W2044627291",
+            "W2004199515",
+            "W2107638293"
+          ],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03",
+            "tbl_04"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Primary and Additional Outcomes",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Diagnostic Test Accuracy Indicators",
+              "parent_subsection_id": "s_4_2",
+              "text": "The main DTA indicators reported for WSI in 10 studies were sensitivity, specificity, positive-predictive values, and negative-predictive values while in 1 study AUC was reported as a probability [W3112825461]. One study did not specify any DTA indicators, but only diagnostic concordance [W2568799344]. From the 12 selected studies, 5 were based on histology preparations [W2326550013, W2044627291, W3112825461, W2595564133, W2095000512]; 3 used cytology preparations [W3081242624, W1492808942, W2038589416]; 1 study both histology and cytology samples [W2947687341]; while 2 of them frozen sections [W2004199515, W2897533498]. The studies selected encompassed several pathology subspecialties, with 2 of them reporting on multiple [W2004199515, W2897533498] and 1 not specifying the subspecialty [W3081242624].\n\nAll the results regarding the primary outcomes of accuracy measurements are shown in Table 3. At least 7 studies reported a very good performance of WSI based on DTA indicators [W3081242624, W2326550013, W2044627291, W2947687341, W2004199515, W1492808942, W2095000512, W2897533498]. In these studies, sensitivity ranged from 86% to 100%, specificity 75% to 100%, positive-predictive values 92% to 99%, and negative-predictive values from 75% to 100%. Cima et al., examining frozen sections for intraoperative cancer staging and transplant organs, had a drop in specificity and negative-predictive values (both 75%), due to 4 discordant cases (compared to LM) in examining kidney and liver donors transplant organs [W2897533498].\n\nIn a study of pancreatic pathology, Larghi et al. besides the overall good performance of WSI for sensitivity, specificity, and positive-predictive values, also reported a poor performance for negative-predictive values for both LM and WSI (51% and 52%, respectively) [W2947687341]. However, the authors do not explain the reasons for this poor performance.\n\nOne study of gynecological pathology, diagnosing several diseases according to the 2001 Bethesda Report, stated a poor sensitivity of WSI for each of the individual diseases (23.5%\u201358.3%, see Table 3 for more details) [W2038589416]. However, they report a higher average sensitivity (82.1%) that is adjusted to the number of cases for each diagnostic category. Similarly, in a study of surgical neuropathology, Ammendola et al. reported a poor performance of both LM and WSI based on AUC (from 0.50 to 0.72) for several diagnostic features of meningioma [W3112825461].\n\n**TABLE 3** Primary Outcomes of Diagnostic Test Accuracy (DTA) Indicators and Diagnostic Concordance.\n\n{{TABLE:tbl_05}}\n\n[^a]: Area under the curve (AUC) is the probability where the test with the target condition will have a higher value than the test without the target condition.\n[^b]: Histopathological features are the main diagnostic findings that help to grade meningioma.\n[^c]: Above consensus means over-interpretation of the test to a higher breast cancer stage.\n[^d]: Below consensus is the opposite, under-interpretation to a lower stage.\n[^e]: Pathologist interpretation is used to denote the comparison during the validation study between WSI and LM, where pathologists have used both technologies.\n[^f]: Range of percentages in diagnostic concordance not reported.\n[^g]: Range of diagnostic concordance consists in the ratio of the cases that agreed with the consensus diagnosis and the total number of cases.\n[^h]: This is the average performance of WSI for all the above diagnostic categories but adjusted for the number of cases for each of the category.\n[^i]: Weiss score is a reference method to distinguish between a benign and a malignant adrenocortical tumor (ACT).\n[^j]: The study was designed in two stages of using WSI for the examination of the sample and the term 'reading' is used by the authors.",
+              "citations": [
+                "W3112825461",
+                "W2568799344",
+                "W2326550013",
+                "W2044627291",
+                "W2595564133",
+                "W2095000512",
+                "W3081242624",
+                "W1492808942",
+                "W2038589416",
+                "W2947687341",
+                "W2004199515",
+                "W2897533498"
+              ],
+              "tables_in_text": [
+                "tbl_05"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Diagnostic Concordance",
+              "parent_subsection_id": "s_4_2",
+              "text": "Six studies out of 12 reported the diagnostic concordance of WSI with LM [W2568799344, W3081242624, W2947687341, W2004199515, W2095000512, W2897533498] (Table 3). Four of these, reported a high diagnostic concordance for WSI in the range 86%\u201398.35%. Nielsen et al. conducting a study in dermatopathology, report an average concordance for both LM and WSI, 72.4% vs 69.6%, respectively [W2095000512]. The authors briefly elaborate on the poor performance of WSI for premalignant changes, where the main problems with accuracy (and concordance) were observed. This might explain the average concordance as opposed to an otherwise very good performance for DTA indicators (see the subsection above and Table 3). Finally, a study of breast cancer reported a varying mean concordance for different stages of breast cancer [W2568799344]. Similarly with the other breast cancer study [W2595564133], the poor concordance was observed for atypia (37%), the very good concordance in invasive breast cancer (94%) [W2568799344].",
+              "citations": [
+                "W2568799344",
+                "W3081242624",
+                "W2947687341",
+                "W2004199515",
+                "W2095000512",
+                "W2897533498",
+                "W2595564133"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Degree of Overdiagnosis",
+              "parent_subsection_id": "s_4_2",
+              "text": "The degree of overdiagnosis was not explicitly reported in any of the 12 studies. There are ongoing and recent discussions whether overdiagnosis should be defined as a diagnostic error [UNMAPPED:32], thereby captured by the Bayesian reasoning (2x2 table). As Brodersen et al. remark, overdiagnosis is not a false-positive result classified as diagnostic error that with further investigation can be determined as such; it is an abnormality that meets the pathological criteria of a disease [W2785165589]. In one of the selected studies, Elmore and colleagues elaborate on overinterpretation for several grades of breast cancer on both WSI and LM [W2595564133]. The term overinterpretation was used to denote the incorrect classification of a lesion to a higher stage. The authors of this study, calculated that 3% of the cases were overinterpreted as invasive breast cancer with WSI, thereby overdiagnosed.",
+              "citations": [
+                "W2785165589",
+                "W2595564133"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "32"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Additional Outcomes",
+              "parent_subsection_id": "s_4_2",
+              "text": "Six studies out of 12 reported on observer variability [W2326550013, W2947687341, W1492808942, W3112825461, W2595564133, W2095000512] (Table 4). Of these, 4 studies tested intra or interobserver variability with Cohen's kappa (\u03ba) statistics [W2326550013, W2947687341, W1492808942, W2095000512], and 2 in percentage [W3112825461, W2595564133]. Two studies calculating intra- and interobserver variability based on \u03ba statistics, where the values for both LM and WSI were within \u03ba 0.67\u20130.97 [W2947687341, W2095000512]. The 2 other studies calculated \u03ba jointly for LM-WSI for different diagnostic features or categories, where interobserver variability was from \u03ba 0.21\u20130.83 [W2326550013, W1492808942]. Two studies reported the percentage of observer variability for LM and WSI, where intraobserver variability was from 73% to 100% for both [W3112825461, W2595564133]. While, Ammendola et al. calculated also interobserver variability for senior pathologists (range 49%\u201397%) vs all observers (range 26%\u201393%) and all observers for LM (range 27%\u201383%) and WSI (31%\u201389%) [W3112825461].\n\n**TABLE 4** Additional Outcomes for Intra- and Interobserver Variability.\n\n{{TABLE:tbl_06}}\n\n[^a]: Interobserver concordance was measured between all the observers (pathologists), but also between senior pathologists versus all the observers that participated.\n[^b]: Here all the possible combination of comparisons between LM and WSI were tried based on intraobserver agreement.\n[^c]: Beside the diagnostic classification, in this study other diagnostic features were considered, therefore we use the term \"parameters\".\n[^d]: Kappa (\u03ba) statistics is used to assess observer agreement for intervention(s).\n[^e]: At Nielsen et al., they use the term 'review' instead of 'reading'. We have chosen the latter for a consistent terminology (as it is used e.g. in Tissier et al.).\n[^f]: The case does not have the target condition.\n[^g]: Weiss score is a reference method to distinguish between a benign and a malignant adrenocortical tumor (ACT).\n\nElmore et al., focusing on breast cancer, report a high predictive value, for both LM and WSI, in identifying benign without atypia (97.1% vs 95.7%) and invasive breast cancer (97.7% vs 97.2%) [W2595564133]. However, they report an average performance for Ductal Carcinoma in Situ (DCIS) (69.6% LM vs 57.1% WSI) and a poor performance for atypia (37.8% vs 27.8%).",
+              "citations": [
+                "W2326550013",
+                "W2947687341",
+                "W1492808942",
+                "W3112825461",
+                "W2595564133",
+                "W2095000512"
+              ],
+              "tables_in_text": [
+                "tbl_06"
+              ]
+            }
+          ],
+          "text": "The primary outcomes that we extracted concerning diagnostic performance of WSI were DTA indicators, diagnostic concordance, and degree of overdiagnosis. As emphasized earlier, the main criteria for selecting the studies was the combination of at least 2 of these outcomes. The additional outcome that is the observer variability, was extracted as an important accuracy measure for validating WSI as elaborated by CAP guidelines [W2166581609]. Four studies reported on the diagnostic performance of both LM and WSI [W2947687341, W3112825461, W2595564133, W2095000512]. Below, we describe briefly these outcomes.",
+          "citations": [
+            "W2166581609",
+            "W2947687341",
+            "W3112825461",
+            "W2595564133",
+            "W2095000512"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "Study Design",
+          "subsubsections": [],
+          "text": "The included studies design were quite diverse regarding the main CAP recommendations such as the number of samples, pathologists, wash-out period, order of examination with LM and WSI, and the comparison between them. Therefore, a reliable diagnostic performance is directly related to the quality of the validation study, as also remarked in another systematic review comparing WSI with LM [W2914038321]. In line with Goacher et al., the quality of the evidence regarding WSI performance is hampered by the heterogeneity of the study design, despite the evidence that WSI was not inferior to LM [W2460896619]. Thus, in our review 4 studies did not have a sufficient (60 cases) number of samples as recommended by CAP [W2568799344, W2326550013, W2044627291, W3112825461], which might have increased the uncertainty due to broader confidence intervals. Notwithstanding the low risk of bias and applicability, 6 studies did not report on the confidence intervals regarding the diagnostic performance of WSI or LM [W3081242624, W2044627291, W2004199515, W3112825461, W2095000512, W2897533498]. This brings further questions about the sample size and whether it is representative of the population.",
+          "citations": [
+            "W2914038321",
+            "W2460896619",
+            "W2568799344",
+            "W2326550013",
+            "W2044627291",
+            "W3112825461",
+            "W3081242624",
+            "W2004199515",
+            "W2095000512",
+            "W2897533498"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "Subspeciality",
+          "subsubsections": [],
+          "text": "The included 12 studies represent different pathology subspecialties, and 2 even reporting on multiple subspecialties [W2004199515, W2897533498]. Each subspecialty involves specific challenges regarding the number and type of diagnostic categories, as well as those cases requiring additional molecular tests for the final diagnosis.\n\nFor instance, Ammendola et al. reported AUC values (for both LM and WSI) evaluating atypical meningioma mostly in the range of 0.50\u20130.60 [W3112825461]. These values indicate a poor performance regarding test accuracy. Nonetheless, the authors concluded that the suboptimal performance regarding the grading of meningioma was due to the diagnostic challenges that this disease poses for pathologists. In this case, more experienced senior pathologists performed significantly better than younger ones. This finding has implications about the role of clinical reasoning in diagnostic accuracy, where the literature suggests expertise might be related with experience especially with pattern recognition of importance in visual diagnostics [W2029342902, W2147782722, UNMAPPED:32].\n\nParallel to the increasing complexity of examinations, the subspecialty of gynecological pathology was challenged by a high diagnostic workload [W2979474889]. In 2 studies of this subspecialty, the authors assessing the performance of WSI based on DTA indicators, evaluated 335 [W2038589416] and 1110 [W1492808942] slides. In one of the studies, the WSI showed high sensitivity for assessing intraepithelial lesions or malignancies [W2038589416]. While, the other study displayed an inconsistent sensitivity for multiple diagnostic categories, but stated that their method of assessment was as sensitive as the standard reference method [W1492808942].\n\nGirolami et al. asserted that diagnostic performance is related to the time for making the diagnosis in cytology-based subspecialties [W2979474889]. In this regard, Tawfik et al. reported an average scanning and reviewing time of 5.5 min with WSI for cytology-based gynecological pathology [W1492808942]. In 3 other studies measuring the time for diagnosis with WSI, 2 stated that turnaround time (time of the arrival of the specimen until the communication of diagnosis) was comparable between LM and WSI [W2004199515, W2897533498], while Larghi et al. reported a comparable time for reviewing slides with LM and WSI, 84 and 108 s, respectively [W2947687341].",
+          "citations": [
+            "W2004199515",
+            "W2897533498",
+            "W3112825461",
+            "W2029342902",
+            "W2147782722",
+            "W2979474889",
+            "W2038589416",
+            "W1492808942",
+            "W2947687341"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "32"
+          ]
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "Sample Preparation",
+          "subsubsections": [],
+          "text": "Sample preparation techniques pose specific challenges for slide digitization that might affect the performance of WSI, both regarding accuracy and time. One such example are cytology preparations \u2013 where smear thickness, overlapping cells, and obscuring backgrounds require multiplane (z-stacking) focusing for digital slides [W2038589416]. From the selected articles, 3 of them were based on cytology preparations [W3081242624, W1492808942, W2038589416]; 1 involved both cell-blocks (cytology) and histology samples [W2947687341]; while 2 of them used frozen sections [W2004199515]. Despite the difficulties of sample preparation, all these studies reported a comparable performance of WSI with LM.\n\nThis important aspect of using WSI with z-stacking for routine work with cytology preparations was also emphasized in a systematic review of digital pathology for cytopathology [W2979474889]. However, one study of surgical neuropathology based on histology preparations used 7 z-stack planes and a technique for optimizing the digital slide [W3112825461]. Notwithstanding the fact that histology is less challenging for digitization, the performance of pathologists was not more accurate than with LM. However, even with single or multiple z-stacking, cytopathology and frozen sections are still difficult to digitize with a high quality of image as it can be achieved with histopathology slides.",
+          "citations": [
+            "W2038589416",
+            "W3081242624",
+            "W1492808942",
+            "W2947687341",
+            "W2004199515",
+            "W2979474889",
+            "W3112825461"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "Overdiagnosis",
+          "subsubsections": [],
+          "text": "Adding to the challenges relating to diagnostic performance and the role of heterogeneity, overdiagnosis poses other difficulties. Although its degree was not reported explicitly, it was briefly addressed in the 2 breast cancer studies [W2568799344, W2595564133]. Bruny\u00e9 et al. mention the notion of overdiagnosis, by elaborating on its unnecessary and costly treatment and intervention procedures, for instance, when a biopsy is interpreted as ductal carcinoma in situ (DCIS) when in fact is atypia [W2568799344]. Conversely, Elmore et al. calculated the number of cases incorrectly classified to a higher stage (per hundred cases), showing that 3% with WSI and 2% with LM (as the reference standard) of cases were overinterpreted as invasive breast cancer [W2595564133]. However, this was a validation study scenario, where clinical outcomes were not calculated, but only the performance of the pathologists involved in this study. In this regard, future studies should evaluate the DTA of WSI by including patient-relevant outcomes, and thereby overdiagnosis in a randomized design to encompass the full spectrum of cases [W2595564133].\n\nWhile there are 5 cancers documented with high risk of overdiagnosis, the reasons for each of them are different such as screening (i.e., breast cancer, prostate cancer, and melanoma), incidental findings (renal cancer), or both incidental findings and excessive investigation (thyroid cancer) [W2996440791]. However, there are other cases such as lung cancer, where overdiagnosis is possible if screening for lung cancer is implemented [W3011528361]. In this review, we focused on pathological diagnostics by comparing WSI to LM and not on the above factors for overdiagnosis. In this regard, the Cochrane Collaboration has launched a new research field regarding the use of evidence to tackle overdiagnosis and its consequences [W2991692465].",
+          "citations": [
+            "W2568799344",
+            "W2595564133",
+            "W2996440791",
+            "W3011528361",
+            "W2991692465"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_5",
+          "subsection_index": 5,
+          "subsection_label": "Shortcomings of the Systematic Review",
+          "subsubsections": [],
+          "text": "The heterogeneity of the included studies hindered the possibility of conducting a meta-analysis, thereby limiting the comparative power of our study. While this could have provided a quantitative summary of the diagnostic performance of WSI in comparison to LM, the descriptive analysis in this review provided a qualitative account for it. The combination of at least 2 primary outcomes as the main criteria for selection, limited the number of the included studies. However, this was a methodological choice to include several accuracy measurements (i.e., DTA indicators, diagnostic concordance, and observer variability) for assessing the diagnostic performance of WSI. Ultimately, the question whether WSI should be implemented for routine work in pathology depends on how WSI addresses the logistical and organizational challenges that pathology departments face and the opportunities they afford. While, the opportunities of using digital pathology solutions are increasingly related with the use of AI for image analysis [W2921675148, W2943370629], in this review, we do not address this aspect.",
+          "citations": [
+            "W2921675148",
+            "W2943370629"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_6",
+          "subsection_index": 6,
+          "subsection_label": "Implications for Practice",
+          "subsubsections": [],
+          "text": "With a continuing shortage of pathologists and the multiple challenges that these departments face, digital pathology presents some opportunities to address them. Remote work and consultations [W1656766859] through WSI are often presented as a good solution to address the lack of pathologists and a growing workload. Following this, the possibility to train residents and pathologists with this digital solution adds to the capacity building in order to tackle these challenges [W2888793895]. Finally, the prospect of using AI algorithms for quantitative measuring, counting, and computer-assisted diagnosis might contribute in better diagnostic accuracy and saving time for pathologists [W2943370629, UNMAPPED:4].",
+          "citations": [
+            "W1656766859",
+            "W2888793895",
+            "W2943370629"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "4"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The selected studies in this systematic review displayed a low risk of bias and applicability concerns as measured with the QUADAS-2 [W2107638293, UNMAPPED:19]. We found that WSI was not inferior to LM regarding diagnostic performance. In addition, in 4 studies reporting both LM and WSI, their performances were comparable [W2947687341, W3112825461, W2595564133, W2095000512]. Moreover, 8 out of 12 studies state an overall very good performance of WSI regarding DTA and diagnostic concordance. However, the degree of overdiagnosis was not reported in any of the selected studies, which might have an impact on artificially increasing the performance of WSI like other newer imaging tests. In this regard, Heleno et al. assessing the accuracy of low-dose CT scans for lung cancer screening, found that overdiagnosis inflated sensitivity and positive-predictive values [UNMAPPED:13].\n\nThe 12 studies included in the present review displayed a high heterogeneity and from the analysis of the data extracted, it seems that this has implications for the diagnostic performance of WSI in the validation studies of pathology. There are 3 main aspects, in addition to the risk of overdiagnosis, where heterogeneity played an important role regarding performance: study design, subspeciality, and sample preparation.",
+      "citations": [
+        "W2107638293",
+        "W2947687341",
+        "W3112825461",
+        "W2595564133",
+        "W2095000512"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "19",
+        "13"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We found that WSI was not inferior to LM regarding DTA and diagnostic concordance. However, the degree of overdiagnosis was not systematically reported and is thereby unknown. The diverse subspecialties and their laboratory tasks pose important questions whether it is possible to compare LM and WSI across all these subspecialties, or that perhaps LM has advantages in some and WSI in others. When considering the implementation of digital pathology, departments should also take into account the advantages for remote diagnosis and consultations, cancer research, digital multidisciplinary case conferences, supervision of residents, and storage of digital slides. However, the designers of the validation studies and the participating pathologists should be careful in those areas where the risk of overdiagnosis exists.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Funding Support",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Authors' Contributions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "OK and JBB conceptualized the systematic review. The other authors helped to refine conceptualization before submitting the protocol. Database search, screening, data extraction, risk of bias, data analysis and synthesis, were conducted independently by CVR and OK. JBB acted as an arbiter in cases of disagreement. ESR helped with the terminology in the study and his expertise as a senior pathologist throughout different steps. TR helped with the writing and reviewing the manuscript of the review. OK and CVR wrote the first draft and all the other authors helped during the writing, editing, and reviewing process.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Conflicts of Interests",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The authors declare no conflicts of interests.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "Acknowledgements",
+      "subsections": [
+        {
+          "subsection_id": "s_10_1",
+          "subsection_index": 1,
+          "subsection_label": "Appendix A. Supplementary Data",
+          "subsubsections": [],
+          "text": "Supplementary data to this article can be found online at https://doi.org/10.1016/j.jpi.2022.100136.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "We are grateful to Susie Rimborg for her help on how to conduct advanced search in the medical databases. We thank also Klaus H\u00f6yer, Margaret Bearman, and Radhika Gorur for their help and support during the process of conducting this review. Finally, we would like to thank all those that helped with their comments to improve this review.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4294724002_tables.md"
+}

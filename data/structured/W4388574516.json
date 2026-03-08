@@ -1,0 +1,448 @@
+{
+  "id": "W4388574516",
+  "metadata": {
+    "title": "A Systematic Review on IoT-Based Smart Technologies for Seat Occupancy and Reservation Needs in Smart Libraries at Institution of Higher Learning",
+    "n_sections": 6,
+    "n_subsections": 14,
+    "n_subsubsections": 6,
+    "n_tables": 7
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The Internet of Things (IoT) has grown more popular and accepted in the library industry to improve operations, thanks to the increasing use of smart devices and fast networks. As a result, the use of Internet of Things (IoT) in libraries has raised discussion in the academic community. Devices may now connect directly with one another and with the cloud thanks to IoT, which improves the delivery of services in businesses. The requirement for real-time information and high-quality data is gradually growing, particularly for seat occupancy status and reservation in the libraries, as more students are admitted each year. Smart technologies are also being used in every aspect of library services and workflows. To improve the service experience for users, libraries have shown persistence in implementing new technologies.\n\nIoT is the collective term for any connected devices that use the Internet to collect data that can then be used to automatically monitor and operate objects without the need for human interaction. Most studies found that numerous new technology inventions trending nowadays are more advantageous because they can really simplify our lives. Of which one of the foremost drivers of the future smart spaces is the Internet of Things (IoT) [W2750745056, W2779923088, W2982544780]. Boboc and Cebuc [UNMAPPED:4] define IoT as the sum of devices interconnected over the Internet, with data collection ability to monitor and control things remotely without human intervention. Therefore, the application of IoT will enhance the value of education process in the education environment because it will allow students to learn quickly [W2803876593].\n\nSimilarly, Abuarqoub et al. [W2750745056] also describe IoT as a system that connects daily things embedded with electronics, software and sensors to the internet enabling them to gather and exchange data. According to Bayani et al. [W2779923088], IoT is utilizing smart features of Radio Frequency Identification (RFID) and Wireless Sensor Network (WSN) technologies to change everyday life. Hence, its objective is to enhance our everyday devices and appliances to be less sophisticated, automated, flexible and highly accessible at any time, from anywhere, by any user across the world [W2750745056].\n\nAccording to Brian et al. [UNMAPPED:6], the principle of developing a connected library system where the user can use their mobile phone to connect to the library system is advantageous and beneficial since almost everyone nowadays has a smartphone device. Upala and Wong [W2972034143] and Daniel et al. [W2982544780] concur that IoT can connect numerous devices to expand operational efficiency, real-time visibility, and user learning experiences because of its outstanding potential in the education sector. They revealed that new research opportunities and feasible solutions are possible through the development of smart library system utilizing IoT.\n\nIt is therefore undeniable that the application of IoT promises a brighter future for libraries [W2487814951], but scholarly research is needed to determine how well libraries will embrace this trend considering its prospects and challenges. Numerous research has been done on the implementation of smart-library seat occupancy and reservation to provide students with the luxury of checking seat occupancy status and reserving seats online without librarian interaction. Maepa and Moeti [W3210549090] utilizing various IoT technologies. And also challenges, drivers, and obstacles were also discussed from a variety of angles. Daniel et al. [W2982544780] have all conducted several previous literature review-based studies to evaluate the development, trends, gaps, and future research direction in the IoT sector. Although numerous studies have examined IoT-based research from various angles and for various amounts of time [W2750745056, W2779923088, W2982544780, W2972034143, W3210549090]. Even though the use of IoT in libraries is growing and that there is an increase in research into the topic [W2888726926], a study that looks at libraries in developing nations reveals a knowledge gap.\n\nTo ascertain the validity of the aforementioned assertions, it may be helpful to conduct a systematic literature review (SLR) study to see if there have been any empirical studies that examined IoT and the technologies that it enabled for seat reservation needs in smart libraries. Therefore, the objective of this book chapter is to conduct an SLR in order to (i) ascertain whether empirical studies have been conducted that address the effects of IoT technology and its inconsistent and dispersed nature for seat occupancy and reservation needs in smart libraries, and (ii) discover, compare, and characterize current investigations in the SLSRS and (iii) determine from which databases such studies, if any, are extracted. Even though there are existing reviews that looked at the emerging smart library systems using IoT technologies, this research is different as is only focusing thoroughly on the element of seat occupancy and reservations to improve library usage as a step to enhance academic excellence and time management. This book chapter seeks to respond to the following research queries (RQs) by reviewing the available research.\n\n- What are the benefits of IoT-Based smart library seat occupancy and reservation systems?\n- What are the existing technologies and methodologies that enable IoT-Based seat occupancy and reservation in smart libraries?\n- What are the main unresolved problems, potential developments, and difficulties in IoT-based smart library seat occupancy and reservation systems?\n\nThis Chapter used primary research publications to conduct an in-depth investigation into the present drawbacks and advantages of smart library seat occupancy and reservation systems and to better comprehend the various models put forth by various writers. Illustrated are the various holes and restrictions in the current IoT-based seat occupancy and reservation systems. Consequently, the chapter excludes other library management systems providing support for teaching and learning activities such as obtaining and reserving library books.",
+      "citations": [
+        "W2803876593",
+        "W2750745056",
+        "W2779923088",
+        "W2972034143",
+        "W2982544780",
+        "W2487814951",
+        "W3210549090",
+        "W2888726926"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "4",
+        "6"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Literature review",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 The nature of the Internet of Things",
+          "subsubsections": [],
+          "text": "The Internet of Things (IoT) is the trending technology that simplifies lives nowadays and it also enables the real, digital and virtual convergence to develop smart surroundings that make energy, transport, cities and many other areas more intelligent [UNMAPPED:4]. Internet of Things describes a system that connects daily things embedded with electronics, software and sensors to the Internet enabling them to gather and exchange data [W2750745056]. According to the Jayawardena et al. [W4212931328], four communication models, namely device-to-device, device-to-cloud, device-to-gateway and back-end data sharing, affect the IoT. These four communication models describe how IoT objects connect with one another to exchange data. Organizations can effectively leverage the adaptability of IoT connections to suit their various purposes by utilizing the various communication methods. The Internet of Things (IoT) is the connecting of common objects or things for interaction and data sharing for planning, processing, or decision-making, as can be inferred from the aforementioned.\n\nAccording to Boboc and Cebuc [UNMAPPED:4], all tangible and intangible things in our daily life are predicted to be connected to the Internet purposely to advance the way people live, work or interact. Nevertheless, Goyal et al. [W3027673131] stated that IoT affords all tangible and intangible things with unique identifiers (UIDs) and the ability to transfer data over a network without needing human-to-human or human-to-computer interaction. Hence, its objective is to enhance our everyday devices and appliances to be less sophisticated, automated, flexible and highly accessible at any time, from anywhere, to any user across the world [W2750745056]. For this reason, IoT has bridged across various application fields, and it combines many technologies [UNMAPPED:13].\n\nBoboc and Cebuc [UNMAPPED:4] defined Internet of Things as an innovative technology that incorporates billions of smart objects into our daily life to enhance social, technical, and economic benefits. According to Mohamed et al. [W2803876593], the application of Internet of Things will enhance the value of education process in the education environment because it will allow students to learn quickly.",
+          "citations": [
+            "W2750745056",
+            "W4212931328",
+            "W3027673131",
+            "W2803876593"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "4",
+            "13"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 IoT technologies",
+          "subsubsections": [],
+          "text": "IoT links heterogeneous items together, using embedded systems, such as wireless connectivity, computers and wireless smart sensors. According to Jha et al. [W3155353628], there are several technologies utilized by IoT such as Internet protocols, communication technologies, CPS, WSN, RFID, and condition awareness [W4225156945]. They further categorized devices like storage devices, servers for computing data, security devices for protection, control devices, devices for sensing, capturing, and generating data and some portable devices as the hardware part of IoT. Similarly, Alam et al. [W3017021688] highlighted the fact that a few of the technologies related to IoT-enabling include actuator, radio-frequency identification (RFID), wireless sensor network, Near-Field Communication (NFC), M2M communication, and IPv6 over Low-Power Wireless Personal Area Networks (6LoWPAN).\n\nFurthermore, Goyal et al. [W3027673131] stated that IoT devices which are utilized for monitoring and tracking comprise of small silicon chips with finest processing capabilities. Communication technologies like GPRS, GSM, Mesh Network, LTE, ZigBee and Wi-Fi are utilized. Contrasting to this, technologies such as NFC, RFID, GNSS and BLE are employed in tracking. However, for detecting vibration, pressure, temperature and humidity, it uses sensors powered by small battery, short burst power bank and solar energy [W3027673131].\n\nAccording to Bansal and Kumar [W3005735686], IoT works with emerging technologies like big data, artificial intelligence, Wi-Fi, networking technology and sensing instruments because it is an analytical system. This supports the idea that IoT works best when combined with a variety of technological solutions. However, Albishi et al. [W2781284772] noted that the majority of IoT frameworks call on technologies including networking setups, cloud computing setups, internet, and other software applications. Hence, they recognized situation awareness and cognition, autonomy, cloud computing, semantic technologies and semantic technologies as linked future internet technologies for the Internet of Things.\n\nBerek [UNMAPPED:19] stated that the RFID technology has been used in libraries for years and since its appearance, there has been remarkable solutions applied in the libraries field according to their special requirements. Libraries are gaining new opportunities owing to the continuous technological growth. In accordance with Li [W3159936611], RFID is a wireless, non-contact technology that transmits data from a tag connected to a device to track and identify it. Hence, Misra et al. [UNMAPPED:21] noted that the use of RFID in IoT will support wireless connectivity of small devices and help maintain track of smart objects within the IoT framework in real time. Thus, Radio frequency waves are used for data exchange in the IoT and RFID technology combination to improve device connectivity. Nevertheless, businesses utilizing the IoT framework can connect various kinds of products devoid of transducers like wireless sensors and actuators. As a result, organizations like libraries can set up self-service features, maintain security and keep an eye on operations thanks to RFID.",
+          "citations": [
+            "W3155353628",
+            "W4225156945",
+            "W3017021688",
+            "W3027673131",
+            "W3005735686",
+            "W2781284772",
+            "W3159936611"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "19",
+            "21"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Characteristics of IoT",
+          "subsubsections": [],
+          "text": "IoT describes a system that connects daily things embedded with electronics, software and sensors to the internet enabling them to gather and exchange data [W2750745056]. According to Mohamed et al. [W2803876593], IoT is one of the internet phenomena that has successfully disrupted our daily life. Hence, it has grown more popular and accepted in the institutions of higher learning to improve operations, thanks to the increasing use of smart devices and fast networks [W2982544780]. Thus, IoT has made it possible for devices to link directly to one another and to the cloud, which improves service delivery and management strategic planning in businesses [W3027673131]. Hence, Sundaravadivazhagan et al. [W3134796432] and Bayani et al. [W2779923088] characterized IoT as follows:\n\n- **Connectivity:** Internet connectivity is attached with in the devices and sensors.\n- **Communication:** Everything is unified with comprehensive evidence and communication structure.\n- **Things related services:** IoT is capable of traditional and non-traditional computer things related services.\n- **Security:** IoT may be transmitting sensitive data, it is very significant to give data privacy and security.\n- **Energy Efficient:** The IoT devices should have power backup.\n- **Sensing:** It is an important supporting device in IoT.\n- **Heterogeneity:** The IoT devices based on hardware and network platforms.\n- **Dynamic Environment:** The IoT devices support a dynamic environment.\n- **Enormous scale:** The IoT technologies support to control a greater number of devices which interact.\n\nThese characteristics are depicted as follows (Figure 1).\n\n**TABLE/FIGURE 1**\n\n**Figure 1.** IoT characteristics (adapted from: [W2779923088, W3134796432]).",
+          "citations": [
+            "W2750745056",
+            "W2803876593",
+            "W2982544780",
+            "W3027673131",
+            "W3134796432",
+            "W2779923088"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4 IoT applications",
+          "subsubsections": [],
+          "text": "The Internet of Things (IoT) applications are categorized into a wide range of application domains, including wearables, smart homes, smart cars, smart infrastructure, smart healthcare, agriculture, manufacturers, supply chains, logistics, social and business applications [W3197371380]. As more devices connect to the Internet and become IoT enabled, the number of IoT applications is growing [W2809270980]. Today's commonplace applications make use of smart devices. They can 'speak' with one another and exchange vital information and data [W2888726926]. Hence, the adoption of traditional distributed system programming methods is hindered by the unique characteristics and needs that each application area possesses [W3197371380].",
+          "citations": [
+            "W3197371380",
+            "W2809270980",
+            "W2888726926"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5 Smart systems",
+          "subsubsections": [],
+          "text": "In the academic community, the term \"intelligent\" or \"smart\" systems refers to a wide notion with the aim of maximizing productivity through the application of cutting-edge information, communication and computing technology [W2750745056]. The advancements in general IoT research provided the ability to utilize intelligent systems in industrial applications. The idea of \"smart\" in this context, has more in common with Industry 4.0 than with conventional logic. It includes complex logical operations and algorithms; it is not merely limited to simple logical operators. While describing systems as \"smart,\" there have been some misconceptions in this area of research. Often, researchers will classify a wireless or automated system as \"smart\". A machine that relies on input signals, range comparisons, triggers and output, cannot be referred to as intelligent and is merely an automated system. The use of smart techniques in emerging systems is assisting in reducing times, the demand for manpower, and the level of skill required to maintain the systems and improve the quality of the output. Using cutting-edge learning methods, such as machine learning, IoT and AI can strengthen and broaden this idea [W4206562093].\n\nThere are several practical uses for IoT technology, including Industry 4.0, smart agriculture, smart cities, smart transportation, smart homes, eHealth, and wearables [W4206562093, W4310364078, W2767346351]. According to Boboc and Cebuc [UNMAPPED:4], all tangible and intangible things in our daily life are predicted to be connected to the Internet purposely to advance the way people live, work, or interact. Hence, Industry 4.0's objective is to enhance our everyday devices and appliances to be less sophisticated, automated, flexible and highly accessible at any time, from anywhere, to any user across the world [W2750745056].",
+          "citations": [
+            "W2750745056",
+            "W4206562093"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "4"
+          ]
+        },
+        {
+          "subsection_id": "s_2_6",
+          "subsection_index": 6,
+          "subsection_label": "2.6 Development of the IoT-based smart library",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_6_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.6.1 Components of an IoT-based smart library",
+              "parent_subsection_id": "s_2_6",
+              "text": "The traits and elements of a smart library can be divided into three categories, namely smart people, smart services and smart technology [UNMAPPED:28]. These elements working together, is a prerequisite for a smart library. At the same time, the smart library cannot be realized if any one of the following conditions are not met:\n\n- **Smart technology** - The library accepts the technological advancements requested by its patrons because they are already prevalent in all facets of modern life.\n- **Smart services** - To meet user needs, services should be planned and implemented. At this level, operations can be user-friendly and service oriented.\n- **Smart People** - At this level the library patrons in addition to the personnel are also considered.\n\nUsers must demand the possibilities provided by new technologies, but librarians must also be able to explain the new method of working to library patrons and educate them about it, in addition to simply understanding it themselves. These elements interact, but they also reinforce and strengthen one another in all directions. The component parts work together to create a complicated whole.\n\nThe availability of technology is one of the elements that defines smart libraries [W2888726926]. The way services are organized will be affected by how technology is adapted and used in other fields. The online systems of the library are made possible by a variety of technologies, including wireless systems, RFID, LED and the Internet of Things (IoT) technology [UNMAPPED:13]. Although it may be argued that these technologies alone do not form a smart library, it is impossible to develop the services that today's library customers have come to expect without them [W2888726926].\n\n##### 2.6.1.1 Challenges of IoT in libraries\n\nThe current condition of IoT in libraries in developing nations varies from one library type to another and from one country to another, even though technological maturity is a factor in adopting improvements [W2982544780]. According to Patel et al. [UNMAPPED:28], optimal resource management is still a difficulty, given that IoT infrastructure is unevenly spread globally and is focused on high-income nations, even though the integration of intelligent technology offers limitless potential in precise university libraries. This suggests that the existing level of universities' involvement in IoT deployment is insufficient to ensure the innovation is adopted as best as possible [W2888726926]. Hence, Bayani et al. [W2779923088], mentioned that universities should build up systems that encourage the use of new technologies to assist technical advancements. Their assistance in assuring a steady electrical supply, lowering ICT tariffs, and guaranteeing greater network bandwidth with improved connectivity in pub spaces would therefore be expected to influence libraries in poor countries to adopt IoT [UNMAPPED:28].\n\nAccording to Liang [W2888726926], high security and privacy standards are necessary for IoT, which is why they have turned into elements influencing its acceptance. The author pointed out that while using the IoT, libraries need to warn users about the potential vulnerability of their network, hardware and software. Additionally, there is a risk that some of these devices or connecting tools could have user interface vulnerabilities when multiple devices are interconnected or made to perform interactively [W3197371380]. This creates significant privacy and security concerns for IoT applications in libraries. Libraries must therefore implement measures to protect their infrastructure from any risks and hazards posed by IoT applications [W2888726926, W3197371380].\n\nThe adoption of a certain technology used in IoT may be impacted by physical risk, which is a person's concern that it could be harmful, dangerous, or unhealthy, according to Mani and Chouk [W2809270980]. Therefore, when library staff and customers perceive using IoT as being of high risk, it will have a negative impact on its uptake.\n\n##### 2.6.1.2 Overview of the library seat occupancy and reservation systems\n\nAccording to Daniel et al. [W2982544780], the IoT model has been espoused in all study fields with emphasis on the connection of everything to the Internet. The Internet of Things is shifting generations from predictable systems to SMART systems and is mostly employed in urban areas [W2486331996]. Nevertheless, it has some implementation difficulties, such as the cost of IoT devices, its development and outline, technical standards and flexibility [W2972034143]. However, as declared by Daniel et al. [W2982544780], the adaptation of these technologies in the library system eases challenges faced by management concerning to self-servicing, monitoring and tracking of resources in the library.\n\nThis overview of the library seat occupancy and reservation systems further analyses the applications and functionalities of the existing IoT-based seat occupation and reservation systems and identifies the possible methods, tools and techniques for implementing an IoT-based smart library system.\n\nMost studies found that the use of numerous new technological inventions devised nowadays, are more advantageous because they can really simplify our lives [W2946087167, W2473221413, UNMAPPED:32]. One of these numerous new technological inventions and foremost drivers of the future smart spaces, is the Internet of Things (IoT) [W2750745056, W2779923088, W2982544780]. Boboc and Cebuc [UNMAPPED:4] define IoT as the sum of devices interconnected over the Internet, with data collection ability to monitor and control things remotely without human intervention. Therefore, the application of IoT will enhance the value of the educational process in the education environment because it will allow students to learn quickly [W2803876593].\n\nSimilarly, Abuarqoub et al. [W2750745056] describes IoT as a system that connects daily things embedded with electronics, software and sensors to the Internet, enabling them to gather and exchange data. According to Bayani et al. [W2779923088], IoT is utilizing smart features of Radio Frequency Identification (RFID) and Wireless Sensor Network (WSN) technologies to change everyday life. Hence, its objective is to enhance our everyday devices and appliances to be less sophisticated, automated, flexible and highly accessible at any time, from anywhere, by any user across the world [W2750745056].\n\nAccording to Brian et al. [UNMAPPED:6], the principle of developing a connected library system where users can use their mobile phones to connect to the library system, is advantageous and beneficial, since almost everyone nowadays has a smartphone device. Upala et al. [W2972034143] and Daniel et al. [W2982544780] concur that IoT can connect numerous devices to expand operational efficiency, real-time visibility and user learning experiences, because of its outstanding potential in the educational sector. They reveal that new research opportunities and feasible solutions are possible through the development of a smart library system utilizing IoT.\n\n##### 2.6.1.3 Using the RFID technology system in libraries\n\nThere are many places that are currently equipped with sensors for temperature detection, traffic automation, and vehicle and UAV autopilot [W2779923088]. Thus, IoT and its supporting technologies, such as M2M communications, V2V communications, RFID and NFC may power a variety of applications. Nevertheless, Bayani et al. [W2779923088], stated that IoT has a promising future with the increasing connectivity of devices and objects.\n\nRFID is a barcode replacement that employs tiny microchips in tags to store and send extensive data in the database about the item being tagged [W4313192492]. Nevertheless, Hirekhan [UNMAPPED:34] described it as the usage of microchips and library cards, enabling clients to check out items by going through a self-service station equipped with an antenna that transmits low frequency radio waves. Hence, it is pointed out that it can be used to identify, track, sort, or detect library holdings at the circulation desk and during daily stock maintenance [UNMAPPED:34]. The notion of RFID can be compared to that of an electronic barcode. An RFID system primarily consists of the following four parts:\n\n- RFID transponders or tags that have been electronically programmed with special data.\n- Tag-querying sensors.\n- An antenna.\n- Server on which the integrated library software's interface program is loaded.\n\nThis technology made up of smart RFID labels, related hardware and software, gives libraries a better way to manage their collections while also giving their customers better service [W4283076260]. RFID-tag reading does not require manual interactions. The functions and advantages provided to the library with the utmost care using RFID technology include the reducing of manual involvement, reduced manual errors, and enabling quick book issuing, reissuing and searching [UNMAPPED:36]. Below are the advantages of RFID system:\n\n**Rapid Charging/Discharging:** The usage of RFID shortens the time necessary to complete circulation processes. The information from RFID tags can be read much more quickly than from barcodes, and multiple objects in a stack can be scanned at once. This accounts for the biggest time saving. Despite being originally unreliable, the anti-collision algorithm that enables the charging or discharging of a whole stack currently seems to be performing smoothly since then.\n\n**Patron Self-Charging/Discharging Simplified:** For patrons' self-charging, there has been a noticeable improvement because they are not needed to meticulously position materials within a specific template and they are able to charge multiple products at once. When customers self-dispense, staff no longer have to do the work. The installation of backdrop readers significantly relieves the staff's work.\n\n**High Reliability:** You may rely on the readers. To detect the items leaving a library, certain RFID systems incorporate an interface between the exits sensor and the circulation system. If a customer hurries out of the library without being too closely observed, the library would at least be aware of what had been taken. The library will be able to identify who takes an item out without paying for it if the user card also includes an RFID tag. This is accomplished by creating a bit that serves as the \"theft\" bit and turning it off, both while charging and discharging.\n\n**Long Tag Life:** Finally, RFID tags have a longer lifespan than barcodes since nothing touches them. Most RFID providers state that a tag can withstand at least 100,000 transactions before perhaps needing to be changed [W2282698013].",
+              "citations": [
+                "W2888726926",
+                "W2982544780",
+                "W2779923088",
+                "W3197371380",
+                "W2809270980",
+                "W2486331996",
+                "W2972034143",
+                "W2803876593",
+                "W2750745056",
+                "W4313192492",
+                "W4283076260",
+                "W2282698013"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "28",
+                "13",
+                "4",
+                "6",
+                "34",
+                "36"
+              ]
+            }
+          ],
+          "text": "Naturally, the term \"smart library\" implies that libraries have developed to the point where they are now a crucial element of smart cities or smart university campuses [UNMAPPED:19]. Smart technologies are also being used in every aspect of library services and workflows. To improve the service experience for users, libraries have shown persistence in implementing new technologies. As a result, the use of the Internet of Things (IoT) in libraries has raised discussion in the academic community. Devices may now connect directly with one another and with the cloud thanks to IoT, which improves the delivery of services in businesses. It is undeniable that the application of IoT promises a brighter future for libraries [W2487814951], but research is needed to determine how well libraries will embrace this trend, considering its prospects and challenges. Even though the use of IoT in libraries is growing and that there is an increase in research into the topic [W2888726926], a study that looks at libraries in developing nations reveals a knowledge gap.",
+          "citations": [
+            "W2487814951",
+            "W2888726926"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "19"
+          ]
+        },
+        {
+          "subsection_id": "s_2_7",
+          "subsection_index": 7,
+          "subsection_label": "2.7 Gaps in the literature",
+          "subsubsections": [],
+          "text": "Research on finding a solution to the issue of seat occupancy has increased recently. Upala et al. [W2972034143] constructed an IoT setting in an academic library, embedded with a security parameter of \"face recognition\" for user identification within library management. This was done in order to support library space management; such as study room occupancy service by using IoT applications. Their proposed solution was considered a quality intelligence system as it afforded participants such as students, staff and authorized users with a secured real-time view of library assets, to justify study room or conference room usage. However, their focus was on seat occupancy which does not include seat reservation. They define libraries as vital fragments of the educational system, used to advance our knowledge. Hence, several societal backgrounds have advanced because of the growth of IoT development of which the traditional library system is one [W2779923088].\n\nSimilar to Hoang et al. [W2473221413], Yahaya et al. [UNMAPPED:32] constructed a seat occupancy detector system, with both systems in the same context; using capacitance sensors as an innovative method to differentiate the seats' occupancy by either subjects or objects. Both their systems were developed using a Raspberry Pi as main controller, integrated to a Wi-Fi module, along with a capacitance sensor chip. Their projects were intended to ease the congestion, especially during or before the test week and exam time, as these periods are a recurring problem for most libraries. Although, their results were unreliable as they failed to distinguish whether a seat has been occupied by a person or an object, they nevertheless showed the seat occupancy status. Hence, they pointed out that there is a need to advance their analytical algorithms to accurately distinguish the occupancy detection states.\n\nTorres and Paul [W2473221413] employed a library seat occupancy counter to gather daily counts over time that would specify patterns in student preferences for study spaces and to also use that information to advance several library services. The researchers employed Microsoft Paint (MS Paint), Excel and Qualtrics (a survey and researching tool) [W2473221413]. However, their study does not report on how students engaged with space, and it also required student workers to manually enter the number of students occupied seats and their preference to get daily counts. Their methodology is not reliable as it could lead to students entering erroneous data which could produce invalid counts. Hence, they suggested that there is a need to develop a real-time seating visualization that would be available via an app, which could enable library users to check and reserve available seat based on their preference [W2473221413].\n\nThe issue of managing library seats was also addressed by Daniel et al. [W2982544780]. They described the planning and implementation of a solution that combined hardware and a web application to allow students and librarians to verify the identification of library seat occupants and the status of library seat occupancy from any location at any time over the Internet, using their devices or the display system at the library door. In the library, the prototype system of Daniel et al. [W2982544780] significantly reduced the amount of time students spent looking for a seat and making or receiving phone calls to other students. Nevertheless, their Web Application did not have any integrated privacy or visibility features.\n\nNevertheless, library users could not reserve a seat; their system only permitted the luxury of seat occupancy and monitoring. Daniel et al. [W2982544780] developed a prototype of a smart library seat occupant and occupancy information system, made of pressure (force-sensing resistor) and RFID sensors for library seats, which send real-time seat utilization status to the web application. The researchers recommended including a feature that would permit seat occupants to take a little break (reserve) while in the library in the future's smart library systems [W2982544780]. This is the gap that the researcher is hoping to fill with the current research.\n\nSeveral studies were conducted in other countries regarding this most relevant concept of 'smart library' [W2473221413, UNMAPPED:32]. Researchers such as Brian et al. [UNMAPPED:6] and Bayani et al. [W2779923088] focused on helping students to find available books and reserving them online. However, most other studies focused on seat occupancy and seat monitoring [W2982544780, W2473221413, UNMAPPED:32]. Nevertheless, to this date, as far as could be established, no one has attempted to investigate the smart library seat occupancy and reservation in SA.\n\nAccording to Daniel et al. [W2982544780], \"there is a need to integrate the University map into the web application to enable students within the university premises to reserve seats with their Unique Identification (UID), based on the estimated time of arrival at the library\". This means that there is a gap in the literature and research on seat reservation based on estimated arrival time and reliable seat occupancy status, which needs to be filled.\n\nBased on the main problem discussed in the problem statement, there is a need of inventing better, efficient, and convenient ways of saving time and energy to enhance academic services and excellence. Since technology is growing continuously, we should embrace it and advance with it too. As a result, several contemporary technologies have been developed to integrate library seats with smart devices that enable library users to locate the study sections with open seats, thus resolving the issue of seat availability or reservation. Most commonly, these technologies make use of Internet of Things (IoT) and wireless sensor networks. The below Table 1 shows a summary of different research methods, their results, research gaps and similarities on smart library seat occupancy and reservation systems as explained above under the heading named gaps in the literature. Table 1 content described as follows:\n\nReference source - displays the names of the author(s) involved in the research study\n\nResearch problem \u2013 shows the research problem that the author(s) were trying to solve.\n\nResearch methods \u2013 a list of all the research methods the authors used to address the specific research problem.\n\nResearch result \u2013 demonstrates the solution the authors came up with for the issue they identified.\n\n**TABLE/FIGURE 1**\n\n**Table 1.** Summary of different research methods, their results, research gaps and similarities.\n\n{{TABLE:tbl_01}}\n\nResearch gap(s) and similarity/difference \u2013 displays the remaining gaps surrounding the topic, what still needs to be done, how their research differs from and is comparable to the current research.",
+          "citations": [
+            "W2972034143",
+            "W2779923088",
+            "W2473221413",
+            "W2982544780"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "32",
+            "6"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section begins with a study of the Internet of Things and its characteristics before highlighting the shortcomings of the present smart library systems using IoT technology. This will assist identify the gap that exists in the systems already in use. Before illustrating the quality of seat occupancy and reservation, a description of SA university library operations, smart systems, and IoT-based smart library systems is given. By highlighting the gap in the literature, outlining the shortcomings of the current seat occupancy and reservation systems, and concluding with a summary of the chapter, related works are accessed to provide a thorough understanding of the IoT-based smart library seat occupation and reservation systems currently in use.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Review planning and research methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 The systematic literature review (SLR)",
+          "subsubsections": [],
+          "text": "A systematic literature review (SLR) was conducted to find out what other researchers found about the smart library seat occupancy and reservation systems. A SLR concentrates on an analysis of several investigations within a particular field of research [W2885869279]. It is also a method for locating, analyzing, and synthesizing all data pertinent to a specific research question, topic, or phenomenon of interest [UNMAPPED:39]. Additionally, SLR is an approach that streamlines the steps involved in compiling, categorizing, and rating literature in a review area [W3013121990, W3154271163]. Based on the goal of this investigation, which is to identify relevant results in current research and make recommendations for future research, a systematic review was deemed appropriate in this study [W2740749042]. Systematic reviews are becoming more and more prevalent across all disciplines and in sectors that combine IT and Academia [W1913753907]. Professionals and academics utilize systematic reviews to keep current in their disciplines, as a foundation for creating technology guidelines that can be applied to other sectors such as libraries [W4294215472]. It is therefore utilized as a tool for finding, assessing and interpreting research pertinent to a certain research issue or an area of interest. By highlighting gaps and outlining potential research subjects, a systematic review can considerably advance our understanding of a certain field of study [W3133828817]. Researchers that use this strategy must follow the principles and recommendations of systematic reviews [UNMAPPED:39]. The systematic review will be highly efficient if it is started utilizing a strategy to find, select, and evaluate the pertinent literature [UNMAPPED:46]. According to Boell and Cecez-Kecmanovic [W2501157161], the systematic procedure should be rigorous, clear, objective, and repeatable.\n\nThe structured methodology Watson [W4241437650] suggested, which explicitly lays out the procedures and techniques for literature searching, provides the foundation for this systematic review. The process of a systematic review protocol consists of the following phases: planning, execution, and reporting. During the planning stage, rules and criteria are implemented, such as determining the necessity of a systematic review, creating a categorization framework, formulating research questions, and formulating research methodologies. The execution process covers the methods of identifying a trustworthy data source for the research questions; conducting a search strategy; conducting the study process; choosing pertinent primary studies (using inclusion and exclusion criteria); evaluating the quality of the studies; and extracting the data. This research's reporting phase comprised categorization of the chosen articles and discussion of the findings. Figure 2 describes the procedures, regulations, and standards followed for this systematic review.\n\nIn research a systematic review finds, groups, synthesizes a comparative approach of enquiry, and promotes information transfer [W2885869279]. To achieve this, the researcher reviewed existing research papers, articles, book chapters and journals related to this topic. The questions for the research determining the emphasis and the paper's objectives are listed. Then, an SLR approach is used, which entails planning, carrying out, and recording the issue at hand. This section provides a summary of the planning and conducting phases that were used to carry out this. Finally, the study clearly explains the procedure for reviewing the data and protocol.",
+          "citations": [
+            "W2885869279",
+            "W3013121990",
+            "W3154271163",
+            "W2740749042",
+            "W1913753907",
+            "W4294215472",
+            "W3133828817",
+            "W2501157161",
+            "W4241437650"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "39",
+            "46"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Planning phase",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1 Determining the necessity of a systematic review",
+              "parent_subsection_id": "s_3_2",
+              "text": "Identifying the needs for the systematic review is the first step in the planning phase. The demand for researchers to thoroughly and objectively summarize the information already available about a phenomenon gives rise to the need for a systematic review. Even though there is ongoing study on the roles, advantages, and difficulties of IoT-based smart libraries. To our knowledge, no systematic review has, however, summarized these research results and offered a thorough overview of the research and practice on this subject.\n\n**TABLE/FIGURE 2**\n\n**Figure 2.** Systematic review phases.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2 Creating a categorization framework",
+              "parent_subsection_id": "s_3_2",
+              "text": "The creation of the research review procedure, which serves as a foundation for understanding the current theoretical and practical perspectives on the subject, is the second step of the planning stage. The review protocol for this study details the procedures followed to conduct a particular systematic review. To prevent researcher bias, a predetermined protocol is required. Without a procedure, for instance, the choice of certain studies or the analysis may be influenced by researcher expectations. IoT is used in many different professions. Henceforth, it was required to review only the research data that were currently available and relevant to the issue covered by the study.\n\nThe following procedure was followed:\n\nThe study-related basic search phrases were compiled into a list. These key phrases were derived from the research topic of the study. IoT-Based seat occupancy and reservation, seat reservation, seat occupancy, and seat monitoring in the context of smart libraries were the keywords.\n\nThis process incorporated the identification and comparison of different smart library seat occupancy, monitoring, and reservation systems and their weaknesses. It helped the researcher to discover about the current operations on seat occupancy and reservation systems in SA libraries and the gaps that still need to be filled. To discover, compare, and characterize current investigations in the SLSRS, this study examined 14 articles published between 2016 and 2022.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.2.3 Formulating research questions",
+              "parent_subsection_id": "s_3_2",
+              "text": "A systematic review's third planning phase, which is also regarded as being one of the most important, is defining the research questions [W3154271163]. When it is able to respond to the research questions, a systematic review succeeds in its objectives [W2740749042]. The following research questions were put out for this systematic review study:\n\n- What are the benefits of IoT-Based smart library seat occupancy and reservation systems?\n- What are the existing technologies and methodologies that enable IoT-Based seat occupancy and reservation in smart libraries?\n- What are the main unresolved problems, potential developments, and difficulties in IoT-based smart library seat occupancy and reservation systems?",
+              "citations": [
+                "W3154271163",
+                "W2740749042"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.2.4 Formulating research methodologies",
+              "parent_subsection_id": "s_3_2",
+              "text": "The fourth phase of planning is the definition of article selection techniques. The goal of article selection strategies is to locate the primary studies that directly address the research issue. Although they may be improved during the search process, techniques for article selection should be determined upon during the protocol definition to lessen the probability of bias [W3013121990]. An integrated search approach was used in this step to cover both a thorough automated search of several internet databases and a manual examination of the chosen articles.\n\nThe online databases considered for this systematic review are ACM, Emerald, IEEE, Science Direct, Springer, Taylor and Francis. Additionally, appropriate filtering procedures were applied for each selected database to limit the research findings and reduce duplication [W1986353642]. The broad manual review technique was used for the manual review, which comprised examining each research article's title and abstract first [W2169090881] before reading the complete text of the papers that were chosen to be excluded.\n\nThe backward snowball method was utilized to find items that were missed by the earlier techniques in addition to the extensive automated search and manual assessment. To find new publications, this method used a reference rundown [W1975675278]. The first step in the backward snowballing technique was to check the reference list and eliminate any papers that did not meet the important research requirements, including language, peer-review status, publication year, and type of publication. The remaining papers were then included in the study after the duplicate articles had been eliminated.\n\nTo be included in this research, research studies, research articles and papers were included or excluded in terms of the criteria listed as follows in Figure 3. The chosen studies had to meet all inclusion criteria, with none of the exclusion criteria having been met. These criteria make ensuring that the literature taken into account in the systematic review is pertinent to the study, which helps to provide conclusions that are more precise, impartial, and meaningful. These criteria lower the possibility of bias and errors if they are established and applied correctly. Applying eligibility criteria consistently prevents irrelevant studies from being included in reviews, which can result in conflicting findings.\n\n**TABLE/FIGURE 3**\n\n**Figure 3.** Inclusion and exclusion criteria.",
+              "citations": [
+                "W3013121990",
+                "W1986353642",
+                "W2169090881",
+                "W1975675278"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Execution phase",
+          "subsubsections": [],
+          "text": "The planning phase's tactics were applied during the execution phase to choose pertinent articles for the study. The process of a systematic review execution protocol consists of the following steps: identifying a trustworthy data source for the research questions; conducting a search strategy; conducting the study process; choosing pertinent primary studies (using inclusion and exclusion criteria); evaluating the quality of the studies; and extracting the data, respectively entailing the following. The rigor of adhering to a pre-established procedure and specific search technique, according to Boell and Cecez-Kecmanovic [W2501157161], makes systematic review an effective method. Although Watson admits that effectiveness is crucial in research, he also contends that efficiency is vital. He claims that effectiveness is attained through \"synthesizing the literature and revealing the depth of knowledge on an area's critical key concepts and the relationships between these concepts\" ([W4241437650], p. 185). The main procedures used in the study are described below:\n\nThe next sections outline how each step of SLR was carried out to fulfill the set objectives of this study. Figure 4 Provides a summary of the application of the SLR steps.\n\n**TABLE/FIGURE 4**\n\n**Figure 4.** Summary of the application of the SLR steps.\n\n**Step 1: identifying data sources**\n\nUsing Google Scholar as the primary search engine and relying on well-known academic publishers like ACM, Emerald, IEEE, Science Direct, Springer, Taylor and Francis (listed in Figure 5), the researcher investigated the benefits, limitations, potential developments and challenges using the search string of \"IoT-Based seat occupancy and reservation, seat reservation, and seat monitoring in the context of smart libraries.\"\n\n**TABLE/FIGURE 5**\n\n**Figure 5.** Databases included.\n\n**Step 2: Search strategy**\n\nUtilizing specific search phrases from well-known literature in the field of study is the first step in the continual process of identifying search terms [W3154271163]. When all of the well-known articles have been located using the aforementioned guidelines, the process is complete. The study's chosen databases include sophisticated search capabilities that let users combine pertinent search terms. The study-related basic search phrases were compiled into a list. The following search terms were discovered in this research study: \"IoT-Based seat occupancy\" OR \"IoT-Based seat reservation\" OR \"seat reservation\" OR \"smart library seat occupancy\" OR \"seat monitoring\" OR \"seat occupancy\" AND \"benefits\" OR \"advantages\" AND \"methodologies\" AND \"functionality\" (Table 2).\n\n**TABLE/FIGURE 2**\n\n**Table 2.** Review search results with search strings.\n\n{{TABLE:tbl_02}}\n\nSeveral filters were used in this study, including those for the research area (CS, CSI informatics, and IT), year of publication (2016 to 2022), document type (journal articles, conference papers), and language (English).\n\n**Step 3: Study process**\n\nThis process incorporated the identification and comparison of different smart library seat occupancy, monitoring and reservation systems and their weaknesses. It helped the researcher to discover the nature of the current operations on seat occupancy and reservation systems in SA libraries and the gaps that still need to be filled. To discover, compare and characterize current investigations in the IoT-SLSRS, this study examined articles published between 2016 and 2022. To improve the research outcomes, filtering technologies were used when searching the web databases [W4294215472].\n\n**Step 4: Choosing pertinent primary studies (using inclusion and exclusion criteria)**\n\nTo ensure that only pertinent papers and other printed sources were used in this study, sources were selected by means of the following broad guidelines, whilst inclusion and exclusion criteria were also identified:\n\n- Only online databases' retrievals of English-language research papers in the form of journals, workshops, conference proceedings and book chapters were considered. The reason being that English is a standard communication language across the world.\n- Journal articles were restricted to those that were published between 2016 and 2022. This was done to guarantee that the investigation would utilize current, accessible data.\n- Papers that either lacked a clear connection to IoT-Base smart library seat occupancy and reservation, had no connection to the research question, or whose full texts were unavailable, were excluded.\n- Duplicate reports of the same study were removed. In cases of multiple versions of an article, only the entire version was added, leaving the others out.\n- Articles had to fall into the subject areas of Informatics, Information Technology (IT) as well as Computer Science (CS). This criterion was used to guarantee that the results would be based only on publications from relevant subject areas that acknowledge IoT and its applications in the smart library context. Only those that afford library users with the advantage to view seat occupancy status and reserve seats at their places of comfort.\n- The citation information, along with the abstract and keywords, were chosen as part of the dataset extraction process.\n\n**Step 5: Evaluating the quality of the studies**\n\nThe quality score was utilized in this study to examine whether there was a relationship between the primary study's findings and the study's quality. The study also looked at whether certain particular quality parameters, such as sample size and validation method, were linked to the main finding of the study. To reduce bias and increase the validity of the systematic review, it is crucial to evaluate the quality of the primary relevant studies after choosing them. As a result, quality standards were applied to the 14 remaining items. To make sure that study concepts and methodologies were honored, the chosen studies were evaluated in terms of scientific diligence, reliability, accuracy, and appropriateness. The conclusions were examined to determine whether they were focused, unique, relevant, and helpful for upcoming scholars, professionals, and businesses. To provide important and worthwhile contributions to the scholarly community, these requirements were crucial. The chosen studies were grouped based on their primary study objectives, approaches, contributions, and outcomes. This category aids in locating, extracting, classifying, and synthesizing data in response to research questions. The current review chapter was conducted from March 3rd, 2023, to July 30th, 2023, in accordance with the planning phase's specified research procedure. In the initial search using the specified keywords, 983 articles were found. The final 14 research articles satisfied the quality evaluation criteria after completing all the filtering methods described in this stage.\n\nThe ultimate number of papers chosen for the current review study is shown in Table 3. Particularly, 983 distinct articles were found based on the initial search procedure (keywords). Filters were used to restrict the number of articles to 576. The next step was a manual review by the researchers to find any papers not pertinent to the study. The researchers concentrated on papers that were closely connected to the subject of this research, both conceptual and empirical, during this approach. 510 articles were thus dropped, while 66 were kept as a result. The researchers then read the entire paper, focusing on particular criteria such as the aims, the research questions, the description of the data that was gathered, the methodology employed, the approach used to analyze the data, and the presentation of the findings. After reading the complete articles, another 54 were eliminated because they were deemed unimportant, leaving only 12. Then, using the backward snowball method, 8 more articles were added, bringing the total to 20 articles. Finally, 6 papers were eliminated following a review based on the quality evaluation criteria, bringing the total number of publications for analysis down to 14.\n\n**TABLE/FIGURE 3**\n\n**Table 3.** Review search results.\n\n{{TABLE:tbl_03}}",
+          "citations": [
+            "W2501157161",
+            "W4241437650",
+            "W3154271163",
+            "W4294215472"
+          ],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Reporting phase",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.4.1 Categorization of the chosen articles",
+              "parent_subsection_id": "s_3_4",
+              "text": "##### 3.4.1.1 Article distribution by year of publication\n\nThe earliest reports on the use of IoT in the libraries date back to 2016 (see Figure 6). The year 2019 saw the publication of the most articles (6), while the year 2016, 2017, and 2020 have the least publications (only 1 each year). The fact that most of the articles were released between 2021 and 2022 indicates that this research field has recently attracted attention.\n\n**TABLE/FIGURE 6**\n\n**Figure 6.** Number of articles published per year.\n\n{{TABLE:tbl_04}}\n\n##### 3.4.1.2 Database distribution of articles\n\nThe distribution of the chosen articles by database source is shown in Figure 7. There were 6 publications found in the IEEE database, 5 in the ACM Digital database, 0 in the Taylor and Francis database, 3 in the Emerald database, and 0 in the Science Direct database.\n\n**TABLE/FIGURE 7**\n\n**Figure 7.** Distribution of articles per database.\n\n{{TABLE:tbl_05}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_04",
+                "tbl_05"
+              ],
+              "citations_unmapped": [
+                "6"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Research discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Element 1: benefits",
+          "subsubsections": [],
+          "text": "The advantages that libraries can obtain from employing seat occupancy and reservation systems are tied to this element. Time and energy saving, real-time occupancy status, real time seat reservation, increased flexibility, simple and easy to use are some of the advantages it offers to library users [W2982544780, W3210549090, W2923904230, W3003270949]. Additionally, it provides library staff with advantages such as strategic decision making, develop efficient and effective environment, extracting reports and reducing manual effort (see Table 4) [W2982544780, W3210549090].",
+          "citations": [
+            "W2982544780",
+            "W3210549090",
+            "W2923904230",
+            "W3003270949"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 Element 2: functionalities",
+          "subsubsections": [],
+          "text": "Functionalities, in the context of this study, refer to the features that libraries receive through the adoption and use of IoT-based seat occupancy and reservation systems. The systems allow library users to check the status of the library anywhere and at any time, utilizing their mobile phones or any device with Internet access reducing manual efforts. They ensure that reserved seats in the library study area are secured and that users can reserve seat according to their preference. Everyone is allowed to view the library status and check the availability of seats, but only registered students are allowed to reserve their library seats [W2982544780, W3210549090, W3003270949]. These systems act as a medium between the library users and the library staff (librarian). The library staff would have the ability to register new library users, view seat occupancy status and produce detailed reports (see Table 4).\n\n**TABLE/FIGURE 4**\n\n**Table 4.** Library seat occupancy and reservation systems benefits and functionalities.\n\n{{TABLE:tbl_06}}",
+          "citations": [
+            "W2982544780",
+            "W3210549090",
+            "W3003270949"
+          ],
+          "tables_in_text": [
+            "tbl_06"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3 Element 3: methodologies",
+          "subsubsections": [],
+          "text": "The IoT-based seat occupation and reservation systems are discussed in detail in this Chapter, illustrating various IoT-based seat occupation and reservation systems using different IoT technologies. These IoT methodologies include LBPH face recognition algorithm, Thing Speak channel, Up-squared board, ultrasonic sensor, Thing Speak cloud, SQLite Studio database, Python, RFID, FSR, Raspberry-Pi, Wi-Fi Module, Node MCU, PHP API and capacitance sensor chip. To establish the seat occupancy and rank the options, some approaches used a single procedure, such as the capacitance sensor technology. A combination of methods, including RFID and FSR, were used by other authors to identify the seat occupancy. To find out how many seats were occupied, researchers used a face recognition system, an ultrasonic sensor, and other tools. The gap in the literature is discussed and the shortcomings of these IoT-based reservation and seat occupation systems are highlighted. The adoption of mixed methods enhances performance. Other studies employed RFID and FSR. While FSR detects seat occupancy and transmits the information to the network layer, RFID is responsible for identifying authorized users who made a specific seat reservation (Table 5).\n\n**TABLE/FIGURE 5**\n\n**Table 5.** Smart library seat occupancy and reservation systems methodologies and future research.\n\n{{TABLE:tbl_07}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_07"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Delimitation",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The focus of the study was based on a smart library seat occupancy and reservation system, which affords students and staff with the advantage to check library seat availability status and reserve seats online. Consequently, the study excludes other library management systems providing support for teaching and learning activities such as obtaining and reserving library books. To ensure that only pertinent papers and other printed sources were used in this study online databases'retrievals of English-language research papers in the form of journals and conference proceedings were considered. Journal articles were restricted to those that were published between 2016 and 2022 and papers that either lacked a clear connection to IoT-Base smart library seat occupancy and reservation, had no connection to the research question, or whose full texts were unavailable, were excluded. Duplicate reports of the same study were removed. In cases of multiple versions of an article, only the entire version was added, leaving the others out. Articles had to fall into the subject areas of Informatics, Information Technology (IT) as well as Computer Science (CS). Only those that afford library users with the advantage to view seat occupancy status and reserve seats at their places of comfort. The citation information, along with the abstract and keywords, were chosen as part of the dataset extraction process.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this chapter, a systematic literature review was conducted to find out what other researchers found about the Seat occupancy and reservation systems. This process incorporated the identification and comparison of different smart library seat occupancy and reservation systems and their weaknesses. It also helped the researcher to discover about the current operations on seat occupancy and reservation systems in libraries and the gaps that still need to be filled. In addition, previous research that describes characteristics of smart library, highlighting the advantages and disadvantages was explored to further understand real context and the methods that can be used to solve the current seat occupancy and reservation challenge was identified.\n\nTo achieve this, the researcher reviewed previously researched papers, articles and journals related to IoT-based seat occupancy and reservation systems.\n\nThe IoT-based seat occupation and reservation systems are discussed in detail in this Chapter, illustrating various IoT-based seat occupation and reservation systems using different IoT technologies. These IoT methodologies include LBPH face recognition algorithm, Thing Speak channel, Up-squared board, ultrasonic sensor, Thing Speak cloud, SQLite Studio database, Python, RFID, FSR, Raspberry-Pi, Wi-Fi Module, Node MCU, PHP API and capacitance sensor chip. To establish the seat occupancy and rank the options, some approaches used a single procedure, such as the capacitance sensor technology. A combination of methods, including RFID and FSR, were used by other authors to identify the seat occupancy. To find out how many seats were occupied, researchers used a face recognition system, an ultrasonic sensor, and other tools. The gap in the literature is discussed and the shortcomings of these IoT-based reservation and seat occupation systems are highlighted. The adoption of mixed methods enhances performance. Other studies employed RFID and FSR. While FSR detects seat occupancy and transmits the information to the network layer, RFID is responsible for identifying authorized users who made a specific seat reservation.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_7",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4388574516_tables.md"
+}

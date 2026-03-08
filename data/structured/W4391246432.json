@@ -1,0 +1,208 @@
+{
+  "id": "W4391246432",
+  "metadata": {
+    "title": "Superspreading of SARS-CoV-2: A Systematic Review and Meta-Analysis of Event Attack Rates and Individual Transmission Patterns",
+    "n_sections": 5,
+    "n_subsections": 5,
+    "n_subsubsections": 0,
+    "n_tables": 4
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Keywords",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "coronavirus; COVID-19; transmission; heterogeneity; infectious disease epidemiology",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Following the emergence of SARS-CoV-2 in late 2019, the virus spread worldwide, resulting in the coronavirus disease (COVID-19) pandemic [W3209240997]. Understanding drivers of SARS-CoV-2 transmission was crucial for formulating control measures, especially prior to the development of vaccines. Early in the pandemic, heterogeneity in transmission, particularly superspreading, was investigated because of its ability to cause large outbreaks [W3055859021, W3087356468, W3008721669]. Superspreading involves two distinct but non-mutually exclusive phenomena: a setting where many people become infected due to an environment conducive to transmission (e.g., crowded indoor settings), and individuals who are outliers in the number of secondary cases they infect, due to biological heterogeneity in infectiousness and/or high-risk behaviors [W3162298607, UNMAPPED:6]. Both phenomena have garnered considerable attention in the literature. For example, over 140 individuals were infected during a Christmas event in Belgium in December 2020, causing over 26 deaths [W3132480196]. Likewise, one individual infected dozens of people during a choir practice in Washington, USA, in March 2020 [W3025773241].\n\nBecause superspreading events contributed substantially to local and global SARS-CoV-2 transmission [W3094114492], public health interventions were enacted to reduce their risk of occurrence. These interventions included school closures, limitations on indoor gatherings, and restrictions on visiting hospitalized patients or long-term care facilities. Many of these policies were based on limited data from early in the pandemic. Moreover, published systematic reviews and modeling of SARS-CoV-2 superspreading from this period were limited in scope and did not adequately address the dual nature of superspreading. For example, studies of setting-specific transmission rates have focused on household and healthcare transmission or geographic and temporal trends [W3055859021, W3128027648, W4250659605, W3194829845, W3092593049], but did not address transmission heterogeneity across other social settings. Previous meta-analyses of individual-level superspreading included only a small number of papers (<26) that calculated overdispersion in transmission, missing the majority of published transmission trees and capturing data primarily from Asia [W3197037893, UNMAPPED:14]. Early investigations of individual-level characteristics related to superspreading were also limited by incomplete contact tracing [W4283728834, W4285012226] and a focus on clinical over demographic characteristics [W4283728834]. A more complete summary of superspreading is needed to understand the scale of transmission heterogeneity across settings and identify causes of individual heterogeneity.\n\nThe objective of this review was to summarize global heterogeneity in SARS-CoV-2 transmission events prior to widespread vaccination and the role of environmental and individual factors in superspreading. Specifically, this review aimed to identify: 1) which settings had the highest attack rates; 2) the individual offspring distribution for SARS-CoV-2; and 3) the characteristics of superspreading individuals.",
+      "citations": [
+        "W3209240997",
+        "W3162298607",
+        "W3132480196",
+        "W3025773241",
+        "W3094114492",
+        "W3197037893",
+        "W4283728834",
+        "W4285012226"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "6",
+        "14"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "Literature Search and Data Extraction",
+          "subsubsections": [],
+          "text": "We conducted this systematic review and meta-analysis according to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) 2020 statement [W4236476849]; see Appendix 1 for the PRISMA checklist. We included all studies of SARS-CoV-2 that contained data on: 1) transmission chains; 2) numbers of index cases, contacts, and infected contacts; 3) numbers of index cases and infected contacts; or 4) secondary attack rates, i.e., number of infected contacts divided by number of contacts. We excluded studies that were not about humans. A clinical informationist searched PubMed, the WHO COVID database, the I Love Evidence COVID database, and Embase on 9 September 2021. No restrictions on language or start date were applied. Results were imported into EndNote X9 (Clarivate, London, UK) where duplicates with exact matches in the author, year, and title fields were removed. Team members screened titles and abstracts and performed full text review in Covidence (Veritas Health Innovation, Melbourne, Australia).\n\nWe extracted data using a pre-designed, study-specific spreadsheet, collecting information on paper metadata and target variables for transmission events and individual index cases (Table 1). Events were defined as discrete transmission events where secondary attack rates for defined groups of people could be calculated as the number of infected cases divided by the total number of exposed individuals. This definition of secondary attack rates includes both clinical and subclinical infections in some studies. Due to the limited details published in the literature, we did not attempt to distinguish events associated with individual transmission chains from a single source (potentially with confirmatory sequencing data) from events that aggregated multiple transmission chains together. In lieu of this distinction, we separated events into different settings and by the duration of the event (i.e., exposure window, in days) reported in each paper. Twelve event types were chosen to classify each event/setting described in a paper (Table 2). To describe individual contributions to transmission, we extracted data on index cases for whom contacts were followed to identify secondary transmission. We only entered data from papers where it was clear from the methods that contact tracing was done for at least one week to capture secondary transmission from individual index cases. For studies that did not report SARS-CoV-2 variants, we imputed the dominant variant from CoVariants data for the country and time period of interest [UNMAPPED:19]. See the Supplementary Material for additional details on the identification of papers, data extraction (Supplementary Tables S2\u2013S3), and assessment of study bias.",
+          "citations": [
+            "W4236476849"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "19"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "Statistical Analyses",
+          "subsubsections": [],
+          "text": "Descriptive analysis of event data included the number of each event type, starting year of the data, focal countries, diagnostic methods, event duration, and level of missingness for all variables. Because not all individuals potentially exposed during an event were tested in each study, secondary attack rates for individual events were calculated separately using the total number of exposed individuals or the total number tested. If either of these quantities were missing, the value was imputed based on the value present (i.e., assuming the number tested was equal to the number exposed or vice versa). Sensitivity of results to this choice of denominator was assessed in the meta-analysis of events (see Supplementary Material).\n\nMeta-analysis was performed on secondary attack rates across event types using the metafor package in R v4.2.2 [W2139168999]. We converted secondary attack rates for each event to Freeman-Tukey double arcsine transformed proportions [W3044366033] and calculated the sampling variance. We fit a hierarchical model with a nested random effect for event within study and no fixed effects to assess the heterogeneity in secondary attack rates attributable to these factors using restricted maximum likelihood. We calculated *I\u00b2*, the percentage of variance attributable to true heterogeneity, for each random effect [W2531477340] and used Cochran's *Q* test to test if estimated heterogeneity in secondary attack rates was greater than expected from the sampling error alone. We then fit additional mixed-effects models that included the same random effects but also event type and event duration as fixed effects. Cochran's *Q* was performed on these models to assess whether residual heterogeneity in secondary attack rates was greater than expected after accounting for sampling error and fixed effects. Fitted coefficients and 95% confidence intervals (CI) from meta-analysis were back-transformed to proportions using the geometric mean of the tested individuals across all studies in each event type [W3044366033].\n\nThe overall distribution of secondary cases generated by index cases was fit to a negative binomial distribution, following Lloyd-Smith et al. [W2069251911]. We estimated the percentile of index cases producing 80% of all secondary infections using a formula and code from Endo et al. [W3015538318]. Based on the availability of demographic characteristics and other features of index cases in the literature, we examined differences in distributions of secondary cases produced by index cases according to sex, presence/absence of symptoms, age, real-time PCR cycle threshold (Ct) value, and the total number of contacts each index case had. Additional statistical tests compared these listed factors between \"superspreaders\" (index cases with >5 secondary cases, following Adam et al. [W3087356468]) and \"non-superspreaders\" (index cases with \u22645 secondary cases): Chi-square tests of proportions to compare the proportion of women, the proportion of symptomatic cases, and proportion of adults or across age bins; Student's *t*-tests to compare mean age and Ct value; and a Kruskal-Wallis test to compare the highly skewed distributions of total contacts among index cases. All statistical tests used \u03b1 = 0.05 as the statistical significance threshold.",
+          "citations": [
+            "W2139168999",
+            "W3044366033",
+            "W2531477340",
+            "W2069251911",
+            "W3015538318",
+            "W3087356468"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Study Selection",
+          "subsubsections": [],
+          "text": "We identified 13,632 articles from the four databases searched, representing 8,339 unique references (Figure 1). Of these, we excluded 7,358 records during the abstract review. For the 981 records that underwent full text review, we excluded 384 records that were reviews or letters to the editor without data, contained no data on our variables of interest, or were duplicate records (preprints, true duplicates, or duplicated datasets). A total of 598 papers were assessed for eligibility for data extraction and a further 107 papers were excluded that did not contain data on our outcome variables of interest or were duplicates (Figure 1). We extracted data from 491 studies: 232 studies provided event data only, 195 studies provided individual index case data only, and 64 studies provided both data types, yielding evidence from 592 distinct events and 9,883 index cases. The 491 analyzed studies were from 67 countries, with most from China (26%), the USA (17%), and South Korea (5%) (Supplementary Figure S1A). Although our search included two-thirds of 2021, nearly all studies covered data from 2020 (94% of events, 99% of index case symptom onset or positive test dates).\n\n**TABLE/FIGURE 1: PRISMA Flow Diagram**\n\n**Figure 1. PRISMA flow diagram for the systematic review and meta-analysis of SARS-CoV-2 superspreading reported in the published literature.** *There were 4 types of data that we sought to include: 1) transmission chain; 2) number of index cases, number of contacts, and number of infected contacts; 3) number of index cases and number of infected contacts; or 4) secondary attack rate. **Languages other than Spanish, Chinese, French, Turkish, German, and Portuguese.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Heterogeneity in Event Secondary Attack Rates",
+          "subsubsections": [],
+          "text": "Event data were most commonly from the USA (27%), China (15%), the UK (8%), and South Korea (6%) (Supplementary Figure S1B). Published papers were missing information on many variables that we aimed to extract about events (Supplementary Figure S2A). Of the 46 target data fields from articles about events, 17 had high data completeness (>80%), including those for the study and event metadata, event description, time period of the event (describing the start and end dates of exposure), location of the event (country and state/province or city), and number of exposed individuals and secondary cases (Supplementary Table S3). Event durations were highly skewed, with a median duration of 34 days and an interquartile range of 13\u201360 days (Supplementary Figure S3). Studies used a variety of diagnostic methods to identify SARS-CoV-2 cases, though PCR was the dominant method (Supplementary Figure S4A). Other approaches included antigen tests, retrospective case identification by serology, diagnosis via symptoms or chest tomography in early papers, or a mixture of approaches. Because most studies covered events prior to emergence of variants, most events (N = 532, 90%) likely involved only wild-type/ancestral SARS-CoV-2, while 14 events involved Alpha, six Beta, eight Delta, and 31 likely included a mixture of variants (e.g., during periods of variant emergence and replacement of the dominant variant).\n\nSecondary attack rates varied substantially within and among event types (Figure 2). Interquartile ranges of attack rates were lower for transport (0\u201311%), hospital/healthcare (1\u201320%), and mixed events (3\u201312%), whereas congregate housing (9\u201363%), households (15\u201360%), social venues (8\u201353%), and cruise ships (9\u201341%) had higher heterogeneity, with some events reporting attack rates of 100% (Table 2). Meta-analysis of secondary attack rates including a nested random effect for event within study detected significant heterogeneity in secondary attack rates (*I\u00b2* = 99%, Cochran's *Q*<sub>E,591</sub> = 141,765, *P* < 0.0001). The random effect for study accounted for most of the heterogeneity (*I*<sub>study</sub>\u00b2 = 58%), followed by event nested within study (*I*<sub>event</sub>\u00b2 = 41%). Addition of a fixed effect for event type to the model indicated that secondary attack rates varied significantly across event types (Cochran's *Q*<sub>M,11</sub> = 122, *P* < 0.0001). Mean secondary attack rates from meta-analysis were lowest for shopping (0%), hospitals and healthcare (6%), transportation other than cruise ships (9%), and schools (11%) (Figure 2). Comparatively, estimated mean attack rates were two to three times higher (25\u201335%) in nursing homes, cruise ships, households, and other congregate housing settings (e.g., homeless shelters, prisons). Models including event duration and an interaction term between event type and event duration as additional fixed effects found similar levels of heterogeneity (Cochran's *Q*<sub>M,23</sub> = 135, *P* < 0.0001) and identified a common trend of decreasing attack rates with longer event durations across different event types, with the exception of cruise ships and shopping (Supplementary Figure S5).\n\n**TABLE/FIGURE 2: Secondary Attack Rates by Event Type**\n\n**Figure 2. SARS-CoV-2 secondary attack rates across 12 event types occurring between December 2019 and August 2021 reported in the literature across 592 events from 296 studies.** Individual event data secondary attack rates are shown as grey bubbles, varying in size according to the total number of individuals exposed and tested from the event. Median secondary attack rate for each event type is shown as red circle with a line representing the interquartile range; values are in red on the right side of the figure. Meta-analysis estimated secondary attack rate for each event type is shown as an orange diamond with a line representing the estimated 95% confidence interval; values are in orange on the right side of the figure. Event types were ranked by increasing estimated mean secondary attack rate along the left axis.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "Heterogeneity in Transmission Across Individual Index Cases",
+          "subsubsections": [],
+          "text": "Individual index case data with offspring distributions overwhelmingly came from China (36%) and India (35%) (Supplementary Figure S1C). Index case data exhibited higher missingness compared to events (Supplementary Figure S2B): of the 74 data fields that we extracted for individual index cases, the highest completeness (>60%) was seen for study and index case numbers, location of the index case (country and state/province or city), total number of contacts infected, method of testing for the index case and contacts, and SARS-CoV-2 variant (Supplementary Table S4). We identified five key characteristics of index cases that could be related to superspreading, though most of these were also missing from the published literature: 46% of cases included data on age, 48% on sex, 10% on presence/absence of symptoms, 6% on total number of contacts, and only 2% had Ct values reported. A total of 5,437 index cases (55%) contained data on at least one of these five variables. Diagnostic methods for identification of individual index cases and their associated secondary cases were only reported in 61% of cases, with PCR as the primary approach (Supplementary Figure S4B,C). The majority of index cases (N = 8,565, 87%) were assumed to be infected with wild-type SARS-CoV-2 based on location and timing of the study or test confirmation date. A mixture of variants was likely in 1,282 cases (13%), while one index case was reported with Alpha, two Beta, 11 Delta, and 22 Epsilon.\n\nMost index cases (67%) did not transmit SARS-CoV-2 to another person and 17% transmitted to only one other individual (Figure 3). There were 287 \"superspreaders\" with >5 contacts infected, representing 3% of index cases from the included studies. The distribution of secondary infections fit a negative binomial distribution with a mean of 0.88 (CI: 0.84\u20130.92) and a dispersion parameter *k* of 0.27 (CI: 0.25\u20130.28). Using the formula from Endo et al. [W3015538318] and the estimated mean and *k* for the negative binomial distribution, the top 17% most infectious index cases would be expected to generate 80% of all secondary cases.\n\n**TABLE/FIGURE 3: Distribution of Secondary Cases**\n\n**Figure 3. Distribution of secondary contacts infected by individual index cases (N = 9,591) for SARS-CoV-2 cases occurring between December 2019 and July 2021 reported in 259 studies.** The black line shows the fit of the distribution to the expected negative binomial distribution. The inset shows a portion of the same data to highlight the distribution of superspreaders (index cases with >5 secondary cases).\n\nWe observed substantial differences between superspreaders and non-superspreaders (Table 3). The proportion of index cases with reported symptoms was higher in superspreaders (89%) than non-superspreaders (76%; \u03c7\u00b2\u2081 = 5.4, *P* = 0.02). Superspreaders had more than two times the mean number of contacts (79) compared to non-superspreaders (36; \u03c7\u00b2\u2081 = 56.6, *P* < 0.0001). Adults also made up a greater proportion of superspreaders (99%) than non-superspreaders (84%; \u03c7\u00b2\u2081 = 14.1, *P* < 0.0001). Index cases over 25 years of age were overrepresented among superspreaders and no superspreaders 12 years of age and under were reported (Figure 4). When age was analyzed as a continuous variable, the number of contacts infected and the frequency of superspreaders increased with age, up to around 60 years of age (Supplementary Figure S6). No significant differences by sex or Ct values were observed (Table 3). However, two adult male index cases produced the highest number of secondary infections, infecting 81 of their 104 contacts and 101 of their 300 contacts, respectively. The former was a lecturer in Tonghua, China [W3133964965] and the latter a fitness instructor in Hong Kong, China [W3160427005].\n\n**TABLE/FIGURE 4: Age Distribution of Superspreaders**\n\n**Figure 4. Comparison of the age distribution of superspreading index cases.** The bars show the percentage of individuals within an age bin across superspreaders (index cases with >5 secondary cases) and non-superspreaders. Numbers above the bars display the raw totals and percentages are shown in Table 3.\n\nSymptomatic cases had a higher mean number of infected contacts (2.1) compared to asymptomatic cases (0.7) (Table 4). The dispersion parameter *k* was higher for symptomatic cases than asymptomatic cases (0.43 vs. 0.11), indicating lower variance in the number of secondary cases produced by a symptomatic case. This variance is exemplified by the lower percentage of non-transmitters (44%) and higher percentage of superspreaders (9%) among symptomatic cases compared to asymptomatic cases (79% and 4%, respectively). Compared to other age groups, individuals aged 49\u201364 years had the highest mean number of infected contacts (1.2), lower variance (higher *k*, 0.43), and a higher percentage of superspreaders (3%). Data on total reported contacts showed a different pattern, with a higher mean number of infected contacts (8) as well as higher variance (lower *k*, 0.28) among index cases with >100 total contacts compared to individuals with fewer contacts. This was accompanied by a substantially higher percentage of superspreaders (28%) among individuals with >100 total contacts compared to individuals with 11\u2013100 contacts (19%) or those with 0\u201310 contacts (2%). Considering only symptomatic adults with a known number of total contacts (N = 129), the percentage of superspreaders was consistently smaller as the number of contacts decreased: 26% (5/19) for individuals with over 100 contacts, 24% (8/34) for those with 21\u2013100 contacts, 8% (2/24) for those with 11\u201320 contacts, and 0% for those with 10 or fewer contacts (0/52).\n\n**Table 1. Description of variables extracted from papers in the systematic review of SARS-CoV-2 superspreading from December 2019 to July 2021**\n\n{{TABLE:tbl_01}}\n\n**Table 2. Types of SARS-CoV-2 secondary transmission events occurring between December 2019 and August 2021 reported in the literature.** Heterogeneity across event types was assessed based on the variance and interquartile range of secondary attack rates. Outlier events were identified for each event type as events that exceeded the estimated upper confidence interval of the meta-analysis estimated SAR for that event type or were greater than 50%.\n\n{{TABLE:tbl_02}}\n\n**Table 3. Statistical comparisons of SARS-CoV-2 superspreaders to non-superspreaders based on features reported in the literature in 259 studies for cases occurring between December 2019 and July 2021.**\n\n{{TABLE:tbl_03}}\n\n**Table 4. Summary statistics describing the distribution of secondary cases among individual SARS-CoV-2 index cases occurring between December 2019 and July 2021 reported in the literature across 259 studies.**\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W3015538318",
+            "W3133964965",
+            "W3160427005",
+            "W3025773241"
+          ],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02",
+            "tbl_03",
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "79"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Superspreading is a key form of heterogeneity in transmission of numerous viruses, including SARS-CoV, MERS-CoV, SARS-CoV-2, Nipah, Ebola, and measles [W3197037893, W2069251911, W4235406775, W2103276281, W2943881668, UNMAPPED:14]. The potential for superspreading depends on the environment and social context of contact, as well as individual biological or behavioral factors that influence infectiousness. The existing literature on SARS-CoV-2 superspreading has done little to disaggregate this phenomenon into the distinct contributions of environment and individual characteristics.\n\nOur ranking of event types by attack rate reinforces our existing understanding of SARS-CoV-2 and other pathogens that transmit through the air, that transmission is more likely in dense indoor gatherings or close and frequent contact among co-living individuals, especially in households [W3094114492]. Published meta-analyses covering the early pandemic (pre-2021) estimated pooled household secondary attack rates of 17\u201321% [W3128027648, W3194829845, W3092593049, UNMAPPED:30, UNMAPPED:31], with household attack rates consistently higher than those in healthcare, work, or travel settings [W3128027648, W3092593049]. Our pooled household secondary attack rate over 115 events was 29%, higher than these earlier studies but similar to the 31% estimate from Madewell et al. [W3194829845] for studies covering July 2020 to March 2021. The higher value may be explained by the emergence of the Alpha and Delta variants and the larger second and third waves of the pandemic occurring in some countries during 2021.\n\nThe literature on SARS-CoV-2 transmission events rarely reported on the epidemiological context and characteristics of different populations exposed, which could help explain variation in attack rates. While the timing and location of events may help to explain some of the variation within event types, the remaining variation could depend on event duration (as shown by Supplementary Figure S5) and time spent indoors, types of activities occurring (e.g., exercise, singing) [W2921493711, W3184248326], varying interventions in place (e.g. masking requirements, physical distancing), and the age groups present at the event. For example, the age of individuals interacting in these contexts appears to also influence propensity for transmission, as evidenced by the large difference in attack rates within schools versus nursing homes. Children and adolescents are frequently found to have lower household infection risk than working age adults [W3194829845, W3092593049, W4285012226, UNMAPPED:31] and older adults have higher risk of infection and severe disease than younger ages [W3194829845, UNMAPPED:31]. In studies that assessed transmission among school-aged children, teachers, and their household contacts, attack rates among children at school were lower than among teachers and the household contacts of children and teachers [W3176301991, UNMAPPED:35]. Environmental factors such as humidity, room size, ventilation, and air flow [W3162298607] could also augment transmission across settings but these were very rarely reported in the literature.\n\nOur results also indicate substantial heterogeneity in the infectiousness of individuals, which is reflected elsewhere [W3155317409, W4225159506, W4380200158]. Analysis of index case demographics also highlights age as an important factor in SARS-CoV-2 transmission and superspreading. While age was only reported in 46% of index cases, nearly all superspreading individuals were adults and there were no reported superspreaders 12 years of age and under. Presence of symptoms was reported less frequently in the literature (10% of papers), but among the cases with data, symptoms were more frequent in superspreaders than in non-superspreaders. Individual and age-related heterogeneity in the amount and assortative patterns of social contacts likely influence superspreading as well. Evidence supports lower transmission from children compared to adults, but effect sizes have been small in some studies [W3128027648, W4285012226, W4225159506, UNMAPPED:30]. Remaining heterogeneity in individual infectiousness may derive from differences in genetic susceptibility [W3036779511, W3047913942], body size (accounting for age) [W3127661060], baseline lung volume and function [W4380200158], immunocompromising disease or co-infection [W3092264164, W3107586775], or the loudness and wetness of speech [W2921493711]. The relative importance of these characteristics to SARS-CoV-2 transmission at a population level are unknown and may be challenging to measure and report at scale. Future work on COVID-19 and other respiratory diseases should address these hypotheses.\n\nIt is clear from our analysis that SARS-CoV-2 exhibits pronounced individual heterogeneity of infectiousness, as evidenced by the degree distribution for index cases and the estimate of the dispersion parameter *k*. Our estimate of *k* (0.27, CI: 0.25\u20130.28) is within the range of previous estimates for a similar period of the pandemic, with values frequently in the range of 0.1\u20130.7 [W3087356468, W3197037893, W3015538318, UNMAPPED:14]. Caution should be taken when interpreting *k* values, which are sensitive to changes in the tails of a distribution, such as superspreaders or individuals that cause no secondary infections. Without robust isolated case finding and follow-up, contact tracing efforts may undercount the number of zeroes, biasing *k* upwards [W3126894445, UNMAPPED:45]. Alternatively, backwards contact tracing may be susceptible to attachment bias, where infections are preferentially attributed to a known superspreader rather than a separate (known or unknown) transmitter [UNMAPPED:45]. Additionally, there may be publication bias or more complete contact tracing for large outbreaks with an individual superspreader [W3094114492, UNMAPPED:45]. These effects would bias *k* downwards. Without knowledge of the relative impact of these biases, it is challenging to interpret whether *k* is a true representation of SARS-CoV-2 transmission heterogeneity. We recommend that contact tracing efforts use both backward and forward contact tracing [W3094114492, W4285012226, W4246365999], with sufficient follow-up time to identify non-infecting individuals, and complete reporting of contact tracing efforts (e.g., anonymized line lists with infector-infectee and other demographic information).\n\nA principal limitation of our analysis was the incomplete data available in the published literature. Beyond information provided about the timing and location of events, very few studies reported any demographics of the exposed individuals, their COVID-19 vaccination status (once introduced) or history of prior SARS-CoV-2 infection, or the density and amount of time indoors. For individual index cases, some studies reported demographic information and the presence/absence of symptoms, but this was atypical. We also experienced difficulty with deducing whether contact tracing was performed for all reported cases in transmission chains, especially for terminal nodes. It was not always clear whether cases did not transmit or whether data were missing due to lack of contact tracing, so these cases had to be omitted from the analysis. To improve the field and our understanding of the drivers of heterogeneity in transmission, we propose standard and consistent reporting on transmission for all outbreaks, as feasible, including details on the epidemiological context of transmission and complete line lists of cases following contact tracing, with information on case demographics (age, sex, occupation), diagnosis (presence/absence of symptoms, symptom description, test date and results), the duration of contact tracing, and the total number of contacts and the demographic information for contacts (see Appendix 2). Details on the duration of contact tracing should include the entire time period of case finding and how long cases were followed to detect any secondary cases. We recognize the challenge of collecting, storing, and sharing identifiable data from outbreak investigations while continuing to assure confidentiality and improve trust in the health system. However, developing such a reporting system should be a priority for public health as the information has important implications for reducing the spread of infectious pathogens.\n\nAnother limitation of this review was the wide variation in case detection methods across studies. Some studies reported only symptomatic cases or only performed diagnostic tests (e.g., PCR) on symptomatic individuals, thereby missing all reporting of asymptomatic or paucisymptomatic individuals and any secondary cases produced. Therefore, some of the event secondary attack rates, meta-analysis estimates, and individual case degree distributions are likely underestimates. However, we have no reason to believe that these biases in case ascertainment would vary across different event types/settings or demographic characteristics of index cases. The rankings of event types by secondary attack rate from our meta-analysis and the differential characteristics of superspreaders we observed are likely robust to these issues of ascertainment, but there is additional work needed to measure these effects. Furthermore, clinical cases, which were less likely to be missed, are more important as public health outcomes and more likely to be implicated in transmission.\n\nDespite these limitations, this review found substantial heterogeneity in the transmission of SARS-CoV-2, highlighting the settings and individual characteristics that might be most important to target for controlling superspreading. Secondary attack rates were highest in co-living situations where prolonged contact between individuals facilitated transmission, though there was substantial variation in attack rates within similar settings that remained unexplained. Given the moderate attack rates among minors in school and the rarity of children among superspreaders, interventions targeting these age groups may be less efficient at preventing SARS-CoV-2 superspreading and could be deprioritized in favor of interventions focusing on adults [W4285012226, W3034304416], especially those with symptoms and individuals with many daily close contacts. We advocate for consistent reporting on infectious disease outbreaks, ideally with detailed line lists, to facilitate knowledge synthesis about transmission patterns and superspreading in the future. Our review only covered the first phase of the pandemic, so important questions remain about whether patterns in attack rates and individual-level transmission still apply to later pandemic phases with significant population-level immunity. Enhanced reporting of outbreak data would expedite such future investigations.",
+      "citations": [
+        "W3094114492",
+        "W3128027648",
+        "W3194829845",
+        "W3092593049",
+        "W2921493711",
+        "W3184248326",
+        "W4285012226",
+        "W3176301991",
+        "W3162298607",
+        "W4225159506",
+        "W3036779511",
+        "W3047913942",
+        "W3127661060",
+        "W4380200158",
+        "W3092264164",
+        "W3107586775",
+        "W3087356468",
+        "W3197037893",
+        "W3015538318",
+        "W3126894445",
+        "W4246365999",
+        "W3034304416"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "30",
+        "31",
+        "35",
+        "14",
+        "45"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4391246432_tables.md"
+}

@@ -1,0 +1,134 @@
+{
+  "id": "W3013556645",
+  "metadata": {
+    "title": "Methods and Tools for Teaching Parallel and Distributed Computing in Universities: A Systematic Review of the Literature",
+    "n_sections": 3,
+    "n_subsections": 2,
+    "n_subsubsections": 0,
+    "n_tables": 5
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1 Theoretical Bases",
+          "subsubsections": [],
+          "text": "The purpose of study is to examine the available literature on the development of \"parallel thinking\" among students in the specialty of computer science for the development of parallel programs.\n\nAll articles in the review mention such terms as parallel and distributed programming. Let us dwell briefly on these concepts.\n\nParallel programming is a method that aims to reduce the dependency between sections of the same code, which allows these sections to be executed out of order when executing processes and/or threads. However, this execution is not necessarily parallel, since the actual parallelism of execution depends on the parallel architecture of the computer, processors with support for multithreading or speculation at the thread level, and/or using parallelism libraries (i.e., parallel programming).\n\nParallel programming explores the potential parallelism that exists in code using parallelism libraries that allow explicit execution of processes and/or threads to simultaneously execute program code. In this case, it is important that a parallel architecture exists (for example, a multi-core processor), so that parallel execution is actually supported. Sometimes the terms \"parallel computing\" and \"parallel programming\" are used as synonyms, but it is important to note that parallel computing does not imply simultaneity, but the potential for simultaneity. Thus, parallel programming involves identifying and reducing dependencies between sections of the same code, and parallel computing involves using parallelism libraries to examine these sections in parallel architectures.\n\nDistributed programming is a method used to increase the scalability of parallel code execution using a communications network. In this context, for parallel codes, it is necessary to use message passing for collective communication, that is, the use of primitives, such as sending and receiving. Distributed programming is not necessarily used for concurrency, because processing can be distributed and sequential, but in the context of this article, the distributed potential of a cluster computer system offers the conditions for studying concurrency on a larger scale. For this reason, the concept of parallel and distributed programming is also used for systems in which several nodes with parallel architectures (for example, several cores) are connected by a high-performance communication network. In a cluster architecture of this type, parallel programming is performed by shared (operational) memory (intra-node communication) and transmission of network messages (external communication).\n\nThis research is trying to understand the methods and tools of teaching parallel programming in higher education institutions. To study existing literature, the following questions were used:\n\n1. What methods and tools are used in teaching parallel and distribution programming?\n2. What do the authors define as problems in teaching parallel and distribution programming?",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_1_2",
+          "subsection_index": 2,
+          "subsection_label": "1.2 Materials and Methods",
+          "subsubsections": [],
+          "text": "This systematic literature review utilized the PRISMA guidelines and flow chart. PRISMA guidelines include a 27-item checklist and a four-phase flow diagram outlining the items essential for transparency in conducting literature reviews [W2576440140].\n\nIn order to be included in this review, it is necessary to carry out research, to be peer-reviewed and to be published in English in a scientific journal article between 2000 and 2019. Research also needs to solve at least one of the research questions.\n\nThe following bases were used for the search: Scopus (https://www.scopus.com), Web of Science (https://apps.webofknowledge.com/) and Google Scholar (https://scholar.google.com). The last search was performed on January 29, 2020.\n\nThe search phrases used were: \"teaching parallel and distributed programming\", \"teaching parallel and distributed computing\".\n\nThe following criteria were used sequentially against article abstracts to select studies for inclusion:\n\nCriteria 1: Study published between 2000 and 2020 in English\nCriteria 2: Study published in scholarly journal\nCriteria 3: Research was conducted for undergraduate computer science students\nCriteria 4: Extracted data aligns with current study focus and research questions.\n\nThe results of the database search we entered in the table.\n\n**TABLE 1.** The results of the database search.\n\n{{TABLE:tbl_01}}\n\nNext, we remove articles from the results that do not mention teaching parallel programming. We bring all found articles into a single list. Then we delete articles that do not describe studies at the undergraduate or graduate level. Next, in a single list, we delete duplicate articles obtained from different databases. As a result, we get 26 articles.",
+          "citations": [
+            "W2576440140"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Traditionally, undergraduate computer science students are taught sequential programming through a one-way programming model in higher education majors. It is typical to wait for a student to develop knowledge of serial programming before teaching parallel programming. As computer hardware becomes more and more parallel, there is a need for software engineers who are experienced in developing parallel programs, not only by \"parallelizing\" sequential designs. Teaching students parallelism in elementary courses in computer science is a very important step towards building the competencies of future software engineers.\n\nIn April 2005, AMD released the AMD64 architecture Opteron 2-core processor for servers. In May 2005, Intel released the Pentium D processor x86-64 architecture, which was the first 2-core processor designed for personal computers. This was Intel's quick response to AMD's challenge. So the era of multi-core processors began. The growth of multi-core and multi-core processing has certainly added new relevance to the teaching of parallel programming. Since 2000, in the world scientific literature many articles on the topic of parallel and sequential programming and learning parallel and sequential computing have appeared.\n\nAccording to Brown et al. [W1996119065], given the importance of these architectures, parallel programming becomes indispensable for undergraduate students in such specialties as computer science, computer engineering, and software engineering. Students in these specialties must be able to program in a satisfactory manner, both sequentially and in parallel. Acquaintance of students with parallelism should begin from the early periods [W2009213208], then students will consider it as a natural and general part of programming (and not as advanced and rarely used content) [W2569915100]. In addition, switching from serial to parallel programming is a difficult task [W2009213208]. There is a general opinion that the topics of parallelism should be distributed throughout the undergraduate program [W1996834424]. However, in most universities the concepts of parallelism are studied only in the last courses [W2068855358].\n\nA tool that can be used to facilitate access from students to content is the use of distance learning, allowing the student to study the course content according to his daily routine, adapting the study to your time and allowing the teacher to monitor [W3014231013]. To conduct new research in the field of teaching parallel programming in undergraduate programs, it is important to take into account existing work and related experience, to consider the difficulties and problems that teachers face. A systematic review of the literature is a method that allows you to determine all relevant searches for a given research question. Given the above, it is necessary to organize a systematic review of the literature with the aim of analyzing scientific works related to teaching parallel programming in undergraduate programs in computer science. To do this, a study was conducted in articles indexed in the Scopus, Web of Science and Google Scholar.",
+      "citations": [
+        "W1996119065",
+        "W2009213208",
+        "W2569915100",
+        "W1996834424",
+        "W2068855358",
+        "W3014231013"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Methods and Tools for Teaching Parallel and Distributed Computing",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "After the screening, we received 26 research articles.\n\nIf we look at the articles in terms of practical experience in teaching parallel and distributed computing, it can be said that 85% of articles are written on the basis of their own experience and 15% of review articles in which the authors provide the results of theoretical studies on the teaching of parallel and distributed computing.\n\nWhen considering methods of teaching parallel and distributed computing, the authors of the article pay attention to the following methods: a course of laboratory work that addresses selected topics or paradigms of parallel and distributed programming [W2003151319, W3169465539]; course of lectures and laboratory work \u2013 here the authors give a complete theme of the course, which they teach: topics of lectures and laboratory work [W1996834424, W2885279472]; some authors [W2020292486, W1972770397] introduce in the course of laboratory work with visualization of parallel computing, which according to the authors should promote the development of parallel thinking in students; some authors consider it appropriate to use the project method for laboratory work on real practical tasks [W2791481803] or team [W2964919032]. For a better understanding of the stages of concurrent programming, one of the authors [W2611002002] proposes to introduce a course on parallel programming in the form of a game. According to the author, this will improve the formation of students in \"parallel thinking\". We have summarized the methods of teaching parallel and distributed computing into a graph (Figure 1).\n\n**TABLE 2.** Methods of teaching parallel and distributed computing.\n\n{{TABLE:tbl_02}}\n\n**FIGURE 1.** Methods of teaching parallel and distributed computing.\n\nThe graph shows that most authors \u2013 71%, use the method of laboratory work for practical training in parallel and distributed computing: one lab work reveals one topic or paradigm of parallel programming. Only 19% of authors consider it advisable to use the project method of teaching parallel programming and only one article about the use of the game method in teaching parallel and distributed computing.\n\nLet us now consider the tools of parallel and distributed computing. First, consider the use of hardware. Based on the tools used by the authors of the articles, we divided them as follows: use of personal computer [W2011601960], cluster personal computers [W2009667797], personal computer with a set of video cards [W3169465539], single board computer [W2793937097], cluster of single board computers [W2139595674]. We reduce the use of learning hardware by parallel and distributed computation to the diagram (Figure 2).\n\n**TABLE 3.** Hardware for teaching parallel and distributed computing.\n\n{{TABLE:tbl_03}}\n\n**FIGURE 2.** Hardware for teaching parallel and distributed computing.\n\nThe analysis of the chart shows that 88% of authors-teachers of higher education institutions use a personal computer to teach students parallel and distributed computing \u2013 that is, each student uses a personal computer (in computer class or own) to develop parallel and distributed programs, writing, debugging and running parallel and distributed programs. For 15% of authors, one or more discrete graphics cards must be present on a personal computer. Only 4% of authors use the latest technologies in the form of single-board computers for teaching parallel and distributed computing in their lab work. Laboratory work using clusters of single-board computers or personal computers is the same percentage.\n\nNow let's consider the software for teaching students learning parallel and distributed computing. When designing lab work to teach parallel and distributed computing, the authors use most of the programming languages or additional libraries in most. Therefore, instead of a pie chart, we used a column in which the B axis contains the number of references in programming language articles (Figure 3).\n\n**TABLE 4.** Software for teaching parallel and distributed computing.\n\n{{TABLE:tbl_04}}\n\n**FIGURE 3.** Tools for teaching parallel and distributed computing.\n\nAnalyzing the diagram we can conclude that for laboratory work in teaching parallel and distributed computing, most authors use the C++ language together with the MPI library. The Messaging Interface (MPI) is a standardized messaging library. The messaging paradigm was developed for shared memory architecture. It offers various messaging technologies that provide shared memory. In messaging, processes are connected through a set of point-to-point primitives and collective communications. MPI is the actual standard for developing high-performance science programs [W2608675440]. MPI offers APIs for developing scalable C++ applications that are portable, efficient and flexible. The disadvantages of learning parallel and distributed computing using the MPI library are the difficulty of mastering the basic paradigms of MPI by students who previously worked only with sequential programming.\n\nIn second place by the number of mentions, the authors of the article are using the C++ programming language together with the OMP library. One of the most popular interfaces that supports multi-platform multicore shared memory is OpenMP [W2139595674]. Using the simple semantics of this interface, a programmer can enable concurrent multicore computing in their applications. The OpenMP library uses runtime library routines, compiler directives, and environment variables in C++. The authors note that it is easier for students to learn about using this library than MPI libraries, but program development using the OMP library is limited to use only in concurrent programming whereas the MPI library can be used in concurrent, distributed, and hybrid programming.\n\nRecently, new features in hardware for parallel and distributed computing, such as the use of video cards with a library of parallel and distributed computing CUDA, have emerged. The structure of the CUDA program reflects the coexistence of the host (CPU) and one or more devices (GPUs) in the computer. Each CUDA output file may contain a mixture of both host and device code. By default, any traditional C program is a CUDA program that contains only the host code. You can add device features and data declarations to any source file C. Device features or data declarations are clearly identified by CUDA special keywords. These are usually features that exhibit a great deal of data concurrency [W2020292486]. The CUDA library is a good tool for teaching students how to develop parallel programs based on data concurrency \u2013 complex mathematical calculations for matrices. The disadvantages include the availability of expensive equipment \u2013 graphics cards \u2013 and the need to combine with other technologies to develop a program for distributed computing.\n\nSome teachers [W2081089479] use the Java programming language to simplify learning the basic principles and paradigms of parallel programming. As the author points out, Java's programming language advantages over C or Fortran include higher-level programming concepts, improved compile-time and runtime checking, resulting in faster problem detection and debugging. In addition, Java's automatic garbage collection during operation saves the programmer from many lower-level language pitfalls. Built-in thread support provides a way to insert concurrency into Java applications. The Java Development Kit (JDK) includes a large set of libraries that developers can use to quickly develop applications. Another interesting argument in favor of Java is its large pool of developers \u2013 the main reason is that Java is taught as one of the main languages in many universities around the world [W2081089479]. The disadvantages of learning parallel and distributed computing in the Java programming language can be attributed to the much slower speed of running parallel programs than when using the C++ programming language.\n\nOne author explores the use of Python programming language to teach students parallel programming [W2608675440]. The author points out that Python is gaining popularity in academia as the best language for teaching beginners consistent programming. Python syntax is clean, easy and easy to understand. At the same time, it is a high-level programming language that supports the paradigms of many programs, such as imperative, functional and object-oriented. Therefore, by default, it's almost obvious to think that Python is also the right language for teaching parallel programming paradigms. In conclusion, A. Marowka's study concludes: Python is still not mature enough to teach concurrent programming. It does not support adequate multithreaded programming, which is the main paradigm of parallel programming today. However, it has relevant modules that support the messaging paradigm and heterogeneous programming. Moreover, Python has drawbacks that make it an inappropriate language for training inexperienced programmers, such as the lack of visual debuggers and profiles [W2608675440].\n\nIt should be noted separately several experimental studies on the implementation in the parallel programming of integrated programming environments or programming languages developed by the authors of the studies themselves [W2059135230, W2611002002, W2280222292]. Y. Wepathana states that students should consider different concurrent architectures and programming models in their learning process. To achieve this, it is advisable to use an integrated system that has different concurrent architectures and supporting programming languages. The process of developing such environments or programming languages is still ongoing, and working with them, despite the student's learning success, has many limitations, as the authors of the research note.\n\nConsider the authors' vision of the process of organizing learning by parallel and distributed computing. For this purpose, we will put the following questions in the articles: the number of subjects of the curriculum on which parallel and distributed calculations are taught or required to be taught; what course you need to study concurrent programming; what are the directions of parallel programming. Let us summarize these questions into a table.\n\n**TABLE 5.** Summary of authors' positions on curriculum integration.\n\n{{TABLE:tbl_05}}\n\nConcerning the question of whether parallel and distributed computing should be considered by more authors (26 out of 29), it should be enclosed in one subject. It is only the authors that need to develop \"parallel thinking\" in all streams of all undergraduate courses [W1996834424].\n\nMost authors do not specify an exact course in which it is necessary to introduce the subjects that deal with parallel and distributed computing. Others do not share the same opinion: from the beginning of the course to graduate school. One of the authors provided an example of an experiment in basic parallel high school programming [W2645995780].\n\nIn the third question, we try to include more authors (26 out of 29) who conducted experiments in their own fields of work.",
+      "citations": [
+        "W2003151319",
+        "W3169465539",
+        "W1996834424",
+        "W2885279472",
+        "W2020292486",
+        "W1972770397",
+        "W2791481803",
+        "W2964919032",
+        "W2611002002",
+        "W2011601960",
+        "W2009667797",
+        "W2793937097",
+        "W2139595674",
+        "W2608675440",
+        "W2081089479",
+        "W2059135230",
+        "W2280222292",
+        "W2645995780"
+      ],
+      "tables_in_text": [
+        "tbl_02",
+        "tbl_03",
+        "tbl_04",
+        "tbl_05"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "At present, the main method of teaching parallel and distributed computing is a laboratory course, where each work studies a separate topic or paradigm of parallel programming, but to improve teaching, teachers try to implement a design method in the laboratory.\n\nThe main tool for teaching parallel and distributed computing is a lab course with a C++ programming language and MPI library. But many teachers find that the use of such tools leads to the loss of interest in parallel programming by students, so many authors publish the results of experiments to improve learning by means of developing their own environments or the organization of cluster computing systems.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": "s_1_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3013556645_tables.md"
+}

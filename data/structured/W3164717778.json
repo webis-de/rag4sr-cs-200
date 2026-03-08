@@ -1,0 +1,411 @@
+{
+  "id": "W3164717778",
+  "metadata": {
+    "title": "Improving the Design of Ambient Intelligence Systems: Guidelines Based on a Systematic Review",
+    "n_sections": 9,
+    "n_subsections": 13,
+    "n_subsubsections": 0,
+    "n_tables": 5
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The term Ambient Intelligence (AmI) originated in Europe, with the European Commission's Information Society Technologies Advisory Group (ISTAG) [UNMAPPED:1]. The main idea of AmI is to proactively provide support for people through the environment where they live [W2113876961]. This environment helps the users by modulating and filtering information according to the context to meet their needs and activities [UNMAPPED:3]. This support is provided invisibly for them with the help of sensors, cameras, and various other devices.\n\nAmI is often related to HCI (Human-Computer Interaction). According to [W2954457885], there are seven grand challenges related to HCI: (1) Human-Technology Symbiosis; (2) Human-Environment Interactions; (3) Ethics, Privacy, and Security; (4) Well-being, Health, and Eudaimonia; (5) Accessibility and Universal Access; (6) Learning and Creativity; and (7) Social Organization and Democracy. Our paper addresses challenge (1), because AmI aims to support the interaction between humans and technology in a natural way. We also address challenge (2) given that we present guidelines to improve the interaction between people and their environment. Furthermore, because our approach can help improve human well-being, we can say we also address challenge (4). Finally, the systems that implement our guidelines can help improve the accessibility and universal access, hence challenge (5) is also addressed.\n\nAmI introduces the new challenge of removing desktops and embedding computers in the environment, so computing becomes imperceptible to humans while surrounding them everywhere [W2115667691]. This environment differs from the traditional form of interaction centered on a system, device, and human proficiency [UNMAPPED:6]. Thus, it requires a very advanced form of HCI.\n\nCurrently, designing tools that allow end users to control and manage a smart home easily is one of the issues that researchers in Ambient Intelligence face [W2811101641]. That is because it is not straightforward to understand the requirements that must be satisfied to support end users effectively [W2811101641]. Therefore, it is essential to study ways of interacting with these environments and how to make it more natural for users.\n\nThus, the involvement of HCI aspects in user interface design has an increasingly significant impact on building useful and intuitive AmI systems [UNMAPPED:8]. Seeking to add to this research theme, we performed a systematic literature review in order to identify HCI guidelines for the design of ambient intelligence systems. We believe that these guidelines will contribute to helping designing more intuitive systems for the users.\n\nThe paper is organized as follows. Section 2 describes the method. Section 3 shows the results obtained. Finally, in Section 4, we present the conclusions we draw from this work.",
+      "citations": [
+        "W2113876961",
+        "W2954457885",
+        "W2115667691",
+        "W2811101641"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "3",
+        "6",
+        "8"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Method",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Plan",
+          "subsubsections": [],
+          "text": "In this phase, we developed the research questions, search protocol, and selection criteria. Based on our main objective, we developed a research question: What HCI guidelines have been created, used, or evaluated to improve user interaction with ambient intelligence systems? To answer these questions, we chose five digital libraries that store research studies in the field of Computer Science: IEEEExplore,\u00b9 ACM Digital Library,\u00b2 Scopus,\u00b3 PubMed,\u2074 and Web of Science.\u2075\n\nFurthermore, we specified the following keywords \"Ambient intelligence\", \"Human-Computer Interaction\", and \"Guidelines\". Then, we combined these main concepts and related concepts using logical operators to create a search string (see Table 1). We adapted the search string to follow the pattern of each digital library, keeping the intended meaning. We searched for the terms in the abstract, title, and keywords. We do not add constraints on the publication year.\n\nBefore starting the search on the digital libraries, we selected a primary control study to validate our search string. The validation took place as follows. Using the search string we created, the chosen paper had to appear in the results provided by the digital library; if the paper did not show up, we improved the search string until it did. The paper selected as the control study is \"New ITG Guideline for the Usability Evaluation of Smart Home Environments\" [UNMAPPED:10]. This paper was chosen because it answered our research question.\n\nWe created one selection criteria for paper inclusion and six selection criteria for paper exclusion:\n\n\u2022 Inclusion\n - The paper must contain, in the title, keywords, or abstract, some relation to the keywords and related concepts (see Table 1).\n\n\u2022 Exclusion\n - Published in a language other than English.\n - Similar or duplicated paper, only the most recent is considered.\n - Results that are not related to the keywords and related concepts.\n - Abstracts from conference presentations.\n - Narrative reviews, comparative studies, surveys, and other systematic reviews.\n - Papers unrelated to Computer Science or Engineering.\n\nTo ensure the quality of the results, we use the Kappa Method for Measurement of Interrater reliability [W4294214983]. This method allows alignment between researchers and reduces bias. Also, we use the PRISMA Flow Diagram to report the results [W2134833483].\n\n**Table 1. Search string.**\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W4294214983",
+            "W2134833483"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "10"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Conduct",
+          "subsubsections": [],
+          "text": "We started this phase by applying the protocol defined in the previous section. First, in February 2020, we applied the search string to each digital library and extracted the results in a text format (e.g., BibTex, Medline). We imported the results on StArt,\u2076 a tool to support literature review processes.\n\nThe authors (JDO, JCC, and VSMPC) applied the Kappa method as follows. After removing duplicate papers, out of the remaining 335 papers, we selected 100 papers for an initial evaluation. Each author individually evaluated the same 100 papers, deciding which papers to include or exclude using our selection criteria. Then, the results of each author were compared. When there was disagreement, the authors discussed together to reach a consensus on the status of each paper. Before such discussions, we obtained a percentage of agreement of 90.82%. In the Kappa method, this is considered an \"almost perfect\" agreement. Finally, one of the authors (JDO) applied the selection criteria to make decisions on the 235 remaining papers.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Report",
+          "subsubsections": [],
+          "text": "We evaluated a total of 446 papers in the selection phase, from which 111 were duplicated. Then, when we applied the selection criteria and accepted 41 papers. In the extraction phase, after fully reading the 41 papers, we excluded 14 and accepted 27 papers (see Figure 1). In this phase, most papers were excluded because the guidelines were too general, or they were for smart homes or AmI but not specifically concerned with user interaction, or because the paper did not present guidelines at all.\n\nWe also checked if and how those studies evaluated the results they present. From the 27 accepted papers, 17 (63%) carried out one or more types of evaluation on the guidelines, methodology, or the system/model they developed based on the guidelines. Some of the papers created guidelines from the lessons they learned in the development of AmI. Regarding the type of the evaluations, 11 papers carried out usability evaluation [W2156883804, W2346474620, W2090864937, W2745549719, W2745549719, W88653325, W2466303845, W2151241177, W2151109130, W2945047045, W2996128862], 5 papers carried out end-users evaluations [W2745549719, W2466303845, W2996128862, W2581428794, W2957014802], 4 papers used surveys [W2466303845, W2996128862, W2966593890, W2991313652], 2 papers reported using interviews [W2609648139, UNMAPPED:29], and one paper mentioned a heuristic evaluation [W2996128862]. All reported evaluations were carried out with users, having on average 34 users evaluating each study \u2013 ranging from 3 users [W2945047045] to 136 users [UNMAPPED:30] involved in each evaluation.\n\n**Figure 1. PRISMA flow diagram.**\n\nWe found results from 2002 to 2020, most of them in the range from 2017 to 2019 (see Figure 2). Fifteen countries published on this research topic. Among them, Germany (6 papers), Italy (5 papers), and the United Kingdom (3 papers) were the countries with more papers (see Figure 2). We collect this information by looking at the first author's institutional affiliation. Figure 3 shows the type of end-users that the authors addressed their research. Most papers (more precisely 16) did not declare the type of end-user. Most of the papers that declared the type of end-user, were aimed at people who have special need, such as elderly or disabled people.\n\n**Table 2. Number of papers per year.**\n\n{{TABLE:tbl_02}}\n\n**Table 3. Number of papers per country.**\n\n{{TABLE:tbl_03}}\n\n**Table 4. Number of papers per type of end users.**\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W2466303845",
+            "W2996128862",
+            "W2966593890",
+            "W2991313652",
+            "W2609648139",
+            "W2945047045"
+          ],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03",
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "29",
+            "30"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "We conducted a systematic literature review with the primary objective of identifying \"how to make user interaction with ambient intelligence systems more natural\". Keeping that in mind, we investigate criteria/guidelines for human-computer interaction, including usability, accessibility, and user experience, among others. We follow the protocol developed by [W2168894761], which involves three phases: Plan, Conduct, and Report the review.",
+      "citations": [
+        "W2168894761"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Usability and accessibility",
+          "subsubsections": [],
+          "text": "**Guideline 1:** Ambient intelligent systems must take usability and accessibility into account.\n\n**Definition:** [UNMAPPED:31] states that usability is related to the ease of learning and use of the interface, as well as user satisfaction as a result of such use. Accessibility is related to the ease of access for the different types of users [UNMAPPED:32], taking into account user's disabilities, for example.\n\nFifteen papers reported the importance of creating and evaluating the ambient intelligence systems according to usability and accessibility criteria. Many of the papers employ the use of norms and guidelines already established by the scientific community, such as: Nielsen's heuristics [W88653325, W2151241177, W2151109130, W2945047045, W2996128862], ISO 9241/110 [W2466303845, UNMAPPED:30], and Web Content Accessibility Guidelines (WCAG 2.0) [W2090864937, W2619713395].\n\nThey also use known questionnaires such as the System Usability Scale (SUS) [W2745549719, W2996128862], or similar questionnaires adapted using the norms and guidelines mentioned above. Some of the usability questions cited by the authors of those papers were: easy to learn [W88653325], easy to use [W88653325, W2466303845, W2151241177, W2581428794], easy to understand [W2581428794], consistency and standards [W2090864937, W2957014802, W120969640, UNMAPPED:10], and visibility of system states [W2090864937, W2613192576].",
+          "citations": [
+            "W2466303845",
+            "W2090864937",
+            "W2619713395",
+            "W2745549719",
+            "W2996128862",
+            "W88653325",
+            "W2581428794",
+            "W2957014802",
+            "W120969640",
+            "W2613192576"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "31",
+            "32",
+            "30",
+            "10"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Natural interaction",
+          "subsubsections": [],
+          "text": "**Guideline 2:** Ambient intelligence systems must provide natural interaction.\n\n**Definition:** According to [UNMAPPED:36], the system must use concepts and terms that are more familiar to the users, rather than technical and specific terms, and the interaction with the system must be logical and natural for the user.\n\nTwelve papers included the guideline that ambient intelligence systems must provide natural interaction for the users. Some of the suggestions from those authors to make the interaction more natural include:\n\n\u2022 Insert voice command and a conversational interface [W2745549719, W2745549719, W2957014802, W2991313652]\n - Maintain a natural conversational flow [W2957014802] and the dialogue context [W2991313652];\n - Insert more natural and intuitive triggers/commands [W2991313652].\n\n\u2022 The system must use terms that the user understands [W2957014802];\n\n\u2022 When the information is transmitted to the user through soundtracks, these must be made available spaced in time and cover different parts of the sound spectrum [W2567794059].\n\n\u2022 The user should not need technical help to use the interface [W2581428794].\n\n\u2022 Involve the users in the design process [W2996128862, W120969640, UNMAPPED:10]. For instance, in a home environment, consider the perspective from each user in the house to represent the space division, references, rooms, and names [W120969640]. Also, the system should address the real-world needs of its users [UNMAPPED:10].\n\n\u2022 Involve a multidisciplinary team in the development of the system [W2996128862].\n\n\u2022 It is necessary to provide ways for the user to find smart devices automatically, for example, searching by name, type, or location in the environment and avoiding the use of acronyms or technical terms when passing the information to the user [W2745549719].\n\n\u2022 Provide customization according to the user's location, or translation of the elements to another language in order to enable the internationalization of the environment [W120969640].\n\n\u2022 The users must enjoy using the system [W2090864937, W2745549719, W88653325]\n - The system must be attractive and aesthetically enjoyable [W2090864937, W88653325];\n - Support engagement and motivation, whether in group or individually [W2090864937, W88653325];\n - Ensure quality of use during the system use. The quality of use criteria is related to characteristics of the interaction and the interface that ensure the expected features during the system use, such as usability, user experience, accessibility, and communicability [UNMAPPED:32].",
+          "citations": [
+            "W2745549719",
+            "W2745549719",
+            "W2957014802",
+            "W2991313652",
+            "W2567794059",
+            "W2581428794",
+            "W2996128862",
+            "W120969640",
+            "W2090864937",
+            "W88653325"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "36",
+            "10",
+            "32"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Flexibility",
+          "subsubsections": [],
+          "text": "**Guideline 3:** Ambient intelligence systems must be flexible, ensuring that users with different abilities can use the system.\n\n**Definition:** To be flexible, the system must allow the user to perform the same tasks by executing different steps, taking into account the different abilities of the different types of users [UNMAPPED:31].\n\nNine papers mentioned that Ambient intelligence systems must be flexible to support different types of users. To provide this capability, they suggest the system have:\n\n\u2022 Both simple and complex options [W2609648139, W120969640].\n\n\u2022 Capability for the user to control the different aspects and configurations of the system. For instance, the user should be able to alter the sound volume, change the font size, manage the color contrast, the zoom, and resize virtual objects [W2090864937, W2609648139, W2986305553].\n\n\u2022 Allow the user to personalize scenarios, interface elements, and interaction with system [W2090864937, W2996128862, W2966593890, W120969640, W2613192576, UNMAPPED:10].\n\n\u2022 The system must be pre-configurable to execute a set of actions when an activity is determined [W2991313652].\n\n\u2022 Provide an initial configuration of the software, adjusting the properties of smart objects in the design whenever they are beneficial to the user [W2996128862].",
+          "citations": [
+            "W2609648139",
+            "W120969640",
+            "W2090864937",
+            "W2986305553",
+            "W2996128862",
+            "W2966593890",
+            "W2613192576",
+            "W2991313652"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "31",
+            "10"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Multimodality",
+          "subsubsections": [],
+          "text": "**Guideline 4:** Ambient intelligence systems must allow the use of multimodality.\n\n**Definition:** According to [W2041649634], a system with multimodal interaction must allow users to connect with the system using multiple input and output interfaces, such as speaking, texting, or making gestures.\n\nThe authors of eight papers reported on the importance of inserting multimodal interaction [W2991313652, W120969640, W2567794059, W2986305553], feedback [W2090864937, W2986305553, UNMAPPED:29], and interface [W2996128862, W2189098551] in ambient intelligence systems to improve the user interaction with the system. Some suggested modalities were: audio, text, voice, vibration, and visual.",
+          "citations": [
+            "W2041649634",
+            "W2991313652",
+            "W120969640",
+            "W2567794059",
+            "W2986305553",
+            "W2090864937",
+            "W2996128862",
+            "W2189098551"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "29"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5. Privacy, security, and authentication",
+          "subsubsections": [],
+          "text": "**Guideline 5:** Ambient intelligence systems must address issues related to privacy, security, and authentication.\n\n**Definition:** The system must assure the users that their data will not be accessed by people without consent, that their data is safely stored, and that only authorized users can access the system through authentication.\n\nSeven papers mentioned that ambient intelligence must ensure user Privacy [W88653325, W2991313652, W2609648139, W120969640, W2613192576], Security [W88653325, W2991313652, W2609648139, W120969640, W2613192576], and Authentication [W2991313652, W2613192576]. This is necessary for the user to trust the system. Some precautions mentioned by the authors:\n\n\u2022 Privacy\n - Making sure that private information is sufficiently protected [W2609648139] and prevent strangers from accessing sensitive data [W2991313652].\n\n\u2022 Security\n - The devices and the environment must be safe for the user to operate, providing a feeling of confidence and security during use [UNMAPPED:10].\n - Provide security means that prevent unauthorized users from accessing and, at the same time, are comfortable for using their functionality in a smart home [W2613192576].\n - Provide control of smart elements only when their elements can be safely controlled, that is, without any risk to the user. For example, the system can only open the front door when the user is located within a radius of 200 m [W2613192576].\n\n\u2022 Authentication\n - The system should be able to check whether the person interacting with the system is authorized and also check the permissions before the user starts executing a command [W2991313652].\n - Whenever the system identifies unauthorized access, the system must immediately inform the user and guide him by a security mechanism that requests the authorization of access and the identification of the user in the system [W2613192576].\n - Also, the user needs to immediately know what they need to do, so as not to suffer information gaps or confusion [W2613192576].",
+          "citations": [
+            "W88653325",
+            "W2991313652",
+            "W2609648139",
+            "W120969640",
+            "W2613192576"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "10"
+          ]
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6. Effectiveness and efficiency",
+          "subsubsections": [],
+          "text": "**Guideline 6:** Ambient intelligence system must be effective and efficient.\n\n**Definition:** According to the Cambridge dictionary,\u2077 effectiveness is related to achieving the result you want, and efficiency is not wasting time or energy when executing a task. Therefore, the system must help users to quickly achieve what they want to do with the system.\n\nSix papers mentioned that ambient intelligence systems must maximize effectiveness and efficiency. For example, the authors suggested:\n\n\u2022 Fewer steps in dialogs with the system to perform tasks [W2957014802].\n\n\u2022 Do not disturb the user by asking for a password whenever they use the system, for instance, when the interaction is performed through a mobile application [W2613192576].\n\n\u2022 Effective communication [W88653325].\n\n\u2022 The system must be useful in improving the user's quality of living, and the usefulness must be measurable [W2156883804].\n\n\u2022 Arrange functionalities and commands effectively and efficiently [W2966593890].\n\n\u2022 Provide a dynamic interface that clearly indicates changes in the environment. For instance, the user should be warned if there are new appliances in the environment, if there are obstacles in the paths where they usually go through, or if there are new alternative paths within the environment [W120969640].\n\n\u2022 Develop a single system able to interface itself with several applications for remotely handling various services and devices [W2966593890].\n\n\u2022 The system must allow the user to input and update the available smart devices, and this process should be easy to do whenever needed [W2609648139].",
+          "citations": [
+            "W2957014802",
+            "W2613192576",
+            "W88653325",
+            "W2156883804",
+            "W2966593890",
+            "W120969640",
+            "W2609648139"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7. Instructions, suggestions, and support",
+          "subsubsections": [],
+          "text": "**Guideline 7:** Ambient intelligence systems must provide instructions, suggestions, and support on system use.\n\n**Definition:** Although it would be better if the users did not have to use the system documentation [UNMAPPED:36], the system must have a minimal set of help and instructions for the user, suggest next steps, and support in case of doubt.\n\nSeven papers point out that ambient intelligence systems must assist the users by giving instructions, suggestions, and support. The papers highlight:\n\n\u2022 Provide simple instructions and brief messages [W2609648139, W2567794059].\n\n\u2022 Whenever the system does not understand what the user wants to execute, the system must provide command suggestions [W2991313652].\n\n\u2022 Provide a manual with possible commands the user can use, with appropriate terminology for them [W2991313652].\n\n\u2022 Provide accessibility support for different types of users. For instance, the system should make data available in accessible formats, providing the same information as text, audio, video, and others, in such a way that people with different disabilities can use it [W2729053277].\n\n\u2022 Contextual cues should be incorporated to help users to remember actions [W2567794059].\n\n\u2022 Provide clear examples of how the users can use the system [UNMAPPED:30].\n\n\u2022 Provide pre-configured elements and support mechanisms in the intelligent environment for the discovery and use of resources and elements [W2996128862].\n\n\u2022 Provide adequate feedback in a reasonable time about what is happening in the system. Always keep the user informed [W2957014802].",
+          "citations": [
+            "W2609648139",
+            "W2567794059",
+            "W2991313652",
+            "W2729053277",
+            "W2996128862",
+            "W2957014802"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "36",
+            "30"
+          ]
+        },
+        {
+          "subsection_id": "s_3_8",
+          "subsection_index": 8,
+          "subsection_label": "3.8. Information and memory overload",
+          "subsubsections": [],
+          "text": "**Guideline 8:** Ambient intelligence systems must minimize information and memory overload for the user.\n\n**Definition:** The system must avoid presenting more information than needed for the user in a particular moment, and the system should not ask the user to retain detailed information for being able to interact with the system. The user should recognize the next step when interacting with the system, rather than recalling the steps that have to be performed to achieve its aims [UNMAPPED:36].\n\nSix papers indicated the relevance of not overloading users with information and mental effort [W2090864937, W2745549719, W2996128862, W2957014802, W120969640, W2567794059]. Some tips from the authors to solve this problem:\n\n\u2022 Minimize or avoid irrelevant and distracting information [W2745549719, W120969640, W2567794059].\n\n\u2022 Allow the user to repeat some previous information [W2957014802, W2567794059].\n\n\u2022 Minimize short term memory load, for example, information that is listed should be kept short and concise [W2957014802] and visualization of content related only to the current goal [W2745549719].\n\n\u2022 Facilitate user's comprehension by using short sentences and pausing after each statement [W2567794059].\n\n\u2022 Simplify as much as possible repetitive tasks [W2745549719].\n\n\u2022 Hide programming complexities by using visual methods and metaphors in graphical user interfaces [W2996128862].\n\n\u2022 Provide navigation support to reduce cognitive effort. Employ hierarchical concept categories to support the selection of resources [W2996128862].\n\n\u2022 Do not confuse and distract users from their main task during the use of the system. For example, if the system has a graphical user interface (GUI), plan the graphic elements and icons' layout carefully, so avoid confusing the user [W2346474620].",
+          "citations": [
+            "W2090864937",
+            "W2745549719",
+            "W2996128862",
+            "W2957014802",
+            "W120969640",
+            "W2567794059",
+            "W2346474620"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "36"
+          ]
+        },
+        {
+          "subsection_id": "s_3_9",
+          "subsection_index": 9,
+          "subsection_label": "3.9. Prevention, tolerance, and recovery from errors",
+          "subsubsections": [],
+          "text": "**Guideline 9:** Ambient intelligence systems must provide prevention, tolerance, and recovery from errors.\n\n**Definition:** The system must avoid user errors, for instance, by enabling to the user only those options that are feasible given the particular context. In case of an unexpected error, the system must tolerate it, presenting to the user information that allows them to bring the system to a stable state quickly. According to [UNMAPPED:36], the system should help the users indicating an error in understandable language, indicating the problem clearly, and helping to construct a solution.\n\nSix papers referred to the importance of ambient intelligence ensuring prevention, tolerance, and recovery from errors. The papers suggested:\n\n\u2022 The system must provide compatible error response and context to error that may occur [W2957014802].\n\n\u2022 Correct actions must be reinforced by redundant sensory cues, such as a blip or visual information [W2567794059].\n\n\u2022 Make presentation formats (auditory, textual, or pictorial) intuitive and straightforward to reduce misinterpretation [W2567794059].\n\n\u2022 The behavior of the system must be understandable to the user, who must be able to identify and correct errors. Thus, ultimately, control over the system must remain with the user [UNMAPPED:10].\n\n\u2022 Design and implement ways to minimize and avoid accidental dangerous actions and provide reliability and safety features [W2090864937]\n - Restrict the user's possible actions to prevent errors [W2090864937].\n - Provide a clear indication of risks [W2090864937].\n - Avoid damages to humans and the environment by providing fail-safe features [W2090864937].\n\n\u2022 The system must be reliable [W2090864937].\n\n\u2022 Whenever possible, the system must learn and predict the activities in advance [W2991313652].\n\n\u2022 Provide realism in the system response to enable measuring the delay between a user's request and the correct system response [W2156883804].",
+          "citations": [
+            "W2957014802",
+            "W2567794059",
+            "W2090864937",
+            "W2991313652",
+            "W2156883804"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "36",
+            "10"
+          ]
+        },
+        {
+          "subsection_id": "s_3_10",
+          "subsection_index": 10,
+          "subsection_label": "3.10. Control and freedom",
+          "subsubsections": [],
+          "text": "**Guideline 10:** Ambient intelligence systems must provide control and freedom to the user.\n\n**Definition:** According to [UNMAPPED:36], user control and freedom is related to support undo and redo steps of the system. It is a heuristic to help users get out of an unwanted situation when interacting with the system, without having to follow many steps.\n\nThree papers found that ambient intelligence systems must provide the ability to control and freedom to the user. They suggested:\n\n\u2022 During the interaction, the user must be able to interrupt its execution with a new interaction or with dialogue, such as saying \"stop\" [W2957014802].\n\n\u2022 The user must act intentionally on the environment, regardless of their sensory abilities and ambient conditions [W2090864937]\n - Minimize physical effort to the user, making actions more feasible [W2090864937].\n - Enable alternative action modalities [W2090864937].\n - Do not impose time constraints [W2090864937].\n - Do not impose disabling barriers [W2090864937].\n\n\u2022 Users must be able to share and exchange their actions and messages. In other words, allow the transition from individual to collective activities through an environment where people are interconnected [W2090864937]\n - Provide mechanisms to enable actions and messages exchange [W2090864937].\n - Ease cooperation and participation [W2090864937].\n - Consider the impact of messages or actions on the social context. For instance, if the system emits a sound, it should not disturb other people while warning the main user [W2090864937].\n\n\u2022 The system should provide an easily accessible way for controlling the environment, such as through an application or a web browser [W2613192576].",
+          "citations": [
+            "W2957014802",
+            "W2090864937",
+            "W2613192576"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "36"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we answer our research question. We read each one of the papers and identified which guidelines referred to HCI and related concepts. We found a total of 120 guidelines. We then grouped similar guidelines and creating some categories. These categories later became a unified guideline including the papers author's ideas. We identify 10 categories and guidelines as shown in Figure 4.\n\n**Figure 4. 10 guidelines to improve user interaction with ambient intelligence systems.**\n\n{{TABLE:tbl_05}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_05"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this work, we conducted a systematic literature review to identify HCI guidelines for the design of ambient intelligence systems. Our main interest was to find the guidelines created, used, and/or evaluated to improve the interaction of users with AmI systems. The digital libraries and selection criteria used here guided us to accept 27 papers out of 447. From the 27 papers, we identified a total of 120 HCI guidelines.\n\nInspired by the paper's guidelines, we grouped the authors' findings into ten categories. Then, each category led to one overall guideline highlighting the authors' specific ideas related to that category (see Figure 4). Our categories have more specific guidelines and also more general ones. Researchers must select the ones that suit their system; it is not necessary to apply all the guidelines applying most of them often suffices. We believe that our summarized guidelines can be very useful for other researchers and practitioners to create and evaluate their ambient intelligence systems.\n\nThroughout this SLR, we found that the researchers have a marked interest in how to turn ambient intelligence systems more natural for users. About 55.55% of the papers state that including usability and accessibility in this type of system is of paramount importance to provide more interesting and usable systems to users. Another relevant issue for researchers is the natural interaction, with 44.44% of the papers pointing that out; we can highlight the use of voice and conversational interfaces, in this regard. Also, the creation of systems more familiar to user experiences and the flexibility of use for people with different skills.\n\nOur study made it possible to identify the need for AmI to minimize the information available to the user, avoiding memory overload. In this paradigm, it is necessary to prioritize understandable and easy to recognize information, with no need for repetition to the user. Also, we observed some consensus among the researchers regarding the customization of scenarios, interface elements, and interaction with the system, as well as the guarantee of privacy and security.\n\nRegarding the limitations of our work, as it is a qualitative study, we may have missed some important results due to researchers' bias. However, we tried to reduce this limitation by searching the five most relevant and largest digital libraries and applying the Kappa method to avoid bias. Despite the limitations of the protocol we used, positive results have emerged, in particular the condensed but comprehensive set of guidelines for designing AMI systems.\n\nAs we are developing AmI systems as part of our ongoing research, we aim to take into account these HCI guidelines in the design and evaluation of our own systems.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Notes",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "1. https://ieeeexplore.ieee.org/Xplore/home.jsp\n2. https://dl.acm.org\n3. https://www.scopus.com\n4. https://www.ncbi.nlm.nih.gov/pubmed\n5. https://www.webofknowledge.com\n6. http://www2.dc.ufscar.br/lapes/start/\n7. https://dictionary.cambridge.org/",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Author contributors",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "J.D.O. conceptualised, designed, performed, and wrote up the study. J.C.C. designed the review, reviewed papers, and edited the manuscript. V.S.M.P.C. designed the review, reviewed papers, and edited the manuscript. R.H.B. reviewed and edited the manuscript.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Disclosure of potential conflict of interest",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We have no conflict to declare.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Funding",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This study was financed in part by the Coordena\u00e7\u00e3o de Aperfei\u00e7oamento de Pessoal de N\u00edvel Superior \u2013 Brasil (CAPES) \u2013 Finance Code 001.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "ORCID",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Juliana Damasio Oliveira ID http://orcid.org/0000-0001-8915-285X",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3164717778_tables.md"
+}

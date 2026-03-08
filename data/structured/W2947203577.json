@@ -1,0 +1,177 @@
+{
+  "id": "W2947203577",
+  "metadata": {
+    "title": "BLOCKCHAIN IN MANUFACTURING REVOLUTION BASED ON MACHINE TO MACHINE TRANSACTION: A SYSTEMATIC REVIEW",
+    "n_sections": 5,
+    "n_subsections": 3,
+    "n_subsubsections": 0,
+    "n_tables": 3
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. INTRODUCTION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In the last thirty years, the world has witnessed the emergence of several innovations from the Internet. Examples of these novelties are e-mail, dot.com enterprises, social media, mobile internet, e-commerce, mobile app, cloud computing, etc. [UNMAPPED:1]. Through the internet, economic and social relationships were deeply impacted, both in the consumers' and in production perspective.\n\nRegarding production, connectivity was essential to increase productivity and improve resources' allocation. Machines leave to connect exclusively with people, they can be now programmed to be connected directly among them, allowing the collect and data processing in an unprecedented scale [UNMAPPED:2]. It brings numerous implications in productivity since a lot of mass production lines could become customized to customers.\n\nAt present, Internet-based relation between companies, commonly called B2B (business to business) are regulated by consensual contracts between the related parts, in a way that they are obliged to comply exactly with what was determined under certain conditions.\n\nWithin the context, it is necessary an environment where all participants interact with full security, privacy, reliability, and agility. Trusted intermediaries are responsible for confirming the parts' identity, register, validate the transaction, and guarantee the immutability of data for audit purposes and possible conciliation of differences. The problem is the inefficiency of this system, the bureaucracy, which is costly and vulnerable to irregularities and fraud. In this way, the combination between blockchain and the Internet of Things (IoT) seems to be a good fit to substitute the trustee. Christidis and Devetsikiotis [W2392113277] support the idea that blockchain could automate several time-consuming workflows in a cryptographically certified approach.\n\nA recent systematic review mapped the most studied areas about blockchain exclusively under a technical perspective [W2527800909]. Forty-one articles were selected and categorized according to seven technical limitations highlighted by Swan [W2890547303]: throughput, latency, size and bandwidth, security, wasted resources, usability, and versioning. Eighty percent of all articles discuss bitcoin system while the 20% remaining handle smart contracts and licensing. However, it can be presumed its extension to the manufacturing value chain and, although the market already works with this innovation, the literature on the application underlying blockchain technology began to appear around 2013 [W2890547303]. Consequently, few studies could be found in the manufacturing industry [UNMAPPED:6].\n\nRecently, Gomes [W2891431400] discussed the potential of Blockchain-based Smart Contracts to reduce transaction costs through a theoretical perspective of broad range economic scenario, not related strictly to manufacturing.\n\nThe aim of this study is to identify the state-of-art of the possibilities of blockchain technology in transactions related to manufacturing activities, especially in the 4.0 Industry contexts. A systematic literature review was executed to identify the most relevant aspects of blockchain correlated to M2M and IoT. The emphasis of this analysis was aimed at exploring and identifying the most studied domains in the academia and to select articles whose content addressed productive management and financial transactions. Additionally, a criterion to organize and classify the finds was presented.",
+      "citations": [
+        "W2392113277",
+        "W2527800909",
+        "W2890547303",
+        "W2891431400"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "2",
+        "6"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. BACKGROUND",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "Internet of Things and Cyber-Physical Systems",
+          "subsubsections": [],
+          "text": "As the processing power and memory capacity of small and cheap devices continue to increase, the concept of host in the Internet has undergone a significant change [W2078500988]. All network connectivity can extend to intelligent objects that have sensors and common items other than computers, allowing such devices to generate information with little human intervention, automating the entire process.\n\nThe basic idea of IoT is to be a system where the physical components are enriched with embedded electronics (such as RFId tags or sensors), an IP address, and Internet connection. Physical objects become active participants in the business process once they are totally integrated to the information network. They can transmit information about their status, surrounding environment, production processes, maintenance schedule, etc. In the scenario of Industry 4.0, IoT plays a significant role in smart meters, enabling the capture of consumption variables in real time [W2014939786].\n\nIn an M2M application, IoT intelligent objects are not limited to the achievable benefit in the manufacture of individual products of intelligent objects connected to each other, but rather to all production steps that can be improved. To this end, IoT allows reaching full potential in the contribution to the operational performance as a whole [UNMAPPED:10], considering smart objects, manufacturing equipment, and collaborators that only play the supervisory role of the process.\n\nHowever, some of the most important challenges that IoT currently faces in the M2M is related to energy supply, device identification and power addressing, Internet scalability, personal security, and privacy, as well as all standardization and harmonization [W2105103777, W107104707, W4307018391].\n\nTo manage interconnected systems between physical assets and computational resources, transformative technologies defined as Cyber-physical systems (CPS) are necessary. They are systems of collaborating computational entities that are in accentuated connection with the surrounding physical world and its on-going process, providing and using, at the same time, data-accessing and data-processing services available on the Internet [W2029608738, W2493990996].\n\nEach CPS system operates at different spatial and temporal scales, exhibiting multiple and distinct behavioral modalities, and interacting with each other in an infinite range that change according to the application context [W2117435128]. CPS enables all computing and communication capabilities to be incorporated into all types of objects and structures in the physical environment [W1533972478]. The operational model of a typical CPS involves different fields, such as distributed sensor network, intelligent network, medical monitoring, and a process control system [UNMAPPED:18].",
+          "citations": [
+            "W2078500988",
+            "W2014939786",
+            "W2029608738",
+            "W2493990996",
+            "W2117435128",
+            "W1533972478"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "10",
+            "18"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "Blockchain",
+          "subsubsections": [],
+          "text": "The implicit concept of ledger in blockchain is originated from the design of the cryptocurrency Bitcoin proposed by Nakamoto [W4248175462], but many industries recognize the potential of this technology with the objective to enhance efficiency in different business. Nowadays, several groups coordinate blockchain application research in finance, IoT, supply chain, and manufacture: Hyperledger (IBM), Ethereum, R3CV Corda, and Digital Asset [W2521201381].\n\nBlockchain is a distributed ledge whose architecture is a reliable database system, supported cooperatively in a distributed network through a trustworthy technique [W2889969832]. It is developed in data block architecture connected through nodes, using heavy cryptography. Each block contains peace of data originated from all previous transactions, which creates a singular fingerprint (Hash) that is used to validate the data. Blocks are linearly and chronologically connected (as a real chain) with next block by a hash. Hash is a computational function that transforms input data of any size to output encrypted data of fixed length. When two parts perform a transaction, all transaction data are hashed, and are combined with the former block of blockchain to a new candidate block. The miners at the network try to solve the algorithm to validate the new block. If enough miners confirm the transaction, the new block becomes part of the blockchain. **FIGURE 1** illustrates the blockchain mechanism.\n\n**FIGURE 1.** Blockchain mechanism. Source: the authors\n> Segment 1/2: Blockchain... B5 B6 B7 Hash(B7 + #T_AB)\n> Segment 2/2: Parts A and B perform a transaction. The transaction, with all the necessary information, undergoes a function Hash() to a fixed length hash code. The new hashed transaction #TAB and the former block B7 undergo again the hash function, forming the candidate block B8. The miners try to validate the candidate block, solving the algorithm. If a sufficient number of miners validate it, the block B8 is integrated to blockchain. In practice, each block is formed by a large number of transactions.\n\nBlockchain also offers a high level of privacy because user's identity needs a public and variable access key. Anonymous participants (the miners), who use their own computers to calculate a hash to solve a consensus proof, do the work of fixing the blocks [W2511580607].\n\nTo distinguish blockchain from a traditional database, three properties are relevant: number of copies, read access and record access. The classical database has only one centralized copy (eventually a backup for safety) and unilateral read and record access. Blockchain can be decentralized or completely distributed and can be public or private. The advantage of being decentralized is that consensus is reached by a restricted number of nodes. At the edge, if anyone has read access and could participate to solve the consensus, this blockchain is classified as public database without permission. Commonly, a cost and benefits evaluation must be performed to define the best blockchain frame according to its final application [UNMAPPED:23].\n\nBlockchain could be an institutional technology that enables new types of contracts and organizations. In the point of view of transaction cost, organizations and markets are the institutions that coordinate the economy, since they are responsible for organizing and regulating transactions. Therefore, low transactional costs are directly related to an efficient combination between these institutions in terms of economics and governance. Conversely, blockchain are not formal organizations or markets. They are spontaneous organizations that compete with other firms and have market characteristics. Their role is to be transactional enablers and not only exchanging executors. Basically, blockchains coordinate distributed individual's groups, allowing their interconnection to create an economic environment [W2300909158].",
+          "citations": [
+            "W4248175462",
+            "W2521201381",
+            "W2889969832",
+            "W2511580607",
+            "W2300909158"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "23"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "M2M in Manufacture",
+          "subsubsections": [],
+          "text": "The technology that supports integration between machines is called machine-to-machine communication (M2M). M2M and IoT are concepts intrinsically joined, resulted from technological advances of cheap semiconductors, chips, and large Internet accessibility [W2507861761]. A typical definition of M2M is the communication between two machines or data transfer from a device to a central computer. This linkage is done through a wired or wireless network, and by IoT in particular. Besides laptops and cell phones, today most of the appliances have a processor and capability to connect to the network. M2M allows the data being transmitted automatically without human intervention and consists of a range of technologies and applications that connect the physical world to an IT back-end infrastructure. M2M processes basically has four stages: data generation, data transmission, data analysis, and decision making [UNMAPPED:2].\n\nSimilar development is happening inside the manufacturing environment, where machines and equipment are not only connected to network to send data. They can process and combine data from other devices to increase their computational power. In addition, they can consume and provide information to create value to users. The business models resulting from these technologies are primarily in logistic, work conditions and preventive maintenance areas. Machines can trace a maintenance strategy to technicians and provide all history adjustments instead of a single pair of variables. For example, commercial airplane turbines are constantly monitored to anticipate the sending of spare parts and reduce maintenance time [UNMAPPED:26].\n\nThe insertion of intelligence in almost all kinds of products and services, as well as a high level of automation in factories, becomes a reality. From the perspective of economic benefits, these innovations are responsible for productivity increase in a scale without precedents. In 2020, it is estimated 7,6 billion devices working in industries with a market value of USD 1,4 trillion [UNMAPPED:27].\n\nA survey conducted by the Society for Information Management (SIM) among senior IT Executives reveals that security remains as a pervasive and persistent concern. Recent issues such as the NSA fall-out and the Sony Pictures breach stimulated companies around the globe to continue investing in their security systems. Cloud and mobile technologies deepened the continued focus on data security [W599737683]. Given this perception, it justifies network security ranked at the top of the list of blockchain applications in M2M.",
+          "citations": [
+            "W2507861761",
+            "W599737683"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "2",
+            "26",
+            "27"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. RESEARCH METHOD",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The present research is theoretical, bibliographic and, since it aims to explore the state-of-art of the blockchain technology applied to manufacturing, it can be considered as exploratory as well.\n\nA Systematic Literature Review (SLR) was performed with the objective to discover how blockchain is being used in manufacturing environment and its impact on machine-to-machine communication. The guidelines of this review were based on Kitchenham [W2168894761]. The choice of this method considered that SLR is a mean of identifying, evaluating and interpreting all available research relevant to a particular research question, or topic area, or phenomenon of interest. SLR was not used for the bibliometric quantitative analysis, but to a qualitative study, considering the found papers content.\n\nOnly articles published in journals were considered, not limiting publication date. The search was executed on March 25th, 2018 and the electronic databases used were Web of Science\u2122, Scopus\u2122, and ACM\u2122 \u2013 Association for Computing Machinery. The process was conducted in three stages (see **FIGURE 2**) to choose only relevant papers about the subject.\n\nThe Step 1 was the search in the three papers databases, using the strings presented in **TABLE 1**. The search was done with the all search fields option (title, abstract, key words, entire paper) or, in other words, with the broader filter criteria, aiming to obtain the maximum number of papers from the bases. The exclusion of the repeated results (the same paper was found in more than one base) resulted in 45 papers. An initial filter excluded two papers by duplicity.\n\nThe Step 2 involved the selection of papers under the inclusion and exclusion criteria exhibited in **TABLE 2**. It was done by reading all the 43 papers' abstracts and, in case of doubt, with a superficial entire paper reading, to avoid false exclusion. In this step, 33 papers were excluded: 22 due to the exclusion criterion d and nine due to the exclusion criterion e, resulting in 12 papers to the Step 3.\n\nThe Step 3 consisted of analyzing the articles selected on previous stage through a meticulous full reading. Given the restricted number of papers selected, no quality criteria were applied.\n\n**FIGURE 2.** Paper selection process\n> Search strings in databases: 45 papers found -> 43 non-repeated papers -> Inclusion/Exclusion criteria -> 12 papers -> Results\n\n**TABLE 1.** String for search in databases\n\n{{TABLE:tbl_01}}\n\n**TABLE 2.** Criteria for inclusion or exclusion\n\n{{TABLE:tbl_02}}\n\nDue to the restricted number of papers identified, it was decided to conduct a second search, considering the Industry 4.0 context specifically. The following string was used [blockchain AND (\"industry 4.0\" OR \"advanced manufacturing\" OR \"industrial internet\")] in Web of Science\u2122, Scopus\u2122 and ACM\u2122 search engines and it resulted in articles already identified in the previous set of 45 articles. In this sense, the few numbers of papers was attributed to the degree of novelty of the theme and not to the pertinence of the initial search string.",
+      "citations": [
+        "W2168894761"
+      ],
+      "tables_in_text": [
+        "tbl_01",
+        "tbl_02"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. DISCUSSION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "A Delphi study performed in 2017 sought to answer the question of how blockchain could change the future of business [W2760255851]. This article identified some business areas where blockchain may have a significant influence and where practitioners may invest. It recognizes three perceived groups according to maturity. The first embraces two areas in which blockchain applications already exist and are likely to experience increased growth: \"physical currency\" and \"transfer of bonds, deeds or stocks\". The next one points to sectors where the usefulness of blockchain is certain in the short-term future and comprises the following examples: \"digital certificates\", \"global supply chain management\", \"independent certification of product quality\" and \"recording personal and private data\". The last includes fields where employment is unlikely at this moment, but companies driven to disruptive innovations could embrace opportunities. It includes \"verified corporate due diligence\" and \"performance management systems\".\n\nThe final selected 12 articles have a common objective that is the breakthrough in facilitating transactional process and coordination among the interaction devices in a safe way. As seen before, recording personal and private data is one of the most important concerns and it explains why all selected papers approach this issue to somewhat different degrees.\n\nAccording to White [W2760255851], the following classification stages of blockchain applications were adopted: 1) Already exist; 2) Coming soon; 3) Unlikely at moment. Moreover, papers with subject in commons were subdivided into four clusters. The first set of papers explores the technical vulnerabilities of a decentralized network and addresses this issue with blockchain use in manufacturing. A second set of articles investigates blockchain employment in transport system to create an ecosystem of autonomous vehicles. The third set contains articles related to supply chain management to register all the data of product lifecycles. The last cluster also refers to private data recording, but focused on the energy sector. Except for White [W2760255851] that proposed a categorization to blockchain applications, the final list to full read is presented in **TABLE 3**.\n\n**TABLE 3.** Classification of the selected papers\n\n{{TABLE:tbl_03}}\n\nIn the Set A \u2013 Manufacturing \u2013 it is common sense that in an M2M system, the transmission and data storage require high confidentiality, integrity, validity and authenticity. Blockchain technology can effectively set the safety of machines expansion, ensuring that data process cannot be violated.\n\nVan Lier [W2762080451] uses complexity science to understand the blockchain phenomenon. Cyber-physical systems are under development through interconnections among home appliances, vehicles, smart television, mobile phones, etc. They are considered complex systems since many devices interact in a non-simple way since each component of a whole can influence any other whole. Therefore, trust in information transactions is important to reduce uncertainty about the future behavior of the system in these networks. Blockchain helps creating interconnected systems able to make autonomous decisions in which humans believe that activities and transactions performed in a specific context were realized reliably and securely.\n\nYin et al. [W2748862194] highlight the safety problem of communication of M2M, in which current security protocols are not successful in solving the intercommunications between different heterogeneous devices in CPS devices. This paper proposes a blockchain design to resolve the security of M2M in a CPS through a manufacturing case study, where keeping track of historical data is essential to improve processes, identify key factors that may affect product quality and optimize the maintenance methods. This blockchain framework, designed as M2M, consists of public network areas, device areas and private areas.\n\nSkwarek [W2772652996] states that blockchain features such as distributed ledger, time-stamping and consensus can be used for securing sensors' network, with a small energy consumption and low calculation capabilities. Especially in manufacturing, a simple sensor failure may affect the whole process chain and lead to stopping production or shipment breakdown at smart-transportation. High requirements resulting in a substantial energy consumption is necessary; however, these measures counteract the need for a long battery operating time of IoT devices. Blockchain seems to be a solution since IoT devices only need to provide low security consistent with their energy limitation, while blockchain broadcasts information securely against manipulation and errors.\n\nPreuveneers and Ilie-Zudor [W2763427437] highlights the issue of transparency of networked production and cyber-security weakness that can depict several risks, such as sabotage of critical infrastructure, unauthorized access to private data or interference in production process. Whereas physical perimeter security seems appropriated, the vast majority of systems or non-standardized protocols were never designed with networked production. The paper presents a blockchain solution for decentralized access control to ensure data transparency, integrity, authenticity, and permission of dataflow-oriented Industry 4.0 processes.\n\nFinally, Li et al. [UNMAPPED:6] go further and envision companies selling not only their products and services, but also selling their knowledge. The researchers proposed a conceptual framework based on blockchain to support the exchange of knowledge and services among the parties that contributed to it. It consists of six layers: customer layer, an enterprise layer, an application layer, an intelligence layer, a data layer, and an infrastructure layer. They believe that the manufacturing system will be shifted from an integrated system to an open manufacturing system and, consequently, the standard and quality of entire industry will be enhanced.\n\nRegarding the Set B \u2013 Transportation Systems \u2013 and more focused on automobile environment, Sharma et al. [W2731079083] and Dorri et al. [W2606467208, W2605157201] proposed a blockchain architecture to defend the privacy of the users and to augment the security of the vehicular ecosystems. Both papers assume that vehicles have sensors and computers embedded that share data, such as locations, behaviors, usages or payments in a decentralized network. The articles discuss promising benefits in remote software updates, insurance industry, electric vehicles, and car-sharing services.\n\nIn the case of set C \u2013 Supply Chain, two different approaches of blockchain use were identified. Wu et al. [W2765837921] argue that the current supply chain information systems are unable to provide accurate and real-time shipment tracking along the distribution stage. Basically, the carrier concentrates and shares the information with other stakeholders on-demand basis. The authors put forward a combined private-public ledger architecture where private blockchain ensures the privacy requirements of trading partners and public blockchain makes sure all the necessary information be visible for critical decision-making.\n\nAdditionally, Kennedy et al. [W2746990014] demonstrate a new anti-counterfeiting approach based on blockchain. Counterfeit additive manufacturing parts seem to be similar to the original; however, they lack the critical information on the part functionality or material composition that may lead to part failure. It is advantageous for a firm to have a system for monitoring the goods throughout the supply chain efficiently and, at the same time, addressing anti-counterfeiting measures. This paper uses a composite thermoplastic filament to write a QR code directly into the product, whose physical features provide a visible fluorescence emission that could be measured with UV-excitation by a smartphone camera and could be integrated to blockchain. The QR code establish a searchable reference to an Ethereum-based blockchain entry, which includes elements from the part's design, printing process, and from post-production analysis.\n\nIn the last set D \u2013 Energy Sector, the two papers selected adopt blockchain to record energy or gas emission safely to create confidence among all participants. In Pop et al. [W2783275103] paper, they proposed a decentralized solution for managing demand response programs in the context of Smart Grids. In Khaqqi et al. [W2765923635], a reputation-based emission trading system anchored in a blockchain is presented to address its management and fraud issues.\n\nEnergy demand and energy production are not balanced. Uncertainty due to the intermittent and unpredictable nature of its generation and because of the lack of grid-scale energy storage capacity, electrical energy must be used as it is produced. The authors suggest a blockchain-based model for distributed management, control, and validation of demand response events in low/medium voltage smart grids. Smart meters would send energy values to the contract. The potential benefits of blockchain adoption include decentralized peer-to-peer (P2P) energy trading without intermediaries, deployment of secured energy transactions and increased share of distributed renewable energy within the energy mix [W2783275103].\n\nA new approach to encourage the adoption of long-term solutions instead of controlling carbon credits prices was introduced in the following paper. Smart devices are used to support elements of Emission Trading Scheme policy, the Monitoring, Reporting and Verification procedures by providing an immutable and transparent record of permits and reputations. Reputation is a new model that depends on past emission rates and participant's strategies to reach the emissions decrease. Furthermore, this proposed scheme was evaluated against a conventional model and the results show the feasibility of this new system [W2765923635].",
+      "citations": [
+        "W2760255851",
+        "W2762080451",
+        "W2748862194",
+        "W2772652996",
+        "W2763427437",
+        "W2731079083",
+        "W2606467208",
+        "W2605157201",
+        "W2765837921",
+        "W2746990014",
+        "W2783275103",
+        "W2765923635"
+      ],
+      "tables_in_text": [
+        "tbl_03"
+      ],
+      "citations_unmapped": [
+        "6"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. CONCLUSIONS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In academic environment, the studies of blockchain applications directed to manufacturing are scarce, as well as the papers that concern specifically the blockchain with IoT or M2M. It can be concluded that, regardless of blockchain application, such as disintermediation of trust, immutability of records or smart contracts, the utmost concern is focused on privacy and security. Most of the articles are concentrated on business creation on blockchain in four areas: manufacturing, transport, supply-chain, and energy, using IoT devices as contact points to the physical world, using this technology to automate workflows in a safety way to reduce time and costs in processes. It has also been noted that none of the likely applications already exist or are in use.\n\nBesides that, the use of blockchain in finances could not be ignored, since experts believe the potential impact on the development of innovative and valuable business processes and new products in this area [W2760255851]. Therefore, to support financial transactions in manufacturing activities, two approaches for the use of blockchain could be considered: as a technology embedded in digital payment system or as digital currency. In the first one, all financial data created by smart contracts, driven according to the machines' interaction, could be stored in blockchain. These databases could provide account payable and receivable balances to be cleared in an agreed date and compensated by a financial institution, or through an exchange of products or services between companies. The second alternative would be a direct financial clearing, using a digital currency that is accepted by both companies. In this case, a third party is unnecessary.\n\nThe integration of blockchain with IoT and M2M may result in relevant changes in countless sectors, leading to rethinking the current business models. Nevertheless, some technical constraints need to be addressed. Blockchain still demands high computational costs resulting from time-consuming processing and bandwidth capacity that is not appropriate for most IoT devices. At last, since many papers concern technical approach, it could be suggested as future works more applied research on blockchain application in the operational management.",
+      "citations": [
+        "W2760255851"
+      ],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2947203577_tables.md"
+}

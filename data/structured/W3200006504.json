@@ -1,0 +1,276 @@
+{
+  "id": "W3200006504",
+  "metadata": {
+    "title": "Use of Machine Learning and Artificial Intelligence Methods in Geriatric Mental Health Research Involving Electronic Health Record or Administrative Claims Data: A Systematic Review",
+    "n_sections": 7,
+    "n_subsections": 11,
+    "n_subsubsections": 0,
+    "n_tables": 3
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Geriatric mental health conditions such as depression or dementia are common, and it can be challenging to identify individuals with these conditions and predict outcomes associated with these conditions. Real-world data sources such as electronic health records (EHRs) and administrative health data (AHD) are increasingly used in geriatric mental health research. These data sources are available in many countries and health regions, and the details and information contained in these databases vary across the jurisdiction. The data contained in EHRs and administrative datasets are typically collected for the provision of medical care and purposing, such as financial reimbursement of providers. While this data is not collected primarily for health research purposes, EHRs and administrative data are frequently used for observational and epidemiological studies (sometimes referred to as outcomes studies). Given the non-randomized nature of studies utilizing EHR and AHD methods are used to minimize the risk of confounding and bias during the design and analysis of studies.\n\nThe typical analytic strategies employed with EHR and AHD studies involve multivariate regression models such as linear regression, logistic regression, or time-to-event models such as Cox-proportional hazards models. There is increasing interest in the potential applications of machine learning (ML) and artificial intelligence (AI) methods in mental health research [W2985355520] and in analyzing EHR and AHD data [W2973032093]. ML and AI methods may provide benefits over standard biostatistical regression analysis when there is a high complexity to the underlying data (high dimensionality), which is becoming more common with EHR and AHD data sources as a greater range of information is included in these data sources (e.g., free-text clinical notes from EHR) and greater numbers of AHD sources are available for data linkage and analysis (e.g., laboratory, imaging, genetics) [W2922512552].\n\nThe application of ML and AI to the analysis of EHR and AHD in fields outside of geriatric mental health is increasing, including the development of recommendations for using ML and AI methods with these datasets [W2978378060], as well as studies of ML and AI in biomedical research [W2562251009]. A recent review of EHR studies using ML or AI approaches for diagnosis or classification identified 99 unique publications across all clinical conditions [W3049405423]. A review focused on the application of ML and AI approaches to dementia research using EHR identified five studies, although the review included data sources that were not routinely available in EHR and AHD, including neuroimaging or biomarker data [W2993747819]. A review of the application of ML and AI approaches to research in mental health disorders, including all age groups, identified 28 studies, 6 of which utilized EHR data sources [W2985355520]. To date, there are no reviews examining the application of ML and AI methods for studies using EHR and AHD in geriatric mental health research.\n\nOur systematic review identifies the current application of ML and AI to EHR and AHD research in geriatric mental health. We identified the number of studies currently available in this field, the characteristics of study populations, data sources, and types of ML and AI methods used, along with potential strengths and limitations of studies, including the quality of study reporting. This review will highlight the current applications of ML and AI in geriatric mental health research and identify opportunities for future application of these methods to understanding geriatric mental health problems using these common data sources.",
+      "citations": [
+        "W2985355520",
+        "W2973032093",
+        "W2922512552",
+        "W2978378060",
+        "W2562251009",
+        "W3049405423",
+        "W2993747819"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Materials and Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "Research Question",
+          "subsubsections": [],
+          "text": "To avoid the likelihood of missing relevant articles, the inquiry is recommended to be broad [W2075950485]. For this review, our research question was: what research has been undertaken to apply machine learning and artificial intelligence methods to geriatric mental health conditions using EHR or AHD? We further sought to understand the types of geriatric mental conditions included in studies, the purpose of ML or AI approaches, information on sources of data used in studies, and assessments of study quality as part of our review.",
+          "citations": [
+            "W2075950485"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "Data Sources and Searches",
+          "subsubsections": [],
+          "text": "We conducted this review following a pre-specified protocol and in accordance with the Preferred Reporting Items for Systematic Reviews and Meta-analyses (PRISMA) reporting guidelines [9; Supplementary Table 1]. We performed an extensive search using appropriate keywords and medical subject headings to find relevant studies. A predetermined search strategy was employed in relevant databases after consultation with a librarian. We searched MEDLINE, Embase, and PsycINFO (each from inception to April 2021) to identify studies with the assistance of a research librarian. Additionally, we explored the reference lists of all relevant studies for potentially relevant citations. The search strategy was based on five key domains: artificial intelligence, geriatric, mental health, electronic health records, and administrative health data. We used free-text words and Medical Subject Headings (MeSH) terms to identify all relevant studies for each key domain. Certain text words were truncated, or wildcards were used when required. The Boolean operators \"AND\" and \"OR\" were used to combine the words and MeSH terms so that the search yielded specific yet comprehensive results. The line-by-line search strategy employed in MEDLINE (Ovid) is provided in Supplementary Table 2.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "Eligibility Criteria",
+          "subsubsections": [],
+          "text": "We set specific inclusion and exclusion criteria to eliminate irrelevant studies. Only original studies that focused on ML or AI in geriatric mental health using EHR or AHD data were included in this review. We excluded reviews, editorials, commentaries, protocols, conference abstracts, and letters to the editor. We considered all types of study designs, anticipating that ML or AI techniques may use different types of study design. There were also no restrictions on the languages of the studies. However, studies conducted in populations other than older adults were excluded, and we defined older adults as study populations where the average age of participants was 65 years and older.\n\nStudies that did not use EHR or AHD data were also excluded. We considered EHR as studies involving health records from outpatient or inpatient settings where the data was directly extracted from clinical records. Data in EHR studies could include structured data such as diagnoses, medications, or procedures, as well as unstructured data such as free-text clinical notes. Information from studies reporting imaging results within EHR was included provided that the ML or AI methods were applied to information related to the ordering of imaging tests or interpretation of results (e.g., whether an imaging test was performed, or text contained in radiology reports) as this information is commonly available in EHR. We excluded studies that utilized ML or AI approaches to raw imaging data or genetic information, which is not routinely available in abstracted EHR data. Administrative health data included information related to diagnoses, clinical services, prescribed medication, hospitalizations, and emergency department visits. AHD does not typically include free-text clinical notes. Typically, multiple sources of AHD are linked across separate databases for studies using AHD in contrast to EHR data, where all data sources are available from a single EHR record. Studies including both EHR and AHD together were also included. Further, studies that did not consider a mental health issue were also excluded. We included major neurocognitive disorders and dementia in our definition of geriatric mental health conditions in addition to other mental health conditions such as depression, schizophrenia, and suicide. The complete list of terms used in our search strategy is provided in Supplementary Table 3.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "Study Selection",
+          "subsubsections": [],
+          "text": "Four reviewers (MC, DS, EG, and GC) participated in the study selection and data extraction process. Eligible articles were identified independently by the reviewers using a two-step process. First, all articles identified from the search of electronic databases were exported to Covidence [W1827907298] to remove duplicate publications. Next, the title and abstracts of non-duplicated records were independently screened by two reviewers (MC and DS). All studies identified by one of the reviewers as potentially relevant were retained (based on eligibility criteria) and included in the full-text screening. Full-text articles were further screened for eligibility by the same two reviewers (MC and DS) independently. Lastly, the selected articles in the full-text review underwent data extraction, with each article reviewed by two of the four members of the review team. Any disagreement between reviewers was resolved through consensus.",
+          "citations": [
+            "W1827907298"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "Data Extraction and Synthesis",
+          "subsubsections": [],
+          "text": "For each selected article, two out of the four reviewers independently extracted data using Covidence [W1827907298]. The following information from each study was extracted: study ID, country, the purpose of the ML/AI, study design, type of dataset used and data format, sample size, ML or AI methods used, predictors (features) used by ML/AI, comparison with other methods, the performance of ML/AI, and main finding(s). As we anticipated substantial heterogeneity in study designs, study populations, and methods, we did not plan to conduct a quantitative meta-analysis of results.",
+          "citations": [
+            "W1827907298"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_6",
+          "subsection_index": 6,
+          "subsection_label": "Study Quality Assessment",
+          "subsubsections": [],
+          "text": "ML or AI techniques are generally used for either prediction or diagnostic/classification purposes. Considering this, we assessed each study either by Prediction model Risk OF Bias ASessment Tool [PROBAST; [11, 12]] or Quality Assessment of Diagnostic Accuracy Studies [QUADAS-2; [13]] checklist depending on the purpose of the selected study. Each reviewer independently assessed study quality.\n\nPROBAST is designed to evaluate the risk of bias and concerns regarding the applicability of diagnostic and prognostic prediction model studies. PROBAST contains 20 questions under four domains: participants, predictors, outcome, and analysis, facilitating judgment of risk of bias and applicability. The overall risk of bias (ROB) of the prediction models was judged as \"low\", \"high\", or \"unclear\", and overall applicability of the prediction models was considered as \"low concern\", \"high concern\", and \"unclear\" according to the PROBAST checklist [W2907554860, W2907638671]. When a prediction model evaluation is judged as low on all domains, then the model is treated as having \"low ROB\" or \"low concern regarding applicability\". On the other hand, when model evaluation is judged as high for at least one domain, then the model is treated as having \"high ROB\" or \"high concern regarding applicability\". Finally, when a prediction model evaluation is judged as unclear in one or more domains and is judged as low in the rest, then the model is treated as having \"unclear ROB\" or \"unclear concern regarding applicability\".\n\nQUADAS-2 [W2107638293] is the modified version of QUADAS, a tool used in systematic reviews to evaluate the risk of bias and applicability of diagnostic accuracy studies. QUADAS-2 consists of 11 signaling questions in four key domains: patient selection, index test(s), reference standard, and flow and timing. Signaling questions help to judge the ROB as \"low\", \"high\", or \"unclear\". Similar to PROBAST, when a study is judged as \"low\" on all domains, then the overall ROB and applicability of that study is judged as \"low risk of bias\" and \"low concern regarding applicability\". However, if a study is rated \"high\" or \"unclear\" in one or more domains, the study may be classified as \"at risk of bias\" or \"concerns regarding applicability\". Both PROBAST and QUADAS-2 are used to assess the risk of bias and concerns regarding applicability. In our review, we have used the tools for the assessment of the risk of bias.",
+          "citations": [
+            "W2907554860",
+            "W2907638671",
+            "W2107638293"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_7",
+          "subsection_index": 7,
+          "subsection_label": "Data Analysis",
+          "subsubsections": [],
+          "text": "Descriptive synthesis was undertaken to describe the existing literature on artificial intelligence techniques in geriatric mental health using AHD or EHR. Using the PRISMA flow diagram [W3022903699], we summarized the number of studies identified and those excluded (with the reason for exclusion) and included in the systematic review. The results of included studies were summarized in tables and synthesized in a narrative format.",
+          "citations": [
+            "W3022903699"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "Study Identification and Selection",
+          "subsubsections": [],
+          "text": "We identified 385 articles through our electronic database search and an additional six articles through reference search. After removing duplicates, 363 titles and abstracts were screened for eligibility, and from there, 68 articles were selected for full-text screening. After assessing full-texts, 21 articles were finally selected for the systematic review [W2993747819, W2753406138, W2886673955, W3109732498, W2766009750, W2941234853, W2888424845, W2809705582, W2954884457, W2970137930, W2959038971, W3089044448, W3024288074, W2974138729, W3121797755, W2960879592, W3046299046, W3013879439, W3089319258, W3088911909, W3151491835]. The detailed study selection process is summarized in **FIGURE 1**.\n\n**FIGURE 1** | PRISMA diagram for the systematic review of studies on artificial intelligence in geriatric mental health using EHR or AHD.\n- Records identified through database searching (n = 385): MEDLINE: 59, Embase: 320, PsycINFO: 6\n- Additional records identified through other sources (n = 6)\n- Records after duplicates removal (n = 363)\n- Records screened (title & abstract) (n = 363); Records excluded due to irrelevance (n = 295)\n- Full-text articles assessed for eligibility (n = 68)\n- Full-text articles excluded (n = 47): Review paper/Letter to the editor/Protocol = 4; Conference abstract = 8; Wrong study population (not among older population) = 23; Wrong intervention (did not apply artificial intelligence techniques) = 4; Wrong study setting (did not use administrative health data or electronic health records) = 6; Duplicate = 2\n- Studies included in systematic review (n = 21)",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "Study Characteristics",
+          "subsubsections": [],
+          "text": "The detailed characteristics of the studies included in this review are presented in **TABLE 1**. Among the studies we identified, most of the studies were conducted in the USA (N = 12). The remaining studies were conducted in Spain (N = 3), UK (N = 2), South Korea (N = 2), France (N = 1), and Austria (N = 1). Study designs mainly were cohort (N = 14) followed by case-control studies (N = 5) and cross-sectional studies (N = 1). The study design was not reported in one study. The sample size of the individual studies varied between 1,909 and 17,227,820.\n\nEHR was the most used data type and was used as the sole data source by 14 different studies. Five studies used only AHD, while two studies used both EHR and AHD. The dataset pattern was structured in nature in most studies (N = 11), unstructured free-text in only three studies, and seven studies used both structured and unstructured free-text data.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "ML and AI Methods Used in Studies",
+          "subsubsections": [],
+          "text": "There were considerable variations among the specific ML or AI methods used by different studies. Random forest was the most common ML technique and was used by seven studies [W2993747819, W2888424845, W3121797755, W3046299046, W3013879439, W3089319258, W3151491835]. Both natural language processing (NLP) [W2766009750, W2809705582, W3089044448, W2960879592] and logistic regression modeling techniques [W2886673955, W2959038971, W3121797755, W3013879439] were used by four studies. Three studies used deep learning approaches, including deep neural networks [W3109732498, W2954884457, W2960879592]. Support vector machine [W2753406138, W3013879439] and topic modeling [W2941234853, W2959038971] were used by two studies each. Finally, lasso [W3088911909], na\u00efve Bayes [W3121797755], multivariate information-based inductive causation (MIIC) network learning algorithm [W3024288074], fuzzy c-means cluster analysis [W2970137930], conditional restricted Boltzmann machine [W2974138729], WEKA [W2753406138], and gradient boosted trees [W3088911909] were applied by one study each.\n\nVarious sets of features, or sets of predictors, were considered in the identified studies. They include patient demographics, body measurements, history of family illness, personal disease history, administrative, diagnoses, laboratory, prescriptions, medications, medical notes, procedures, health service utilization, clinical and background information, topics in clinical notes, and ICD codes.\n\nML and AI methods were used for a variety of reasons. However, most of the studies applied the techniques either for prediction purposes (N = 9) or for classification or diagnosis purposes (N = 9). Among other objectives, one study used the methods to estimate the population incidence and prevalence of dementia and neuropsychiatric symptoms, one study to compare patients who are described in clinical notes as \"frail\" to other older adults concerning geriatric syndrome burden and healthcare utilization, and one study to compute and assess the significance of multivariate information between any combination of mixed-type variables and their relation to medical records.\n\nDifferent outcomes were considered by different studies while incorporating ML or AI techniques. Major neurocognitive disorder, dementia, and Alzheimer's disease were the most common conditions among the articles included in our study and were reported in 11 studies [W2993747819, W2753406138, W2886673955, W2959038971, W3089044448, W2974138729, W3121797755, W3046299046, W3013879439, W3088911909, W3151491835]. Among the other outcomes, a geriatric syndrome (falls, malnutrition, dementia, severe urinary control issues, absence of fecal control, visual impairment, walking difficulty, pressure ulcers, lack of social support, and weight loss) in 3 studies [W2766009750, W2809705582, W2954884457], delirium in 2 studies [W2888424845, W3089319258], mild cognitive impairment [W3088911909], cognitive disorder [W3024288074], multimorbidity pattern [W2970137930], mortality [W2960879592], hospital admission [W3109732498], and themes/topics mentioned in care providers' notes [W2941234853] were considered once. Outcomes were primarily defined using ICD diagnosis codes in AHD and EHR.\n\nThe majority of the studies did not compare the ML and AI algorithms with any other biostatistical methods except a few where a comparison with logistic regression was made. ML/AI techniques outperformed logistic regression in one study while performed similarly in another study. The area under the receiver operating characteristics curve (AUC) was the most commonly reported performance measure of ML and AI algorithms, with values ranging from 0.69 to 0.98. None of the studies performed model validation in an external population where the performance of a model's prediction or classification can be generalized to unseen new data. As such, we could not evaluate any of the model's generalizability in this study.\n\n**TABLE 1** | Study characteristics of the included studies.\n\n{{TABLE:tbl_01}}\n\n*AHD, administrative health data; DNN, deep neural network; EHR, electronic health record; ML, machine learning; NLP, natural language processing; RF, random forest; SVM, support vector machine; AUC, area under the curve; AD, Alzheimer's disease; LSTM, the long short-term memory; MIIC, multivariate information-based inductive causation.*",
+          "citations": [
+            "W2766009750",
+            "W2809705582",
+            "W3089044448",
+            "W2960879592",
+            "W2886673955",
+            "W2959038971",
+            "W3121797755",
+            "W3013879439",
+            "W3109732498",
+            "W2954884457",
+            "W2753406138",
+            "W2941234853",
+            "W3088911909",
+            "W3024288074",
+            "W2970137930",
+            "W2974138729",
+            "W2993747819",
+            "W3046299046",
+            "W3151491835",
+            "W2888424845",
+            "W3089319258"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "Study Quality Assessment",
+          "subsubsections": [],
+          "text": "Study quality was assessed either by PROBAST or QUADAS-2, depending on the nature of the outcome. For example, in studies where the purpose was a prediction, we assessed quality with PROBAST. Nevertheless, when the study purpose was identification or classification, we assessed quality using QUADAS-2. Thus, PROBAST was applied in 11 studies, while QUADAS-2 was involved in 10 studies.\n\nWhen PROBAST was applied, ROB was assessed as low in 100% of the studies according to the signaling questions of the \"participants\" domain, 91% of the studies according to the \"predictors\" domain, and 64% of the studies according to the \"outcome\" domain (**TABLE 2**). However, only in 36% of the studies ROB was assessed as low according to the \"analysis\" domain's signaling questions and was unclear in 55% of the studies. ROB was estimated as high in terms of both outcome and analysis in one study when PROBAST was applied. Only in three studies [W2886673955, W3013879439, W3151491835] low ROB was observed in all of the PROBAST domains.\n\n**TABLE 2** | Study quality assessment using PROBAST.\n\n{{TABLE:tbl_02}}\n\n*+ indicates low ROB; - indicates high ROB; ? indicates unclear ROB.*\n\nWhen QUADAS-2 was applied, ROB was low in 80% of the studies according to the signaling questions of the \"patient selection\" domain (**TABLE 3**). However, in most of the studies, ROB was unclear according to the signaling questions of the other three domains of QUADAS-2. For example, ROB was unclear in 50% of the studies according to the \"index test\", 60% of the studies according to the \"reference standard\", and 80% of the studies according to the \"flow and timing\" domain's signaling questions. In each of the domains of QUADAS-2 except \"flow and timing\", there was one study where ROB was assessed as high. In none of the studies, low ROB was observed according to all the QUADAS-2 domains.\n\n**TABLE 3** | Study quality assessment using QUADAS-2.\n\n{{TABLE:tbl_03}}\n\n*+ indicates low ROB; - indicates high ROB; ? indicates unclear ROB.*",
+          "citations": [
+            "W2886673955",
+            "W3013879439",
+            "W3151491835"
+          ],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Our review identified the application of ML and AI techniques in geriatric mental health using EHR or AHD data. We were able to identify 21 studies with all studies published recently within the past 5 years, suggesting the increasing application of ML and AI in this topic. As anticipated, ML or AI techniques were predominantly used either for prediction or classification purposes, and dementia was the most frequent condition considered in the studies. Both EHR and AHD data were considered; however, EHR data was the most frequent data source. There were considerable variations among ML, and AI techniques applied, ranging from more traditional ML techniques such as random forest to more advanced deep neural networks. The quality of study reporting was variable, with the majority of studies having unclear reporting of elements related to study quality. The relative advantages of ML or AI techniques compared to biostatistical methods were not assessed in most studies.\n\nA recent review by Graham et al. [W2985355520] on a broader topic (AI for mental health and mental illness) identified 28 studies. However, their review is different from our systematic review in many different ways. First, the review by Graham et al. was not a systematic review, and the search was performed in PubMed and Google Scholar only with studies published between 2015 and 2019. In contrast, we performed a systematic review utilizing three databases without any time constraints. Second, their search was also not restricted to EHR and AHD data as ours; instead, they considered studies with data from all sources, including social media platforms, novel monitoring systems such as smartphone and video and brain imaging data. Third, their review included studies with participants from all the age groups starting from 14 years as opposed to our study, which focused on geriatric mental health where study participants were older adults. Fourth, neurocognitive disorders (e.g., dementia) were the primary outcome in most of our included studies. In contrast, Graham et al. did not consider studies with neurocognitive disorders in their review, and depression was identified as the most common mental illness. Nevertheless, supervised machine learning (e.g., random forest) was the most commonly used AI technique according to their review, similar to our findings. Another recent study by Elizabeta et al. [W3013578994] reviewed AI in the healthcare of older adults. They did not mention any specific number of studies; instead, they discussed some studies where ML or AI approaches were applied in the medical care of older people and concerns associated with AI use in medicine. However, the study is fundamentally different from our study in the sense that they consider overall healthcare, whereas our focus is only on mental health. Our review provides additional information about AI and ML in healthcare focused on the mental health of older adults and applications specific to EHR and AHD data sources.\n\nEHR and AHD are rich resources that capture information of all the medical investigators involved in patients' healthcare records and provide ample opportunity to utilize this information for research, including mental health research. However, there are challenges associated with EHR and AHD data mainly due to the large sample sizes available, the volume of longitudinal data on participants, incompleteness, and inconsistency [W3049405423]. Therefore, there is a potential role for automated analytic methods for disease diagnosis and prognosis or prediction from EHR and AHD data. Data-driven ML and AI techniques can overcome the challenges related to the volume, potential complexity, or dimensionality of EHR data. Information stored in EHR and AHD can be fall under two broad categories: structured (e.g., diagnosis, prescriptions, medical tests, etc.) and unstructured free texts [e.g., medical notes; [7]]. The use of structured data (i.e., diagnostic codes, prescription medications) is more extensive in many areas of health, primarily due to its limited pre-processing requirement compared to unstructured data. On the other hand, unstructured data primarily derived from medical notes poses additional challenges due to the difficulty of transferring free text into structured features. Nevertheless, unstructured data has also been applied to build models for different disease conditions, including dementia [W2993747819]. NLP-based AI methods can translate unstructured text data into structured forms more amenable to machine inference or perform inference without explicit intervening translation. Combining structured and unstructured EHR data and using them to build ML models can produce better performance than each data source independently [W2993747819]. Our study also noticed seven studies used combined data in predicting mortality and dementia and the diagnosis of geriatric syndromes and dementia.\n\nRecently, increased emphasis has been put on using ML or AI tools in clinical research, particularly related to precision medicine [W2906694199, W3013557364]. Modern ML techniques offer benefits over traditional statistical methods due to their ability to detect complex non-linear relations, high-dimensional interactions among the features, and their capability to handle gigantic amounts of data. Since machine learning tools are more recent, advanced, and have the reputation of producing more accurate predictive performance, we anticipated studies using these tools might demonstrate improved predictive performance compared with the studies using more common biostatistical analytic methods. In our review, we identified only two studies [W3121797755, W3013879439] comparing ML approaches with statistical methods. One study, Park et al. [W3013879439], found that the predictive performance of ML techniques random forest and support vector machine were superior compared to logistic regression in predicting Alzheimer's disease. In contrast, a similar predictive performance between random forest and na\u00efve Bayes ML techniques and logistic regression was observed in predicting dementia in the study by Ford et al. [W3121797755]. Overall this is in keeping with other findings that ML algorithms tend to provide mixed evidence for improving predictive performance compared with conventional statistical models in the other domains of health [W3000470572, W2060947741, W1905782493, W2412875092, W2542719835].\n\nOne of the considerations related to identifying situations where ML or AI may outperform biostatistical approaches include situations where the dataset is large and there are many complex and interrelated features or predictors. In situations where these conditions are not present, the performance of ML and AI techniques may not provide more accurate results when compared to biostatistical methods, even when they require additional expertise and computing resources to realize. While AI and ML may offer benefits in some situations, the potential limitations of these methods and optimal strategies for employing them in mental health research need to be carefully considered. Moreover, the inference of some ML models, such as neural networks, is hard to explain. Behavioral and performance explainability of ML models is a critical issue pertaining to whether \"black box\" models can be trusted, whether they appropriately infer from their input features, and whether they generalize well to \"unseen\" data [W2945976633].\n\nOur review identified a lack of standard reporting in this area of literature. Authors often reported different aspects of the ML algorithms and in varying ways, which created difficulty for data collection and standardization within this review. In addition, the results of the ML study findings are often insufficiently reported primarily due to the inherent complexity of machine learning methods and the flexibility in specifying machine learning models, which hinders reliable assessment of study validity and consistent interpretation of study findings [W2562251009]. Recently, new guidelines have been introduced with a list of reporting items to be included in a research article and a set of practical sequential steps to be followed for developing predictive models using ML [W2562251009]. A new initiative to establish a TRIPOD [W2019694480] statement specific to machine learning (TRIPOD-ML) is also underway to guide authors to develop, evaluate and report ML algorithms properly [W2937186836]. These reporting guidelines may assist authors in improving reporting in future studies in this area, particularly for research studies published in clinically oriented publications in contrast to engineering or computer science-focused publications.\n\nThe clinical implications of our findings include considerations related to the future application of ML and AI in geriatric mental health research [W2922512552, W3022206679]. ML and AI algorithms are typically used to classify or predict, translating to clinical applications related to diagnosis and prognosis [W2915053252]. Mental health diagnoses are clinical compared to some other fields of medicine where diagnoses may be based on quantitative assessments or laboratory investigations. ML and AI analytic approaches may be well-suited to improve diagnostic accuracy in complex classification problems such as mental health diagnoses. To date, much of the research on this topic is confined to diagnosing dementia, although, as our review indicated, there is some research now related to the identification of geriatric syndromes or patterns of behavioral symptoms in dementia. ML and AI approaches require further study in diagnosing addictions and mental health problems in older adults. While only a few studies directly compare ML or AI approaches to more commonly used biostatistical methods, ML and AI may provide promising advances in disease state classification, particularly with more complex data.\n\nSimilarly, ML and AI may also provide improved prediction of the onset or progression of addictions and mental health problems. To date, the main clinical conditions that these methods have been applied to have been the onset of dementia. However, ML and AI approached may also facilitate improved prognostic models for predicting the onset of other geriatric mental health disorders. Predicting treatment response for an individual and personalizing therapeutic interventions based on this information, also known as precision medicine, is another potential application of ML and AI in geriatric mental health [W2915053252]. Finally, ML and AI methods may be well-suited to analyzing unstructured data such as free-text clinical notes increasingly available in EHR. Incorporating clinician-generated data from unstructured data sources is likely to improve diagnostic or predictive performance when compared analyses conducted using only structured data such as diagnoses or laboratory values. Our review has identified current clinical applications of ML and AI approaches and highlights potential future areas for research and clinical applications related to research using EHR and AHD in geriatric mental health. While research on ML and AI in geriatric mental health is in its early stages it is anticipated that these methods will be increasingly used and have the potential to transform research and clinical care in this field as in other fields of medicine [W3146316187].\n\nTo the best of our knowledge, this is the first systematic review on the application of ML or AI in geriatric mental health conditions using EHR or AHD data, and a detailed critical appraisal of the applications has been performed. One of our study's strengths is the extent of the systematic search, which includes massive use of keywords and MeSH terms while searching three different databases and extensive use of the reference lists of the identified studies. We did not place any restrictions on language, geographical location, or time periods to keep our search broad. Consequently, there was little chance that any relevant study was missed. Nevertheless, our study also has limitations. We did not perform a search on gray literature. A search on electronic databases along with the gray literature could make the search more comprehensive. Although many of our identified studies were diagnostic or prognostic models and a meta-analysis of performance measures (e.g., AUC) of the models could provide a comprehensive summary of the performance of these models [W2570878489], we did not perform any meta-analysis from the studies due to their high heterogeneity. Failing to assess publication bias amongst the studies is another potential limitation of this study. Nevertheless, we assessed ROB associated with the studies using PROBAST and QUADAS-2 checklists.\n\nIn conclusion, we identified existing research on geriatric mental health in this study where ML or AI techniques were applied using EHR or AHD data. We were able to locate a relatively small number of studies that suggest ML or AI application in geriatric mental health is relatively uncommon at present, although this field is rapidly expanding throughout healthcare research. Outside of the clinical topic of dementia, there are few studies of other geriatric mental health conditions such as depression, anxiety, or suicide where ML and AI may be helpful. The lack of consistent information in the selected studies indicates that improvements in the quality of reporting of ML and AI in the future may also help improve research in this field. Additional information on how ML or AI approaches may be best utilized in EHR and AHD studies is required, including information about when these approaches are more or less likely to produce more accurate results compared to typical biostatistical analyses. Overall, ML and AI tools can play a vital role in redefining the diagnosis of mental illness using a secondary data source, thus facilitating early disease detection, a better understanding of disease progression, optimizing medication/treatment dosages, and uncovering novel treatments for geriatric mental health conditions.",
+      "citations": [
+        "W2985355520",
+        "W3013578994",
+        "W3049405423",
+        "W2993747819",
+        "W2906694199",
+        "W3013557364",
+        "W3121797755",
+        "W3013879439",
+        "W2945976633",
+        "W2562251009",
+        "W2019694480",
+        "W2937186836",
+        "W2922512552",
+        "W3022206679",
+        "W2915053252",
+        "W3146316187",
+        "W2570878489"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Author Contributions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "All authors contributed to this work. DS contributed to the conception and design of the review. MC and DS read and screen abstracts and titles of potentially relevant studies, and screened the full-text papers. MC, DS, W-YC, and EC extracted data and rating the quality independently. MC performed the analysis and drafted the manuscript. DS and W-YC critically reviewed it and suggested amendments before submission. All authors approved the final version of the manuscript and take responsibility for the integrity of the reported findings.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Funding",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This research received no grant from any funding agency in public, commercial, or not-for-profit sectors. Partial support for this project was provided by the Canadian Institutes of Health Research\u2014Canadian Consortium on Neurodegeneration in Aging.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Supplementary Material",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The Supplementary Material for this article can be found online at: https://www.frontiersin.org/articles/10.3389/fpsyt.2021.738466/full#supplementary-material",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3200006504_tables.md"
+}

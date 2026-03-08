@@ -1,0 +1,293 @@
+{
+  "id": "W2610277441",
+  "metadata": {
+    "title": "Impact and Challenges of Requirement Engineering in Agile Methodologies: A Systematic Review",
+    "n_sections": 5,
+    "n_subsections": 10,
+    "n_subsubsections": 4,
+    "n_tables": 4
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "I. INTRODUCTION",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Requirement Engineering",
+          "subsubsections": [],
+          "text": "Before broadly descriptive, let us have a debate with respect to requirement engineering. It is basically a procedure including documentation, legitimate association, and collection of all necessities of a framework. In this practice, the product need is distinguished; without this procedure, making extraordinary progress in providing efficient software might be incomprehensible. Despite the fact that process of requirement engineering requires a lot of time, it is the best way to get best out of likelihood for the efficient product to meet the conditions and requirements [W2134585351]. In this manner, requirement engineering performs a key part in development of software. Requirements Engineering (RE) is a main area in software production and engineering. A high quality RE procedure often dominates an effective project. Traditional Software Engineering (SE) usually includes the RE process which consist of requirements elicitation, analysis, documentation, management and validation [W1492048225]. According to Kotonoya et al. most issues associated to the RE are resultant from the inadequacy or irregularity of specifications and requirements and conflicts between product stakeholders [W2046795207]. Effective RE requires a better consideration of the domain area, the circumstances in which the framework will run, and requirements of the product's stakeholders including developers, designers, end users and customers [UNMAPPED:4].",
+          "citations": [
+            "W2134585351",
+            "W1492048225",
+            "W2046795207"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "4"
+          ]
+        },
+        {
+          "subsection_id": "s_1_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Agile",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_1_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "1) Extreme Programming (XP):",
+              "parent_subsection_id": "s_1_2",
+              "text": "Extreme Programming (XP) depends on values of correspondence, simplicity, courage, and criticism [UNMAPPED:7]. Purpose of XP is to associate old and tested methods in manner that they strengthen each other.\n\n**FIGURE 1. Extreme programming [UNMAPPED:7]**\n\nWhole team works together by using practices and feedback makes it possible to know status of work. XP discusses general practices and processes of software product development and what could possibly be done during procedure, it does not unequivocally discuss requirement techniques in detail. A few extreme programming techniques (or methods utilized as a part of these practices) can be contrasted and compared with minor adapted requirements procedures. XP utilizes story cards for requirements gathering. A user story describes business value feature to clients. Use cases are depiction of interactions of users and system and don't required need to give business value. Before writing of story cards, clients need to consider what they anticipate that the system will do (brainstorming). When we think about specific functionality, more ideas and stories are emerged. Customer prioritizes stories on the basis of implementation efforts and time for next iterations. Comparison of extreme can be done with evolutionary prototyping and requirements. The distinction amongst XP and prototyping is that XP requires mature substantiated code while prototypes can be \"threw together\". Clients can survey and test the usefulness and outline of the delivered software and examine issues that need to be changed or included in next iteration.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "7"
+              ]
+            },
+            {
+              "subsubsection_id": "s_1_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2) Scrum:",
+              "parent_subsection_id": "s_1_2",
+              "text": "Scrum is a used for management of development process by applying concepts on adaptability, efficiency and flexibility from industrial process control hypothesis. Scrum concentrates on team work and product quality in versatile environment [W1602304209, W1624439575]. Sprints, product backlog and daily scrums are core techniques of Scrum. Product backlog plays distinct role in scrum with respect to requirement engineering. Necessary requirements for product, prioritized functions, features and bugs are part of Product backlog. The software product backlog accumulation can be contrasted and compared by inadequate, versatile and implementation document. For each sprint, tasks having high priority are added to sprint backlog without any alterations, however requirements can be reprioritize for next iteration of sprints. Ultimately a meeting is held on sprint review that exhibits the innovative requirements to the client and requests input. All information assembled from the meeting on sprint review and product backlog is utilized in next meeting of sprint. The sprint audit meeting can be contrasted and compared to review of requirements and evolutionary prototype. Fig of frame work is given below [W1624439575].\n\n**FIGURE 2. Scrum framework [W1624439575]**",
+              "citations": [
+                "W1602304209",
+                "W1624439575"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_1_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3) Crystal:",
+              "parent_subsection_id": "s_1_2",
+              "text": "Crystal Methodology are a group of various systems from which the proper techniques can be selected for each software product/project. Followers of this family can be deviate to fit in different circumstances. Indication of \"heaviness\" is practiced by different color indexing of members of crystal family. Frequently used colors are yellow, clear, red, orange, blue, magenta and violet [W2569762832]. Up to now three Crystal procedures (blue, violet and magenta) have been utilized. Some Orange policy standards and Crystal Clear can be analyzed and compared with RE methods given below [W1624439575, W2027045085].",
+              "citations": [
+                "W2569762832",
+                "W1624439575",
+                "W2027045085"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_1_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4) Dynamic System Development Method (DSDM):",
+              "parent_subsection_id": "s_1_2",
+              "text": "DSDM explicitly highlights the use of JAD sessions and emphasizes prototyping [W2138792546]. Dynamic Systems Development Method (DSDM) gives a structure for rapid development of application [W2138792546]. Business study and feasibility study are two initial phases of DSDM. Only base requirements are gathered in these two phases and other requirements are gathered in development phase. There is no restriction in use of any technique for development however, testing is practiced in duration of complete life cycle phase. Developers and users both are involved in incremental testing (functional, technical).\n\n**FIGURE 3. Intra-item delivery (Prototype, Review) One release for two user viewings (Review) Functionality based automated regression testing (Testing) Workshops for product- and methodology**",
+              "citations": [
+                "W2138792546"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Definitions of Agile development software grown in the 90s as a response against conventional methodologies that were regarded as substantial, rigid and not supportive for essential tasks of developer. In 2001, research of the Agile Manifesto [UNMAPPED:5] was a landmark for development of Agile Software. Practices were proposed by 17 different groups for improvement in software development by using practices and methodologies of Agile. Purpose of Agile development methods was to provide product within budget, on schedule, satisfaction of customer and high quality. Agile methodology includes many techniques and methods. Frequently used methods are Scrum, Extreme Programming, Adaptive Software Development, Dynamic Systems Development Method and crystal family.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "5"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "II. LITERATURE REVIEW PROCESS",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Review Planning:",
+          "subsubsections": [],
+          "text": "A literature review was planned out in order to analyze the study in different phases of software requirements with the help of agile methodologies and challenges.\n\n**FIGURE 4. Review process**",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Keywords Identification/Selection:",
+          "subsubsections": [],
+          "text": "Research keywords were identified related to agile practices such as agility, agile, Scrum, XP, crystal programming, usability, requirement management in agile, requirement quality, change management in agile and requirement engineering. These keywords were searched in combination of each other and single terms.\n\n**TABLE I. KEYWORDS**\n\n{{TABLE:tbl_01}}\n\nAfter identification of keywords, search engine were selected for searching review studies. IEEE explorer, science direct, google scholar, ACM and Taylor & Francis are search engines used for review of papers and journals.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Inclusion and Exclusion:",
+          "subsubsections": [],
+          "text": "After selection of keywords and search databases, selection of primary review is required. A lot of material has been published in this topic we needed to refine the selected study by addition and removal of material so that purpose of study can be fulfilled. The reviews were chosen in the wake of taking after the incorporation and rejection criteria given below.\n\n**FIGURE 5. Inclusion Criteria**\n\n1) **Inclusion:** Inclusion criteria includes Peer reviewed study, relevant to search keywords, empirical study using agile methodologies, Study conducted in English language, studies including requirement engineering practices and agile in software engineering as depicted in fig.3\n2) **Exclusion:** After searching a lot of paper and review we excluded irrelevant material on basis of exclusion conditions and criteria. Especially studies who don't directly focus on Agile practices in requirement engineering, tutorials, editors and weblinks are excluded. Figure of selected study is given below.\n3) **Research Questions:**\n- What are requirement Engineering practices used in Agile?\n- What are issues, limitations and challenges in agile requirement engineering?\n\nComplete selection process of literature review is given below.\n\n**FIGURE 6. Literature Review Selection Process**",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Systematic literature review of related papers has been made as directed in B. Kitchenham et al [W2118328848] in 2008 shown in fig. A review has been planned to analyze the studies conducted in domain of requirement engineering in agile mythologies. Review has been made on basis of requirement techniques, agile practices, published year and methodology used so that research trend can be find out in this area. Keywords were identified for searching criteria of research and journal paper in this field. inclusion and exclusion criteria of papers selected, research questions are identified for analysis of research.",
+      "citations": [
+        "W2118328848"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "III. LITERATURE REVIEW",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "A. RE practices in Agile:",
+          "subsubsections": [],
+          "text": "Bose, Kurhekar and Ghoshal (2008) [UNMAPPED:14] focused modifications in requirements engineering to be implemented in agile practices. They proposed that stakeholders should be involved for different point of views for requirements gathering and interviews should be conducted. There should be verification and validation of early description of functional and non-function requirements involved. Moreover, they specify that requirements traceability should be ensured by adoption of requirement management, which is critical when the requirements are probably going to be changed. We can get continuous feedback from customers by agile requirement; however, limits of agile practices are not well defined.\n\nSilliti and Succi in 2005 [W1492048225] depict the approaches of agile to deal with requirements management and elicitation. Purpose of these practices is to delete out dated requirements and add new one by continuous interaction with customers. Interaction between the Agile developers and the clients must be immediate and with no go-betweens and complete development team should be involved for requirements elicitation and gathering. In beginning of each iteration requirements can be changed and prioritized so conclusion is that requirements are effectively managed in small teams by agile practices and customer involvement reduces wastage of time in requirements during production.\n\nAccording to Eberlein and Leite (2002) [UNMAPPED:16] the requirements are ineffectively handled in four agile practices\u2014requirements management, validation and verification, nonfunctional requirements and customer interaction but can be ignored in agile domain. Requirement management is basis for managing changes in customer requirements so agile methods must ensure it. For improving quality of agile process requirements validation is applied with requirements verification. According to authors techniques are needed to identify nonfunctional requirements [UNMAPPED:16]. However, more focused has been given to customer involvement and interaction but different techniques of interviews and context free questions should also be included.\n\nPaetsch, Eberlein and Maurer (2003) [W2144363643] look at the distinctions and comparisons between Agile approaches and traditional RE approaches and attempt to discover what advantages of RE techniques can be applied to Agile approaches. According to them there is least involvement of customers in traditional RE approach (only involved in early stages) whereas agile involves stakeholders throughout in agile process. They conceived that agile approaches are less documented and traditional approaches are well documented in detail. Traditional RE approach uses diverse levels of abstraction models while Agile uses throw away model. Agile methods use index cards for requirement management and change management has great importance in traditional approach. In their opinion, is that the RE stages are repeated and merged in most iterations and not clear in agile. Recommendations of authors are need of documentation in agile environment for future maintenance and implication of distinct phases of RE [W1996663039].\n\n**FIGURE 7. Frame work of requirement prioritization [W2592476469]**",
+          "citations": [
+            "W1492048225",
+            "W2144363643",
+            "W1996663039",
+            "W2592476469"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "14",
+            "16",
+            "2008",
+            "2002",
+            "2003"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Requirement Prioritization in agile:",
+          "subsubsections": [],
+          "text": "The progress of innovation and business needs have activated client prerequisites to evolve almost each day. It is in this manner difficult to satisfy the necessities on the double. Agile practices have been acquainted with relieve such issues by actualizing client necessities incrementally and iteratively. Author has discussed about the variables that must be thought about while performing requirement prioritization in agile practices. This is essential as erroneous requirement prioritization may build the cost of advancement and prompt project and framework disappointments. In this review, the contributing components concerning viable requirement prioritization in writing were grouped through substance examination as a theoretical system. The studies demonstrate that there are three angles required in requirement prioritization prepare in lithe improvement [W2592476469].\n\nChoosing a gathering of unmistakable necessities to be executed in iterations is considered as fundamental in agile practices. This can be accomplished by execution of requirement prioritization. Conceptual framework of requirement prioritization is depicted in fig [W2592476469].\n\nSome of challenges in agile requirement prioritization are depicted in fig below.\n\n**FIGURE 8. Challenges in requirement prioritization**",
+          "citations": [
+            "W2592476469"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Uses of Agile Requirement Engineering",
+          "subsubsections": [],
+          "text": "Tomayko (2002) [W1492048225] perceives 12 extreme Programming groups and discovers that agile prototype answer queries about requirements content. Customers accordingly will recognize what else they need and dispose of the obligation of giving correct requirements. Another advantage of agile approach is that requirements (unstable state) are pre-tested for detection of faults in extreme programming; however, changes in architecture cause incorrect estimation and extra cost in requirements elicitation in agile environment.\n\n16 software development establishments were examined by Cao and Ramesh (2008) [W2148023174] for advantages and disadvantages of 7 agile approaches. Iterative requirement engineering, face-to-face correspondence over specification in written form, utilization of review meetings and acceptance tests, prototyping, test bases development, constant planning for change requirement management and prioritization of requirements [W2148023174]. They dissect both of the advantages and difficulties of these practices and recommend that they are neither beneficial nor useless to establishments and can be used on basis of project specifications and conditions.\n\nA goal sketching method was introduced by Harrison and bones in 2007 [W2154687085]. First they create unclear goal graph for basic understanding of functionality then development of stages similar to scrum started. Graph consists of many stages termed as stage graph and refines all stages of development. Stage graph is updated during stages and system with completed graph is updated at the end of last stage by using iterative developments. Testing of these practices has been done in industrial organizations.\n\nModel of Agile Requirements Abstraction, a model of 4 abstraction level agile was presented by Birgisson, Svensson, Hedin and Regnell (2008) [UNMAPPED:29]. Feature level, product level, component level and function level are 4 levels from general to specific. Whenever Requirement engineering phases use ARAM model, these phases use three steps: Elicitation step, placement step and workup step. Collection of real requirements is included in elicitation, placement include identification of abstraction level of requirements and old and new requirements are combined by identity numbers in workup step. ID numbers are assigned with respect to algorithm in prioritization of requirements for scrum backlog. Documentation can be part of these steps if traditional methods are practice in this model. These agile practices are just assumed within the groups so the clients just observe the delivered outcomes as developments and don't need to be required in the RE procedure. Evidence shows that how RE process was executed in scrums. Most of research has been conducted on general agile methodologies, few authors specified RE practices in Scrum. Moreover the greater part of the accessible scholars discussed elicitation stage of requirement engineering, other phases requirement management, prioritization, validation and management are rarely cited.",
+          "citations": [
+            "W1492048225",
+            "W2148023174",
+            "W2148023174",
+            "W2154687085"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "29",
+            "2002",
+            "2008"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "D. RE Practices in Agile:",
+          "subsubsections": [],
+          "text": "Following are requirement engineering practices used in agile methodology reflected in review study.\n\n**TABLE II. REQUIREMENT ENGINEERING PRACTICE IN AGILE**\n\n{{TABLE:tbl_02}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "F. RE Issues/challenges in Agile Methodology:",
+          "subsubsections": [],
+          "text": "Following are requirement engineering challenges that can be described in Agile\n\n**TABLE III. RE CHALLENGES IN AGILE**\n\n{{TABLE:tbl_03}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "IV. ASSESMENTS AND FINDINGS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Hasnain in 2010 [W2027045085] given a efficient review to describe customers, users, agile techniques and specialized issues recognized in published literature review from 2002 to 2008. According to them review demonstrates that requirement engineering methods are reviewed in generic agile approaches and these practices are not reviewed in specific agile methodologies like extreme programming, test driven development, crystal programming. Finding of Ramesh [W2148023174] in her survey prescribed that exploratory and experimental results are more required agile practices particularly in extreme Programming (XP) [UNMAPPED:16], crystal programming and Scrum [W2144363643].\n\nSilva and Martin [W2102032378] provided systematic review about user centered design and agile practices integration. Usability issue, related to design of agile methodology was discussed in literature review [W2102032378]. Finding of review identified that agile team can resolve usability issue by adopting specialist of user-centered design. These practices have been identified in agile techniques like big design up front, little design up front and testing of user.\n\nBarlow and Lowry [W3122299898] valued the impact of the use of agile practice in large level projects. The survey gave the design framework of a system that conveys methodologies to large projects for implementing agile practices. The survey outcomes help the designers and developers to implement development practices in large organizations. Agile performance in three constraints time, scope and cost is depicted in Fig.7 [W1624439575]. Scope of Agile is most beneficial in IT organizations as shown in fig.\n\n**TABLE IV. Agile in tripe constraints [W1624439575]**\n\n{{TABLE:tbl_04}}\n\n**FIGURE 9. Agile in tripe constraints [W1624439575]**\n\nUsability, performance and security of system described by nonfunctional requirements are less focused in Agile practices NFRs that decide the ease of use, security and execution of the framework are anticipated to find solution of issue in agile practices [W2102032378, W3122299898]. Most of authors concentrated on specific nonfunctional requirement e.g. security [W1996663039, W2102032378] and propose structures for supporting elicitation of security requirements while others referred, modeling framework as component of requirement engineering in order to integrate nonfunctional activities into agile practices.",
+      "citations": [
+        "W2027045085",
+        "W2148023174",
+        "W2144363643",
+        "W2102032378",
+        "W3122299898",
+        "W1624439575",
+        "W1996663039"
+      ],
+      "tables_in_text": [
+        "tbl_04"
+      ],
+      "citations_unmapped": [
+        "16"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "V. CONCLUSION AND FUTURE WORK",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In the previous decade, agile practices has picked up a huge worldwide recognition related to software development because of its center idea of esteeming people and connections, working program, client cooperation, and reacting to change. We firmly trust that agile consummately fits the changing way of RE, along these lines bringing lithe into the universe of RE will ensure a more noteworthy and a speedier achievement. Theses research papers represent a systematic review of agile methodologies, its limitations and challenges in requirement engineering. Systematic literature review of related papers has been made as discussed in B. Kitchenham et al [W2118328848] in 2008. About more than 60 research papers were searched, exclusion criteria was applied to shortlist relevant research papers. Paetsch, Eberlein and Maurer [W2144363643] look at the distinctions and comparisons between Agile approaches and traditional RE approaches and attempt to discover what advantages of RE techniques can applied to Agile approaches RE stages are repeated and merged in most iterations and not clear in agile. Recommendations of authors are need of documentation and prioritization in agile environment for future maintenance and implication of distinct phases of RE Finding of this research is the work of researchers that will be beneficial for those who are interested in finding interesting area of research in this field because many techniques of agile (extreme programming, crystal methodology, lean) requires further study and practical results. as clarified by studies. When processes are not well defined and clarified, conflicts in requirements cause problems. There is a need for proper framework for prioritizing requirements in agile environment. Nowadays, organizations are more focusing on providing requirements focus on value of customers and organization viewpoint because of time limitations, concentrate on cost saving and satisfaction of consumer. By prioritizing requirements, business value based on customer needs can be established. There is a need for process with defined criteria and process that can help in well prioritized backlog.",
+      "citations": [
+        "W2118328848",
+        "W2144363643"
+      ],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2610277441_tables.md"
+}

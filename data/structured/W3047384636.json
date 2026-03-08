@@ -1,0 +1,802 @@
+{
+  "id": "W3047384636",
+  "metadata": {
+    "title": "Self-tracking behaviour in physical activity: a systematic review of drivers and outcomes of fitness tracking",
+    "n_sections": 9,
+    "n_subsections": 16,
+    "n_subsubsections": 19,
+    "n_tables": 8
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In recent years, the possibility of keeping records of everyday life has become remarkably easy [W2025454211]. Advances in technologies (e.g. smartphones, wearables) have made it possible for people to monitor and track almost every sphere of their lives [W2889128419]. From daily activities such as walking, eating, and sleeping to mood and health, people now have access to more information about themselves than ever before [W2333629723]. This phenomenon is referred to as self-tracking (or self-quantification) \u2013 using modern technologies to automatically track and collect personal information in numbers [W2889128419], and self-tracking is now a common practice in the life of many people [UNMAPPED:27].\n\nThe increasing tendency for individuals to collect personal data was spotted in 2007, and since then the trend of self-tracking has grown steadily across the globe [W349903796]. As self-tracking allows individuals to collect data about themselves automatically (or with less effort), it has been utilised in many different practices, such as fitness, healthcare, and medical care. Particularly, there has been a growing interest in the use of self-tracking technologies in physical activity (e.g. sports), namely fitness tracking, with an increasing amount of research devoted to the topic (e.g. [W2801534204], [W2543954569], [W2914847613]). For example, a number of studies have explored the motivational and behavioural impacts of fitness tracking (e.g. [W1995092424], [W2605718339]), while others have looked at the drivers (e.g. individual differences, product quality) of fitness tracking technology usage (e.g. [W2025454211], [W2783168567]). Such research demonstrates various drivers and outcomes of fitness tracking.\n\nRecent work such as that by [W4252958680] has provided a review of the literature on wearable technology adoption. Although such an investigation suggests several important factors (e.g. technology characteristics, individual characteristics) that can influence wearable technology usage, the drivers of self-tracking technology (in this case, fitness tracking technology) usage may not necessarily be the same, as there are several differences between wearable technologies and fitness tracking technologies. First, wearable technologies are electronic devices that can be comfortably worn or attached to the body of individuals (e.g. smartwatch, smart glasses) [W2793156496], whereas fitness tracking technologies are devices (or apps) that can track individuals' physical functions (e.g. steps, heart rate), such as Fitbit or Runkeeper [W2912812321]. Therefore, fitness tracking devices can be considered as one type of wearables, but not all wearables have the fitness tracking functionality. For example, devices such as head-mounted displays and smart glasses are wearables, but they often do not have fitness tracking features.\n\nSecond, some wearables do more than just fitness tracking. For example, a smartwatch may allow basic fitness tracking (e.g. step count), but fitness tracking is only one of the many features it has (e.g. calling, texting, gaming, and web browsing). Smartwatches thus are multi-functional devices going beyond fitness tracking [W2912812321], [W2793156496]. This means that people can use wearables for different purposes than fitness tracking itself. Therefore, although wearables are an important concept in the investigation of fitness tracking behaviour, care should be taken in generalising the findings on wearable technology to the domain of fitness tracking technology. Notably, the authors use the term 'fitness tracker' or 'fitness tracking device' in this paper instead of the commonly used term 'activity tracker', as not all activities can be considered as physical activity (e.g. eating, reading, or sleeping).\n\nOther works such as that by [W2616211294] and that by [W2394861653] have reviewed the literature regarding the effect of self-tracking technologies in medical sector (e.g. effect on patients' health condition). However, limited attention has been paid to the effect of self-tracking, particularly fitness tracking, on other user outcomes (e.g. motivation, experience), especially among general population (e.g. regular users).\n\nTo the best of the authors' knowledge, there has been no systematic review of the literature on fitness tracking behaviour. A synthesised summary of the earlier research thus can provide value for both academics and practitioners, as it would help identify the likely drivers and outcomes of fitness tracking behaviour. The aim of the current paper is therefore to provide a comprehensive review of a diverse range of contemporary literature that informs our understanding of the drivers and outcomes of fitness tracking behaviour.\n\nBy systemising the findings and conclusions of existing studies on fitness tracking, the current paper makes four important contributions. First, the current paper adds to the literature on self-tracking behaviour by exploring and summarising the drivers of self-tracking behaviour in physical activity \u2013 fitness tracking. Second, along with the drivers, the current paper investigates the potential outcomes of fitness tracking behaviour, and the inclusion of both drivers and outcomes enables the development of an integrative framework of fitness tracking behaviour and suggests directions for future research. Third, by drawing on the existing studies on fitness tracking, which have been conducted across various fitness tracking technologies (e.g. armband, pedometer, and app) and user groups (e.g. patients, seniors, and students), the current paper provides valuable insights that can be generalisable to other settings (e.g. other types of users and fitness tracking products). Lastly, the current paper deepens the knowledge designers require to improve fitness tracking products and facilitate the use of these technologies (e.g. fitness trackers) among different individuals. The findings of the current paper also provide important insights for service providers (e.g. gyms, health centres) who are seeking to improve their users' task motivation, health, or activity level in fitness.\n\nThe current paper is organised as follows. First, the authors discuss the research method used for the current review. Second, they present an overview of the drivers of fitness tracking technology usage. Third, the outcomes of fitness tracking behaviour are discussed, along with the roles of relevant moderating and mediating variables. Lastly, a summary and suggestions for future research are provided.",
+      "citations": [
+        "W2025454211",
+        "W2889128419",
+        "W2333629723",
+        "W349903796",
+        "W2801534204",
+        "W2543954569",
+        "W2914847613",
+        "W1995092424",
+        "W2605718339",
+        "W2783168567",
+        "W4252958680",
+        "W2793156496",
+        "W2912812321",
+        "W2793156496",
+        "W2616211294",
+        "W2394861653"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "27"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Literature review method",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Search strategy",
+          "subsubsections": [],
+          "text": "A systematic review of the literature was conducted using the following method. First, the authors identified two review questions: (1) what factors drive the use of fitness tracking technologies? and (2) how fitness tracking technologies affect users (e.g. physical and psychological outcomes)? Then, given these research questions, the authors used the following search strings in titles, keywords, and abstracts to search for relevant literature: 'self track* OR 'self quantif* OR 'activity track* OR 'fitness track*'. Other relevant search strings were also used to optimise the search results, e.g. 'physical act* OR 'fit* OR 'act*'; 'tech* OR 'device* OR 'wearable* OR 'pedometer'; 'experiment* OR 'survey* OR 'interview* OR 'field study* OR 'field test* OR 'trial* OR 'focus group' OR 'empiric*'. A filter was then used to limit the results to only English-language peer-reviewed journal articles and conference proceedings to safeguard the quality and effectiveness of the review. Conference proceedings were included, as there have not been published many empirical papers answering the research questions of the current review. In addition, as the trend of self-tracking emerged in 2007 [W349903796], the authors initiated the search from (including) the year 2006. The search was conducted across five databases: Web of Science, EBSCO, Science Direct, Springer Link, and Google Scholar. The authors further searched the reference lists of the papers identified in the initial search. The results of the literature search are outlined in Appendix.",
+          "citations": [
+            "W349903796",
+            "W2989100621",
+            "W1994286452"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Inclusion and exclusion criteria",
+          "subsubsections": [],
+          "text": "To select appropriate papers for inclusion in the current review, the authors read titles, abstracts, and findings of the searched papers and applied a number of inclusion criteria. First, selected papers had to include empirical evidence related to the drivers or outcomes of self-tracking behaviour. Second, selected papers had to investigate the drivers or outcomes of self-tracking behaviour specifically in the context of physical activity (i.e. fitness tracking). Lastly, selected papers had to have a clear focus on the fitness tracking feature of the focal technology or device (e.g. wearables or personal informatics), rather than other features such as gamification \u2013 a process of implementing game elements (e.g. points, badges, and leaderboards) [W2236971107] \u2013 or a combination of different features as a whole. The reason is that with a multifaceted technology, it is difficult to determine whether fitness tracking is the specific component contributing to the use of fitness tracking technologies and the outcomes of fitness tracking.\n\nIn this round, exclusion criteria were as follows. First, the authors eliminated the papers focusing purely on describing the technical design or usage situation of fitness tracking technologies (e.g. which function users like). Second, the authors excluded the papers examining the reliability and validity of fitness tracking technologies. Third, they also eliminated the papers that provided limited evidence when investigating the outcomes of fitness tracking (e.g. lack of neutral control condition, lack of baseline measure, or confounded intervention). Lastly, the authors excluded the studies that implemented non-automatic tracking (e.g. manual logging of fitness data), as automatic tracking is one of the most important features of modern fitness tracking technologies.",
+          "citations": [
+            "W2236971107"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Selection summary",
+          "subsubsections": [],
+          "text": "The initial search produced 143 articles using five databases. Removing the duplicates left 118 papers for the analysis. After screening based on the literature selection criteria, a further 50 papers were excluded from the final synthesis (see **FIGURE 1**). By the end of the selection process, the authors identified 71 empirical papers as relevant for the current review. This number reflects the emergent nature of the topic. Of these, 53 were from peer-reviewed journals and 18 were from conference proceedings. 35 of the papers investigated the drivers of fitness tracking technology usage, while 53 papers examined the outcomes of fitness tracking. The timeframe of the selected papers ranged across a 13-year period from 2006 to 2019 (with a peak between 2014 and 2017), covering a variety of fitness tracking technologies (e.g. Fitbit, Nike +, pedometer, and apps) and user groups (e.g. patients, seniors, adults, and students). The majority of the papers investigated American participants, and the age range of these participants was 16\u201380 years. Notably, the process of mapping, consolidating and evaluating the literature in the selected field was repeated twice over the period of 6 months (i.e. April 2019 and October in 2019) to improve the overall review quality.\n\n**FIGURE 1. Summary of the systematic review research process.**",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Content analysis",
+          "subsubsections": [],
+          "text": "After selecting the papers, the authors conducted a descriptive evaluation of the body of literature followed by a content analysis. First, the authors extracted critical information from each paper, such as author, journal, key constructs, methodological features, and findings. Then, the identified information was organised and stored in an excel file for further in-depth analysis. For example, each record in this file provides a detailed summary of each paper regarding its scope, main idea, empirical approach, and key findings etc. In addition, main constructs investigated in these papers are listed one by one for each paper with corresponding significance of their effects. Notably, constructs included in this list were based on the explicit empirical findings from the previous research rather than the authors' own subjective interpretations or assumptions to safeguard the reliability and validity of the current review.\n\nThis approach allowed the authors to have a clear understanding of the existing research (e.g. what has been done and what has been found) and served as a basis for developing a framework through which the authors summarised the main constructs identified in the extant literature (see **FIGURE 2**). To provide a simple-to-read framework, the authors classified the constructs into two main categories \u2013 drivers and outcomes of fitness tracking behaviour. Then, the drivers were divided into four groups by using the classification scheme implemented by [W4252958680], while the outcomes were divided into four groups based on the main areas of fitness tracking use identified in the literature. The provided framework represents a condensed overview of previous research (e.g. synthesising and refining scattered knowledge), which illustrates various factors that can influence users' decision to use fitness tracking technologies and the outcomes of using these technologies. Such a conceptual framework provides a state of the art background for future studies (e.g. by identifying research gaps or inspiring new ideas) and can facilitate subsequent research to confirm, reject, and complement the previous findings.\n\n**FIGURE 2. Conceptual framework of the current review.**",
+          "citations": [
+            "W4252958680"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Drivers of fitness tracking",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. User characteristics",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.1.1. Age",
+              "parent_subsection_id": "s_3_1",
+              "text": "Not all individuals exhibit the same tendency for the use of innovative technologies [W4252958680]. Prior research has identified age as an influential factor for the use of fitness tracking technologies. For example, [W2789755653] have found that age influences the desire to use fitness trackers. Their results indicate that older people are less likely to use fitness tracking technologies, as they have low perceived usability (e.g. easy to use, comfort) of such technologies. [W2905172804] also have found that younger and middle-aged runners (e.g. 16\u201349 years) are more likely to use fitness tracking devices than runners in older age groups (e.g. 50 years or above) in Germany.",
+              "citations": [
+                "W4252958680",
+                "W2789755653",
+                "W2905172804"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.1.2. Personality traits",
+              "parent_subsection_id": "s_3_1",
+              "text": "Personality traits are another group of variables that can influence the use of fitness tracking technologies. According to [W2789755653], certain personality traits (i.e. agreeableness, conscientiousness, and extraversion) can affect individuals' desire to use fitness trackers by influencing their perceived device usability and motivational affordances such as autonomy (e.g. need to be in control), competence (e.g. need for challenge), and relatedness (e.g. need to feel connected to others) need satisfaction. For example, extraverted individuals have high intention to use fitness trackers, as they perceive these devices as highly usable and motivating, and conscientious or agreeable individuals also have high intention to use fitness trackers, as they find these devices providing high motivational affordances. On the other hand, [W2801534204] did not find a significant direct effect of the Big Five personality traits (e.g. extraversion, conscientiousness, agreeableness, and neuroticism) on individuals' motivation to use fitness trackers. These findings indicate an indirect effect of personality traits on fitness tracking technology usage.",
+              "citations": [
+                "W2789755653",
+                "W2801534204"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.1.3. Technology affinity/self-efficacy",
+              "parent_subsection_id": "s_3_1",
+              "text": "Previous research has identified individuals' affinity and self-efficacy in technology as important drivers of fitness tracking technology usage (e.g. [W2801534204], [W1860620008], [W2789755653]). For example, affinity for technology \u2013 the tendency of an individual to actively explore (new) technologies \u2013 is positively related to an individual's motivation to use a fitness tracker [W2801534204]. Studies on technology self-efficacy also have confirmed the positive relationship between technology self-efficacy \u2013 an individual's judgement of his or her capability to use a technology to attain desired performance, rather than the actual skills that one has [W4252958680] \u2013 and fitness tracker usage [W1860620008], [W2789755653].",
+              "citations": [
+                "W2801534204",
+                "W1860620008",
+                "W2789755653",
+                "W4252958680"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.1.4. Desire for information",
+              "parent_subsection_id": "s_3_1",
+              "text": "Hope of success and need for cognitive closure address individuals' desire for information (e.g. feedback). For example, individuals with high hope of success would appreciate information about their task performance, as they believe that they can succeed in the task [W2100919822]. Individuals with high need for cognitive closure would want to receive information (e.g. clear-cut answers) due to their desire to avoid ambiguous situations [W4236213745]. Both hope of success and need for cognitive closure are found to be positively associated with individuals' motivation to use fitness trackers [W2801534204]. [W2976623037] also have found that desire for seeking health information is the driver for individuals' use of fitness tracking devices.",
+              "citations": [
+                "W2100919822",
+                "W4236213745",
+                "W2801534204",
+                "W2976623037"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_1_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "3.1.5. Personal involvement",
+              "parent_subsection_id": "s_3_1",
+              "text": "Another user characteristic considered as an important driver of the use of fitness tracking technologies is personal involvement. Personal involvement refers to the inherent interest an individual has in a product, which depends on how much one perceives the product to be personally relevant [W4252958680]. Several researchers have found that lack of interest in fitness trackers is the reason why people are not purchasing them (e.g. [W2151586234], [W2254170564]). In addition, low personal involvement (e.g. low attachment to a fitness tracker) would even make users abandon a fitness tracker [UNMAPPED:18], [W2025454211]. On the other hand, people are more likely to use fitness trackers (e.g. Fitbit) when they have a general interest in the technology or are curious about the technology and personal data [W2543954569], [UNMAPPED:36], [W2025454211], [W1978460036], [W1218160822], [W2002685175].",
+              "citations": [
+                "W4252958680",
+                "W2151586234",
+                "W2254170564",
+                "W2025454211",
+                "W2543954569",
+                "W1978460036",
+                "W1218160822",
+                "W2002685175"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "18",
+                "36"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "3.1.6. Current individual status (goal, motivation, and activity level)",
+              "parent_subsection_id": "s_3_1",
+              "text": "Prior research has found that people are more likely to use or purchase a fitness tracker (e.g. Fitbit, Jawbone Up, and Nike +) when they have specific goals in mind, such as health goals, exercise goals, or self-improvement goals (e.g. [W2543954569], [W2463063833], [W2151586234], [W2431062613], [W2002685175]). For example, people are more likely to use a fitness tracker when they have a goal or relatively strong motivation to become more active [UNMAPPED:36], [W2025454211]. Individual motivation thus is an important driver of fitness tracker usage, and people would not use such a device when they have no need for it [W1970180866] or are already strongly motivated to maintain their physical activities [W2025454211]. However, failing to meet goals may at the same time produce feelings of discouragement and guilt in some individuals, which can cause them to stop using fitness trackers [W2911330280]. Another factor that is related to individual status is one's current activity level. According to [W2789755653], individuals who are more physically active have higher desire to use a fitness tracker, as they are more likely to find such a device motivating. On the contrary, people are more likely to abandon the device when they become physically inactive for a long time (e.g. being busy; [W2957562983]). (See **TABLE 2**).\n\n**TABLE 2. Overview of the papers studying user characteristics.**\n\n{{TABLE:tbl_02}}\n\n*Note: \u2713: studied and found a significant effect; (\u2713): studied but did not find a significant effect.*",
+              "citations": [
+                "W2543954569",
+                "W2463063833",
+                "W2151586234",
+                "W2431062613",
+                "W2002685175",
+                "W2025454211",
+                "W1970180866",
+                "W2911330280",
+                "W2789755653",
+                "W2957562983"
+              ],
+              "tables_in_text": [
+                "tbl_02"
+              ],
+              "citations_unmapped": [
+                "36"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Device characteristics",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1. Device quality",
+              "parent_subsection_id": "s_3_2",
+              "text": "Like most products, product quality plays an important role in driving the use of fitness tracking technologies. Previous research has confirmed the importance of device quality (e.g. battery durability, sensor durability, or comfort) in facilitating the use of fitness trackers (e.g. [W2518798071], [W1860620008], [UNMAPPED:36], [W4252958680], [W1970180866], [W2783168567]). For example, people do not use a fitness tracker that has insufficient quality [UNMAPPED:76], and they will abandon the device when it has technical problems (e.g. error), high frequency of maintenance, or is uncomfortable to wear [UNMAPPED:18], [W1978460036], [W2229425718].",
+              "citations": [
+                "W2518798071",
+                "W1860620008",
+                "W4252958680",
+                "W1970180866",
+                "W2783168567",
+                "W1978460036",
+                "W2229425718"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "36",
+                "76",
+                "18"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2. Data quality",
+              "parent_subsection_id": "s_3_2",
+              "text": "Another important aspect of fitness tracking technologies, which can influence their usage, is the quality of collected personal data (e.g. accuracy, reliability). Prior research has shown that users abandon fitness trackers because of the poor data accuracy and reliability (e.g. [W2518798071], [UNMAPPED:27], [UNMAPPED:36], [W2229425718]). The quality of data offered by fitness trackers (e.g. Fitbit) matters, because users want to ensure that the collected data effectively and precisely represent their personal and health-related concerns [W2025454211]. [W2238123643] also have found that inaccurate data decreases perceived usefulness of fitness trackers and thus is one of the main barriers to the use of fitness trackers.",
+              "citations": [
+                "W2518798071",
+                "W2229425718",
+                "W2025454211",
+                "W2238123643"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "27",
+                "36"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.2.3. Device attractiveness",
+              "parent_subsection_id": "s_3_2",
+              "text": "Many researchers have found device attractiveness to be an important driver of fitness tracking technology usage. Device attractiveness refers to the aesthetic design of a product, such as shapes, colours, materials, and user interfaces [W2291766034]. Prior research has found that people are influenced by the design, style, and appearance (e.g. look and feel) of fitness trackers when making decisions to use these devices (e.g. [W2543954569], [W2463063833], [W2518798071], [W2431062613], [W1970180866]). People thus would not use a fitness tracker when the device does not look good aesthetically [UNMAPPED:36], [W2229425718].",
+              "citations": [
+                "W2291766034",
+                "W2543954569",
+                "W2463063833",
+                "W2518798071",
+                "W2431062613",
+                "W1970180866",
+                "W2229425718"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "36"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.2.4. Device novelty",
+              "parent_subsection_id": "s_3_2",
+              "text": "Device novelty, defined as the newness of a technology or design [W2147487134], has also been found to be a compelling motivator for people to use fitness trackers [W1970180866], [W1978460036]. For example, users tend to abandon fitness trackers when the novelty of such devices wears off [W2025454211] or when they feel that the device does not provide new information anymore [UNMAPPED:27].",
+              "citations": [
+                "W2147487134",
+                "W1970180866",
+                "W1978460036",
+                "W2025454211"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "27"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "3.2.5. Device functionality",
+              "parent_subsection_id": "s_3_2",
+              "text": "Other device related factors that have been identified as important for the use of fitness trackers are persuasiveness (e.g. effective nudging), customisability (e.g. personalisation), tracking ability (e.g. number of functionalities), and distraction from the focal activity [W2518798071], [W1970180866], [W2601036553], [W2229425718]. For example, [W2957562983] has found that people expect fitness trackers to monitor personally favoured activities. (See **TABLE 3**).\n\n**TABLE 3. Overview of the papers studying device characteristics.**\n\n{{TABLE:tbl_03}}\n\n*Note: \u2713: studied and found a significant effect; (\u2713): studied but did not find a significant effect.*",
+              "citations": [
+                "W2518798071",
+                "W1970180866",
+                "W2601036553",
+                "W2229425718",
+                "W2957562983"
+              ],
+              "tables_in_text": [
+                "tbl_03"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Perceived benefits/risks",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.3.1. Perceived ease of use",
+              "parent_subsection_id": "s_3_3",
+              "text": "The effect of perceived ease of use (PEOU) on behavioural intention to use fitness tracking technologies has been widely studied and confirmed in the literature. PEOU is defined as the degree to which an individual believes that using a particular product would be free of effort [W4252958680]. Prior research has found that PEOU (e.g. automatic tracking) has a positive impact on the use of fitness trackers (e.g. [W2518798071], [W1860620008], [W1970180866], [W2340234432], [W2254170564], [W2170555079], [W2238123643]). For example, an easy access to personal data is an important driving force of fitness tracker usage [W2543954569], [W2025454211]. On the contrary, users would abandon fitness trackers (e.g. Fitbit One) when they cannot comfortably interact with the device (e.g. complex device, lack of expertise to interpret the data) [UNMAPPED:18], [W1978460036], [W2601036553], [UNMAPPED:76]. Notably, users will find fitness trackers easy to use if they have an opportunity to try them or observe them being used in their surroundings [W2947254095].",
+              "citations": [
+                "W4252958680",
+                "W2518798071",
+                "W1860620008",
+                "W1970180866",
+                "W2340234432",
+                "W2254170564",
+                "W2170555079",
+                "W2238123643",
+                "W2543954569",
+                "W2025454211",
+                "W1978460036",
+                "W2601036553",
+                "W2947254095"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "18",
+                "76"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.3.2. Perceived usefulness",
+              "parent_subsection_id": "s_3_3",
+              "text": "Similar to PEOU, perceived usefulness (PU) also exerts a significant effect on behavioural intention to use fitness tracking technologies. PU is defined as the degree to which an individual believes that using a particular product would enhance his or her performance [W4252958680]. Prior research has confirmed the positive effect of PU (e.g. viewing progress over time) on the use of fitness trackers (e.g. [W1970180866], [W2340234432], [W2254170564], [W2170555079], [W2238123643]). For example, [W2789755653] have found that device usability is positively associated with the intention to use a fitness tracker. On the other hand, people show low interest in using fitness trackers when the utility of the device is perceived as insufficient (e.g. feel no need for the information, low expectancy on the device's performance) or when the device does not deliver what is expected [UNMAPPED:18], [W1860620008], [W1978460036], [UNMAPPED:76]. [W2989100621] also have found that senior people would stop using the device unless it confirms their expectations (e.g. provide useful data, increase activity level).",
+              "citations": [
+                "W4252958680",
+                "W1970180866",
+                "W2340234432",
+                "W2254170564",
+                "W2170555079",
+                "W2238123643",
+                "W2789755653",
+                "W1860620008",
+                "W1978460036",
+                "W2989100621"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "18",
+                "76"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.3.3. Perceived enjoyment",
+              "parent_subsection_id": "s_3_3",
+              "text": "Perceived enjoyment is defined as the extent to which the activity of using a specific technology is perceived to be enjoyable in its own right, aside from any performance consequences of using such a technology [W4252958680]. Prior research has identified perceived enjoyment (or playfulness) as a powerful predictor of the use of fitness tracking technologies (e.g. [W2601036553], [W2473784229]). The pleasure or enjoyment derived from using a fitness tracker affects individuals' intention to use the device, suggesting that people pay attention to the pleasure-bringing aspects of fitness tracking technologies when deciding whether or not to use them [W1860620008], [W147316254]. (See **TABLE 4**).\n\n**TABLE 4. Overview of the papers studying perceived benefits/risks.**\n\n{{TABLE:tbl_04}}\n\n*Note: \u2713: studied and found a significant effect; (\u2713): studied but did not find a significant effect.*",
+              "citations": [
+                "W4252958680",
+                "W2601036553",
+                "W2473784229",
+                "W1860620008",
+                "W147316254"
+              ],
+              "tables_in_text": [
+                "tbl_04"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.3.4. Perceived device value",
+              "parent_subsection_id": "s_3_3",
+              "text": "Perceived value refers to an individual's overall assessment of the utility of a product based on the perception of what is received (e.g. benefits) and what is given (e.g. costs) [W4252958680]. In the literature, perceived value (e.g. benefits minus costs) has been proven to drive the favourable intention to use fitness trackers (e.g. [W2543954569], [UNMAPPED:18], [W2783168567]). For example, [W2558429215] have found that perceived value of a fitness tracker is positively related to its acceptability or usage. Other studies have incorporated the cost construct (e.g. user effort) in their investigation and have shown a negative effect of costs on individuals' decision to use fitness trackers [UNMAPPED:27], [W2558429215], [W2254170564].",
+              "citations": [
+                "W4252958680",
+                "W2543954569",
+                "W2783168567",
+                "W2558429215",
+                "W2254170564"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "18",
+                "27"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "3.3.5. Perceived risk",
+              "parent_subsection_id": "s_3_3",
+              "text": "Perceived risk is defined as an individual's uncertainty about the potential positive and negative consequences of his or her purchase decision [W4252958680]. The literature on fitness tracking technology usage extensively discusses privacy concerns, and privacy risk has been identified as an important barrier to the use of fitness tracking technologies. Privacy risk in fitness tracking emphasises the extent to which a person believes that using a fitness tracker has negative consequences for his or her privacy (e.g. loss of control over personal information) [W2473784229]. Previous research has found that privacy is one of the most frequently mentioned concerns regarding the use of fitness trackers (e.g. [W2463063833], [W2601036553], [W2783168567]). [UNMAPPED:27] and [W1860620008] also have suggested that perceived privacy risk negatively affects individuals' intention to use fitness trackers. However, [W2473784229] did not find a significant impact of perceived privacy risk on the intention to use fitness trackers among young population (average age of 26). Thus, there is a need for further research to investigate the potential moderating role of age on the relationship between perceived privacy risk and fitness tracking technology usage. (See **TABLE 5**).",
+              "citations": [
+                "W4252958680",
+                "W2473784229",
+                "W2463063833",
+                "W2601036553",
+                "W2783168567",
+                "W1860620008"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "27"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. External drivers",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.4.1. Social influences",
+              "parent_subsection_id": "s_3_4",
+              "text": "Prior research has found that social influences (e.g. social expectation, social support, social connection, word-of-mouth, or social media) can affect fitness tracker usage (e.g. [W2543954569], [W2463063833], [W1860620008], [UNMAPPED:76], [W2291766034]). A number of researchers have also confirmed that social comparison (e.g. competition) is an important factor that affects the use of fitness trackers (e.g. [W2518798071], [W147316254], [UNMAPPED:36], [W1970180866]). For example, users would abandon fitness trackers when the device does not support their desire to compete with their friends [UNMAPPED:18], [W2229425718]. These findings indicate that users wish to see better support for sharing and comparing their fitness data with their friends.",
+              "citations": [
+                "W2543954569",
+                "W2463063833",
+                "W1860620008",
+                "W2291766034",
+                "W2518798071",
+                "W147316254",
+                "W1970180866",
+                "W2229425718"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "76",
+                "36",
+                "18"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.4.2. Financial incentives",
+              "parent_subsection_id": "s_3_4",
+              "text": "Another external driver identified in the literature is financial incentive. For example, financial incentives or rewards such as discounts on insurance, rebates on fitness club membership, or employee subsidies can help facilitate the use of fitness trackers [W2543954569], [UNMAPPED:76].",
+              "citations": [
+                "W2543954569"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "76"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_4_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.4.3. Special situations",
+              "parent_subsection_id": "s_3_4",
+              "text": "In addition to the aforementioned factors, researchers have identified some special situations that can influence the use of fitness tracking technologies, which include allergic reactions, availability of alternative devices, owning a similar device, forgetting to wear or losing a device, or changes in life circumstances (e.g. injury, health status, or job), etc. These situations can all lead to abandoning of fitness trackers [UNMAPPED:18], [W2518798071], [UNMAPPED:27], [W2558429215], [UNMAPPED:36], [W2229425718]. (See **TABLE 5**).\n\n**TABLE 5. Overview of the papers studying external drivers.**\n\n{{TABLE:tbl_05}}\n\n*Note: \u2713: studied and found a significant effect; (\u2713): studied but did not find a significant effect.*",
+              "citations": [
+                "W2518798071",
+                "W2558429215",
+                "W2229425718"
+              ],
+              "tables_in_text": [
+                "tbl_05"
+              ],
+              "citations_unmapped": [
+                "18",
+                "27",
+                "36"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, the authors provide an overview of the 19 drivers of fitness tracking technology usage identified in the literature. The authors classify these drivers into four different categories: user characteristics, device characteristics, perceived benefits/risks, and external drivers. The implemented classification scheme and terminologies are inspired by the comprehensive review of wearable technology adoption from [W4252958680]. **TABLE 1** summarises the 35 empirical papers that investigated the drivers of fitness tracking.\n\n**TABLE 1. Overview of the drivers of fitness tracking identified in the literature.**\n\n{{TABLE:tbl_01}}",
+      "citations": [
+        "W4252958680"
+      ],
+      "tables_in_text": [
+        "tbl_01"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Findings: outcomes of fitness tracking",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Task motivation",
+          "subsubsections": [],
+          "text": "The relationship between fitness tracking and task motivation is demonstrated in the previous research, which has shown that fitness tracking has a positive impact on users' motivation to be physically active (e.g. [W1995092424], [W2129343065], [UNMAPPED:29], [UNMAPPED:53], [W2238123643], [W2601036553]). For example, [W2605718339] have found that fitness trackers increase users' anticipated motivation \u2013 an individual's self-described expected level of motivation when presented with a goal \u2013 for physical activity, while [W2801534204] have shown that motivation for physical activity decreases when fitness trackers are not available for users (e.g., forget to wear, no batteries). [W2025454211] also have found that fitness tracking apps (with information sharing feature) lead to increased motivation for physical activities (e.g. walking). Notably, the majority of the previous studies have examined and confirmed the positive effect of fitness trackers on task motivation in goal-directed activities (e.g. specific activity goal is given) (e.g. [W2581048896], [W2008194592], [W2025454211]), while limited research has investigated the relationship when there is no specific goal given to users. In real life, people may not always have a specific goal in mind when using fitness trackers (e.g. one may just want to know his or her activity level). Therefore, it will be interesting to examine whether the identified relationship between fitness tracking and task motivation will hold in such a situation.",
+          "citations": [
+            "W1995092424",
+            "W2129343065",
+            "W2238123643",
+            "W2601036553",
+            "W2605718339",
+            "W2801534204",
+            "W2025454211",
+            "W2581048896",
+            "W2008194592"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "29",
+            "53"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Task experience",
+          "subsubsections": [],
+          "text": "There has been no consensus in the literature about the impact of fitness tracking technologies on users' task experience. On the one hand, a number of studies have suggested a positive effect of fitness tracking on enjoyment (e.g. fun) in physical activities (e.g. [W2581048896], [W2543954569], [UNMAPPED:53]). For example, [W2025454211] have shown that people find it fun to use fitness tracking apps (e.g. information sharing, competing), and they would enjoy an activity less if it is not being tracked (e.g. forget to wear the device) [UNMAPPED:29]. On the other hand, [W2333629723] has found that fitness trackers (i.e. pedometer) reduce task enjoyment by making the task feel more work-like. Future research may further investigate such a contradictory effect of fitness tracking on users' task experience.",
+          "citations": [
+            "W2581048896",
+            "W2543954569",
+            "W2025454211",
+            "W2333629723"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "53",
+            "29"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Physical activity level",
+          "subsubsections": [],
+          "text": "Prior research has confirmed the effectiveness of fitness tracking technologies in increasing users' physical activity level (e.g. [W1587923037], [W2129343065], [W2333629723], [UNMAPPED:29], [W2025454211], [W2601036553]). For example, using fitness trackers (e.g. Fitbit, pedometer) can increase the level of moderate-to-vigorous activities [W1995092424], [W2522531501], [W2009938297], [W2138694790] and goal directed activities [W1994309940], [W2113886271], [W2025454211], [W2116535495], [W2072088591]. [W2602572407] also have found that extended use of a fitness tracker \u2013 the number of features a user employs in addition to step counting (e.g. stair counting, workout tracking, goal setting, or social features) \u2013 has a positive impact on physical activity level. (See **TABLE 6**).\n\n**TABLE 6. Overview of the outcomes of fitness tracking identified in the literature.**\n\n{{TABLE:tbl_06}}",
+          "citations": [
+            "W1587923037",
+            "W2129343065",
+            "W2333629723",
+            "W2025454211",
+            "W2601036553",
+            "W1995092424",
+            "W2522531501",
+            "W2009938297",
+            "W2138694790",
+            "W1994309940",
+            "W2113886271",
+            "W2116535495",
+            "W2072088591",
+            "W2602572407"
+          ],
+          "tables_in_text": [
+            "tbl_06"
+          ],
+          "citations_unmapped": [
+            "29"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Well-being/health",
+          "subsubsections": [],
+          "text": "Many researchers have investigated the effect of fitness tracking technologies on users' well-being/health. Prior research has found that fitness trackers have a positive impact on perceived well-being (e.g. positive emotions, sense of accomplishment, or quality of life) and physical health (e.g. [W2581048896], [W2602572407], [W2601036553], [W2914847613], [W2138694790]). For example, the use of fitness trackers is an effective way to increase weight loss [W1995092424], [UNMAPPED:29], [W2009938297], [W2072088591], [W2153203930] and reduce blood pressure [W2116535495]. However, [W2333629723] has found a negative impact of fitness trackers on subjective well-being (e.g. happiness and satisfaction). Therefore, the effect of fitness tracking technologies on users' well-being needs further investigation.",
+          "citations": [
+            "W2581048896",
+            "W2602572407",
+            "W2601036553",
+            "W2914847613",
+            "W2138694790",
+            "W1995092424",
+            "W2009938297",
+            "W2072088591",
+            "W2153203930",
+            "W2116535495",
+            "W2333629723"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "29"
+          ]
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "4.5. Moderators for the relationship between fitness tracking and its outcomes",
+          "subsubsections": [],
+          "text": "According to the previous research, the positive effect of fitness trackers on task motivation is stronger for an individual who has pre-existing motivation to be more active or who is under the age of 50 [W2025454211], [W2605718339]. On the other hand, the positive impact of fitness trackers on task motivation can be diminished in situations when, for example, people are too busy to exercise, poor at self-management, find exercise boring, have high fear of injury, and lack skills or support (e.g. encouragement or companionship) from family and friends and so on [W2463063833]. In situations when fitness trackers are not available (e.g. forget to wear), motivation for physical activity decreases more for individuals with high extrinsic motivation (e.g. to be fitter, to look good, or to lose weight), high need for cognitive closure (e.g. avoid ambiguous situations), and low hope of success (e.g. low approach tendency) [W2801534204].\n\nRegarding the effect of fitness trackers on physical activity level, a stronger positive effect will occur when a fitness tracker is accompanied with a feature of social sharing/social competition, Social Network Services (e.g. Facebook, Twitter), or an individual's pre-existing motivation to be active [W2463063833], [W2025454211], [W2769133247]. In addition, to improve the activity level of currently inactive (or insufficiently active) older people, it is more effective to partner fitness trackers with individually matched motivational messages (e.g. communicating benefits of regular physical activity) than simply providing fitness trackers [W2141785915].\n\nMoreover, there is a stronger positive effect of fitness tracker usage on perceived physical health and psychological well-being (e.g. positive emotion, experienced meaningfulness of life, and sense of accomplishment) when fitness trackers are accompanied with mobile applications [W2914847613].",
+          "citations": [
+            "W2025454211",
+            "W2605718339",
+            "W2463063833",
+            "W2801534204",
+            "W2769133247",
+            "W2141785915",
+            "W2914847613"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_6",
+          "subsection_index": 6,
+          "subsection_label": "4.6. Mediators for the relationship between fitness tracking and its outcomes",
+          "subsubsections": [],
+          "text": "Prior research has found that fitness trackers can increase individuals' self-awareness (e.g. task progress, activity level, or value of activity), which in turn positively affects their task motivation (e.g. [W2008194592], [UNMAPPED:29], [W2025454211], [UNMAPPED:53], [W2238123643], [W2601036553]). Fitness trackers can also increase task motivation by supporting users' self-efficacy [W2008194592], [UNMAPPED:29], [W2558429215] or basic psychological needs (i.e. autonomy, competence, and relatedness) [W2581048896], [W1995092424]. In addition, according to [W2605718339], the effect of fitness trackers on anticipated task motivation is serially mediated by the perceived feedback meaningfulness (e.g. informative), the self-empowerment (e.g. higher sense of personal control), and the goal focus. [W2008194592] also have suggested that fitness trackers increase goal focus and sense of personal control over the activity.\n\nIn terms of task experience, [W2431062613] have found that fitness tracking is positively associated with pleasure by enhancing users' feelings of autonomy, competence and relatedness, whereas [W2333629723] has shown that fitness tracker usage reduces task enjoyment by making the task feel more work-like. Future studies can explore under which conditions these two different processes would occur. (See **TABLE 7**).\n\n**TABLE 7. Overview of the papers studying outcomes of fitness tracking.**\n\n{{TABLE:tbl_07}}\n\n*Note: \u2713: studied and found a significant effect; (\u2713): studied but did not find a significant effect.*",
+          "citations": [
+            "W2008194592",
+            "W2025454211",
+            "W2238123643",
+            "W2601036553",
+            "W2558429215",
+            "W2581048896",
+            "W1995092424",
+            "W2605718339",
+            "W2431062613",
+            "W2333629723"
+          ],
+          "tables_in_text": [
+            "tbl_07"
+          ],
+          "citations_unmapped": [
+            "29",
+            "53"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, the authors discuss the outcomes of fitness tracking identified by reviewing the literature on fitness tracking behaviour. The main outcome variables identified are task motivation, task experience, physical activity, and well-being/health. The authors also discuss the possible moderators (e.g. boundary conditions) and mediators (e.g. process evidence) in relation to the effects of fitness tracking on its outcomes. **TABLE 6** summarises the 53 empirical papers that investigated the outcomes of fitness tracking.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Avenues for future research",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Based on the current review, the authors suggest the following avenues for future research. First, previous studies have mainly used surveys (17 out of 35 studies) and interviews (17 out of 35 studies) for the investigation of the drivers of fitness tracking behaviour, which may provide limited insight into the causal relationships between variables. Future research can employ other research methods (e.g. experiment) to directly test the causal link between fitness tracking technology usage and its drivers (e.g. perceived benefits) and provide explanations for the corresponding causal mechanisms. It will also be interesting to investigate the relative importance or weight of each driver in determining fitness tracking technology usage, along with the potential synergy effects of the different combinations of the drivers.\n\nSecond, a closer look at the literature on fitness tracking behaviour reveals the lack of research investigating the antecedents of the drivers of fitness tracking technology usage. For example, how marketers can increase users' perceived benefits (e.g. value, usefulness) of fitness tracking technologies, which can in turn influence the use of fitness tracking technologies? Previous research has shown that situational or contextual factors (e.g. need state, mood, product information, or product labelling) can influence one's value perception (e.g. [W2123883384], [W2090873661], [W2064047561], [W2893689226]). Future research endeavours thus can focus on exploring situational factors (e.g. emotion) that can lead to fitness tracking technology usage by influencing its drivers identified in the current review.\n\nThird, the extant research that examined the effect of fitness tracking technologies on various user outcomes (e.g. motivation, experience, and well-being) has shown several methodological limitations. For example, few studies incorporated a strict control condition (e.g. no intervention) in their intervention designs, which can be directly compared to the treatment condition (e.g. use of a fitness tracker). The majority of the prior studies also did not control for the potential confounding factors in their interventions, such as goal setting, social sharing, extra communication (e.g. messages, meetings, and counseling), or other features (e.g. game elements) implemented in the focal device (or app), which could have potentially driven the identified effects. Future studies thus can examine the relationship between fitness tracking and its outcomes by incorporating more strictly controlled experimental designs to provide further evidence to the downstream effects of fitness tracking. For example, researchers can use a fitness tracking device with a limited number of functionalities other than tracking physical activities, such as Smart Rope. Smart Rope is a device that displays jump counts as people work out, which is the main difference between a Smart Rope and a normal jump rope. In this way, researchers can examine the effect of fitness tackling (e.g. use Smart Rope vs. normal jump rope in a workout session) by minimising other potential confounds. Investigation of the underlying process of the effect of fitness tracking can also contribute to the field. In addition, as previous research has been mostly conducted with specific population such as patients, seniors, or females, future research can examine the effect of fitness tracking among regular users.\n\nFourth, there is a lack of research empirically testing the effect of fitness tracking technologies on users' task experience (e.g. enjoyment), and the existing findings are pointing at opposite directions (positive vs. negative). Therefore, more research is called for to clarify the seemingly contradicting findings in the literature. It would also be interesting to examine the potential moderating role of factors such as activity types (e.g. easy vs. difficult, physical vs. cognitive) and individual differences (e.g. gender, age, motivational orientation), which can act as boundary conditions for the effect of fitness tracking technologies on task experience. For example, [W4234925279] argue that accumulation of a medium (e.g. points), especially when it requires effort, may produce a sense of accomplishment and competence and generate task enjoyment. Therefore, fitness tracking feedback (e.g. distance ran, calories burned) may have a stronger positive impact on task enjoyment in difficult (or effortful) activities than in easy (or effortless) activities.\n\nFifth, most of the studies in the existing literature on fitness tracking behaviour have treated the outcome variable motivation as a unilateral concept. Although this informs our understanding of the effect of fitness tracking on users' task motivation, further insights can be generated by considering the construct \u2013 motivation \u2013 as a multifaceted concept. For example, according to the self-determination theory, there are in general two types of motivation \u2013 intrinsic motivation [W4242883546] and extrinsic motivation [W4242883546] (Ryan and Deci 2000b). In addition, extrinsic motivation can be further divided into four different categories: integrated motivation, [W2170899200] identified motivation, [W2170899200] introjected motivation, [W2170899200] and external motivation [W2170899200] (Deci and Ryan 2002). Prior research has shown that different types of motivation (e.g. extrinsic motivation vs. intrinsic motivation) can lead to different behavioural (e.g. low vs. high task persistence) and psychological outcomes (e.g. low vs. high well-being) [W2170899200]. In addition, both extrinsic motivation and intrinsic motivation can be influenced by external feedback based on the situational impact of the feedback on one's perceived autonomy, competence, and relatedness [W2902999784]. For example, external feedback can facilitate or undermine one's intrinsic motivation depending on whether he or she perceives such feedback as either informational (e.g. emphasising his or her competence) or controlling (e.g. a pressure to behave in a particular way) [W2801534204]. Therefore, it will be important to investigate how fitness tracking technologies (e.g. fitness feedback) affect different types of user motivation in different situations. Fitness tracking technologies may increase users' intrinsic motivation (e.g. enjoyment) in a physical activity when such technologies enhance their perceived competence (e.g. becoming faster at running), but decrease intrinsic motivation (or increase extrinsic motivation) when these technologies make users feel controlled (e.g. walk extra step to receive a virtual reward). Future research thus can contribute to the field by delving more deeply into the nature and dynamics of user motivation.\n\nLastly, although providing important insights, previous studies have mainly used traditional Technology Acceptance Model (TAM) or Extended Unified Theory of Acceptance and Use of Technology (UTAUT2) Model as an overarching theory when investigating the drivers of fitness tracking technology usage. Therefore, the constructs from the TAM or UTAUT2 (e.g. perceived ease of use, perceived usefulness, and perceived value) have primary been considered as the main explaining factors, and limited novel insights have been provided in the field of fitness tracking technology usage. In addition, few studies have taken a rigorous theoretical approach (e.g. hypothesis formulation and testing) when investigating the outcomes (e.g. experience, motivation) of fitness tracking, and thus the underlying mechanisms of the effects of fitness tracking on various user outcomes remain largely underexplored. Future research thus should provide a thorough theoretical framework of fitness tracking behaviour to further improve our understanding.",
+      "citations": [
+        "W2123883384",
+        "W2090873661",
+        "W2064047561",
+        "W2893689226",
+        "W4234925279",
+        "W4242883546",
+        "W2170899200",
+        "W2902999784",
+        "W2801534204"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. General discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "6.1. Theoretical contributions",
+          "subsubsections": [],
+          "text": "First, the current paper identifies 19 drivers of fitness tracking technology usage, which are classified into four different categories: user characteristics, device characteristics, perceived benefits/risks, and external drivers. Of the 19 drivers, 11 factors \u2013 age, technology affinity/self-efficacy, personal involvement, device quality, device attractiveness, device novelty, PEOU, PU, perceived enjoyment, perceived device value, and perceived (privacy) risk \u2013 are straightly aligned with the factors identified in the previous review on wearable technology adoption [W4252958680]. Six factors \u2013 desire for information, current individual status, data quality, device functionality, financial incentives, and special situations \u2013 are newly discovered in the current review, and two factors \u2013 personality traits and social influences \u2013 are discussed with a focus on different aspects of the same constructs (vs. [W4252958680]). For example, the current paper identifies agreeableness and conscientiousness as important personality traits that drive fitness tracking technology usage, whereas [W4252958680] has suggested openness to experience and neuroticism to be important drivers of wearable technology usage. As for social influences, the current study recognises social support and social connection, while [W4252958680] has identified subjective norms and social image. In addition, six factors (i.e. gender, visibility, physical risk, social risk, financial risk, and environmental risk) from the previous review [W4252958680] are not identified as the influential factors in the current review. This suggests that there are differences between the drivers of wearable technology usage and the drivers of fitness tracking technology usage, and fitness tracking technologies require an investigation on their own.\n\nSecond, the current paper reveals four main outcomes of fitness tracking \u2013 task motivation, task experience, physical activity level, and well-being/health. The majority of the prior research has focused on how fitness tracking technologies influence users' health, physical activity level, and task motivation, while there is a lack of studies when it comes to the effect of fitness tracking on users' task experience. The effects of fitness tracking on the outcome variables such as health, activity level, and motivation have been shown fairly consistent and positive, whereas its effects on task experience (e.g. enjoyment) and subjective well-being (e.g. feeling of satisfaction) have not reached a consensus (e.g. positive vs. negative) in the literature. Therefore, the authors encourage more research to understand the relationship between fitness tracking and task experience/subjective well-being.",
+          "citations": [
+            "W4252958680"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "6.2. Implications for design",
+          "subsubsections": [],
+          "text": "The current paper also delivers important practical implications. By providing an extensive overview of the drivers of fitness tracking technology usage, this paper can help designers and manufacturers of fitness tracking products to incorporate features and functionalities that are important for users (e.g. data quality, usefulness, and aesthetics), which would facilitate the use of fitness tracking products. The increased knowledge of user characteristics will also help product designers employ more efficient personalisation strategies (e.g. customised design and service) to better address the needs and concerns of potential users. In addition, the current paper suggests that using fitness tracking technologies can be an effective way for people to improve their motivation, activity level, and health. Practitioners (e.g. trainers, health care professionals) who are seeking to improve user outcomes thus should consider implementing fitness tracking technologies in their products or services to help users achieve better outcomes (e.g. enable fitness tracking feature in the equipment or provide fitness trackers). Overall, the findings from the current paper can act as a guide to design fitness tracking products, which can benefit users both physically and psychologically.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "As fitness tracking technologies emerge as a popular trend in various fields, the current study provides a timely review of the existing research on fitness tracking behaviour. It contributes to the field of information technology both by integrating a wide body of literature on fitness tracking technologies and by offering an integrative agenda for future research. In particular, the current paper offers the following contributions.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Notes",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "1. Intrinsic motivation refers to doing an activity because it is inherently interesting or enjoyable [W4242883546].\n2. Extrinsic motivation refers to doing an activity in order to attain some separable outcomes [W4242883546].\n3. Integrated motivation refers to doing an activity because one has integrated the value of the activity with other aspects of his or her life [W2170899200].\n4. Identified motivation refers to doing an activity because one has identified the value of doing the activity [W2170899200].\n5. Introjected motivation refers to doing an activity in order to avoid guilt or anxiety or to attain pride [W2170899200].\n6. External motivation refers to doing an activity in order to satisfy external demand or obtain external reward [W2170899200].",
+      "citations": [
+        "W4242883546",
+        "W2170899200"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Disclosure statement",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "No potential conflict of interest was reported by the author(s).",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Appendix. The 71 empirical papers used in the final synthesis",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "{{TABLE:tbl_08}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_08"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_6",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_9",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3047384636_tables.md"
+}

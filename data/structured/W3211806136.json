@@ -1,0 +1,312 @@
+{
+  "id": "W3211806136",
+  "metadata": {
+    "title": "Human-Human Communication in Cyber Threat Situations: A Systematic Review",
+    "n_sections": 5,
+    "n_subsections": 10,
+    "n_subsubsections": 0,
+    "n_tables": 4
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1. An Accurate Recognized Cyber Picture is Critical for Effective Cyber Defense Decisions",
+          "subsubsections": [],
+          "text": "Successful decision-making based on human interaction requires a shared situational awareness of the CTS. This includes a mutual understanding of what caused the situation, the current state of assets, potential adversaries, how the situation is evolving, and which actions to take to mitigate detrimental outcomes. An organization's Cyber Situational Awareness (CSA) influences whether an organization maintains control in its cyberspace [W2050131929]. Seven requirements that need to be met to have full CSA for cyber defense have been suggested [UNMAPPED:9]: (1) awareness of the current situation; (2) awareness of the impact of the attack; (3) awareness of how situations evolve; (4) awareness of adversarial behavior; (5) awareness of why and how the current situation is caused; (6) awareness of the quality and trustworthiness of the CSA information, and; (7) assessment of plausible outcomes. Having an accurate Recognized Cyber Picture (RCP; or Cyber Common Operational Picture) is crucial to achieve CSA. While CSA can be understood as being aware of the underlying state of a specific cyber environment at any given moment [W2050131929], RCPs consist of actively selected and actionable information specifically pertaining to cyber threats (Cyber Threat Intelligence; CTI) and aim to update stakeholders CSA and support their decision-making. To achieve this goal, RCPs should contain the information suggested by Barford et al. [UNMAPPED:9].\n\nIn the process of cyber threat communication, the CO must first investigate the threat to create the initial RCP, then it is shared (shared RCP; sRCP) across platforms, in differing modalities, and often across organizations, hierarchical layers, professional backgrounds, and societal sectors. When the CO shares the RCP, the CO must translate information that is often inherently complex and at times vague. The receiving partner may lack the expertise of the CO and have a mindset that is oriented towards action in the physical world [W2885219689]. Thus, the cyber-to-physical relay of RCPs is subject to many challenges which may render the sRCP inaccurate, losing critical information. Consequently, the sociocognitive demands of the tasks performed by COs are complex, demanding high cognitive load, and require both technical (e.g. digital forensic analysis) and non-technical skills (e.g communication) [UNMAPPED:10]. More research is needed on CO communication efficacy.",
+          "citations": [
+            "W2050131929",
+            "W2885219689",
+            "W1742813727",
+            "W2984363868",
+            "W2996415795"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "9",
+            "10",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "subsection_id": "s_1_2",
+          "subsection_index": 2,
+          "subsection_label": "1.2. Cognitive Aspects of Cybersecurity Performance and Implications for Cyber Threat Communication",
+          "subsubsections": [],
+          "text": "Through enhanced information flow, cyber increases human operative abilities [W2471146845] while simultaneously creating an environment at odds with human cognition [W2277553316]. Due to high levels of social barriers, situational shift, and uncertainty, COs must understand and skillfully apply a variety of cognitive processes to adapt to complex and changing task demands [UNMAPPED:3, UNMAPPED:10, UNMAPPED:13]. Although these challenges are acknowledged by the adoption of science-based educational approaches to meet the cognitive demands of cyber (e.g., [UNMAPPED:13]), common best practices to meet these demands currently do not exist.\n\nResearch conducted in collaboration with our lab put forward the Hybrid Space (HS; Figure 1, a) framework [UNMAPPED:3] to conceptualize the cognitive landscape COs must navigate. The HS framework focuses on the interconnectedness between cyber- and physical space, and the tension between tactical and strategic goals in decision-making. If a CO is more oriented towards cyber, communicative challenges may arise when the COs communicates with someone located in the strategic-physical quadrant who in turn must relay the information to an individual with orientation in another quadrant (Figure 1, b) [UNMAPPED:10]. Further socio-cognitive complexity is added when a group of individuals in different hierarchical layers and different tasks all communicate with each other, requiring constant re-adjustment of communication style and message content (Figure 1, c) [UNMAPPED:10]. From the perspective of the CO, knowing where you are in the HS requires metacognitive awareness, indicated by relationships between metacognitive awareness and self-reported cognitive movements within the HS [W2612532714]. When other individuals enter a CO's HS, the CO needs to be aware of their presence in the space and adopt perspective taking to understand their CSA, their grasp of the RCP, and to communicate efficiently one's own RCP understanding. This helps facilitate that involved partners can develop and calibrate shared CSA so that decisions incorporate both tactical and strategic approaches in both the physical and cyber domain [W2885219689].\n\n**FIGURE 1**\n\n*Fig. 1. a The Hybrid Space Framework [UNMAPPED:3, UNMAPPED:10] conceptualizing the cognitive landscape cyber operators must navigate. b Hierarchical structure, complicated relations. c Hierarchical structure, complex relations. d Sliding space. C = Cyber. S = Strategic. P = Physical. T = Tactical.*\n\nGood cyber defense relies on effective team coordination [UNMAPPED:15] and COs working in teams must actively engage in dynamic problem solving to acquire knowledge from each other and the environment [UNMAPPED:10]. In line with the shifting task demands of the HS, the HS might move along its axis as the focus of the team changes (Figure 1, d) [UNMAPPED:10] thus changing communicational needs.",
+          "citations": [
+            "W2471146845",
+            "W2277553316",
+            "W2612532714",
+            "W2885219689"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "3",
+            "10",
+            "13",
+            "15"
+          ]
+        },
+        {
+          "subsection_id": "s_1_3",
+          "subsection_index": 3,
+          "subsection_label": "1.3. Current approaches to solving communication problems in the Hybrid Space: The Orienting, Bridging, Locating (OLB) Model",
+          "subsubsections": [],
+          "text": "The process of communication from threat detection to the CO submitting the RCP to a decision-maker is subject to many iterative sub-processes and factors that affect the sRCP and decision-making. Building on the HS framework, our lab proposed the Orienting, Locating, Bridging (OLB) model (Figure 2) [W2885219689] as a tool to improve communication flow. Although metacognitive awareness is associated with movements in the HS [W2612532714] and the OLB model provides guidelines for how to apply the HS framework to improve communication [W2885219689], more research on HS movements and subsequent communication efficiency is needed.\n\n**FIGURE 2**\n\n*Fig. 2. Orienting, Bridging, Locating (OLB) model. The OLB model [W2885219689] is a three-stage pedagogical tool to ground communication between cyber operators and their communication partners. C = cyber. S = strategic. P = physical. T = tactical.*",
+          "citations": [
+            "W2885219689",
+            "W2612532714"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_1_4",
+          "subsection_index": 4,
+          "subsection_label": "1.4. Aim",
+          "subsubsections": [],
+          "text": "Given the lack of knowledge regarding human cyber threat communication, in this paper, we review the literature on communication in CTSs. Our aims are to (1) outline how human-human communication performance in cybersecurity settings have been studied, (2) to uncover areas where there is potential for developing common standards for information exchange in collaborative settings, and (3) to provide guidance for future research efforts. While laws and regulations can both be promoters and impediments to information sharing practices (see [W2966828561]), reviewing laws are currently outside the scope of this article.",
+          "citations": [
+            "W2966828561",
+            "W1742813727",
+            "W2984363868"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "3"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "A Cyber Threat Situation (CTS) is the potential occurrence of a cyber-attack aiming to damage, disrupt, or steal a cyber asset. A cyber asset can be understood as a completely or partly digitized protected organizational resource [W1742813727]. With the increased digitization of society and global network coverage, the cyber threat landscape is evolving and so is the need for research on the prevention and effective handling of cybersecurity threats. Organizations often assign their cybersecurity operations to Security Operation Centers (SOCs). SOCs are teams and organizational units that cover multiple security activities such as preventing, detecting, assessing, and responding to cyber threats and incidents [W2984363868]. Within the SOC organizational structure, technical tasks such as asset monitoring, detection, analysis, forensics, network security, intelligence, and communicating suggestions for cyber threat- and cyber incident response are assigned to technical staff while subsequent decision-making tasks such as how to act on threat and incident reports are assigned to other individuals (decision-makers) [W2984363868]. Consequently, there is a potential knowledge gap between technical personnel and decision-makers.\n\nCyber professionals, known as cyber operators in military sectors and cyber analysts in civil sectors (interchangeably referred to as COs), make up the technical personnel in SOCs and face a unique set of challenges spanning the cyber, physical, and social domain [UNMAPPED:3]. This cyber-physical working environment of human-machine and human-human interaction creates a complex Socio-Technical System (STS) that is subject to high rates of innovation, increasing network interconnectedness, and rapid flow of information [UNMAPPED:4]. Decision-making in STSs has its own set of challenges. In cyberspace, the impact of decisions and actions on own and third party infrastructure is influenced by connectivity between different decision-making agents [UNMAPPED:5]. In a cybersecurity setting, there is a persisting element of uncertainty regarding the presence, persistence, and consequences of adversarial behavior. This suggests that decision-makers need to prioritize multiple assets based on known and unknown risk and cognitively transition between cyber and physical contexts when estimating the impact of their decisions [UNMAPPED:3].\n\nDue to the multiple impact-dimensions of cyber defense decisions, communication between human agents is at the core of good cyber defense decision-making [W2885219689]. Strategic-level decision-making and tactical-level technical developments need simultaneous integration but are usually distributed over different roles, both vertically and horizontally within an organization. Since CO activity and decision-making is distributed among different roles within the SOC [W2984363868], there are multiple dyadic relationships that simultaneously influence the information requirements of cyber threat communication. The information communicated from a CO during a CTS must be modular enough to be interpreted by all dyads. This can be challenging when stakeholders belong to non-technical sectors or lack technical skills. In a recent review, Agyepong et al. [W2996415795] identified communication as one of the challenges facing SOCs. How cyber events are communicated and acted upon in the physical domain to secure and maintain cyber resilience is currently not well understood. In this paper, we systematically review the literature on human-human communication in CTSs.",
+      "citations": [
+        "W1742813727",
+        "W2984363868",
+        "W2885219689",
+        "W2996415795"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Review procedure",
+          "subsubsections": [],
+          "text": "1. Identify literature on human-human communication in CTSs through database searches.\n2. Categorize the publications according to type and methodological approaches.\n3. Provide a summary of the selected articles in order of methodological approaches and which aspect of communication that was studied.\n4. Synthesis and discussion of findings followed by suggestions for future research.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Literature collection methodology",
+          "subsubsections": [],
+          "text": "There was no limit to publication year. Only articles written in English were considered. Databases and search terms are listed in Table 1. Any peer reviewed conference papers and journal articles that either: (1) described characteristics of human communication of cyber threat information; (2) suggested ways to improve the relay of cyber threat information between humans; (3) assessed how aspects of human communication related to cybersecurity performance, or; (4) assessed neuroscientific, cognitive, and psychological constructs related to communication were considered for inclusion. Communication could either be the primary focus of the studies or part of a broader focus.\n\n**TABLE 1**\n*Overview of databases, search terms, filters, hits, and date of last search*\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W1742813727",
+            "W2984363868"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "3",
+            "4"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Descriptive information and statistics",
+          "subsubsections": [],
+          "text": "Characteristics of each study such as literature type and methodology, results and outcomes including statistics, and studied population were summarized and presented in tables.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The systematic review was carried out according to the PRISMA guidelines [W2468996569]. We wanted to review qualitative and quantitative original research articles and reviews that studied human-human communication of cyber threat information.",
+      "citations": [
+        "W2468996569"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Quantitative and mixed studies on cyber threat communication",
+          "subsubsections": [],
+          "text": "Five studies examined communication in cyber teams during CDXs, TTXs, or CDGs [W2079062448, W2564660321, W1993188114, UNMAPPED:18, UNMAPPED:20]. One study assessed the role of expectations on security information sharing [W2939781344]. One study assessed the role of beliefs on knowledge absorption of cyber threat information [W3000734309]. One study assessed the knowledge requirements of strategic level decision makers [UNMAPPED:25]. Table 3 summarizes the selected quantitative/mixed articles.\n\n**TABLE 3**\n*Overview of quantitative and mixed studies included in the review*\n\n{{TABLE:tbl_03}}\n*Notes. P<.05 = \\*, P<.01 = \\*\\*, P<.001 = \\*\\*\\*. ART = Advanced persistent threat. CDX = Cyber defense exercise. CISO = Chief information security officer. ComCol = Communication and Collaboration. CTSA = Cyber team situational awareness. DV = dependent variable. IV = independent variable. NIST = National Institute of Standards and Technology. SIS = Security information sharing. SLDM = Strategic level decision-maker. TTP = Time between start of inject to returned approval by team controller. TTX = Tabletop exercise. TWLS = Team workload scale.*\n\n**The role of communication in cyber team performance.** To understand how to develop human cyber skill-sets in cyber operational environments, communication and collaboration (ComCol) among team members along with years of experience, and number of roles inhabited by team members were examined as predictors of maintain-service tasks, scenario-injects, performance against the red (attacker) team, and incident response [UNMAPPED:18]. ComCol scores strongly and positively predicted performance on maintain-service tasks and scenario-injects. ComCol scores also predicted performance against the red team, although negatively. ComCol scores did not strongly predict incident response scores [UNMAPPED:18]. Simultaneous analysis of all predictors showed that the ComCol factor was not a unique predictor of performance [UNMAPPED:18].\n\nAs a follow-up to no-findings [W2940838424, W2922253887, UNMAPPED:27] on individual traits associated with cyber tactical and strategic decision-making performance, Lugo et al. [UNMAPPED:20] investigated the effects of team workload demands on performance in a CDX simulation for testing officer cadets' teamwork perceptions. Outcome measures were based on the HS framework [UNMAPPED:3]. Previous studies [W2940838424, W2922253887, UNMAPPED:27] showed that both cognitive and metacognitive factors could explain cyber-physical interactions, but could not explain any tactical-strategic decision-making during the CDX. ComCol performance demands showed increased involvement on tactical and strategic decision-making outcomes as well as facilitating cyber-physical transitions [UNMAPPED:20]. Only dissatisfaction with team performance was identified as a negative team factor. The results suggested that situational and team factors need to be taken into consideration alongside individual factors to explain performance [UNMAPPED:20].\n\nSeveral factors influence cyber team CSA (CTSA) among COs. Based on the observation that intra-team communication problems were fundamental challenges to CTSA among COs participating in CDXs [W2079062448], a TTX pilot study was conducted. Team performance dropped by 0.42% per security alert added, affecting perceived attack path, collaborative team report detailing the order and specifics of security breaches, and CTSA. Mental demands were somewhat high and CTSA was moderate to low and declined with increased information [W2079062448]. The authors suggested that information overload drives abnormalities in both team structure and team communication, and that team cyber defense processes must be restructured to facilitate sharing of workload and information. Lack of communication was suggested to be one of the most important contributors to the findings [W2079062448]. The authors did not correlate mental fatigue scores with communication metrics.\n\nIn line with findings regarding the challenges associated with communication problems in cyber teams [W2079062448], detrimental effects of arguments on team performance were reported in initial findings from a study on predictors of cyber team proficiency in CDXs [W2564660321]. The effect of communication on the following Blue Team proficiency metrics were assessed: (1) Time-to-Detect: Time between start of inject and first validated detection report; (2) Time-to-apProval (TTP): Time between start of inject to returned approval by team controller; (3) Time-to-End (TTE): Time between start of inject to blue team filing close out report, and; (4) Category Correct (CatCorrect): Percent of National Institute of Standards and Technology (NIST) category of inject correctly identified by the blue team. Frequent arguing was found to be significantly and negatively correlated with TTP as well as CatCorrect. Task redistribution when necessary was significantly and positively correlated with TTE and CatCorrect [W2564660321]. The authors did not report correlation coefficients or p-values but note that most of the data will be reported elsewhere [W2564660321].\n\nWhile other studies [W2079062448, W2564660321] mainly looked at communication with respect to cyber-attacks aimed at assets, one study [W1993188114] sought to study the influence of human-directed cyber-attacks on team communication and performance. Distributed team members in a CDG were exposed to misleading information and effects on team processes and decision-making were measured. They all received unique factoids and had to compare them to the factoids received by other team members through communication over a shared radio channel [W1993188114]. Within-subjects design was employed and divided in conditions None, Medium, and High. For the Medium condition, the inject was suggestive and contradicted supportive information. In the High condition the injects contradicted expert factoids and were phrased as facts. There were no injects in the None condition. Injects in the High condition had the most detrimental effect on team performance both on number of correct answers as well as time spent on completion. How the injects affected communication specifically was not assessed [W1993188114].\n\n**Knowledge requirements of SLDMs.** To tackle communication problems between strategic-level decision makers (SLDMs) and their CO teams, a study [UNMAPPED:25] tried to identify topics of knowledge requirements that could serve as basis for training or CDXs for SLDMs without IT or security background. A literature search identified 43 topics of knowledge that were sorted based on incident rate to assess their emphasis in the literature. 10 chief security information officers from different industries rated the topics on the level of knowledge needed. A higher rank meant that the topics were attributed a higher knowledge priority [UNMAPPED:25]. Although having a low incident rate in the literature, \"Advanced Persistent Threat\" had the highest average ranking. The lowest ranked topic was \"Access control models\". No topic was rated as 'no knowledge' meaning that the participants meant SLDMs needed some knowledge about all the topics that were identified [UNMAPPED:25]. Topics associated with third party security attained a lower average rank.\n\n**The role of expectations on sharing of cyber threat information.** The role of incentives for Security Information Sharing (SIS) between human agents working in institutions were assessed to see if expectations of usefulness, reciprocity, institutional barriers, reputation, and trust would affect SIS [W2939781344]. A questionnaire was administered to participants of the closed user group of the Swiss Reporting and Analysis Center for Information Assurance (MELANI) which is a government organization that provides a platform to facilitate SIS between Critical Infrastructures [W2939781344]. Six hypotheses were tested regarding the effect of expectations on frequency and intensity of SIS, and the moderating role of trust. They found that the value of information a human agent expects to receive from SIS significantly increases the intensity of SIS, but not frequency. Expectancy of social reciprocity significantly increased both intensity and frequency of SIS, as did expectations that SIS would be facilitated by their institution. Both transactional reciprocity and trust between human agents significantly increased frequency of SIS but not intensity. Reputation was not a significant predictor of SIS. They found partial support for their hypothesis regarding the moderating role of trust. It negatively and significantly moderated the relationship between value and the intensity, but not the frequency of SIS. Trust negatively and significantly moderated the relationship between transactional reciprocity and SIS [W2939781344]. Education was negatively associated with the frequency of SIS. Gender, age, length of membership in MELANI, and industry affiliation were not significant predictors of SIS.\n\n**The role of beliefs on knowledge absorption of cyber threat information.** Building on the previous findings of Mermoud et al. [W2939781344] regarding the role of incentives on SIS, Percia David et al. [W3000734309] assessed the relationship between various resource beliefs and tacit cybersecurity knowledge absorption in a study of cybersecurity managers participating in MELANI (the same closed user-group as in Mermoud et al. [W2939781344]). Knowledge absorption was not tested directly, but measured through participants rating the amount of exclusive information they received through SIS. They found that the belief that valuable knowledge could be acquired (resource belief), expectations of augmenting efficiency of cyber-security production (usefulness belief), and willingness to reciprocate when receiving valuable information (reciprocity belief) were all positively associated with cybersecurity knowledge absorption. The belief that participation in knowledge-transfer processes would result in reward (reward belief) was not associated with knowledge absorption. Neither were any control variables except prior participations in ISAC events [W3000734309].",
+          "citations": [
+            "W2939781344",
+            "W3000734309",
+            "W2079062448",
+            "W2564660321",
+            "W1993188114",
+            "W1742813727",
+            "W2984363868"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ],
+          "citations_unmapped": [
+            "25",
+            "18",
+            "20",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Qualitative studies on cyber threat communication",
+          "subsubsections": [],
+          "text": "Three studies examined the collaborative and information sharing practices of COs and made suggestions for how to improve the information sharing practice [W2463633928, W2339166448, UNMAPPED:31]. One study examined the information requirements different stakeholders had to find a RCP useful [UNMAPPED:32]. Two studies researched the role of team mental models (TMMs) in team communication [W2113156617, UNMAPPED:33]. One study assessed the role of various aspects of communication had on performance during CDXs [UNMAPPED:35]. One study examined how communication impacts the level of trust given to individuals and how it affects cybersecurity risk assessment [W2329099930]. One study surveyed the literature on Technical Threat Intelligence (TTI) to define what it entails [W2760313715]. Table 4 summarizes the selected qualitative articles.\n\n**TABLE 4**\n*Overview of qualitative studies included in the review*\n\n{{TABLE:tbl_04}}\n*Notes. CERT = Cyber emergency response team. CO = Cyber operator. CSA = Cyber situational awareness. EMS = Emergency medical systems. MR = Military response. NPPO = Nuclear power plant operating. RCP = Recognized cyber picture. SOC = Security operation center. TMM = Team mental model.*\n\n**Interviews on the SIS practices of COs.** Analyst level COs engage in several informal collaborative and coordination practices when gathering CTI [W2463633928, UNMAPPED:31]. The information needed about a threat differ between clients, thus, RCPs need to be enriched with client-specific information [W2463633928, UNMAPPED:31]. COs communicate through email and phone calls with clients to identify their CTI needs, which is done through onboarding procedures and ongoing communication centered around CTI reports [W2463633928]. Gathering information on similar threats that occurred in the past is called gathering Threat and Defense Knowledge (TDK). If a CO was not the one investigating the original cyber threat, COs communicate with the CO who did to gather TDK [W2463633928]. This is done by requesting artifacts and information either by face-to-face communication or over email. COs learn about who have encountered similar threats through team meetings, conferences, blogs, and eavesdropping on conversations in and around the office [W2463633928]. If COs cannot find information about threats they often assume it does not exist. Existing databases for SIS is circumvented due to not meeting the needs of the COs [W2463633928]. COs are often de-incentivized to share data or interim analyses as their reputation as experts is built upon being the one to uncover cyber threats [UNMAPPED:31] and not sharing information is common [W2339166448].\n\nThe collaborative ecosystem may involve many organizations with CSA being distributed across COs but the collaborative practices are less common higher up in the SOC hierarchy [UNMAPPED:31]. A typical decision-making hierarchy can be structured with analyst level COs at the bottom, then further up you have supervisors, managers, and then directors at the top [UNMAPPED:31]. While analyst level COs make decisions about what information to include in the RCP, strategic level COs make decisions about whether to send or revise RCPs. Interaction is often uni-dimensional with information being 'pushed up' and decisions being 'pushed down' the hierarchy [UNMAPPED:31]. A centralized system that incentivizes documenting, SIS and that allows for organizing files to avoid 'cluttering' is needed to facilitate communication of CTI between COs [W2463633928, UNMAPPED:31]. Staheli et al. [UNMAPPED:31] proposed a user-centered collaborative system for COs but it needs testing.\n\n**Review on the SIS practices of COs.** In their extensive survey, Skopik et al. [W2339166448] identify five primary dimensions of information sharing; (1) Efficient cooperation and coordination; (2) Legal and regulatory landscape; (3) Standardization efforts; (4) Regional and International implementations, and; (5) Technology integration into organizations [W2339166448]. The authors discuss two taxonomies for information and note that TS-CERT taxonomy [UNMAPPED:38] is more convenient due to the main categories being universal while sub-categories being part of the description rather than a classification schema. The authors also identify 4 scenarios where cybersecurity information is shared; (1) SIS about recent or ongoing incidents; (2) SIS about service dependencies; (3) SIS about the technical service status, and; (4) when requesting assistance of organizations [W2339166448]. Shortcomings regarding SIS practices concern Cyber Emergency Response Teams (CERTs) not sharing incident data with other CERTs [UNMAPPED:39]. Recommendations were made to enrich incident information with additional metadata to provide insights into observed events [UNMAPPED:39] and to develop verification methods and criteria for assessing the quality of the data sources. There was demand for establishment of SIS communities with defined scopes [UNMAPPED:40]. A CTI exchange [UNMAPPED:41] model was proposed.\n\n**Interview on stakeholder's RCP information requirements.** Most of the reviewed studies approach RCPs from the perspective of SOCs. To address the limited research on stakeholder's RCP needs, one study examined the information elements an RCP must contain to be perceived as relevant for the stakeholder's CSA [UNMAPPED:32]. Respondents said RCPs needed non-speculative factual descriptions of the events leading up to an incident and that information came from multiple trustworthy sources; otherwise the quality of the information had to be explicitly stated [UNMAPPED:32]. The RCP needed information on the internal state of one's own organization, correct time stamps of events, affected location, size of event, up-to-date picture of organizational stance, all taken and planned actions, explicit view of one's own information requirements, communication plan with approved messages, whom to coordinate responses with, and list of available resources. Difficulties regarding information sharing such as adaptation of information to the situation and receivers were mentioned. The information needed in a RCP depended on the situation but included operational information [UNMAPPED:32]. Most wanted information on the consequences an incident had to one's own organization and how it would evolve; few wanted to know the impact on other organizations. Differences were seen between regional and service-specific actors, where regional actors need RCPs to facilitate crisis management collaboration while service-specific actors use RCPs to maintain continuity in a service (e.g. electricity) provided to customers and to inform governments agencies with information for a broader perspective. No one asked for information about adversarial behavior [UNMAPPED:32].\n\n**Interview on the role of TMMs in SOC team communication.** Due to the known role of TMMs on team performance, H\u00e1mornik & Krasznay [UNMAPPED:33] explored the role of team communication on TMMs in SOC teams. Communication facilitating team-level cognitive processes needs to be explicit and is more effective prior to security events. When security events occur, cognitive load is high, capacity for effective communication is low, and coordination is implicit [UNMAPPED:33]. 13 industry experts who are operating a SOC or performing tasks related to SOCs were interviewed using a semi-structured approach. They reported that local team members communicate within the team verbally or by using email, chat, or ticketing systems. Remote teams communicate via computer-mediated channels, phone calls, and occasional but rare face-to-face meetings [UNMAPPED:33]. The TMMs are developed and updated by both internal and external communication. If the mental models are well functioning, explicit communication and coordination activities may not be required during high-risk incident responses and under high time pressure. The authors propose that team cognitions such as constructing and updating TMMs via communication is key in SOC team performance and suggest that research should be focused on measuring the effect of communication on TMMs [UNMAPPED:33].\n\n**Review on the role of TMMs in team communication.** CERTs are composed of two or more individuals who prepare for and respond to cybersecurity incidents. By examining other emergency response team's methods of adaptation to incidents, Steinke et al. [W2113156617] identified 5 areas that could be improved to increase CERTs effectiveness. One area concerned enhancement of communication. Information richness and reduction in complexity of interaction was important for effective communication; more one-way communication and less two-way exchanges of information. All necessary information should be communicated at once. The authors [W2113156617] propose that CERTs can develop TMMs and transactive memory through cross-training, guided team self-correction training, role identification behaviors, pre-mission communication briefings, individual and team after-action reviews and debriefings pointing to where communication broke down, where interactions and coordination did not occur where they should have, and by making electronic knowledge maps displaying team member roles and expertise [W2113156617]. The authors note that the dynamic and evolving nature of cyber can make it hard to adopt strategies from other incident response teams and must therefore be experimentally tested on CERTs.\n\n**Observation and focus group on the role of communication on team performance during CDXs.** Among all the studies on cyber team communication, only one detailed the goal of communication within teams [UNMAPPED:35]. Two cybersecurity teams, Team A and Team B, were observed to assess the influence of team communication and coordination on performance. Team A outperformed Team B. Team A had distributed leadership among three members which facilitated sharing of completed tasks and information. Team B had one leader who at times was uncertain about what the team was working on. Team A openly discussed each other's tasks and provided feedback. When Team A members needed help with a task, the team adjusted and assisted the team member until they could resume independence. Team A members asked for and offered aid more than they planned and assigned roles. When a task could not be completed, leaders would instruct members pick up another task where completion was feasible. Team B had members that never spoke during the length of the CDX, partly attributed to cultural and language barriers [UNMAPPED:35].\n\n**Review on the impacts of communication on the level of trust given to COs and how it affects cybersecurity risk assessment.** In their review of trust as a human factor in cybersecurity risk assessment, Henshel et al. [W2329099930] describes how their 'trust framework' relates to communication in cyber defense situations. According to their framework, trust is increased by a CO who can effectively communicate with superiors and other COs, log incident reports with minimal false negatives and false positives, communicate information in a timely manner, and employ competency when applying cyber defense tools [W2329099930]. Communication is efficient when there is common ground and it is built on shared mental models. Based on the concept of defender trust, they divide communication in four subcategories; 'accuracy', 'thoroughness or completeness', 'timeliness', and 'honesty' [W2329099930]. Effective communication for cyber defenders requires timeliness as any amount of wasted time will increase the window for attackers to do damage or go undetected. Honesty is integral to trust whilst dishonest communication harms both team effectiveness and the accuracy of defensive efforts in the cyber domain [W2329099930].\n\n**Review on subdivisions of technical threat intelligence.** In response to the diversity of CTI research and subsequent lack of consensus of what CTI is, Tounsi and Rais [W2760313715] reviewed the literature on TTI, a subset of CTI, and its multiple sources, the gathering methods, information lifespan, and intended receivers. The authors found that fast sharing of CTI alone was not sufficient to avoid targeted attacks [W2760313715]. In support of the framework suggested by Henshel et al. [W2329099930], trust was identified to be an important factor for successful SIS; trusted environments and anonymous sharing were listed as possible solutions when organizations engage in SIS [W2760313715]. The interconnectedness of organizational SIS is increased through the recent use of portals and blogs to exchange semi-automatic threat information. When the quantity of threat information is large, security teams must contextualize the threat data they collect with the specific vulnerabilities and weaknesses they have internally [W2760313715]. As in the reports of Ahrend et al. [W2463633928] and Staheli et al. [UNMAPPED:31], a need for common standards for information sharing were expressed [W2760313715].",
+          "citations": [
+            "W2113156617",
+            "W2329099930",
+            "W2760313715",
+            "W2463633928",
+            "W2339166448",
+            "W1742813727",
+            "W2984363868"
+          ],
+          "tables_in_text": [
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "32",
+            "33",
+            "35",
+            "31",
+            "38",
+            "39",
+            "40",
+            "41",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "**FIGURE 3**\n\n*Fig. 3. Flow diagram depicting different phases of the systematic review.*\n\nThe phases of the review are depicted in the flow diagram in Figure 3. Of studies assessed for eligibility, 13 were excluded due to: (1) proposing technical tools for improved CSA without assessing effects on human communication; (2) only focusing on organization-media communication after a security breach; (3) focusing on increasing the frequency of threat reporting without suggesting ways to organize cyber threat information or making human-to-human communication more effective; (4) not studying human-to-human relay of cyber threat information or associated human factors; (5) applying mathematical modeling of communication and collaboration without human subjects. A total of 17 studies were included in the final review. 12 of the selected articles studied some aspect of cognition and its role in cybersecurity performance. 6 of the studies were conducted on team-based cyber defense exercises (CDXs), Table Top Exercises (TTXs) or Cyber Defense Games (CDGs). There was not enough data to conduct a meta-analysis. None of the studies were published prior to 2012, average publication year was 2016. Overview of the identified publications according to type and methodology is provided in Table 2.\n\n**TABLE 2**\n*Overview of the selected publication according to type and methodology*\n\n{{TABLE:tbl_02}}",
+      "citations": [
+        "W1742813727",
+        "W2984363868"
+      ],
+      "tables_in_text": [
+        "tbl_02"
+      ],
+      "citations_unmapped": [
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Future directions and conclusion",
+          "subsubsections": [],
+          "text": "Communication in CTSs has not received much attention and the nature and quality of studies vary. Studies assessing both team factors and individual factors simultaneously are almost non-existent. We found only one study where variables were manipulated to see their effects on communication and more basic and experimental studies are needed. CDX organizers could benefit from collaborating with cognitive scientists to experimentally manipulate aspects of the CDX such that new insights can be achieved. It would be useful to manipulate and quantify TMM development prior to and during a CDX or TTX to measure the effect on communication. Standards for characterizing and assessing cyber team communication need to be developed and implemented in studies.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The aim of this paper was to: (1) outline how human-human communication performance in cybersecurity settings have been studied; (2) uncover areas where there is potential for developing common standards for information exchange, and; (3) provide guidance for future research efforts. We found that very little research has been done on human-human communication in CTSs and most of the current studies are correlational and exploratory in nature. One study assessed what kind of information that was deemed useful for stakeholders' RCP [UNMAPPED:32]. None of the stakeholders interviewed listed adversarial behavior as useful. This could indicate that stakeholders are more oriented towards action in the physical world than in cyber. This can be useful knowledge for COs and suggest use cases for the HS framework [UNMAPPED:3, UNMAPPED:10] and the OLB model [W2885219689] which address these potential problems at both a theoretical-conceptual and practical level, respectfully. The HS framework might be a useful tool for stakeholders to become aware of their own cognitive 'blind spots', while the OLB model can be used by COs to enrich CTI with information on adversarial behavior and make salient how this behavior contributes to the evolution of the CTS.\n\nSteinke et al. [W2113156617] suggested that enriched, one-way communication of cyber threat information where all necessary information is communicated once would enhance CERTs cybersecurity performance. The relevance of these findings is addressed in the HS framework (Figure 1, a-d) [UNMAPPED:3, UNMAPPED:10] which illustrates how communication between individuals located across the HS space gets increasingly complex when information is relayed across the space and individuals. When cyber threats occur, timely responses are often key, especially during cyber threat incidents with high time pressure. For one-way communication to be effective, updated and effective TMMs are necessary [W2113156617, UNMAPPED:33]. Cyber TMMs that are updated through communication and coordination prior to the occurrence of cyber incidents may allow for less communication during high-risk incidents with high time pressure [W2113156617, UNMAPPED:33]. Cyber teams perform better in CDXs when they spend more of their time communicating help needs and aid-offerings than planning and role-assigning [UNMAPPED:35]. Based on these findings, longitudinal studies on cyber TMMs and how they relate to the evolution of communication practices could provide novel insights into how and when cyber threat communication can be optimized for performance.\n\nSupport for the notion that too much communication during cyber threat incidents can be detrimental to performance is seen in naturalistic studies showing that ComCol negatively predicts scores against attacker teams [UNMAPPED:18]. This, however, might depend on the quality and type of communication, the aspect of performance that is in question [W2079062448, W2564660321, UNMAPPED:18, UNMAPPED:35], and level of expertise [UNMAPPED:18, UNMAPPED:20]. For example, communication positively predicts handling of both maintenance tasks and scenario injects [UNMAPPED:18] and productive communication regarding task progress-updates and stating the need of help can enhance incident handling [UNMAPPED:35]. Under-communication can also be detrimental to team performance by leading to team members working on the same tasks without knowing [W2079062448]. Distributed team leadership might mitigate these issues if individuals holding leadership positions also spend time communicating with team members to know which tasks they are working on [UNMAPPED:35]. Indeed, the dynamic and evolving nature of cyber and the broad demands of expertise might favor distributed leadership [UNMAPPED:10]. ComCol performance demands influence tactical and strategic decision-making outcomes and cyber-physical transitions in the HS [UNMAPPED:20]. As opposed to the Buchler et al. [UNMAPPED:18] study on CO experts, these cadets were novices. ComCol demands might be necessary in training and development, but may become less relevant with experience.\n\nTo update their own and clients CSA, COs enrich RCPs with useful TDK by communicating with both team members and COs from other organizations as well as their clients when investigating a cyber incident [W2463633928, UNMAPPED:31]. This practice is most common for analyst level COs but less and less common higher up in the decision-making hierarchy [UNMAPPED:31]. Albeit making decision-making more effective, these structural inefficiencies can be detrimental to CSA and shared mental models in the organization, cause communication and coordination problems, and potentially reduce creativity among COs [UNMAPPED:31]. This can be illustrated with the HS framework [UNMAPPED:3] when COs and SLDMs are in different quadrants of the HS without knowing where the other organizational members are. Studies assessing or manipulating the RCP-related resource-beliefs of COs and SLDMs [W2939781344, W3000734309] may be useful in determining the effect of shared mental models on the resulting RCP.\n\nThe reviewed literature has several limitations. Most of the studies were the first to assess the relationships they studied and have thus not been replicated, although they seem to converge on some common principles. Half of quantitative studies [W2939781344, W3000734309, UNMAPPED:18, UNMAPPED:20] report effect sizes and one study did not report effect sizes nor p-values [W2564660321]. Sensitivity issues might be the reason why few studies report participant characteristics such as which sector respondents belong to. The Varga et al. [UNMAPPED:32] study was conducted exclusively on Swedish participants with a large proportion of respondents belonging to national agencies and critical infrastructure operators, meaning that the robustness of the findings may vary according to which sector provided the answers. This issue is discussed by the authors [UNMAPPED:32]. In general, cybersecurity personnel are hard to access and naturalistic studies are tricky to conduct because contextual variables are hard to manipulate partly due to restricted collaboration with CDX organizers. This is apparent in the reviewed literature and is a barrier that needs to be overcome. Few studies [W2113156617, UNMAPPED:35] elaborate on the quality and characteristics of communication. A focused effort is needed to develop quantitative measures of communication that can be readily applied in CDXs in addition to measures of TMM development. Moreover, only two studies assessed individual and team measures [W2079062448, UNMAPPED:20] although only one study assessed the relationship between these measures [UNMAPPED:20]. Thus, there is also a need for studies simultaneously assessing individual and team factors related to communication and performance.",
+      "citations": [
+        "W2885219689",
+        "W2113156617",
+        "W2079062448",
+        "W2564660321",
+        "W2463633928",
+        "W2939781344",
+        "W3000734309",
+        "W1742813727",
+        "W2984363868"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "32",
+        "3",
+        "10",
+        "33",
+        "35",
+        "18",
+        "20",
+        "31"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Funding",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This study was conducted as part of the Advancing Cyber Defense by Improved Communication of Recognized Cyber Threat Situations (ACDICOM; project number 302941) project. ACDICOM is funded by the Norwegian Research Council.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3211806136_tables.md"
+}

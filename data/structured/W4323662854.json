@@ -1,0 +1,399 @@
+{
+  "id": "W4323662854",
+  "metadata": {
+    "title": "Learning Analytics in Virtual Laboratories: A Systematic Literature Review of Empirical Research",
+    "n_sections": 6,
+    "n_subsections": 9,
+    "n_subsubsections": 0,
+    "n_tables": 5
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The COVID-19 coronavirus pandemic has created an extremely difficult situation that causes anxiety in the academic field. Practical sessions and experiments in schools and universities have been suspended, which are essential for students' experience and skill development in laboratory-based disciplines [W3046039150]. Despite the pandemic conditions, some specialties have started to use virtual labs for teaching biology, chemistry, and the natural sciences. Virtual labs have the advantages of unlimited time, immediate feedback, experiment repetition, and safety for students and the subjects of the experiment [W3046039150]. Students' experience with virtual and simulated experiments helps prepare them for their physical laboratories and offers a reasonable solution\u2014at least in emergencies\u2014[W2116289201]. Technology affords students several means of communication, allowing students to interact with teachers, ask for help, or provide feedback about their learning. Furthermore, students can conduct virtual experiments in groups, allowing for social engagement and collaboration through teamwork [W2577286580]. Virtual laboratories can generate digital traces to monitor students' learning and identify their learning strategies. These traces of students' interactions with virtual labs revealed an enhancement in students' ability to solve problems, engage in critical thinking, develop laboratory skills, and acquire knowledge [UNMAPPED:4]. To take advantage of such data, the \"learning analytics\" field was conceptualized to provide insights into learning by analyzing various student-generated data [W3143818080].\n\nLearning analytics (LA) is commonly defined as \"the measurement, collection, analysis, and reporting of data about learners, learning environments, and contexts to understand and optimize learning and their environments\" [UNMAPPED:6]. Therefore, LA adopts a data-driven strategy in educational settings with the ultimate goal of enhancing and optimizing the educational experience for students and teachers. LA has a broad range of applications in many fields of education, from preschool to postgraduate studies [W2611043926]. The LA implementation may provide educational institutions and stakeholders with multiple significant benefits [W2741878607, W2565923739]. These include LA being used for students' collaboration measurement [W4210638762], grade prediction [W2022337613, W2285044695], learning gap identification [W2535019908], failure prediction [W2743726230], decision making [W2550482313], active learning support [W2617818691], profiling students [W2543562683], and assessment improvement [W2948433904].\n\nLA has been implemented in many contexts, such as the early identification of at-risk students for underachievement, the tracking of students' online activity, the provision of automated feedback, the facilitation of learning strategies, and the optimization of teamwork in collaborative learning [W4206213225, W2166827970]. Previous systematic reviews have either narrowed in on the technology and design of virtual laboratories in a single discipline, such as biology [W3026251005] or chemistry [W3206020311], covered a wider range of disciplines while focusing on a single technology, such as virtual reality [W4290996020], or provided a more broad-based review of the theoretical and practical approaches of virtual labs in various fields [W3092078297]. However, a systematic review that synthesizes research about how learning analytics are used to monitor, support, or assess virtual laboratory work does not exist. In this study, we aim to bridge such a gap and contribute to the literature with a systematic review encompassing all research about learning analytics and virtual laboratories. We investigate the characteristics, research methods, and findings of learning analytics in virtual labs. Therefore, the main research questions for this study are: How has research on virtual laboratories used learning analytics in regards to educational levels, subjects, applications, and methods of analysis?",
+      "citations": [
+        "W3046039150",
+        "W2116289201",
+        "W2577286580",
+        "W3143818080",
+        "W2611043926",
+        "W2741878607",
+        "W2565923739",
+        "W4210638762",
+        "W2022337613",
+        "W2285044695",
+        "W2535019908",
+        "W2743726230",
+        "W2550482313",
+        "W2617818691",
+        "W2543562683",
+        "W2948433904",
+        "W4206213225",
+        "W2166827970",
+        "W3026251005",
+        "W3206020311",
+        "W4290996020",
+        "W3092078297"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "4",
+        "6"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Background",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "Virtual Labs",
+          "subsubsections": [],
+          "text": "Technology-based training is growing across many areas of practice, and education is not an exception. Organizations are adopting virtual and simulated applications to improve trainees' working skills, problem-solving strategies, and self-directedness [W2003614220, UNMAPPED:25]. Virtual laboratories offer the opportunity to practice several times, anytime, at any pace. Most importantly, they offer safe practice without fear of harm to themselves, equipment, or subjects. Virtual labs have provided students with access to large equipment such as telescopes [W2120886380], expensive devices such as electron microscopes [W1930655277], risky techniques such as radioactivity measurements [W2022598523], and biotic interactions such as cell stimulation [W2560342180]. Students can access virtual labs via computers and mobile devices, providing a new dimension for students [W2595137683]. Virtual labs range from simple 2D video games to interactive 3D simulations that provide a more engaging learning environment. Some provide students with instructions and technical directions to complete difficult tasks, whereas others are open-ended [W2895631199]. Virtual labs have many advantages compared to traditional labs, including less cost, easy access, time-saving, environmental safety, and adaptability [W3084697321]. However, one of the possible drawbacks of virtual labs is that, unlike conventional labs, they do not always offer the same learning environment or the same opportunities for student interactions [W2595137683].\n\nVarious organizations have created a variety of virtual laboratories, with many of them available as open-source software. The Go-Lab and LiLa projects are two general-initiative virtual labs that offer both a remote framework and a broader scope [W2253312808]. The Go-Lab project is a large collection of interactive virtual labs that enables teachers to develop inquiry learning spaces by combining online laboratories and applications. The learning space can be shared with teachers and students for creating and testing hypotheses as well as designing educational games [W2964126315]. The \"Library of Labs (LiLa)\" project creates an infrastructure for virtual experimentation. It goes beyond just gaining scientific knowledge by offering social communication skills with colleagues and mentors [W1571089413]. Various commercial software packages are recently available with immersive simulators, for example, Labster, which has multiple virtual labs in different disciplines with game-based components to motivate students to learn techniques, solve problems, and apply experiments. Labster and other comparable programs like Late Nite Late Labs let students actually feel as if they are in the lab through the simulation environment to improve the immersion quality [W2895631199].\n\nVirtual labs provide students with a personalized immersive learning experience through immersive tools such as virtual reality (VR), augmented reality (AR), and mixed reality (MR) for use within education [UNMAPPED:37]. Early research suggests that immersive simulation improves student skills, knowledge, and motivation to learn [W2061982661, W2494998521, W2120258005, W2027210660]. VR has been widely used in a variety of educational settings. High school students used VR in 3D interactive chemistry labs [W2189099515, UNMAPPED:42]. Many articles focus on higher education; for instance, students in computer science courses have tested VR as an intelligent learning environment [W1571163317]. A VR immersive environment can be used to design architectural spatial experiences [W602792767] and the presentation of neutrino data [W1967803241]. VR has been widely utilized in the field of medical education, particularly for applications such as nurse education in an interactive virtual environment [W2026537748], simulated hospitals in medical education [UNMAPPED:48], a caries removal simulation for dental students [W2305805912], and finger tracking using a head-mounted display to show surgeons how the expert's fingers move during surgery. Furthermore, VR is utilized directly with patients for educational purposes [W181482456, W1824462951].\n\nMany other virtual labs were developed as discipline-based labs, such as the Open-Source Physics (OSP) project which improves computational physics education by providing simulators for basic techniques as well as education [W4246809754]. In engineering, the TriLab project, which includes three access modes \"hands-on, virtual, and remote lab\" provides students with control engineering concepts and loop control using \"Laboratory Virtual Instrument Engineering Workbench (LabVIEW)\" [W2156225278]. In biology, the BioInteractive provides classroom resources and improves biology teachers' content with scientific-based multimedia resources and stories to motivate students [W4211063598]. In chemistry, ChemCollective involves virtual labs, educational materials as alternatives to textbooks, and student- or team-based activities [W2020882787]. The students can work with hundreds of chemicals and manipulate them without extra cost or possible risks [W2020882787]. According to a literature review on chemical virtual labs, there is a limitation in updating virtual labs based on student level, and the information provided by current virtual laboratories is static and limited in analytics [W3084697321].",
+          "citations": [
+            "W2003614220",
+            "W2120886380",
+            "W1930655277",
+            "W2022598523",
+            "W2560342180",
+            "W2595137683",
+            "W2895631199",
+            "W3084697321",
+            "W2253312808",
+            "W2964126315",
+            "W1571089413",
+            "W2189099515",
+            "W1571163317",
+            "W602792767",
+            "W1967803241",
+            "W2026537748",
+            "W2305805912",
+            "W181482456",
+            "W1824462951",
+            "W4246809754",
+            "W2156225278",
+            "W4211063598",
+            "W2020882787"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "25",
+            "37",
+            "42",
+            "48"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "Learning Analytics",
+          "subsubsections": [],
+          "text": "Educational technology has evolved in three distinct waves. The first wave started with the development of learning management systems (LMS). Social networks are considered the second wave of educational development that affects learning. Learning analytics, which is the third wave, is used to improve and optimize education [W2079372207]. LA as a multidisciplinary field has been drawn from diverse scientific fields including computer science, education science, data mining, statistics, pedagogy, and behavioral science [W2162700863].\n\nThe main objectives that have been explored in LA research are to support instructional strategies and the most promising applications in education, identify at-risk students to provide effective interventions; recommend reading materials and learning activities to students; and assess their outcomes [W3000065748]. The use of LA allows for tracking students' activities and providing feedback to improve the learning experience. LA pursued its objectives using various data mining techniques to create analytical models, which give a deep look into the learning process and could lead to more effective learning and pedagogical intervention [W4210936346, W4295018402]. Among the approaches utilized, improved, or introduced in LA are machine learning, predictive analytics, process and sequence mining, and social network analysis [W3000065748]. The initial work was mostly algorithms for the prediction of students' success, and at-risk student identification [W2904980464]. Then some researchers argued that relying on learning analytics for prediction is not sufficient [UNMAPPED:62], and it is essential to include pedagogical perspectives while studying the learning process [W1982464953, W2908549972]. Accordingly, scholars give more attention to pedagogical practices and feedback in recent LA research [W4308066047, W2966432879].\n\nIn virtual labs, LA techniques were applied in a variety of approaches to investigate the impact of using virtual labs to gain the necessary skills and competencies. Govaerts et al. [W2127418831] applied the Student Activity Meter (SAM) to visualize students' performance based on many metrics, which they then displayed in a comprehensive dashboard with dimensional filtering. Similarly, in the FORGE European online learning project, a dashboard was used to visualize students' interactions with course materials and each other, in addition to surveys and questionnaires [UNMAPPED:68]. The dashboards of virtual labs present a summary of student progress by visualization using different statistical charts such as histograms and plots [W2981441071, W2063897683].\n\nMany research papers use interaction data, including statistical extraction of students' interactions in relation to time spent, the distribution of time-on-task per student, and different user configurations [W4210936346, W4295018402, W2904980464]. Another approach is to develop an autonomous assessment and recommendation system to analyze real-time activity results and improve students' performance in virtual labs [W2981457795, W2907646290]. For instance, for optimal performance of virtual labs, students should spend appropriate amounts of time interacting with tools and resources. The relationship between students' interactions and their academic progress may be used to study students' behavior. Moreover, clustering methodologies can categorize students by their weaknesses and strengths to study their learning progress [W4281754575].",
+          "citations": [
+            "W2079372207",
+            "W2162700863",
+            "W3000065748",
+            "W4210936346",
+            "W4295018402",
+            "W2904980464",
+            "W1982464953",
+            "W2908549972",
+            "W4308066047",
+            "W2966432879",
+            "W2127418831",
+            "W2981441071",
+            "W2063897683",
+            "W2981457795",
+            "W2907646290",
+            "W4281754575"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "62",
+            "68"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "Database and Literature Search",
+          "subsubsections": [],
+          "text": "The authors identified three established databases for the search: Scopus, Web of Science (WoS), and ERIC. Both Scopus and WoS databases employ rigorous inclusion criteria for journals and conferences, have a robust meta-data system, and have been established as literature search venues [W4293242947]. ERIC is an educational database that covers a wide range of educational literature [W2071383931]. Additionally, the same keywords were used to search in the database of the Journal of Learning Analytics, the official publishing outlet for learning analytics.\n\nWe performed several iterations of search using different combinations of keywords; using the keyword \"virtual\" severely limited our findings and missed several papers. Some of the authors of the papers used other keywords, e.g., online laboratories, or did not use the keyword \"virtual\" at all within their keywords and therefore were not captured by the initial keywords that included \"virtual.\" Therefore, a decision was made to cast a wide net, and retrieve any article that includes the keyword \"lab\" with a wild card and then qualitatively\u2014by the expert eyes of researchers\u2014identify which of such keywords' articles are about virtual laboratories. After several iterations, the following search formula yielded the best results for capturing all forms of keywords (Table 1):\n\n(\"learning analytics\") AND (lab* OR experiment* OR clinic* OR practical* OR immers*)\n\nThis combination of keywords was selected to be searched in the fields of the title, abstract, or author keywords of articles. The search was conducted within two days of the eighth of November 2021. The returned search resulted in 1069 articles from all specified databases, as follows: 653 articles from Scopus, 248 articles from WoS, 120 articles from the ERIC database, and 48 articles from the Journal of Learning Analytics. All articles were uploaded to the Covidence web-based system for analysis. Duplicates (n=280) were removed, resulting in 789 articles. Two researchers independently scanned and assessed the first 100 papers' abstracts, titles, and keywords. The inter-rater agreement showed strong reliability using Cohen's Kappa test (\u03ba=0.92), and any conflicts were discussed and resolved, i.e., when the two authors had differing views about the classification of the paper, they discussed it until they reached a consensus.\n\nThe remaining articles were divided and filtered by both researchers. All authors met after filtration to discuss any uncertainties. Based on the inclusion and exclusion criteria, the title and abstract scan yielded 86 publications that were suitable for full-text review (Fig. 1).\n\n**FIGURE 1.** The study selection process\n\nIn order to obtain data from the included articles, the relevant information was first collected in a codebook. This was done to reduce the individual differences that existed between the reviewers. The following categories of information were extracted from each article: descriptive statistics, educational settings and levels, disciplines, learning analytics approaches, and the primary conclusions of each study. The first ten studies were coded by two different coders, and then they had a meeting to discuss any conflicts and complete the codebook before continuing to code articles. Finally, the retrieved papers were checked for quality before beginning the stage of synthesis. At this point, the writers are organizing all of the data within the framework of the review hypothesis [W2111628838]. The data analysis gets a comprehensive presentation from a learning analytics perspective.",
+          "citations": [
+            "W4293242947",
+            "W2071383931",
+            "W2111628838"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The authors conducted this review according to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) 2020 guidelines [W4236476849] and the eight fundamental steps of systematic reviews by Okoli [W2173536757]. The authors followed these guidelines to identify the purpose of the review, prepare a protocol draft, identify inclusion and exclusion criteria, and conduct the search process in order to extract data and appraise articles' quality before writing the review.\n\nFirst, the authors determined that the purpose of the study was to report on the application of learning analytics in virtual labs to answer research questions. Following the assessment of the review's scope, the authors frequently convened to draft the protocol. This document organizes all subsequent actions to reduce the possibility of bias in the selection of publications and data processing. The protocol ensures reproducibility and consistency by planning the strategy for practicing and conducting the review [W1588485088]. Accordingly, the protocol included research questions, the literature search strategy, inclusion criteria, the assessment of the studies, the data extraction, and the planned schedule [UNMAPPED:77].\n\nThe inclusion and exclusion criteria for study selection were based on the research questions and guided by previous review. All reviewed articles to be included should use learning analytics in virtual labs and meet the following inclusion and exclusion criteria:\n\n**Table 1.** The used keywords with wildcards to cover all keyword forms\n\n{{TABLE:tbl_01}}\n\n1. Publications are written in English.\n2. Journal articles, conference proceedings, and book chapters in their entirety. Thus, we excluded editorials, conference abstracts, workshop proposals, and posters.\n3. Empirical studies with empirical data collection and analysis. Reviews and incomplete reports (e.g., abstract-only papers or papers without methods and results) were excluded.",
+      "citations": [
+        "W4236476849",
+        "W2173536757",
+        "W1588485088"
+      ],
+      "tables_in_text": [
+        "tbl_01"
+      ],
+      "citations_unmapped": [
+        "77"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Descriptive Statistics of the Reviewed Articles",
+          "subsubsections": [],
+          "text": "There are a total of 21 studies that have been incorporated into this review. Before the year 2015, there were no studies utilizing learning analytics in virtual labs. All articles were published between 2015 and 2021. The maximum number of studies per year was five articles in 2021 followed by four articles in 2018. The majority of the reviewed articles were presented at conferences (n=12), whereas the remaining nine articles were published in journals (Fig. 2).\n\n**FIGURE 2.** Type and year of the reviewed articles\n\n{{TABLE:tbl_02}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Educational Levels",
+          "subsubsections": [],
+          "text": "The reviewed studies have populations from various educational levels (Fig. 3). The majority of the research in the reviewed articles (57.1%) was conducted in higher education institutions (n=12) and two of these studies involved postgraduate students in their analysis [W3096149881, W3136757038]. Six studies (28.6%) were conducted on secondary education, and four of them focused on STEM (science, technology, engineering, and math) subjects [W3119919223, W3197977337, W2771904322, W2109979922]. Only two research projects (9.5%) focused on elementary and middle school students [W2916605384, UNMAPPED:87]. Finally, one study was conducted online as a Massive Open Online Course (MOOC) for students of varying education levels [W2740402613].\n\n**FIGURE 3.** Educational Levels in the reviewed studies\n\n{{TABLE:tbl_03}}",
+          "citations": [
+            "W3096149881",
+            "W3136757038",
+            "W2916605384",
+            "W2740402613"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ],
+          "citations_unmapped": [
+            "87"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "Subjects",
+          "subsubsections": [],
+          "text": "The reviewed studies covered different disciplines of science, medicine, and engineering (Fig. 4). The medical and dental virtual practices were used in practical-based physiology courses [UNMAPPED:90], virtual patient cases [W2891780261], periodontology and oral pathology [W3096149881], and prosthodontics courses [W3100638881, W3206020311]. Chemistry virtual labs were used in concentration experiments [W2797911300] and organic chemistry [W2176167168], while biology labs covered Euglena's interactive live [W2740402613], and molecular biology experiments [W2176167168]. Virtual labs for science classes were available for school students [W2916605384, UNMAPPED:87] and students in science, technology, engineering, and mathematics (STEM) [W3119919223, W3197977337, W2109979922, W2109979922]. Virtual labs were used in different fields of computer science, namely Java programming [W2550135895], cloud applications [W2559606780], and network virtual labs [W2752444842]. The engineering virtual labs covered automotive engineering [W2907646290], container-based virtual labs [W2986200109], and building electrical circuits [W3136757038]. Other practices include digital electronic simulation environments [W3136757038] and remote labs in the field of image processing [W2280291775].\n\n**FIGURE 4.** Context of the reviewed studies\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W2891780261",
+            "W3096149881",
+            "W3100638881",
+            "W3206020311",
+            "W2797911300",
+            "W2176167168",
+            "W2740402613",
+            "W2916605384",
+            "W3119919223",
+            "W3197977337",
+            "W2109979922",
+            "W2109979922",
+            "W2550135895",
+            "W2559606780",
+            "W2752444842",
+            "W2907646290",
+            "W2986200109",
+            "W3136757038",
+            "W2280291775"
+          ],
+          "tables_in_text": [
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "90",
+            "87"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "Virtual Environment",
+          "subsubsections": [],
+          "text": "The authors of the reviewed articles used a wide range of virtual environments. Go-lab was used in STEM education [W3119919223, W3197977337, W2109979922] and was combined with other applications such as the GRAASP platform [W2109979922] and cloud applications [W2559606780]. In addition, the EcoXPT system was utilized in science classes [W2916605384, UNMAPPED:87]. In the medical field, the LabTutor platform was used in physiology courses [UNMAPPED:90], the ASUS virtual patient package [W2891780261], and the M-Health Smilearning application with TIMONEL platform in the dental field [W3096149881]. Chemistry virtual labs were accessible on two platforms: the ChemVLab+tutor [W2797911300] and the LabLife3D platform [W2176167168]. In the field of biology, virtual labs were available in LabLife3D for molecular biology [W2176167168] and Open edX for Euglena experiments [W2740402613]. The virtual labs used in computer science were the Magentix 2 platform with virtual hosts [W2550135895], and the network Lab4CE (Laboratory for Computer Education) [W2752444842]. Various engineering fields utilized different virtual lab platforms, such as Falstadat's Circuit Simulator Applet and Virtual Instrumentation Systems in Reality (VISIR) [W2907646290], Netlab for building electrical circuits [W3136757038], and a container-based virtual laboratory (CVL) using Linux Docker containers [W2986200109]. Other labs included such as DEEDS (Digital Electronics Education and Design Suite) for digital electronic simulation environments [W2280291775] and the WebLab-Deusto remote lab management system (RLMS) for image processing [W3076424396].",
+          "citations": [
+            "W3119919223",
+            "W3197977337",
+            "W2109979922",
+            "W2109979922",
+            "W2559606780",
+            "W2916605384",
+            "W2891780261",
+            "W3096149881",
+            "W2797911300",
+            "W2176167168",
+            "W2740402613",
+            "W2550135895",
+            "W2752444842",
+            "W2907646290",
+            "W3136757038",
+            "W2986200109",
+            "W2280291775",
+            "W3076424396"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "87",
+            "90"
+          ]
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "Perception of Virtual Labs",
+          "subsubsections": [],
+          "text": "The findings reported that virtual labs are inexpensive, robust [W2740402613], and have a very high satisfaction level among students [W2550135895]. Students recorded their positive feedback and interest in virtual labs as they simplified complex scientific practices [W2740402613, W2176167168, W2986200109]. Similarly, some post-graduate students preferred remote labs after their experience during the COVID-19 pandemic [W3136757038]. Regarding the teachers, they displayed a positive response regarding learning analytics in virtual labs as they can monitor students' progress [W2176167168, W2109979922]. The teachers expressed the need for an enhancement in displaying students' activities and technical guidelines to support inquiry-based learning in virtual labs [W3197977337]. Many authors showed evidence of improvement in students' performance with the use of virtual labs [W2559606780, W2986200109, UNMAPPED:90, UNMAPPED:87].",
+          "citations": [
+            "W2740402613",
+            "W2550135895",
+            "W2176167168",
+            "W2986200109",
+            "W3136757038",
+            "W2109979922",
+            "W3197977337",
+            "W2559606780"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "90",
+            "87"
+          ]
+        },
+        {
+          "subsection_id": "s_4_6",
+          "subsection_index": 6,
+          "subsection_label": "Learning Analytics",
+          "subsubsections": [],
+          "text": "The reviewed studies mainly covered one or more of these variables: performance, activities, perception, and behavior. Performance was assessed in 11 studies, either to evaluate the impact of the virtual labs on learning achievement [W2916605384, W2986200109, W2280291775, UNMAPPED:90, UNMAPPED:87]; improve knowledge [W3096149881, W2559606780]; assess the need for support [W2907646290, W2752444842]; or assess the inquiry-based educational designs by teachers [W3119919223, W2109979922]. There are 10 studies focusing on the analysis of students' activities and the pattern of virtual lab utilization [W2550135895, W2740402613, W2891780261, W2797911300, W3096149881, W3136757038, W3076424396, W3100638881, UNMAPPED:90, UNMAPPED:87]. Nine studies measured the perceptions towards virtual labs in one of three forms: self-reported feedback [W2891780261, W3100638881, W3136757038, W2740402613], teacher's opinions [W2176167168, W3197977337, W2109979922], and students' satisfaction questionnaires [W2550135895, W2986200109]. Three studies identified the behavior pattern of the students in virtual labs [W2986200109, W2280291775, W2752444842].\n\nThe learning analytics in the reviewed articles were mainly based on log data from the virtual lab platforms. The data collected from system log files consist of general data such as user ids, students' clicks, the start and end of experiments, and users' actions [W3076424396]. Authors used log files to analyze the patterns of experiments [W2176167168, UNMAPPED:87], long-term patterns in MOOC courses [W2740402613], and interactions between learners [W2752444842]. Some authors used the time sequence as part of their analysis to monitor the timeline pattern [W2176167168], durations of system activities [W3096149881, W2109979922], time spent on tasks [UNMAPPED:90], sequence of actions [W2559606780], and comparison between more than one academic year to assess the improvement when using virtual labs [W2986200109]. Also, the students' performance can be predicted using engagement metrics of student activity [W2891780261, W2550135895], complexity metrics [W2280291775], and behavior during practical learning [W2752444842]. Thus, learning analytics help teachers figure out when students are having difficulties and support them when needed [W2907646290, W2109979922, W2752444842].\n\nProcess mining was used as a temporal method to discover the hidden strategies of students to achieve their goals [W2550135895]. Similarly, students' learning strategies and practical activity sequences were analyzed using sequential pattern mining to identify behavior variations at different performance levels [W2752444842]. The learning trajectories of students were identified by meta-classification of the events with their timestamps [W2916605384] and by selecting the segments of interest in log data and then coding the video and audio recordings for these segments [W2797911300]. Correlation analysis and multiple linear regression analysis were used to address the relationship between access to learning resources and academic achievement [W3100638881, W3206020311]. Students' performance was part of the analysis by monitoring the students' results in exams [W2907646290] and extracting their mistakes [W3136757038]. Virtual labs included built-in learning analytics tools in many studies such as the Learning Analytics Data Collector (LADC) [W2280291775], Inquiry Learning Space (ILS) dashboard, \"Teaching and Learning Analytics (TLA)\" and measurements based on algorithms to analyze the correlation between students' performance and actions [W3076424396]. Finally, virtual patients' metrics were used to monitor students [W2891780261].",
+          "citations": [
+            "W2916605384",
+            "W2986200109",
+            "W2280291775",
+            "W3096149881",
+            "W2559606780",
+            "W2907646290",
+            "W2752444842",
+            "W3119919223",
+            "W2109979922",
+            "W2550135895",
+            "W2740402613",
+            "W2891780261",
+            "W2797911300",
+            "W3136757038",
+            "W3076424396",
+            "W3100638881",
+            "W2176167168",
+            "W3197977337",
+            "W2109979922",
+            "W3206020311"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "90",
+            "87"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The included studies are listed in the appendix, and each one is given a capital S and a number.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Discussions and Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This study is aimed at reviewing research at the intersection of learning analytics and virtual laboratories. While learning analytics emerged more than a decade ago, the number of articles that particularly focus on virtual laboratories remains paltry, and the growth curve is largely flat with a yearly frequency of three to four articles per year. The included articles (n=21) were published in the last six years, pointing to a rather cautious adoption trend among educators. In fact, systematic literature reviews have pointed to a slow adoption trend within scientific education fields with the faint appearance of articles from these domains, e.g., [W2904980464, UNMAPPED:104]. The results came from diverse fields with a concentration around STEM, health sciences [W3096149881, W3100638881], science (chemistry and biology), as well as engineering sciences [W3136757038, W2907646290, W2986200109]. There was a diverse repertoire of digital platforms; almost every study used a different platform. Such a wide diversity across contexts and digital platforms is giving rise to fragmentation of the insights, making it hard to draw a consistent conclusion or a common narrative. In other words, since most of the experimental findings come from a different context with a specific platform, we can hardly reach a conclusion that applies in other cases that do not use such a platform or come from a different platform.\n\nThe reported results\u2014by the reviewed papers\u2014have studied students' perceptions of the virtual laboratories [W2891780261, W3100638881, W2740402613], performance, and online behavior (e.g., using log data). Obviously, students' perceptions or performance are not well related to learning analytics, yet they continue to receive researchers' attention. In particular, the issue of improving performance has witnessed rising adoption in the last decade as stakeholders wish to use data to improve students' learning. Log data within the reviewed studies formed the basis of most analyses and revolved around understanding behavioral patterns of using online laboratories, or how using such platforms can help us predict or understand students' performance. Less frequently, studies have tried to map students' temporal behavioral patterns using e.g., sequence (Such studies\u2014that used temporal methods\u2014offered valuable insights about students' laboratory learning strategies and the sequence of virtual lab activities). Some of the reviewed studies had built-in analytics solutions in the form of dashboards specific to such platforms. Teachers' perspectives have been investigated in several studies, in which they reported a positive perception of the potential of learning analytics, e.g., enabling students' monitoring, helping support students' during laboratory work, and offering ways for scaffolding.\n\nThe small number of studies in this review, which are distributed across different fields, platforms, and methods, makes it hard to draw any general conclusions. It is, therefore, fair to say that studies hitherto are still in an exploratory stage. Several areas of research and questions are still unanswered, e.g., what are the effective strategies when using online laboratories, what are the indicators that point to a student needing help; what are the effective supportive strategies, and what are the indicators that best predict that a student is benefiting from online laboratories. What is more, we have little information about interactivity in virtual labs, their patterns, benefits, or lack thereof, and how to best support such strategies.\n\nIn addition, we stress the findings by Birkeland [UNMAPPED:105] regarding the absence of collaborative environments and teamwork incentives, which are very common practices in virtual labs, pointing to a critical issue that current virtual labs lack.\n\nSince studies do not use a common standard, protocol, or shared methods, their findings are not shared, portable, or built on each other. Authors and researchers need to think of common protocols, standards, or application programming interfaces (APIs). Such common protocols would make efforts more likely to build on each other and results more likely to be shared.\n\nVirtual laboratory dashboards are in the very early stages of development, and little is known about the effective elements of dashboards that could help students or teachers. In fact, how learning analytics can help teachers optimize learning and teaching with virtual laboratories is still an open area of inquiry. In the same vein, how learning analytics can help teachers design, assess, or improve learning tasks is still largely unexplored.\n\nThis systematic review comes with the following limitations. The search was performed using five search terms in the title and keywords, which were too generic and resulted in a large number of articles being initially reported and then excluded. This may complicate the search and filtration processes, but it reduces the exclusion of any articles, as authors didn't include \"virtual labs\" in their keywords. However, if authors didn't include our keywords, their work may have been missed in this review. Although the coding process for this review worked well for most articles, the coders had to make an effort to interpret some articles. Thus, in order to facilitate coding, the authors had to discuss and figure out the primary emphasis of the research that was unclear. Also, construct validity may be needed as we rely on author descriptions and code groupings that sometimes differ from the author's domains, which don't follow a standardized approach or protocol. Finally, the qualitative analysis and the relatively small number of articles included in this review from a variety of disciplines and research approaches restrict the ability to make broad generalizations due to a lack of standardization. Nonetheless, this research presents the first systematic overview of learning analytics in virtual labs. Researchers may utilize our work as a framework and lens to perform further rigorous research, and we believe that the results we have provided can serve as a new basis for learning analytics in laboratories.\n\nIn summary, our review addressed questions pertaining to the use of learning analytics in virtual laboratories. An area that still has significant gaps of knowledge that only future research would help us shed light on.",
+      "citations": [
+        "W2904980464",
+        "W3096149881",
+        "W3100638881",
+        "W3136757038",
+        "W2907646290",
+        "W2986200109",
+        "W2891780261",
+        "W2740402613"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "104",
+        "105"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Appendix",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**Table A1.** Summary of included studies\n\n{{TABLE:tbl_05}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_05"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4323662854_tables.md"
+}

@@ -1,0 +1,214 @@
+{
+  "id": "W4385462548",
+  "metadata": {
+    "title": "Blockchain-Enabled Internet of Things (IoT) Applications in Healthcare: A Systematic Review of Current Trends and Future Opportunities",
+    "n_sections": 7,
+    "n_subsections": 1,
+    "n_subsubsections": 0,
+    "n_tables": 10
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "KEYWORDS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "blockchain, internet of things (IoT), healthcare, machine learning, smart contracts, health services",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "1 INTRODUCTION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The healthcare sector holds immense importance for individuals' well-being and quality of life, making it a critical focus for both developing and developed nations [W2588008928]. Continuous research and development efforts in the healthcare industry are essential as they have the potential to address numerous health challenges and illnesses [W3093542640]. Recent technological advancements have played a significant role in advancing the healthcare sector, and further progress can be achieved through the integration of state-of-the-art computer technology [W2789444712]. By leveraging cutting-edge computer technology, the capabilities of the healthcare and medical sector can be further enhanced [W4206401966]. These advanced computer technologies enable healthcare professionals, including physicians, to detect various diseases and conditions at an early stage, contributing to more effective diagnosis and treatment [W2711661370].\n\nIn addition, the use of blockchain and internet of things (IoT) technology is widespread across numerous industries, including e-healthcare [W3018008359, W3217267195]. The healthcare industry can benefit from IoT devices, as they can collect patient sensory data in real time for analysis and processing [W2960946585, W3213689671]. However, centralised processing, calculation, and storage of IoT data can lead to several issues, such as a single point of failure, distrust, data manipulation and tampering, and privacy avoidance [W2890098390]. These problems can be addressed by adopting blockchain technology, which offers decentralised processing and storage for IoT data [W2843242420]. Integrating blockchain and IoT technology can lead to the development of a decentralised e-healthcare system based on IoT [W4328102479, W4220978049]. This system can address the major issues related to centralisation in IoT-based e-healthcare systems.\n\nIn addition, the recent progress in smart-contract technology has been significantly influenced by the adoption of blockchain [W3200897126]. Smart contracts find applications in several industries, including IoT, logistics, and the internet of vehicles. To ensure secure user authentication for accessing IoT devices, [W2808396996] introduced a solution and architectural framework based on blockchain technology. Their proposed architecture effectively resolves the challenges associated with current authentication methods and offers benefits, such as traceability, data integrity, and accountability, using tamper-proof logs [W2944145405]. In addition, the use of blockchain in the medical sector extends to the management of pharmaceutical supply chains, which is an essential application. Supply chain management is crucial in various industries, but it holds even greater significance in the healthcare sector due to its complexity and the potential impact on patient well-being [W4281848895]. The healthcare supply chain involves the movement of various pharmaceutical products, including medications, vaccines, and medical devices, from manufacturers to healthcare providers and ultimately to patients [W3143836235]. Any disruption, breach, or inefficiency in this supply chain can have serious consequences for patient safety and welfare [W3199457876].\n\nThis study's goal is to evaluate the impact of blockchain-enabled IoT on the healthcare industry. The project specifically intends to assess how integrating blockchain technology with IoT devices might improve medical procedures and services. Understanding how blockchain will affect the effectiveness, security, and privacy of healthcare data and systems is the main goal. In addition, the study also aims to investigate the potentially transformative uses of blockchain technology in the healthcare industry. It intends to pinpoint the revolutionary adjustments that blockchain can make to medical procedures, including better data interoperability, greater patient-centred treatment, faster administrative procedures, and higher confidence and transparency in medical transactions.",
+      "citations": [
+        "W2588008928",
+        "W3093542640",
+        "W2789444712",
+        "W4206401966",
+        "W2711661370",
+        "W3018008359",
+        "W3217267195",
+        "W2960946585",
+        "W3213689671",
+        "W2890098390",
+        "W2843242420",
+        "W4328102479",
+        "W4220978049",
+        "W3200897126",
+        "W2808396996",
+        "W2944145405",
+        "W4281848895",
+        "W3143836235",
+        "W3199457876"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "2 MATERIALS AND METHODS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The preferred reporting items for systematic reviews and meta-analyses (PRISMA) framework was used to screen the records as recommended, shown in Figure 1. A thorough content analysis of the selected articles was performed to classify the literature. For this purpose, we used R software to create research clusters (classifications) based on keyword frequency and co-occurrence. To conduct a literature review, we utilized a two-stage systematic approach. Firstly, we employed the PRISMA framework to extract relevant data, followed by descriptive and scientometric analyses to ensure the accuracy and validity of the records. We also used the R program to investigate major research clusters, utilizing centrality and co-occurrence keywords. A content analysis of the information acquired from two reliable databases, including Scopus, was carried out in order to synthesise the literature for this study. Using precise terms like \"blockchain,\" \"internet of things,\" and \"healthcare,\" a thorough search approach was used, yielding a total of 1140 entries. Subject filters, which took into account fields including computer science, engineering, medicine, social science, business, management, and accounting, were used to whittle down the findings. The total number of papers was decreased to 1099 once the filters were applied. The number was further reduced to 615 by including only articles and review papers that were published in order to assure robustness. A language filter was also used, producing 555 English-language items for the database search's concluding stage.\n\nConsidering the extensive number of records obtained, further filtering was necessary to ensure relevance and quality. Irrelevant, duplicated, and missing information was eliminated using Microsoft Excel. Moreover, a sources-based analysis approach was adopted, which required a minimum of three articles from a single source to be included in the investigation. Following this rigorous approach, the number of records was reduced to 100, which underwent detailed research analysis.\n\n**FIGURE 1. PRISMA statement 2020**\n\nIn addition, we employed R software for the data analysis section to identify the major characteristics of previous research conducted on the blockchain and IoT in the healthcare sector. Table 1 presents the main information and contents of the data analysed in this study. The time span covered by the data is from 2022 to 2023, with 100 documents sourced from 20 different sources such as journals and books. The annual growth rate of the data is negative, with a rate of -52.94%. The average age of the documents is 0.68, indicating that the data is recent. Additionally, the average citations per document were found to be 6.51, with a total of 6613 references. In terms of document contents, the data contained 742 keywords plus (ID) and 302 author's keywords (DE). The data was contributed by 426 authors, with only 5 single-authored documents. Most of the documents analysed in this study were co-authored by the authors, with an average of 4.77 co-authors per document. International collaborations accounted for 61% of the total collaborations. In terms of document types, articles were the most prevalent (79), followed by reviews (21). These findings from the analysis provide valuable information about the characteristics and content of the data examined in this research.\n\n**TABLE 1. General information about records extracted**\n\n{{TABLE:tbl_01}}",
+      "citations": [
+        "W4283639744"
+      ],
+      "tables_in_text": [
+        "tbl_01"
+      ],
+      "citations_unmapped": [
+        "79"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "3 RESULTS",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Descriptive and scientometric analysis of records",
+          "subsubsections": [],
+          "text": "Figure 2 displays the findings of an analysis conducted on the mean total citations per article (MeanTCperArt), the number of articles (N), the mean total citations per year (MeanTCperYear), and the number of citable years (CitableYears) within a specific timeframe. As anticipated, the table illustrates a decrease in both the mean total citations per article and mean total citations per year as the articles become more recent.\n\nFor instance, in 2018, there were only 3 articles with a mean total citations per article of 175.33 and a mean total citations per year of 29.22. The citable years for this period were 6. In the subsequent year, 2019, the mean total citations per article dropped to 144.31 with 13 articles, and the mean total citations per year was 28.86. The citable years reduced to 5. Similarly, in 2020, there were 46 articles with a mean total citations per article of 79.17 and a mean total citations per year of 19.79. The citable years decreased to 4.\n\nThe downward trend continued in 2021, with 73 articles having a mean total citations per article of 22.89 and a mean total citations per year of 7.63. The citable years were 3. In the subsequent years, the mean total citations per article experienced a significant decline. In 2022, there were 134 articles with a mean total citations per article of 8.13 and a mean total citations per year of 4.07. The citable years were 2. Finally, in 2023, there were 34 articles with a mean total citations per article of 1.74 and a mean total citations per year of 1.74. The citable years for this year were 1.\n\nFigure 2 provides valuable information regarding the trends in the mean total citations per article, mean total citations per year and the number of citable years for the period under analysis. The results indicate a general decline in the citation impact of articles over time, which may be due to the recency of the publications.\n\n**TABLE 2. Annual total citations per year**\n\n{{TABLE:tbl_02}}\n\n**FIGURE 2. Annual total citations per year**\n\nFigure 3 shows a list of sources and the number of articles retrieved from each source. The data provide insights into the most frequently cited sources in the literature on the topic under consideration. The sources include 17 journals, with SENSORS having the highest number of articles (16), followed by IEEE Internet of Things Journal (11), and IEEE Transactions on Industrial Informatics (9). Other sources include Electronics (Switzerland), Applied Sciences (Switzerland), Internet of Things (Netherlands), Wireless Personal Communications, Information Sciences, and Sustainability (Switzerland). Moreover, the table indicates the total number of articles collected from all sources (103).\n\n**TABLE 3. Most relevant sources**\n\n{{TABLE:tbl_03}}\n\n**FIGURE 3. Most relevant sources**\n\nTable 4 shows bibliometric indicators for various scientific journals in the field of computer science and engineering. The bibliometric indicators include h-index, g-index, m-index, total citations (TC), number of papers (NP), and the starting year of publications (PY_start). The h-index represents the number of articles that have received at least h citations, the g-index represents the highest number of papers with g or more citations, and the m-index is the h-index divided by the number of years since the first publication. The data reveals that IEEE Access has the highest h-index (23) and a g-index of 49, while Sensors (Switzerland) has the highest m-index (3.667). IEEE Access also has the highest number of total citations, with 2483, followed by Sensors, with 1226 citations. The journal Computers, Materials and Continua has the highest number of papers, with 10 publications in 2021. The starting year of publications varies from 2018 to 2022. Overall, the data suggest that the selected journals and conference proceedings have varying levels of impact and are subject to diverse publication trends.\n\n**TABLE 4. Source impact bibliometric indicators for scientific journals**\n\n{{TABLE:tbl_04}}\n\nTable 5 provides information about the ranking, frequency, cumulative frequency, and zone classification of various sources in the field of research. The ranking column indicates the position of each source based on its importance or frequency of occurrence. The frequency column represents the number of times the source appears in the dataset, while the cumulative frequency column shows the cumulative total of frequencies up to that point.\n\nThe sources are categorized into different zones. In this case, Zone 1 includes the top-ranked sources, which are Sensors (ranked 1st), IEEE Internet of Things Journal (ranked 2nd), and IEEE Transactions on Industrial Informatics (ranked 3rd). Zone 2 consists of sources such as Electronics (Switzerland), Applied Sciences (Switzerland), Internet of Things (Netherlands), and Wireless Personal Communications. Zone 3 includes sources like Sustainability (Switzerland), Computers and Electrical Engineering, IEEE Journal of Biomedical and Health Informatics, and Computer Communications, among others.\n\n**TABLE 5. Core sources by Bradford's Law**\n\n{{TABLE:tbl_05}}",
+          "citations": [
+            "W2944145405",
+            "W2843242420",
+            "W3213689671"
+          ],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03",
+            "tbl_04",
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "103",
+            "23"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "4 LITERATURE CLUSTERING",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We employed a two-stage systematic approach in conducting our literature review. In the first stage, the PRISMA framework was utilised to extract the pertinent data, and descriptive and scientometric analyses were carried out to ensure the accuracy and validity of the records. Additionally, the centrality and co-occurrence keywords were employed to examine the major research clusters using the R programme. Later, each cluster underwent content analysis of the retrieved data to compile the literature.\n\n**FIGURE 4. Cluster map**\n\nA list of keywords can be regarded as a condensed representation of a specific research theme, incorporating the criteria of density and centrality, which can be applied to any research topic. Figure 5 shows a cluster map based on the author's keywords. Density determines the level of similarity between all terms within the list, while centrality determines the level of similarity between a specific subject and others. To visually represent the thematic relationships, a thematic map, also known as a strategic diagram, is utilized, which classifies the topics into four quadrants based on their significance and density. Figure 5 demonstrates the presence of various features within each of the four quadrants.\n\n**FIGURE 5. Thematic map**\n\nTable 6 presents information about different clusters, including their Callon centrality, Callon density, rank centrality, rank density, and cluster frequency.\n\nCallon centrality represents the centrality measure for each cluster, indicating the extent of influence or importance within the research network. The higher the Callon centrality value, the more central or influential the cluster is. For example, the cluster \"blockchain\" has a Callon centrality of 43.92370792, suggesting a high level of centrality within the research network.\n\nThe Callon density reflects the density of connections or relationships between terms within each cluster. A higher Callon density value indicates a greater interconnectedness or similarity among the terms within the cluster. For instance, the cluster \"blockchain\" has a Callon density of 140.1142954, indicating a dense network of interconnected terms.\n\nThe rank centrality and rank density columns provide the ranking of each cluster based on their centrality and density measures, respectively. The lower the rank value, the higher the centrality or density of the cluster.\n\nFinally, the cluster frequency column shows the number of occurrences or frequency of each cluster within the dataset. For example, the cluster \"blockchain\" appears 633 times, indicating its prevalence within the research corpus.\n\n**TABLE 6. Thematic evolution**\n\n{{TABLE:tbl_06}}\n\nFigure 5, showing the thematic map, illustrates that health services and machine learning are considered emerging or declining based on their standing in the literature. Table 7 provides information about specific words or phrases, their occurrences, and centrality measures in a network. The term \"machine learning\" appears five times in the network. It has a high betweenness centrality of 165.4395237, indicating that it serves as an important bridge between other words or phrases. It also has a relatively high closeness centrality and PageRank centrality, suggesting its proximity to other terms and its overall importance in the network.\n\n**TABLE 7. Machine learning and health services cluster**\n\n{{TABLE:tbl_07}}\n\nFigure 5 depicts medical services as the basic theme, and the term \"medical services\" appears 14 times in the dataset and is assigned to Cluster_Label \"medical services in Table 8. It has a high betweenness centrality of 572.3843163, indicating that it acts as a bridge connecting other terms in the dataset. The closeness centrality is 0.002247191, suggesting that it is closely connected to other terms. The Page Rank centrality is 0.011945371, indicating its importance based on the number and importance of other terms linking to it.\n\nOther terms such as \"cloud computing\" (11 occurrences), \"edge computing\" (6 occurrences), and \"fog computing\" (8 occurrences) also belong to the \"medical services\" cluster. These terms have different centrality measures, indicating their varying importance in the dataset.\n\nAdditionally, terms related to data management and technology, such as \"big data,\" \"data sharing,\" and \"data analytics,\" appear multiple times with moderate centrality values. Other terms related to healthcare sectors, privacy preservation, smart healthcare, and emerging technologies, such as \"blockchain\" and \"neural networks\", also have occurrences and centrality measures associated with them.\n\n**TABLE 8. \"Medical services\" cluster**\n\n{{TABLE:tbl_08}}\n\nThe evolution map in Figure 5 is the smart contracts theme that exists in the Niche Themes, and Table 9 depicts that term \"smart contract\" appearing 6 times in the dataset, and it is assigned to the Cluster_Label \"smart contract.\" It has a betweenness centrality of 167.1297444, indicating that it acts as a bridge connecting other terms in the dataset. The closeness centrality is 0.00212766, suggesting that it is closely connected to other terms. The Page Rank centrality is 0.004328029, indicating its importance based on the number and importance of other terms linking to it. Other terms such as \"access control\" (5 occurrences), \"supply chains\" (5 occurrences), and \"distributed ledger\" (4 occurrences) also belong to the \"smart contract\" cluster. These terms have different centrality measures, indicating their varying importance in the dataset.\n\nAdditionally, terms related to smart cities, decentralization, Ethereum, and smart devices appear multiple times with moderate centrality values. Terms like \"trust,\" \"centralized,\" and \"cities\" are also present in the dataset, albeit with lower occurrences and centrality measures. The table also includes terms related to computation theory, cyber-physical systems, embedded systems, and queueing theory, which are associated with smart contracts in some way.\n\n**TABLE 9. \"Smart contract\" cluster**\n\n{{TABLE:tbl_09}}\n\nAccording to Table 10, the term \"blockchain\" appears 66 times in the dataset and is assigned to the Cluster Label \"blockchain.\" It has a betweenness centrality of 1068.195427, indicating that it acts as a bridge connecting other terms in the dataset. The closeness centrality is 0.002369668, suggesting that it is closely connected to other terms. The Page Rank centrality is 0.050673317, indicating its importance based on the number and importance of other terms linking to it.\n\nOther terms such as \"internet of things\" (61 occurrences), \"block-chain\" (66 occurrences), and \"health care\" (37 occurrences) also belong to the \"blockchain\" cluster. These terms have different centrality measures, indicating their varying importance in the dataset. Additionally, terms related to security, privacy, authentication, and data management appear multiple times with varying centrality values. Terms like \"artificial intelligence,\" \"cryptography,\" and \"delivery of health care\" are also present in the dataset, albeit with lower occurrences and centrality measures. The table also includes terms related to healthcare systems, network architecture, wearable technology, and cloud computing, which are associated with blockchain in some way.\n\n**TABLE 10. \"Blockchain\" cluster**\n\n{{TABLE:tbl_10}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_06",
+        "tbl_07",
+        "tbl_08",
+        "tbl_09",
+        "tbl_10"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "5 DISCUSSION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This research aims to investigate the impact of blockchain and IoT on the healthcare sector. To achieve this objective, a comprehensive literature review was conducted using records extracted from the Scopus database. The search query included the keywords \"blockchains,\" \"internet of things,\" and \"healthcare.\" Only English-language articles and review papers were considered, resulting in a final selection of 100 relevant records. Stringent measures were implemented to eliminate irrelevant and duplicate documents, following the guidelines outlined in the PRISMA Statement 2020 [W4287958746, W4283639744].\n\nFor data analysis, the R software biblioshiny technique was employed. In the initial stage, the total annual citations for the selected articles were determined. Furthermore, the contribution of major sources and the average number of citations for each source were examined. The literature was then analyzed in terms of clusters, thematic maps, thematic evolution, and major clusters.\n\nThe findings indicate that blockchain and IoT are prominent research areas and emerging major themes in recent years. However, during the analysis, it was observed that there is relatively limited research activity focused specifically on smart contracts in the healthcare domain. The analysis of the basic theme revealed that medical services, fog computing, and cloud computing are key themes and terms frequently used in the literature.\n\nNotably, the results suggest a declining or emerging trend in the occurrence of machine learning and health service terms, indicating that these areas have received limited attention in the current literature. Overall, the study provides insights into the current state of research on the influence of blockchain and IoT on the healthcare sector, highlighting both the major research themes and potential areas for future exploration.",
+      "citations": [
+        "W4287958746",
+        "W4283639744"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "6 CONCLUSION AND FUTURE RESEARCH",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The study's conclusions emphasise the important effects of using blockchain and IoT technologies to the healthcare industry. Researchers have been actively looking into how blockchain technology can improve the security and privacy of health records in recent years. Blockchain solutions are receiving more attention as a result of the pressing need to solve security issues facing healthcare organisations and protect sensitive patient data.\n\nHealthcare facilities have improved as a result of the adoption of blockchain technology. The widespread use of IoT devices makes it possible to gather and analyse real-time data on a massive scale. This data-driven strategy enhances healthcare delivery by facilitating more precise diagnosis, individualised treatments, and effective patient health monitoring. The combination of blockchain and IoT has immense potential to revolutionize healthcare practices and enhance patient outcomes.\n\nFurthermore, the study emphasizes the significance of fog computing, cloud computing, machine learning, and smart contracts in the healthcare industry. Fog computing and cloud computing facilitate the storage, processing, and analysis of extensive healthcare datasets, offering scalable and cost-effective solutions. Machine-learning techniques leverage these datasets to extract meaningful insights, aiding in decision-making and predictive analytics. Smart contracts automate and enforce the execution of healthcare agreements, streamlining administrative processes and fostering trust among stakeholders. The findings underscore the significance of these technologies in shaping the future of healthcare. They offer promising avenues for enhancing healthcare services, optimizing resource utilization, and improving patient care. The study's insights serve as a valuable foundation for further research and development in these areas, guiding future endeavours to maximize the benefits of blockchain, IoT, fog computing, cloud computing, machine learning, and smart contracts in the healthcare domain.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4385462548_tables.md"
+}

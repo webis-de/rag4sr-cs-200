@@ -1,0 +1,299 @@
+{
+  "id": "W4308670813",
+  "metadata": {
+    "title": "Factors that Contribute to the Success of a Software Organisation's DevOps Environment: A Systematic Review",
+    "n_sections": 5,
+    "n_subsections": 14,
+    "n_subsubsections": 0,
+    "n_tables": 2
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Digital transformation presents new challenges for software organisations with the increasing demand for customised IT solutions [UNMAPPED:23]. Furthermore, to sustain a competitive advantage, software organisations need to deliver valuable and quality IT solutions in short cycles [W2997716196]. To address this need, many software organisations implement continuous practices: continuous delivery, continuous deployment and continuous integration [W2889993111]. In addition to continuous practices, recent studies show that DevOps adoption also improves delivery cycle times and quality [W2997716196].\n\nThe term DevOps comes from the terms of two of the core software development teams: development and operations [UNMAPPED:6]. There is no clear definition for the DevOps term. Still, the most shared interpretation is DevOps is a set of practices based on a culture that emphasises integration and collaboration between the operations teams, the developer teams, and all persons who participate in the design, development, and deployment of software [W4246864970].\n\nDevOps takes a continuous approach that extends outside the borders of old-style software development and extends to operations [W2769346836]. Thus, DevOps implementation has been increasing as more software organisations are opting to move from the old-style software development approaches such as the Waterfall Model and Spiral Model to agile approaches as a way to acquire a competitive advantage [W2778614672]. The competitive advantage stems from the benefits of DevOps, which include a shorter time-to-market cycle, improved customer satisfaction, greater developer efficiency and productivity, continuous quick feedback and higher software quality and reliability [W2769346836].\n\nHowever, adopting DevOps remains challenging because although there is an excess of information, DevOps tools and DevOps practices, there is a lack of strategy to organise the information for correct DevOps adoption [UNMAPPED:21]. The adoption of DevOps affects different aspects of a software organisation such as organisational structures, company culture, products, processes and related technologies used in software development [UNMAPPED:19]. Thus, many factors such as constraints from the environments and the lack of clarity of the meaning of the term DevOps may lead to DevOps environments not always being successful [W2546493083].\n\nTherefore, the research problem is that there is comprehensive information available on tools, practices, benefits, and challenges of DevOps but no comprehensive information for software organisations on the factors that contribute to a successful DevOps environment. Because of this research gap, it is poised that there is a need to research the factors contributing to the success of DevOps environments within a software organisation context.\n\nThis research aims to identify and describe the factors that contribute to the success of DevOps environments within software organisations. This is done through a systematic literature review.\n\nThe paper is structured as follows; section 2 explains the research method. Section 3 details the results of this study and section 4 discusses the findings. Section 5 concludes the research, providing research implications, limitations and recommendations for future research.",
+      "citations": [
+        "W2997716196",
+        "W2889993111",
+        "W4246864970",
+        "W2769346836",
+        "W2778614672",
+        "W2546493083"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "23",
+        "6",
+        "21",
+        "19"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Research Method",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Research Question",
+          "subsubsections": [],
+          "text": "This research aims to answer the following question:\n\nWhat are the factors that contribute to the success of DevOps environments within software organisations?",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Search Terms",
+          "subsubsections": [],
+          "text": "\"DevOps\" AND (\"continuous deployment\" OR \"continuous development\" OR \"environments\" OR \"development\" OR \"software engineering\" OR \"methodology\" OR \"software organisation\" OR \"software\" OR \"factors\" OR \"success\")",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Selection Criteria",
+          "subsubsections": [],
+          "text": "The selection of research material for inclusion in this systematic review is based on the following inclusion and exclusion criteria.\n\n**Inclusion Criteria.** For a source to be included in the research, it had to meet the following criteria:\n* Papers that identify the factors that influence a DevOps Environment\n* Papers that discuss DevOps environments within a software organisation\n* Papers that discussed practices or factors that contribute to the success of DevOps environments\n* Journal articles, conference papers, book chapters, dissertations and thesis are considered for review\n* Papers containing at least three keywords in the title, abstract, keywords\n\n**Exclusion Criteria.** Sources are excluded from the research for the following reasons:\n* Papers with no explicit discussion about DevOps\n* Papers that do not provide information on factors contributing to DevOps success\n* The full text of a paper is not available.\n* The paper is not written in English\n* Duplicate papers (the same paper taken from different databases)\n* Duplicate reports of the same study (only the most complete version is included)",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4 Source Selection",
+          "subsubsections": [],
+          "text": "The following data sources were selected to perform the search:\na) IEEE Xplore Digital Library\nb) Science Direct\nc) ACM Digital Library\nd) Springer Link\n\nThese databases are all recognised research databases in the information technology field. In addition, Google Scholar was used to find additional sources missing in the abovementioned databases. This study uses the words article and paper interchangeably to reference the data source. However, the data source is either a journal article, conference paper, book chapter, dissertation, or thesis.\n\nFigure 1 displays a Prisma Flowchart with four steps, Identification, Screening, Eligibility, and Included. Sources are excluded during each step as depicted in the flowchart based on the predefined selection criteria detailed in section 2.3.\n\nA search using the search string mentioned in section 2.2 was performed on the selected databases, returning 2179 articles. The Google Scholar citation search found an additional 10 records. After that, 291 duplicate papers were removed. Screening by the title was conducted, leaving 262 full-text articles. An abstract screening was then performed on these articles, leaving 108. After the full-text assessment for eligibility, the 33 remaining articles were used for data extraction and synthesis.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5 Prisma Flowchart",
+          "subsubsections": [],
+          "text": "**FIGURE 1. Prisma Flowchart**\n\n* **Identification:** Records identified through database searching (n = 2179); Additional records identified through other sources (n = 10).\n* **Screening:** Records after duplicates removed (n = 1898); Records screened (n = 1898); Records excluded (n = 1636).\n* **Eligibility:** Full-text articles assessed for eligibility (n = 262); Full-text articles excluded, with reasons (n = 229).\n* **Included:** Studies included in synthesis (n = 33).",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_6",
+          "subsection_index": 6,
+          "subsection_label": "2.6 Quality Assessment",
+          "subsubsections": [],
+          "text": "The included papers were assessed using four quality assessment questions. The questions aimed to evaluate the quality aspects mentioned by [W2168894761]. These aspects are characterised as objectivity - if the research is free of bias; reliability - the accuracy and reliability of the research instruments used; internal validity - whether the research was well structured, so data was collected from suitable sources, and external validity - determines if the findings can be predicted for subsequent occasions.\n\nTherefore, the following questions were devised to assess the quality of the selected literature:\nQ1. Are DevOps and the DevOps environments the core of the discussion?\nQ2. Does the research have a well-defined aim?\nQ3. Does the article follow a clear research process with a clear description of the methods used to analyse data?\nQ4. Does the article report its findings based on evidence and argument?\n\nThe response options to these questions were Yes, No and Partially. The weighting for each response is as follows: Yes = 1, Partially = 0.5, No = 0. The total score was then recorded and used as a guide to indicate the quality of the selected literature ranging from 0 to 4. The quality evaluation of the articles is described in section 3.2.",
+          "citations": [
+            "W2168894761"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_7",
+          "subsection_index": 7,
+          "subsection_label": "2.7 Data Extraction",
+          "subsubsections": [],
+          "text": "The data extraction was carried out on the 33 papers included in the systematic literature review. After that, a qualitative thematic analysis was conducted to synthesise the extracted data. While reading each paper, sections of its text were highlighted to identify the concepts. These concepts, also known as codes, were closely examined to categorise them into common themes. All the relevant information that helped answer the research question was extracted, including the citation, the research title, the source database, the year published and study type, article sub-concepts, and the central concept. Microsoft Excel was used for data extraction and synthesis.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The research is conducted using a systematic literature review (SLR), defined as \"a means of identifying, evaluating and interpreting all available research relevant to a particular research question, or topic area, or phenomenon of interest\" [W2168894761]. Simply put, an SLR is a review of primary studies. This study follows the SLR guidelines by [W2168894761], which are: identifying resources, study selection, data extraction, data synthesis and writing up the study as a report.",
+      "citations": [
+        "W2168894761"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Search Results",
+          "subsubsections": [],
+          "text": "According to [UNMAPPED:23], the first publications devoted to DevOps originated in 2011. However, in this study, the earliest publications on the factors that influence a DevOps environment were published in 2015. Figure 2 depicts the distribution of the included papers that satisfied the selection criteria of this study.\n\n**TABLE 1. Distribution of selected literature by publication year**\n\n{{TABLE:tbl_01}}\n\n**FIGURE 2. Distribution of selected literature by publication year**",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "23"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Quality Evaluation of Articles",
+          "subsubsections": [],
+          "text": "Four questions were used to assess the quality of the selected literature, as mentioned in the quality assessment section. The majority of the included papers had a quality assessment score of 4 (76%), with the remaining papers having a score between 2.5 and 3.5 (24%).",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Synthesis of Identified Factors",
+          "subsubsections": [],
+          "text": "A thematic analysis was conducted to identify the core themes and factors within the selected literature. The themes corresponded with the constructs that held the factors identified. Initially, 16 factors were identified as contributing to the success of the DevOps environment. However, three factors merged into others, leaving 13 factors. The 13 factors result from re-examining each of these factors' definitions and the references made by the authors of the selected literature. The factors that were merged into others were Cooperation, Coordination and Knowledge sharing. Although none of the authors clearly defined Cooperation and Coordination, they were referenced in relation to collaboration by [W2963728679] and sometimes used in place of the word collaboration [W2546493083]. Therefore, Cooperation and Coordination were merged into the Collaboration factor. Knowledge management was found in only two papers and was defined by [W2769346836] as collection, visualisation and sharing of information and knowledge to support collaboration. Thus, this factor was then merged into the Sharing factor, which includes knowledge sharing and had more existing literature supporting it.\n\nThe remaining 13 factors were then analysed to identify any relationships that could help categorise them. Categorising the factors would help to understand the more significant themes and give deeper insight into the factors. Four common themes were identified: Collaborative Culture, Organisational Aspects, Tooling and Technology, and Continuous Practices, as illustrated in Table 2.\n\nIn addition, a qualitative data analysis tool called NVivo was used to refine the grouping of the factors and assess the validity of the selected themes. All the data extracted was processed in NVivo, and it generated 19 codes. Several of these codes corresponded with the initially identified thematic analysis factors. This tool grouped the codes into categories, and the result was that NVivo also grouped the factors as they were grouped in the thematic analysis. Albeit, NVivo gave a few more codes than initially identified in the first iteration of the data syntheses. After analysing and considering each of these codes as possible factors, two additional codes were included as part of the synthesised data, resulting in a total of 15 factors (see Table 2). These two additional codes are Continuous Deployment and Continuous Delivery. The rest of the codes were excluded as they were ambiguous or it did not contribute to answering the research question. The DevOps success factors conceptual model is shown in Figure 3, depicting the core themes and factors.\n\n**TABLE 2. Identified DevOps Environment Success Factors summary**\n\n{{TABLE:tbl_02}}\n\n**FIGURE 3. DevOps Environment Success Factors Model**\n\n* **Collaborative Culture:** Communication, Collaboration, Sharing.\n* **Organisational Aspects:** Team Role Setting, Culture, Training, Customer Involvement.\n* **Tooling and Technology:** Automation, Tooling, Measurement.\n* **Continuous Practices:** Continuous Integration, Continuous Delivery, Continuous Deployment, Continuous Monitoring, Continuous Experimentation.",
+          "citations": [
+            "W2963728679",
+            "W2546493083",
+            "W2769346836"
+          ],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "An analysis of the extracted data was conducted, which includes information on the search results, quality evaluation of the included papers, and the synthesis of identified factors.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Collaborative Culture",
+          "subsubsections": [],
+          "text": "A collaborative culture is unequivocally a core theme regarding the success of the DevOps environment [W4289405774]. Three factors that make up this Collaborative Culture are Collaboration, Communication and Sharing.\n\n**Success Factor 1: Collaboration.** Collaboration is critical in a DevOps environment because it is the essence of DevOps itself as it focuses on working together, and the exchange of knowledge and experience between teams. DevOps is all about connecting Development and Operations, which entails collaboration [UNMAPPED:23]. The following 13 authors identified collaboration in this SLR as one of the essential aspects of DevOps environments [W3038312590], [UNMAPPED:6], [W2517724724], [W2517300079], [W2527104146], [W2970980033], [W4289405774], [UNMAPPED:20], [UNMAPPED:23], [W2946127917], [W2963728679], [W2778614672], [UNMAPPED:33]. This is because numerous benefits have been seen when a DevOps environment has a strong culture of collaboration. These advantages include enhanced development and operations processes, as well as improved quality of software services and products [W2517724724].\n\n**Success Factor 2: Communication.** Communication between the operations and development teams is essential for DevOps to succeed [W3038312590]. A DevOps environment is essentially made up of a cross-functional team. Thus, for the teams to work together effectively, information within and between the teams needs to be shared effectively and frequently. The presence of quality communication helps establish a collaborative culture which contributes to a successful DevOps environment. [W3038312590] emphasise that communication is crucial for DevOps to succeed because not sharing important information may have a significant negative impact, therefore, managers must impose regular communication. [UNMAPPED:21] cited communication as a critical success factor for DevOps improvement. [UNMAPPED:21] further posits that effective communication is the most important success factor during DevOps implementation in a software organisation.\n\n**Success Factor 3: Sharing.** Sharing is prevalent in a thriving DevOps environment because it has a tremendous positive impact on its process and output. Sharing in DevOps means the joint use of tools, practices, processes, and knowledge [UNMAPPED:33]. [W2889993111], [W2779418433, W2769346836, W2736680783, W2912524652, W2517724724, UNMAPPED:6], [W2200448655], [W4289405774], [W2546493083], [W2946127917] states how sharing tools, practices, and processes impact the DevOps environment. [W2963728679] identified sharing resources as one of the success factors of collaboration in a DevOps context. [UNMAPPED:33] point out how sharing failures and successes in DevOps practices help team members improve quicker by learning from others.",
+          "citations": [
+            "W4289405774",
+            "W3038312590",
+            "W2517724724",
+            "W2517300079",
+            "W2527104146",
+            "W2970980033",
+            "W2946127917",
+            "W2963728679",
+            "W2778614672",
+            "W2889993111",
+            "W2200448655",
+            "W2546493083"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "23",
+            "6",
+            "20",
+            "33",
+            "21"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 Organisational Aspects",
+          "subsubsections": [],
+          "text": "Certain aspects within a software organisation influence the success of the DevOps environment. These aspects include Team Role Setting, Culture, Training and Customer Involvement.\n\n**Success Factor 4: Team Role Setting.** Team Role Setting is one of the factors that are still blurry in many DevOps environments, but when team roles are set, it impacts the success of these environments. This factor has to do with the precise definition of roles and responsibilities within a DevOps team. This definition of roles is crucial because the observed trend in DevOps is the reorientation of roles and responsibilities between software development and operations teams [UNMAPPED:19]. Clear team roles have several benefits. Some of the benefits are; positive effects on team members' performance [UNMAPPED:20], helping practitioners in recognising their crucial role in DevOps processes [W3038312590] and assisting in aligning the motivations of the key roles involved in software delivery [UNMAPPED:20]. [W2997716196] also identified clear role setting as one of the success factors of collaboration in the DevOps context.\n\n**Success Factor 5: Organisational Culture.** Organisational Culture is an integral part of the DevOps environment, and changing the organisational culture to have the attributes of DevOps culture is a decisive success factor. DevOps features culture as one of the vital aspects to safeguard the success of DevOps adoption [W2946127917]. Even though DevOps have varying definitions, most authors agree that culture is the epitome of DevOps. The popular interpretation is that DevOps is about culture [UNMAPPED:24], and culture change is seen as the beginning of DevOps [UNMAPPED:23]. In an organisation, you will find team culture and organisational culture. Team culture flows from the organizational culture [UNMAPPED:24]. Therefore, it is integral that the organisational culture represents a DevOps culture.\n\n**Success Factor 6: Training.** Training is one of the more overlooked success factors for multiple reasons. However, although it was cited the least in this SLR (tied with continuous delivery), its impact is undoubtedly noteworthy. Appropriate training is required to grasp the DevOps and DevOps environment concepts well [UNMAPPED:33]. DevOps requires supplementary technical skills from both software developers and operators since operators must pick up some skills from developers and vice versa [W2517300079]. Therefore, training is imperative for DevOps success and must be considered a priority for organisations.\n\n**Success Factor 7: Customer Involvement.** Customer Involvement was identified as a success factor for software organisations' DevOps environment due to the customer feedback's impact on software product improvement. The term customer involvement is extensive and has several definitions. [UNMAPPED:31] describes customer involvement as \"preparing and receiving customer input, establishing a customer sample group, and delivering feature growth.\" Through verified performance improvement, [UNMAPPED:31] identified customer involvement as a critical success factor during the adoption of continuous deployment and continuous delivery in the context of DevOps. In a study by [UNMAPPED:21], 87% of the respondents considered 'Customer feedback to improve development' the second most crucial success factor in DevOps adoption.",
+          "citations": [
+            "W3038312590",
+            "W2997716196",
+            "W2946127917",
+            "W2517300079"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "19",
+            "20",
+            "24",
+            "23",
+            "33",
+            "31",
+            "21"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3 Tooling and Technology",
+          "subsubsections": [],
+          "text": "The selection of tools and use of technology in DevOps significantly affects the success of a DevOps environment [UNMAPPED:6]. This section discusses how three factors, Automation, Measurement, and Tooling, contribute to a DevOps environment's success.\n\n**Success Factor 8: Automation.** Automation is referred to as one of the key aspects of DevOps because of the advantages it brings to a DevOps environment. Making repetitive manual tasks automated has contributed to success in DevOps environments within a software organisation. [UNMAPPED:23] identified six concepts of automation in DevOps. 1) Build automation, 2) recovery automation, 3) deployment automation, 4) monitoring automation, 5) test automation and 6) infrastructure automation (also referred to as infrastructure as code). However, three concepts of automation that are widely agreed upon in our SLR as having benefits that contribute to success in a DevOps environment are test automation, deployment automation, and infrastructure automation.\n\nDeployment automation automates software deployments and rollbacks of software build to be transferred to development, testing, acceptance, and production environments quicker [W2736680783]. Deployment automation reduces user errors and increases deployment speed [W2517300079].\n\nTest automation is executing tests and repeating activities using software [UNMAPPED:33]. Test automation reduces manual testing and accelerates the testing process significantly [W2517300079]. In an experiment conducted by [W3090633916], they observed that test automation strongly affected deployment speed.\n\nInfrastructure automation provides infrastructure elements as code and configuration of application servers using pre-set automation logic [W2517300079]. Automation improves the consistency of infrastructure, team productivity, and repeatability of activities [W2517724724].\n\nIn addition, deployment, test, and infrastructure automation form part of the DevOps continuous practices, discussed in section 4.4.\n\n**Success Factor 9: Tooling.** Tooling in DevOps is posited to affect the success of a DevOps environment because it is not just about using tools but using the right tools. Selecting the wrong tools might negatively influence the productivity of work [W2784257051]. DevOps tools need to support DevOps practices as this is the primary purpose of the tools and how their contribution to success is realised. Tools are used to build DevOps capabilities and collaboration [W2970980033]. DevOps tools assist in monitoring, implementing, deploying, automating, and analysing each process in the DevOps journey [W2784257051].\n\n**Success Factor 10: Measurement.** Measurement in DevOps environments is important because it influences the software development process. Measurement focuses on specifying production metrics to monitor and evaluate the performance of a process in software development and operations [UNMAPPED:19]. As indicated, this factor's significance stems from the impact of having metrics and a baseline to assess performance in a software organisation's DevOps environment. The sooner an organisation applies measurement, the sooner they establish a baseline to evaluate improvement [W2912524652].",
+          "citations": [
+            "W2736680783",
+            "W2517300079",
+            "W3090633916",
+            "W2517724724",
+            "W2784257051",
+            "W2970980033",
+            "W2912524652"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "6",
+            "23",
+            "33",
+            "19"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4 Continuous Practices",
+          "subsubsections": [],
+          "text": "The practices done constantly in a DevOps environment are considered vital to the environment's success; these are Continuous Practices. Continuous Practices are Continuous Integration, Continuous Deployment, Continuous Monitoring, and Continuous Experimentation.\n\n**Success Factor 11: Continuous Integration.** Continuous Integration is a straightforward success factor in a DevOps environment, as DevOps demands a need for this [W4246864970]. It is defined by [UNMAPPED:31] as the part that deals with code compilation, acceptance testing, unit testing, confirming code coverage, examining compliance to coding standards, and deployment package building. Continuous integration is an incremental process that prevents last-minute integration issues and is about achieving one of the most essential values of DevOps, which is speed [W2970980033]. In addition, continuous integration reduces the risk and cost associated with software releases [UNMAPPED:33].\n\n**Success Factor 12: Continuous Delivery.** Continuous Delivery is an integral part of the DevOps environment, as it allows DevOps teams to automate their software delivery process up to the point just before it is deployed [W1603760080]. Continuous delivery as a DevOps practice correlates to performance [W2970980033], and it has been argued that measurement contributes to continuous delivery [W4289405774], [W2997716196]. An essential benefit of this practice, as mentioned by [W2970980033], [W4289405774], and [W2997716196], is how it creates an environment for quality outcomes. In other words, by implementing the continuous delivery practice, quality can be seen as a by-product.\n\n**Success Factor 13: Continuous Deployment.** Continuous Deployment allows DevOps teams to automatically deploy new software features onto a production environment [UNMAPPED:19], [W2232396709]. No manual human intervention is needed to enable the software to be deployed. [UNMAPPED:19] states that the popularity of DevOps results from the emergence of continuous deployment, and [W2997716196] suggests this practice reduces the costs of detecting defects due to faster feedback from users. Therefore, it is no surprise that seven of the included studies mentioned it as a factor. Continuous development is posited to contribute to DevOps success within software organisations.\n\n**Success Factor 14: Continuous Monitoring.** Continuous Monitoring is a factor whose contribution to the DevOps environment hinges on the presence of another factor, namely, measurement. However, monitoring is a continuous and ongoing activity, and therefore it is classified as a continuous practice. Once metrics in measurement have been set, continuous monitoring commences. Continuous improvement in DevOps is enabled by constantly monitoring processes and measuring them against metrics [W2736680783].\n\n**Success Factor 15: Continuous Experimentation.** Continuous Experimentation is an infrequently used term but was identified in eight of the selected literature as having a positive impact on a DevOps environment that could contribute to success. Continuous experimentation is defined by [W2546493083] as the continual testing of propositions to determine the benefits for the customer and the software organisation. An in-depth analysis by [UNMAPPED:19] of their primary studies revealed continuous and rapid experimentation as one of the recurring factors in continuous deployment. [UNMAPPED:24] identified experimentation as one of the characteristics of a healthy DevOps environment. These findings are of great importance because continuous experimentation is one of the essential practices in a DevOps environment.\n\nThe systematic literature review identified factors that are posited to contribute to the success of DevOps environments. Collaboration and Organisational Culture were the most cited factors, which can infer that they are the most important. However, this research did not prioritise the factors because it is beyond the scope of this study.\n\nIt was observed that the influence of some factors was at distinct phases of software development, while others influenced the entire software development process. The factors associated with Organization Aspects and Collaborative Culture influence the DevOps environment at every phase of software development, from initial team setup to product delivery. In contrast, factors related to Tooling and Technology and Continues Practices have more impact once software development begins.",
+          "citations": [
+            "W4246864970",
+            "W2970980033",
+            "W1603760080",
+            "W4289405774",
+            "W2997716196",
+            "W2232396709",
+            "W2736680783",
+            "W2546493083"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "31",
+            "33",
+            "19",
+            "24"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section aims to answer the research question. The core themes identified are 1) Collaborative Culture; 2) Organisational Aspects; 3) Tooling and Technology, and 4) Continuous Practices. Each of these themes has three to five factors. Therefore, the discussion will first explain how these themes were formed and then discuss the factors under each theme.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "A systematic literature review (SLR) was conducted to identify the factors that contribute to the success of a software organisation's DevOps environment. Thirty-three articles were selected from five data sources for data extraction and synthesis. The data synthesis was conducted using a thematic analysis following the data extraction. For the first iteration of data synthesis, 16 factors were identified. After the second iteration of data synthesis, the factors were refined to 13. After the final iteration of data synthesis with the help of the NVivo tool, two additional factors were included, settling on 15 factors posited to contribute to the success of a DevOps environment within software organizations. As a result of this study, an initial conceptual model was developed. The model developed provides the mapping of the identified factors to constructed themes. The factors were classified into four themes to answer the research question - Collaborative Culture (3 factors), Organisational Aspects (4 factors), Tooling and Technology (3 factors), and Continues Practices (5 factors). The research aims were met, aiding in answering the research question.\n\nThis study's limitations are that English papers were only considered for this SLR; thus, any information that might have been relevant to the research question but was written in another language is excluded. Secondly, only five data sources were used to search for the literature for this SLR; therefore, relevant literature from other databases might have been missed. Thirdly, some factors were excluded or merged into others due to a lack of a clear definition or information indicating how they contribute to success. The implication might be that some standalone factors in a DevOps environment were merged with others in this study. Fourth, the search terms used in the search string may not be of adequate rigour, which could have resulted in missed factors and themes.\n\nResearchers and practitioners could use the model derived from this SLR to discover the critical success factors in a DevOps environment. Furthermore, another study could investigate the theme's and factor's level of contribution towards DevOps Environment success. In addition, a similar study could be undertaken to confirm (or debunk) the success factors and themes in this study.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4308670813_tables.md"
+}

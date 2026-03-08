@@ -1,0 +1,607 @@
+{
+  "id": "W3008381189",
+  "metadata": {
+    "title": "A Systematic Review of Unsupervised Learning Techniques for Software Defect Prediction",
+    "n_sections": 9,
+    "n_subsections": 11,
+    "n_subsubsections": 10,
+    "n_tables": 27
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Various software defect prediction models have been proposed to improve the quality of software over the past few decades [W2101728371]. An increasingly popular approach is to use machine learning [W2017439596, W2151666086]. These approaches can be divided into supervised methods where the training data requires labels, typically faulty or not, and unsupervised methods where the data do not need to be labelled. Supervised prediction models predominate. However, in practice it is often difficult to collect defect classification labels to train a Supervised Defect Prediction (SDP) model [W2242800359]. As a consequence in recent years, Unsupervised Defect Prediction (UnSDP) models have begun to attract attention.\n\nThe main aim of our systematic review is to provide software practitioners and researchers with guidance for software defect prediction, particularly regarding whether the use of unsupervised prediction models is a viable option. We analyse 49 UnSDP primary studies that satisfy our inclusion criteria. From these primary studies, we investigate which unsupervised learning algorithms were deployed and the relative predictive performance of supervised and unsupervised models.\n\nOur systematic review makes the following contributions:\n\n1. Identification of a set of 49 primary studies related to UnSDP published between January 2000 and March 2018. These cover a wide range (14) of unsupervised prediction technique families including six different cluster labelling techniques.\n2. Data extraction and regularisation from the 49 studies satisfying our inclusion criteria. We obtain 2456 individual experimental results from these studies.\n3. A meta-analysis to compare the relative performance of unsupervised and supervised learners from two perspectives (i) the specific learning algorithm and (ii) the dataset. Based on the analysis results we make suggestions for machine learning-based, software defect prediction for practitioners.\n4. A bibliometric analysis that considers research and publishing trends, along with the quality of reported experimental results.\n\nThe remainder of this paper is organised as follows: Section 2 describes our systematic review methodology including the research questions, study selection criteria, data extraction and synthesis (process, prediction performance measures and raw data summary). Next, Section 3 presents current research trends and quality issues: both incomplete and inconsistent reporting of results. Section 4 shows our meta-analysis results. Section 5 discusses the threats to validity, followed by conclusions and discussion of actionable results in Section 6.",
+      "citations": [
+        "W2101728371",
+        "W2017439596",
+        "W2151666086",
+        "W2242800359",
+        "W2147386665"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Review Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Research Questions",
+          "subsubsections": [],
+          "text": "- RQ1: What are the publication trends in unsupervised software defect prediction research?\n- RQ2: What is the quality of the experimental reporting (completeness and consistency)?\n- RQ3: What kinds of unsupervised learning research experiments are conducted?\n- RQ4: What is the difference between unsupervised and supervised software defect predictive performance?\n- RQ5: Which unsupervised prediction models or model families perform better?\n- RQ6: What is the impact of dataset characteristics on predictive performance?\n\nThe first three research questions will principally be of interest to software engineering researchers. The remaining three questions will be of interest to both practitioners and researchers.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Search Process",
+          "subsubsections": [],
+          "text": "We used five search engines to include the papers published between January 2000 and March 2018. The start date was aligned with the search period of the widely cited systematic review by Hall et al. [W2151666086]. We undertook our search on 7th March, 2018. The search engines include the ISI Web of Science, ACM Digital Library, IEEE Xplore, ScienceDirect and SpringerLink. Although there are small variants in the five search engines, our key search string is:\n\n(\"fault prediction\" OR \"defect prediction\" OR \"bug prediction\" OR \"error prediction\") AND (\"unsupervised\" OR \"unlabel*\") OR \"cluster*\") AND (\"software\")\n\n**TABLE 1** presents the results of our paper search and selection process. This results in 49 papers selected from an initial 1360 papers. We list these 49 primary papers at the end of this paper where Pi denotes the i<sup>th</sup> primary study. Note that experimental results in [W2509622719] and [W2611052873] are included in [P46] and [P47] respectively, thus we only took [P46] and [P47] as our primary studies.\n\n**TABLE 1**\nSystematic review paper search and selection process\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W2151666086",
+            "W2509622719",
+            "W2611052873"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Inclusion Criteria",
+          "subsubsections": [],
+          "text": "When determining whether a paper or experimental result should be included or not, the following criteria were applied.\n\n1. Written in English.\n2. Full content must be available.\n3. Published between January 2000 - March 2018.\n4. Uses real data (not simulations).\n5. Applies at least one unsupervised method to software defect-prone module prediction.\n6. Includes new software defect prediction experiments. We ignore re-analysis of previously published experiments.\n7. Includes the best prediction performance results per dataset and learner (since some experiments have a primary focus on some other aspects of machine learning e.g., feature selection, parameter tuning).\n8. Reports the results in sufficient detail to enable meta-analysis.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Data Extraction and Synthesis",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.4.1. Data Extraction and Synthesis Process",
+              "parent_subsection_id": "s_2_4",
+              "text": "From each paper we extracted the following:\n\n- Title\n- Year\n- Journal/conference\n- 'Predatory' publisher? (Y | N)\n- Count of results reported in paper\n- Count of inconsistent results reported in paper\n- Parameter tuning in SDP? (Yes | Default | ?)\n- SDP references<sup>1</sup> (SDPRefs_OrigResults | SDPRefs | SDPNoRefs | OnlyUnSDP)\n\nThen, from within each paper, we extracted for each experimental result:\n\n- Prediction method name (e.g., DTJ48)\n- Project name trained on (e.g., PC4)\n- Project name tested on (e.g., PC4)\n- Prediction type (within-project | cross-project)\n- No. of input metrics (count | NA)\n- Dataset family (e.g., NASA)\n- Dateset fault rate (%)\n- Was cross validation used? (Y | N | ?)\n- Was error checking possible? (Y | N)\n- Inconsistent results? (Y | N | ?)\n- Error reason description (text)\n- Learning type (Supervised | Unsupervised)\n- Clustering method? (Y | N | NA)\n- Machine learning family (e.g., Un-NN)\n- Machine learning technique (e.g., KM)\n- Prediction results (including TP, TN, FP, FN, etc.)\n\nFor full details refer to the review protocol at our Mendeley dataset [W3008381189]. To ensure data quality, we undertook preprocessing (synthesising across studies) including name unification (project name, method name, response variable name, etc.), confusion matrix (re-)computation<sup>2</sup> (see **TABLE 2**) and data quality checking with R scripts. We describe the details of confusion matrix re-computation and data quality checks in Section 2.5.",
+              "citations": [
+                "W3008381189"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.4.2. Prediction Performance Measures",
+              "parent_subsection_id": "s_2_4",
+              "text": "For data classification, the confusion matrix (**TABLE 2**) is the fundamental descriptor from which the majority of performance indicators may be derived. Although ideally all primary studies would report consistent performance indicators, in practice, a wide range of indicators are used such as accuracy, precision, recall, the F-measure<sup>3</sup>, the G-measure and so forth. Consequently, we reconstruct the confusion matrix wherever possible. Unfortunately, there remain about 33% (823/2456) of the experimental results for which this was not possible, due to incomplete reporting as discussed in Section 3.2.2.\n\nThe performance indicators used by our set of 49 primary studies are summarised below. To further complicate matters, note that different studies may use different names for the same measure [W2118283821, W2023399666].\n\n**TABLE 2**\nConfusion Matrix\n\n{{TABLE:tbl_02}}\n\n1. FPR (False Positive Rate): FP / (TN + FP)\n2. FNR (False Negative Rate): FN / (TP + FN)\n3. ER (Error Rate): (FP + FN) / (TP + TN + FP + FN)\n4. Recall: TP / (TP + FN)\n5. Accuracy: (TP + TN) / (TP + TN + FP + FN)\n6. Precision: TP / (TP + FP)\n7. F1: (2 \u00d7 Recall \u00d7 Precision) / (Recall + Precision)\n8. MCC (Matthews Correlation Coefficient) [W2107432340]: (TP \u00d7 TN - FP \u00d7 FN) / \u221a[(TP + FP)(TP + FN)(TN + FP)(TN + FN)]\n9. AUC: Area Under the Curve (AUC) ROC chart [W2158698691].\n10. Popt/ACC: Effort-aware prediction performance [W2147386665].\n11. G-Mean: \u221a[(TP/(TP+FN)) * (TN/(TN+FP))] [P47].\n12. G-Measure: (2 \u00d7 Recall \u00d7 TNR) / (Recall + TNR) [P41].\n13. Balance: 1 - (\u221a[(0 - FPR)<sup>2</sup> + (1 - Recall)<sup>2</sup>] / \u221a2) [P16].\n14. Purity: Percentage of the most-dominated category (fault prone or not fault prone) in the cluster [P3].\n15. MAE: Mean absolute error between prediction and observation [P10].\n16. MeanAIC: The mean of Akaike's Information Criterion (AIC) [P32].\n\nDespite being widely used, F1 and AUC are known to be potentially problematic [W46659105, W2137959503, W2196215201]. F1 focuses on positive classes and ignores negative classes. This is acceptable for information retrieval type problems (since the number of say irrelevant documents, correctly not retrieved can be essentially unbounded). However, this is not the case for defect prediction because the precision of negative classes (non-defective) is also of concern to software developers. Knowing that a component is non-defective is important. Thus the application domain of defect prediction is unsuitable for F1.\n\nThe AUC metric compares algorithms without classification threshold. So it is suitable to compare classifier families in a theoretical sense but not in a practical sense. The reason being, in practice a deployed classifier must have a particular classification threshold. So unless a classifier strictly dominates another (i.e., for all possible threshold values) we cannot use AUC to prefer one classifier to another.\n\nIn contrast, the Matthews Correlation Coefficient (MCC) [W2107432340] is based on all four quadrants of the confusion matrix, which gives a better summary of the performance of classification algorithms. It is also known by statisticians as the \u03c6 coefficient, originally proposed by Karl Pearson. MCC is easier to interpret as correlation coefficient since it takes a value in the interval [-1, 1], with 1 showing a perfect classifier, -1 showing a perverse classifier, and 0 showing that the prediction is uncorrelated with the ground truth. A more detailed comparison between MCC, F1 and AUC can be found in our another work [W2805001156] (see Section 3.1 Classification Performance Measures). Therefore, we prefer to use MCC to assess classification performance in this paper. Note, however, that MCC is undefined if any of the quantities TP + FN, TP + FP, TN + FP, or TN + FN are zero [W2107432340].",
+              "citations": [
+                "W2118283821",
+                "W2023399666",
+                "W2107432340",
+                "W2158698691",
+                "W2147386665",
+                "W46659105",
+                "W2137959503",
+                "W2196215201",
+                "W2805001156"
+              ],
+              "tables_in_text": [
+                "tbl_02"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_4_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.4.3. Data Summary",
+              "parent_subsection_id": "s_2_4",
+              "text": "From the 49 studies we obtain 2456 individual experimental results. **TABLE 3** presents a summary of the categorical attributes. Over half of the results are from supervised learners which are generally deployed as comparators to the unsupervised methods. Within-project (as opposed to cross-project) classification is the dominant approach.\n\nThe remaining categories relate to primary study quality which we explore in Section 2.5.\n\n**TABLE 3**\nSummary of key categorical attributes for individual results\n\n{{TABLE:tbl_03}}\n\nLikewise, **TABLE 4** summarises the numerical attributes where #NA is the number of unavailable results. From our data extraction and synthesis, 262 inconsistent results were identified (see Section 2.5). Therefore, **TABLE 4** only lists a summary of the valid \u2014 in the sense of being internally consistent \u2014 2194 experimental results after removing 262 inconsistent ones. Quite striking is the diversity of values, e.g., the fault rate d ranges from 0.4% to over 93%. The AUC ranges from 0.31 to 0.948 (recall that any value below 0.5 suggests a classifier that is predicting worse than by chance). Note that #NA of MCC is larger than 823 unchecked results, which is caused by zero in the denominator of its definition (see Section 2.4.2). F1 is similarly impacted. For the fault rate, #NA is due to unreported values in private (RSDIMU, CSAS, MIS and Embedded used in 20 experiments) or modified public datasets (KC3_314 and JM1_8916 are public NASA data, but are inconsistent with the original datasets and are used in a further 4 experiments). However, the overall unavailability of fault rate data is low, considering the total number of datasets and fortunately has little effect on our meta-analysis.\n\n**TABLE 4**\nSummary of 2194 consistent experimental results (including 823 unchecked results)\n\n{{TABLE:tbl_04}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_03",
+                "tbl_04"
+              ]
+            }
+          ],
+          "text": "We extracted data related to our research questions from each of the 49 papers, and organised the qualitative and quantitative data into a raw data file (see our Mendeley dataset [W3008381189]). Each paper contains from 1 to 751 (median = 12) experimental results, yielding a total of 2456 individual results, which involve 128 distinct software project defect datasets (from NASA, ISM, AEEEM, PROMISE, etc.) and 25 prediction model families (14 unsupervised learners and 11 supervised learners).",
+          "citations": [
+            "W3008381189"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5. Quality Factors",
+          "subsubsections": [],
+          "text": "In order to understand the quality of the different studies within our analysis, we consider two classes of explanatory factors. External factors are publication venue and type, whereas internal factors address experimental design and consistency of results.\n\nFirst we explore publication venue. Our search involves a wide range of journal or conference publications. Note that the number of experimental results in these primary studies varies greatly from 1 to 751 thus some papers have more propensity for error. We classify the 49 selected papers into two groups according to whether they are found in the so-called 'predatory' publisher lists [W2768619839]. The list aims to identify standalone publishers with questionable approaches to peer review rigour.\n\nWe used three lists: for publisher<sup>4</sup>, for standalone journals<sup>5</sup> and for conferences<sup>6</sup>. Note that these lists have been questioned [W2137834438] so we recognise the classification is imperfect.\n\nSecond, we consider internal experiment quality. For this we check for the use of cross-validation [W1680392829], as an indicator for experimental quality. More importantly, we check the internal consistency of results. Hence we recompute the confusion matrix, or construct it if not provided. This is possible for any one of the 10 combinations of performance measure reporting listed below, i.e., we solve for X. From this we can compute MCC.\n\nFor brevity we just present the details for Cases 9 and 10 (N.B. Cases 1 to 8 can be found in [W2023399666]). Here, d is the proportion of defective modules, a is accuracy, r is recall and p is precision. Other definitions for FPR, FNR, ER, Accuracy, etc. are given in Section 2.4.2. Note that we use other measures in preference to d, since real d might be slightly divergent from reported d in the original study due to pre-processing or cross validation and differences between folds. Therefore, we only use d when we cannot recompute the confusion matrix for Cases 1-4. Furthermore, we normalize TP, TN, FP and FN with TP + TN + FP + FN = 1 when preprocessing raw data.\n\n1. FPR, FNR, ER\n2. FPR, FNR, Accuracy\n3. FPR, Recall, Precision\n4. Recall, Precision, Accuracy\n5. Defect Percentage(d), FPR, FNR\n6. Defect Percentage(d), FPR, ER\n7. Defect Percentage(d), FPR, Recall\n8. Defect Percentage(d), Recall, Precision\n9. Defect Percentage(d), Accuracy, F1:\n\nTP = (1 - a) \u00d7 F1 / (2 \u00d7 (1 - F1)), TN = a - TP, FN = d - TP, FP = 1 - TP - TN - FN\n\n10. Defect Percentage(d), Precision, F1:\n\nTP = (p \u00d7 d \u00d7 F1) / (2p - F1), FN = d - TP, FP = TP \u00d7 (1 - p) / p, TN = 1 - TP - FN - FP\n\nAs part of our re-computation, we also check the correctness and consistency of the experimental results. If the reported or recomputed result satisfies one of the following six inconsistency rules, we label it as problematic data and remove it from our data analysis. In total, we removed 262 results (Rule 1: 171; Rule 2: 7; Rule 3: 60; Rule 4: 3; Rule 5: 19; Rule 6: 2) out of 2456 experimental results.\n\nRule 1. The recomputed performance values (including TP, F1, MCC, d, etc.) are out of their correct ranges (for example: TP \u2209 [W2101728371, UNMAPPED:0], F1 \u2209 [W2101728371, UNMAPPED:0], MCC \u2209 [-1,1], d \u2209 [W2101728371, UNMAPPED:0]).\n\nRule 2. The recomputed d is 0 (we treat 0 as problematic data since all experiments for defect prediction should include defective modules).\n\nRule 3. Compare the recomputed d with the original reported defect percentage, we treat them as problematic data if the difference is greater than 0.1 (i.e., we allow for some rounding errors).\n\nRule 4. Compare our recomputed results with the original ones where available. If the difference of a measure is greater than the rounding error range, we label them as problematic data. Here, the rounding error intervals are computed by adding \u00b10.05 to the original data. Note, compared to the rounding error tolerance of 0.01 used by [W2023399666], we apply a wider range of 0.05.\n\nRule 5. Special values from Cases 1\u201310. Here, we use Case1 as example. For a given FPR, FNR, ER in Case1, the confusion matrix is recomputed. We derive the formulae: d = (ER - FPR) / (FN - FPR), FN = d \u00d7 FNR, FP = (1 - d) \u00d7 FNR, TP = d - FN, TN = 1 - TP - FP - FN. If the numerator is not zero and the denominator is zero, then it is a problematic result. In this case, if ER \u2260 FPR and FN = FPR (e.g., FNR=0.24, FPR=0.24, ER=0.13), it will be labeled as problematic or inconsistent. A complete explanation for all of 10 cases can be found in our Mendeley dataset (see Section 2.4).\n\nRule 6. Obvious problematic experimental data is reported by the primary study. For example, the confusion matrix in [P15] is inconsistent with their dataset. In [P15], their Table X shows that there are 134 bugs (BUGs=true) in their JEdit dataset, however the following clustering prediction result Table XI and Table XII show that there are only 61 bugs in that dataset (Table XIII: TP=46, FN=15).",
+          "citations": [
+            "W2768619839",
+            "W2137834438",
+            "W1680392829",
+            "W2023399666",
+            "W2101728371"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "0"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Our systematic review follows the guidelines of a systematic review approach for software engineering presented in [W2612764117]. First, we clarify our research questions, then search and identify relevant primary studies, next we synthesise results from the selected primary studies, finally we explore and answer our research questions through meta-analysis.",
+      "citations": [
+        "W2612764117"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Bibliometric analysis",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. RQ1: What are the publication trends in unsupervised software defect prediction research?",
+          "subsubsections": [],
+          "text": "Recall that our search has identified 49 primary studies that have applied unsupervised learning to the task of software defect prediction. These are published over the period of 2000-2018<sup>7</sup> and are summarised in **TABLE 5** and also by **FIGURE 1**. From this we can see that conference papers tend to dominate and that there has been pronounced growth in the overall number of papers published in recent years as indicated by the smoother in **FIGURE 1**.\n\n**TABLE 5**\nResearch papers published by type and year\n\n{{TABLE:tbl_05}}\n\n**FIGURE 1**\nUnsupervised software defect prediction papers (UNMAPPED:2000, UNMAPPED:2001, UNMAPPED:2002, UNMAPPED:2003, UNMAPPED:2004, UNMAPPED:2005, UNMAPPED:2006, UNMAPPED:2007, UNMAPPED:2008, UNMAPPED:2009, UNMAPPED:2010, UNMAPPED:2011, UNMAPPED:2012, UNMAPPED:2013, UNMAPPED:2014, UNMAPPED:2015, UNMAPPED:2016, UNMAPPED:2017, UNMAPPED:2018). The broad blue line shows total publications using a loess smoother and 95% confidence limits where these are non-negative, i.e., 2005-onwards. N.B. 2018 is incomplete.\n\n{{TABLE:tbl_06}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_05",
+            "tbl_06"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. RQ2: What is the quality of the experimental reporting (completeness and consistency)?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1. 'Predatory' publishing",
+              "parent_subsection_id": "s_3_2",
+              "text": "Next we consider the prevalence of papers published in so-called 'predatory' journals and conferences. **TABLE 7** reveals that 18 out of the 49 papers (i.e., approximately 37%) were from venues considered to be 'predatory' publishers. This was a higher proportion than we had expected. This phenomenon appears to have started in the late 2000s and is possibly declining since 2014 (see also **FIGURE 2**). This could be a reaction to the adverse publicity such publishers are gaining.\n\n**TABLE 7**\nPapers published by year and by venue, i.e., 'predatory' or 'non-predatory' publisher\n\n{{TABLE:tbl_08}}\n\n**FIGURE 2**\nUnsupervised software defect prediction papers (UNMAPPED:2000, UNMAPPED:2001, UNMAPPED:2002, UNMAPPED:2003, UNMAPPED:2004, UNMAPPED:2005, UNMAPPED:2006, UNMAPPED:2007, UNMAPPED:2008, UNMAPPED:2009, UNMAPPED:2010, UNMAPPED:2011, UNMAPPED:2012, UNMAPPED:2013, UNMAPPED:2014, UNMAPPED:2015, UNMAPPED:2016, UNMAPPED:2017, UNMAPPED:2018) by venue. The broad pink line shows 'predatory' publications using a loess smoother. N.B. 2018 is incomplete.\n\n{{TABLE:tbl_09}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_08",
+                "tbl_09"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2. Problems with Incomplete Reporting",
+              "parent_subsection_id": "s_3_2",
+              "text": "Next we consider potential issues which may arise from incomplete reporting of experimental design and results. First, we examine whether a study explicitly reports if a cross-validation procedure was used or not. We were surprised to find that 25 out of 49 studies did not report this information. This is important because although unsupervised learners need not initially be trained with data that have class labels (i.e., defective or not), the learner must still be configured to classify and hence be evaluated on unseen data. Of course some, or even all, of the other studies may have applied cross-validation techniques, however this ought to be confirmed by the authors in the first instance.\n\nIn terms of results, as described in Section 2.5 we endeavoured to apply basic consistency checks to the raw results. Unfortunately this was not possible for over 30% of the results (823/2456) listed in **TABLE 6**. Given, as we discuss in the following section, that we uncovered 262 (262/1633 \u2248 16%) instances of problematic data in the results we are able to check, this is a little disturbing.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.2.3. Errors and inconsistent results",
+              "parent_subsection_id": "s_3_2",
+              "text": "As previously indicated, we were able to apply consistency checking to approximately 66% (1633 out of 2456) of all the results in our systematic review. **FIGURE 3** shows the distribution of errors (or inconsistencies) per paper. There are 14 papers that are excluded due to incomplete reporting. Note also that in order to improve the visual qualities of the histogram, the largest bin is 10+ and it contains a single extreme outlier of 165 inconsistencies and two studies including 19 and 30 inconsistencies respectively.\n\n**FIGURE 3**\nHistogram of discovered errors (inconsistencies) per paper\n\n{{TABLE:tbl_10}}\n\nNext, we consider whether there is any relationship between publication venue and study errors. For example, one might expect that 'non-predatory' publishers deploy more rigorous peer review, or that 'predatory' publishers are less diligent in this regard. To validate such an expectation, we examine the odds ratio [W578879968] which is defined as:\n\nOR = Odds_pc / Odds_notpc = [P(T|pc)/P(notT|pc)] / [P(T|notpc)/P(notT|notpc)]\n\nwhere Odds_pc is the odds that a member of Population pc will fall into Category T, similarly Odds_notpc is the odds that a member not from Population pc will fall into Category T.\n\nWhen calculating the odds ratio (from **TABLE 8**) the likelihood of containing an error is 1.21 (with 95% confidence limits [0.31, 4.73]) between 'non-predatory' and 'predatory' publishers. This is close to unity and so suggests little effect at the study level. However, a similar analysis for individual experimental results (from **TABLE 9**) reveals a different picture of 0.02 (with 95% confidence limits [0.02, 0.04]). This suggests individual results from a 'non-predatory' paper clearly are less likely to contain errors than a 'predatory' paper, however, this is skewed by a small number of papers that contain very high numbers of results (and inconsistencies).\n\n**TABLE 8**\nPaper contains consistency errors and 'predatory' publisher\n\n{{TABLE:tbl_11}}\n\n**TABLE 9**\nPredatory publisher and Error Data\n\n{{TABLE:tbl_12}}",
+              "citations": [
+                "W578879968"
+              ],
+              "tables_in_text": [
+                "tbl_10",
+                "tbl_11",
+                "tbl_12"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.2.4. Use of comparator benchmarks",
+              "parent_subsection_id": "s_3_2",
+              "text": "When assessing prediction methods such as UnSDP it is usual to provide some kind of comparator or benchmark. This is particularly helpful when a new or improved learning method is proposed. However, there is a risk that most of the research 'energy' is invested in the new method, as opposed to the benchmark. As Michie et al. [W2142334564] remarked 25 years ago, we need to be vigilant about the problems of comparing 'pet' algorithms in which researchers are expert with others with which they are less familiar. They also note the more general danger of selecting comparator benchmarks that are not state of the art. How does this apply to our systematic review? It potentially raises a bias most obviously with RQ4 that compares UnSDP and SDP predictive performance.\n\n**TABLE 10**\nUse of Supervised Learner Benchmarks and the Literature (by paper)\n\n{{TABLE:tbl_13}}\n\nUnfortunately we cannot know researchers' intentions and making judgements as to when a method is a 'pet' requires a great deal of subjectivity. However, we can at least examine how papers use the literature with regard to SDPs. **TABLE 10** shows that of the 28 papers that use SDPs as a comparator for their UnSDPs, 71% (20/28) cite related articles, although only four use previous prediction results. In contrast 8/28 papers use supervised methods without citation suggesting that common methods such as logistic regression are seen as basic default methods that do not warrant discussion or tuning (see Section 4.1.2 for an analysis of hyper-parameter tuning).",
+              "citations": [
+                "W2142334564"
+              ],
+              "tables_in_text": [
+                "tbl_13"
+              ]
+            }
+          ],
+          "text": "The 49 primary studies contain a total of 2456 individual experimental results. This ranges from 1 to 751 results with the median number being 12 results contained in a single paper. Problematic results are analyzed in Section 3.2, so here we just provide an overall summary of the remaining 2194 non-erroneous results in **TABLE 6**.\n\n**TABLE 6**\nCounts and proportions of experimental results\n\n{{TABLE:tbl_07}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_07"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. RQ3: What kinds of unsupervised learning research experiments are conducted?",
+          "subsubsections": [],
+          "text": "For a more detailed analysis of unsupervised learning techniques, we categorise them into clustering and non-clustering techniques as presented in **TABLE 11**. We further divide these unsupervised prediction techniques into 14 families and 21 sub-families.\n\nClustering-based prediction approaches dominate. They typically include two phases: clustering and labelling. Firstly, all instances in a dataset are clustered into different groups, then each group is labeled as defective or not. In addition, there are also a few non-clustering unsupervised prediction techniques, such as using thresholds that label instances directly.\n\nLabelling is a necessary step in unsupervised clustering defect prediction. **TABLE 12** summarises all labelling approaches located by our review. This shows considerable diversity. Generic thresholds, as opposed to Pareto or distribution methods, are the most popular. However, practitioners have to consider what is the most suitable labelling technique when employing some particular learners, such as Clustering and Labelling (CLA, see **TABLE 11**).\n\n**TABLE 11**\nUnsupervised Software Defect Prediction Techniques\n\n{{TABLE:tbl_14}}\n<sup>1</sup> For 'Threshold', if the threshold is calculated with defective labels in some method, we will mark it as supervised method, e.g. STHD-ROC in [P47].\n\n**TABLE 12**\nLabelling techniques for different clusters\n\n{{TABLE:tbl_15}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_14",
+            "tbl_15"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Analysis of Unsupervised Defect Prediction Performance",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. RQ4: What is the difference between unsupervised and supervised software defect predictive performance?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.1.1. Comparison by vote-counting with multiple measures",
+              "parent_subsection_id": "s_4_1",
+              "text": "We carry out vote-counting comparison in this section. Note the possibility that some conclusions might be unstable depending on whether making the voting unit a project or study (paper). For example, this has been a factor for studies [P36], [P37]. So we carry out the vote-counting analysis from both perspectives: (i) by study (each study can vote once) and (ii) dataset (a vote per project). Based on the method of Hedges and Olkin [UNMAPPED:25], we carry out the vote-counting as follows.\n\n1. Identify voting units which must include both unsupervised and supervised prediction models to enable comparability. Voting unit type can be study or project. Depending on the choice of voting unit, all eligible studies or projects are identified. Each eligible study or project will vote once to determine whether UnSDP is better than SDP.\n\n2. Determine the sample size (number of experiments) for each paper or project, and calculate mean, standard deviation of response variable for each group (UnSDP and SDP). The priority of response variable is: MCC, F1, AUC, Popt, Accuracy, ER, Recall, Precision, GMean, ACC, GMeasure, Balance, Purity, MAE and MeanAIC. For example, if MCC and F1 are available in primary study P1, MCC will be used to vote for P1. This priority is determined by the number of all available results for each response variable among 2194 consistent experiment results.\n\n3. Determine X for each voting unit, where X is the sign of ES (Effect Size based on the mean difference between two groups). If Y\u0304<sub>i</sub><sup>U</sup> - Y\u0304<sub>i</sub><sup>S</sup> > 0, X = 1 otherwise, X = 0, where Y\u0304<sub>i</sub><sup>U</sup> refers to the mean of response variable for unsupervised models, and Y\u0304<sub>i</sub><sup>S</sup> is the mean for supervised models.\n\n4. Construct the log likelihood function, and obtain the maximum likelihood estimator \u03b8\u0302 (\u03b8 refers to ES).\n\n\u2211<sub>i=1</sub><sup>k</sup>{X<sub>i</sub> log[1 - \u03a6(-\u221an\u0304<sub>i</sub> \u03b8)] + (1 - X<sub>i</sub>) log \u03a6(-\u221an\u0304<sub>i</sub> \u03b8)}\n\nwhere k is the number of eligible vote entities, \u03a6 is the cumulative distribution function, n\u0304<sub>i</sub> is average sample size, n\u0304<sub>i</sub> = (n1 \u00d7 n2)/(n1 + n2), n1 and n2 are the sample sizes of unsupervised and supervised experiments respectively.\n\n5. Compute the 95% confidence interval for \u03b8\u0302: [\u03b8<sub>L</sub>, \u03b8<sub>U</sub>].\n\n\u03b8<sub>L</sub> = \u03b8\u0302 - C<sub>\u03b1/2</sub> \u221aVar(\u03b8\u0302)\n\u03b8<sub>U</sub> = \u03b8\u0302 + C<sub>\u03b1/2</sub> \u221aVar(\u03b8\u0302)\n\nwhere, Var(\u03b8\u0302) is the variance of \u03b8\u0302. C<sub>\u03b1/2</sub> is the two-tailed critical value of the standard normal distribution. In this paper, we use C<sub>\u03b1/2</sub> = 1.96 (central area=0.95, Z<sub>\u03b1</sub>=1.96). The variance computation is:\n\nVar(\u03b8\u0302) = {\u2211<sub>i=1</sub><sup>k</sup> (D<sub>i</sub><sup>1</sup> + D<sub>i</sub><sup>2</sup> - (D<sub>i</sub><sup>1</sup>)<sup>2</sup> (1 - 2p<sub>i</sub>) / (p<sub>i</sub>(1 - p<sub>i</sub>)))}<sup>-1</sup>\n\nwhere,\n\np<sub>i</sub> = p(\u03b4, n\u0304<sub>i</sub>) = 1 - \u03a6(-\u221an\u0304<sub>i</sub> \u03b4)\n\nD<sub>i</sub><sup>1</sup> = \u2202p(\u03b4, n\u0304<sub>i</sub>) / \u2202\u03b4 = \u221a(n\u0304<sub>i</sub> / 2\u03c0) exp(-\u00bd n\u0304<sub>i</sub> \u03b4<sup>2</sup>)\n\nD<sub>i</sub><sup>2</sup> = \u2202<sup>2</sup>p(\u03b4, n\u0304<sub>i</sub>) / \u2202\u03b4<sup>2</sup> = -(n\u0304<sub>i</sub> \u00d7 \u03b4) / \u221a(2\u03c0) exp(-\u00bd n\u0304<sub>i</sub> \u03b4<sup>2</sup>)\n\n\u03b4 is the population standardized mean difference, and it is equal to the estimated \u03b8\u0302 in Step 4.\n\nIn terms of voting unit, from our meta-analysis there are 26 studies (papers) or 110 projects that conduct both unsupervised and supervised learning for defect prediction. If we carry out vote-counting for all combinations of Prediction Type, Predatory and Cross validation, unfortunately there are only sufficient results for 8 conditions, these are listed in bold in **TABLE 14**. This is because the number of eligible study or project results is only zero or one for the other 8 combinations, e.g., if we use project as the voting unit there are no results for cross-project prediction from 'predatory' publishers that explicitly use cross-validation. Another point worth mentioning is that the sum of studies or projects in **TABLE 14** or **FIGURE 4** is not necessarily 26 or 110. For example: one study may include both within-project and cross-project prediction, it would be counted more than once.\n\n**TABLE 14**\nValid combinations for vote-counting\n\n{{TABLE:tbl_17}}\n\n**FIGURE 4**\nForest plot of UnSDP vs. SDP by vote-counting\n\n(a) Vote-counting by study\n\n{{TABLE:tbl_18}}\n\n(b) Vote-counting by project\n\n{{TABLE:tbl_19}}\n\nPdType is prediction type (either within or cross-project), Predt denotes whether the publisher is 'predatory' or not, and CrossVal indicates if cross-validation is employed (Yes or ? unstated) - see **TABLE 3** for more details. #Study and #Project are comparison unit counts.\n\n**FIGURE 4(a)** shows the results of voting by 26 studies including 2052 experiments. For within-project prediction, although the sign of effect sizes is negative, both of their 95% CI contain zero, which indicates that it is possible that neither performs better than the other. In other words, UnSDP appears comparable with SDP. The same explanation also can be applied in Cross-project prediction as the 95% CI goes across zero.\n\n**FIGURE 4(b)** shows the results of voting by 110 projects including 2128 experiments. These results are broadly similar to voting by paper in that the 95% CIs straddle zero for all five cases. So this suggests that for both within-project and cross-project prediction UnSDP has potential, since it has data collection advantages over SDP, specifically the need for labelled training data is reduced or removed.\n\nNote that the CIs are widest when there are only a few data points. It would also seem that the results are most positive to UnSDP when it is unclear that a cross-validation has been employed. This suggests a certain degree of caution is warranted before claims of superiority are made.\n\nOverall, the results of vote-counting show that UnSDP models are comparable with SDP models, which could make practitioners and researchers more confident to use UnSDP models. However, differences in performance are reduced to single votes. So next we focus on the more informative performance indicator MCC, despite the fact that this reduces the amount of data available.",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_17",
+                "tbl_18",
+                "tbl_19"
+              ],
+              "citations_unmapped": [
+                "25"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.1.2. Comparison of UnSDP and SDP using MCC",
+              "parent_subsection_id": "s_4_1",
+              "text": "The previous vote-counting comparison does not consider the impact of different prediction performance measures, dataset, etc. For subsequent analysis we restrict our data to all available, non-predatory results for which MCC is available. This yields 1178 observations to compare UnSDP and SDP. N.B. the MCC results are all recomputed from the reported raw results from the primary studies.\n\nThe side by side boxplots in **FIGURE 5** and **FIGURE 6** illustrate within-project and cross-project defect prediction performance respectively. For more details on the prediction model family refer to **TABLE 11** (for unsupervised learners) and **TABLE A.17** (for supervised learners). Although sample size varies considerably among these learners (from 1 to 127), they still illustrate some overall patterns. The boxplot notches indicate the 95% confidence intervals of the median. For smaller samples these are wider. Although not a formal test, there is evidence that medians differ if the notches do not overlap [W4299128553].\n\nFrom **FIGURE 5**, we observe that unsupervised models for within-project prediction show greater variance in prediction performance than the supervised ones. Although it is hard to obtain a definitive overall conclusion which is better, these results are consistent with our vote-counting results, namely the evidence does not differentiate their relative performances to any substantial degree.\n\nIn more detail, and restricting our comments to sample sizes > 10, and therefore more reliable (from **FIGURE 5**) we note the following.\n\n1. Un_Fuzzy (the blue line in **FIGURE 5**) outperforms other SDP and UnSDP model families in that the median of Un_Fuzzy is higher than that of the other families of learners. However, the CI is wide so it overlaps with other models at least in some contexts. Among the supervised approaches Bayes appears to be the best model which has also been noted by previous studies [W2151666086].\n\n2. Traditional unsupervised KPart (partition-based clustering including the widely used KMeans and its variants) family did not perform very well. The median of KPart (the red line in **FIGURE 5**, 0.33) is lower than the median of all SDP models (0.41). This suggests that researchers should be cautious in using KMeans as a benchmark with which to compare their new UnSDP.\n\n3. Un_MR (metric or 1/metric ranking) performs least well. However, this is based on only a small subset of the data, since only 39 out of the 234 Un_MR experimental results use MCC with the majority only reporting Popt or ACC.\n\n**FIGURE 5**\nDefect prediction performance (MCC) in within-project prediction by classifier type. N.B. the numbers indicate the count of experiments (sample size).\n\n{{TABLE:tbl_20}}\n\n**FIGURE 6**\nDefect prediction performance (MCC) in cross-project prediction. N.B. the numbers indicate the count of experiments (sample size).\n\n{{TABLE:tbl_21}}\n\n**FIGURE 6** shows the performance of cross-project prediction models. Un_Fuzzy again seems to have the best performance. Presently there are quite limited UnSDP results so further experimentation would be welcome.\n\nWe also observe that an unsupervised spectrum clustering models approach (Un_SC family) was proposed in [P25], and their model was evaluated with 26 different datasets. It outperformed most of the SDP and other UnSDP models in within-project prediction, and outperformed all others in UnSDP and SDP in cross-project prediction. But unfortunately they only reported AUC, so their model could not be included in **FIGURE 5** and **FIGURE 6**. This is somewhat frustrating as more complete reporting (of the confusion matrix) would enable integration of their results into meta-analyses.\n\nIn summary, UnSDP models are comparable with SDP models both in within-project and cross-project prediction. Compared with most of the SDP models, Un_Fuzzy, Un_NN and Un_SC are potentially the strongest UnSDP approaches. However, we also checked all 28 primary studies that include SDP models to see whether any parameter tuning was used. Surprisingly, we found only 3 studies state clearly that tuned SDP models are used in their comparisons, 6 studies use default parameter and 19 studies provide no information about tuning. Therefore, most of SDP models used in comparison might not be best models. We discuss this potential source of bias in the threats to validity (Section 5).",
+              "citations": [
+                "W4299128553",
+                "W2151666086"
+              ],
+              "tables_in_text": [
+                "tbl_20",
+                "tbl_21"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.1.3. Comparison of UnSDP and SDP using Popt for JiT",
+              "parent_subsection_id": "s_4_1",
+              "text": "Due to incomplete reporting, there are 823 unchecked experimental results that could not be compared with MCC in Section 4.1.2. Among these results, AUC and Popt are dominant reported performance measures. Because effort-aware just-in-time (JiT) defect-prone commit prediction differentiates with defect-prone module prediction, effort consideration is its important characteristic. To present a comprehensive comparison of UnSDP and SDP, we carry out the meta-analysis with Popt for JiT prediction in this section. To solid our meta-analysis results, we also compare the unchecked UnSDP and SDP with AUC in Section 5.\n\n**FIGURE 7** presents Popt comparison for JiT prediction. It illustrates that SDP model GA (multi-objective optimization based on genetic algorithm) performs better than the only UnSDP model family UN_MR. However, GA needs to cost more time than UN_MR for model construction analyzed in [P49]. From **FIGURE 7**, we can found that UN_MR is still a good choice for practitioners since it has better prediction performance and less time. In summary, for JiT defect prediction, the comparisons with Popt indicate UnSDP models are comparable with SDP models both in within-project and cross-project prediction.\n\n**FIGURE 7**\nEffort-aware just-in-time prediction performance comparison with Popt\n\n(a) Within-project prediction\n\n{{TABLE:tbl_22}}\n\n(b) Cross-project prediction\n\n{{TABLE:tbl_23}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_22",
+                "tbl_23"
+              ]
+            }
+          ],
+          "text": "In this section, we compare UnSDP and SDP models at a coarse (Section 4.1.1) and finer (Section 4.1.2) level respectively. All 1306 supervised experimental results are taken from our 26 primary studies which include both unsupervised and supervised models.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. RQ5: Which unsupervised prediction models or model families perform best?",
+          "subsubsections": [],
+          "text": "To investigate which models are better among UnSDP models, we compare them with more detailed subfamily categories. **TABLE 15** lists the mean value of MCC, the corresponding 95% CI and the number of experiments for all available unsupervised models in within-project defect prediction. Here, we only list the models in which experimental sample size is greater than 1.\n\nFrom these results, we can see that FCM and FSOMs learners perform best. Although EXP also performs competitively, we do not recommend it since EXP requires software modules to be classified by an expert manually. Hence we do not consider it to be an effective UnSDP approach.\n\nFor JiT defect prediction, we conduct the comparison based on 197 high quality Popt values including 12 UnSDP methods based on MR (metric ranking). Here, we named these methods with MR-v and v is the metric used to rank, e.g. MR-RFC. Also if time-wise cross validation is used in one method, we name it MR-v_TIME, otherwise it means normal n-fold cross validation is used. **TABLE 16** shows MR-CCUM performs best among those unsupervised JiT within-project prediction methods. MR-LT and MR-AGE are followed by MR-CCUM. For 97 cross-project JiT prediction experiments, only MR-CCUM, MR-LT and MR-AGE are included. MR-CCUM is also the best method among them.\n\n**TABLE 15**\nUnSDP families MCC performance (within-project). Since there is only one experiment in the family of FSubC and AP, 95% CI could not be calculated and we removed these two ones from 426 experiments.\n\n{{TABLE:tbl_24}}\n<sup>1</sup> CLAMIPlus [P46] is a variant of CLAMI.\n<sup>2</sup> MR-OneWay [P37] is an improved method based on MR. The same name is also used in **TABLE 16**.\n\n**TABLE 16**\nUnSDP methods performance for JiT prediction (within-project)\n\n{{TABLE:tbl_25}}\n<sup>1</sup> CCUM: Code churn based unsupervised model [P46].\n<sup>2</sup> LT: Lines of code in a file before the current change [P36].\n<sup>3</sup> AGE: The average time interval (in days) between the last and the change over the files that are touched [P36].\n<sup>4</sup> NF: Number of files touched by the current change [P36].\n<sup>5</sup> NUC: Number of unique changes to the modified files [P36].\n<sup>6</sup> RFC: Response of a Class [P40].\n<sup>7</sup> AMC: Average Method Complexity [P40].",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_24",
+            "tbl_25"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. RQ6: What is the impact of dataset characteristics on predictive performance?",
+          "subsubsections": [],
+          "text": "Studies ([P36] and [P37]) reveal inconsistent results between predicting defect-prone modules by each project and by all projects as a whole in a just-in-time context. Stimulated by these findings, we also undertake a comparison between UnSDP and SDP models based on individual projects.\n\nBefore the comparison of RQ6, we removed two kinds of unsuitable data from **TABLE 15**: (i) EXP related data since expert-based approach is more subjective. (ii) Just-in-time datasets (including BUG, POS, MOZ, PLA, JDT, COL) due to their prominent characteristics compared with defect-prone module prediction dataset.\n\n**FIGURE 8** presents the comparison between the best UnSDF and SDP models by project. In this figure, horizontal axis label stands for each project and its fault rate. For example, Ant (0.24) denotes the project Ant (Ant1.3, Ant 1.4, etc. are different versions which we unify as Ant). The fault rate 0.24 is average value across all versions. **FIGURE 8** shows that there are similar performance change tendencies for UnSDP and SDP over the different projects. The two groups both have higher prediction performance on some projects (such as Argouml, AR5, Weka, etc.) and lower performance on other projects (such as KC2, ZXing, etc.). This suggests dataset characteristics have a non-trivial moderating effect on prediction performance. We analysed the largest two abnormal gaps Xerces and Xalan (Diff > 0.2) between UnSDP and SDP in **FIGURE 8**. According to the original primary study [P26], the gaps of Xerces and Xalan seem to be caused by their dataset characteristics.\n\nWe investigated one dataset characteristic, namely imbalance (fault rate), but the one-way ANOVA analysis for fault rate and max MCC shows that it is a very weak explanatory factor for MCC (one-way ANOVA F = 0.66, p-value = 0.6261). In summary, we consider the dataset characteristics have an obvious impact on predictive performance. However, it is unclear which kinds of characteristics are important. We consider this would be well worth exploring in the future.\n\n**FIGURE 8**\nComparison between UnSDP and SDP by project\n\n{{TABLE:tbl_26}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_26"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section addresses research questions RQ4\u2013RQ6. In RQ4, we conduct a meta-analysis by vote-counting. This is not an ideal approach to meta-analysis, but necessary in order to avoid losing important primary studies which employ a range of response measures (performance measures) and experimental designs. Meta-analysis by vote-counting is a simple, though less powerful, procedure than directly using effect size, to compare the performance of two groups. It is only recommended when there are problems with a direct approach [W4235611479].\n\nOur meta-analysis is hindered in that some studies only report AUC. So even though the experiments are informative, they would not contribute to the meta-analysis if we choose F1 to make comparisons. Essentially vote-counting does not directly use effect size estimates from each primary study. Although at its simplest it proceeds by comparing the number of 'positive' studies with 'negative' studies<sup>8</sup>, more sophisticated vote-counting methods are available (see Bushman and Wang [W4235611479] for an overview). We use the Hedges and Olkins method for unequal sample sizes [25, pp. 47\u201374] in order to compare UnSDP and SDP.\n\nWe also carry out a finer grained meta-analysis. **TABLE 13** describes the number of studies, experimental results and projects (or datasets) in our meta-analysis. Note that in the RQ4 vote-counting comparison, 26 studies including 2052 results are involved when we take study as a voting unit, and 110 projects including 2128 results are employed when project is taken as the voting unit.\n\n**TABLE 13**\nThe volume of data involved in analysis\n\n{{TABLE:tbl_16}}\n<sup>1</sup> Expt = count of experimental results; Prj = count of software projects.\n<sup>2</sup> One study could contain both inconsistent and consistent results. When we use \"be counted if some result is consistent or incomplete\", then Expt will be increased by 1, while when using \"not be counted as long as a result is inconsistent\", Expt will not be increased. Similarly with Prj.\n<sup>3</sup> There are 16 studies that include inconsistent experiments according to **FIGURE 3**, thus only 33 studies could be used.\n<sup>4</sup> In total, there are 28 studies that include both UnSDP and SDP model, but all of the SDP experiment results in these two studies are inconsistent, so we removed these two papers.",
+      "citations": [
+        "W4235611479"
+      ],
+      "tables_in_text": [
+        "tbl_16"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Threats to Validity",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Threats to internal validity relate to our ability to reconstruct a confusion matrix for each experimental result. Ideally, we would recompute the confusion matrix for all 2456 individual experimental results, however, there are 823 (33%) results that could not be checked due to incomplete reporting. Where we could check we found 262 results are problematic, but it may well be that there is an interaction between non-reporting and error-proneness so simply extrapolating from our error-rate findings may not be safe.\n\nAnother threat is our implementation of re-computation with R. Where possible we compared our partial analysis with the java tool DConfusion [W2023399666]. Our results are consistent with DConfusion.\n\nThe third threat is that we only carry out the fine level comparison between UnSDP and SDP with MCC. Although MCC is the best choice for our meta-analysis, to strengthen our analysis, we also conduct an extra analysis with high quality 458 AUC results (Predatory = No and AUC is not NA). Our comparison results also indicate that Un_Fuzzy is the most potential approach for within-project prediction. However, the number of experiments is relatively smaller, and more evaluations of Un_Fuzzy would be recommended. The family of Un_SC reported only with AUC performs best in cross-project prediction. The analysis results could be found in our Mendeley data.\n\nFurther, we could only check for consistency errors so it is quite possible that the actual rate of experimental analysis errors is greater than we were able to detect. We have to remark that an overall (knowable) error rate of 11% across all publication venues does not engender confidence. We hope a move towards more open science [W2570760970] will assist in this regard.\n\nThreats to external validity concern the selected experiments and the extent to which the experiments we have located generalise. By undertaking an explicitly systematic approach [W2612764117] to this review we hope to have included all relevant studies. These have used a wide range of datasets but we cannot be certain how representative these might be of all possible software defect prediction scenarios.\n\nAnother difficulty with the comparison of unsupervised and supervised classification is that the majority of papers appear to focus principally upon novel or innovative uses of UnSDP and that the comparator supervised approaches serve the role of very basic benchmarks. Consequently it is not always obvious that state of the art supervised algorithms are deployed, nor that much effort has gone into hyper-parameter tuning. For instance, only 3/28 papers explicitly state they have tuned the SDP models and a further 6/28 indicated defaults were chosen. Thus there is a danger we are sometimes comparing state of the art UnSDP with off-the-shelf SDP.\n\nA final danger is researcher bias and the tendency to confirm what we already believe to be true. This is an additional reason why we have made our materials and research processes public<sup>1</sup>.",
+      "citations": [
+        "W2023399666",
+        "W2570760970",
+        "W2612764117"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Summary and actionable findings",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "UnSDP techniques are attracting more and more researchers and practitioners since labelling information for the training data is not a prerequisite. We reviewed 49 unsupervised software defect prediction primary studies published between January 2000 to March 2018, which includes 2456 independent experimental results. These 2456 independent results involved 128 software projects (from NASA, PROMISE, ISM, AEEEM, etc.) and 25 prediction model families (172 models). All the UnSDP models and labelling techniques for clusters are listed in **TABLE 11** and **TABLE 12**. These tables also provide researchers with an indication of the diversity of unsupervised learning techniques used for software defect prediction.\n\nWe have carried out two kinds of analysis.\n\nFirstly, we conducted a bibliometric analysis. We found a growth in research activity in recent years. We also have found some problems with experimental data quality. We were surprised to find that 25 out of 49 studies did not explicitly report whether a cross-validation procedure was used or not, and there were 14 papers (out of 49) that could not be checked for the existence of problematic data due to incomplete reporting. Therefore, the quality and completeness of reporting should be paid more attention when publishing papers. Where we were able to assess consistency of results, we found something of the order of 11% of all results were demonstrably in error due to inconsistencies. This was an issue in both 'predatory' and non-predatory publication venues.\n\nSecondly, we undertook a meta-analysis concerning the performance of UnSDP models. To compare these results in a reliable way, we recomputed the confusion matrices of the primary studies to obtain consistent performance measures. In our vote-counting analysis, MCC is the main performance measure and others (such as AUC, F1, Popt, etc) are only used when MCC is unavailable. We found, that UnSDP models are comparable with SDP models both for within-project and cross-project prediction. This indicates UnSDP models may not be as problematic as might be supposed, so we suggest they might be considered in most situations when labelled training data is scarce. Among the different UnSDP learners, Un_Fuzzy and Un_SC appear to have most potential. Meanwhile, for effort-aware JiT defect prediction, the state-of-the-art complex SDP model GA (multi-objective optimization based on genetic algorithms) performs better than the simple sorting UnSDP model (UN_MR). However, it less clear whether it has better performance when effort is ignored. Overall, we consider that UN_MR remains a good choice for practitioners since it has comparable prediction performance to GA model and requires less time.\n\nWe also note that when clustering-based UnSDP approaches are applied, it is a simple and effective way to use the node distribution in clusters (see **TABLE 12**) to label each cluster as defective or not according to the Pareto principle (sometimes referred to as the 80:20 rule).\n\nFinally, we found dataset characteristics can have a clear impact on predictive performance, no matter whether UnSDP or SDP models are used. Therefore it will be worth exploring in more depth which of these dataset characteristics are most important. Likewise, the exploration of the interaction between learner and dataset could be fruitful, as it would appear unlikely that a single learning algorithm, be it supervised or unsupervised, will always be optimal.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Primary Studies",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Search completed 7th March, 2018.\n\n[P1] C. Catal, U. Sevim, B. Diri, Software fault prediction of unlabeled program modules, in: Proceedings of the world congress on engineering, Vol. 1, 2009, pp. 1\u20136.\n[P2] C. Catal, U. Sevim, B. Diri, Clustering and metrics thresholds based software fault prediction of unlabeled program modules, in: Information Technology: New Generations, 2009. ITNG'09. Sixth International Conference on, IEEE, 2009, pp. 199\u2013204.\n[P3] S. Zhong, T. M. Khoshgoftaar, N. Seliya, Analyzing software measurement data with clustering techniques, IEEE Intelligent Systems 19 (2) (2004) 20\u201327.\n[P4] S. Zhong, T. M. Khoshgoftaar, N. Seliya, Unsupervised learning for expert-based software quality estimation., in: HASE, 2004, pp. 149\u2013155.\n[P5] P. S. Bishnu, V. Bhattacherjee, Software fault prediction using quad tree-based k-means clustering algorithm, IEEE Transactions on knowledge and data engineering 24 (6) (2012) 1146\u20131150.\n[P6] P. S. Bishnu, V. Bhattacherjee, Application of k-medoids with kd-tree for software fault prediction, ACM SIGSOFT Software Engineering Notes 36 (2) (2011) 1\u20136.\n[P7] S. Singh, R. Singla, Comparative performance of fault-prone prediction classes with k-means clustering and mlp, in: Proceedings of the Second International Conference on Information and Communication Technology for Competitive Strategies, ACM, 2016, p. 65.\n[P8] S. Varade, M. Ingle, Hyper-quad-tree based k-means clustering algorithm for fault prediction, International Journal of Computer Applications 76 (5).\n[P9] R. A. Coelho, F. dos RN Guimar\u00e3es, A. A. Esmin, Applying swarm ensemble clustering technique for fault prediction using software metrics, in: Machine Learning and Applications (ICMLA), 2014 13th International Conference on, IEEE, 2014, pp. 356\u2013361.\n[P10] A. Chug, S. Dhall, Software defect prediction using supervised learning algorithm and unsupervised learning algorithm, in: Confluence 2013: The Next Generation Information Technology Summit (4th International Conference), IET, 2013, pp. 173\u2013179.\n[P11] D. Gupta, V. K. Goyal, H. Mittal, Estimating of software quality with clustering techniques, in: Advanced Computing and Communication Technologies (ACCT), 2013 Third International Conference on, IEEE, 2013, pp. 20\u201327.\n[P12] B. Yang, Q. Yin, S. Xu, P. Guo, Software quality prediction using affinity propagation algorithm, in: Neural Networks, 2008. IJCNN 2008. (IEEE World Congress on Computational Intelligence). IEEE International Joint Conference on, IEEE, 2008, pp. 1891\u20131896.\n[P13] B. Yang, X. Zheng, P. Guo, Software metrics data clustering for quality prediction, Computational Intelligence (2006) 959\u2013964.\n[P14] D. Kaur, A comparative study of various distance measures for software fault prediction, arXiv preprint arXiv:1411.7474.\n[P15] P. S. Sandhu, J. Singh, V. Gupta, M. Kaur, S. Manhas, R. Sidhu, A k-means based clustering approach for finding faulty modules in open source software systems, World academy of science, Engineering and technology 72 (2010) 654\u2013658.\n[P16] P. Singh, S. Verma, An efficient software fault prediction model using cluster based classification, International Journal of Applied Information Systems (IJAIS) 7 (3) (2014) 35\u201341.\n[P17] D. Kaur, A. Kaur, S. Gulati, M. Aggarwal, A clustering algorithm for software fault prediction, in: Computer and Communication Technology (ICCCT), 2010 International Conference on, IEEE, 2010, pp. 603\u2013607.\n[P18] G. Abaei, A. Selamat, Increasing the accuracy of software fault prediction using majority ranking fuzzy clustering, in: Software Engineering, Artificial Intelligence, Networking and Parallel/Distributed Computing, Springer, 2015, pp. 179\u2013193.\n[P19] C. Catal, U. Sevim, B. Diri, Metrics-driven software quality prediction without prior fault data, in: Electronic Engineering and Computing Technology, Springer, 2010, pp. 189\u2013199.\n[P20] M. Park, E. Hong, Software fault prediction model using clustering algorithms determining the number of clusters automatically, International Journal of Software Engineering & Its Applications 8 (7) (2014) 199\u2013204.\n[P21] P. Guo, M. R. Lyu, Software quality prediction using mixture models with em algorithm, in: Quality Software, 2000. Proceedings. First Asia-Pacific Conference on, IEEE, 2000, pp. 69\u201378.\n[P22] P. S. Sandhu, M. Kaur, A. Kaur, A density based clustering approach for early detection of fault prone modules, in: Electronics and Information Engineering (ICEIE), 2010 International Conference On, Vol. 2, IEEE, 2010, pp. 525\u2013530.\n[P23] X. Yuan, T. M. Khoshgoftaar, E. B. Allen, K. Ganesan, An application of fuzzy clustering to software quality prediction, in: Application-Specific Systems and Software Engineering Technology, 2000. Proceedings. 3rd IEEE Symposium on, IEEE, 2000, pp. 85\u201390.\n[P24] R. S. Sidhu, S. Khullar, P. S. Sandhu, R. Bedi, K. Kaur, A subtractive clustering based approach for early prediction of fault proneness in software modules, World Academy of Science, Engineering and Technology 4 (7) 1165\u20131169.\n[P25] F. Zhang, Q. Zheng, Y. Zou, A. E. Hassan, Cross-project defect prediction using a connectivity-based unsupervised classifier, in: Proceedings of the 38th International Conference on Software Engineering, ACM, 2016, pp. 309\u2013320.\n[P26] J. Yang, H. Qian, Defect prediction on unlabeled datasets by using unsupervised clustering, in: High Performance Computing and Communications; IEEE 14th International Conference on Smart City; IEEE 2nd International Conference on Data Science and Systems (HPCC/SmartCity/DSS), 2016 IEEE 18th International Conference on, IEEE, 2016, pp. 465\u2013472.\n[P27] B. Yang, X. Chen, S. Xu, P. Guo, Software metrics analysis with genetic algorithm and affinity propagation clustering, in: DMIN, 2008, pp. 590\u2013596.\n[P28] K. Iwata, T. Nakashima, Y. Anan, N. Ishii, Error prediction methods for embedded software development using hybrid models of self-organizing maps and multiple regression analyses, in: Software Engineering, Artificial Intelligence, Networking and Parallel/Distributed Computing 2013, Springer, 2013, pp. 185\u2013200.\n[P29] G. Abaei, Z. Rezaei, A. Selamat, Fault prediction by utilizing self-organizing map and threshold, in: Control System, Computing and Engineering (ICCSCE), 2013 IEEE International Conference on, IEEE, 2013, pp. 465\u2013470.\n[P30] Z. Marian, G. Czibula, G. Czibula, S. Sotoc, Software defect detection using self-organizing maps, Studia Universitatis Babes-Bolyai, Informatica 60 (2) (2015) 55\u201369.\n[P31] I.-G. Czibula, G. Czibula, Z. Marian, V.-S. Ionescu, A novel approach using fuzzy self-organizing maps for detecting software faults, Studies in Informatics and Control 25 (2) (2016) 207\u2013216.\n[P32] K. Iwata, T. Nakashima, Y. Anan, N. Ishii, Clustering and analyzing embedded software development projects data using self-organizing maps, Software Engineering Research, Management and Applications 2012 (2012) 47\u201359.\n[P33] S. Aleem, L. Capretz, F. Ahmed, Benchmarking machine learning techniques for software defect detection, Int. J. Softw. Eng. Appl 6 (3).\n[P34] J. Nam, S. Kim, Clami: Defect prediction on unlabeled datasets, in: Automated Software Engineering (ASE), 2015 30th IEEE/ACM International Conference on, IEEE, 2015, pp. 452\u2013463.\n[P35] C. Catal, B. Diri, A fault detection strategy for software projects, Tehni\u010dki vjesnik 20 (1) (2013) 1\u20137.\n[P36] Y. Yang, Y. Zhou, J. Liu, Y. Zhao, H. Lu, L. Xu, B. Xu, H. Leung, Effort-aware just-in-time defect prediction: simple unsupervised models could be better than supervised models, in: Proceedings of the 2016 24th ACM SIGSOFT International Symposium on Foundations of Software Engineering, ACM, 2016, pp. 157\u2013168.\n[P37] W. Fu, T. Menzies, Revisiting unsupervised learning for defect prediction, in: Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering, ACM, 2017, pp. 72\u201383.\n[P38] G. Abaei, A. Selamat, H. Fujita, An empirical study based on semi-supervised hybrid self-organizing map for software fault prediction, Knowledge-Based Systems 74 (2015) 28\u201339.\n[P39] J. Liu, Y. Zhou, Y. Yang, H. Lu, B. Xu, Code churn: A neglected metric in effort-aware just-in-time defect prediction, in: Empirical Software Engineering and Measurement (ESEM), 2017 ACM/IEEE International Symposium on, IEEE, 2017, pp. 11\u201319.\n[P40] M. Yan, Y. Fang, D. Lo, X. Xia, X. Zhang, File-level defect prediction: Unsupervised vs. supervised models, in: Empirical Software Engineering and Measurement (ESEM), 2017 ACM/IEEE International Symposium on, IEEE, 2017, pp. 344\u2013353.\n[P41] Y. Fan, C. Lv, X. Zhang, G. Zhou, Y. Zhou, The utility challenge of privacy-preserving data-sharing in cross-company defect prediction: An empirical study of the cliff&morph algorithm, in: Software Maintenance and Evolution (ICSME), 2017 IEEE International Conference on, IEEE, 2017, pp. 80\u201390.\n[P42] Q. Huang, X. Xia, D. Lo, Supervised vs unsupervised models: A holistic look at effort-aware just-in-time defect prediction, in: Software Maintenance and Evolution (ICSME), 2017 IEEE International Conference on, IEEE, 2017, pp. 159\u2013170.\n[P43] S. Singh, R. Singla, Classification of defective modules using object-oriented metrics, International Journal of Intelligent Systems Technologies and Applications 16 (1) (2017) 1\u201313.\n[P44] R. Chang, X. Shen, B. Wang, Q. Xu, A novel method for software defect prediction in the context of big data, in: Big Data Analysis (ICBDA), 2017 IEEE 2nd International Conference on, IEEE, 2017, pp. 100\u2013104.\n[P45] A. Boucher, M. Badri, Predicting fault-prone classes in object-oriented software: An adaptation of an unsupervised hybrid som algorithm, in: Software Quality, Reliability and Security (QRS), 2017 IEEE International Conference on, IEEE, 2017, pp. 306\u2013317.\n[P46] M. Yan, X. Zhang, C. Liu, L. Xu, M. Yang, D. Yang, Automated change-prone class prediction on unlabeled dataset using unsupervised method, Information and Software Technology 92 (2017) 1\u201316.\n[P47] A. Boucher, M. Badri, Software metrics thresholds calculation techniques to predict fault-proneness: An empirical comparison, Information and Software Technology 96 (2018) 38\u201367.\n[P48] R. Sasidharan, P. Sriram, Hyper-quadtree-based k-means algorithm for software fault prediction (2014) 107\u2013118.\n[P49] X. Chen, Y. Zhao, Q. Wang, Z. Yuan, Multi: Multi-objective effort-aware just-in-time software defect prediction, Information and Software Technology 93 (2018) 1\u201313.",
+      "citations": [
+        "W2017439596",
+        "W2509622719",
+        "W2612764117",
+        "W2151666086",
+        "W2611052873",
+        "W2101728371"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "2004",
+        "2012",
+        "2011",
+        "2006",
+        "2010",
+        "2014",
+        "2015",
+        "2016",
+        "2013",
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Appendix A. Supervised defect prediction procedure",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "For performance comparison, we conclude supervised defect prediction models used in our review studies as **TABLE A.17**.\n\n**TABLE A.17**\nSupervised Software Defect Prediction Techniques\n\n{{TABLE:tbl_27}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_27"
+      ]
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We would like to thank the editors and the anonymous reviewers for their insightful comments and suggestions. We also wish to acknowledge the use of the DConfusion tool developed by David Bowes and David Gray whilst at the University of Hertfordshire. This work was supported by the National Key Basic Research Program of China [2018YFB1004401]; the National Natural Science Foundation of China [UNMAPPED:61972317, UNMAPPED:61402370].",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "61972317",
+        "61402370"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_16",
+      "placeholder": "{{TABLE:tbl_16}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_17",
+      "placeholder": "{{TABLE:tbl_17}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_18",
+      "placeholder": "{{TABLE:tbl_18}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_19",
+      "placeholder": "{{TABLE:tbl_19}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_20",
+      "placeholder": "{{TABLE:tbl_20}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_21",
+      "placeholder": "{{TABLE:tbl_21}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_22",
+      "placeholder": "{{TABLE:tbl_22}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_23",
+      "placeholder": "{{TABLE:tbl_23}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_24",
+      "placeholder": "{{TABLE:tbl_24}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_25",
+      "placeholder": "{{TABLE:tbl_25}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_26",
+      "placeholder": "{{TABLE:tbl_26}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_27",
+      "placeholder": "{{TABLE:tbl_27}}",
+      "source_section_id": "s_8",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3008381189_tables.md"
+}

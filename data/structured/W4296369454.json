@@ -1,0 +1,661 @@
+{
+  "id": "W4296369454",
+  "metadata": {
+    "title": "The Application of AI Technologies in STEM Education: A Systematic Review from 2011 to 2021",
+    "n_sections": 11,
+    "n_subsections": 13,
+    "n_subsubsections": 13,
+    "n_tables": 10
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Artificial intelligence in education (AIEd) is an emerging interdisciplinary field that applies AI technologies in education to transform and promote the instructional and learning design, process and assessment [W3017131514, W3084021717, UNMAPPED:2]. The application of AI in STEM education (referred to as AI-STEM in this paper), as a sub-branch of AIEd, focuses on the design and implementation of AI applications to support STEM education. Automated AI technologies, e.g., intelligence tutoring, automated assessment, data mining and learning analytics, have been used in STEM education to enhance the instruction and learning quality [W3017131514, W3084021717, W1758689940]. STEM education is a complex system, from a system perspective, consisting of interdependent elements, including subject, information, medium, and environment [W569921874, W2032296637]. The application of AI, as a critical technology element, should take careful consideration of these complex factors, to achieve a high-quality STEM education [W636964427, W3210166594, UNMAPPED:8]. This systematic review aims to examine the different elements, including AI technology, subject, information, medium, environment in the AI-STEM system to gain a holistic understanding of the application and integration of AI technologies in the STEM education contexts. Specifically, we collected and reviewed empirical AI-STEM research from 2011 to 2021, summarized the AI techniques and applications, the characteristics of other system elements (i.e., information, subject, medium, environment), the distribution of AI in these elements, and the effects of AI in STEM education. Based on the results, this systematic review provided educational and technological implications for the practice and research in the AI-STEM education.",
+      "citations": [
+        "W3017131514",
+        "W3084021717",
+        "W1758689940",
+        "W569921874",
+        "W2032296637"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Literature Review",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "With the development of computer science and computational technologies, automatic, adaptive, and efficient AI technologies have been widely applied in various academic fields. Artificial Intelligence in Education (AIEd), as an interdisciplinary field, emphasizes applying AI to assist instructor's instructional process, empowering student's learning process, and promoting the transformation of educational system [W3017131514, W3084021717, W3157202587, UNMAPPED:2]. First, AIEd has potential to enhance instructional design and pedagogical development in the teaching processes, such as accessing students' performance automatically [W2004496903, W3122656795], monitoring and tracking students' learning [W941815880, W2911335873], and predicting at-risk students [W3034267728, W3106056336]. Second, AIEd is beneficial for improving student-centered learning, such as providing adaptive tutoring [W2578291617, W2129812662], recommending personalized learning resources [W2604250295, W3003167939], and diagnosing students' learning gaps [W2523258810]. Third, AIEd also brings opportunities to transform the educational system by highlighting the essential role of technology [W3084021717], enriching the mediums of knowledge delivery [W2966032592, W3004799522], and changing the instructor\u2013student relationship [W3210166594]. Overall, different AI technologies (e.g., machine learning, deep learning) have been deployed in the field of education to enhance instructional and learning process.\n\nThe development of AIEd also brought transformations to the field of science, technology, engineering and mathematics (STEM) education, as a sub-branch of AIEd named AI-STEM. STEM education aims to improve students' interdisciplinary knowledge inquiry and application, as well as their higher-order thinking, critical thinking and problem-solving ability [W2798809197, W2886149137]. The application of AI in STEM education has advantages to provide adaptive and personalized learning environments or resources, and aid instructors to understand students' learning behavioral patterns, and automatically assess STEM learning performances [W3084001021, W1975429316]. However, STEM education is a complex system, consisting of interdependent elements, including subject (e.g., instructor, student), information, medium, and environment [W569921874, W2032296637]. Achieving a high quality of STEM education requires a careful consideration of the complex social, pedagogical, environmental factors, rather than merely applying AI technologies in education [W3210166594, UNMAPPED:8]. Therefore, a major challenge in AI-STEM is how to appropriately select and apply AI techniques to adapt to the multiple elements (e.g., subject, information, environment) in STEM education with a goal of high-quality instruction and learning [W2803746316, UNMAPPED:29]. To gain a holistic understanding of the integration of AI technologies in the STEM education contexts, it is crucial to systematically review and examine the complex elements in AI-STEM from a system perspective.\n\nDuring the past decade, the emerging field of AIEd has gained great attention [W3017131514, W3084021717, W3157202587, UNMAPPED:2]. But existing literature review of AIEd has mainly focused on the trends, applications, and effects of AIEd from a technological perspective [W3017131514, W3124069781, W2981863007]. Specifically, we located 18 literature review articles of AIEd published from 2011 to 2021 (see **FIGURE 1**). These AIEd reviews focused on different educational levels, fields, and contexts, including higher education [W2981863007], e-learning [W3124069781], mathematics education [W3134997278], language education [W3186514175], medical education [UNMAPPED:34, UNMAPPED:35], programming education [W207841007], and special education [UNMAPPED:37]. For example, Zawacki-Richter et al. (2019) reviewed AIEd in the higher education context and four AI technical applications were classified, namely intelligent tutoring systems, adaptive systems and personalization, profiling and prediction, and assessment and evaluation. Liang et al. (2021) focused on the application of AI in language education and investigated the roles and research foci (e.g., research methods, research sample groups) of AI techniques in language education. Drigas and Ioannidou (2012) explored AIEd in special education and summarized AI applications based on the student's disorders, including reading, writing and spelling difficulties, dyslexia, autistic spectrum disorder, etc.\n\n**TABLE 1** Existing literature review of AIEd articles, ranging from 2011 to 2021\n\n{{TABLE:tbl_01}}\n\nAlthough various reviews were conducted to understand the field of AIEd, few of them focused on STEM education. Among these 18 literature review articles, we only located two works exploring the application of AI in STEM education. Le et al. (2013) reviewed the AI-supported tutoring approaches in computer programming education and found that AI techniques were mainly applied to support feedback-based programming tutoring during the student's individual learning. Hwang and Tu (2021) conducted a bibliometric mapping analysis to systematically review the roles of AI in mathematics education. The results clarified the role of AI in mathematics education into three main types, including intelligent tutoring systems, profiling and prediction, and adaptive systems and personalization. Although some review examined AI in computer science and mathematics education, there is a lack of literature review to investigate the application of AI in general STEM education context. More importantly, due to the complexity of AI-STEM, it is essential to systematically review multiple elements in AI-STEM as well as the effects of AI in the STEM education system.\n\nTo fill this gap, this systematic review aims to gain a comprehensive understanding of the integration of AI technologies in the STEM education contexts. Specifically, this review examined and summarized the applications and categories of AI elements in the AI-STEM system, the characteristics of other system elements in AI-STEM except AI, the distribution of AI in these elements, and the effects of AI in STEM education. Three research questions (RQs) were proposed:\n\n**RQ1:** What are the categories of the AI element in the AI-STEM system?\n**RQ2:** What are the characteristics of other system elements (i.e., information, subject, medium, environment element) as well as the distribution of AI in these elements?\n**RQ3:** What are the effects of AI in STEM education?",
+      "citations": [
+        "W2004496903",
+        "W3122656795",
+        "W941815880",
+        "W2911335873",
+        "W3034267728",
+        "W3106056336",
+        "W2578291617",
+        "W2129812662",
+        "W2604250295",
+        "W3003167939",
+        "W2523258810",
+        "W3084021717",
+        "W2966032592",
+        "W3004799522",
+        "W3210166594",
+        "W2798809197",
+        "W2886149137",
+        "W3084001021",
+        "W1975429316",
+        "W569921874",
+        "W2032296637",
+        "W2803746316",
+        "W3017131514",
+        "W3124069781",
+        "W2981863007",
+        "W3134997278",
+        "W3186514175",
+        "W207841007"
+      ],
+      "tables_in_text": [
+        "tbl_01"
+      ],
+      "citations_unmapped": [
+        "8",
+        "29",
+        "34",
+        "35",
+        "37",
+        "2019",
+        "2021",
+        "2012",
+        "2013"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "Database Search",
+          "subsubsections": [],
+          "text": "To locate the empirical studies of AI application in STEM education, the following major publisher databases were selected: Web of Science, Science Direct, Scopus, IEEE, EBSCO, ACM, Taylor & Francis, and Wiley [W3090323843]. Filters were used to the empirical research and peer-reviewed articles in the field of education and educational research from January 2011 to December 2021. After the preliminary screening of articles, snowballing was conducted [W1975675278] to find the articles that were not extracted using the search strings.",
+          "citations": [
+            "W3090323843",
+            "W1975675278"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "Identification of Search Terms",
+          "subsubsections": [],
+          "text": "Based on the specific requirements of bibliographic databases, we proposed the searching strategies. In terms of the research questions, three types of keywords were used as the search terms. First, keywords related to AIEd and specific AI applications were added (i.e., \"artificial intelligence\" OR \"AI\" OR \"AIED\" OR \"machine learning\" OR \"intelligent tutoring system\" OR \"expert system\" OR \"recommended system\" OR \"recommendation system\" OR \"feedback system\" OR \"personalized learning\" OR \"adaptive learning\" OR \"prediction system\" OR \"student model\" OR \"learner model\" OR \"data mining\" OR \"learning analytics\" OR \"prediction model\" OR \"automated evaluation\" OR \"automated assessment\" OR \"robot\" OR \"virtual agent\" OR \"algorithm\"). Second, keywords related to STEM were added (i.e., \"STEM\" OR \"science\" OR \"technology\" OR \"math\" OR \"physics\" OR \"chemistry\" OR \"biology\" OR \"geography\" OR \"engineering\" OR \"programming\" OR \"lab\"). Third, keywords related to education were added (i.e., \"education\" OR \"learning\" OR \"course\" OR \"class\" OR \"teaching\").",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "Searching Criteria",
+          "subsubsections": [],
+          "text": "The search criteria were designed to locate the articles that focused on the applications of AI in STEM education. According to the research objectives, inclusion and exclusion criteria were adopted (see **TABLE 2**).\n\n**TABLE 2** Inclusion and exclusion criteria\n\n{{TABLE:tbl_02}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "The Screening Process",
+          "subsubsections": [],
+          "text": "The screening process involved the following procedures: (1) removing the duplicated articles; (2) reading the titles and abstracts and removing the articles according to the inclusion and exclusion criteria; (3) reading the full texts and removing the articles according to the inclusion and exclusion criteria; (4) using the snowballing to further locate the articles in Google Scholar, and (5) extracting data from the final filtered articles (see **FIGURE 2**). All articles were imported into Mendeley software for screening.\n\n**FIGURE 2** The selection flowchart used based on PRISMA [W2005501262]\n\n3373 articles were located as the result of the first round of searching. Among these records, 777 duplicates were removed and then 1879 records were excluded because they were not classified under Education & Educational research or journal article. By reviewing the titles and abstracts, the number of articles was reduced to 717 based on the criteria (see **TABLE 2**). The selected articles were examined by the first author to determine whether they were suitable for the purpose of this systematic review. The second author independently reviewed approximately 30% of the articles to confirm the reliability. The inter-rater agreement was 92%. Then, the full-text of articles were reviewed by the first author to verify that the articles met all the criteria for inclusion in the review. Finally, a total of 63 articles that met the criteria were identified for the systematic review.",
+          "citations": [
+            "W2005501262",
+            "W3017131514",
+            "W3084021717",
+            "W1758689940",
+            "W569921874"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "2"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "Theoretical Framework and Analysis Procedure",
+          "subsubsections": [],
+          "text": "General system theory (GST) is a theoretical framework, arguing that the world is composed of different organic systems, which contain dynamically interacting elements and mutual relationships between them [W569921874, W2071900848]. The main principle of GST is that a system is not simply equal to the sum of its elements, but greater than the sum of its parts [W2071900848, W1969134851]. To deeply understand the complex nature and general rules of systems, GST highlights the system's holistic principle to identify the internal elements, functional relationships of them, as well as the external influences upon a system [UNMAPPED:43]. The theoretical framework of GST has been widely applied in various fields to analyze different types of systems, such as physical, biological, social and educational systems [W2071900848, W1991502782]. For example, Chen and Stroup (1993) suggested applying GST as an underpinned theoretical framework to guide the reform of science education and highlighted the integration of science curriculum to avoid the compartmentalized learning of physics, biology, and chemistry. Following this philosophy, we argue that GST can provide a new, holistic perspective to understand the integration of AI technologies and STEM education.\n\nFrom the perspective of GST, AI-STEM can be viewed as an organic system, which mainly contains five basic elements, namely subject, information, medium, environment, and technology [W2032296637] (see **FIGURE 3**). First, subject is defined as people in an educational system and different subjects of people (e.g., instructor, student) can take agency to interact with each other constantly and adaptively. Second, information refers to knowledge spread and constructed between subjects in an educational system, such as learning contents, course materials, knowledge artifacts, etc. Third, medium is the way or carrier to convey information and connect subjects in the system. Fourth, environment serves as an underlying context in an educational system, which influences the function of the whole educational system. Fifth, technology (e.g., AI techniques) is usually appeared as an external element to impact the functions of the educational system. Grounded upon GST, the integration of AI, as an external technology element, in an educational system (such as STEM) is a complex process, that has influences on other system elements (i.e., subject, information, medium, environment) and on the relationships between them. In summary, the framework of GST (see **FIGURE 3**) highlights the multiple elements as well as their mutual relationships in AI-STEM system, which provides us a holistic view for applying AI technologies in STEM education.\n\n**FIGURE 3** The integration of technology in an educational system from the GST perspective\n\nWe used content analysis method [W4300912023, W3125707221] to classify 63 AI-STEM articles in order to answer the research questions. Based on GST, a coding scheme of educational system elements was developed to systematically examine AI-STEM articles (see **TABLE 3**). This coding scheme included the subject of instructor (including instructor involvement and instructor strategy), the subject of learner (including educational level, sample size, and learning outcome), information (i.e., learning content), medium (i.e., educational medium), environment (i.e., educational context), and technology (i.e., AI technique).\n\n**TABLE 3** The coding scheme\n\n{{TABLE:tbl_03}}\n\n63 articles were coded by two raters. The same article can be coded more than one code in one dimension. First, 20% of articles were coded by two coders independently in order to calculate coding reliability. Krippendorff's (2004) alpha reliability was 0.91 among two raters at this phase. The remaining articles were coded independently by two raters after the reliability was ensured. Consensus was reached by two raters on conflicting coding results. We provided details and examples below to demonstrate how the coding results represented the review data [W2122328334].",
+          "citations": [
+            "W569921874",
+            "W2071900848",
+            "W1969134851",
+            "W1991502782",
+            "W2032296637",
+            "W4300912023",
+            "W3125707221",
+            "W2122328334"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ],
+          "citations_unmapped": [
+            "43",
+            "1993",
+            "2004"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In order to map the state-of-art of the application of AI techniques in STEM education, we conducted a systematic review from 2011 to 2021, following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) principles [W2005501262].",
+      "citations": [
+        "W2005501262"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "RQ1: What are the categories of the AI element in the AI-STEM system?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Learning Prediction",
+              "parent_subsection_id": "s_4_1",
+              "text": "The first category of the AI applications in STEM education was learning prediction, illustrating should be something like systems which predict student learning performance or status in advance through AI algorithms and modeling approaches [W1982378700, W2618249137]. 18 of 63 reviewed articles (29%) focused on learning prediction in STEM education (see **FIGURE 5**). Two sub-categories were summarized under learning prediction: learning performance prediction (N=14) and at-risk student prediction (N=4) (see **TABLE 5**). First, in the sub-category of learning performance prediction, AI algorithms and modeling techniques were employed in STEM education to help instructors adjust the instructional processes by predicting students' learning performance [W3044093562, W3034267728]. For example, Buena\u00f1o-Fern\u00e1ndez et al. (2019) applied educational data mining and machine learning technique (i.e., decision tree) in computer engineering courses to predict students' final performance based on their historical grades. Zabriskie et al. (2019) utilized the random forest model and logistic regression model to predict the physics course outcomes. Another sub-category was predicting at-risk students and dropout factors in STEM education to help instructors intervene in student learning [W3125812872, UNMAPPED:52]. For example, Lacave et al. (2018) used Bayesian networks techniques to investigate dropout factors of computer science students in higher education. Yang et al. (2020) utilized random forest classification to create and examine the prediction models of identifying at-risk students in introductory physics classes. In summary, AI algorithms had been used in STEM education to help instructors or researchers predict students' final academic performances and learning risks.",
+              "citations": [
+                "W1982378700",
+                "W2618249137",
+                "W3044093562",
+                "W3034267728",
+                "W3125812872"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "52",
+                "2019",
+                "2018",
+                "2020"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Intelligent Tutoring System",
+              "parent_subsection_id": "s_4_1",
+              "text": "The second category of the AI applications in STEM education was the intelligent tutoring system (ITS), defined as an AI-enabled system that was designed to provide customized instruction or feedback to students and promote personalized, adaptive learning [W3017131514, W1829827875, W1510640444]. Among the 63 reviewed articles, 16 articles (25%) focused on the applications of ITSs in promoting instruction and learning in STEM education (see **FIGURE 4**). Three sub-categories were identified: instructional content delivery (N=9), recommendation of personalized learning path (N=4), and resource recommendation (N=3) (see **TABLE 5**). The first sub-category was using ITSs to deliver instructional content in STEM education. For example, Myneni et al. (2013) introduced an interactive and intelligent learning system in physics education, where a virtual agent delivered physics concepts to students and decision algorithms were utilized to determine the support level of the virtual agent. Hooshyar et al. (2018) proposed a novel flowchart-based ITS based on Bayesian networks techniques, which imitated a human instructor to conduct one-to-one instruction with students. The second sub-category of ITS was recommendations of personalized learning path based on student's profile in STEM education. For example, De-Marcos et al. (2015) combined genetic algorithm and parliamentary optimization algorithm to create personalized courseware sequencing paths in online STEM learning. Saito and Watanobe (2020) proposed an approach of recommending learning paths that applied recurrent neural network and sequential prediction model to create students' ability charts and learning paths in programming learning based on their submission history. The third sub-category of ITS was recommending learning resource according to student's needs in STEM education. For example, Ledesma and Garc\u00eda (2017) introduced an expert system as a support tool to tackle mathematical topics, by recommending appropriate mathematical problems in accordance with a student's learning style. Lin and Chen (2020) proposed a deep learning recommendation based system in programming learning that recommended learning tasks, learning missions and materials according to students' learning processes and levels. In summary, AI technologies were widely applied in ITSs to enhance personalized and adaptive learning in STEM education through providing one-to-one tutoring and recommending personalized learning paths and resources.",
+              "citations": [
+                "W3017131514",
+                "W1829827875",
+                "W1510640444"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "2013",
+                "2018",
+                "2015",
+                "2020",
+                "2017"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Student Behavior Detection",
+              "parent_subsection_id": "s_4_1",
+              "text": "The third category of the AI applications in STEM education was student behavior detection, which referred to systems to exploit and track students' learning behaviors, patterns, and characteristics with AI-enabled data mining and learning analytics in the instructional and learning processes [W2899899221, W2911335873, W2947221767]. Among the 63 reviewed articles, 13 articles (21%) focused on the applications of AI techniques to detect student behaviors in STEM education (see **FIGURE 5**). Two sub-categories were summarized under student behavior detection: student behavior analysis (N=8) and student behavior monitoring (N=5) (see **TABLE 5**). First, the sub-category of student behavior detection, was applied in STEM education to analyze and reveal students' latent behaviors. For example, Hsiao et al. (2020) collected students' learning data from programming learning platform and examined their learning behaviors through hidden Markov model, and the results revealed the reviewing patterns and reflecting strategies of students in learning programming. Pereira et al. (2020) used data mining techniques including k-means and association rule algorithm to understand students' behavior in introductory programming, to help novice programmers promote their learning. Another sub-category of student behavior monitoring was applied to help instructors track students' learning in STEM education. For example, Balakrishnan (2018) helped instructors to motivate engineering students' learning through monitoring their learning behaviors such as preferred learning materials and self-directed learning performance. Yannier et al. (2020) introduced a mixed-reality AI system supported with computer vision algorithms to track children's active learning behaviors in science education. In summary, student behavior detection had great potential to aid instructors and researchers to analyze, understand, and monitor students' behaviors in STEM education.",
+              "citations": [
+                "W2899899221",
+                "W2911335873",
+                "W2947221767"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "2020",
+                "2018"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Automation",
+              "parent_subsection_id": "s_4_1",
+              "text": "The fourth category of the AI applications in STEM education was automation, which utilized AI technologies to automatically assess students' performances and generate questions or tasks for instructors [W2004496903, W3122656795, UNMAPPED:84]. Among 63 reviewed articles, 8 articles (13%) focused on the AI-supported automated techniques in STEM education (see **FIGURE 5**). Two sub-categories were summarized under automation: automated assessment (N=7) and automated questions generation (N=1) (see **TABLE 5**). The first sub-category of automated assessment provided instructors and students with convenient assistance in STEM education. For example, Wang et al. (2011) developed an automated assessment system, AutoLEP, to help novice programmers gain programming skills by providing syntactic and structural checking and immediate feedback automatically. Garc\u00eda-Gorrostieta et al. (2018) introduced a system for automatic argument assessment of computer engineering students' final reports, to help them improve the abilities of statement and justification in science argumentation. Another sub-category of automated questions generation had potential to reduce instructors' instructional burdens in STEM education. For example, Aldabe and Maritxalar (2014) proposed an approach to help instructors automatically create multiple-choice tests in science courses through the use of corpora and natural language processing techniques. In summary, AI techniques were used in STEM education to aid instructors and students through automatically generating questions and assessing academic performances.",
+              "citations": [
+                "W2004496903",
+                "W3122656795"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "84",
+                "2011",
+                "2018",
+                "2014"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "Educational Robots",
+              "parent_subsection_id": "s_4_1",
+              "text": "The fifth category of the AI applications in STEM education was educational robots, which was the adoption of robots in STEM education to facilitate students' learning experience as well as allow them to acquire knowledge in interactive ways [W3137696531, W2887260263, W2782276836]. It is worth noting that robots are applications that contain various techniques (e.g., mechanical manufacturing, electronic sensors, AI); therefore, considering the research topic, only AI-supported robots were included in this review. Among the 63 reviewed articles, 6 articles (9%) focused on the application of educational robots in STEM education (see **FIGURE 5**). Two sub-categories were identified under educational robots: programming robots (N=3) and social robots (N=3) (see **TABLE 5**). The first sub-category, programming robots, were specifically designed as learning tools that engaged students to design and operate them with programming languages [W3137696531]. For example, Rodr\u00edguez Corral et al. (2016) applied a specific ball-shaped robot with sensing, wireless communication and output capabilities in computer courses to teach students object-oriented programming languages. Cao et al. (2021) introduced an artificial intelligence robot called LEGO MINDSTORMS EV3, to implement instructional tasks in information technology courses to promote students' innovation and operational ability. Another sub-category of social robots was a kind of intelligent humanoid robots, which could serve as tutors, tutees or learning companions to students and allow students to interact with them orally and physically [W3092395089, W3210166594]. For example, Verner et al. (2020) employed RoboThespian, a life-size humanoid robot, as a tutor to convey science knowledge and concepts to elementary school students. In summary, AI-based educational robots were used in STEM education as instructional tools or educational subjects (e.g., tutor, tutee, companion) to convey knowledge, promote students' operational skills, and enhance their learning experience.",
+              "citations": [
+                "W3137696531",
+                "W2887260263",
+                "W2782276836",
+                "W3092395089",
+                "W3210166594"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "2016",
+                "2021",
+                "2020"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "Others",
+              "parent_subsection_id": "s_4_1",
+              "text": "Among 63 reviewed articles, 2 articles (3%) focused on other applications of AI techniques in STEM education, including AI textbook and group formation. Tehlan et al. (2020) utilized a genetic algorithm-based approach to form student groups in collaborative learning based on their skills and personality traits in a programming course. Ko\u0107-Januchta et al. (2020) introduced AI-enriched textbook in biology course to improve students' engagement by encouraging them to ask questions and receive suggested questions.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "2020"
+              ]
+            }
+          ],
+          "text": "**FIGURE 4** demonstrates the trends of empirical studies by year. According to the distribution, the number of publication generally increased along the years. In addition, a majority of reviewed articles ($N=42$) were published in the last 4 years from 2018 to 2021. Only 9 of 63 reviewed articles were published in the first 4 years from 2011 to 2014.\n\n**TABLE 4** Distribution of the articles by year ($N=63$)\n\n{{TABLE:tbl_04}}\n\nRegarding the element of AI technology in AI-STEM, six types of AI applications were identified, namely learning prediction ($N=18,\\;percentage=29\\%$), intelligent tutoring system ($N=16,\\;percentage=25\\%$), student behavior detection ($N=13,\\;percentage=21\\%$), automation ($N=8,\\;percentage=13\\%$), educational robots ($N=6,\\;percentage=9\\%$), and others ($N=2,\\;percentage=3\\%$) (see **FIGURE 5** and **TABLE 5**).\n\n**FIGURE 5** The application categories of AI techniques in STEM education ($N=63$)\n\n**TABLE 5** The categories of AI applications in STEM education\n\n{{TABLE:tbl_05}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_04",
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "RQ2: What are the characteristics of other system elements (i.e., information, subject, medium, environment element) as well as the distribution of AI in these elements?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Information in AI-STEM Research",
+              "parent_subsection_id": "s_4_2",
+              "text": "Information (referred to learning content in this study) was described as the subject knowledge and learning contents conveyed in AI-STEM system. In the reviewed 63 studies, all of them mentioned learning content in STEM education, including science, technology, engineering, mathematics, and cross-disciplinary (i.e., more than one discipline) (see **TABLE 6**). Among 63 articles, 24 studies focused on technology, followed by articles that focused on science (N=22) and engineering (N=7). Mathematics (N=3) attracted the least attention. In addition, 7 studies contained interdisciplinary subjects, such as computer engineering [W2940725132, UNMAPPED:52], engineering mathematics [W3044093562], and integrated STEM education [W2480917900, W2130625835].\n\n**TABLE 6** Learning contents in AI-STEM research ($N=63$)\n\n{{TABLE:tbl_06}}\n\n**FIGURE 6** shows the frequency of AI application categories in different learning contents. Among all the AI categories, student behavior detection was most frequently applied in the technology domain (N=8), followed by learning prediction in science (N=6), and learning prediction in engineering (N=5) (see **FIGURE 6**).\n\n**FIGURE 6** AI categories under learning content ($N=63$)",
+              "citations": [
+                "W2940725132",
+                "W3044093562",
+                "W2480917900",
+                "W2130625835"
+              ],
+              "tables_in_text": [
+                "tbl_06"
+              ],
+              "citations_unmapped": [
+                "52"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Instructor in AI-STEM Research",
+              "parent_subsection_id": "s_4_2",
+              "text": "Instructor, as a component of subject element in AI-STEM system, played a critical role in conducting instruction, conveying knowledge, and utilizing technologies. In the reviewed 63 studies, 50 of them mentioned the instructor involvement and 50 of them mentioned the instructional strategies, including traditional lecture, problem-based learning, project-based learning, game-based learning, self-learning, and collaborative learning (see **TABLE 7**). Regarding the instructor involvement, a majority of instructors would engage in the instructional and learning processes to support students ($N=42$), while some studies were conducted without instructors' involvement and support ($N=8$). Additionally, among 50 articles, the traditional lecturing strategy was most frequently used by instructor ($N=27$), followed by problem-based learning ($N=10$). Also, some studies were carried out through project-based learning ($N=5$), self-learning ($N=5$), game-based learning ($N=4$), and collaborative learning ($N=4$).\n\n**TABLE 7** Instructor involvement ($N=50$) and instructional strategies ($N=50$) in AI-STEM research\n\n{{TABLE:tbl_07}}\n\nAmong the 50 articles, 5 of them included more than one instructional strategy. All AI application categories were mainly applied with the instructor's support, in which the most frequently used AI category were ITS ($N=11$) and learning prediction ($N=11$) (see **FIGURE 7a**). In addition, automation was only applied in lecture ($N=8$). Learning prediction was most frequently applied in lecture ($N=8$) and educational robots were most frequently applied in problem-based learning ($N=4$). Compared to other AI technologies, ITS and student behavior detection were integrated with more types of instructional strategies (see **FIGURE 7b**).\n\n**FIGURE 7** AI categories under instructor involvement and instructional strategies",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_07"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Learner in AI-STEM Research",
+              "parent_subsection_id": "s_4_2",
+              "text": "Learner, as another component of subject element, could take agency to actively participate in the learning process as to influence the AI-STEM system. In the reviewed 63 studies, 59 of them mentioned the educational levels of learners, from kindergarten to higher education, and 55 of them mentioned sample sizes (see **TABLE 8**). Among all the educational levels, 43 focused on higher education (N=43), followed by elementary school (N=7), high school (N=5), and middle school (N=4). Only one study was conducted in kindergarten. In addition, the number of AI-STEM studies with the medium scale of learners (N=24) and the large scale of learners (N=21) were larger than the small-scale study (N=10).\n\n**TABLE 8** Educational levels ($N=59$) and sample sizes ($N=55$) in AI-STEM research\n\n{{TABLE:tbl_08}}\n\nAmong the 59 articles, 1 of them included more than one educational level. AI application categories except educational robots were frequently applied in higher education (learning prediction: N=13, ITS: N=12, student behavior detection: N=8, automation: N=7). The educational robots were frequently applied in elementary school ($N=3$) (see **FIGURE 8a**). Moreover, regarding the sample size, learning prediction was most frequently used with a large scale ($N=11$), followed by ITS with a medium scale ($N=9$), and student behavior detection with a medium scale ($N=7$). Additionally, the categories of educational robots and others were not applied in large scale; the category of student behavior detection was not applied in small scale (see **FIGURE 8b**).\n\n**FIGURE 8** AI categories under educational levels and sample sizes",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_08"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Medium in AI-STEM Research",
+              "parent_subsection_id": "s_4_2",
+              "text": "Medium (referred to educational medium in this study) was viewed as the way to convey information and connect subjects AI-STEM system. In the reviewed 63 studies, 50 of them mentioned the educational medium, including paper resource, entity resource (i.e., the material object in reality), computer system resource, web open resource, mobile phone resource and E-book resource (see **TABLE 9**). Among all educational mediums, computer system was the most frequently used in AI-STEM studies (N=28), followed by entity resource (N=10) and web open resource (N=9). Additionally, mobile phone resource ($N=3$), traditional paper resource ($N=1$), and E-book resource ($N=1$) was the infrequent medium to convey knowledge.\n\n**TABLE 9** Educational medium in AI-STEM research ($N=50$)\n\n{{TABLE:tbl_09}}\n\nAmong the 50 articles, 2 of them included more than one educational medium. Among all the AI categories, ITS was most frequently used through computer system resource ($N=15$), followed by educational robots through entity resource ($N=6$), automation through computer system resource ($N=5$), and learning prediction through web open resource (see **FIGURE 9**).\n\n**FIGURE 9** AI categories under educational medium ($N=50$)",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_09"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "Environment in AI-STEM Research",
+              "parent_subsection_id": "s_4_2",
+              "text": "Environment (referred to as educational context in this study) served as an underlying context to influence the whole AI-STEM system. In the reviewed 63 studies, 51 of them mentioned the educational environment, including face-to-face environment, experimental learning environment, informal learning environment, web-based environment and augmented/virtual reality (see **TABLE 10**). Among the 51 studies, 33 studies were implemented in face-to-face environment, followed by web-based environment (N=11) and experimental environment (N=6). Two studies conducted in informal learning environment [W2072199993, W2125049507] and only one study conducted in augmented reality [W3028243744].\n\n**TABLE 10** Educational context in AI-STEM research ($N=51$)\n\n{{TABLE:tbl_10}}\n\nAmong the 51 articles, 1 of them included more than one educational context. All categories of AI techniques were commonly applied in face-to-face environment, in which the most frequently used AI technology category was learning prediction ($N=10$), followed by automation ($N=7$), ITS ($N=6$), and educational robots ($N=5$). Moreover, compared to other AI categories, ITS was the most frequently used technique in the web-based environment ($N=7$) (see **FIGURE 10**).\n\n**FIGURE 10** AI categories under educational contexts ($N=51$)",
+              "citations": [
+                "W2072199993",
+                "W2125049507",
+                "W3028243744"
+              ],
+              "tables_in_text": [
+                "tbl_10"
+              ]
+            }
+          ],
+          "text": "To further understand how AI techniques have been integrated in STEM education, we examined the other system elements, including information, subject (i.e., instructor, student), medium, and environment in AI-STEM research. In addition, we explored the distribution of AI categories in these elements, to reveal the relationships between AI techniques and these elements.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "RQ3: What are the effects of AI in STEM education?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Educational Effects and Findings",
+              "parent_subsection_id": "s_4_3",
+              "text": "From the educational perspective, 42 of the 63 reviewed articles reported the educational effects and findings when applying AI techniques in STEM education. Specifically, 30 out of the 42 articles reported the instruction and learning effects (e.g., learning performance, affective perception, higher-order thinking) of the application of AI techniques in STEM education. 12 articles out of 42 reported students' learning behaviors and patterns by using AI-enabled data mining and learning analytics techniques.\n\n**The effect of learning performance:** Among all the reviewed articles, 22 studies revealed the educational effects of AI technologies on students' learning performance. Most of them showed significantly positive influence of AI techniques on the improvement of students' learning performances ($N=20$). For example, Wu et al. (2013) investigated the effect of a context-aware ubiquitous learning system in a geosciences course and the results showed that context-aware ubiquitous learning system had significantly positive effects on the learning achievements of students. Thai et al. (2021) conducted a cluster randomized study to examine the effect of My Math Academy, a digital game-based learning environment that provided personalized content on kindergarten students; the results revealed the significant improvement of learning gains, especially for the moderate-level students. Tehlan et al. (2020) used a quasi-experiment approach to examine the effects of genetic algorithm-supported pair programming in a programming course; the results found that the students' learning performances were significantly higher in pair programming than individual programming. Two articles reported insignificant results of the learning performance effects. Ko\u0107-Januchta et al. (2020) used a quasi-experiment to compare the effect of AI-enabled E-book and common E-book in students' biology learning, and the results showed that there was no significant difference of students' learning gains between these two types of books. Also, Hellings and Haelermans (2020) conducted a randomized experiment to examine the effect of a learning analytics dashboard with predictive function in a computer programming course, but no significant improvement was found on student performance in the final exam.\n\n**The effect of affective perception:** Among all the reviewed articles, a majority of studies revealed the educational effects of AI technologies on students' affective perception, such as attitude, interest, and motivation (N=17). On the one hand, students showed satisfaction and positive attitude towards the integration of AI technologies and STEM education. For example, Azcona et al. (2019) used a questionnaire to find students' positive feedbacks and attitudes towards the application of learning analytics in computer programming classes to detect and warn learning risks. Gavrilovi\u0107 et al. (2018) evaluated student's satisfaction of an AI-supported adaptive learning system in Java programming learning through the survey approach; the results revealed the positive feedbacks of students. On the other hand, the application of AI technologies also arouses students' interests and motivation in STEM learning. For example, Balakrishnan (2018) used a mixed-method approach (i.e., questionnaire and interview) to examine the impact of a computer-based personalized learning environment (PLE) on engineering students' motivation, and the results revealed the potential of PLE to engage students in learning with a strong sense of interest and motivation. Verner et al. (2020) investigated students' perceptions and attitudes towards an interactive robot tutor in science classes and found that the human\u2013robot interaction fostered students' active learning, maintain their attention and interest in the learning processes.\n\n**The effect of higher-order thinking:** Among all the reviewed articles, some studies revealed the educational effects of AI technologies on students' higher-order thinking ($N=7$), such as problem-solving ability, computational thinking, and self-regulated learning skills. For example, Hooshyar et al. (2015) employed a quasi-experimental design to examine the impact of a flowchart-based intelligent tutoring system (FITS) on students' programming learning and found better improvement of problem-solving abilities in the FITS group than the control group. Lin and Chen (2020) found that students who used a deep learning-based AR system performed significantly better in computational thinking than those using an AR system without deep learning recommendation. Jones and Castellano (2018) utilized adaptive robotic tutors to promote students' self-regulated learning skills and found that when a robotic tutor provided scaffoldings adaptively, more self-regulated learning behaviors were observed from students over the control condition without scaffoldings. Garc\u00eda-Gorrostieta et al. (2018) used experimental evaluation to test the effect of the automatic argument assessment on students' computer engineering writing, and the results revealed that the argument assessment system helped students improve argumentation ability in their writing.\n\n**The effect of student learning pattern and behavior:** Among 42 reviewed articles that mentioned educational effects and findings, 12 articles revealed students' learning patterns and behaviors in STEM education by using AI-enabled data mining and learning analytics approaches. For example, Sapounidis et al. (2019) detected 48 children's preference profiles on tangible and graphical programming through latent class modeling; results found that the graphical programming was preferred by a majority of children, especially children in younger ages. Pereira et al. (2020) used learning analytics (i.e., k-means, association rule algorithms) in the Amazonas to understand students' behavior in introductory programming courses and found high heterogeneity among them. Three clusters of novice programmers were detected to explain how student behaviors during programming influenced the learning outcomes. Wang (2016) utilized data mining and learning analytics techniques (i.e., association rule, decision tree) to investigate college students' course-taking patterns in STEM learning; the results found that the most viable course-taking trajectories is taking mathematics courses after initial exposure to subject courses in STEM.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "2013",
+                "2021",
+                "2020",
+                "2019",
+                "2018",
+                "2015",
+                "2016"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Technological Effects and Findings",
+              "parent_subsection_id": "s_4_3",
+              "text": "From the technological perspective, 24 of the 63 reviewed articles reported the technological effect and findings (e.g., efficiency of technology, accuracy of algorithm) when applying AI techniques in STEM education. For example, \u00c7\u0131nar et al. (2020) utilized multiple machine learning algorithms, including Support Vector Machines (SVM), Gini, k-Nearest Neighbors (KNN), Breiman's Bagging, Freund and Schapire's Adaboost. M1 algorithms, to automatically grade open-ended physics questions; the results reported that AdaBoost.M1 had the best performance with the highest accuracy of prediction models among all machine learning algorithms. Nehm et al. (2012) used a corpus of biology evolutionary explanations written by 565 undergraduates to test the efficacy of an automated assessment program, Summarization Integrated Development Environment (SIDE); the results showed that, compared to human expert scoring, SIDE had better performance when scoring models were built and tested at the individual item level, and the performance degraded when suites of items or entire instruments were used to build and test scoring models. Bertolini et al. (2021) employed five machine learning methods to quantify predictive efficacy of predictive modeling in undergraduate students' outcome in biology. Results found that individual machine learning methods, especially logistic regression achieved a poor prediction performance while ensemble machine learning methods, in particular the generalized linear model with elastic net (GLMNET), achieved the high accuracy. Deo et al. (2020) adopted a computationally efficient AI model called extreme learning machines (ELM) to predict weighted score and the examination score in engineering mathematics courses; the results showed that ELM outperformed in prediction with respect to random forest and Volterra.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "2020",
+                "2012",
+                "2021"
+              ]
+            }
+          ],
+          "text": "This review summarized the educational and technological effects of AI applications in AI-STEM research.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "To answer the research questions, the results section presents the following three main topics: (1) the categories of the AI element in the AI-STEM system; (2) the characteristics of other system elements (i.e., information, subject, medium, and environment) as well as the distribution of AI in these elements, and (3) the effects and findings of the application of AI in STEM education.",
+      "citations": [
+        "W3017131514",
+        "W3084021717"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "2"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Discussion and Implications",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "Addressing Research Questions",
+          "subsubsections": [],
+          "text": "Although AIEd has attracted wide attention in educational research and practice, few research works have investigated the applications of AI in STEM education context. To gain a comprehensive understanding of the integration of AI in STEM education, this study conducted a systematic review of AI-STEM empirical research from 2011 to 2021. Grounded upon GST, we examined the AI technologies and applications in STEM education, the characteristics of other system elements (i.e., information, subject, medium, environment), the distribution of AI in these elements, and the effects of AI applications in STEM education. To answer the first question, we found a gradually increasing trend of AI applications in STEM education in the past decade. Furthermore, six categories of AI applications were located, namely learning prediction, ITS, student behavior detection, automation, educational robots, and others (i.e., AI text book, group formation). Regarding the characteristics of elements and the distribution of AI in these elements, first, we found all categories of AI techniques, especially student behavior detection, ITS, and learning prediction, were frequently applied in the learning contents of science and technology. Second, instructors usually involved in STEM education to support students and they used lecturing strategy the most frequently, followed by problem-based learning. Automation was only applied in the lecturing instruction mode and educational robots were most frequently applied in the problem-based learning mode. Third, a majority of AI techniques (except educational robots) were applied in higher education with medium and large scale of learners. The most frequently used AI in higher education were learning prediction and ITSs. Fourth, computer system resource was the most frequently used medium to convey knowledge, particularly when it was applied in ITSs and automation, while paper, mobile phone, and E-book resources were seldom used in AI-STEM research. Fifth, the face-to-face environment was mainly utilized to support all categories of AI applications, and web-based environment was most frequently used supported with ITSs.\n\nRegarding the third question, this review summarized the educational and technological effects and findings of AI applications in STEM. From the educational perspective, the results showed that most of the AI applications had positive effects on students' academic performance. However, insignificant improvements of learning outcomes were also found in two empirical studies [W3034267728, W2808220452]. Moreover, most students held positive attitudes towards the use of AI technology in STEM education, and AI technologies aroused their interest and motivation as well. In other words, the AI applications are beneficial for fostering student's active learning in STEM education. Moreover, the applications of AI techniques also contributed to the development of students' higher-order thinking, e.g., computational thinking, problem-solving ability. In addition, AI techniques have great potential to assist instructors by detecting students' learning patterns and behaviors in STEM education. From the technological perspective, the reviewed articles mainly reported a good efficiency and algorithm accuracy when applying AI in STEM education. Specifically, AI algorithms, especially ensemble machine learning methods, performed well in learning prediction, automation, and personalized recommendation. Overall, underpinned by the GST framework, this review presented an overview of recent trends of the field of AI-STEM, which guided the following educational, technological, and theoretical implications.",
+          "citations": [
+            "W3034267728",
+            "W2808220452"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "Educational Implications",
+          "subsubsections": [],
+          "text": "The emergence of AI indirectly influences the subject elements (e.g., instructor, learner) in STEM education, which in turn would eventually influence the educational practices and effects. First, AI has potential to transform the instructor\u2013student relationships in STEM education from the instructor-directed to student-centered learning [UNMAPPED:108]. When AI is applied in STEM education, the role of instructor is expected to shift from a leader to a collaborator or a facilitator under the AI-empowered, learner-as-leader paradigm [W3157202587]. However, this review found that the instructor-centered lecturing mode was the most frequently used instructional strategy in AI-STEM studies, while other student-centered instructional strategies (e.g., the project-based learning, collaborative learning, game-based learning) appeared infrequently. One of the reasons centers on the complexity of integrating technology and pedagogy in STEM education [W2803746316, W2337155942, W2962755140]. For example, ITS and automation techniques are usually designed based on behaviorism [UNMAPPED:111] to support instructor's knowledge delivery and exam evaluation, which may be challenging for instructors to use when integrating it in the student-centered instructional strategies. Recent research has started to balance pedagogical design and technological application in educational practices in order to achieve the goal of AI\u2013instructor collaboration and student-centered learning when AI is integrated [W2981897858, UNMAPPED:112, UNMAPPED:2]. Furthermore, another critical question is: would AI replace instructor responsibilities and roles in STEM education [W2981307235]? In this review, we found that the role of instructor was still irreplaceable, because the instructor's involvement existed in most of the AI-STEM research. Even though AI can free instructors from redundant tasks in STEM education, it still lacks the human ability to convey social emotion, solve critical problems, and implement creative activities [W3085793997, W2011607672, UNMAPPED:117]. Therefore, although AI techniques can bring opportunities to develop STEM education [W3084021717], we cannot overstate the role of technology and overlook the essential role of instructor [UNMAPPED:29]. Overall, instructors, as important subjects in the educational system, need to take agency to promote the pedagogical designs and strategies when applying AI technologies, in order to achieve a high quality of AI-STEM education [W3188577156].",
+          "citations": [
+            "W3157202587",
+            "W2803746316",
+            "W2337155942",
+            "W2962755140",
+            "W2981897858",
+            "W2981307235",
+            "W3084021717",
+            "W3188577156"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "108",
+            "111",
+            "112",
+            "2",
+            "29"
+          ]
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "Technological Implications",
+          "subsubsections": [],
+          "text": "Although AI has the potential to enhance the instruction and learning in STEM education [W3017131514, UNMAPPED:2], the development of AI-STEM requires a better fit between AI technologies and other system elements in STEM education. First, regarding the relationships between AI and information element, the results showed that most of the AI applications were used in science and technology learning contents, and educational robots and automation were not applied in engineering and mathematics learning contents. Since STEM education contains interdisciplinary knowledge and learning contents from different subjects, AI is usually restricted in specific learning contents or courses [W2182207079]. Therefore, one of the future directions is to expand the commonality and accessibility of AI techniques in different STEM subjects and courses. Second, the range of AI applications was mainly located in higher education, while few of AI techniques were applied in other educational levels, especially in kindergarten. To some extent, due to the complex function and feedback mechanisms, most of the AI techniques (e.g., ITS, learning prediction) might be appropriate for adult learners. Hence, some interactive AI techniques, e.g., social robots, AI-enabled games, can be designed and developed to support young children's STEM learning [W3092395089, W3010002614]. Therefore, the ease of use is also one of the important considerations in future development of AI technologies [W3198068212, W3210166594]. Third, most of the AI-STEM research was conducted through the traditional mediums (e.g., computer system resource) and contexts (e.g., face-to-face learning environment). A future direction is to create AI-empowered STEM learning environment through combining the advanced educational mediums (e.g., E-book) and contexts (AR/VR), in order to better represent and convey knowledge [W2003564711].",
+          "citations": [
+            "W3017131514",
+            "W2182207079",
+            "W3092395089",
+            "W3010002614",
+            "W3198068212",
+            "W3210166594",
+            "W2003564711"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "2"
+          ]
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "Theoretical Implications",
+          "subsubsections": [],
+          "text": "Due to the complexity of AI-STEM system, this research used a theoretical framework based on GST to examine the multiple elements (i.e., AI technology, information, subject, medium, environment) in AI-STEM research. Compared to previous AIEd reviews that mainly focused on the technological perspective, GST provides a holistic view for us to consider the complex human, pedagogical, environment factors when applying AI in STEM education [W1991502782, W2032296637]. For example, we found that sometimes instructors did not engage in STEM education to support students, especially when applying ITSs and educational robots. It might reveal a new trend that some AI technologies (e.g., social robot, virtual agent) might have the potential to replace the original role of instructor and work as a new subject to individually convey knowledge [W3210166594]. Additionally, the results showed the different characteristics of learner's sample size when applying different AI techniques. Learning prediction was more likely to applied with a large scale of students, and educational robots were inclined to be applied with a small scale of students. The features of AI technologies might explain this phenomenon. For example, a data training process is necessary before learning prediction, which requires the support of algorithmic modeling techniques and large data sets [W1982378700, W2618249137], while educational robots, as human\u2013machine interaction technologies, seem more suitable and practicable for small-scale STEM learning [W3137696531, W3092395089]. Overall, the current study utilized the GST framework to examine the multiple elements in the complex AI-STEM system; it is suggested that different stakeholders, e.g., educators, technical developers, and researchers can adopt the GST framework as a guide to comprehensively consider the complex elements when applying AI techniques in STEM education [W1991502782, W2071900848].",
+          "citations": [
+            "W1991502782",
+            "W2032296637",
+            "W3210166594",
+            "W1982378700",
+            "W2618249137",
+            "W3137696531",
+            "W3092395089",
+            "W2071900848"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Conclusion, Limitation, and Future Direction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The application of AI technology in STEM education is an emerging trend, which is confronted with the challenge of integrating diverse AI techniques in the complex STEM educational system. Grounded upon a GST framework, this research reviewed the empirical AI-STEM studies from 2011 to 2021. Specifically, this systematic review examined (1) the categories of the AI element in the AI-STEM system; (2) the characteristics of other system elements (i.e., information, subject, medium, and environment) as well as the distribution of AI in these elements, and (3) the effects of AI in STEM education. Based on the results, the current work proposed educational, technological, and theoretical implications for future AI-STEM research, to better aid the educators, researchers and technical developers to integrate the AI techniques and STEM education.\n\nThere are three limitations in this systematic review, which lead to future research directions. First, although we searched the best-known scholar databases with the keywords relevant to AI-STEM, some biases might exist in the searching and screening process. Since AI-STEM is a highly technology-dependent field, some studies might only highlight the technology rather than the education context. Therefore, future studies can adjust the searching criteria to solve these problems. Second, from a system perspective, we used a GST framework to examine the multiple elements in the complex AI-STEM system, but we did not investigate the mutual relationships between elements. Therefore, the complex relationships between different elements (e.g., instructor\u2013learner, learner\u2013learner relationship) in AI-STEM system need to be further explored in order to gain a deep understanding of the application of AI in STEM education (e.g., [W3210166594]). Third, the current study only implemented a systematic review, a meta-analysis could be conducted in the future to report the effect sizes of recent empirical studies to gain a deeper understanding of the effects of the AI-STEM integration in an educational system. Overall, the potential of AI technology for enhancing STEM education is fertile ground to be further explored together with studies aimed at investigating the integration of technology and educational system.",
+      "citations": [
+        "W3210166594",
+        "W3017131514",
+        "W3084021717"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "2"
+      ]
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The authors would like to thank Luyi Zheng for her help on preliminary data analysis.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Author Contributions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "WX conducted data collection and analysis as well as writing of the first draft of this manuscript. FO designed the research, designed and facilitated data analysis and revised the manuscript. Both authors read and approved the final manuscript.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Funding",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This work was supported by National Natural Science Foundation of China, No. 62177041.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "Availability of Data and Materials",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The data are available upon request from the corresponding author.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_11",
+      "section_index": 11,
+      "section_label": "Declarations",
+      "subsections": [
+        {
+          "subsection_id": "s_11_1",
+          "subsection_index": 1,
+          "subsection_label": "Competing Interests",
+          "subsubsections": [],
+          "text": "The authors declare that they have no competing interests.\n\n**Received:** 11 June 2022 **Accepted:** 9 September 2022\n**Published online:** 19 September 2022",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4296369454_tables.md"
+}

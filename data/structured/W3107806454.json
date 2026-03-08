@@ -1,0 +1,453 @@
+{
+  "id": "W3107806454",
+  "metadata": {
+    "title": "MTD, Where Art Thou? A Systematic Review of Moving Target Defense Techniques for IoT",
+    "n_sections": 7,
+    "n_subsections": 19,
+    "n_subsubsections": 0,
+    "n_tables": 14
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "I. INTRODUCTION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "THE Internet of Things (IoT) is a reality. Billions of IoT devices are already deployed in real-world environments, and the number increments every year [UNMAPPED:1]. IoT systems are used in a wide variety of use cases like agriculture, city infrastructure services, industrial automation, personal health, and home usage. Modern societies are increasingly reliant on IoT systems. Their widespread usage also translates into them being a high-value target for cyberattackers [W2733765803]. From a cyberdefense perspective, the constrained nature of most IoT devices imposes additional challenges to protect them. On the one hand, most legacy security techniques are not straightforward to use and need to be adapted. On the other hand, defining novel security mechanisms is a task that requires lots of research effort and validation; a flaw in their design or implementation can have serious consequences. Research effort in IoT security has risen in recent years, but many challenges still remain open [W2768696376].\n\nMoving Target Defense (MTD) has been proposed as a cyber-defense paradigm in 2009 [UNMAPPED:4]. It is motivated by the inherent disadvantage at which static systems are when facing cyberattackers. With enough time and a static target, attackers will eventually find and exploit vulnerabilities of the system. In other words, it is not a question of if but when the system will be penetrated. By acknowledging this fact, MTD proposes to inherently make systems dynamic in order to limit the cyberattackers in the domain of time. Against an MTD system, the attacker has limited time to find and exploit vulnerabilities. A vulnerability found -but not exploited yet - may not be present in the next system state. Even if a vulnerability is exploited, the future state of the system may neutralize its effects. This is a desirable feature for resilient systems.\n\nIn 11 years since the inception of MTD, more than 80 distinct techniques have been proposed [UNMAPPED:5]. Also, several MTD techniques survey articles have been published [W2034144210, W2553733554, W2883263864, W2914370086, W2996903041, UNMAPPED:5, UNMAPPED:10]. However, limited work has been published about MTD targeted at IoT systems. The most recent peer-reviewed MTD surveys [W2914370086, W2996903041], identify less than five IoT-specific MTD techniques. A recent book chapter [W3034218580] focuses on MTD for IoT and effectively identifies around a dozen techniques. MTD for IoT is an acknowledged promising field of study [W2914370086, W3034218580]. However, we believe there is still a lack of an in-deep survey of its state of the art.\n\nIn this work, we present a survey of MTD for IoT as thorough and transparent as possible. We also intend to provide evidence-based justification for MTD as a suitable cyber-defense paradigm for the IoT and not a mere promising or future work technique. Hence, this survey uses a systematic literature review methodology, widely employed in the Medical science fields, but adapted for the Software Engineering fields by P. Brereton, B.A. Kitchenham et al. [W2118328848]. This method focuses on defining and documenting the survey process (e.g., the search databases and strings, inclusion-exclusion criteria, data extraction methods), making it as transparent as possible, and reproducible by independent researchers. The methodology aims at producing evidence-based answers to clearly defined Research Questions.\n\nTo the best of our knowledge, this is the first MTD survey to empirically use Shannon's entropy metric for the studied MTD techniques. We also developed other entropy-related metrics to measure qualitative aspects that are not captured by the Shannon entropy.\n\nContributions In summary, the major contributions of this work are the following:\n\n- A Systematic Review of MTD techniques for IoT. This review enforces the guidelines by Kitchenham et al. [W2612764117]. This is the first peer-reviewed MTD survey focused on IoT. Moreover, two-thirds of the techniques were not previously identified by MTD literature.\n\n- An evidence-based assessment of the security status of the techniques and validation of the feasibility of MTD for IoT. To the best of our knowledge, this is the first MTD review to focus on the cryptographic primitives of the studied techniques.\n\n- The definition of four new entropy-related metrics and their empirical application. Moreover, this is the first review to make practical use of Shannon\u2019s entropy as a metric. The metrics have applications beyond the scope of this article.\n\nThe rest of this work is structured as follows. Background and related work are presented in Sec. II. The entropy-related metrics are defined in Sec. III. The methodology used in this survey is documented in Sec. IV and the results in Sec. V. Some discussion and future work perspectives are offered in Sec. VI. Finally, Sec. VII concludes this work.",
+      "citations": [
+        "W2733765803",
+        "W2768696376",
+        "W2914370086",
+        "W2996903041",
+        "W3034218580",
+        "W2118328848",
+        "W2612764117"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "II. BACKGROUND AND RELATED WORK",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "A. The MTD Paradigm",
+          "subsubsections": [],
+          "text": "MTD is a cyberdefense paradigm that proposes to proactively dynamize systems' components to thwart cyber attackers that rely on the static nature of them. Leaked system information is now ephemeral, and time is a constraint for attackers.\n\na) History: The concept of changing system components to prevent unintended parties to disrupt its purpose is not new. Applications of this concept can be tracked in modern science at least to more than one hundred years ago in a patent of N. Tesla [UNMAPPED:15] in a precursor idea of the Frequency-Hopping Spread-Spectrum techniques for wireless communication systems. Defense through constant change in the Internet era can also be found at least since 2001: a U.S. DARPA project explored dynamic IP address and TCP port numbers [W2115691067]. However, it is not until 2009 that the term \u201cMTD\u201d was coined and explicitly proposed as a cyberdefense paradigm by the Networking and Information Technology Research and Development (NITRD) program in the context of a U.S. National Cyber-Defense Summit [UNMAPPED:17].\n\nb) MTD Definition: R. Zhuang et al. [W1999588868] concisely define MTD as \"constantly changing a system to reduce or move the attack surface available for exploitation by attackers\". The NITRD program originally defined the MTD paradigm as follows [UNMAPPED:19]:\n\n> MTD enables us to create, analyze, evaluate, and deploy mechanisms and strategies that are diverse and that continually shift and change over time to increase complexity and cost for attackers, limit the exposure of vulnerabilities and opportunities for attack, and increase system resiliency.\n\nc) Rationale: MTD acknowledges that vulnerabilities are present in any system and that there is an information asymmetry between static systems and attackers. Because information about the system does not expire, cyber attackers with enough resources \u2013time in particular\u2013 will eventually find an exploit, develop and launch a successful attack. The defeat of a static system facing a persistent attacker is ineluctable.\n\nMTD tries to equilibrate this information asymmetry by limiting the time validity of \u2013possibly leaked\u2013 system information. MTD\u2019s security goal is to make the task of finding and exploiting a vulnerability more resource-consuming for the attackers, as compared to a non-MTD version of a system. MTD proposes to achieve this by constantly changing some of the system\u2019s components that, in turn, will also imply changing the system\u2019s attack surface. A system\u2019s attack surface is \u201cthe subset of the system\u2019s resources that an attacker can use to attack the system\u201d [UNMAPPED:20].\n\nThe components-attack surface's constant \"movement\" makes that the information an attacker gathered about the system is now limited in time. Thus, a discovered and then crafted attack at a given time $t_{0}$, might not work when the attacker launches it later at $t_{0} + \\Delta t$; because the target system is no longer the same: the attack surface shifted, and the vector of attack may no longer be valid. Even if the attack is successful at $t_{1}$, the MTD movement may limit the attack's effectiveness; e.g., the system at $t_{1} + \\Delta t$ is no longer vulnerable. This MTD's game-changer property can be resumed [UNMAPPED:17] as \"attacks only work once if at all\".\n\nMTD contrasts with systems' security measures that try to keep the attack surface small (i.e., attack surface reduction). In the software domain, these approaches remove bugs at the source, identify malicious attacks against deployed software, and patch software as rapidly as possible [UNMAPPED:19]. However, the \"perfect\" software approach does not scale to the increasing complexity current system's software. The patch distribution approach is standard practice in modern systems, but it has proven difficult to be ahead of the attackers. Avoiding exposed vulnerabilities should still be a priority, but MTD is proposed as a game-changing (pro)active approach that can complement that standard reactive practices. Furthermore, defenders do not entirely know a system's attack surface (e.g., zero-day vulnerabilities). Thus, those unknown vectors of attack can not be reduced in number nor quality, but at least they can be \"moved\" by MTD techniques.\n\nd) Literature: The MTD literature can be divided into three fields [W2553733554]: theory [W1999588868, W2149327697, UNMAPPED:22, UNMAPPED:23], strategy [W2034144210, W2553733554, W2883263864, W2914370086, W2996903041, UNMAPPED:5, UNMAPPED:10], and evaluation [W2765736291, W2888219913, W2790159620]. The Strategy field covers concrete MTD techniques that can be implemented in real systems. This survey focuses on this field, with the particularity of being applicable to constrained IoT systems, and we detail it in the next subsection.\n\nMTD Theory deals with mathematical-analytical theory, systems and attacker models, and theoretical tools to formally discuss about MTD. R. Zuang et al. defined three components that constitute the foundations of MTD Theory: MTD Systems Theory [W1999588868], a Cyber Attack Theory [UNMAPPED:22], and their interaction [UNMAPPED:23].\n\nThe MTD Evaluaton field deals with methods to evaluate and quantify the effectiveness of MTD systems. This research field includes mostly the definition of metrics that allow not only the assessment of the effectiveness of a particular MTD system's technique but also allow the comparison among different ones. The field has practical importance because metrics can guide the design and implementation of novel or existing MTD techniques.",
+          "citations": [
+            "W2115691067",
+            "W1999588868",
+            "W2553733554"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "15",
+            "17",
+            "19",
+            "20",
+            "22",
+            "23"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "B. MTD Techniques, Design Principles, and a Taxonomy",
+          "subsubsections": [],
+          "text": "An MTD technique is an instance of the MTD paradigm detailed for a specific system and use case. We define the Moving Parameter (MP) as a component of the system that will be changed-adapted over time by the MTD technique.\n\nIn this subsection, we focus on general design principles shared by the more than 100 distinct techniques that exist and were previously identified and analyzed in the literature. An MTD technique needs to define three fundamental design questions: WHAT, HOW, and WHEN to move. These principles were first proposed by Cai et al. [W2553733554], and can be defined as follows:\n\n- WHAT to move determines the component(s) of the system to which the technique will be applied. In other words, the MP(s).\n\n- HOW to move is about the methods for (i) define valid states of the MP, and (ii) chose one valid state for the system. MTD techniques use three types of methods: Shuffling (randomization), Diversification, and Redundancy-based.\n\n- WHEN to move is about applying the state change, i.e., the decision process that triggers the MP value change. The literature identifies three types of decision processes: Time, Event, and Hybrid-based\n\nTo conclude this subsection, we present a taxonomy for MTD techniques based on the system layer to which the MP pertains. It was first proposed by Okhravi et. al [W2034144210, UNMAPPED:5] and is composed of the following categories:\n\n- Dynamic Data: Techniques that change the format, encoding, or representation of application data, i.e., same semantics with different syntax.\n\n- Dynamic Software: Techniques that change an application\u2019s binary code dynamically, e.g., binary objects shuffling, application diversification.\n\n- Dynamic Runtime Environment: Techniques that change the execution environment dynamically, e.g., RAM addresses, instruction set.\n\n- Dynamic Platform: Techniques that change the computing platform properties, e.g., CPU architecture, OS, virtual machine instance.\n\n- Dynamic Networks: Techniques that change network properties, e.g., protocols, addresses, topology.\n\nAs stated before, this taxonomy is based on the MP's system layer and is widely used in MTD literature. We use these categories extensively in the current work.",
+          "citations": [
+            "W2553733554",
+            "W2034144210"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "5"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Related Work",
+          "subsubsections": [],
+          "text": "MTD was proposed in late 2009, and the first peer-reviewed survey of MTD techniques appeared in 2013 [W2034144210]. Since then, many generic surveys of MTD techniques have been published [W2034144210, W2553733554, W2883263864, W2914370086, W2996903041, UNMAPPED:5, UNMAPPED:10] identifying around 100 distinct techniques.\n\nHowever, IoT applicability is not considered in most of them. Indeed, only two peer-reviewed recent surveys consider MTD for IoT. Zheng et al. [W2914370086] has a sub-subsection of lightweight MTD; it identified two techniques and mentioned that more MTD techniques for resource-constrained devices are required. Cho et al. [W2996903041] has a sub-subsection of Internet-of-Things within a discussion of application domains for MTD; it identified four techniques and acknowledged that MTD seems promising for IoT systems but with some limitations when compared with conventional MTD. A recent book chapter by Saputro et al. [W3034218580] focuses on the applicability of MTD for IoT applications. It extensively discusses general concepts of MTD, IoT, and Software-Defined Networking (SDN). It dedicates an entire section to MTD for IoT techniques. They focus on network-category techniques and propose a subdivision of the network taxonomy. They identify around a dozen MTD for IoT techniques from the Network category. They highlight the potential of SDN-based solutions and discuss that the military and industrial IoT applications may benefit from it.\n\nIn respect to the systematic literature review approach, none of the aforementioned surveys used it. However, Torquato et. al [W3003279768] conducted a systematic mapping study$^{1}$ of MTD in cloud computing. Hosseinzadeh et al. [W2868191876] performed a systematic review of Diversification and obfuscation techniques for software security, a broader topic than MTD.",
+          "citations": [
+            "W2034144210",
+            "W2914370086",
+            "W2996903041",
+            "W3034218580",
+            "W3003279768",
+            "W2868191876"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we first present the MTD cyberdefense paradigm. Then, we focus on MTD techniques: definitions, design principles, and their taxonomy. Finally, we highlight related work about MTD surveys and the systematic review approach.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "III. METRICS",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Shannon Entropy of the Moving Parameter",
+          "subsubsections": [],
+          "text": "This metric is based on the maximum Shannon\u2019s entropy of the Moving Parameter (MP) of an MTD technique. Works by Zhuang et al. [W1999588868], and Hobson et al. [W2149327697] already used Shannon\u2019s entropy concept for MTD systems in a theoretical way. In this article, we present our own approach but refer the reader to those works for more information.\n\nLet X be a MP of a system, x be a valid state for X, and E be the set of all valid states $\\{x_{1}, x_{2}, \\ldots, x_{n}\\}$. We can use Shannon's information entropy concepts if we define X as a discrete Random Variable (RV) with possible values $\\{x_{1}, x_{2}, \\ldots, x_{n}\\}$ and a probability mass function $P(X)$. The Shannon Entropy in bits of the MP X is defined as:\n\n$$H(X)=-\\sum_{i=1}^{n}P(X=x_{i})\\log_{2}P(X=x_{i})$$\n\nLarge values of $H(X)$ are desirable for MTD systems. This assumption is defined as the MTD Entropy Hypotesyis [W1999588868], also Hobson et al. [W2149327697] defines that an MTD technique is unpredictable iff $H(X) \\gg 0$.\n\nIn this work, we are interested in the maximum value $H(X)$ for a given technique. For a practical application of this metric to the MTD techniques in the literature, we use two results from information theory. First, $H(X)$ is maximized if $P(X)$ follows a discrete uniform distribution, i.e., every value x is equiprobable. For a RV X with n possible values $\\{x_{1}, \\ldots, x_{n}\\}$, this maximal value is $\\log_{2}(n)$ bits. Second, MTD techniques will take inputs and deterministically produce an output, i.e., the MP value. It is well known that a theoretical limit exists for the output entropy of a process [W1999588868]: the entropy of the output RV can not be greater than the sum of the entropy of the input RVs. For a single RV input Y, $0 \\leq H(X) \\leq H(Y)$.\n\nWe present three examples of the use of $H(X)$ as a metric for MTD systems in which the MP X is:\n\n- The OS firmware, and there are 2 possible states: $H(X) \\leq \\log_{2}(2) = 1$ bit.\n\n- The Encryption Algorithm used, and there are 16 possible states: $H(X) \\leq \\log_{2}(16) = 4$ bits.\n\n- The IPv6 Address of 128-bits, but the secret key to calculate it is a value of 32-bits (input RV Y): $H(X) \\leq H(Y) \\leq \\log_{2}(2^{32}) = 32$ bits.\n\nTo the best of our knowledge, this is the first MTD survey that evaluates the Shannon entropy of the studied techniques.",
+          "citations": [
+            "W1999588868",
+            "W2149327697",
+            "W2733765803",
+            "W2115691067"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Qualitative Entropy-related Metrics: Definitions",
+          "subsubsections": [],
+          "text": "Many qualitative factors of the entropy are not captured by the Shannon entropy $H(X)$. For example, attacking 16 different OS firmwares is arguably harder than attacking 16 different IP addresses. In addition, switching an OS firmware may consume more resources for the system than switching an IP address, and this will impact a real-world implementation of the technique. Thus, 1 bit of entropy of the OS firmware as the MP is not qualitatively equivalent to 1 bit of entropy of the IP address as the MP.\n\nIn order to capture some of these qualitative differences, we define four novel metrics: GEN, STO, MOV, and ATT.\n\n**TABLE I: MTD Entropy-related Metrics.**\n\n{{TABLE:tbl_01}}\n\nBesides, we define an indirect metric Q derived from the first three. The metrics are based on the MP X modeled as a discrete RV and are related to a valid value $x_i$. Their definition is in Table I.\n\nGEN, STO, and MOV measure cost from a system's perspective. ATT measures cost from an attacker's perspective. The cost is estimated in terms of the entity's use of limited resources (e.g., time, computing power, hardware). A priori, the lower the cost of GEN, STO, and MOV, the higher $H(X)$ that will be attainable with fixed resources. The metric Q aggregates the three system-centric metrics GEN, STO, and MOV. In order to sum direct metrics, they should be expressed in the same dimension or be dimensionless. For a given technique, each individual system-centric metric can be mapped to a dimensionless value in $\\{0,1,2\\}$ from the original domain of $\\{Low, Med., High\\}$. Formally, we use the functions g, s, and m to convert the direct metrics to a dimensionless scalar value. From a system defense's perspective, 0 is the most desirable value (lower cost) and 2 the least (higher cost). We define Q as the arithmetic sum of the mapped dimensionless system-centric metrics. We call Q the entropy cost because it captures how expensive, in terms of resources, is for the system the process of generating, storing, and moving the MP value. Its value is in the range $\\{0,1,\\ldots,6\\}$ and the lower this value, the better from a system's perspective. Ideally, we want MTD techniques with high values of entropy $H(X)$ at a low-cost Q.\n\nThe ATT metric aims at capturing the entropy exploration cost from an attacker's perspective. Because time is a limited resource for an attacker facing an MTD system, ATT gives a measurement of the entropy (attack surface) exploration speed. From a system's perspective, high ATT values are desirable. It will translate in an attack surface that will be difficult (i.e., costly, slow) to explore.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Qualitative Entropy-related Metrics: From Definitions to Empirical Use and Evaluation",
+          "subsubsections": [],
+          "text": "a) The Third Value: All the qualitative metrics, but Q, are of ternary value: Low, Med., and High. This choice is justified because of the inherent uncertainty and difficulty of measuring them for concrete and heterogeneous MTD techniques. Binary values were discarded because of being too coarse-grained, it was hard to define the limiting threshold, and high uncertainty was present in values close to this threshold. An ordered ternary system mitigates these issues. We can approach the estimation in a binary-way, but if the estimation proves not conclusive (e.g., because the value is close to the binary threshold), the ternary value between the two extremes can be assigned. In this survey, we approached the evaluation binarily and use the Med. value that way.\n\nb) Dimension of Cost: Furthermore, in Sec. III-B we defined the metrics as an estimation of the cost of the entity's limited resources, but we did not assign a dimension to this cost, e.g., time-seconds, information-bit, volume-$\\mu m^{3}$, currency-dollars. The definition is intentionally generic, because what is a limiting resource for one entity in a concrete MTD setting, may not be limiting in another one. Thus, this generic definition allows the metrics to be adaptable to a variety of settings.\n\nHowever, to compare two or more MTD techniques \u2013like in this survey\u2013, the metric definition has to be consistent among them. In other words, for an empirical use of the qualitative metrics, more definitions are needed to express this cost.\n\nEach direct qualitative metric has to be further defined in terms of a commensurable quantity (i.e., same dimension) that will be consistently used among all the techniques under study. In this survey, we used the following cost dimensions for the direct metrics: time for GEN, MOV, and ATT; and information (e.g., bits) for STO.\n\nAs for the indirect metric Q, it synthesizes the three direct system-centric metrics in a single scalar value. Consequently, Q conveys less information than the three metrics (i.e., a three-dimensional vector), but allows for more straightforward comparisons and visual representations of the overall system's entropy cost. In this survey, the three functions g, s, and m that map the values from the direct metrics to the same codomain are simply: $\\{Low \\mapsto 0, Med. \\mapsto 1, High \\mapsto 2\\}$.\n\nc) Estimation of Cost for concrete MTDs: Once the dimension of each direct metric is defined, a fundamental question should be answered: how to evaluate a direct metric for a set of MTD techniques?\n\nIn an ideal setting, we should dispose of baseline hardware for the IoT system and the attacker. Then, implement all the MTD techniques into consideration and for the attacker to implement the state-of-the-art attack that corresponds to each technique. In this ideal hardware case, we could measure the cost directly (time and bits), and even use more fine-grained values (e.g., $\\mathbb{R}_{\\geq0}$). A second approach by simulation could ease the task, but a simulation model valid for all the heterogeneous MTD techniques' use cases (e.g., physical modulation, firmware image exploits, network addresses, application resources) does not exist.\n\nNeither of the aforementioned approaches is empirically practicable in a survey, some of the reasons are: (i) The required engineering person-hours to implement all the techniques under consideration will be hard to acquire; for example, in the current survey, only 22% of the articles implemented in hardware the sole technique under its consideration. (ii) Some techniques in the literature do not provide all the design details to implement them in real hardware.\n\nHowever, consider the following example, as similarly stated in the intro of Sec. III-B: We can sensibly agree that there is one ore more orders of magnitude in the GEN and MOV time-cost difference when: (A) the MP is a 32-bit RAM value inside a node (e.g., $\\leq 100msec$) (B) the MP is a 100 node physical topology arrangement (e.g., $\\gg 100msec$). Even if we can not precisely measure the time value, 32 information bits are considerably \u201cless costly\u201d to generate and move than a 100 physical IoT nodes\u2019 topology. In other cases, the techniques may be of the same order of magnitude. This order-of-magnitude comparison can be attempted with any pair of techniques and metric.\n\nYet, the question remains: how to capture\u2014evaluate these differences or similarities in orders of magnitude for every heterogeneous MTD technique in a set? In this survey, we use a relative metrics approach and state some hypotheses to approach a methodology to make this comparison. We detail this evaluation method in the remainder of this section.\n\nd) Evaluation in this Survey \u2013 Approach: First, we do not attempt to evaluate the direct metrics into an absolute value, but in relative terms to the set under evaluation.\n\nSecond, the following general hypotheses\u2014assumptions were used, if needed: (i) A system with 100 nodes. (ii) A node with 32 KB of RAM and 250 KB flash.\n\nThen, for the set of MTD techniques to evaluate, the approach was the following:\n\n1. Define a technique as representative of the \"Low\" value.\n\n2. Define a technique as representative of the \u201cHigh\u201d value.\n\n3. For each remaining technique, determine to which category\u2014order of magnitude it pertains, as follows:\n\n a. If a similar technique has been categorized, use that same category; unless the current technique presents a game-changing technical innovation (in that case, continue evaluation).\n\n b. If the technique has empirical evaluation elements, use them to match the order of magnitude with \"Low\" or \"High\" techniques. Else, continue.\n\n c. If no empirical evidence nor similar technique is present, the evaluators can extrapolate the cost for the metric and technique under study using their knowledge in the field and the technique's article (or a \"synthesis\" of the article). For example, propagating MP changes that impact a distributed system will be more costly than changes that impact only one node, or hardware-based MPs are more resource-consuming than information-based MPs. This is a non-methodical subjective step.\n\n d. If no conclusive evaluation can be done, categorize the technique as \u201cMed.\u201d\n\nIn this survey, this evaluation was done by three of the authors. First, we agreed on the representative \u201cLow\u201d and \u201cHigh\u201d techniques for each metric. In this case, a same representative reference was chosen for all metrics (GEN, STO, MOV, and ATT): \u201cLow\u201d $\\equiv$ \u201cIPv6 64-bit Addresses randomization\u201d by Sherburne et al. [W2168325269], and \u201cHigh\u201d $\\equiv$ \u201cOS firmware reconfiguration\u201d by Casola et al. [W2074343878]. Then, the evaluation was done independently using the extracted data for each technique (See Listing 1). Moreover, at least one author that read the full article was available to answer questions to the others, if needed, in the subjective extrapolation step (3c). Finally, the evaluation results were synthesised using simple majority and using \u201cMed.\u201d in case of no majority.",
+          "citations": [
+            "W2168325269",
+            "W2074343878"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we define the metrics that are employed in the current literature review. Several metrics for MTD have been proposed [W2765736291, W2888219913, W2790159620]. However, in general, they are of difficult applicability to concrete and heterogeneous strategies. In this survey, we use metrics related to the entropy of the moving parameter. These metrics have the property of being applicable to the surveyed MTD techniques with a reasonable effort.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "IV. METHODOLOGY",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Research Questions",
+          "subsubsections": [],
+          "text": "This systematic review aims to provide an overview of existing MTD techniques for IoT and insights about their maturity in terms of security and usability. To achieve this goal, we defined four Research Questions (RQ) that guide this review:\n\n- RQ1: How many proposals of MTD techniques for IoT exist?\n- RQ2: What characteristics can be observed in the proposals?\n- RQ3: How sound are the security foundations of the proposals?\n- RQ4: To what extent the proposals can be used in a real IoT deployment?\n\nThe research questions are ordered from the more generic to the more particular. The first two are broad research questions. We separated them because RQ1 focuses on quantitative facts while RQ2 on qualitative ones. The last two, RQ3 and RQ4, inquire into technical qualitative properties of the proposals. They are useful to give an assessment of the maturity of the MTD for IoT field.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Search Process",
+          "subsubsections": [],
+          "text": "The search process involved three complementary methods: manual search, automated search, and snowballing.\n\n1. **Initial Manual Search and Update:** The initial set of articles was obtained non methodically from Dec. 2017 to Sep. 2019. It included articles suggested by colleagues, manually found using references in other articles, and non-systematic searches in Google Scholar. In addition, we manually searched among all editions of the ACM Workshop on Moving Target Defense. Initially, the set was not large enough to justify a systematic literature review. In Sep. 2019 the set consisted of 18 articles, and we estimated a systematic literature review meaningful. In July 2020, we did a manual update to include recently published work.\n\n Reproducibility. Manually including article [W2969920946], the automated search, and the snowballing method will yield the same results without the need of this manual set.\n\n2. **Automated Search:** For the automated search, we defined a search string and used six well-known digital databases.\n\n Databases. The databases used were the following:\n\n - IEEE Xplore\n - ACM Digital Library\n - Springer Link\n - Wiley Online Library\n - ScienceDirect\n - Scopus (meta-searcher)\n\n Search String. The search string was the following:\n\n `(\"mtd\" OR \"moving target defense\") AND (\"iot\" OR \"internet of things\")`\n\n Note that the term mtd yield many false positives (e.g., machine-type devices, minimum-traces-to-disclosure). We suggest researchers not using acronyms in the search string. The title and abstract of the articles will include the unabridged term of the acronym. This will reduce false positives and make the search and selection process less time-consuming. The automated search was conducted during the month of April 2020.\n\n Duplicates Removal. We used the JabRef reference manager to combine and remove duplicates from the raw search results. We prioritized exporting-importing in BibTeX format.\n\n3. **Snowballing:** Snowballing is a search technique that identifies potential additional articles to include in a systematic literature review [W1975675278]. Snowballing is a complementary technique to the automated string search process and requires a start set of papers that are known to be relevant and will be included in the literature review. Snowballing's rationale is that papers about the same subject will reference each other and by following these interconnections, we can identify relevant work that may not have been included in the start set. Backward snowballing identifies (past) articles that are on the reference list of an included study. Forward snowballing identifies (future) articles that refer to an included study. These additional articles will go through the selection process to determine if they are relevant or not. The snowballing process can be applied iteratively over the new set of selected articles. We applied both backward and forward snowballing using the Scopus meta-searcher. The first iteration was applied to the studies selected by the initial manual and automated search process. We performed two iterations. Snowballing was performed during April-May 2020.",
+          "citations": [
+            "W2969920946",
+            "W1975675278"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Selection Process",
+          "subsubsections": [],
+          "text": "The selection process is applied to search results and determines which studies are included in our review. We explicit the inclusion and exclusion criteria used to filter the results. The inclusion criteria are:\n\n- I1: Studies that propose MTD-based techniques that can be used in constrained IoT devices.\n - The level of detail of the technique is not excluding.\n - Not mentioning MTD nor IoT is not excluding.\n- I2: Studies in the English language.\n- I3: Peer-reviewed studies or books.\n\nThe exclusion criteria are:\n\n- E1: Studies that despite mentioning MTD and IoT:\n - Propose techniques for non-constrained devices, e.g., smart vehicles (broad use of the term IoT).\n - Propose techniques not applicable to IoT devices directly, but to other non-constrained components of the system, i.e., the technique was transparent to the IoT nodes. For example, firewalling, backbone/cloud, or non-constrained SDN solutions.\n- E2: Studies published before 2009.\n- E3: Studies for which we could not access the full text.\n\nThe criteria I2, I3, and E2 were applied automatically on the digital databases searches. Then, we applied the semantic-dependent filtering criteria I1 and E1 in a two-step process. Firstly, only taking into account title, keywords, and abstract of the studies. Secondly, taking in account the full-text. In case of doubt in the first step, the study was included for the full-text selection step. Most studies were discarded during the first step.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "D. Data Extraction Process",
+          "subsubsections": [],
+          "text": "Each of the 39 selected articles was read thoroughly by Renzo E. Navas. The data extraction template evolved between Jun 2019 and October 2020. The final template used to extract relevant data from each study is shown in Listing 1. The 18 articles from the initial manual search were read and data extracted (refined) at least twice having a time span of at least three months between reads.\n\n**Listing 1: Data Extraction Template.**\n\n- Standard bibliography data:\n - Title, author, year, type of publication, venue.\n- MTD technique name or brief description.\n- Moving Parameter (MP).\n- MTD technique taxonomy (Sec. II-A):\n - Data, Software, Runtime Environment, Platform, Network.\n- Metrics:\n - Evaluate MP Shannon entropy metric (See Sec. III-A).\n - Evaluate MP qualitative metrics (Defined in Sec. III-B)\n- Cryptography:\n - Is cryptography used?\n - Which cryptographic primitive is used?\n - What are the cryptographic inputs? (e.g., a key)\n- Implementation:\n - Is the proposal implemented (even partially)?\n- Evaluation:\n - Is the proposal evaluated?\n - How? Numerically, Simulation, Hardware prototype.\n- IoT Software:\n - What IoT OS or firmware is used?\n- Synthesis of the proposal with technical details (1-6 pars.).",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "E. Data Synthesis Process",
+          "subsubsections": [],
+          "text": "The goal of the data synthesis process is to provide meaningful information about the current state of the art of MTD techniques for the constrained IoT. Particularly, the outputs of the data synthesis methods summarize the data results and shall provide convincing answers to the research questions of Sec. IV-A. There are a variety of data synthesis methods [W2612764117]. In this work, the syntheses outputs are presented in the form of graphical plots, tables, and narrative synthesis, i.e., text. We synthesized both quantitative and qualitative aspects of the primary studies. An intermediate analytical step was necessary to synthesize some aspects (mostly qualitative) of the primary studies. In this process, we used existing MTD theory (e.g., moving parameter, accepted taxonomies) and the metrics we developed in Sec. III. The metrics allow a common frame of reference to synthesize and compare qualitative aspects of different studies.",
+          "citations": [
+            "W2612764117"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The survey methodology used in this work is based on the systematic literature review guidelines by Kitchenam et al. [W2612764117]. There are three main phases in a systematic review process:\n\n1. Planning: Involves specifying the research questions and developing a protocol to follow.\n\n2. Conducting: Involves study search, study selection, data extraction, and data synthesis.\n\n3. Documenting: Involves reporting the systematic review process (e.g., protocol, outcomes), i.e., this article.\n\nThe conducting phase, with detail on the search and selection processes, is illustrated in Fig. 1. In the following, we explicit the research questions and detail the protocol and execution of the conducting phase.",
+      "citations": [
+        "W2612764117"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "V. RESULTS",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "A. RQ1: How many proposals of MTD techniques for IoT exist? (Status of Field of Study: Quantitative)",
+          "subsubsections": [],
+          "text": "The systematic review process, shown in Fig. 1, identified 39 documents containing 32 distinct proposals.\n\n1. **Documents:** In Fig. 2 we plot the published documents per year. The first article is from 2013, two years after the first general-purpose MTD techniques that date from 2011. Excluding the year 2020, the (average \u00b1 standard deviation) number of publications per year is $(5.3 \\pm 1.8)$. Since 2016 is $(6.5 \\pm 1.3)$. Aside from the 2015-2016 increment, there is no clear upward trend, and the number of published documents per year is stable with post-2016 values. The document publication type distribution is shown in Fig. 3, conference papers are predominant with a 69%. The top-3 countries are: USA (49%, 19 doc.), Finland (15%, 6 doc.), and Italy (15%, 6 doc.). The top affiliations are: University of Turku (13%, 5 doc.), Virginia Polytechnic Institute and State University (13%, 5 doc.), University of Naples Federico II (10%, 4 doc.), and George Mason University (10%, 4 doc.).\n\n2. **Proposals:** 32 novel proposals have been identified. In Fig. 4 we plot the novel proposals per year. There is not a one-to-one correspondence between documents and proposals. One proposal can spread among multiple documents, and one document can contain multiple proposals. A proposal is counted only once, taking the date of the first document that included it. Excluding the year 2020, the (average $\\pm$ standard deviation) number of novel proposals per year is $(4.1\\pm1.2)$. The minimum value was in 2014 (2 proposals) and the maximum in 2019 (6 proposals). The number of proposals per year is stable since 2013, with a slight upper trend of $\\Delta = 1$ in the last two periods since the 2017-2018.\n\nInterpretive discussion. The figure of thirty-two distinct techniques was not evident prior to this survey. The identified corpus in the MTD literature was of about a dozen techniques.\n\n**TABLE: Number of novel proposals per year (Total= 32).**\n\n{{TABLE:tbl_04}}\n\n**TABLE: Taxonomy distribution of MTD techniques for IoT.**\n\n{{TABLE:tbl_05}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_04",
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "B. RQ2: What characteristics can be observed in the MTD for IoT techniques? (Status of Field of Study: Qualitative)",
+          "subsubsections": [],
+          "text": "This question aims at highlighting qualitative aspects of the field of study of MTD for IoT techniques. We categorize, measure, and analyze technical properties of the techniques. We use general MTD theory concepts presented in Sec. II and the metrics we defined in Sec. III.\n\n1. **MTD Taxonomy. Distribution and Trends:** We present the distribution of the techniques by MTD taxonomy in Fig. 5. Network techniques are predominant, with 54%. In the second position are dynamic Runtime Environment techniques with 20%. Software and Data techniques have a similar share with 13% and 10%, respectively. Notably, there is only one dynamic Platform technique (3%). Fig. 4 shows novel proposals per year and taxonomy. Excepting the year 2015, Network proposals have a constant rate of production and account for $\\geq 50\\%$ even on a year-to-year basis. A relevant derived research question is:\n\n**How do taxonomy distribution and trends compare between MTD for IoT and general MTD techniques?**\n\nTo answer this question, we leverage on the general MTD survey from Lincoln MIT laboratory [UNMAPPED:5]. It dates from 2018 and comprises 89 distinct general purpose MTD techniques. The taxonomy distribution of the techniques is shown in Fig. 6. Network techniques are not predominant as in IoT; they account for 21%. Runtime Environment techniques take the most significant share with 35%. Notably, Platform techniques, almost non-existent in IoT systems, share the virtual second place with 20%. Software and Data techniques have similar values as in IoT with 15% and 9%, respectively. However, there is an increasing interest in general-purpose MTD Network techniques since 2015. We base this assertion on the rate of publications of the MTD Network techniques included in the 2020 survey of Sengupta et al. [UNMAPPED:10]. Also, recent MTD surveys [W2996903041, W3003279768] focus on Network MTD solutions, which indicates a growing interest in the research community.\n\n**TABLE: Taxonomy distribution of general MTD techniques [UNMAPPED:5].**\n\n{{TABLE:tbl_06}}\n\n2. **Moving Parameter. Shannon Entropy and other Metrics:** This subsection presents the results of applying several metrics related to the Moving Parameter (MP) X. The metrics are defined in Sec. III. To the best of our knowledge, this is the first MTD survey to apply the Shannon entropy metric to the studied techniques. The precise values of the metrics per technique can be found at the end of this section in Table II. In Fig. 7, we present the histogram of the Shannon entropy $H(X)$ in bits of the techniques. Each bin aggregates values inferior to the label of the next bin, for example, in the bin '32' \u2192 32 \u2264 H(X) < 64. Neither Platform nor Software categories have techniques with 64 bits or more of Shannon's entropy. On the other hand, the rest of the categories have at least two techniques, each with 128 bits of entropy or more.\n\nIn the following, we synthesize results derived from the use of the novel qualitative metrics defined in this work. The goal is to highlight possible relationships between Shannon's entropy and other qualitative metrics of the moving parameter. The results are shown in Fig. 8. The metric Q that aggregates the system-centric metrics is shown in Fig. 8a. From a system's perspective, the lower the Q value, the better. Similarly, the attacker-centric metric ATT is presented in Fig. 8b. From a system's perspective, the higher the ATT value, the better. A higher cost translates into a given attacker exploring-attacking fewer values of the MP using the same resources (e.g., time).\n\nAnalysis. For the most part, some expected correlations can be observed in the empirical data in Fig. 8. Those are:\n\n- For high $H(X)$ techniques, the entropy cost $Q$ should be low. This justifies the empirical feasibility of a technique with high entropy (i.e., the system is able to cope with the cost of generating, storing, and moving new values of this high-entropy moving parameter X).\n\n- For low $H(X)$ techniques, the exploration cost ATT should be high. This justifies the usefulness of a technique with low entropy (i.e., low quantity but of high quality).\n\nThe first expectation is observed in Fig. 8a in techniques with $H(X) \\leq 128$. Aside from some outliers (in $H(X) = 16$ and 32), we observe that as $H(X)$ grows Q decreases. However, techniques with $H(X) \\geq 256$ reverse the trend with Med. to High values of Q. This is possible, but not desirable. It means that those techniques will be costly to implement in a real-world system. The second expectation is observed in Fig. 8b. In general, as an inherent trade-off, it is also expected that higher $H(X)$ will imply lower ATT. However, we find many (five) exceptions, especially in techniques with $H(X) \\geq 128$ that have Med. to High values of ATT. This is desirable from a system point of view.\n\nFinally, in Fig. 9 we plot ATT vs. Q metrics. Low ATT imply low entropy cost Q, 47% of techniques are in that case. Aside from that, there is no apparent correlation between them.\n\nInterpretive discussion. Around 69% of the techniques are comprised between $16 \\leq H(X) \\leq 128$. They are mostly of the Network, Runtime Environment, or Data categories. For the most part, both the entropy cost Q and the exploration cost ATT are Low. These techniques fall into a reasonable compromise among all the metrics. For system designers, at equal Q and ATT, we recommend prioritizing the higher Shannon entropy techniques, e.g., the ones with 128 bits.\n\n**TABLE: Histogram of Shannon\u2019s entropy of the techniques.**\n\n{{TABLE:tbl_07}}\n\n**TABLE: (a) $H(X)$ and entropy cost metric (system-centric).**\n\n{{TABLE:tbl_08}}\n\n**TABLE: (b) $H(X)$ and exploration cost metric (attacker-centric).**\n\n{{TABLE:tbl_09}}\n\n**TABLE: Number of techniques grouped by ATT and Q.**\n\n{{TABLE:tbl_10}}",
+          "citations": [
+            "W2996903041",
+            "W3003279768"
+          ],
+          "tables_in_text": [
+            "tbl_06",
+            "tbl_07",
+            "tbl_08",
+            "tbl_09",
+            "tbl_10"
+          ],
+          "citations_unmapped": [
+            "5",
+            "10"
+          ]
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "C. RQ3: How sound are the security foundations of the proposals?",
+          "subsubsections": [],
+          "text": "We extracted three cryptography-related information items$^{2}$ that we can relate to the security foundations of each technique. In Table II we present the raw extracted data in a per-technique basis. In this section, we synthesize those results using the following arguments:\n\n- The fact that all techniques rely on a randomization process$^{3}$ (Thesis).\n- A technique is secure only if it uses cryptographically strong randomness (Hypothesis).\n\nIn other words, we associate the security foundation of a proposal with the cryptographic primitive it uses. In order to do a proper assessment of each technique, in many cases, we required more detailed information than the three cryptography-related items. This complementary information was obtained from the \u201cSynthesis of the proposal with technical detail\u201d field in the data extracted.\n\nFinally, we categorized each technique into one of the following cryptographic categories:\n\n- **No Cryptography:** We consider these techniques to lack proper security foundations. Of the 32 distinct techniques, four explicitly do not use cryptography. They are instead based on algorithms from game theory, deterministic or stochastic optimization problems. Neither has any input entropy to the problem other than the system variables. Other studied techniques assume, sometimes even implicitly, a random process but do not give any detail about it. We grouped all these techniques into this category.\n\n- **Not Current:** We consider these techniques to lack proper security foundations. Techniques in this category, either use cryptography that is known to be vulnerable (e.g., MD5), or proposed their custom-made cryptographic primitives or protocols but without security proofs.\n\n- **Current:** We consider these techniques to have proper security foundations. These techniques use legacy or state-of-the-art cryptography with security proofs and not-known attacks (e.g., SHA256, HMAC, ChaCha20, Keccak).\n\nThe results are shown in Fig. 10. Only 34% of the techniques (11 out of 32) use current cryptographic primitives. The remaining majority (66%), uses not current or not cryptography at all.\n\nInterpretive discussion. The goal of an MTD technique is to improve the security of an IoT system. To measure the security of a system is a challenging task and depends on many factors. Comparing different techniques is not straightforward. We simplified this comparison problem by taking into account the cryptographic primitives of each technique. If not current cryptography is used, the security foundation of the proposal is not convincing, an attacker can eventually replicate the system's movement and neutralize the effect of the MTD. The results show that only 34% of the techniques use current cryptography. It is a low value considering security is the main objective of an MTD technique.\n\n**TABLE: Cryptographic categories of the techniques.**\n\n{{TABLE:tbl_11}}\n\n*Deprecated or not-tested cryptography.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_11"
+          ]
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "D. RQ4: To what extent the proposals can be used in a real IoT deployment?",
+          "subsubsections": [],
+          "text": "To answer this question, we use empirical evidence provided by the proposals in their corresponding publications. All of them provide, with varying levels of detail, a design specification. We put the focus on two other aspects of the proposed techniques: the implementation and evaluation of them. Some clarification about those aspects:\n\n- An implementation of a proposal provides strong evidence on the feasibility of using it in a real IoT deployment. Some proposals implemented the technique in software and evaluated it in a simulated system (without using actual IoT hardware), while others used IoT hardware. Despite those differences, we consider any of them as proof of implementation. A technique is categorized as either implemented or not.\n\n- An evaluation of a proposal provides evidence about the expected effectiveness or usability of it when deployed. Evaluation was divided into three non-exclusive subcategories. Theoretical, if the evaluation was done analytically or numerically (e.g., for an abstracted mathematical aspect of the technique). Simulation, if the IoT system was simulated even partially (e.g., ContikiOS Cooja, NS-2). Hardware (HW), if the technique was evaluated using real IoT hardware.\n\nAn evaluation does not imply an implementation. For example, some authors evaluated a partial or abstracted component of the proposal (mostly theoretically or simulated). If applicable, we also surveyed the IoT software used by an implementation or evaluation.\n\nThe raw results are the following. For implementation, 50% percent of the techniques were implemented, and the rest were not. In Fig. 11, we show a Venn diagram of the evaluation status of the techniques. Only 19% were not evaluated at all. Of the rest, 44% were evaluated in simulation, 25% in hardware, and 22% theoretically. Finally, in Fig. 12, we show the distribution of the IoT OSs or firmware used by the techniques' evaluation or implementation. Contiki OS was the preferred IoT software, with 27% of techniques using it.\n\nTo answer RQ4, we define five exclusive categories that correspond to the evidence a technique provides to be used in a real IoT deployment. They are defined as follows, depending on the implementation and evaluation status of a technique:\n\n- **Very Strong.** Implementation and hardware evaluation.\n- **Strong.** Implementation without hardware evaluation.\n- **Mild.** No implem., but HW or Simulation evaluation.\n- **Weak.** No implementation, but theoretical evaluation.\n- **No evidence.** No implementation nor evaluation.\n\nThe results are shown in Fig. 13. Half of the 32 techniques provide Strong or Very Strong evidence about being used in a real IoT deployment. About 38% present Mild to Weak evidence. Finally, a minority of about 13% presents No evidence.\n\nInterpretive discussion. An MTD technique has an important empirical component because it is meant to be used in a real deployment. Though theoretical proposals push forward the field and eventually lead to more empirical variants, we believe that the empirical component should be prominent in the MTD for IoT. Highly theoretical MTD proposals, feasible in legacy systems, may never be usable in constrained IoT systems. The results of this section are encouraging: 50% of techniques provided strong or very strong evidence about their usability and only 13% did not provide any evidence.\n\n**FIGURE 11: Evaluation status of the techniques (Total = 32).**\n\n(A Venn diagram showing: No Eval. = 6, Theoretical = 1, Simulation = 12, Hardware = 6, with overlaps: Theoretical+Simulation = 1, Simulation+Hardware = 1, Theoretical+Simulation+Hardware = 1, etc. The numbers sum to 32.)\n\n**TABLE: IoT OS or firmware (FW) used in a technique\u2019s implementation or evaluation (Total = 15).**\n\n{{TABLE:tbl_12}}\n\n**TABLE: Distribution of categories of evidence about real IoT deployment of techniques.**\n\n{{TABLE:tbl_13}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_12",
+            "tbl_13"
+          ]
+        },
+        {
+          "subsection_id": "s_5_5",
+          "subsection_index": 5,
+          "subsection_label": "E. Results detailed per technique",
+          "subsubsections": [],
+          "text": "We summarize the raw data extracted from the publications on a per technique basis. The results can be seen in Table II. Assumptions: To evaluate Shannon's entropy $H(X)$, we made assumptions about many proposals. We detailed the assumptions in the table's footnotes. Those proposals either lacked design-implementation details or were generic, and we instantiate them assuming a baseline IoT system of 100 nodes and nodes with 32 KB of RAM and 250 KB flash. As for the qualitative metrics, we detailed the procedure in Sec. III-C.\n\n**TABLE II: MTD for IoT Techniques**\n\n{{TABLE:tbl_14}}\n\n* Taxonomy: Data (D), Software (S), Runtime Environment (R), Platform (P), Network (N). \nMetrics Cost: Low (-), Med. (/), High (+). \n\u2020 Assumed a 32-bit Salt/Seed. \n\u2021 Two custom-made crypto-protocols. Flaws: They re-use a 128-bit One-Time-Pad. \n\u2020\u2020 Assumed that 10 Nodes out of 100 can be chosen to mutate address. \n\u2021 Assumed 1024 $(2^{10})$ Code Partitions, and 1024 Versions for each. \n\u2021\u2021 Assumed 200 protocols being used on the network. \n\u2020 Assumed 32KB RAM ($2^{13}$ 32-bit addresses) and 4 regions to randomize. \n\u00a7 Assumed 100 Nodes and number of possible Topologies \u2248!100. \n\u2020\u2020 Assumed 64-bit length Node IDs. \n\u00b6 Assumed 100 Nodes and 101 Resources to locate ($100^{101}$ resource locations). \n** Assumed a 256-bit Seed. Authors claim 6567 bits. Valid for 800 symbols $\\log(!800)$, but limited by input entropy. \n\u00a7\u00a7 Assumed 256 bits of entropy for the Seed. Authors harvest entropy using an AVR timer and an oscillator.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_14"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we present the results from the systematic review process. The Research Questions (RQs) of Sec. IV-A structure this section. Each subsection analyzes the results in the context of the RQs, and factually provides answers. Interpretive discussion is to be found in the last paragraph addressing a RQ.\n\n**FIGURE 1: Conducting the review: detail on the search and selection processes. The number of articles after an activity is represented in labels at the exit edges.**\n\n(Figure 1 description: A flow diagram showing initial manual search (18 articles), automated search (310), removal of duplicates (260), title and abstract selection (49), full-text selection (30), snowballing I (540 search, 7 added), snowballing II (96 search, 1 added), manual update (1 added), resulting in 39 articles for data extraction and synthesis.)\n\n**TABLE: Number of selected documents per year (Total = 39).**\n\n{{TABLE:tbl_02}}\n\n**TABLE: Number of documents by publication type.**\n\n{{TABLE:tbl_03}}",
+      "citations": [
+        "W2910704120",
+        "W2074343878"
+      ],
+      "tables_in_text": [
+        "tbl_02",
+        "tbl_03"
+      ],
+      "citations_unmapped": [
+        "310",
+        "260"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "VI. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "A. The state of the art of MTD for IoT",
+          "subsubsections": [],
+          "text": "One of this survey\u2019s main objectives was to highlight MTD as a viable defense paradigm for IoT. First, we identified the proposals that exist. Secondly, once the IoT corpus identified, we categorized the techniques using standard MTD taxonomies and compared the result with a well-known corpus of legacy MTD techniques. The predominance of network techniques in the IoT field was expected and validated.\n\nThen, we evaluated more fine-grained qualitative factors of the techniques. A hypothesis was that the MTD for IoT state of the art is not as mature as the non-IoT counterpart. Nevertheless, MTD is technically possible (usability) and desirable (security). For example, non-IoT solutions have sound implementation and experimental foundations. In contrast, IoT systems have many software and hardware constraints that, a priori, make the MTD techniques harder to implement. To find answers to this usability question, we empirically studied the techniques' implementation and evaluation status. Furthermore, we assessed the techniques' cryptographic primitives and linked deprecated or lack of cryptography usage as a sign of weak security foundations. The overall results in terms of usability and security of the techniques were mixed, validating the hypothesis that the field is still in development. Nonetheless, a non-minority number of techniques also proved that MTD for IoT can be usable and have solid security foundations.\n\nFinally, another axis of research was the usage of metrics to evaluate other qualitative factors of the corpus. More precisely, we used metrics related to the entropy of the MP. To the best of our knowledge, this is the first survey to apply the Shannon entropy of the MP in an empirical way. However, Shannon's entropy was not entirely appropriate to make fair comparisons among techniques with MPs of very different nature$^{4}$. To complement it, we defined metrics in the line of Kolmogorov complexity [W2018140810], i.e., to evaluate the amount of resources needed to do a set of actions over the MP. The novel metrics capture various qualitative factors of the entropy of the MP. This allowed us to provide a more comprehensive characterization of the studied corpus using entropy as a common denominator.",
+          "citations": [
+            "W2018140810"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Limitations of this study",
+          "subsubsections": [],
+          "text": "One of the main limitations of this study is that the 39 papers and the 32 distinct techniques are statistically limited to make conclusive claims. Other surveys in similar but established fields like \u201cMTD in cloud computing\u201d [W3003279768] worked with 95 papers. However, we believe that the amount of material included in the current survey is sufficient to identify the most prominent trends.\n\nAs with any survey work, we might have left relevant papers out. Particularly difficult were edge cases where the publications did not explicitly mention MTD but used randomization or diversification of system components. If our inclusion criteria become too permissive, this survey might include entire research clusters that never mention MTD. However, we believe that we minimized the risk of letting out relevant work with the systematic review methodology. Particularly useful were the snowballing techniques that iteratively capture related work. Furthermore, as the search method and inclusion-exclusion criteria are documented, future researchers could improve upon the current survey and address its shortcomings.\n\nThe evaluation of the metrics could also be contested. A subjective component is present in their evaluations. We had to make assumptions to evaluate the Shannon entropy. They are detailed in the footnotes of Table II. The other four qualitative entropy metrics were evaluated by the experience/assessment of the authors. Even if we tried to be consistent among all techniques, there is still a subjective component on the final value. We tried to minimize the subjective bias for all of them. For Shannon's entropy, we made assumptions that we applied to every technique that needed them. For the qualitative metrics, we used coarse-grained (ternary) values. The metric values should be interpreted with a corresponding inherent uncertainty. We believe that, despite being approximate values, it is useful to have measurable quantities to compare different techniques.",
+          "citations": [
+            "W3003279768"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Research opportunities",
+          "subsubsections": [],
+          "text": "In this subsection, we identify some research opportunities. First, there is almost a complete lack of MTD for IoT techniques in the Platform category that can be explained by the inherent limitations of the IoT hardware. Novel techniques could leverage on legacy MTD, where Platform techniques account for 20%, and adapt the most suitable proposals.\n\nSecondly, the usage of the entropy metrics can go beyond the current survey. Naturally, it would be interesting to use the metrics to measure the non-IoT MTD techniques and compare their state of the art with that of the MTD for IoT. In a per technique basis, metrics usage can help system designers make relevant trade-off decisions.\n\nThirdly, novel proposals that use current cryptography and explicitly prove cryptographic aspects of the proposal are required. They are a minority in the existing techniques. In terms of implementation and evaluation, the current state of the art is more developed. However, more hardware evaluations -with available source code- will be beneficial for the community and help to the overall establishment of MTD for IoT as a mature field of research.\n\nFinally, we highlight MTD as a suitable cyberdefense paradigm for IoT. Current techniques have a mixed level of maturity. Despite that, many have a working implementation, hardware evaluation, and current cryptography. Network techniques are predominant, but there are still many opportunities, even in that field. For example, only one [W2734592244] SDN-based technique for IoT exists$^{5}$. Overall, there are still many unexplored areas. The MTD for IoT field could leverage from existing legacy-MTD or explore novel ideas only possible within the IoT paradigm.",
+          "citations": [
+            "W2734592244"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we summarize the state of the art of MTD for IoT with an added component of interpretation. We assess the limitations of the review and identify future research opportunities.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "VII. CONCLUSION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Moving Target Defense is acknowledged as a promising cyberdefense paradigm for IoT systems, but an extensive state of the art was missing in the literature. To fill this gap, we conducted a systematic review of MTD techniques for IoT systems. We identified and analyzed thirty-two different techniques, of which half were from the Network category. Furthermore, most of the techniques have convincing empirical evidence about their real-world deployability. We used this fact to validate the feasibility of MTD for IoT. However, only a third of them have sound cryptographic foundations, indicating that their security-related aspects need improvement. MTD for IoT is a reality, and future work should prioritize providing strong security foundations for the proposed techniques. Research effort could also be well invested in techniques of the least explored categories: Platform and Data. Within the Network techniques, constrained-SDN is a promising technology that can enable many novel MTDs. In respect to the MTD metrics field of research, we developed entropy-based metrics of empirical applicability that, in conjunction with Shannon's entropy, can be useful in future MTD-related applications beyond the scope of this survey.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_5",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3107806454_tables.md"
+}

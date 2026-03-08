@@ -1,0 +1,407 @@
+{
+  "id": "W2980318030",
+  "metadata": {
+    "title": "A systematic review of crime facilitated by consumer Internet of Things",
+    "n_sections": 5,
+    "n_subsections": 8,
+    "n_subsubsections": 8,
+    "n_tables": 4
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "Crime Harvests and the IoT",
+          "subsubsections": [],
+          "text": "It is well documented [W1484003379] that many new products and services have led to \"crime harvests\" [UNMAPPED:5]. These arise when insufficient attention is given to the crime and security implications of new products and services which become prevalent in the legitimate market. Considering the evolution of a product or service, these have a lifecycle which involves four stages: (1) an introduction phase, where use is limited to early adopters; (2) a growth stage in which uptake increases; (3) a maturity stage in which the mass market is reached, and (4) a point where the market is saturated and sales decline.\n\nCrime harvests can take different forms. In the case of the theft of physical products, this tends to occur during the growth and mass market stages of the product lifecycle. During these stages, products are well-known, desirable and sufficiently abundant to make locating/stealing them easy and their sale inconspicuous. Crime harvests have played out many times. Traditional urban examples include vehicle theft in the 1990s [W94501999], and mobile phone theft in the noughties [W1968126597]. In these similar examples, solutions were found \u2014 albeit retrospectively \u2014 but offenders had exploited vulnerabilities in the design of these products for a considerable amount of time, in some cases decades, before they were addressed.\n\nIn the case of physical theft, crime opportunities may reduce with market saturation, since few people will want to buy stolen items at this point. However, for many goods, particularly electronic and automotive ones, manufacturers constantly develop them to increase functionality and sales. Moreover, goods can be exported to countries where market saturation has not occurred. Consequently, opportunities for theft will not always decline with market penetration.\n\nOnline, crime opportunities are not limited to the theft of purchased products and so are even less likely to decline. Instead, opportunities will be proportional to the number of people using a service. For example, the introduction of email has allowed fraudsters to adopt \"needle in a haystack\" approaches \u2013 such as phishing scams [W2029591949] \u2013 to steal victims' financial data. With such scams, victims are sent emails from seemingly (but not genuine) sources (e.g., a bank) that include a link to a website. If they click on the link, they are directed to a malicious website and asked to provide sensitive information, including their username, password, or bank details. In this case, as the adoption of email services increases, so does the number of crime opportunities.\n\nRecent estimates from the Crime Survey of England and Wales [UNMAPPED:9] suggest that at least half of all crime is now online. This is likely to be an underestimate because only a handful of incidents of computer misuse are covered in the survey, and victims will often be unaware that they have been victimised. However, what these figures clearly illustrate is that the opportunities afforded by the internet are being exploited.\n\nAs noted, the market penetration of IoT devices is increasing. As it grows, crime harvests may emerge and, because different types of devices offer different functions, the potential forms these crime harvests may take may increase. Unlike crime in the \"real\" world, the IoT may facilitate the commission of crime at low cost, at scale and across geographic boundaries.\n\nWarning signs of a crime harvest for IoT devices already exist. In 2016, attackers exploited hundreds of thousands of internet-connected cameras and video recorders, taking advantage of their poor security to build networks of compromised internet connected devices. These botnets were then used to launch Distributed Denial of Service (DDoS) attacks, which involve sending massive volumes of requests to online services that, unable to cope with the demand, become inoperable. The 2016 attacks, which used the Mirai malware to target servers operated by DYN in the U.S., disrupted online services such as Twitter and Netflix, and were particularly interesting because they represent the first known attack that used compromised IoT devices (as opposed to infected computers).\n\nAt this time, the volume and types of incidents of crime that have involved IoT devices are limited. However, rather than wait for another crime harvest, the aim of the current article is to draw the issue to the attention of the criminological and related communities, and to take stock of what we already know. To do this, we provide a synthesis of the literature on crime that might be facilitated by the IoT. Before presenting findings, we define what is within scope for the review \u2013 including what we mean by the IoT in the context of this article \u2013 and briefly articulate the methodological approach taken.\n\nThe IoT is transformative and spans across multiple domains. Here, we focus specifically on consumer (as opposed to, say, industrial) IoT devices, which may be defined as once everyday objects found around the home that are now internet connected (e.g., smart speakers or smart doorbells). For most devices, a connection to the internet is unnecessary and there will be non-internet connected variants of them. As such, we exclude routers, smart phones and tablets since these (mostly) require an internet connection to function. We also exclude computers (desktops and laptops), because these are very different types of devices. For example, they are high-capacity devices that have been on the market for a long time, have well developed operating systems and user interfaces, and the threats to these devices have been known for some time.\n\nWe focus on consumer IoT because the cybercrime challenges associated with it are prevalent and bring unique risks to consumers' security, privacy and safety. Currently, consumer IoT devices lack adequate security provision \u2014 poor design choices such as default passwords, inadequate encryption and lack of software updates have allowed consumer IoT devices to be misused for malicious purposes [W3034703401]. These have arisen in part due to the companies developing IoT devices either lacking expertise in security, or paying too little attention to it, and the absence of economic incentives (and regulation) to encourage security by design [UNMAPPED:10]. Furthermore, at present, the most prevalent risks associated with insecure IoT devices discussed in the media are DDoS attacks. For these crimes, the direct impact is not generally felt by the consumer or manufacturer, but rather third parties [W4390330244], which reduces the incentive for manufacturers (and consumers) to take the issue seriously.\n\nHowever, in the future, the crime risks associated with consumer IoT have the potential to be more wide-ranging, impacting on citizens, companies and nations more directly. As discussed, one reason for this is that as well as increasing in ubiquity, the variety of devices that are internet connected \u2013 and the actions they are capable of completing \u2013 is increasing. For example, Smart TVs and speakers not only allow media to be streamed, but for sound, conversations and people's actions to be monitored and recorded. Many IoT devices now have actuators (e.g., a lock in a security system), which allow actions to be triggered in the physical world [W3210090175], expanding the ways in which they might be misused.\n\nWith these points in mind, the aims of this paper are to provide a systematic review of existing work on cybercrime and the consumer IoT to address the following research questions:\n\n1. What are the primary mechanisms through which cybercrimes may be committed using IoT devices?\n2. What cybercrimes have/could be facilitated through consumer IoT devices?\n\nTo be clear, this paper is not about cybercrime in general. This would be beyond the scope of a single article. Instead, our focus is on crimes facilitated by the IoT. In the tradition of situational crime prevention [W1885550454], it is important to have this clear focus as our aim is to understand the crime opportunities the consumer IoT presents with a view to catalysing and informing attempts to prevent associated crime harvests.",
+          "citations": [
+            "W1484003379",
+            "W94501999",
+            "W1968126597",
+            "W2029591949",
+            "W3034703401",
+            "W4390330244",
+            "W3210090175",
+            "W1885550454",
+            "W2749806099"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "5",
+            "9",
+            "10",
+            "2"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The \"Internet of Things (IoT)\" refers to electronic devices that are internet connected and can communicate and interact with one another [W2749806099]. The IoT is considered the next technological revolution, and in the home, products can range from smart locks to home assistants which afford greater convenience and intelligent living. Currently, it is estimated that the average UK household has ten internet connected products. This is expected to rise to 15 by 2020 [UNMAPPED:2]. However, consumer adoption of IoT products is lagging behind predictions, largely due to privacy and security concerns [W3034703401]. In this article, we systematically review crimes that have or may be facilitated by the consumer IoT. We begin by explaining why we might expect the IoT to facilitate crime and specify what types of devices we are concerned with. We then discuss the approach taken to review the literature and present our findings.",
+      "citations": [
+        "W2749806099",
+        "W3034703401"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "2"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Evidence Synthesis",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "A brief discussion of our approach to the review is important at this point. We could have conducted a standard ad-hoc literature review, but these are known to be problematic, primarily because they can lead to the synthesis of a biased sample of articles, often limited to those already known to the study authors. Systematic reviews [W1598602811] have emerged as a solution to this. They involve a systematic and transparent search strategy, which includes the a-priori specification of the search terms to be used, databases to be searched, and so on. Consequently, any two authors conducting the search would be expected to find the same articles.\n\nSystematic reviews are most commonly used to synthesise evidence on what works to reduce a problem, such as crime [W2481907667]. However, they can also be used to synthesise the evidence on particular topics [W2796450149], which is our aim here.\n\nThe specific aim of a systematic review will inform the approach taken to evidence synthesis and the types of studies included. Systematic reviews of what works address questions about something that has already happened, and those conducted in the Campbell tradition typically focus on experiments that test the impact of interventions [W376915030]. In reviewing that evidence, researchers typically assess the quality of the evidence, as well as the effects observed. More weight is given to high quality studies for which rival explanations for observed effects can be ruled out. Here, the prospective nature of the review presents a methodological challenge. That is, it is difficult to assess the strength of the evidence about something yet to happen. To address our research questions, we draw on the findings of studies that employ a range of methodologies. These include expert speculation \u2014 commonly used in futures studies \u2014 and laboratory experiments intended to identify vulnerabilities in systems, which is an established methodology in the field of information security. While studies employing these approaches cannot demonstrate that an issue will emerge in the \"wild\", they speak to its plausibility. To make use of such sources of information, we draw on the realist approach [W1856244049] to review to identify the potential mechanisms through which IoT devices might be exploited in the future to commit crime. Like systematic reviews conducted in the Campbell tradition, we use a hierarchy of evidence to assess the strength of the evidence on which conclusions are based.\n\nThe remainder of the paper is organised as follows. Next, we describe the methodology employed, including a discussion of our search criteria and search strategy. We then provide a synthesis of the findings, considering what types of crime have or could be facilitated by IoT devices, and how such crimes might be committed (i.e., the mechanism through which they are committed). In the discussion, we draw conclusions and articulate why we think the study of crime facilitated by the IoT would benefit from attention from the criminological as well as the information security community (who have almost exclusively researched this issue to date).",
+      "citations": [
+        "W1598602811",
+        "W2481907667",
+        "W2796450149",
+        "W376915030",
+        "W1856244049"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Method",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "Systematic review process",
+          "subsubsections": [],
+          "text": "We first developed a review protocol [W1598602811] that was examined by five independent experts. They commented on the research questions, search strategy, inclusion criteria and electronic databases searched. The protocol was updated on the basis of their feedback. After studies were identified for inclusion, they were read, and the findings summarised using a narrative approach.",
+          "citations": [
+            "W1598602811"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "Inclusion Criteria",
+          "subsubsections": [],
+          "text": "We included studies that employed any type of research design. All types of information sources were included with the exception of articles that were not peer-reviewed or that were unavailable in English. We included papers that appeared in the proceedings of information security conferences and magazine articles that had been peer reviewed, PhD theses and student dissertations. We also included literature reviews, as novel information may have been presented by the authors of those reviews that was relevant to the study, but we avoided double counting. Studies were included if they discussed consumer IoT devices or smart home platforms. Studies that discussed other forms of IoT such as smart cities, healthcare, or industrial IoT were excluded. Studies were included if there was a discussion of a crime, attack or a security-related issue. In some cases, studies discussed specific security solutions or countermeasures \u2014 these were only included if there was explicit discussion of the type of crime or attack the countermeasure was designed to address (studies that discussed solutions to \"cybercrime\" were excluded).",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "Electronic searches",
+          "subsubsections": [],
+          "text": "A search of the following databases was conducted in November 2017: Web of Science, ProQuest, ACM Digital Library, IEEE Xplore Digital Library, and Scopus. We limited searches to papers published between 2007 and 2017. The search terms were piloted in order to achieve a balance between sensitivity (retrieving a high proportion of relevant articles) and specificity (retrieving a low proportion of irrelevant articles), and an academic librarian consulted to validate these and the databases used. The final search terms were:\n\n`\u201cIoT\u201d OR \u201cInternet of Things\u201d OR \u201cinternet-connected\u201d OR \u201ccyber-physical\u201d OR \u201cM2M\u201d OR \u201cMachine to machine\u201d OR \u201csmart NEAR/3 device*\u201d OR \u201csmart home\u201d OR \u201cconnected device*\u201d OR \u201csmart wearable\u201d OR SU.EXACT(\u201cInternet of Things\u201d) OR SU.EXACT(\"Internet of Things\") OR SU.EXACT(\"Ubiquitous Computing\")`\n\nAND\n\n`\u201chack*\u201d OR \u201crisk*\u201d OR \u201cthreat*\u201d OR \u201cvulner*\u201d OR \u201ccrim*\u201d OR \u201cattack*\u201d OR \u201cexploit\u201d OR \"security\" OR \"privacy\" OR \"bug\" OR SU.EXACT(\"Crime\") OR SU.EXACT(\"Internet Crime\") OR SU.EXACT(\"Computer Crime\")`\n\nWe also searched for the following subject headings (where allowed by the database):\n\n`SU.EXACT(\"Crime\") OR SU.EXACT(\"Internet Crime\") OR SU.EXACT(\"Computer Crime\")`\n\nAND\n\n`\"consumer\" OR \"domestic\" OR \"wearable\" OR \"home\" OR \"house\"`\n\nKeywords were searched for in the titles, abstracts and indexed subject headings of articles.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "Data collection and analysis",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Selection of studies",
+              "parent_subsection_id": "s_3_4",
+              "text": "Identified citations and abstracts were imported into www.covidence.org, and duplicates removed. Studies were screened on title and abstract according to our inclusion criteria. One researcher independently screened (i) titles, (ii) abstracts and (iii) full texts against the pre-defined eligibility criteria. Random samples of abstracts were screened by a second researcher at four stages of the review to assess inter-rater reliability and mitigate coder drift [W2517769515].\n\nInter-rater reliability was calculated using the prevalence- and bias-adjusted kappa (PABAK) statistic, which controls for chance agreement [W2070285512]. The PABAK score of 0.78 indicated high inter-rater agreement [W1598602811].",
+              "citations": [
+                "W2517769515",
+                "W2070285512",
+                "W1598602811"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Data extraction and management",
+              "parent_subsection_id": "s_3_4",
+              "text": "A proforma, piloted on a sample of articles to ensure that relevant information was captured [W1598602811], was developed to extract information from each study. It captured:\n\n* Year of study\n* Publication type\n* Study design\n* Quality of evidence (see below)\n* Type of evidence (e.g., empirical or simulation)\n* Target of crime, method of offending, cybercrimes/harms\n* Brief description of study",
+              "citations": [
+                "W1598602811"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Summary of search results",
+          "subsubsections": [],
+          "text": "The initial database search yielded a total of 3506 published articles (see **FIGURE 1**). After removing 798 duplicates, 2708 were screened for eligibility \u2014 198 met the inclusion criteria for full text review. Following full text review, 114 studies were included. Of these, two were from magazine articles, one was a book chapter, 20 were from journal articles and 91 were from conference proceedings [W2293931827, W2744579627, W1995056472, W1505594662, W2305049525, W2610629479, W2485569983, W2247854676, W2065336436, W2766862940, W2508433864, W2604699954, W1973378923, W2065547961, W4253649854, W1601477662, W1690148500, W2585956935, W2034830364, W2574081570, W2014252769, W2562984869, W2734858986, W2247946424, W2399187981, W2294599967, W2460813369, W2182112800, W2038475837, W1495584584, W1615704268, W2614535647, W2557721144, W2589017816, W2738191490, W2034728154, W2738475566, W2408661706, W2766472919, W2294937515, W2773715969, W2276525750, W1561850916, W1811490850, W2093081993, W2547323341, W2562451352, W2394306556, W2592547634, W1982457390, W2101609731, W2295733304, W1991882944, W1987221450, W2487955851, W2692776268, W2734241502, W2566994770, W2138803135, W2057784588, W2051552208, W2618136360, W4390873223, W2306360610, W2089116100, W1596298822, W2274307588, W2215237128, W2612398564, W2291620186, W2295733304, W2354520588, W2212111137, W2407089460, W2003797911, W1981471876, W1863828162, W3183910502, W2531320996, W2134295053, W2111619626, W2105103777, W1967561194, W2606537796, W2986455874, W2768152971, W2604813584, W2104927807, W2009033060, W2003544295, W1964661113, W2119046642, W2038194220, W2065955975, W1971673042, W1988037376, W1970429723, UNMAPPED:21, UNMAPPED:23, UNMAPPED:26, UNMAPPED:30, UNMAPPED:48, UNMAPPED:52, UNMAPPED:53, UNMAPPED:66, UNMAPPED:71, UNMAPPED:72, UNMAPPED:90, UNMAPPED:92, UNMAPPED:99, UNMAPPED:101, UNMAPPED:105, UNMAPPED:107, UNMAPPED:108]. Of the 84 excluded, 49 did not discuss a crime-related issue, and 29 were not about consumer IoT. For two, the full text was unavailable, two were not peer reviewed, one was a duplicate and one was unavailable in English.\n\n**FIGURE 1.** PRISMA chart and attrition in the systematic search process\n```\n3506 references imported for screening\n \u2502\n \u25bc\n798 duplicates removed\n \u2502\n \u25bc\n2708 studies screened\n \u2502\n \u25bc\n2510 studies irrelevant\n \u2502\n \u25bc\n198 full-text studies assessed for eligibility\n \u2502\n \u25bc\n84 studies excluded\n \u2502\n \u25bc\n114 studies included\n```\n\nFor urban crimes, specific attack methods are generally associated with some offences but not others. For example, residential burglary may be committed in a variety of ways, but these generally differ to those employed in (say) street robberies. In the context of the IoT, a single method or combination of them, may be used to commit a range of offences. As such, unlike urban crime, there will be a less direct mapping between particular methods of attack and specific crime types. Consequently, we first outline the types of attacks identified. Strictly speaking, some of these actions (e.g., Denial of Service attacks) may be crimes themselves in many countries, since they violate state laws (e.g., the Computer Misuse Act (1990) in the UK). However, many of these violations may go unnoticed and may not in themselves have harmful consequences for the victim. In the language of realistic evaluation [W1856244049], they represent intermediate outcomes that are necessary steps for a crime to be committed, and hence reviewing their possible forms helps to map out what offences might ultimately be possible. With this in mind, after reviewing methods of attack, we outline key mechanisms through which a crime may be committed, and the key cybercrimes/harms that have been discussed. This process of attack method to cybercrime (ultimate outcome) is summarised in **FIGURE 2**.\n\n**FIGURE 2.** Process of IoT cybercrimes\n```\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Methods of attack \u2502 \u2500\u2500\u25ba \u2502 Intermediate \u2502 \u2500\u2500\u25ba \u2502 Cybercrimes/ \u2502\n\u2502 e.g., eavesdropping \u2502 \u2502 Outcome \u2502 \u2502 Harms \u2502\n\u2502 activity in the home\u2502 \u2502 e.g., attacker \u2502 \u2502 e.g., Household \u2502\n\u2502 \u2502 \u2502 builds up a profile \u2502 \u2502 burglary or stalking\u2502\n\u2502 \u2502 \u2502 of the victim's \u2502 \u2502 of victim \u2502\n\u2502 \u2502 \u2502 routine activities \u2502 \u2502 \u2502\n\u2502 \u2502 \u2502 that they can \u2502 \u2502 \u2502\n\u2502 \u2502 \u2502 exploit \u2502 \u2502 \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n\nWe also examine the strength of the evidence to help assess the extent to which the offences discussed can be considered plausible. For example, a particular type of crime is considered more likely if it had been demonstrated in the real world compared to researchers merely speculating about it. As with systematic reviews of crime reduction interventions, we do this with reference to a hierarchy of evidence. This was developed following an initial reading of the articles and is summarised in **TABLE 1**.\n\n**TABLE 1.** Hierarchy of evidence\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W1856244049"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "1990"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Methods of attack",
+          "subsubsections": [],
+          "text": "A total of eleven attack types were identified which, to ease their presentation and review, are summarised in **TABLE 2**. These categories are not mutually exclusive, as attackers may use multiple techniques to exploit a device or network of them. As well as listing the types of attacks identified, in **TABLE 2** we briefly define them and provide example citations.\n\n**TABLE 2.** Summary of the key attacks against IoT devices identified\n{{TABLE:tbl_02}}\n\nWhile threats exist at the various stages of the development, deployment and lifecycle of a product [W1973378923], most papers focussed on attacks that are launched against purchased IoT devices.",
+          "citations": [
+            "W1973378923"
+          ],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "Mechanisms and cybercrimes/harms",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Exposing personal user data",
+              "parent_subsection_id": "s_4_3",
+              "text": "Consumer IoT devices can store and process personal data from seemingly innocuous information about a user's activities to personal information (e.g., name and address). Numerous studies demonstrate how device vulnerabilities can lead to data being directly exposed, raising privacy concerns. For example, in a laboratory study, Lee et al. [W2574081570] showed how a number of *man-in-the-middle attacks* could be used to obtain personal information (e.g., personal identifiers and health information) from a wearable device. These included exploiting hardware or protocol flaws allowing an unauthorized connection to a wearable device to gather personal data illegally. They also demonstrated that an attacker can *eavesdrop* between a wearable device and services to intercept data exchanged. Such attacks exploit misconfigurations of Bluetooth settings in wearable devices, inadequate authentication (e.g., where a wearable does not differentiate between the real user's smartphone and an attacker's) and sensitive data exposure, whereby a smartphone application and its firmware do not use encryption to secure data [W2562984869].\n\nOther research [W1495584584] has explored the security of Chromecast cloud communications, finding that the control packets used to send user information can be exploited with *replay and session hijacking attacks*. The exposed data were sent in clear text (such as the google account being accessed) to the attacker. Other studies have demonstrated that user personal data is sent unencrypted from baby monitors over Wi-Fi packets [W2182112800] and can be exposed through attacks that target device firmware [W2305049525].\n\nAttackers may also compromise IoT devices to expose sensitive information not stored on them. For example, *side channel attacks* using smart watches can allow attackers to make inferences about sensitive information typed by a user on a smartphone or computer [UNMAPPED:232]. This is problematic if the user is entering sensitive information such as emails, search queries and so on [UNMAPPED:233]. Research has further shown that a malicious app could misuse the gyroscope, accelerometer and magnetometer on a smartwatch to infer a user's ATM PIN with more than 90% accuracy after only three trials [W2408661706].\n\nThe above papers focused on the security of devices tested and on demonstrating the types of attack possible. What they tended not to discuss were the crime types that might be facilitated. For other papers, the reverse was true. It is to these latter papers we next turn. This variability in coverage was common and so this format will be repeated throughout the review. In addition, some of the papers that discussed specific crime types provided little detail about the offenses themselves. Conducting a (branching) systematic review of the research for each of the crime types discussed was beyond the scope of this review. Consequently, following a more realist approach [W1856244049], to provide a little more detail about the crimes that might be facilitated by IoT devices, we supplement what follows with findings from additional searches.\n\nDirectly exposing personal information stored or communicated from IoT devices may lead to a number of crimes. Users' personal information can be used for identity theft [W1690148500, W2589017816, UNMAPPED:177], by (for example) inferring a user's social security numbers from the information on their wearable [UNMAPPED:177]. Sexual-related information or other information such as videos and images may be stolen from devices and used to blackmail individuals [W2557721144, W2610629479]. The facilitation of theft and distribution of sexual content via technology has increased in recent years [W2301843470] and has been used to harass, coerce or blackmail victims [W2114060401]. For example, in 2014, private photos of Jennifer Lawrence and other high-profile celebrities were leaked online after hackers exploited their iCloud accounts [UNMAPPED:237]. As more devices collect, send and receive such data, the opportunities for such offending will increase.",
+              "citations": [
+                "W2574081570",
+                "W2562984869",
+                "W1495584584",
+                "W2182112800",
+                "W2305049525",
+                "W2408661706",
+                "W1856244049",
+                "W1690148500",
+                "W2589017816",
+                "W2557721144",
+                "W2610629479",
+                "W2301843470",
+                "W2114060401"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "232",
+                "233",
+                "177",
+                "237"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Profiling",
+              "parent_subsection_id": "s_4_3",
+              "text": "Several papers demonstrated that information about consumers' routine activities (e.g., exercise, cooking) and household occupancy can be (in)directly inferred from IoT devices. For example, occupancy in the home correlates with smart meter activity relating to power usage [W2075775182]. Attackers can obtain activity and occupancy information in a number of ways, including *eavesdropping* communications between devices that employ a Bluetooth [UNMAPPED:171] or ZigBee connection [W2276525750]\u2014both commonly used communication protocols in IoT devices.\n\nIn a laboratory study, Copos et al. [W2485569983] analysed the traffic between a Nest thermostat and a smoke detector. They found that with high accuracy, they could identify when the thermostat transitioned between the Home and Auto Away mode (88%) which indicates whether the user is home or not. Other studies have demonstrated how variants of *side channel attacks* can be used to indirectly infer activity patterns [UNMAPPED:167], although the accuracy of detection depends on the manufacturer, and the specific activity concerned [W2614535647, UNMAPPED:171]. For example, Yoshigoe et al. [W2276525750] demonstrated that a smart hub and its cloud server employed a predictable response pattern that can be used to identify when nobody is home (little network traffic is generated when homes are unoccupied).\n\nIoT devices also store and communicate large amounts of personal information, which can be used to build user profiles. Jacobsson et al. [W1690148500] liken this to the current mapping of online user behaviour by companies including Facebook and Google but argues that the IoT will allow physical user habits to be plotted, creating detailed personal dossiers of both online and offline behaviour. Companies may also profile to determine behavioural patterns for commercial purposes [UNMAPPED:177] and to tailor unsolicited messages to users [W1690148500]. Companies currently provide predictive insights about people's health by tracking wearable and smartphone data to measure stress based on their heart rate, potentially revealing their (mental) health state [UNMAPPED:177]. Data can be aggregated to make potentially sensitive inferences, such as participation in sporting events, while access to contact lists can allow inferences regarding health conditions and social activity [UNMAPPED:177]. These may constitute crimes under recently introduced General Data Protection Regulation (GDPR) if adequate consent is not given or the data are processed inappropriately.\n\nSome papers discussed how profiling users could lead to discrimination using information gained from health wearables [UNMAPPED:177]. Presently, the HR sector analyses job applicants' suitability using information from social network accounts [W2903579970]. In the future, information derived from IoT devices may be used to provide insight into applicants' physical and mental health. For example, Aktypi et al. [UNMAPPED:177] argue that obesity could be diagnosed using data from wearables and that pregnancy could be detected (resting heart rates increase by 40-50% during pregnancy). The FTC [UNMAPPED:10] also has concerns that the collation of information about people may be used discriminately for employment, credit and insurance decisions. The legal implications of using social media data for employee screening are currently unclear [W2903579970] but may be further clarified (in the UK at least) through recent data protection legislation [W2903579970, UNMAPPED:240]. However, the law on discrimination applies to both online and offline checks. Thus, information gained regarding applicant's protected characteristics that is misused to discriminate applicants will be illegal. How data is collected from IoT devices is thus of concern.\n\nSeveral papers suggested that profiling could be used for reconnaissance to facilitate crimes including burglary (discussed further below) and stalking [W1690148500, UNMAPPED:177]. Stalking is the repeated and persistent unwanted behaviour of an offender that engenders fear in victims [UNMAPPED:241]. It is common in cases of domestic abuse [W2146959679], and a review of domestic abuse-related homicides in London indicated that 40% of victims were stalked prior to their death [UNMAPPED:243]. Most cases of stalking already involve an online element [UNMAPPED:244]; however, attacks that exploit the IoT will allow stalking and related offenses to be committed with greater ease and in a more targeted way.",
+              "citations": [
+                "W2075775182",
+                "W2276525750",
+                "W2485569983",
+                "W2614535647",
+                "W1690148500",
+                "W2903579970",
+                "W2146959679"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "171",
+                "167",
+                "177",
+                "10",
+                "240",
+                "241",
+                "243",
+                "244"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Physical Access Control",
+              "parent_subsection_id": "s_4_3",
+              "text": "As discussed, occupancy detection can help offenders determine if a victim is home or not. Moreover, research has demonstrated that home security devices (e.g., connected door locks) can be exploited to allow unauthorised entry. For example, Ho et al. [W4253649854] demonstrated that an attacker (with previous authorised access) can evade both the revocation mechanisms (intended to prevent access by particular individuals) on smart locks and the access logging of such devices, giving them unlogged, unauthorized access to a home. This particular problem arises due to vulnerabilities in the network architectures used (e.g., the use of a Device-Gateway-Cloud architecture, where the device lacks a direct connection to the manufacturer's servers) and access control policies used by a range of smart lock systems. Agadakos et al. [UNMAPPED:185] showed that the interconnectedness of various devices (e.g., connected window sensors, smart plugs and smart hub) can also leave homes vulnerable. They demonstrated that the Bluetooth channel for a smart plug was unauthenticated, allowing attackers to use *spoofing attacks* to turn off the smart hub, rendering connected window sensors useless. In this case, homeowners would not be informed if windows were opened or closed.\n\nOther lab-based research [W2294937515] on smart home monitoring systems has identified vulnerabilities in the updating procedure, which can allow attackers to determine if users are home or not. Left unaddressed, as the consumer IoT market grows, this type of vulnerability may be significantly exploited\u2014much like keyless car theft appears to be committed at the moment [UNMAPPED:246].\n\nFernandes et al. [W2604699954] argue that unnecessary access privileges, referred to as open privileges in smart home platforms, can leave devices vulnerable. For example, a *malware* app that uses privileges in the SmartThings platform can snoop on PIN codes as they are created and leak them, giving attackers the codes to unlock connected doors. In a lab-based study, Min and Varadharajan [W2247946424] demonstrate how attackers can exploit integration services (i.e., not just individual devices), including the popular IFTTT (If This Then That), that allows users to create triggers between devices or services (e.g., if light turned on, turn radio on). They show that attackers can take over a user's IFTTT account through the theft of browser cookies and use *malware* to manipulate IFTTT triggers to perform unauthorised actions (e.g., triggering smart locks to open without alerting the user).\n\nA combination of occupancy detection and the exploitation of devices linked to physical security can facilitate unwanted intrusion in the home and burglaries. Numerous papers discuss how these mechanisms can be triggered [W4253649854, W2604699954, W2294599967, W2508433864, W2604699954], although they do not always demonstrate the attack, with experts speculating about the possibility instead [UNMAPPED:177].\n\nIn the UK, the rate of domestic burglary has been declining with two in every 100 households victim to domestic burglary in 2017 compared to nine in 1995 [UNMAPPED:247]. However, this has started to increase recently [UNMAPPED:248] and technology may further facilitate this if the vulnerabilities discussed go unaddressed.",
+              "citations": [
+                "W4253649854",
+                "W2294937515",
+                "W2604699954",
+                "W2247946424",
+                "W2604699954",
+                "W2294599967",
+                "W2508433864"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "185",
+                "246",
+                "177",
+                "247",
+                "248"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Control audio-visual outputs",
+              "parent_subsection_id": "s_4_3",
+              "text": "Research demonstrates that attackers can manipulate and misuse devices, monitoring and controlling the audio/visual outputs of devices or misusing actuators. For example, Bachy et al. [W1505594662] exploited the firmware of Smart TVs using both physical and remote attacks, creating backdoor remote access to the TV from the internet. This allowed them to replace video displayed on the TV and use the device to launch additional attacks. Other lab-based studies have demonstrated that the visual output of surveillance cameras can be reconstructed by sniffing camera network traffic [W1615704268]. Moreover, due to a lack of encryption, images can be overwritten on many surveillance cameras using a video *replay attack* [W2766862940]. As such, critical events may be hidden from the user (e.g., potential intruders) or misinformation communicated [W2508433864, W2604699954].\n\nResearch by Obermaier and Hutle [W2399187981] showed that using techniques including traffic analysis and firmware disassembly, attackers could exploit the poor encryption, authentication and access control of cameras. The success and consequences of attacks depended on the camera manufacturer and the attacker's location (physical vs remote), but these vulnerabilities allowed the injection of forged video streams, manipulation of camera functionality, eavesdropping on camera streams, and the launch of attacks on the camera server. Xu et al. [W2773715969] also demonstrated that cameras can be exploited in physical proximity attacks through access to cameras feed. However, this type of attack requires physical access to the consumers' smartphone to access the associated software application, or the theft of their sim card to reset the access password. These studies demonstrate that some attacks are more sophisticated, require physical access to products or connected devices, and that success may depend upon the specific vulnerabilities of the consumer device, but that these risks do exist.\n\nOther studies demonstrate that baby monitors are susceptible to hacking. Sivaraman et al. [W2182112800] show that *man-in-the-middle attacks* can facilitate access to camera feeds, allowing attackers to view children. Predators may also misuse IoT devices to groom and exploit children, or broadcast sexual content to them [W2557721144]. Industry reports show that children's toys are also susceptible to hacking, allowing strangers to talk to them [UNMAPPED:250]. The IoT may thus afford further opportunities for predators to gain access to children, in the same way that online social networking services have previously been misused [W2017945058] \u2013 for example, Facebook has been used in 33% of cases involving the grooming of children [UNMAPPED:252].\n\nConsumer IoT devices can also be misused to illicit affective responses, causing embarrassment, annoyance or damaging a person\u2019s reputation [W2557721144, W2508433864, W2065336436]. For example, audio devices can record private conversations [W2065336436] and devices with cameras can take embarrassing or sexual photographs [W2557721144, W2065336436]. Tzezana [W2557721144] argues that various sex crimes could be committed using these devices. For example, offenders may broadcast sexual messages to victims, including children, conduct exhibitionism by displaying sexual images to victims, or engage in voyeurism by observing others for sexual relief. Internet-facilitated sexual offending is increasing and has resulted in a rise in prosecutions and clinical referrals [W2301053355], but insecure IoT devices may fuel this type of offending further.",
+              "citations": [
+                "W1505594662",
+                "W1615704268",
+                "W2766862940",
+                "W2508433864",
+                "W2604699954",
+                "W2399187981",
+                "W2773715969",
+                "W2182112800",
+                "W2557721144",
+                "W2017945058",
+                "W2065336436",
+                "W2301053355"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "250",
+                "252"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "Potential manipulation and misuse of devices",
+              "parent_subsection_id": "s_4_3",
+              "text": "Rahman et al. [UNMAPPED:227] demonstrated a number of security weaknesses of the Fitbit wearable. They were able to exploit a Fitbit within a radius of 15 feet and capture files including sensitive personal information (e.g., username, height, weight). They also found Fitbits to be susceptible to data integrity attacks allowing attackers to insert fake data without the Fitbit verifying it (e.g., unreasonable step counts). Step counts are linked to (monetary) rewards, which could allow attackers to earn money for steps (e.g., a $20 dollar gift card for steps accumulated) or appear higher on social ranking boards. They were also able to drain the battery of the device 21 times faster by continuously querying it. While these misdemeanours may not be particularly concerning, as devices become more connected and functionality increases, attacks may become more disconcerting.\n\nOther studies show that attackers can gain control of devices to (say) masquerade as a legitimate user to gain control of smart lightbulbs [W2182112800], exploit RFIDs used on smart locks by emulating or cloning a tag to unlock them [W2773715969], or eavesdropping on device commands to enable remote access to motion switches [W2182112800]. However, it should be noted that not all IoT devices are vulnerable to attack. For example, Visan et al. [W2738475566] tested the security of Samsung SmartThings and found it to be robust to various *man-in-the-middle* and *DoS attacks*.\n\nThe manipulation of IoT devices may be used to cause denial of service or certain device functions. For example, offenders may use ransomware to lock household devices in exchange for cash [W2610629479] or disrupt their connectivity [W2738191490]. More seriously, a number of consumer IoT devices in the home have safety critical monitoring functions (e.g., fire alarms) and offenders may suppress these [W2247854676]. Furthermore, offenders may target devices with heating capabilities to cause arson in the home [W2585956935, W2585956935, UNMAPPED:216] or overload electrical devices such as lightbulbs [W2294599967]. Devices with actuators, including household robots, may be used to vandalise homes [W2574081570, W2508433864, W2065336436]. Furthermore, consumer IoT devices may be used for political misuse, with smart assistants hacked to only communicate news from a particular political orientation [W2557721144].\n\nOf course, the IoT affords many benefits. For example, smart meters and the smart grid have the potential to achieve a more efficient, reliable way of providing gas and electricity to consumers [W3113365306]. Of course, the security of this infrastructure is critical. Unfortunately, in the UK, the physical tampering of meters already costs consumers and the energy industry about \u00a3400 million per year [UNMAPPED:257]. Lo and Ansari [W2014252769] argue that such offending may increase, with data integrity attacks used to inject malicious data into smart meters causing false usage results. In a series of studies, Liu and colleagues simulated the impact of these attacks and demonstrated that an attacker can fake the guideline pricing curve (e.g., the cost of electricity during particular periods) and benefit from a 34% reduction in their bill [W1991882944, W1987221450, W2295733304, W2487955851, W2692776268, W2291620186, UNMAPPED:213]. In another exploit, an attacker fakes the guideline pricing curve during peak load hours (e.g., 8pm) to be low so that significant energy can be consumed at discounted prices. They found that such attacks can significantly unbalance the local power system by increasing the peak to average ratio (in their study by 36%), which can lead to blackouts and a denial of service for energy usage, which has implications beyond energy theft.",
+              "citations": [
+                "W2182112800",
+                "W2773715969",
+                "W2738475566",
+                "W2610629479",
+                "W2738191490",
+                "W2247854676",
+                "W2585956935",
+                "W2585956935",
+                "W2294599967",
+                "W2574081570",
+                "W2508433864",
+                "W2065336436",
+                "W2557721144",
+                "W3113365306",
+                "W2014252769"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "227",
+                "216",
+                "257"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "Gateway to further attacks",
+              "parent_subsection_id": "s_4_3",
+              "text": "As discussed, we did not examine the security of routers. However, we did consider this in the context of the IoT. Home routers are the gateway between connected devices and the internet, and in a Smart Home can help secure it. Research has shown that this sense of security may be overstated. Sivaraman et al. [W2460813369] were able to bypass the security in home routers through malware embedded on an iPhone app which scouts the users' home network for IoT devices and relays this back to an attack server. The malicious app then configures port mappings on the home router (via Universal Plug and Play network protocols) to give the attacker server access to specific devices, which they can then attack.\n\nOthers have demonstrated that they can exploit the connection between IoT devices and home routers. This often relies on physical proximity to the device, limiting the potential for this kind of attack. However, research has shown that this can be achieved using unmanned aerial vehicles (UAVs). For example, Vemi and Panchev [W2738191490] were able to automate *man-in-the-middle attacks* by flying UAVs around an area, setting up rogue access points and harvesting important credentials from wireless networks and connected devices. This allowed them to disconnect devices from home routers or launch *DoS attacks* [W2773715969]. Given increases in UAV sales [UNMAPPED:258], this type of attack becomes ever more plausible.",
+              "citations": [
+                "W2460813369",
+                "W2738191490",
+                "W2773715969"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "258"
+              ]
+            }
+          ],
+          "text": "Next, we detail the key mechanisms that may be employed to facilitate the cybercrimes/harms discussed in papers. We limit discussion to those for which there was some consensus in the literature (i.e., examples discussed in two or more papers). **TABLE 3** summarises the intermediate outcomes discussed that can be realised from the types of attacks shown in **TABLE 2**. **TABLE 4** summarises the cybercrimes/harms. In both tables, we provide an indication of the quality of the evidence used to establish the plausibility of the mechanism through which the cybercrimes/harms could be realized.\n\n**TABLE 3.** Mechanisms and hierarchy of evidence\n{{TABLE:tbl_03}}\n\n**TABLE 4.** Cybercrimes/harms and hierarchy of evidence\n{{TABLE:tbl_04}}\n\nWe now elaborate on the content of **TABLES 3** and **4**, discussing papers that employed either an experimental or simulation research design and articulated a clear mechanism between an attack method and the associated cybercrimes/harms. The examples discussed thus represent forms of offending for which the way in which an offense might be carried out was clearly stated and evidence exists to suggest it as plausible, even if there is little or no evidence of this in the \"wild\" hitherto. We then discuss how these mechanisms may relate to cybercrimes/harms that have been speculatively derived within the literature. For the reader's benefit, methods of attack (see **TABLE 2**) are italicised in the text.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03",
+            "tbl_04"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In recent decades, criminological research has focused on understanding the factors that facilitate crime and interventions that reduce it. A variety of approaches have been taken, and frameworks developed. The body of evidence continues to grow and there are now many systematic reviews of what works [UNMAPPED:259]. While this is to be celebrated, for new forms of crime, including those (potentially) facilitated by the IoT, our knowledge of what works to reduce them is limited. Given that at least half of all crime now occurs online, there is a clear need for criminologists to focus on these forms of offending to help better understand and address them. The aim of this review was to systematically take stock of what we know and to map out a research agenda to encourage this.\n\nWe found that consumer IoT devices can be exploited using a range of attack methods, which can facilitate a variety of offences. We will not repeat what these are here. However, it is worth noting that some offences may be more likely and affect more people than others. For example, the exploitation of insecure IoT devices is likely to provide a wider variety of opportunities for offenders to commit crimes such as stalking, and provide richer data for them to exploit. For crimes including burglary, one might question if the IoT will increase this form of offending, since offenders already have ways of breaking into homes, and few may possess the necessary IT skills.\n\nHowever, this segues into a further question about emerging models of crime, particularly crime as a service [W2054321243]. In the context of cybercrime, an offender may not need the technical skills to commit a crime, as they can pay to use services provided by others. Well-documented examples are DDoS attacks, which can be rented on the dark web for a few dollars [UNMAPPED:261]. If the proliferation of IoT devices does increase the volume of crime opportunities, this will provide further incentives for those who provide such services, and for offenders to rent them. In this context, as more people choose to connect their homes to the internet, crimes such as burglary might increasingly be committed through the exploitation of vulnerabilities in the IoT. Critically assessing which crimes are most likely to be facilitated by the IoT would, thus, be a useful avenue for research.\n\nConsidering scale, Williams et al. [W2745141831] conducted an assessment of the vulnerabilities of 156,680 consumer IoT devices using the search engine Shodan.io. Thirteen-percent had vulnerabilities. Of these, 53% were printers, 40% were webcams and 7% were smart TVs. These numbers are non-trivial. Moreover, it is worth noting that vulnerabilities in a single device can render a whole smart-home network susceptible to attack.\n\nApropos the research agenda, at least five themes are worthy of attention. First, criminologists might explore the types of white-collar crime that could be facilitated. They might consider how future legislation may make activities that are currently unregulated criminal. For example, governments are introducing data protection legislation, and reacting to scandals associated with the inappropriate use of social media data. A systematic analysis of how this landscape might/should change would thus be valuable.\n\nSecond is measurement. It is widely accepted that much crime goes unreported. For computer misuse, the problem is likely to be considerably worse \u2014 data from the Crime Survey of England and Wales suggest that in the UK only 17% of offences are reported to Action Fraud, the UK\u2019s national fraud and cyber-crime reporting centre. While surveys can provide estimates of the prevalence of known offences, not all victims will be aware that they have been victimized and hence alternative data collection exercises will be required to estimate the true scale of the problem.\n\nThird is understanding the problem. Research on situational crime prevention [W2026328911] has sought to provide a detailed understanding of the conditions under which crime events occur, what kinds of targets are more vulnerable, and how crimes are carried out. The aim is to identify situational characteristics that might be manipulated to make crime less likely [W4237696485], and at what stage in a sequence of events interventions might best succeed. Addressing such questions in the context of the IoT may help to understand problems and identify solutions to them. However, it will require detailed data, including the types of devices (and networks of them) that are most vulnerable, network configurations and so on. Again, alternative forms of data collection will likely be required and collaborations with those in the field of information security are likely to be vital. Some of the analytic tools used to understand urban crime problems might be repurposed, but new forms of analysis will also likely be required.\n\nIn terms of crime prevention, we are currently exploring the potential of market levers to encourage manufacturers to make IoT devices secure by design [W3034703401, UNMAPPED:265]. However, it will also be necessary to understand user behaviour as even the best designed system will fail if misused, misconfigured or updates are not installed. Non-compliance in the context of security is concerning but attackers are also known to target the human element [W2048117442]. Understanding user susceptibility to cybercrimes will thus be important. Whilst much work needs to be done to ensure that the burden for securing IoT devices is reduced [W3034703401], it is recognised that consumers will have to engage in \u201ccyber hygiene\u201d to maintain device security [UNMAPPED:267] and derived behavioural insights may be key to this [W1931991804]. Firstly, what is needed is a greater focus on usable security to ensure the security of devices matches users\u2019 goals, capabilities and primary tasks \u2013 recognising that security is secondary to consumers use of the product [W1800552373]. Secondly, crime prevention needs to focus on the facilitators and barriers to cyber hygiene, exploring users' capability, motivation and opportunity to protect themselves and design interventions accordingly [W2804521551]. In a recent review, we found that cyber hygiene advice was absent in the user manuals or associated online materials of 90% of IoT devices sampled [W2953323334].\n\nAs with any research, this review is not without limitations. Chief among these is that while developments in technology are rapid, the publication of academic research is not. As such, we provide a snapshot of research that will need updating. For example, it is possible that some of the vulnerabilities identified will have subsequently been fixed (for some or all devices) while others will be ongoing 'unpatched' issues. Moreover, the systematic search did not include industry reports (although our other searches did). Systematically searching these was beyond the scope of the current work but others might do this. Another issue concerns differences in the vocabulary used across disciplines. Research on cybersecurity typically focuses on threats to confidentiality, data integrity and availability as opposed to crime per se. While we do not believe this hampered the review, it is an issue.\n\nAt present, and as far as we are aware, we have not witnessed a wide-scale crime harvest associated with the IoT. However, there is no room for complacency \u2014 crime harvests have played out time and again. Now is the time to act and part of the aim of this paper was to encourage the criminology community to contribute to this agenda.",
+      "citations": [
+        "W2054321243",
+        "W2745141831",
+        "W2026328911",
+        "W4237696485",
+        "W3034703401",
+        "W2048117442",
+        "W1931991804",
+        "W1800552373",
+        "W2804521551",
+        "W2953323334"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "259",
+        "261",
+        "265",
+        "267"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2980318030_tables.md"
+}

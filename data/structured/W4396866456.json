@@ -1,0 +1,483 @@
+{
+  "id": "W4396866456",
+  "metadata": {
+    "title": "Investigating Machine Learning Techniques for Predicting Risk of Asthma Exacerbations: A Systematic Review",
+    "n_sections": 7,
+    "n_subsections": 21,
+    "n_subsubsections": 0,
+    "n_tables": 11
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Asthma, a common long-term lung condition, is caused by inflammation in the airways of the respiratory system. Asthma affected 262 million people in 2019, and it causes an average of 461,000 deaths each year [UNMAPPED:1]. Often beginning in childhood, asthma affects all ages [UNMAPPED:2]. A diagnosis of asthma considers clinical signs and symptoms, including wheezing, breathlessness, chest tightening, and coughing [UNMAPPED:3]. Asthma exacerbations could arise in patients due to multiple factors, including genetic, clinical, and environmental factors. For instance, if asthma patients are exposed to atmospheric changes such as dust, fumes, and pollen, their asthma can worsen, and it can lead to asthma attacks.\n\nThe reasons for asthma exacerbations are multifactorial, and worsening of asthma control may go unnoticed in patients if their symptoms are mild. However, asthma can worsen rapidly, leading to hospitalisation or death [W3081755675]. The National Review of Asthma Deaths (NRAD), conducted in the UK, found that 58% of patients with asthma who died were diagnosed as having mild or moderately severe asthma, with almost half having had no asthma review in the previous 12 months [W2113948475]. This highlights the need for innovative approaches to managing asthma and responding to attacks to ensure that care is delivered promptly. Another study [W3215210614] found that hospitalisation due to COVID-19 has increased among children (5\u201317 years) with poorly controlled asthma, as compared to children with well-controlled or without asthma. This highlights the increased risk that asthma patients face and emphasises the need for regular medical review, treatment, and proper management. This is important since asthma control can be affected by other factors, including environmental and meteorological conditions [W2608348062, W3046068344, W4285793041], workplace conditions, and severe adverse life events [W2119614430]. Therefore, early detection of asthma symptoms or exacerbations is essential to ensure rapid mitigation.\n\nEven so, asthma prediction is challenging and complex due to its heterogeneous nature and the diverse multifactorial triggers unique to individuals [W2992152394, W3167994814]. Patients with asthma are at a high risk of needing unscheduled medical care, which could be prolonged and costly to the health system. Any approach to predict asthma attacks will enhance asthma management and will reduce costs while increasing the quality of life. Whilst there has been a range of approaches to predicting the risk for asthma attacks that have been investigated in prior literature [W2787204142], the recent development of novel artificial intelligence techniques has seen a rapid rise in efforts to predict asthma exacerbations. However, the clinical relevance of these techniques and the potential to improve the accuracy and reliability of risk prediction is not yet known. There is a need to synthesise the available machine learning models that have been developed to a) identify the performance of these models in risk prediction and b) determine the range of clinical factors that have been included in these models. Understanding these factors is key if these models are to be used in routine practice for triaging patients based on their level of attack risk, or informing changes in their treatment based on their changing risk as part of clinical decision-making.\n\nMachine learning (ML) techniques that have emerged to manage and treat various diseases are increasingly being applied, particularly in terms of risk prediction. ML is developed based on mathematics, logic, probability, neuroscience, and decision theory. Using these concepts, different algorithms are constructed that can store important information from data elements via continuous training sessions. Consequently, the models built upon these algorithms have the ability to identify patterns and generate outcomes from complex data without any human-generated explicit programming code [W2997982111]. These computer methodologies have been found to perform better than traditional statistical approaches that can facilitate personalised medicine by addressing individual patient characteristics while processing vast amounts of data [W3160052398, W2999350951]. Previous studies have shown that ML models can support asthma monitoring, prediction, diagnosis, and control in children and adults. These techniques complement clinicians if expertise or resources are limited [W3131411810], preventing or mitigating tragic circumstances. This may be particularly true for exacerbation prediction as it will be difficult for health practitioners to consider a variety of factors, other than medical and clinical, in determining future attacks. Computer-based assistance can help predict impending attacks by considering a range of factors, and it will assist clinicians in making the appropriate decisions for the patient. The existence of a risk prediction model will be helpful for physicians to monitor disease control. It can also help patients as they will be made aware of any possible upcoming attacks.\n\nThere are three categories of ML algorithms: supervised, unsupervised and reinforcement. Supervised algorithms are used to solve classification and regression problems. Typical applications of these algorithms are seen in spam filters, fraud detection systems, recommendation engines, image recognition systems, and so on. Figure 1 shows some of the commonly used ML algorithms for making predictions.\n\nThis systematic review explores the application of ML techniques to predict the risk of asthma attacks. The review question was \"How do machine learning techniques perform in predicting asthma attacks?\". Specifically, we identify the ML techniques used, categorise the predictive models based on the outcome, and identify the suitability of ML approaches as they relate to the scenarios we analysed. We also identify the best-performing ML algorithms and provide prospective research directions.\n\nThe subsequent sections of this paper are organised as follows. Section \"Methodology\" explains the methodology employed in this investigation, while \"Results\" section articulates the findings derived from the study. Section \"Discussion\" provides an in-depth discussion of these findings. Section \"Conclusion\" summarises the study and suggests potential avenues for future research.\n\n**FIGURE 1** Commonly used machine learning algorithms for making a prediction\n\n| Machine Learning Algorithms for Prediction |\n|:---:|\n| Logistic Regression |\n| Na\u00efve Bayes |\n| Neural Networks |\n| Support Vector Machines |\n| Decision Trees |\n| Gradient Boosting Machines |\n| Random Forest |",
+      "citations": [
+        "W3081755675",
+        "W2113948475",
+        "W3215210614",
+        "W2119614430",
+        "W2992152394",
+        "W3167994814",
+        "W2787204142",
+        "W2997982111",
+        "W3160052398",
+        "W2999350951",
+        "W3131411810"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "Inclusion Criteria",
+          "subsubsections": [],
+          "text": "This study included primary studies of ML-based solutions for asthma in adults and children published in English from January 2010 to February 2023. No limitations were placed on the study design, setting, or minimum follow-up, but studies were limited to the English language due to the language capabilities of the research team.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "Exclusion Criteria",
+          "subsubsections": [],
+          "text": "Studies focusing on the diagnosis/prediction of asthma itself (as a condition), rather than asthma exacerbations, were excluded from the current study. Any studies that have followed a non-machine learning approach were excluded. Additionally, studies focusing on predicting asthma symptoms/control/severity level, peak expiratory flow rate (PEFR) and emergency department (ED) visits due to other diseases were eliminated from the study pool. Further, we excluded research work published as reviews, systematic reviews, editorials, letters, comments to the editor, book chapters, abstracts, conceptual papers, opinions, unavailable sources, protocols, commentary, and unpublished full-text documents.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "Data Sources and Search Strategy",
+          "subsubsections": [],
+          "text": "We searched the databases Medline (via PubMed), Cochrane (via Wiley), Embase, IEEE Xplore, and Google Scholar using the search terms Asthma AND (attack* OR exacerbat* OR control* OR symptom*) AND (detect* OR predict* OR diagnos* OR manag*) AND (\"artificial intelligence\" OR AI OR \"machine learning\" OR \"deep learning\" OR \"neural network\" OR computer-based OR \"computer based\" OR computer-assisted OR \"computer assisted\" OR \"computer technology\" OR technology).\n\n**FIGURE 2** Study inclusion process via PRISMA\n\n```\nMedline: 47 Cochrane: 92 Embase: 504 IEEE Xplore: 147 Google Scholar: 70\n |\n \u2193\n Records identified\n n = 860\n |\n \u2193\n Duplicates removed\n n = 122\n |\n \u2193\n Title and abstract screened\n n = 738\n |\n \u2193\n Records excluded based on title and abstract\n n = 667\n |\n \u2193\n Full text screened\n n = 71\n |\n \u2193\n Records excluded\n n = 51\n \u2022 Not asthma attacks: 29\n \u2022 Not asthma specific: 13\n \u2022 Not ML: 7\n \u2022 Article unavailable: 1\n \u2022 Not using real data: 1\n |\n \u2193\n Records included\n n = 20\n```",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "Selection Process",
+          "subsubsections": [],
+          "text": "The database search identified 860 eligible records. We used the tool RAYYAN for the study selection process [W2560438049]. After removing 122 duplicates, the titles and the abstracts of the remaining studies were screened. At the end of this step, we eliminated 667 records, and the rest of the studies were sent through full-text screening, which resulted in the selection of 20 studies to be included in our review. These were blindly reviewed by two different researchers. This study selection process is illustrated in Fig. 2.",
+          "citations": [
+            "W2560438049"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "Data Extraction",
+          "subsubsections": [],
+          "text": "A data extraction table was created to record the specific data extracted from the selected studies. The design of the table structure was informed by previous research [W4229003704, W4200622207]. We extracted the year, country, title, aim, data source/s, sample size, research techniques, findings, evaluation metrics, model performance, and the limitations and strengths of each study.",
+          "citations": [
+            "W4229003704",
+            "W4200622207"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_6",
+          "subsection_index": 6,
+          "subsection_label": "Risk of Bias Assessment",
+          "subsubsections": [],
+          "text": "A risk of bias assessment of the selected studies was conducted using the Critical Appraisal Skills Programme (CASP) for Clinical Prediction Rule [UNMAPPED:22]. The CASP checklist was completed for each study independently by two authors. Any disagreements were resolved by consensus discussion. An additional file shows the quality of each study (see Supplementary file S1).",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "22"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This review adopted the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) methodology [W3118615836]. The protocol has been registered with the PROSPERO International Prospective Register of Systematic Reviews (PROSPERO CRD42023402178).",
+      "citations": [
+        "W3118615836"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "Characteristics of Included Studies",
+          "subsubsections": [],
+          "text": "Characteristics of the 20 studies included in this review are elaborated in Fig. 3. The included studies were conducted in a range of different countries, represented in Fig. 3a. (A study [W3046073541] that used an international data set from multiple countries is not included in the figure.) Importantly, as can be seen from Fig. 3a, the USA is the main country of origin for many of these studies predicting asthma attack risk using ML techniques. As shown in Fig. 3b, 75% of the studies were published as journal articles and the rest as conference papers. Figure 3c shows the distribution of the studies by year of publication. The majority of the studies have been published after 2020. The data sets employed in these studies have different sample sizes according to the number of participants or records (data instances). These details are presented in Table 1, showing the absolute values and percentages. Table 1 highlights the distribution of the two classes of the target variable: asthma attacks, both absent and present, as well as the portions of data used for training and testing the prediction models.\n\nIn this review, we identify the data sources that the previous studies incorporated to predict the risk of asthma attacks. Table 2 shows the different data domains including biological, clinical, environmental and meteorological, hospital and medical, and socio-demographic that have been used to develop the asthma risk prediction models. Clinical data may include asthma symptoms, PEFR, and inhalations while prescribed medications and treatments come under medical data. Hospital data consists of hospital admissions, previous attacks, comorbidities, ED visits, etc.\n\n**FIGURE 3** Characteristics of the included studies\n\n(a) Asthma risk prediction study count based on country\n\n{{TABLE:tbl_01}}\n\n(b) Publication formats of the included studies\n\n{{TABLE:tbl_02}}\n\n(c) Publication years of the included studies\n\n{{TABLE:tbl_03}}\n\n**TABLE 1** Characteristics of datasets used in previous studies\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W3046073541"
+          ],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02",
+            "tbl_03",
+            "tbl_04"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "ML Models",
+          "subsubsections": [],
+          "text": "The 20 studies used different ML techniques to predict the risk of asthma attacks. The outcome, asthma exacerbation, was considered either as a categorical variable or as a continuous variable in the form of a probability. Therefore, the studies can be categorised into 2 groups: 1) studies that predict the risk of asthma attacks as a classification (n=18) and 2) studies that predict the risk of asthma attacks as a probability (n=2). The classification group was further divided into 2 groups: studies with (n=11) and without (n=7) a prediction window. The studies with a prediction window can again be subdivided based on the window size: less than (n=6) and more than (n=5) a month. This categorisation of the studies is illustrated in Fig. 4.\n\nIn the literature, many studies predicted the risk of asthma exacerbations without considering the temporal effect. For instance, the impact of weather data from the previous day or a few days ago might have triggered the symptoms of asthma patients. Therefore, it is critical to consider the impact of the different factors from previous days (lags) in forecasting the risk of asthma attacks. Further, instead of just making a prediction, a group of studies constructed models to predict asthma attacks for a specific time (prediction window), such as the coming 3 days, 7 days, 3 months, 1 year, and so on. Details about these models are presented in the following sections.\n\nAmong the ML algorithms employed in these studies, logistic regression (LR), decision trees (DT), random forest (RF), gradient boosting machines (GBM), extreme gradient boost (XGB), support vector machines (SVM), and neural network (NN) algorithms were used most often. Most of the studies exercised the k-fold cross-validation technique to validate the model on the training data. Different studies chose different k values such as 3 [W2898812155], 4 [W3164963783, W4308696024], 5 [W2999350951, W3046073541, W4310275051, W2890655815, W4317600379] and 10 [W4311284534, W4229378776, W2097302145].",
+          "citations": [
+            "W2898812155",
+            "W3164963783",
+            "W4308696024",
+            "W2999350951",
+            "W3046073541",
+            "W4310275051",
+            "W2890655815",
+            "W4317600379",
+            "W4311284534",
+            "W4229378776",
+            "W2097302145"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "Hyperparameter Tuning",
+          "subsubsections": [],
+          "text": "Hyperparameters in ML models are external configuration settings that are not learned from the data but are set prior to the training process. They influence the overall behaviour of the model and affect its performance. Hyperparameters can be optimised using different techniques. Among the studies included in this review, only a very few [W4310275051, W4317600379, W2898812155, W3118385223] conducted hyperparameter tuning. The grid search technique was applied in two of these studies [W4310275051, W4317600379] while the randomised search technique was applied in another one [W2898812155]. (There are not enough details regarding the hyperparameter tuning process in [W3118385223].) Table 3 presents the details of the hyperparameter tuning conducted by past studies. It shows the various hyperparameters tuned with different values and techniques.\n\n**TABLE 2** Data sources used in previous studies\n\n{{TABLE:tbl_05}}",
+          "citations": [
+            "W4310275051",
+            "W4317600379",
+            "W2898812155",
+            "W3118385223"
+          ],
+          "tables_in_text": [
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "Model Performance",
+          "subsubsections": [],
+          "text": "The studies used different evaluation metrics to evaluate and compare the performance of the models, as shown in Table 4. These metrics were predominantly accuracy, area under the receiver operating curve (AUC-ROC), specificity, sensitivity, positive predictive value (PPV), and negative predictive value (NPV). Accuracy is the ratio of correctly predicted outcomes and the total number of samples, simply the overall correctness of the model. The AUC-ROC value represents the capability of the model to distinguish between the classes. Sensitivity, also called recall, measures the completeness of positive predictions, while specificity measures the completeness of negative predictions. PPV, also called precision, is the accuracy of positive predictions, while NPV is the accuracy of negative predictions.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "Predicting Risk of Asthma Attacks as a Classification",
+          "subsubsections": [],
+          "text": "Nineteen of the previous studies predicted the risk of an asthma attack as a binary classification, and one study [W3160146992] considered asthma attacks as a multi-class classification problem. Most studies in the binary category predicted the presence or absence of an asthma attack, while others considered different levels of asthma attack, such as mild, moderate, or severe. This section discusses the studies that predicted the risk of asthma exacerbation as a category.\n\n**FIGURE 4** Presentation of the results of the review\n\n```\n \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n \u2502 Studies \u2502\n \u2502 20 \u2502\n \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n \u2502\n \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n \u2502 \u2502\n \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n \u2502 Predicting risk of asthma \u2502 \u2502 Predicting risk of \u2502\n \u2502 attacks as a classification \u2502 \u2502 asthma attacks as a \u2502\n \u2502 (n=18) \u2502 \u2502 probability (n=2) \u2502\n \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n \u2502\n \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n \u2502 \u2502\n \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n \u2502 With prediction \u2502 \u2502 Without prediction \u2502\n \u2502 window (n=11) \u2502 \u2502 window (n=7) \u2502\n \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n \u2502\n \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n \u2502 \u2502\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25bc\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Less than a \u2502 \u2502 More than a \u2502\n\u2502 month (n=6) \u2502 \u2502 month (n=5) \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n\nFurthermore, imminent attacks could be predicted for a future time frame, for instance, the possibility of an attack in the next 3 days. While some studies constructed models by taking prediction windows into account, others did not. The following sub-section describes these groups.",
+          "citations": [
+            "W3160146992"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "Predicting Risk of Asthma Attacks With a Prediction Window of Less Than a Month",
+          "subsubsections": [],
+          "text": "In the literature, many studies predicted the risk of asthma exacerbations without considering the temporal effect. For instance, the impact of weather data from the previous day or a few days ago might have triggered the symptoms of asthma patients. Therefore, it is critical to consider the impact of the different factors from previous days (lags) in forecasting the risk of asthma attacks. Further, instead of just making a prediction, a group of studies constructed models to predict asthma attacks for a specific time (prediction window), such as the coming 3 days, 7 days, 3 months, 1 year and so on. Figure 5 depicts the association between prediction window size and the model's performance. The figure highlights that the shorter the prediction window, the higher the model's performance. The following section discusses those studies. We synthesised these studies into two categories according to the size of the prediction window as follows. This section represents the studies that classified the risk of asthma attacks using prediction windows for less than a one-month period. Table 5 in the Appendix shows a summary of the studies that developed ML models to predict asthma risk as a category using the prediction window concept.\n\n**TABLE 3** Hyperparameter optimisation details of the previous studies\n\n{{TABLE:tbl_06}}\n\nSix studies [W3046073541, W4310275051, W2564498768, W2522681375, W3164963783, W4308696024] developed models for short-term prediction of severe asthma exacerbations. Five studies [W3046073541, W4310275051, W2564498768, W2522681375, W4308696024] kept the prediction window at less than a week while one study [W3164963783] used more than 2 weeks (15 days) for the prediction window. In training the ML models, the authors used data from several previous days, which they defined as a lookback window. Four of the studies [W4310275051, W2564498768, W2522681375, W3164963783] applied the lookback window concept with the size of the lookback window ranging from 5 to 365 days for near-term prediction. However, [W3164963783] included inputs such as count of events for multiple lookback windows sizes\u201410, 30, 60, 90, and 365 days. With the aim of exploring telemonitoring data for asthma risk prediction, and using the minimum description length (MDL) principle, [W2522681375] found that the telemonitoring alert (out of four zones) on day 7 has higher importance in predicting the asthma risk on day 8. Comorbidity burden and previous exacerbations were important predictors, identified through collinearity [W3164963783]. Even though they have implemented principal component analysis (PCA) and recursive feature elimination techniques to identify important features, those are not clearly stated in the article. Most works used tree-based algorithms such as DT [W3046073541], RF [W3164963783, W4308696024], XGB [W4310275051, W3164963783, W4308696024], and CART [W2564498768]. Studies also developed models using LR [W3046073541, W4310275051, W3164963783, W4308696024], SVM [W4310275051, W2522681375], and NN [W3046073541, W3164963783] algorithms. Only two studies applied data imbalance handling techniques\u2014random under-sampling [W3046073541, W3164963783], random over-sampling [W3046073541], and synthetic minority oversampling technique (SMOTE) [W3046073541]. There is no clear data available for data imbalance handling in other works.\n\n**TABLE 4** Performance of the ML models developed for asthma risk prediction\n\n{{TABLE:tbl_07}}\n\n\\(^a\\)Area under the receiver operating characteristic curve \n\\(^b\\)Area under the precision-recall curve \n\\(^c\\)Negative predictive value \n\\(^d\\)Positive predictive value \n\\(^e\\)Root Mean squared error\n\n**FIGURE 5** Association between prediction window size and model performance\n\n{{TABLE:tbl_08}}",
+          "citations": [
+            "W3164963783",
+            "W2522681375",
+            "W3046073541",
+            "W4308696024",
+            "W4310275051",
+            "W2564498768"
+          ],
+          "tables_in_text": [
+            "tbl_06",
+            "tbl_07",
+            "tbl_08"
+          ]
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "Predicting Risk of Asthma Attacks with a Prediction Window of More Than a Month",
+          "subsubsections": [],
+          "text": "A set of studies defined their prediction window size as greater than or equal to a one-month period. One study [W4224276990] used a 1-month period while [W4311284534] used 6-months period as the prediction window size. All of the other studies [W3116632780, W2890655815, W4229378776] kept the prediction window size to 1 year. While [W4224276990, W4311284534, W2890655815] considered lookback windows similar in size to prediction windows, no clear details of lookback windows are provided in [W3116632780, W4229378776]. One study [W4224276990] identified clinical factors such as obesity, atopy, medication, asthma controller plan and patient service utilisation history as important asthma risk predictors. Asthma medication also played an important role in the research by [W4229378776]. Further, previous asthma exacerbations and length of treatment with biologics were key predictors of asthma risk in [W4311284534]. Meanwhile, age, hospital stay, blight prevalence, and neighbourhood inequality are important predictors, according to another study [W2890655815]. In developing prediction models, the most common ML algorithms utilised by these studies are LR [W4224276990, W4311284534, W4229378776], RF [W4224276990, W4311284534, W2890655815, W4229378776], and XGB [W4224276990, W3116632780, W4229378776]. Only one study [W2890655815] in this category applied random undersampling to handle data imbalance.",
+          "citations": [
+            "W4224276990",
+            "W4311284534",
+            "W2890655815",
+            "W3116632780",
+            "W4229378776"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_8",
+          "subsection_index": 8,
+          "subsection_label": "Predicting Risk of Asthma Attacks Without a Prediction Window",
+          "subsubsections": [],
+          "text": "This section focuses on the studies that developed ML models to predict the risk of asthma attacks without considering a prediction window. Table 6 represents the study summary for these studies. Seven studies [W4317600379, W2097302145, W3183425556, W3160146992, W2898812155, W2016511593, W3118385223] are included in this category and six of them considered this to be a binary classification problem. The seventh study [W3160146992] defined three target classes for risk as low, medium and high. A few studies specifically chose hospitalisations [W2898812155, W3118385223] or ED visits [W3118385223], due to asthma attack being the target variable. Only two studies exercised feature selection. While [W4317600379] used the LASSO regression technique, [W2016511593] did feature selection with RF. With the aim of utilising environmental triggers and biosignals for asthma risk prediction, one study [W4317600379] identified temperature, wind speed, relative humidity, air quality index (AQI), smoking status, allergies, normal PEFR and daily readings, asthma symptoms of the last 4 weeks, and number of asthma attacks for the last 4 weeks as important predictors. Incorporating other data with community viral load, [W2898812155] determined the key predictors as patient vital signs, acuity, age, weight, socio-economic status, dry bulb temperature, wind speed, and station pressure. Another work [W3118385223] mentioned the key features as age, long-acting beta-agonist, high dose inhaled glucocorticoid or chronic oral glucocorticoid therapy, FEV1, and FEV1 to FVC ratio. For developing the prediction models, commonly used ML algorithms were, DT [W4317600379, W2097302145, W2898812155], RF [W4317600379, W2898812155, W2016511593, W3118385223], GBM variations [W4317600379, W2898812155, W3118385223], LR [W4317600379, W2898812155, W3118385223], and SVM [W4317600379, W2097302145, W3160146992]. Additionally, some authors experimented with Naive Bayes (NB) [W2097302145] and NN extensions [W3183425556, W3160146992]. Only one of the studies [W2097302145] did not possess a high imbalance data set. However, all the other works had highly imbalanced data sets and they have not tried to handle it, other than [W4317600379], who applied SMOTE with SVM technique to handle data imbalance.",
+          "citations": [
+            "W3160146992",
+            "W2898812155",
+            "W3118385223",
+            "W4317600379",
+            "W2016511593",
+            "W2097302145",
+            "W3183425556"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_9",
+          "subsection_index": 9,
+          "subsection_label": "Predicting Risk of Asthma Attacks as a Probability",
+          "subsubsections": [],
+          "text": "Most of the previous studies on predicting the risk of asthma attacks addressed this risk as a binary or multi-class classification scenario. However, a prediction generated as a probability gives more meaning to the output. Rather than saying yes or no, a probability indicates the likelihood of something happening. Furthermore, a prediction presented as a risk score will help the medical practitioner better understand the status of the asthma patient. Accordingly, in the current review, we identified a few studies that used a probability or a score as the prediction outcome, which is clarified in this section. Table 7 summarises the studies that predict the risk of asthma attacks as a probability.\n\nOne study [W3009025434] presents a Deep Q-learning Network (DQN) framework to predict asthma attacks using the Q-learning method and LSTM to consider the personal risk scores of triggers. The authors calculated a relative risk score as the probability of an event in the exposed group divided by the probability of an event in the not-exposed group. The authors used this separately with vital signs and environmental time series data and they updated each record with a calculated personalised relative risk, presented as a numeric value. The deep learning algorithm, LSTM, was employed to predict the relative risk of asthma patients, which is then utilised in the Q-learning algorithm. Similarly, another study [W2999350951] was conducted to predict the risk of asthma exacerbations while exploring the potential risk factors using LSTM. They proposed a time-sensitive attentive neural network (TSANN) by applying an attention mechanism on both code-level and visit-level variables, which eased the model's interpretability. They also added elapsed time embeddings into the model to indicate the relative time interval between each visit date and the prediction date. They identified gender, race, a few diagnoses and medications as important predictors of asthma attacks [W2999350951].",
+          "citations": [
+            "W3009025434",
+            "W2999350951"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Data for Predicting Risk of Asthma Attacks",
+          "subsubsections": [],
+          "text": "A conceptual model for predicting the risk of asthma attacks using machine learning techniques is presented in Fig. 6. As asthma is a health condition affected by many factors, data from heterogeneous domains have been integrated to predict the risk of asthma exacerbations listed in Table 2. Asthma is affected by socio-demographic factors, including age, sex, education level, socio-economic status, and marital status [W2138964878]. Socio-demographic features including age, gender, race, insurance type, and area of residence [W2999350951, W4224276990, W4311284534, W2890655815, W4229378776, W3183425556, W2016511593, W3118385223] have been used with clinical factors such as asthma symptoms, PEFR, reliever medications, and inhalations [W4310275051, W2564498768, W4308696024, W4317600379, W3118385223]. Diagnoses, BMI, smoking status, previous asthma attacks, dispensed medications, Charlson Comorbidity Index, comorbidities, ED visits, and hospital visits [W3164963783, W4224276990, W4311284534, W4229378776, W4317600379, W2097302145, W3009025434] were embedded as hospital and medical factors.\n\nEnvironmental and meteorological data can be used for health forecasting with respect to respiratory diseases [W2076189473]. Meteorological data, such as temperature, humidity, air pressure, and wind speed have impacts on asthma [W2608348062, W3046068344]. Air pollutants can have chronic effects on humans and thereby pose a greater risk to a larger population. These factors are useful for predicting asthma since they could lead to a high number of asthma-related hospital admissions. Asthma triggers including temperature, relative humidity, wind speed, AQI, air pressure, PM\\(_{2.5}\\), pollen and gasses like CO, NO\\(_{2}\\), SO\\(_{2}\\) were the environmental and meteorological factors investigated in the predictor list by [W4224276990, W4317600379, W3183425556, W3160146992, W2898812155, W3009025434]. Additionally, we found one study using the biological factor SNP [W2016511593].\n\nAmong several factors collected from multiple domains, previous studies have found that smoking status [W4317600379], normal PEFR and daily readings, previous asthma attacks, asthma symptoms, medication usage [W2999350951, W3164963783, W4308696024, W4224276990, W4229378776, W4317600379], comorbidities [W3164963783, W4308696024, W4224276990], and hospital stays [W2890655815] are important predictors of future asthma attacks. Socio-economic factors, including SES [W2898812155], age [W2890655815, W2898812155, W3118385223], gender, and race [W2999350951], have shown to be important in predicting asthma attacks. Weather changes highly affect the control level of asthma patients, and accordingly, past studies show that temperature, wind speed, relative humidity [W4317600379, W2898812155], and AQI [W4317600379] have strong predictive power.\n\nThese results show the importance of including multiple factors from different domains (see Fig. 6). However, only a few studies have utilised predictors from more than three of the above heterogeneous domains. It seems important to incorporate different factors from multiple domains to forecast impending asthma attacks, as previous works have identified important predictors from each domain. Further, with the vast development of technology, smart devices such as smart peak flow meters and smart inhalers are in the hands of asthma patients. Utilising data from these devices will be more accurate than using data from daily diaries because manually entered data is prone to human errors and recall bias. Finally, social media usage has become a popular place where participants share their feelings and opinions. Therefore, it is worth investigating the use of social media data streams in asthma risk prediction.\n\n**FIGURE 6** Conceptual overview for asthma risk prediction using ML\n\n```\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 DATA SOURCES \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Clinical \u2502 Hospital and \u2502 Environmental \u2502 Bio- \u2502 Socio- \u2502\n\u2502 \u2502 Medical \u2502 and \u2502 logical \u2502 demographic \u2502\n\u2502 \u2502 \u2502 Meteorological\u2502 \u2502 \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Smart \u2502 Social \u2502 \u2502 \u2502 \u2502\n\u2502 Device \u2502 Media \u2502 \u2502 \u2502 \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n \u2502\n \u2193\n \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n \u2502 Data Handling \u2502\n \u2502 & \u2502\n \u2502 Data Imbalance \u2502\n \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n \u2502\n \u2193\n \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n \u2502 ML Model Development \u2502\n \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n \u2502 \u2022 Hyperparameter Tuning \u2502\n \u2502 \u2022 Identifying optimal \u2502\n \u2502 prediction & lookback \u2502\n \u2502 window sizes \u2502\n \u2502 \u2022 Model Evaluation \u2502\n \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n \u2502\n \u2193\n \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n \u2502 \u2502\n \u2193 \u2193\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Risk Score \u2502 \u2502 Model \u2502\n\u2502 (Probability) \u2502 \u2502 Explainability \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```",
+          "citations": [
+            "W2138964878",
+            "W2999350951",
+            "W4224276990",
+            "W4311284534",
+            "W2890655815",
+            "W4229378776",
+            "W3183425556",
+            "W2016511593",
+            "W3118385223",
+            "W4310275051",
+            "W2564498768",
+            "W4308696024",
+            "W4317600379",
+            "W2076189473",
+            "W2608348062",
+            "W3046068344",
+            "W2898812155"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Handling Data Imbalance",
+          "subsubsections": [],
+          "text": "In real-world data, especially health data, the existence of positive cases is very low compared to the negatives. For instance, the proportion of asthma patients who are admitted to hospitals due to asthma attacks is very low compared to the number of patients who are not admitted to hospitals. This kind of research aims to identify the minority class over the majority. Hence, class imbalance needs to be carefully addressed when applying ML models that highly depend on data. Otherwise, the model will not be able to learn the patterns of positive cases and thereby produce a lower performance for the minority class.\n\nThere are several ways to handle data imbalance. The most commonly used techniques are random under-sampling [W3046073541, W3164963783, W2890655815] and random over-sampling [W3046073541]. In random under-sampling, the number of records in the majority class will be reduced to match with the minority class, and it is vice versa for random over-sampling. Additionally, SMOTE is a more advanced technique that is used to handle data imbalance. An alternative to the random over-sampling technique mentioned above, SMOTE uses a more robust approach to generate new points based on the existing data. Further, the edited nearest neighbours (ENN) and Tomek link are under-sampling techniques that can be used for down-sampling data.\n\nData imbalance should be handled; otherwise, classifiers would be biased or generate misleading results [W2608348062, W3164963783, W3134183600]. However, applying a data balancing technique is not necessary, provided that the data set has considerable balance among target values. It should be noted that these data balancing techniques need to be applied only on the training set; otherwise, a data leakage issue arises. These techniques may improve the predictions in some cases by artificially eliminating or simplifying the records in the data set. The prediction model using the random under-sampling technique showed the best performance with higher specificity and sensitivity values compared to the other models (see Table 3). This highlights the importance of addressing data imbalance prior to developing the ML models.",
+          "citations": [
+            "W3046073541",
+            "W3164963783",
+            "W2890655815",
+            "W2608348062",
+            "W3134183600"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "ML Techniques in Asthma Risk Prediction",
+          "subsubsections": [],
+          "text": "Clinical practices are mostly dependent on the professional skills that individuals acquire with practice and experience. However, the human brain has limited abilities to identify longitudinal patterns from massive amounts of data [W2997982111]. ML-based models can assist in analysing the growing amount of patient data, achieving patient-oriented decisions [W3186246264]. ML techniques can discover undisclosed patterns and find new information from the data. Costs incurred in healthcare could be reduced with the support of ML. Even though the knowledge and experience of a physician are irreplaceable, computer-aided support could increase the efficiency and accuracy of the diagnostic process. Therefore, ML could play a significant role in diagnosing and predicting asthma.\n\nThere are several machine learning algorithms that previous studies have used to predict imminent asthma attacks, as mentioned in Tables 5 and 6. In terms of classifying a patient to have or not have an asthma attack in the future, XGB, RF, and LR algorithms have achieved the best performance compared to other classifiers, regardless of the presence of a prediction window or not (see Table 4). On the other hand, both studies that predict the risk probability have used extensions of NN. In contrast to predicting the risk of asthma attacks as a category (yes or no), the probability of having an asthma attack will deliver more information to the health practitioner. The limited number of studies in this review that utilised probability prediction (see Table 7) emphasise that further research is required to understand the applicability of ML techniques in predicting the risk of asthma attacks as a probability.",
+          "citations": [
+            "W2997982111",
+            "W3186246264"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "Prediction and Lookback Window",
+          "subsubsections": [],
+          "text": "When anticipating the risk of attacks, it is more useful if the prediction can be made within a specified time window. As presented in the \"Results\" section, researchers set the prediction window from 1 day [W2564498768, W2522681375] to 1 year [W3116632780, W2890655815, W4229378776]. However, none of the studies mentioned a specific reason for choosing the window size. They used either a random value or chose the window size according to the nature of the dataset. From the analysis of the results of those models, we identified that short-term predictions achieved better performance compared to long-term predictions (refer to Fig. 5). In parallel, the researchers fed the past data into the prediction models within a lookback window, which is also called lag (i.e., past data for a given period of time). Incorporating historical data is crucial, especially when considering more common triggers, such as weather factors. While most of the studies have considered lookback windows, there is no clear information in defining the window size. Also, it seems that they have defined the window size according to the availability of data. There is a lack of knowledge about the optimum size of the lookback and prediction windows in predicting the risk of asthma attacks. Hence, it is important to explore and determine these windows for an accurate prediction.",
+          "citations": [
+            "W2564498768",
+            "W2522681375"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "Generating an Explainable Risk Score",
+          "subsubsections": [],
+          "text": "Different clinical tools have been developed for monitoring and managing asthma. Global Initiative for Asthma (GINA) guidelines have been formulated based on the level of symptoms in the last four weeks to differentiate between controlled, partially controlled, and poorly controlled asthma. The Asthma Control Test (ACT) [W2904944206] and Asthma Control Questionnaire (ACQ) are the most common clinical scores used for asthma control. A study [W2079711274] predicted the Pediatric Asthma Risk Score (PARS) with a logistic regression model by assigning weights to the predictors using the rounded odds ratios. Many studies [W2809227056, W3140986464, W3045837041] have used multivariate logistic regression to develop a risk score. Accordingly, past models have considered a linear relationship between the predictors in generating the risk score or used the manually calculated scores as the target outcome of ML models. However, when the number of features becomes high, it is unreasonable to assume that they always have linear relationships. Therefore, developing a new asthma risk score requires more advanced technologies, such as machine learning, which can handle non-linearity among the predictors. While using these techniques, the prediction should be explainable to the clinicians in order for them to trust the score. This transparency is essential in the healthcare industry. The existing asthma risk scores are derived mainly from demographic and clinical factors. Instead of considering only the subjective factors, such as the prevalence of symptoms for a period, it is important to examine objective factors, such as peak flow and inhaler data, in deriving a control score. Asthma is a multi-factorial disease; it triggers patients' disease levels based on individual factors. Therefore, a more objective continuous score is necessary to predict the asthma control level. Further, rather than keeping the model a \"black box\", adding the reason behind the generated value would add more value and transparency to the prediction. It adds interpretability to the model which will be clinically important.",
+          "citations": [
+            "W2904944206",
+            "W2079711274"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_6",
+          "subsection_index": 6,
+          "subsection_label": "Hyperparameter Tuning",
+          "subsubsections": [],
+          "text": "Machine learning algorithms comprise diverse parameters assigned varying values to optimise performance. Among these, model parameters, internal in nature, undergo configuration during the learning process as the model adapts to data provided to it. A prime example is the weights of a neural network, acquired during the training phase. Conversely, hyperparameters, external in nature, necessitate the assignment of values before the training stage. Identification of hyperparameter values, termed hyperparameter optimisation or tuning, precedes model training. For instance, determining the optimal learning rate for a neural network is pivotal for achieving peak model performance. In practice, iterative fine-tuning of hyperparameters involves training multiple models with diverse parameter combinations, evaluating performance, and selecting the most optimal model. This procedure can be executed by utilising the default values for the algorithm, manually configuring them based on past examples or experiments, or seeking assistance from experts to define these parameters [W2407212869]. Random searching [UNMAPPED:52] is one of the strategies for hyperparameter tuning that will consider a pool of values and choose different combinations randomly to find the best set of hyperparameter values. On the other hand, in the grid search technique, all the combinations of the specified set of values will be tried to determine the best combination which gives the highest model performance. A study compared the grid search and random search techniques to predict chronic kidney failure using XGB [W4200198551]. The best results came from the grid search technique. There are other hyperparameter optimisation techniques such as Bayesian optimisation [W60686164, UNMAPPED:55], genetic algorithm, etc. Experimental outcomes were comparable; nevertheless, the genetic algorithm outperformed the grid search technique and the Bayesian algorithm to predict customer transactions using NN [W3191950921]. However, except for a few works, the studies we reviewed lacked this important step. The ultimate goal of constructing these ML models for risk prediction is to gain the highest performance for the given problem. Therefore, conducting hyperparameter optimisation is crucial in developing ML models as it can improve the models' performance. Researchers must delve into suitable techniques for tuning hyperparameters in the machine learning models they construct.",
+          "citations": [
+            "W2407212869",
+            "W4200198551",
+            "W60686164",
+            "W3191950921"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "52",
+            "55"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "With growing ML applications in healthcare, several studies have employed these advanced computer-based techniques for predicting impending asthma attacks using heterogeneous data sources. In this review, firstly, we have presented a conceptual overview of the landscape of this research so that researchers can engage in future research in a similar context (see Fig. 4). Secondly, this review has generated a list of data sources available for researchers, which is available in Table 2. Thirdly, for each branch of the review, we presented lists of studies predicting the risk of an asthma attack as a classification with and without a prediction window (Tables 5 and 6) and prediction as a probability (Table 7).\n\nThe findings of this review confirm the importance of using different predictors from multiple data sources for predicting asthma attacks. The analysis shows the applicability of ML algorithms and their ability to perform on asthma patient data, including other factors. For classifying future attacks, ensemble methods based on decision trees have given better performance, while extended neural networks have achieved acceptable results on probability prediction. Further, the summary of the past studies confirmed that having a shorter prediction window improves the prediction outcome. For future research in ML applications in asthma prediction, hyperparameter tuning and data imbalance handling need to be carefully followed to integrate data from multiple sources. Additionally, optimal lookback and prediction windows for asthma risk prediction require further investigation. Moreover, deriving an explainable asthma risk score with the integration of multiple data sources using ML techniques needs to be explored which will assist health practitioners.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Appendix",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**TABLE 5** Summary of the studies on predicting risk of asthma attacks as a classification with a prediction window\n\n{{TABLE:tbl_09}}\n\n**TABLE 6** Summary of the studies on predicting risk of asthma attacks as a classification without a prediction window\n\n{{TABLE:tbl_10}}\n\n**TABLE 7** Summary of the studies on predicting risk of asthma attacks as a probability\n\n{{TABLE:tbl_11}}\n\n---\n\n**Supplementary Information** The online version contains supplementary material available at https://doi.org/10.1007/s10916-024-02061-3.\n\n**Author Contributions** WJ searched the databases and conducted the initial article selection. The studies included in the study were blindly selected by WJ, FM and AC and finalised through a discussion. WJ performed the data extraction. WJ, FM and AC blindly conducted risk of bias assessments to check the quality of the studies and discussed them. WJ was a major contributor to writing the manuscript. All authors read and approved the final manuscript.\n\n**Funding** Open Access funding enabled and organized by CAUL and its Member Institutions No funding was received for conducting this study\n\n**Availability of Data and Materials** Not applicable.",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_09",
+        "tbl_10",
+        "tbl_11"
+      ]
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Declarations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**Ethics Approval and Consent to Participate** Not applicable.\n\n**Consent for Publication** Not applicable.\n\n**Competing Interest** AC is the recipient of the Auckland Medical Research Foundation senior research fellowship, which investigates asthma attack prediction models. She has also received funding from the Health Research Council for research into asthma. AC also sits on the board of Asthma New Zealand, is affiliated with Asthma UK Centre of Applied Research, member of the Respiratory Effectiveness Group and is part of the European Respiratory Society CONNECT Clinical Research Collaboration. The authors have no relevant financial or non-financial interests to disclose.\n\n**Open Access** This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4396866456_tables.md"
+}

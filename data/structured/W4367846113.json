@@ -1,0 +1,504 @@
+{
+  "id": "W4367846113",
+  "metadata": {
+    "title": "A Systematic Review of Methods for Aligning, Mapping, Merging Taxonomies in Information Sciences",
+    "n_sections": 8,
+    "n_subsections": 13,
+    "n_subsubsections": 3,
+    "n_tables": 3
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "A taxonomy is a hierarchical, parent-child structure used to organize information. Taxonomies, being an easy and intuitive way to classify vocabularies, are prevalently used in quotidian categorization tasks and e-commerce website's product organization [UNMAPPED:23, UNMAPPED:24]. Taxonomy alignment is the process of comparing two or more taxonomies to reach agreements on how to merge the taxonomies. The need for reconciliation of taxonomies often arises when multiple taxonomies about the same topic disagree with each other; or when one single taxonomy disagree with itself over time [W2314422014, UNMAPPED:19].\n\nIn fact, alignment is not a task exclusive to taxonomies. Interoperability problems between and among knowledge organization systems (KOS) have long been studied in Information Science and extra-information science fields [W2164508904, W2156510574, UNMAPPED:3, UNMAPPED:7, UNMAPPED:71]. Generic models such as derivation and expansion have been discussed to enhance metadata interoperability [UNMAPPED:7, UNMAPPED:71]. Specific metadata interoperability solutions such as metadata crosswalks have also been explored to map one metadata standard to another \u2013 examples manifested in the Getty Institute's crosswalk of the CDWA standard to 14 other standards [UNMAPPED:3], or one of the many crosswalks from MARC to other standards by the Library of Congress [UNMAPPED:36]. Further, mapping methods for a particular type of KOS like the ontology matching methods have been thoroughly reviewed with regards to the different automating mechanisms for matching [W2164508904, UNMAPPED:56]. Similar to ontology mapping research, there are also extensive reviews about database schema matching process to analyze how one schema can be transferrable to another [W2008896880, W2156510574].\n\nHowever, while there are many studies working with taxonomy alignment, a comprehensive review surveying the mapping, merging, alignment of taxonomies seems to have been missing from the conversations. Many reasons may have caused a gap in taxonomy alignment reviews, some conjectures include: One, there are many diverse application areas that taxonomies are used in, and each taxonomy alignment method can be drastically different and uniquely developed for an application. Second, taxonomies may be embedded in other information systems or databases, and some may have equated taxonomy alignment with the overall schema mapping tasks. Third, taxonomy alignment studies can have many different characteristics, and this makes it difficult to summarize the commonalities among these studies.\n\nRealizing that diverse taxonomy alignment methods have been proposed but there are no existing surveys, the goal of this paper is to provide a systematic review of taxonomy alignment research in Information Science and related fields to explore the commonalities and differences across these studies. As such, we ask the following research questions:\n\n- RQ1: What are the characteristics of a taxonomy alignment process?\n- RQ2: How are the characteristics in taxonomy alignment research alike or differ?\n\nSpecifically, we examine 28 research relating to taxonomy mapping, matching, or alignment methods, garnered through a five-step systematic literature process [W2792215598, W1999764269, W3163477068]. We take on an angle from the knowledge organization systems (KOS) framework [W2473206977, UNMAPPED:25], and specifically examining the level of KOS on \"taxonomies\".",
+      "citations": [
+        "W2314422014",
+        "W2164508904",
+        "W2156510574",
+        "W2008896880",
+        "W2792215598",
+        "W1999764269",
+        "W3163477068",
+        "W2473206977"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "23",
+        "24",
+        "19",
+        "3",
+        "7",
+        "71",
+        "36",
+        "56",
+        "25"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Background",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "Knowledge Organization Systems (KOS)",
+          "subsubsections": [],
+          "text": "Knowledge organization systems (KOS) are all kinds of knowledge structures used to organize information and concepts [W2794016217, W2473206977, UNMAPPED:25]. Hodge [UNMAPPED:25] categorized types of knowledge organization systems into term lists, classifications and categories, and relationship lists; Zeng [W2473206977] added \"metadata-like models\" and further denoted the different dimensions of each KOS. \"Taxonomies\", in Zeng [W2473206977]'s model, were categorized in the \"classification and categorization\" group as classification schemes and subject headings that arrange groups of items in hierarchical relationships. In Soergel [UNMAPPED:60], taxonomies are not only hierarchical representation, but a kind of KOS that focus primarily on concepts rather than terms.\n\nAs Mazzocchi [W2794016217] mentioned, many authors have only a \"partial agreement\" on how to classify KOSs, and the confusion arises from a lack of precise definition for each of the KOSs. The author further suggested that different communities may have been using the same KOS, but calling it by another name. Very much like Soergel [W2135778849] pointed out how \"ontologies\", popularized by the computer science domain, could be \"reinventing\" the ideas of classification schemes, and many may have equated ontologies with taxonomies. However, it is clear by many authors' categorizations of KOSs that taxonomies and ontologies have many differences structurally and functionally [W2794016217, W2473206977, UNMAPPED:25].\n\nThe key difference between a taxonomy and an ontology is the way in which relationships are represented. Zeng [W2473206977]'s KOS framework stated that taxonomies establish only hierarchical relationships, whereas ontologies establish both hierarchical and associative relationships while representing other properties. Mazzocchi [W2794016217] reviewed many authors' KOS framework and demonstrated that taxonomies and ontologies are usually at different KOS levels where the former are loosely defined hierarchies, and the latter are formal vocabularies that provide many other properties.\n\nHowever, the reason why the use of the term \"taxonomies\" are sometimes interchangeable with \"ontologies\", is how both KOSs are used to classify natural languages into controlled vocabularies; and the techniques to classify concepts in a taxonomy are similar to the automatic indexing techniques used in ontologies [W619641311, UNMAPPED:22]. Nevertheless, the two kinds of KOSs have clear distinctions, taxonomies as a hierarchy, or tree model; and ontologies as a linked semantic network with its concepts having complex relations and properties [W2794016217, W619641311, W2473206977, UNMAPPED:25, UNMAPPED:58, UNMAPPED:60].",
+          "citations": [
+            "W2794016217",
+            "W2473206977",
+            "W2135778849",
+            "W619641311"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "25",
+            "60",
+            "22",
+            "58"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "Myriads of Alignment Methods",
+          "subsubsections": [],
+          "text": "The desire to make taxonomies, or knowledge organization systems, interoperable with each other, is a common practice in organizing information [W2803057161, W4254172076, UNMAPPED:7, UNMAPPED:71]. To date, there are myriads of mapping, matching, alignment methods in the wild. The process of aligning (mapping, matching) has been studied in many contexts to solve interoperability issues in information systems. In various fields in the Computer Science community, there is a significant amount of work discussing database schema matching, schema merging, large schema mapping [W2008896880, W2156510574]. In discussing the Semantic Web technologies, extent research on ontology mapping, ontology matching, ontology alignment [UNMAPPED:17, UNMAPPED:56], or the more recent knowledge graph alignment [UNMAPPED:65] have been emerging since Berners-Lee, Hendler, and Lassila's disruptive concept of the semantic web [W4239696231]. In Information Sciences, various interoperability approaches have been discussed extensively since the beginning of bibliographic classification systems and metadata standards [UNMAPPED:7, UNMAPPED:71]. For instance, utilizing metadata crosswalks are one of the major representations to map one metadata standard to another, such as Getty Institute's crosswalk of the CDWA standard to 14 other standards [UNMAPPED:3], or one of the many crosswalks from MARC to other standards by the Library of Congress [UNMAPPED:36]. Spanning across different fields, taxonomy alignment (mapping, matching, merging) work flourishes in biodiversity [W2314422014], biology [W3193861087], e-commerce [UNMAPPED:1], information systems and computer science [W2043420170], and many others.\n\nMuch like the insider joke in the metadata community about the proliferation of metadata standards: nobody wants to use other people's toothbrushes (existing standards), so they just use their own toothbrush (invent a new standard) \u2013 the same phenomenon goes to alignment methods. Different fields have different ways to express mapping, matching, alignment work, and even within the same community, new matchers or methods are constantly developed.",
+          "citations": [
+            "W2803057161",
+            "W4254172076",
+            "W2008896880",
+            "W2156510574",
+            "W4239696231",
+            "W2314422014",
+            "W3193861087",
+            "W2043420170"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "7",
+            "71",
+            "17",
+            "56",
+            "65",
+            "3",
+            "36",
+            "1"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "Taxonomies and Taxonomy Alignment",
+          "subsubsections": [],
+          "text": "The usage of taxonomies is ubiquitous [UNMAPPED:9]. Many have attempted to define what a taxonomy is, but the definition of the term often varies based on the contexts that taxonomies are used in. Gilchrist [UNMAPPED:22], as cited by Mazzocchi [W2794016217], gave five different contexts that use taxonomies: (1) web directories; (2) taxonomies to support automatic indexing; (3) taxonomies created by automatic categorization; (4) front end filters; (5) corporate taxonomies. Briefly stated, a taxonomy is a hierarchical representation used to organize vocabularies.\n\nEven though there are many definitions and contexts of what constitutes a taxonomy or what a taxonomy does, the common practices of creating and using taxonomies suggest that there is at least a shared understanding of what taxonomies are. In almost every field, taxonomies are used to categorize, group, or classify objects into a tree model, or a hierarchical structure [W619641311, UNMAPPED:23, UNMAPPED:64].\n\nFrom a Knowledge Organization perspective, the levels of \"what is being aligned\" is an important distinction to make. Many who attempted alignment projects could be operating on the KOS level of \"ontologies\", but they used the term \"taxonomies\" to be more generic. Given the aforementioned differences between taxonomies and ontologies, it is also necessary to understand that the process of \"ontology mapping, ontology matching, ontology alignment\" is the union of not only the concepts in the ontologies, but also all the hierarchical, associative relationships, as well as the object and data properties between two or more ontologies. Sometimes, this also means that the axioms and rules associated with the ontologies are expected to be harmonized into one set of axioms and rules [W4247756142]. On the other hand, if the alignment process is on the level of taxonomies, the merge would be a simpler union of concepts from the taxonomies, and the taxonomies' is-a relationships.\n\nRecognizing there are many approaches attempt to align KOSs, we believe it is crucial to make clear distinctions on the type of KOS we are examining. This study is reviewing alignment methods on the KOS level of \"taxonomies\", we will be excluding discussions of alignment methods on other levels of the KOS (e.g., relational schema matching, ontology matching, etc.), and \"taxonomy\" alignment methods that view taxonomies synonymous as ontologies.\n\nIn later sections of this paper, we will review different definitions of taxonomies based on the systematic literature review results. Our own definition of a taxonomy in this paper are as follows: a taxonomy T is defined as a pair: T = (C, E), where C is a set of concepts, and E is a set of edges. In this study, we will follow our definition of taxonomy as inclusion and exclusion criteria of the review corpus. From hereafter, unless when describing the steps for keyword searching, we will only be using the term \"taxonomy alignment\" to refer to all acts of mapping, and merging work with taxonomies.",
+          "citations": [
+            "W2794016217",
+            "W619641311",
+            "W4247756142",
+            "W2604494738",
+            "W4239696231"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "9",
+            "22",
+            "23",
+            "64",
+            "1",
+            "3",
+            "5"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "Step 1: Identifying Key Papers",
+          "subsubsections": [],
+          "text": "Common sources for finding articles include Web of Science, Scopus, and domain specific databases, such as Howe and Abedin [W2792215598], and Siqueira and Martins [W3163477068] implemented in their studies. We perform searches in four databases (as of March 22, 2022): Scopus and Web of Science for all domains; EBSCO's Library and Information Science Source, and Library, Information Science Technology Abstracts (LISTA) for domain-specific databases in the field of Library and Information Science.",
+          "citations": [
+            "W2792215598",
+            "W3163477068"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "Step 2: Developing Inclusion and Exclusion Criteria",
+          "subsubsections": [],
+          "text": "We develop inclusion and exclusion criteria for identifying articles that are evidently dedicated to taxonomy alignment research.\n\nThe inclusion criteria are: (1) peer-reviewed journal papers or conference proceedings; (2) written in English; (3) papers that include taxonomy alignment as a research process. The exclusion criteria are: (1) studies that are surveying or reviewing many alignment methods; (2) studies that are not describing a specific alignment method or mapping problem; (3) studies that define taxonomy in a different KOS-level (e.g., ontologies).",
+          "citations": [
+            "W2604494738"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1",
+            "3"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "Step 3: Search Strategies and Search Terms",
+          "subsubsections": [],
+          "text": "Our search terms are \"taxonomy alignment\", \"taxonomy mapping\", \"taxonomy matching\", or \"taxonomy merging\" anywhere any of these terms appear in an article's title, keywords, abstract, or full-text. We enumerate the search terms in each database and the number of results below:\n\nIn Scopus, the following search terms return 71 results:\n```\nTITLE-ABS-KEY (\"taxonomy alignment\" OR \"taxonomy mapping\"\nOR \"taxonomy matching\" OR \"taxonomy merging\"\nAND (LIMIT-TO (LANGUAGE, \"English\"))\nAND (LIMIT-TO (DOCTYPE, \"ar\")\nOR LIMIT-TO (DOCTYPE, \"cp\"))\n```\n\nIn Web of Science, the following search terms return 44 results:\n```\nALL=(\"taxonomy alignment\" OR \"taxonomy mapping\"\nOR \"taxonomy matching\" OR \"taxonomy merging\")\n```\n\nIn EBSCO- Library and Information Science Source; and in Library, Information Science & Technology Abstracts (LISTA), the following search terms return 4 results, and 3 results, respectively:\n```\n\"taxonomy alignment\" OR \"taxonomy mapping\"\nOR \"taxonomy matching\" OR \"taxonomy merging\"\n```",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "Step 4: Studies Selection",
+          "subsubsections": [],
+          "text": "To further select relevant studies from the 122 results we retrieved from the databases, we first deduplicate the 122 results based on articles' DOI, title, and author, and that left us with 75 articles.\n\nAn initial round of screening through these 75 articles' titles and abstracts are conducted to further eliminate any other survey or review papers (all about either ontology or schema surveys), as per our exclusion criteria \u2013 we eliminate 20 papers that are not pertinent to taxonomy alignment processes.\n\nA second round of screening articles from reviewing the full text of the remaining 55 articles is conducted to exclude articles that:\n\n(1) the main scope of the research is not the alignment process (e.g., discussing natural group structure of protein; discussing forensic tools for blockchain technologies);\n\n(2) the level of KOS discussed: if the researchers' definition of taxonomies is actually referring to other KOSs, it will be excluded. If the term taxonomies and ontologies are used interchangeably, we examine the researchers' definition to determine if the KOS they are working with have only one node type and one edge type (is-a). For example, we include the study from Raunich and Rahm [W2043420170] because their taxonomies only consist of one node and edge type. (Their definition of taxonomies is \"we will consider only ontologies O = (C; Ci; I; R) where Ci contains only leaf nodes and R contains only is-a relationships between concepts. For this reason, in the following, we will use the terms ontology and taxonomy with the same meaning.\")\n\n(3) the paper contains an evaluation of their alignment process by comparing to other \"ontology\" matchers. For instance, we exclude Aanen et al. [UNMAPPED:1]'s paper: though the authors used the term \"taxonomy mapping\" throughout their paper, they compared their matcher SCHEMA with other ontology matchers by Noy and Musen [W1970348112] and Park and Kim [W2030675391].\n\n(4) the paper conducts an evaluation of their alignment process by using benchmark \"ontology\" alignment datasets. For example, we exclude the study by Lin et al. [UNMAPPED:37], because they defined taxonomy as \"multi-relational data with numerous triple facts\" and used the benchmark dataset from the 2017 Ontology Alignment Evaluation Initiative (OAEI) for evaluating their method.\n\nThis process results in 28 papers for final assessment and analysis (Step 5). Step 5 of the systematic literature review involves final assessment and analysis, which we will discuss in detail in the subsequent Results section. The metadata of the 28 studies selected is provided in Appendix 1 of the Supplementary Materials. The indices of the studies in Appendix 1 mirror the numbers for the articles in Table I, II, and III. Duplicated numbers indicate that the paper is a follow-up study, or group research from the same group of authors.",
+          "citations": [
+            "W2043420170",
+            "W1970348112",
+            "W2030675391",
+            "W2604494738",
+            "W4239696231"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1",
+            "37",
+            "3"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Given that the usage of taxonomies spans across different application areas and disciplines (e.g., computer science, e-commerce, biology), we leverage the techniques used in systematic literature review [W2792215598, W1999764269, W3163477068] to retrieve all relevant articles relating to taxonomy alignment methods. According to Kelly and Sugimoto [W1999764269], systematic literature reviews help researchers to be \"exhaustive with their coverage of the literature\" by identifying sources of articles, developing search strategies, and devising inclusion and exclusion criteria of the literature. By retrieving all necessary and relevant articles, researchers can attempt to \"create generalizations\" for analyzing the articles [W1999764269].\n\nOne of the advantages to leverage systematic literature review is that it allows transparency and reproducibility of the search process. We follow a similar five-step systematic literature review process from Kelly and Sugimoto [W1999764269] and aims to document our steps as clearly as possible. These steps include:\n\n- Step 1. Identifying sources for finding key papers\n- Step 2. Develop inclusion and exclusion criteria for identifying articles\n- Step 3. Search strategies and search terms\n- Step 4. Studies selection\n- Step 5. Final assessment and analysis of the articles",
+      "citations": [
+        "W2792215598",
+        "W1999764269",
+        "W3163477068"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Definitions of a Taxonomy",
+          "subsubsections": [],
+          "text": "In these 28 papers, we found at least four different variations of the definition of a taxonomy, quoted below.\n\nAngermann et al. [W2604494738] stated that:\n> \"Formally, a Taxonomy T is an out-tree. T = (C, E). which is using a set of concepts C for describing terms with the help of a label, and a set of edges E connecting less general with more general concepts.\"\n\nChen et al. [UNMAPPED:8] defined taxonomy as:\n> \"A taxonomy Tk represents a tree-based schema that consists of a set of concepts having certain relations and sharing a set of resources. It is denoted by a triple Tk = (C, R, D) where: C... represents a set of concepts of the taxonomy; R... represents a set of semantic relations between concepts... In this article, only the relation 'is-a' is considered; D... represents a corpus of document.\"\n\nIn Giabelli et al. [UNMAPPED:21], the authors mentioned that:\n> \"A taxonomy T is a 4-tuple T = (C, W, H, F). C is a set of concepts (aka, nodes)...; W is a set of words (or entities, or leaf concepts) belonging to the domain of interest...; H is a directed taxonomic binary relation between concepts...; and F is a directed binary relation mapping words into concepts...\"\n\nReynaud and Safar [UNMAPPED:54], the authors denoted:\n> \"A taxonomy is a pair (C, HC) consisting of a set of concepts C arranged in a subsumption hierarchy HC. A concept is only defined by two elements: a label and subclass relations. The label is a string which can be an expression composed of several words. Subclass relations establish links with other concepts...It is the single semantic association used in the hierarchy.\"\n\nDespite the many variations to define a taxonomy, there are many commonalities across all papers: taxonomy as a tree, taxonomy as a hierarchy, a taxonomy contains a set of concepts, and a taxonomy contains a subset relation. Here we reiterate our definition of a taxonomy in this study: A taxonomy T is defined as a pair: T = (C, E), where C is a set of concepts, and E is a set of edges.\n\nPossible interpretations of concepts can be taxa (e.g., genera), spatial regions (e.g., the United States), classes (e.g., persons), or other types [W4211084664, W2095446052]. Possible interpretations of edges can be subset relation, proper-part-of relation, or other semantic relations noted in the literature [W1975073473, W1995176426, UNMAPPED:5, UNMAPPED:66]. While concepts and edges can have different interpretations, it is important that the interpretation of concepts and edges in a given taxonomy should be homogeneous to avoid semantic anomalies.",
+          "citations": [
+            "W2604494738",
+            "W4211084664",
+            "W2095446052",
+            "W1975073473",
+            "W1995176426"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "8",
+            "21",
+            "54",
+            "5",
+            "66"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Characteristics of Taxonomy Alignment Methods",
+          "subsubsections": [],
+          "text": "In this section, we categorize the characteristics associated with taxonomy alignment methods based on the 28 studies we examined. To date, there is no existing survey or review papers solely on \"taxonomy alignment\" approaches, so a more comprehensive investigation into these approaches has yet to be provided. Here we adopt the term \"matching dimensions\" from foundational schema mapping surveys [W2008896880, W2156510574] to address the common pipeline (input, approach, output) of a mapping research. We also develop new characteristics pertaining to taxonomy alignment work, based on the commonalities we observed across the 28 studies.\n\nTables I, II, and III present an overview of the characteristics and the annotation results on the studies we examined. Within the 28 studies, some studies are follow-up studies, or group research from the same group of authors. We identified those studies and group them together. This eventually left us with 20 different methods in the three results tables. We use Cohen's Kappa to measure the inter-agreement [W4294214983] between the two authors' annotation task on the categorical characteristics of the 28 studies (20 methods). The two authors reach a moderate agreement on the first round of annotating four categorical characteristics (symmetry, methodology, unit of matching, comparison type) with Cohen's Kappa \u03ba=0.49. Upon iterative discussions, the authors reach a substantial agreement on the second round of annotating the same four categorical characteristics, with Cohen's Kappa \u03ba=0.79. Three new categorical characteristics (tree shapes, number of merged solutions, information preserved) are added during our second round of discussion. With all seven categorical characteristics incorporated, the two authors still reach substantial agreement with Cohen's Kappa \u03ba=0.68. The codebook for the annotation task is attached in the Appendix 2 of the Supplementary Materials.\n\n**TABLE I** \nCharacteristics of Taxonomy Alignment Methods -1\n\n{{TABLE:tbl_01}}\n\n[UNMAPPED:1] ATOM in Raunich and Rahm [W2043420170]; [W2604494738] Chen et al. [UNMAPPED:8]; [UNMAPPED:3] CROEA in Mouri\u00f1o-Garcia et al. [W2763182172]; [W4239696231] Daraio et al. [W3090816612]; [UNMAPPED:5] Euler/X in Cheng et al. [UNMAPPED:10, UNMAPPED:11, UNMAPPED:12], Franz, Chen, et al. [W2314422014], Franz et al. [UNMAPPED:19], Johnston [W2563310307], Thau and Lud\u00e4scher [W2171435063]; [W1975073473] HAMSTER in Nandi and Bernstein [UNMAPPED:43]; [UNMAPPED:7] Jung [W2009334044, W2009334044]\n\n**TABLE II** \nCharacteristics of Taxonomy Alignment Methods -2\n\n{{TABLE:tbl_02}}\n\n[UNMAPPED:8] Kanehisa et al. [W3193861087]; [UNMAPPED:9] Lee et al. [UNMAPPED:32]; [UNMAPPED:10] Li et al. [UNMAPPED:34]; [UNMAPPED:11] Li et al. [UNMAPPED:35]; [UNMAPPED:12] Maldonado et al. [UNMAPPED:38]; [W3090816612] Merge-Into in Subramaniam et al. [UNMAPPED:62]; [W2803057161] Musgrove [UNMAPPED:42]\n\n**TABLE III** \nCharacteristics of Taxonomy Alignment Methods -3\n\n{{TABLE:tbl_03}}\n\n[W4247756142] Pfeifer and Peukert [UNMAPPED:47, UNMAPPED:48]; [W2792215598] Ponzetto and Navigli [UNMAPPED:50]; [UNMAPPED:17] Reynaud and Safar [UNMAPPED:54]; [W2314422014] Taxo-Semantics in Angermann et al. [W2604494738]; [UNMAPPED:19] WETA in Giabelli et al. [UNMAPPED:21]; [W1995176426] Xu and Sun [UNMAPPED:67]",
+          "citations": [
+            "W2008896880",
+            "W2156510574",
+            "W4294214983",
+            "W2043420170",
+            "W2604494738",
+            "W2763182172",
+            "W4239696231",
+            "W3090816612",
+            "W2314422014",
+            "W2563310307",
+            "W2171435063",
+            "W1975073473",
+            "W2009334044",
+            "W2009334044",
+            "W3193861087",
+            "W2803057161",
+            "W4247756142",
+            "W2792215598",
+            "W1995176426"
+          ],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02",
+            "tbl_03"
+          ],
+          "citations_unmapped": [
+            "1",
+            "8",
+            "3",
+            "5",
+            "10",
+            "11",
+            "12",
+            "19",
+            "43",
+            "7",
+            "9",
+            "32",
+            "34",
+            "35",
+            "38",
+            "62",
+            "42",
+            "47",
+            "48",
+            "50",
+            "17",
+            "54",
+            "21",
+            "67"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "Application Areas",
+          "subsubsections": [],
+          "text": "Application areas are the fields, domains, or areas of interest that the taxonomy alignment studies applied to. We infer the application areas of a study by either if the authors directly mentioned the areas they were inspecting in the paper, or by the example taxonomies they provided in the study.\n\nIn these 28 papers (20 methods), at least nine of them were from the e-commerce or business domains \u2013 meaning they were mainly working with web directories or corporate taxonomies such as Amazon's product taxonomy [W2604494738, UNMAPPED:43]; Walmart's taxonomy [W2604494738, UNMAPPED:8]; Italian company [W3090816612]; or other virtual organizations [W2009334044, W2009334044]. Two papers were concerned with the domain area of cross-lingual mapping [UNMAPPED:32, UNMAPPED:67], mainly the mapping from leveraging English taxonomies to Chinese taxonomies. Other papers are from many different domains, from education (in CROEA) [W2763182172], to biology [W3193861087], or to other general areas where the alignment process can be applicable to all domains [W2043420170, UNMAPPED:10, UNMAPPED:62].",
+          "citations": [
+            "W2604494738",
+            "W3090816612",
+            "W2009334044",
+            "W2009334044",
+            "W2763182172",
+            "W3193861087",
+            "W2043420170"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "43",
+            "8",
+            "32",
+            "67",
+            "10",
+            "62"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "Matching Dimensions",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Input",
+              "parent_subsection_id": "s_4_4",
+              "text": "In their book, Euzenat et al. [UNMAPPED:17] elaborated that the Input is the schema, or in our case, taxonomies, that goes into comparison. In the following sections, we synthesize the characteristics tree shapes, variable names, and symmetry of the taxonomy alignment inputs.\n\n**FIGURE 1** \nTree Shapes of a taxonomy input: (A) figurative tree; (B) vertical tree; (C) horizontal tree; (D) general hierarchy. Terminologies for tree shapes (A), (B), (C) adopted from Zeng [UNMAPPED:70].\n\n**Tree Shapes.** In the 28 papers we examined, the inputs are all taxonomies, but the representations of these taxonomies can vary. Some could be in the form of texts, mentioned in the research narratives as concept or candidate pairs; some others can be a general hierarchical syntax in technical standards such as XML; yet some others are more illustrative, such as depicting an actual tree structure. We follow some of Zeng's organization of tree shapes, namely figurative trees, vertical trees, and horizontal trees [UNMAPPED:70], along with our own observations on tree-structures (texts, general hierarchy) across the 20 approaches, and use the following terms for annotating the representations of trees in taxonomy alignment studies: texts, figurative trees, vertical trees, horizontal trees, general hierarchy (see Figure 1 and Appendix 2).\n\nOut of the 20 methods, the most used tree shape was the vertical tree (14), followed by texts (7), horizontal tree (4), general hierarchy (1). Some studies used more than one tree shapes to depict their taxonomies, with combinations of either vertical trees with horizontal trees, or texts with vertical trees. None of the studies chose figurative trees to depict their taxonomies.\n\n**Variable Names.** Variable names are the mathematical forms, axioms, or values used to describe the taxonomies compared. For example, when referring to a first taxonomy and a second taxonomy, one could use T\u2081 and T\u2082 as variable names for the two taxonomies. In these studies, subscript variables tend to vary, depending on the example taxonomy used (e.g. T_szse, T_cas). In general, many studies prefer to use numeric subscripts (e.g. T\u2081, T\u2082... T\u2099) or subscript variables that depict the source and target taxonomies (e.g. T\u209b, T\u209c).\n\n**Symmetry.** Raunich and Rahm [W2043420170] defined the taxonomy alignment methods by symmetry. Asymmetric matching means there is a source taxonomy and a target taxonomy, and the alignment process are to fulfill the desired goals of the target taxonomy. In other words, in asymmetric mapping, structural inconsistencies from the source taxonomy may be disregarded to favor the consistency of the target taxonomy during the alignment process. Symmetric mapping means there are no apparent source or target taxonomies, two (or multiple) taxonomies are viewed as equals, and the alignment goal is usually to make all taxonomies logically and structurally consistent throughout the alignment process. We adopt this lingo of symmetric vs asymmetric because it is a helpful indicator to describe taxonomy alignment methods.\n\nMost of the studies we examined are asymmetric \u2013 this means there are fewer constraints to satisfy all the taxonomies involved, and the alignment process may be able to scale up computationally, or more efficiently. On the other hand, it also means that there will be certain amount of information loss from the source taxonomy that are irreproducible. The works that are symmetric [W2009334044, W3193861087, UNMAPPED:10] means that they could be computationally more taxing to satisfy all taxonomies' constraints, but they can potentially provide more diverse viewpoints to help preserve more information from the original taxonomies.",
+              "citations": [
+                "W2043420170",
+                "W2009334044",
+                "W3193861087",
+                "W2803057161",
+                "W4239696231"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "17",
+                "70",
+                "10",
+                "7",
+                "1"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Approach",
+              "parent_subsection_id": "s_4_4",
+              "text": "The approach, or process, is the methodology classification of these papers. The approach is often the core of a taxonomy alignment study, as it speaks to the matching process and the actual techniques in matching. It is hard to find two single papers that operate with the same approach, except for group papers (e.g., Euler/X team papers), or follow-up paper by the same authors (e.g., Pfeifer and Peukert [UNMAPPED:47, UNMAPPED:48]). We synthesize the characteristics of the taxonomy alignment approach into: methodology, unit of matching, comparison type, and relation type.\n\n##### Methodology\n\n###### Natural Language Processing Approaches\n\nNatural Language Processing (NLP) approaches entail that concepts in two (or more) taxonomies are mapped based on the degree of similarity among the lexical features in the concepts. For instance, T\u2081.cherry and T\u2082.cherries may be mapped as equivalent because the concepts share the same word stem. In Rahm and Bernstein [W2008896880], Shvaiko and Euzenat [W2156510574], and Shvaiko and Euzenat [UNMAPPED:56], the authors provided many categories for NLP related approaches: string-based, language-based, linguistic resources, name-based, text-oriented, etc. Here, we aggregated these as either NLP unsupervised or supervised methods.\n\nUsually, unsupervised methods such as finding synonyms in synonym rings or existing word dictionaries (e.g., WordNet) are used while mapping two taxonomies [W2604494738, UNMAPPED:42, UNMAPPED:54]. Some studies in the unsupervised NLP methods category utilized continuous measures in specifying degree of similarity between, or among taxonomies to assign a confidence score [UNMAPPED:35, UNMAPPED:47, UNMAPPED:48]; some others tried to determine word similarity on exact match or fuzzy match measures [UNMAPPED:62, UNMAPPED:67].\n\nSupervised NLP methods usually involve training datasets to determine word similarities in a vector space [W3090816612, W2763182172, UNMAPPED:21, UNMAPPED:38]. It is also interesting to note that with the rise of supervised NLP neural network approaches, studies that employed supervised methods were more recent.\n\nUsually, the goal for employing an NLP approach is to enrich the source taxonomy or an existing dictionary by automating the taxonomy alignment processes. The taxonomies examined usually comprise a large number of concepts, and by automatically aligning two (or more) taxonomies, the studies could come up more quickly with suggested candidate pairs that are ranked higher in similarity to be included in the updated taxonomy [W2009334044, W2009334044, UNMAPPED:21, UNMAPPED:54].\n\n###### Logic-based Approaches\n\nLogic-based similarity approaches align concepts in two (or more) taxonomies according to a set of formal, qualitative relations that could be used for logical reasoning. These relations are usually discrete measures rather than continuous measures; and they consist of relations other than equivalence between concepts.\n\nIn Raunich and Rahm [W2043420170], equivalence, is-a, and inverse-is-a relations were introduced as the mapping mechanisms. Chen et al. [UNMAPPED:8] followed Raunich and Rahm [W2043420170]'s approach very closely, and also utilized the same three mapping mechanisms. We classified these two studies as logic-based approaches because these relations can be formally written into logic axioms. In studies relating to the use of Euler/X approach [W2314422014, W2563310307, W2171435063, UNMAPPED:10, UNMAPPED:11, UNMAPPED:12, UNMAPPED:19], qualitative reasoning technique such as Region Connection Calculus was used to denote five base relations (RCC-5): equivalence, proper part, inverse proper part, disjointness, and overlapping. The number of relation types used in the mapping process is the major difference between Raunich and Rahm [W2043420170]'s ATOM and the Euler/X approach. There are also other qualitative relations beyond the ATOM's three relations, or the RCC-5 relations, such as RCC-8, used mainly for geo-spatial reasoning purposes [UNMAPPED:53] rather than comparing semantic relations. There are even 16 relations proposed by Inants and Euzenat [UNMAPPED:26], which are beyond the scope of taxonomy alignment studies.\n\nUsually, the goals for logic-based approaches are to align concepts semantically as well as structurally in ways where the merged taxonomies could be logically consistent. To achieve this, in Raunich and Rahm [W2043420170] and Chen et al. [UNMAPPED:8], the authors focused more on the target taxonomy, and they remove concepts or nodes from the source taxonomies when they are not logically consistent. In the Euler/X approach, if structural inconsistencies were detected among the taxonomies, an iterative process to revise the mapping relations would be needed so both taxonomies are preserved with logically aligned concepts. Another difference between the other logic-based approach and the Euler/X approach is that the Euler/X approach allows for multiple merged taxonomies as output, if there are additional structurally possible solutions after merging. Further, Raunich and Rahm [W2043420170] and Chen et al. [UNMAPPED:8] aimed at a semi to fully automated logic-based approach towards taxonomy alignment, while the Euler/X studies were semi-automated, requiring human-in-the-loop process.\n\n###### Heuristic-based Approaches\n\nOnly four studies were heuristic-based among the 28 papers we examined. We define heuristic-based approach as when the authors define their own discrete measures or rules that do not fit with the logic-based or the NLP approaches. For example, in Kanehisa et al. [W3193861087], the authors worked with protein and genomics databases KEGG, and used their self-defined JOIN operation to conduct a match on key IDs in the taxonomies within the databases. In Li et al. [UNMAPPED:34] and Subramaniam et al. [UNMAPPED:62], the authors defined sets of rules that were written into the algorithm to transform the taxonomies and perform taxonomy alignment. In Chen et al. [UNMAPPED:8], the authors implemented hybrid steps and combine logic-based, heuristic-based, and unsupervised NLP approaches. Based on our observation of these studies, usually, the goal of heuristic-based approaches is to provide a one-to-one match between concepts in both taxonomies, but the goals can also vary.\n\n**Unit of Matching.** We adopted Rahm and Bernstein [W2008896880]'s characteristics of Element vs. Structure matching, which element matching refers to the mapping between the concept nodes; and structure matching means that the levels where the nodes are situated at also need to be mapped.\n\nAll of the papers we examined were working on the level of element matching, that is, attempting to align the meanings of the concepts, classes, or nodes of the taxonomies; with the exception of Li et al. [UNMAPPED:34], in which the authors explicitly stated that they are resolving \"structural conflicts\" between taxonomies. Some other studies, predominantly logic-based studies, were concerned with both element and structure matching. This means these studies considered both the structures of the taxonomies as well as the semantics of the concepts when aligning the taxonomies.\n\n**Comparison Type.** Most alignment methods we examined were aligning taxonomies in a pair-wise manner. This means that during the alignment process, each time there were only two taxonomies compared. Chen et al. [UNMAPPED:8], largely based on Raunich and Rahm [W2043420170]'s ATOM, claimed their approach to be multi-ways, whereas ATOM could only work with pairwise alignment. Subramaniam et al. [UNMAPPED:62] explicitly discussed the multi-way merge problem, and named four questions to be considered: \"(1) Is there a preferred order in which they should be merged? (2) Does this preferred order always exist? (3) If it does, is it unique? (4) How can we determine the preferred order for multi-way merging?\". They claimed their approach to be \"order-free\" but mentioned that all methods are bound to have information loss. Franz et al. [W2314422014], with the Euler/X approach, attempted to align multiple taxonomies by aligning two at a time. The Euler/X approach could potentially align three, or more taxonomies at a time, but at present the studies were still mainly working with pairwise alignments [UNMAPPED:10, UNMAPPED:12].\n\n**Relation Type.** Relation type is used to explicate how two concepts in either taxonomies are inter-linked or compared. For instance, if T\u2081.concept A is marked as \"equivalent\" to T\u2082.concept B, then the \"equivalent\" linkage here between the two concepts is the \"relation type\" of this alignment process.\n\nIn the studies we examined, the most sought-after relation type was text similarity, that is, using a continuous metric to compare two concepts in most NLP-approach studies. Discrete relation types such as equivalent, proper-part, and proper-part inverse were used across logic-based studies [W2043420170, UNMAPPED:8, UNMAPPED:10]\u2014though some referred to the proper-part relation as \"is-a\" and \"inverse-isa\". In heuristic-based approaches, the relation types were mostly author-defined, given that these studies were operating on their own algorithmic matching processes [W3193861087, UNMAPPED:34]. It is also worth noting that in Pfeifer and Peukert [UNMAPPED:47]'s NLP-based approach, on top of the text-mining service as a main mapping relation type, the authors included other mapping relation types: equivalent, subtype (similar to proper-part), and inverse subsumption (similar to proper-part inverse).",
+              "citations": [
+                "W2008896880",
+                "W2156510574",
+                "W2604494738",
+                "W3090816612",
+                "W2763182172",
+                "W2009334044",
+                "W2009334044",
+                "W2043420170",
+                "W2314422014",
+                "W2563310307",
+                "W2171435063",
+                "W3193861087",
+                "W4239696231"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "47",
+                "48",
+                "56",
+                "42",
+                "54",
+                "35",
+                "62",
+                "67",
+                "21",
+                "38",
+                "8",
+                "10",
+                "11",
+                "12",
+                "19",
+                "53",
+                "26",
+                "34",
+                "1",
+                "3"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Output",
+              "parent_subsection_id": "s_4_4",
+              "text": "The output of a taxonomy alignment method is the results of comparing, aligning, mapping two or more taxonomies. What and how the results look like can vary in different studies. Here we synthesize the output of taxonomy alignment in terms of the number of merged solutions produced, and whether the information of the original taxonomies is preserved.\n\n**Number of Merged Solution(s).** Almost all studies, regardless of methodologies (logic-based, NLP-based, heuristic-based) or comparison type (pairwise vs. multiple), were capable of producing one merged solution (N=1). In one study [UNMAPPED:38], it was difficult to discern or infer from the narratives if the alignment successfully output any results.\n\nIn the logic-based Euler/X studies, the output may have more than one merged solutions (N>1) [UNMAPPED:11]. The Euler/X studies called the merged solutions as \"possible worlds\". The authors believed that given that there are multiple perspectives on how two taxonomies should be merged, there could be more than one merged solutions. This means that the ambiguity of the original taxonomies themselves, or the underspecified relations between the concepts in two taxonomies can create more than one outcomes. In general, for the studies that were based on NLP or heuristic approaches, the output was usually word pairs, a list of words, a list of categories, or numeric scores on how similar two concepts are that could help with enhancing or expanding the taxonomy. These word pairs or lists ultimately made up one merged solution.\n\n**Information Preserved.** This output category speaks specifically towards the information of the original taxonomies. We are interested in knowing whether, after the taxonomy alignment process, one can still recognize the original taxonomies T\u2081 and T\u2082 (or T\u2099) from the merged solution(s). Knowing if the original taxonomies are preserved could potentially be valuable in situations when input taxonomies are lost or not given. When re-alignment is needed, being able to infer the original taxonomies from the merged solution can help reproduce the alignment outcome. Situations where re-aligning taxonomies can occur are when new version(s) of the same taxonomies appear, or when one tries to align the original T\u2081 and T\u2082 with other new taxonomies.\n\nIn the 28 studies, if the alignment input was \"asymmetric\", the study was more concerned with the \"target taxonomy\". Hence, information of the source taxonomy would usually not be preserved. There were still exceptions on asymmetric studies that preserve both the source and target taxonomies: this is manifested in Raunich and Rahm [W2043420170], Chen et al. [UNMAPPED:8], and Subramaniam et al. [UNMAPPED:62], in which the authors stated that they preserved some or parts of the source taxonomies (hence marked as \"Somewhat\" in the result table). For studies that were \"symmetric\" mapping studies \u2013 there was no distinction between source or target taxonomies \u2013 the original taxonomies' information was preserved in the merged solution(s) [W3193861087, UNMAPPED:10]. That is, from the merged solution(s), we could see the original node or concept names, or even the structure of the nodes from either taxonomies. The exception of this is Jung [W2009334044], in which only scores of text similarities were shown in their results.",
+              "citations": [
+                "W2043420170",
+                "W3193861087",
+                "W2009334044"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "38",
+                "11",
+                "8",
+                "62",
+                "10"
+              ]
+            }
+          ],
+          "text": "Shvaiko and Euzenat [W2156510574] first used the term \"matching dimensions\" to describe the overall pipeline all alignment methods would encounter. We adopt this terminology for taxonomy alignment, seeing that all alignment methods have a common pipeline that involves Input, Approach, and Output.",
+          "citations": [
+            "W2156510574"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Based on our inclusion and exclusion criteria, 28 studies are identified for analysis. In this section, we first describe the various definitions of a taxonomy, then we provide a systematic organization of the characteristics of taxonomy alignment methods.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Conclusion and Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "Matching Dimensions and Characteristics",
+          "subsubsections": [],
+          "text": "Our first research question asks: what are the characteristics of a taxonomy alignment process? To address this question, we adopt the term \"matching dimensions\" from foundational schema mapping works [W2008896880, W2156510574] to refer to a mapping research pipeline. This pipeline includes the \"input\", the \"approach\", and the \"output\" of a mapping research. Through our systematic review, we come up with characteristics correspond to each of the three dimensions (input, approach, output). In the Input dimension, the characteristics we develop are tree shapes, variable names, and symmetry. While variable names and symmetry can be used as characteristics in other KOS-level mapping work, the characteristic tree shapes are unique to taxonomies only. Tree shapes include texts, figurative trees, vertical trees, horizontal trees, and general hierarchy. We are interested in tree shapes as a characteristic because we recognize how the taxonomies are visualized and represented are crucial towards the research's objectives or their application domains. For instance, for e-commerce taxonomy alignment research, horizontal trees are more likely to be used to simulate product taxonomy on the user interface (e.g. Amazon website taxonomy).\n\nThe characteristics in the Approach dimension are methodology, unit of matching, comparison type, and relation type. These four characteristics are derived from the aforementioned schema mapping work and our synthesis of the 28 taxonomy alignment research. While these four characteristics may not be exclusive to taxonomy alignment studies and can be applied to other KOS-level mapping work, the categorical values we suggested for these characteristics are reflecting the taxonomy alignment research we reviewed. For instance, for Methodology, we categorize it as NLP-based approach, logic-based approach, and heuristic-based approach because these approaches are predominantly used in the 28 studies. Other three characteristics (unit of matching, comparison type, relation type) may be universal to alignment work at other KOS-level, but they are important aspects that should be included in taxonomy alignment studies as well.\n\nThe Output dimension should show the characteristics of the outcome(s) of an alignment work \u2013 we thus include two characteristics: Number of Merged Solution(s) and Information Preserved. Cognizant that some studies might eventually merge two taxonomies into various possible ways, we are interested to know how many merged solution(s) each taxonomy alignment method can offer. As for the Information Preserved characteristic, it is to address concerns about whether an alignment approach is capable of reproducing the taxonomy alignment process via its output solution.",
+          "citations": [
+            "W2008896880",
+            "W2156510574"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "Commonalities and Differences",
+          "subsubsections": [],
+          "text": "In our second research question, we ask how similar or different the characteristics in taxonomy alignment research are. In terms of application areas, taxonomy alignment research are applied in many different application areas, with the most common in e-commerce, followed by business domains.\n\nIn the three matching dimensions and the characteristics corresponding to each dimension, if categorical values are presented, it means we observe commonalities of that characteristic across the 28 papers, so groupings of categories are possible. For example, the characteristic Tree Shapes has categorical values because there are 14 studies that represent their taxonomies using the vertical tree, seven studies used texts, four studies used horizontal trees, and one used a general hierarchy in XML.\n\nCharacteristics that we suggest as free inputs, or provide examples but having free input value options, are the characteristics that have more variety and differences across the 28 studies. For instance, for variable names, each study may manifest the axioms or mathematical forms of its taxonomies quite differently. For relation type, each study may also have its own defined rules for matching, or it may contain similar mechanisms as other studies (e.g., text similarity). \"is-a\" and \"inverse is-a\" might be interchangeable with \"proper-part\" and \"proper-part inverse\", but we retain each research's own way of naming these relation types. A full list of the characteristics that shows which ones are categorical (hence more studies have commonalities in that characteristics), which ones have free input values, can be found in our codebook, attached in the Appendix 2 of the Supplementary Materials.\n\nWhile the characteristics we propose are mutually exclusive from each other, they may have interactions between or among each other. For example, we observe interaction between methodology and relation type: if a study is using an NLP-based approach, it is more likely to use the relation type \"text similarity\". Similarly, if it is a heuristic-based approach, it is more likely to use author-defined relation and rules. Interaction between symmetry and information preserved is also manifested: if a study is asymmetric, meaning a source taxonomy and a target taxonomy are provided, it is less likely to preserve the information of its taxonomies in the output merged solution. Conversely, if a study's taxonomy inputs are symmetric, it is more likely to still contain its original taxonomies in the output merged solution.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this research, we review 28 studies that employ mapping, matching, alignment methods on the KOS level of \"taxonomies\".",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Study Limitations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Evidently, the limitation of this study lies within the limitations of systematic literature review method itself. The systematic review of this study is conducted through a set of predetermined search terms, exclusion criteria, and inclusion criteria. It is possible that there are papers about taxonomy alignment methods that we are missing because of these predetermined selection steps.\n\nA second limitation of this study could be the reliability of coding the characteristics of the studies. The two authors reached substantial agreement (Cohen's Kappa \u03ba=0.68) on the categorical characteristics. However, given the complexity of each taxonomy alignment research work, the true essence of a taxonomy alignment method may not be fully conveyed and implemented in a research article, leading to a more interpretive coding analysis on our end.\n\nWe are cognizant that the analysis of this study may not reflect the entire taxonomy alignment literature and that it is not feasible to draw statistical conclusions such as correlations between and among the characteristics. However, we believe the systematic review and the 28 research studies selected can serve as a first core corpus to help improve the understanding of taxonomy alignment research.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Contributions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this study, we take on a Knowledge Organization Systems perspective and differentiate taxonomy alignment methods from the mapping research of other KOS(s). To our knowledge, no other mapping survey research has discussed what they are comparing from a KOS point of view. As a theoretical implication, using a KOS lens is critical in understanding the broader picture of what other similar knowledge structures there might be. This lens therefore enables us to define taxonomies, the inclusion criteria, and the exclusion criteria in a more precise way.\n\nFurthermore, this study review and synthesize 28 research articles about taxonomy alignment methods. As mentioned, a practical contribution of this study is that these 28 studies can serve as a core corpus of taxonomy alignment literature for those who are interested in matching, mapping, aligning taxonomies.\n\nFinally, the main methodological contributions of this study are three-fold: (1) to enhance the understanding of a common pipeline, or matching dimensions, of a taxonomy alignment work. We synthesize and develop characteristics that one can use to understand taxonomy alignment research; (2) to provide a novel categorization of taxonomy alignment approach into natural language processing approach, logic-based approach, and heuristic-based approach; (3) to provide a guideline for the matching dimensions and key characteristics that should be included in future taxonomy alignment research.",
+      "citations": [
+        "W2604494738"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Acknowledgments",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Cheng would like to thank her doctoral committee members, Dr. Bertram Lud\u00e4scher, Dr. Allen Renear, Dr. Karen Wickett, and Dr. Nico Franz, for their kind feedback on this work that is a vital component of her dissertation. We would also like to express our gratitude towards the reviewers and the editor for their constructive comments.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4367846113_tables.md"
+}

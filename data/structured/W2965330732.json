@@ -1,0 +1,1116 @@
+{
+  "id": "W2965330732",
+  "metadata": {
+    "title": "Meta-Analysis for Families of Experiments in Software Engineering: A Systematic Review and Reproducibility and Validity Assessment",
+    "n_sections": 31,
+    "n_subsections": 36,
+    "n_subsubsections": 6,
+    "n_tables": 17
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Vegas et al. [W2295373235] reported that crossover designs are a popular design for software engineering experiments. In their review they identified 82 papers of which 33 (i.e., 40.2%) were crossover designs. Furthermore, those 82 papers reported 124 experiments of which 68 (i.e., 54.8%) used crossover designs. However, they reported that \"crossover designs are often not properly designed and/or analysed, limiting the validity of the results\". They also warned against the use of meta-analysis in the context of crossover style experiments.\n\nAs a result of that study, two of us undertook a detailed study of parametric effect sizes from AB/BA crossover studies [W2772922594, W2887834142, W2780802628]. We identified the need to consider two mean difference effect sizes and reported the small sample effect size variances and their normal approximations.\n\nAs we were undertaking this systematic review [W2295373235], we found that Santos et al. [W2804239311] had already performed a mapping study of families of experiments. They reported that although the most favoured means of aggregating results was Narrative synthesis (used by 18 papers), Aggregated Data meta-analysis (by which they mean aggregation of experiment effect sizes) was used by 15 studies.\n\nUsing [W2295373235, W2772922594, W2804239311] as a starting point, we decided to investigate the validity and reproducibility of effect size meta-analysis for families of experiments [W2562248917]. Our goals are to:\n\n\u2013 Identify the effect sizes used and how they were calculated and aggregated.\n\u2013 Use the descriptive statistics reported in the study, attempt to reproduce the reported results [W2772922594].\n\nIn the event that we were unable to reproduce the results, to investigate the underlying reason for lack of reproducibility.\n\nWe concentrated on families of experiments as our form of primary studies. We did this (rather than looking at papers that report a meta-analysis after performing a systematic review) because papers reporting a family of experiments are likely to have published sufficient details about the individual studies and their meta-analysis process for us to attempt to validate and reproduce their effect size calculations and meta-analysis. In addition, Santos's mapping study [W2804239311] confirmed the popularity of families of experiments, and emphasized that more families needed to aggregate their results. These two factors indicate the importance of adopting valid meta-analysis processes in the context of families of experiments. Nonetheless, our reproducibility analysis method, based on aggregating descriptive statistics, is the same as would be used to meta-analyse data from experiments found by a systematic review.\n\nThus, the results from this study are likely to be of value for any meta-analysis of software engineering data.\n\nWe concentrated on high quality journals not only because such papers usually present reasonably complete descriptions of their results and methods, but also because they attract papers from experienced researchers, which are reviewed by other experienced researchers. Thus, readers of papers in such journals expect the published results to be correct. Invalid results in such papers are therefore likely to have a more serious impact than mistakes in papers published in less prestigious journals or conferences. For example, practitioners may base decisions on invalid outcomes, and novice researchers may adopt incorrect methods.\n\nWe present our research questions in Section 2 and our systematic review methods in Section 3. A summary of the primary studies included in our review, a discussion of the validity of the meta-analysis methods used in each study and our reproducibility assessment are in Sections 4, 5 and 6, respectively. We discuss the results of our study in Section 7 and present the contributions of this paper and our conclusions in Section 8.\n\nWe also include an Appendix that reports details of our statistical analysis and analysis results not needed to support our main arguments. The Appendix also discusses reproducibility aspects of our study.",
+      "citations": [
+        "W2295373235",
+        "W2804239311",
+        "W2772922594",
+        "W2562248917"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Research Questions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The research questions (RQs) relating to our systematic review are:\n\n**RQ1:** Which studies that undertook families of experiment have also undertaken effect size meta-analysis?\n\n**RQ2:** What are the characteristics of these studies in terms of methods used for experimental design and analysis?\n\n**RQ3:** What meta-analysis methods were used and were they valid?\n\n**RQ4:** If the meta-analysis methods were valid can results be successfully reproduced?\n\nRQ1, RQ2, and the reporting aspects of RQ3 could be addressed directly from information reported in each primary study. To address the validity aspect of RQ3 and RQ4, we reviewed the meta-analysis processes described by each study and then attempted to reproduce first the effect sizes and then the meta-analysis in each primary study. Finally, we compared our results with the reported results. We assumed that it would be possible to conduct a meta-analysis based on the descriptive data and the effect size chosen by the primary study authors, since this is the normal method of performing meta-analysis.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Systematic Review Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Protocol Development",
+          "subsubsections": [],
+          "text": "Our protocol defines the procedures we intended to use for the systematic review including the search process, the primary study selection process, the data extraction process and the data analysis process. It also identified the main tasks of all the co-authors. The protocol was initially drafted by the first author and reviewed by all the authors. After trialling the specified processes, the final version of the protocol was agreed by all the authors and registered as report W08/2017/P-045 at Wroclaw University of Science and Technology. The following sections are based on the processes defined in the protocol. Any divergences report our actual processes, as opposed to the planned processes described in the protocol. The major deviation from the protocol and the results reported in this paper is that originally we had assumed it would be appropriate to concentrate on reproducibility, but as our investigation progressed we realized that we needed to consider the reasons for lack of reproducibility, that is, consider in more detail the validity of the meta-analysis process. Furthermore, validity is the key issue, because it is not useful to reproduce an invalid result.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Search Strategy",
+          "subsubsections": [],
+          "text": "In order to address our research questions, we needed to identify papers that reported the use of meta-analysis to aggregate individual studies, reported the results of the individual studies in detail, and were published in high quality journals.\n\nTo achieve our search process strategy, we decided to limit our search for families of experiments to the following five journals:\n\n\u2013 IEEE Transactions on Software Engineering (TSE).\n\u2013 Empirical Software Engineering (EMSE).\n\u2013 Journal of Systems and Software (JSS).\n\u2013 Information and Software Technology (IST).\n\u2013 ACM Transactions on Software Engineering Methodology (TOSEM).\n\nWe restricted ourselves to these journals because they all publish papers on empirical software engineering, and all have relatively high impact factors (among SE journals). These are, therefore, highly respected journals, and we should expect the quality of papers they publish to be correspondingly high.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 SR Inclusions and Exclusions",
+          "subsubsections": [],
+          "text": "In this section we present our inclusion and exclusion criteria. Details of the search and selection process, the validation of the search and selection process, and the data extraction process can be found in the supplementary material [W2965330732].\n\nGiven our research questions, papers to be included in our SR were identified using the following inclusion criteria:\n\n1. The paper should report a family of three or more experiments. This is because it is the criteria adopted by Santos et al. [W2804239311] and there is more opportunity to detect heterogeneity with three or more studies.\n2. The experiments reported in the paper should relate to human-centric experiments or quasi-experiments that compare SE methods or procedures rather than report observational (correlation) studies with no clear comparisons [W2887834142].\n3. The paper should have been published by one of the five journals identified by our search strategy, see Section 3.2.\n4. The paper should use some form of meta-analysis to aggregate results from the individual studies using standardized effect sizes, i.e., standardized mean difference or point-biserial correlation coefficient (rpb) [W2780802628]. These effect sizes are commonly used in software engineering meta-analyses.\n\nThe following exclusion criteria were also defined:\n\n1. The paper was an editorial [W2804239311].\n2. The paper was published before 1999, when Basili et al. [W2167926541] first discussed families of experiments.",
+          "citations": [
+            "W2965330732",
+            "W2804239311",
+            "W2887834142",
+            "W2780802628",
+            "W2167926541"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Data Analysis",
+          "subsubsections": [],
+          "text": "The results extracted from each primary study allowed us to answer questions RQ1, RQ2 and the methodology element of RQ3. To address the validity element of RQ3 and RQ4 for each primary study, we reviewed carefully the meta-analysis methods reported by the study authors and attempted to reproduce the effect size values and meta-analysis results using the reported descriptive data.\n\nMany of the studies reported multiple metrics and hypotheses tests for each experiment. In all cases, we first attempted to reproduce the effect sizes reported by the authors and then the meta-analysis. We analyzed only the first outcome metric, because we assumed that if the individual effect sizes were reproduced and results of meta-analyzing the effect sizes was reproduced, it would confirm whether or not the meta-analysis was reproducible without checking the results for every metric. Our assumption (that in our case it is enough to analyze the first outcome metric) was based on the fact that none of the primary studies reported using different methods to calculate effect sizes or performing meta-analysis for different outcome metrics. In addition, outcome tables for descriptive statistics and effect sizes were similar for all outcome metrics. There is only one situation where there might be a difference between outcomes for different metrics. This would happen if the authors did not maintain the direction as well as the magnitude of the effect size. Then, if one metric had effect sizes with different directions and one did not, we would agree with the authors in the case where all directions were the same and disagree when the directions were not the same. This happened in the case of Study 9 (see Section 6.11).\n\nFor each primary study, we compared the effect sizes for each experiment and the overall meta-analysis mean effect size with the results of our calculations. However, we needed some method of deciding whether effect sizes or meta-analysis results had been reproduced, since we did not expect to obtain exactly the same effect size values since our values were obtained from summary statistics whereas study authors might have derived their effect sizes from calculations on the raw data. We chose to use a difference of 0.05 between our calculated effect size meta-analysis mean and the equivalent reported statistics as a criterion for deciding whether there was a reproducibility problem. Our basis for choosing 0.05 was that:\n\n1. A relative value would unfairly penalize small effect sizes, for example if a study reported an effect size of 0.01 and we reported an effect size of 0.02, we would have relative difference of 50% for a difference that could be the result of rounding applied to reported mean values.\n2. Most studies reported descriptive data on metrics, in the range 0 to 1, to two decimal places, so we thought an absolute value of 0.05 might be sufficiently large to allow for differences due to rounding effects caused because our reproducibility statistics were derived from the reported means and variances.\n3. Most studies did not state explicitly whether or not they applied the small sample size adjustment to their standardized effect sizes. For example, a medium effect size of 0.5 and a sample size of 23 (the median experiment size), the effect of applying the small sample adjustment is to reduce the standardized effect size to 0.48.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "We performed our systematic review (SR) according to the guidelines proposed by Kitchenham et al. [W2612764117]. The processes we adopted are specified in the following sections.",
+      "citations": [
+        "W2612764117"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 An Overview of the Primary Studies (RQ1 and RQ2)",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Studies Reporting Meta-analysis of Families of Experiments (RQ1)",
+          "subsubsections": [],
+          "text": "The 13 primary studies we included in our SR are shown in Table 1 ordered by inverse publication date [W2562248917]. The table reports the number of experiments in each family and the number of participants in each experiment. We report on the studies in this order throughout this section.\n\n**TABLE 1** Primary studies\n\n{{TABLE:tbl_01}}\n\nTable 2 provides an overview of the goals of each of the studies and the specific techniques they investigated. The technique in boldface (e.g., PBR in study S13) is the treatment technique and the other technique (e.g., CBR) is the control technique. Later in this paper, effect sizes are reported relative to the treatment technique, so positive values indicate that the treatment technique outperforms the control technique and negative values indicate that the control technique outperforms the treatment technique. There are some trends observable in Table 2:\n\n\u2013 Six studies investigated the impact of different UML documentation options (see rows where the techniques are labelled DO to signify Documentation Options).\n\u2013 Four studies investigated procedures in the context of maintainability.\n\u2013 Four studies investigated requirements issues, three compared specification languages and one investigated proposals for verifying non-functional requirements.\n\n**TABLE 2** Primary study data\n\n{{TABLE:tbl_02}}",
+          "citations": [
+            "W2562248917"
+          ],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 Experimental Methods Used by the Primary Studies (RQ2)",
+          "subsubsections": [],
+          "text": "Table 3 presents some information about individual experiments discussed in each primary study. During data extraction, it became clear that many of our 13 primary studies, included experiments with crossover designs. Vegas et al. [W2295373235] warned that the terminology used to describe crossover designs was not used consistently, and we found exactly the same problem with our primary studies [W2936534160]. Therefore, we used the description of the experimental design provided by the authors to derive our own classification. Understanding the specific experimental design is important in the context of meta-analysis, because the variance of the standardized effect size is different for different designs, see [W2076029586, W2772922594]. In all cases the description was sufficient for us to identify the individual experimental designs. Like Vegas et al., we found that the primary study authors did not adopt our terminology, nor did they use the same terminology as other primary study authors who adopted the same design.\n\nThe primary studies used only four basic experimental designs, which we discuss in the Appendix A.1. To understand the notation used in the rest of the paper, it is important to note that all crossover style designs have two different types of standardized mean difference effect size (see [W2076029586, W2772922594]):\n\n1. An effect size that measures the personal improvement (of an individual or team) performing a task using one method compared with performing the same task [W2612764117] using another method. We refer to this as the repeated measures standardized effect size, \u03b4RM, with an estimate dRM.\n2. An effect size that is equivalent to the standardized mean effect size obtained from an independent groups design (also known as a between participants design). We refer to this independent groups effect size as \u03b4IG, with an estimate dIG.\n\nFor balanced crossovers (where each sequence group has the same number of participants), effect sizes are calculated as follows [W2076029586, W2772922594]:\n\ndRM = (x\u0304A \u2212 x\u0304B) / se (1)\n\nwhere x\u0304A is the mean value of the treatment technique observations and x\u0304B is the mean value of control technique, se is the within participants standard deviation.\n\ndIG = (x\u0304A \u2212 x\u0304B) / sIG (2)\n\nwhere sIG is equivalent to the pooled within groups standard deviation of an independent groups study.\n\nIn addition, there is a relationship between the two standard deviations [W2772922594]:\n\nse = \u221a(1 \u2212 r) sIG (3)\n\nwhere r is the Pearson correlation between the repeated measures. Thus, the effect sizes are also related:\n\ndRM = \u221a(1 \u2212 r) dIG (4)\n\n**TABLE 3** Primary study experiment data\n\n{{TABLE:tbl_03}}\n\nFor small sample size, Hedges and Olkin [UNMAPPED:26] recommend applying a correction to dRM and dIG. We refer to the small sample size corrected effect sizes as gRM and gIG respectively. We prefer not to give these terms generic labels, such as Hedges' g, because as Cumming [W2060030072] points out (see page 295) meta-analysis terminology is inconsistent. In terms of names given to standardized effect sizes, dIG is referred to as d by Borenstein et al. [UNMAPPED:28] and as g by Hedges and Olkin [UNMAPPED:26], gIG is referred to as g by Borenstein et al. [UNMAPPED:28] and d by Hedges and Olkin [UNMAPPED:26]. In our primary studies, most papers used the terms Hedge's g and one used Cohen's d but the papers did not specify whether or not they used the small sample size adjustment. Only Study 13 [W2131154789], explicitly defined Hedges' g to be what we refer to as dIG and used the term d to be what we refer to as gRM.\n\nIn Table 3, we also report whether the data was analyzed using parametric (P) or nonparametric methods (NP) tests for the individual experiments. Four of the studies used nonparametric tests or parametric tests depending on the outcome of tests for normality. Study 13 [W2131154789] and Study 14 [W1988962172] performed both non-parametric and parametric tests, but only reported the results of the parametric tests since the outcomes of both tests were consistent. It is important to note that many of the crossover studies did not analyze their data correctly, by using independent groups tests rather than repeated measures tests. We annotated three studies as partly valid because they used tests that catered for repeated measures, but may have been delivered slightly biased results if time period effects or material effects were significant (see Appendix A.1.3).",
+          "citations": [
+            "W2295373235",
+            "W2936534160",
+            "W2076029586",
+            "W2772922594",
+            "W2612764117",
+            "W2060030072",
+            "W2131154789",
+            "W1988962172",
+            "W2772922594",
+            "W2887834142",
+            "W2780802628"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ],
+          "citations_unmapped": [
+            "26",
+            "28"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we address RQ1 and RQ2 and present an overview of the primary studies included in our systematic review.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 The Validity of Meta-analysis Procedures Used by the Primary Studies (RQ3)",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1 Standard Procedures for Meta-analysis",
+          "subsubsections": [],
+          "text": "The usual method for aggregating standardized mean effect sizes such as Hedges' g is to construct a weighted average using the inverse of the effect size variance: (see, for example, [UNMAPPED:26, UNMAPPED:28, UNMAPPED:29]):\n\nES\u0304 = (\u2211_{i=1}^{k} w_i ES_i) / (\u2211_{i=1}^{k} w_i) (5)\n\nwhere ES_i is the calculated effect size of the i-th experiment, k is the number of experiments, ES\u0304 is the mean effect size, and w_i is an appropriate weight. It is also customary to use the inverse of the effect size variance as the weight, i.e., w_i = 1 / var(ES_i), where the formula for var(ES_i) depends both on the study design [W2076029586, W2772922594] and the specific effect size. However, Hedges and Olkin [UNMAPPED:26] make it clear that the use of the variance is based on large sample theory. In practice using the estimate of ES_i in the equation for its variance, when sample sizes are small, leads to a biased weights and a biased estimate of ES\u0304. They point out that a weight based on the number of observations [W2965330732] would lead to a pooled estimate that was unbiased but less precise. Such weights are close to optimal when the population mean is close to zero and the number of observations are large.\n\nEquation (5) assumes a fixed effects meta-analysis but a random effects analysis is also usually based on the effect size variance. Also, in the case of a fixed effect analysis, the variance of ES\u0304 is obtained from the equation:\n\nvar(ES\u0304) = 1 / (\u2211_{i=1}^{k} w_i) = \u2211_{i=1}^{k} v_i (6)\n\nEquation (5) is also used for aggregating the unstandardized effect size (UES). Although in this case, var(UES)_i is the square of the standard error of the mean difference.\n\nThere are two main meta-analysis models: a fixed effects model and a random effects model. Equations (5) and (6) are appropriate for a fixed effects model, when we assume that data from individual experiments arise from the same population (i.e., the data from each experiment arise from the same population).\n\nA random effects model assumes that data from individual experiments arise from different populations each of which has its own population mean and variance. A random effects analysis estimates the excess variance due to the different populations by comparing the variance between experiment means with the within experiment variance. In practice, random effects analysis replaces var(ES)_i with a larger revised variance that includes both the within experiment variance and the between experiment variance. In the case of a family of experiments, we would expect a priori that the experiments were closely controlled replications and a fixed effect size would be appropriate. However, a random effects analysis will give the same results as a fixed effects analysis in the event that the effect sizes are homogeneous, so we would recommend defaulting to a random effects method. Such approach would address the common issue, also mentioned by Santos et al. [W2804239311], of using fixed effect models when, due to the heterogeneity of effects, random effects models would be preferred.",
+          "citations": [
+            "W2076029586",
+            "W2772922594",
+            "W2965330732",
+            "W2804239311",
+            "W2562248917"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "26",
+            "28",
+            "29"
+          ]
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2 Meta-analysis Methods Used by the Primary Studies",
+          "subsubsections": [],
+          "text": "None of the primary studies aggregated the unstandardized effect size. However, twelve studies reported effect sizes they referred to either as Hedges' g or a related standardized effect size (Cohen's d, \u03b3 and d). Apart from Study 13 [W2131154789], none of the papers that used crossover-style experiments mentioned the possibility of two different effect sizes, so we assume that they all attempted to aggregate the effect size equivalent to an independent group study (i.e., dIG or gIG).\n\nStudy 1 [W2007969951] and Study 4 [W2025116371] both reported calculating Hedges' g, but their description did not mention applying the small sample size adjustment, so we assume they reported what we refer to as dIG. They also reported converting to a correlation based effect size (usually referred to as the point bi-serial correlation, rpb [W4301029050]). This can easily be calculated from the standardized effect size using the following formula (see [UNMAPPED:28, UNMAPPED:29]):\n\nrpb = dIG / \u221a(dIG^2 + a) (7)\n\nwhere a = 4 for a balanced experiment. After constructing rpb, it is necessary to apply Fisher's normalising transformation [W2121049564]. The resulting transformed variable for experiment i is referred to as zi, and the set of zi-values can be aggregated using the following equation (which is equivalent to (5)):\n\nZ\u0304 = (\u2211_i w_i z_i) / (\u2211_i w_i) (8)\n\nThe only mistake Study 1 [W2007969951] and Study 4 [W2025116371] made in the description of their meta-analysis was that the authors reported using a weight w_i = 1/(N-3), where w_i is the weight for the ith experiment. In fact, the variance of rpb, after applying the Fisher normalizing transformation, is v_i = 1/(N-3) and the weight is w_i = 1/v_i = (N-3), which ensures that the largest studies are given most weight in the aggregation process [UNMAPPED:29]. In addition, the authors of Study 4 [W2025116371] reported using a t-test for independent groups, so they may have used the number of observations rather than the sample size to calculate weights (and the overall variance).\n\nIn principle, transformation to rpb is a valid analysis method, since it avoids the probable bias in calculating the variance of the dIG for small sample sizes. For this reason, we used it as the basis of our reproducibility analysis, and we report the method in detail in Appendix A.2.\n\nAn important implication of using the normalizing transformation of rpb is that the variance of rpb is var(r_i) = 1/(n_i - 3) and using (6):\n\nvar(r\u0304pb) = \u2211_i^k var(r_i) = 1 / (\u2211_i^k (n_i - 3)) (9)\n\nThis means that if researchers mistakenly believe the variance is based on the number of observations rather than the number of participants, they will assume that the variance of each rpb is 1/(2n_i - 3) after transformation, and will substantially underestimate the variance of the average effect size r\u0304pb.\n\nFour studies (i.e., Study 2 [W2077924088], Study 5 [W1989733111], Study 9 [W4238354999] and Study 10 [W1964258385]) reported an effect size that they referred to as Hedges' g. They also reported an aggregation method that, like Study 1 [W2007969951] and Study 4 [W2025116371], used (8), and they also made the same mistake with their description of the weight. However, they did not explicitly confirm that they transformed their effect size to a correlation, so we cannot be sure whether these studies aggregated the standardized effect sizes directly but mistakenly assumed that the variance of each effect size was 1/(n_i - 3), or omitted to mention that they used the rpb transformation. Of these four studies, only Study 2 [W2077924088] used an analysis that considered repeated values, so the other studies might have used a variance based on 1/(2n_i - 3).\n\nStudy 3 [W2099545896], Study 7 [W2016999376] and Study 11 [W2230738057] all made a mistake with their basic meta-analysis. They all used an AB/BA crossover design (although Study 3 [W2099545896] also used an independent groups design for one of its 5 experiments). In each crossover study they estimated a standardized effect size for each time period separately. So for each AB/BA experiment they calculated two different estimates of dIG, one for time period 1 and the other for time period 2. It is incorrect to aggregate such effect sizes because the same participants contributed to each estimate of dIG, and, hence, the two effect sizes from the same experiment were not independent. This violates one of the basic assumptions of meta-analysis that each effect size comes from an independent experiment. The effect of this error is to increase the degrees of freedom attributed to tests of significance associated with the average effect size.\n\nStudy 6 [W1998686495] reported using Cohen's d and aggregating their values using a weighted mean and the META 5.3 tool. They referenced Hedges and Olkin [UNMAPPED:26], which did not report methods for meta-analysing crossover designs, so we assume that the authors aggregated dIG but do not know how they calculated their weights.\n\nStudy 8 [W2010267787] reported and aggregated rpb but used a different method to that used by Study 1 [W2007969951] and Study 4 [W2025116371]. We describe the method they used in the Appendix A.3. From the viewpoint of validity a critical issue is that they derived rpb from the one-sided p-value of their statistical tests. For each experiment in the family and for each metric, they used either the Mann-Whitney-Wilcoxon (MMW) test or the t-test depending on the outcome of a normality test. However, Study 8 [W2010267787] used statistical tests appropriate for independent groups studies, although the family used 4-group crossover experiments, so the resulting p-values are likely to be invalid. However, the study authors were attempting to use a meta-analysis process that would allow them to aggregate their parametric and non-parametric results. The authors reported the heterogeneity of their experiments, but as pointed out in Appendix A.3, the heterogeneity was probably over-estimated.\n\nStudy 13 [W2131154789] reported a standardized effect size based on team improvement, which we refer to as gRM. The authors also reported dIG for each experiment, which they referred to as Hedges' g, but they did not aggregate it. They estimated the variance of dRM but do not cite the origin of the formula they used. They used Hedges' Q statistic (see (19)) to test for heterogeneity. The test failed to reject the null hypothesis (i.e., their p-value was greater than 0.05), and they reported what appears to be the unweighted mean of the effect sizes.\n\nStudy 14 [W1988962172] referred to their effect size as \u03b3 for 4 separate hypotheses. However, the hypothesis we believe to be most relevant to investigating the difference between the techniques was based on the difference between the personal improvement observed among participants in one treatment group and the personal improvement among participants in the other group. This is a difference of differences analysis for which it is correct to use the independent groups t-test. However, \u03b3 cannot be easily equated to either dRM or dIG. For purposes of analysis, the difference data can be analysed as an independent groups study, but for purposes of interpretation, the mean difference measures the average individual improvement after the effect of skill differences are removed. They report both the weighted and unweighted overall mean. As explained in Appendix A.1.1, the weight was based on the inverse of the variance of \u03b3 and was calculated using the formula for the moderate sample-size approximation of the variance of gIG. They also tested for heterogeneity using the Q statistic proposed by Hedges and Olkin [UNMAPPED:26] which depends on the effect size variance.\n\nBoth Study 13 [W2131154789] and Study 14 [W1988962172] also aggregated one-sided p-values, as described in Appendix A.4, in order to test the null hypothesis of no significant difference between techniques.\n\nThe majority of primary study authors used the Meta-Analysis v2 [W4294612833] for aggregation, although Meta-Analysis v2 does not support aggregation results from crossover design studies.\n\nAs mentioned by Santos et al. [W2804239311], although many researchers used non-parametric methods for at least some of their individual experiments (see Table 3), they subsequently used parametric effect sizes. This is somewhat inconsistent but not necessarily invalid. It would certainly be inappropriate for studies that used both parametric and non-parametric methods to aggregate non-parametric effect sizes and parametric effect sizes in the same meta-analysis, so some consistent effect size metric is necessary.\n\nThe advantage of using the standardized mean difference is that the central limit theorem confirms that mean differences are normal irrespective of the underlying distribution of the data. The problem with standardized effect sizes is that the estimate of the variance of the data within each experiment, which is used to calculate the standardized effect size, may be biased for small sample sizes. However, the variance of the mean effect sizes for each experiment calculated as part of any random effects meta-analysis puts an upper limit on the variance of the overall mean effect size. In addition, currently, aggregating non-parametric effect sizes is not feasible. There are no well-defined guidelines identifying which non-parametric effect sizes to use, nor how they might be aggregated.\n\nOnly three of the primary studies considered heterogeneity. Study 8 [W2010267787] and Study 13 [W2131154789] reported non-significant heterogeneity. Study 14 [W1988962172] reported significant heterogeneity and reported both a weighted and an unweighted mean. Only Study 2 [W2077924088] explicitly mentioned using a fixed effects meta-analysis. Since the other studies made no mention of heterogeneity or using any specific meta-analysis model, we assume that the they also undertook fixed effects meta-analysis.\n\n**TABLE 4** Meta-analysis methods\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W2131154789",
+            "W2007969951",
+            "W2025116371",
+            "W4301029050",
+            "W2121049564",
+            "W2077924088",
+            "W1989733111",
+            "W4238354999",
+            "W1964258385",
+            "W2099545896",
+            "W2016999376",
+            "W2230738057",
+            "W1998686495",
+            "W2010267787",
+            "W1988962172",
+            "W4294612833",
+            "W2804239311",
+            "W2612764117",
+            "W2965330732",
+            "W2562248917",
+            "W2167926541"
+          ],
+          "tables_in_text": [
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "28",
+            "29",
+            "26"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we discuss the methods used by the primary study authors. In Table 4, we summarize issues related to meta-analysis including the effect size names used by the authors, our assessment of the effect size the authors aggregated, which meta-analysis tools were used and whether heterogeneity was investigated. We discuss these results in this section. However, the main focus of this section is to assess the validity of the meta-analysis procedures used in each primary study. This validity assessment was made from reading the report of the meta-analysis processes and the meta-analysis results reported in each primary study. It was intended to identify incorrect or incomplete reporting of meta-analysis process and any obvious violations of meta-analysis principles. In Section 5.1, we explain the recommended methods for analyzing standardized mean difference effect sizes, then in Section 5.2, we discuss the methods used by the primary study authors and highlight any potential validity problems with their meta-analysis method.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6 The Reproducibility and Validity of the Primary Study Meta-analyses (RQ4)",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "6.1 Reproducibility Assessment Process",
+          "subsubsections": [],
+          "text": "For reproducibility, as far as possible, we used the same method for each study. To construct the effect size, we used the following process:\n\n1. From the descriptive statistics reported in the study, we used (2) to calculate the standardized effect size appropriate for independent groups dIG. Our estimate of sIG^2 was usually based on the pooled within-technique variance. However, in the case of Study 3 [W2099545896], Study 7 [W2016999376] and Study 11 [W2230738057], sIG^2 was based on the pooled within-cell variance, where a cell is defined as a set of observations that were obtained under exactly the same experimental conditions (see Appendix A.1.2).\n2. We applied the exact small sample size adjustment J (see (14)) to calculate the effect size gIG.\n\nThis is the standard starting point for any meta-analysis when raw data is not available. To aggregate the effect sizes:\n\n1. We transformed the gIG values to rpb and applied Fisher's normalizing transformation [W2121049564].\n2. We used the R metafor tool [W2139168999] to fit a random effects model using its default method which is the Restricted maximum-likelihood estimation (RMLE) method.\n3. We back-transformed our meta-analysis results to the standardized mean difference.\n\nThis approach is described in more detail in the Appendix A.2. It was the same as that undertaken by Abrah\u00e3o et al. [W2087898864], which has the advantage of being appropriate for all experimental designs used in our primary studies and does not rely on information such as the variances of standardized effect sizes which was not well-known to SE researchers.\n\nThe three main deviations from this method were:\n\n1. For Study 8 [W2010267787], we reported our results in terms of the point bi-serial correlation (i.e., rpb) because Study 8 [W2010267787] reported and aggregated rpb.\n2. For Study 13 [W2131154789], descriptive statistics were not reported explicitly and we estimated the mean difference and standard deviations from the reported graphics. In addition, Study 13 [W2131154789] explicitly reported the statistics we refer to as gRM and dIG, so we reported both effect sizes and, like the study authors, aggregated the gRM values.\n3. In Study 14 [W1988962172], the authors reported the personal improvement results for each participant, which is equivalent to dRM. So, to report comparable effect sizes, we calculated the descriptive statistics from the reported descriptive difference data (i.e., the post-training results minus the pre-training results).\n\nAssuming the descriptive data was reported correctly, our meta-analyses should provide more trustworthy results for studies that used an invalid meta-analysis process (in particular, Study 3 [W2099545896], Study 7 [W2016999376] and Study 11 [W2230738057]). However, as explained in Appendix A.1.2, if materials, or time period effects are significant our estimates of sIG^2 will be inflated which would lead to underestimates of dIG. Also if there were significant interactions between either time period or materials, and technique such effects would also inflate sIG^2.\n\nWe defined results to be reproducible if the difference between the individual experiment effect sizes and the overall effect size reported in the primary study and those we calculated from the descriptive statistics was less than 0.05, as discussed in Section 3.4. We also compared the probability levels for the overall effect sizes. We expected primary studies that did not appreciate the impact of repeated measures would report smaller p-values than us. As discussed in Section 3.4, we only analyzed one measure per primary study.",
+          "citations": [
+            "W2099545896",
+            "W2016999376",
+            "W2230738057",
+            "W2121049564",
+            "W2139168999",
+            "W2087898864",
+            "W2010267787",
+            "W2131154789",
+            "W1988962172",
+            "W2772922594",
+            "W2077924088"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "6.2 Reproducibility Assessment Results",
+          "subsubsections": [],
+          "text": "Table 5 displays the calculated effect sizes and reported effect sizes for each experiment and each effect size reported in each study. The variable Type refers to the effect size reported in the row. None of the studies apart from Study 7 [W2016999376], Study 11 [W2230738057] and Study 13 [W2131154789] mentioned the small sample adjustment factor, so we assume that the standardized mean difference effect size reported by the authors is dRM. Study 13 [W2131154789] reported both dIG and gRM, but aggregated gRM and the one-sided p-value. Study 7 [W2016999376] and Study 11 [W2230738057] reported two values that they called Hedges' g. The value in their main tables was the small sample size adjusted standardized mean difference effect size, but they aggregated the non-adjusted effect size. The final column labelled RR (i.e., Results Reproduced) reports the number of times the absolute difference between the reported and calculated effect sizes was less than 0.05 for all relevant entries. The studies for which all standardized effect sizes were reproduced are highlighted. We were only able to reproduce all standardized effect sizes for Study 2 [W2077924088], Study 5 [W1989733111] and Study 6 [W1998686495], although for Study 14 [W1988962172], we also reproduced the authors' aggregation of p-values.\n\n**TABLE 5** Calculated and reported effect sizes\n\n{{TABLE:tbl_05}}\n\nTable 6 displays the calculated and reported overall mean values for the effect sizes plus (if available) the p-value of the mean, the upper and lower confidence interval bounds (UB and LB), QE which is the heterogeneity test statistic and QEp which the p-value of the heterogeneity statistic. The column RR identifies whether the difference between the calculated overall mean and the reported overall mean was greater than 0.05 (the studies for which this is the case are highlighted). The mean of the standardized effect sizes was reproduced for seven studies: Study 2 [W2077924088], Study 5 [W1989733111], Study 6 [W1998686495], Study 8 [W2010267787], Study 10 [W1964258385], Study 11 [W2230738057], and Study 13 [W2131154789]. However, Study 8 [W2010267787] and Study 11 [W2230738057] must be discounted because of validity problems.\n\n**TABLE 6** Overall mean values of effect sizes reported and calculated\n\n{{TABLE:tbl_06}}\n\nThe reproducibility results are collated with the validity assessment for each study, and are discussed in the following sections. In each section, the validity problems identified in Section 5 are identified in the paragraphs labelled \"Meta-Analysis Validity Issue\". Critical issues that invalidate the aggregation performed by the authors are identified. If the reproducibility failed or was otherwise deemed invalid, we include a \"Cause of Problem\" paragraph. Validity issues identified as a result of our reproducibility assessment are identified as meta-analysis process implementation errors in the \"Cause of Problem\" paragraph.",
+          "citations": [
+            "W2016999376",
+            "W2230738057",
+            "W2131154789",
+            "W2077924088",
+            "W1989733111",
+            "W1998686495",
+            "W1988962172",
+            "W2010267787",
+            "W1964258385"
+          ],
+          "tables_in_text": [
+            "tbl_05",
+            "tbl_06"
+          ]
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "6.3 Study 1 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issues:** None.\n\n**Author's Aggregation Method:** Weighted mean of dRM based on transforming to and from rpb.\n\n**Our Aggregation Method:** Weighted mean of gIG based on transforming to and from rpb as described in Appendix A.2.\n\n**Individual Effect Size Reproducibility:** Failed.\n\n**Mean Effect Size Reproducibility:** Failed.\n\n**Cause of Problem:** Meta-analysis process implementation error - Incorrect use of meta-analysis tool.\n\n**Comments:** Although we could not detect any validity problems with Study 1 [W2007969951], and we based our meta-analysis on rpb derived from gIG, we could not reproduce the effect sizes nor the meta-analysis results. The study reported substantially smaller effect sizes, both for individual experiments and overall, than the ones we calculated. We contacted Prof. Abrah\u00e3o who was the first author of this paper. She very kindly provided us with the raw data used in Study 1 [W2007969951]. Using Prof. Abrah\u00e3o's raw data, we recalculated gIG for each study and aggregated the data after transforming to rpb and following the process described in the Appendix A.5. Prof. Abrah\u00e3o agreed with our analysis of her raw data. She also confirmed that she was attempting to calculate the matched pairs effect size (i.e., gRM).\n\nThe low values she obtained were due to several different factors. The most significant issue was that she used the Meta-Analysis-V2 tool [W4294612833] that does not support crossover designs, although it does support matched pairs studies. The tool attempts to calculate gIG not gRM.",
+          "citations": [
+            "W2007969951",
+            "W4294612833"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_4",
+          "subsection_index": 4,
+          "subsection_label": "6.4 Study 2 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issue 1:** It is unclear whether the paper aggregated the standardized effect size dIG directly or used the transformation to rpb.\n\n**Meta-Analysis Method Validity Issue 2:** The weights and variances may have been based on the number of observations rather than the number of participants.\n\n**Author's Aggregation Method:** Unclear. Either the weighted mean of dIG based on transforming to and from rpb or the weighted mean of dIG with weight = N-3.\n\n**Our Aggregation Method:** As for Study 1 [W2007969951].\n\n**Individual Effect Size Reproducibility:** Succeeded.\n\n**Mean Effect Size Reproducibility:** Succeeded.\n\n**Comments:** According to our criteria, Study 2 [W2077924088] was fully reproduced with respect to the individual effect sizes and the weighted mean of the effect sizes. However, there is difference with respect to the p-values for the overall mean that is consistent with using the number of observations rather than the number of participants when calculating the variance of the effect size.",
+          "citations": [
+            "W2007969951",
+            "W2077924088"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_5",
+          "subsection_index": 5,
+          "subsection_label": "6.5 Study 3 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issue 1:** Critical validity issue - Incorrect meta-analysis of non-independent effect sizes.\n\n**Meta-Analysis Method Validity Issue 2:** Unclear whether the authors aggregated dIG or rpb.\n\n**Meta-Analysis Method Validity Issue 3:** The weights and variances may have been based on the number of observations rather than the number of participants for AB/BA crossover experiments.\n\n**Author's Aggregation Method:** Unclear. Either the weighted mean of dIG based on transforming to and from rpb or the weighted mean of dIG with weight = N-3.\n\n**Our Aggregation Method:** As for Study 1 [W2007969951].\n\n**Individual Effect Size Reproducibility:** Failed (4), Succeeded (1).\n\n**Mean Effect Size Reproducibility:** Failed.\n\n**Cause of Problem:** Critical validity issue.\n\n**Comments:** Study 3 [W2099545896] used different experiment designs. Four experiments were AB/BA crossover experiments, the fifth experiment was an independent groups study. We were able to reproduce the effect size for the fifth experiment.\n\nIt is important to note that even though Study 3 [W2099545896] used two different experimental designs, once comparable effect sizes are constructed, in this case gIG, results from all experiments can be aggregated. Thus, we provide corrected effect sizes and an overall meta-analysis, using the reported descriptive statistics to calculate gIG for each experiment, followed by aggregation of normalized rpb values.",
+          "citations": [
+            "W2007969951",
+            "W2099545896",
+            "W2780802628",
+            "W2295373235"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_6",
+          "subsection_index": 6,
+          "subsection_label": "6.6 Study 4 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issues:** The study might have based weights and variances on the number of observations rather than the number of participants.\n\n**Author's Aggregation Method:** Weighted mean of dIG based on transforming to and from rpb.\n\n**Our Aggregation Method:** As for Study 1 [W2007969951].\n\n**Individual Effect Size Reproducibility:** Failed.\n\n**Mean Effect Size Reproducibility:** Failed.\n\n**Cause of Problem:** Meta-analysis process implementation error - Incorrect use of meta-analysis tool\n\n**Comments:** Like Study 1 [W2007969951], Study 4 [W2025116371] reported transforming its standardized effect size to rpb but could not be reproduced. Like Study 1 [W2007969951], it reported significantly smaller effect sizes, both for individual experiments and overall, than the ones we calculated. Prof. Abrah\u00e3o was a co-author of this paper, but she informed us that the raw data for Study 4 [W2025116371] were no longer available. However, since the pattern of results was similar to Study 1 [W2007969951] (i.e., the experiment effect sizes were smaller than the one we calculated), it is likely that the analysis suffered from the same problems.",
+          "citations": [
+            "W2007969951",
+            "W2025116371"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_7",
+          "subsection_index": 7,
+          "subsection_label": "6.7 Study 5 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issue 1:** The study might have based weights and variances on the number of observations rather than the number of participants.\n\n**Meta-Analysis Method Validity Issue 2:** Unclear whether the authors aggregated dIG or rpb.\n\n**Author's Aggregation Method:** Unclear. Either the Weighted mean of dIG based on transforming to and from rpb or the weighted mean of dIG with weight=N-3.\n\n**Our Aggregation Method:** As for Study 1 [W2007969951].\n\n**Individual Effect Size Reproducibility:** Succeeded.\n\n**Mean Effect Size Reproducibility:** Succeeded.\n\n**Comments:** Despite uncertainty about which effect size was aggregated, Study 5 [W1989733111] was successfully reproduced both at the individual experiment level and at the overall meta-analysis level. The largest discrepancy occurred for the first experiment results. This was due to a probable rounding error. The mean values of Ueffec for the first experiment (E-UL) in Table 7 of [W1989733111] are 0.76 for Low LoD and 0.76 for High LoD, so we calculated the mean difference (and the effect size) to be zero. In fact, Study 5 [W1989733111] reports a standardized effect size of -0.046 (see [W1989733111], Fig. 4).\n\nStudy 5 [W1989733111] did not explicitly report the confidence intervals on mean standardized effect size, but visual inspection of their forest plot ([W1989733111], Fig. 4) suggests an interval of approximately [-0.25, 0.4] which is smaller than the interval we calculated [-0.343, 0.612]. So, Study 5 [W1989733111] might have underestimated the standard error of the mean standardized effect size.",
+          "citations": [
+            "W2007969951",
+            "W1989733111"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_8",
+          "subsection_index": 8,
+          "subsection_label": "6.8 Study 6 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issue:** The study might have based weights and variances on the number of observations rather than the number of participants.\n\n**Aggregation Method:** Based on dIG but not specified in detail.\n\n**Our Aggregation Method:** As for Study 1 [W2007969951].\n\n**Individual Effect Size Reproducibility:** Succeeded.\n\n**Mean Effect Size Reproducibility:** Succeeded.\n\n**Comments:** Study 6 [W1998686495] was successfully reproduced both for individual effect sizes and for the overall mean effect sizes. All discrepancies appear to have occurred because we calculated the small sample size adjusted values. The non-adjusted values for the three experiments are Exp1 = 0.579, Exp2 = 0.3517 and Exp3 = 0.5793, which are very close to the reported values.",
+          "citations": [
+            "W2007969951",
+            "W1998686495"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_9",
+          "subsection_index": 9,
+          "subsection_label": "6.9 Study 7 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issue:** Critical validity issue - Incorrect meta-analysis of non-independent effect sizes.\n\n**Author's Aggregation Method:** Weighted mean of dIG for each time period.\n\n**Our Aggregation Method:** As for Study 1 [W2007969951].\n\n**Individual Effect Size Reproducibility:** Failed\n\n**Mean Effect Size Reproducibility:** Failed.\n\n**Cause of Problem:** Critical validity issue.\n\n**Comments:** Like Study 3 [W2099545896], Study 7 [W2016999376] calculated standard effect sizes separately for each study. Since the meta-analysis aggregation was invalid, we report our estimates of the effect sizes for each experiment and their overall mean.\n\nWe note, however, that the first time period analysis the authors performed is a valid independent groups analysis (see [W4229753260], Section 3.1.2), so a meta-analysis, based on all participants provides valid estimate of dIG and its variance. Compared with an analysis of data from both time periods, the analysis is based on one set of materials rather than two and the estimate of dIG may be biased if the randomization to groups was not sufficient to balance out skill differences. However, it is not affected by any technique by time period or technique by order interactions.",
+          "citations": [
+            "W2007969951",
+            "W2099545896",
+            "W2016999376",
+            "W4229753260"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_10",
+          "subsection_index": 10,
+          "subsection_label": "6.10 Study 8 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issue 1:** Wrongly used p-values from independent groups tests to calculate rpb\n\n**Meta-Analysis Method Validity Issue 2:** Used the number of observations in their heterogeneity assessment instead of the number of participants.\n\n**Author's Aggregation Method:** Weighted mean of rpb based on the Hunter-Schmidt method [W1511920456].\n\n**Our Aggregation Method:** Aggregation of rpb derived from gIG.\n\n**Individual Effect Size Reproducibility:** Failed.\n\n**Mean Effect Size Reproducibility:** Succeeded due to accidental correctness.\n\n**Cause of Problem:** Meta-analysis process implementation error - Inconsistency between reported p-values and calculated effect sizes.\n\n**Comments:** Study 8 [W2010267787] was reproduced for three of the four effect sizes and the overall mean. The largest discrepancy was found for the first experiment.\n\nWe based our estimate of rpb on the gIG, whereas the authors used (33), so discrepancies might have been due to the different methods of calculating rpb. Table 7 summarises our attempt to reproduce the effect size calculations used by the authors from the initial p-values. The p-values reported by the authors are shown in the first row with their equivalent Z-values in row 2. The first issue is that the p-value for the first experiment is large while the other p-values are small which leads to both positive and negative Z-values. The published box plots all had medians for the control that were smaller than the medians for the technique treatment, so we would expect all the studies to have small p-values for tests (assuming the authors calculated the probability that the control group exhibited larger values than the treatment group). Thus, it appears that value for p(Exp1) is anomalous and could be a typographical error. Furthermore, applying their procedure to the p-values, we did not obtain values of rpb any closer to their reported values than the values we obtained starting from our estimates of gIG, whether we used the number of observations (see row 4, rpb(NO)) or the number of participants (see row 5, rpb(NP)) in Table 7.\n\nThus, although the overall mean rpb value we obtained is very close to the overall mean reported by the authors, the process used to derive the individual effect sizes could not be reproduced.\n\n**TABLE 7** Calculating rpb effect size from probabilities\n\n{{TABLE:tbl_07}}",
+          "citations": [
+            "W1511920456",
+            "W2010267787",
+            "W2139168999"
+          ],
+          "tables_in_text": [
+            "tbl_07"
+          ]
+        },
+        {
+          "subsection_id": "s_6_11",
+          "subsection_index": 11,
+          "subsection_label": "6.11 Study 9 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issue 1:** Unclear whether the authors aggregated dIG or rpb\n\n**Meta-Analysis Method Validity Issue 2:** The study might have based weights and variances on the number of observations rather than the number of participants.\n\n**Author's Aggregation Method:** Unclear. Either the weighted mean of dIG based on transforming to and from rpb or the weighted mean of dIG with weight = N-3.\n\n**Our Aggregation Method:** As for Study 1 [W2007969951].\n\n**Individual Effect Size Reproducibility:** Failed.\n\n**Mean Effect Size Reproducibility:** Failed.\n\n**Cause of Problem:** Meta-analysis process implementation error - Authors ignored effect size direction.\n\n**Comments:** Study 9 [W4238354999] was not reproduced either in terms of individual effect sizes or in terms of the overall mean. Looking at the effect sizes, it is clear that the authors of Study 9 [W4238354999] aggregated the absolute mean effect sizes for each experiment, and so overestimated the overall effect size.\n\nThis is the only case in which it is possible for the results of a meta-analysis process using one metric to differ, with respect to reproducibility, from the results obtained using another metric. If all effect sizes of the other metric were in the same direction, using the absolute effect size would not cause a reproducibility problem. This is in fact the case for the other metric used in this study.",
+          "citations": [
+            "W2007969951",
+            "W4238354999"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_12",
+          "subsection_index": 12,
+          "subsection_label": "6.12 Study 10 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issue 1:** Unclear whether the authors aggregated dIG or rpb\n\n**Meta-Analysis Method Validity Issue 2:** The study might have based weights and variances on the number of observations rather than the number of participants.\n\n**Author's Aggregation Method:** Unclear. Either the weighted mean of dIG based on transforming to and from rpb or the weighted mean of dIG with weight = N-3.\n\n**Our Aggregation Method:** As for Study 1 [W2007969951].\n\n**Individual Effect Size Reproducibility:** Not reported.\n\n**Mean Effect Size Reproducibility:** Succeeded.\n\n**Comments:** Study 10 [W1964258385] did not report individual experiment effect sizes, nor any p-values for the meta-analysis, but, did report an overall effect size very close to our calculation.",
+          "citations": [
+            "W2007969951",
+            "W1964258385"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_13",
+          "subsection_index": 13,
+          "subsection_label": "6.13 Study 11 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issue:** Critical validity issue - Incorrect meta-analysis of non-independent effect sizes.\n\n**Author's Aggregation Method:** Weighted mean of dIG for each time period.\n\n**Our Aggregation Method:** As for Study 1 [W2007969951].\n\n**Individual Effect Size Reproducibility:** Not reported.\n\n**Mean Effect Size Reproducibility:** Succeeded due to accidental correctness.\n\n**Cause of Problem:** Critical validity issue.\n\n**Comments:** Like Study 3 [W2099545896] and Study 7 [W2016999376], Study 11 [W2230738057] calculated standard effect sizes separately for each study. In this case, however, we found an example of accidental correctness. The Study 11 [W2230738057] mean effect size was reproduced because the analysis effects were extremely close for both time periods so constructing an average effect size for each experiment gave very similar results to treating the results of each time periods as separate experiments. What is noticeable is that the reported p-value was considerably lower than the one we calculated. This was because the authors believed they had six effect sizes in their meta-analysis rather than three.\n\nLike Study 7 [W2016999376], the first time period meta-analysis reported by Study 11 [W2230738057] provides a valid estimate of dIG and its variance.",
+          "citations": [
+            "W2007969951",
+            "W2099545896",
+            "W2016999376",
+            "W2230738057"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_14",
+          "subsection_index": 14,
+          "subsection_label": "6.14 Study 13 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issue:** None\n\n**Author's Aggregation Method:** Unweighted mean of gRM and sum of the natural logarithm of the one-sided p-values.\n\n**Our Aggregation Method:** Weighted mean of gRM based on transformation to and from rpb and sum of the natural logarithm of the one-sided p-values.\n\n**Individual Effect Size Reproducibility:** Failed due to extracting basic data from graphics.\n\n**Mean Effect Size Reproducibility:** Succeeded.\n\n**Comments:** Study 13 [W2131154789] did not report the mean and standard deviation of the technique groups. Instead, the authors presented the descriptive statistics in graphical form. However, in contrast to the other studies, Study 13 [W2131154789] reported both the dIG (which they referred to as Hedges' g) and gRM (which they referred to as d) using a valid formula to estimate its standard deviation.\n\nSince the value we used to reproduce the effect sizes were estimated from a diagram, we expected the difference between our results and the reported results to be slightly larger than our 0.05 level, in fact all the differences were less than 0.08.\n\nStudy 13 [W2131154789] aggregated both the one-sided p-values and the individual gRM effect sizes. The overall mean gRM was validated by our difference criterion. The reported aggregated probability, P, was close to the value we calculated, [W2230738057] and overall we conclude that Study 13 [W2131154789] has been successfully reproduced.",
+          "citations": [
+            "W2131154789",
+            "W2230738057"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_15",
+          "subsection_index": 15,
+          "subsection_label": "6.15 Study 14 Validity and Reproducibility",
+          "subsubsections": [],
+          "text": "**Meta-Analysis Method Validity Issue:** None\n\n**Author's Aggregation Method:** Weighted and unweighted mean of gRM and sum of the natural logarithm of the one-sided p-values.\n\n**Our Aggregation Method:** Weighted mean of gRM based on transformation to and from rpb and sum of the natural logarithm of the one-sided p-values.\n\n**Individual Effect Size Reproducibility:** For gIG failed due to rounding errors, for p succeeded.\n\n**Mean Effect Size Reproducibility:** Failed due to rounding errors.\n\n**Comments:** Study 14 [W1988962172] used an interesting design that avoids some of the problems associated with replicated measures by analyzing the differences in differences (see Appendix A.1.4).\n\nStudy 14 [W1988962172] actually performed four statistical tests for each of four different variables, including comparing the pretest results for each group, comparing the posttest results for each group, comparing the post-test with the pretest values for each group, as well as comparing the mean difference of the difference between pretest and posttest results for each group (which they call the performance improvement). However, for the purpose of comparing the two treatments, the relative performance improvement is the most appropriate measure to test:\n\nProcess Improvement = (\u2211_{Ai} (x_{Ai2} - x_{Ai1}) / n_A) - (\u2211_{Bi} (x_{Bi2} - x_{Bi1}) / n_B) (10)\n\nwhere x_{Ai2} is the posttest value of metric x for participant i in Group A and x_{Ai1} is the pretest value of metric x for subject i. x_{Bi2} and x_{Bi1} are equivalent values for participants in group B. n_A and n_B are the number of participants in each group. Like an independent groups analysis, the variance of the difference values is the pooled within group variance (see (12)).\n\nWe were able to reproduce only one of the standardized mean effect sizes for individual experiments. In addition, we could not reproduce the overall mean effect size. All the data is reported to two significant digits, and it appears that because the raw data values are quite small, this has led to potentially large rounding errors [W1989733111]. However, we obtained t-test p-values that were similar to the reported values, and our aggregated p-values were also close.",
+          "citations": [
+            "W1988962172",
+            "W1989733111",
+            "W2230738057",
+            "W2010267787"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section reports our reproducibility assessment and incorporates it with the validity analysis reported in Section 5, since it makes little sense to investigate the reproducibility of invalid meta-analyses. In turn, our reproducibility assessment allowed us to investigate further the validity of the meta-analysis processes adopted in each paper, from the viewpoint of whether processes that were valid in principle, were also applied correctly, in practice. In Section 6.1, we describe the method we used for our reproducibility assessment. In Section 6.2, we report the overall results of the reproducibility assessment, and in the following sections, we discuss the reproducibility results for each study in the context of the validity assessment reported in Section 5.2.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "7 Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_7_1",
+          "subsection_index": 1,
+          "subsection_label": "7.1 Summary of Results",
+          "subsubsections": [],
+          "text": "We found 13 primary studies that conformed with our inclusion criteria in the sources we searched. All primary studies reported their experimental designs in sufficient detail for us to classify their individual experiments into four distinct design types: 4-group AB/BA crossover design, duplicated AB/BA crossover design, independent groups design, and a pretest posttest control design.\n\nAll 13 primary studies also provided sufficient information for us to reproduce their meta-analysis results, but, in most cases, only for effects sizes comparable to independent groups designs (i.e., dIG and gIG). Of the crossover designs, only Study 13 [W2131154789] reported the improvement effect sizes (gRM). The other crossover design studies did not provide the summary information needed to calculate the personal improvement effect size.\n\nWe identified four primary studies that exhibited validity problems sufficient to call into question the reported meta-analysis results, and another six studies where we were unsure about the validity of the meta-analysis. In those six cases, we expected the effect sizes to be slightly biased and effect size variances to be underestimated, see Appendix A.5 for a more detailed explanation.\n\nOf the 12 studies that reported individual experiment effect sizes, we were able to fully reproduce five primary studies. In addition, we also reproduced six of the 12 reported overall effect sizes. In the case of Study 10 [W1964258385], which did not report individual experiment effect sizes, we were able to reproduce its overall effect size.",
+          "citations": [
+            "W2131154789",
+            "W1964258385"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_2",
+          "subsection_index": 2,
+          "subsection_label": "7.2 Experimental Designs Used by Primary Studies",
+          "subsubsections": [],
+          "text": "Six studies used the 4-group duplicated AB/BA crossover design and four studies used the AB/BA crossover design. Study 3 [W2099545896] used two different designs, with 4 experiments using a 4-group duplicated AB/BA crossover and one experiment using an independent groups design. The two remaining studies used an independent groups design and a pretest posttest control design. Thus, 12 of the 13 primary studies used repeated measures methods.\n\nOnly one family used an independent groups design for all its experiments, although outcomes of this design are the most straightforward to analyse and meta-analyse. However, using more complex designs makes the analysis of individual experiments and their subsequent meta-analysis more difficult. Only 4 of those 12 repeated measures studies used analysis methods appropriate for repeated measures data. Using analysis methods appropriate for independent groups studies has knock-on effects for any subsequent meta-analysis that can lead to invalid effect sizes or invalid effect size variances.\n\nThe main reason for using repeated measures designs is to be able to account for the individual skill differences among participants. However, the crossover design is not the only way to do this. In particular, the pretest posttest control group experimental design (see Appendix A.1.4) has some desirable properties. It allows the effect of individual differences are catered for by the analysis, but avoids the problem of technique by period interaction which is a potential risk when using a crossover design. For example, there were many studies evaluating the perspective-based code reading (PBR) methods (see [W2070300937]), some of which used the undefined current method as a control while others used the checklist-based reading (CBR) method as a control. Using a pretest posttest control group, the current method would be used to establish a pretest baseline and then groups could be randomly assigned to training in CBR or PBR and the posttest differences used to assess whether PBR or CBR most enhanced defect detection.",
+          "citations": [
+            "W2099545896",
+            "W2070300937"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_3",
+          "subsection_index": 3,
+          "subsection_label": "7.3 Meta-analysis Reporting",
+          "subsubsections": [],
+          "text": "Primary study authors did not always describe their meta-analysis processes fully and consistently. Few studies reported any information related to the standard error of the average effect size or its confidence intervals. The p-values for the overall effect sizes were reported nine times. In only three cases were the reported and calculated p-values of the same order of magnitude. Two papers reported confidence interval bounds, but these were Study 7 [W2016999376] and Study 11 [W2230738057] and we disagreed with their aggregation process. [W2010267787]\n\nWe also noticed some more general reporting issues:\n\n\u2013 Studies often reported a name such as Hedges' g for their standardised mean effect sizes, but did not usually specify how this was calculated. For reproducibility it is important to know both the formula for the standard deviation used to standardise the mean difference and whether or not the small sample size adjustment factor was applied.\n\u2013 Many studies used metrics that corresponded to the fraction of correct responses and which they reported on a [W2295373235, UNMAPPED:0] scale. This can lead to rounding errors when reproducing results, if descriptive statistics are only reported to two decimal places. It is preferable to represent such numbers as a percentage rather than a fraction. Reporting percentages to two decimal places is appropriate both for means and standard deviations.\n\u2013 Authors using a repeated measures design sometimes failed to report the number of participants in each sequence group. However, this is important for meta-analysis purposes if the individual experiments are unbalanced in any way.\n\nWe collate our observations and formulate guidelines about reporting and conduct of meta-analysis in Appendix A.6.",
+          "citations": [
+            "W2016999376",
+            "W2230738057",
+            "W2010267787",
+            "W2295373235"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "0"
+          ]
+        },
+        {
+          "subsection_id": "s_7_4",
+          "subsection_index": 4,
+          "subsection_label": "7.4 Meta-analysis Tools",
+          "subsubsections": [],
+          "text": "11 of the 13 studies mentioned using a meta-analysis tool. Of those 11 studies, seven exhibited reproducibility problems. It is difficult for researchers to assess whether they have used tools correctly unless there is some way of validating the tool outcomes. This study has shown that attempting to reproduce the results from descriptive data is a useful means of checking the output from tools. Comparing the results of analyzing the raw data as opposed to the descriptive statistics (as reported in Appendix A.5) shows that results based on descriptive statistics may be biased, but they should still provide results of the same order of magnitude, providing a sanity check on the tool outputs.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_5",
+          "subsection_index": 5,
+          "subsection_label": "7.5 Meta-analysis Methods",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_7_5_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "7.5.1 Testing for Heterogeneity",
+              "parent_subsection_id": "s_7_5",
+              "text": "Only three primary studies (Studies 8 [W2010267787], 13 [W2131154789] and 14 [W1988962172]) reported the results of testing for heterogeneity among experiments in a family. It might be expected that a family of experiments was by definition homogeneous. However, some studies such as Study 1 [W2007969951] and Study 3 [W2099545896] reported families that had considerable differences between the individual experiments (see the supplementary material [W2965330732]). It is certainly worth checking for heterogeneity in such cases. In the case of Study 1 [W2007969951], our meta-analysis found a heterogeneity value of 4.01 which had an associated p-value of 0.45 suggesting that heterogeneity was limited and the fixed effect analysis undertaken by the authors was appropriate. In the case of Study 3 [W2099545896], the heterogeneity value was 8.46 with p = 0.0761. Since heterogeneity tests are not very powerful (see [W2126930838]), we suggest that a value less than 0.1 should be accepted as an indication that a random effects analysis might be preferable to a fixed effects analysis.\n\n**TABLE 8** AB/BA crossover design\n\n{{TABLE:tbl_08}}",
+              "citations": [
+                "W2010267787",
+                "W2131154789",
+                "W1988962172",
+                "W2007969951",
+                "W2099545896",
+                "W2965330732",
+                "W2126930838"
+              ],
+              "tables_in_text": [
+                "tbl_08"
+              ]
+            },
+            {
+              "subsubsection_id": "s_7_5_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "7.5.2 Meta-analysis Choices",
+              "parent_subsection_id": "s_7_5",
+              "text": "One of the major problems with meta-analysis is that there are many different effect sizes and methods that can be used to aggregate results. The meta-analysis methods used in the primary studies were not always clearly reported, but most studies reported standardized mean effect sizes for individual effect sizes and for the overall mean effect size. Study 8 [W2010267787] reported the point bi-serial correlation coefficient. In addition, Study 13 [W2131154789] and 14 [W1988962172] used the method of combining p-values, which is now known to have severe limitations, see Appendix A.4.\n\nMany text books recommend aggregating standardised mean difference effect sizes, see for example, [UNMAPPED:28] or [UNMAPPED:29], but it depends on obtaining the correct effect size variance. [W4238354999] This is fairly straightforward if the individual experiments have medium to large sample sizes, but is more complicated if experiments have very small sample size [UNMAPPED:26], and also depends on the specific experimental design, as can be seen in [W2772922594] and [W2076029586].\n\nIt would seem to be easier to convert to rpb for aggregation, as we did in our reproducibility assessment. This procedure avoids the need to obtain estimates of the standardized effect size variance. However, it must be recognised that the problem with the standardised effect size and its variance is that, for small sample sizes, the estimate of the variance which is used to calculate the standardised effect size is likely to be inaccurate. Converting to rpb does not overcome this problem since the point bi-serial correlation is itself calculated as the ratio of two variance estimates.\n\nIn practice, as proposed by Santos et al. [W2804239311], an option for homogeneous families (i.e., families that use the same material and the same output measures) would be to analyze the data from the family as one large experiment, using what they call an Independent Participant Data (IDP) stratified method. This analyzes the data from all the individual experiments together as a single data set, and uses the individual experiment identifier as a blocking factor. This would lead to an estimate of overall mean difference and the residual variance based on all the participants. An estimate of the effect size of the family and its standard error would then be more likely to be reliable.\n\nIt is also possible that using non-parametric effect sizes would avoid some of the problems inherent in using parametric effect sizes. However, although it is possible to calculate a number of different non-parametric effect sizes, it is not clear which non-parametric effect sizes should be used, nor how to aggregate results from individual experiments into an overall effect size.\n\n**TABLE 9** Duplicated AB/BA crossover design\n\n{{TABLE:tbl_09}}",
+              "citations": [
+                "W2010267787",
+                "W2131154789",
+                "W1988962172",
+                "W4238354999",
+                "W2772922594",
+                "W2076029586",
+                "W2804239311"
+              ],
+              "tables_in_text": [
+                "tbl_09"
+              ],
+              "citations_unmapped": [
+                "28",
+                "29",
+                "26"
+              ]
+            }
+          ],
+          "text": "In this section we discuss the implications of our study on the use of meta-analysis methods to aggregate data from families of experiments.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_6",
+          "subsection_index": 6,
+          "subsection_label": "7.6 Limitations",
+          "subsubsections": [],
+          "text": "It should be noted that all primary studies using crossover designs (except Study 7 [W2016999376] and Study 11 [W2230738057]), based on their analysis on the pooled within treatment standard deviation, rather than the pooled within cell standard deviation. Both variances are calculated using a formula similar to that shown in (12) but the pooled within treatment variation is calculated based on pooling the variances of the observations in each of the two different treatment groups. In contrast, the pooled within cell standard deviation is based on pooling the variances calculated from the observations found in each of the experimental conditions shown in Table 8 for AB/BA crossover designs and Table 9 for 4-group crossover designs. This means the standard deviation will be biased (in fact the standard deviation will be larger than it should be), unless the system and period effects are negligible. Furthermore any bias in the standard deviation will impact the estimation of standardized effect size, making it smaller than it should be.\n\nWe claimed to have found a reproducibility problem if the difference between the effect size estimates reported by the authors and the ones we calculated was greater than 0.05. The choice of 0.05 was based on convenience and can be criticized. In practice, the value we chose seemed to work reasonably well as a means of drawing our attention to possible reproducibility problems. However, it incorrectly highlighted some differences that we believed to be due rounding errors, and we also observed two examples of accidental correctness. So, it was critical to review the actual meta-analysis process reported by the authors, as well as the difference between reported and calculated effect sizes to confirm whether there were validity or reproducibility problems.",
+          "citations": [
+            "W2016999376",
+            "W2230738057",
+            "W2010267787"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section discusses issues arising from our systematic review and validity and reproducibility studies.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "8 Conclusions and Contributions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Our systematic review identified 13 primary studies from five high quality journals. In seven cases we identified validity or reproducibility problems. Even in cases where we reproduced the average standardized effect size, in four cases, we are not sure as to the accuracy of statistical tests of significance and p-values. We conclude that meta-analysis is not well understood by software engineering researchers.\n\nOur systematic review process reported in Section 3 has ensured that the problems we identified were found in papers published in high quality software engineering journals with stringent peer review processes. It is, therefore, important to report such problems and provide guidelines and procedures to help to avoid them in the future. Answers to RQ1 and RQ2 reported in Section 4, provide traceability to the individual primary studies and contextual details of the experimental methods used to analyse each experiment. This confirms that we have not been biased in our selection of primary studies. Answers to RQ3 and RQ4 provide traceability to the individual meta-analysis problems and confirmation that most problems are found in more than one primary study, so are more than just one-off mistakes.\n\nThe major contributions of our study arise from our efforts to address the meta-analysis problems found by validity and reproducibility assessment reported in Sections 5 and 6. They are:\n\n1. To provide evidence that meta-analysis methods are not well-understood by software engineering researchers (see Sections 5 and 6)\n2. To identify specific meta-analysis validity and reproducibility errors (see Sections 5 and 6).\n3. To provide guidelines for reporting and undertaking meta-analysis that could help to avoid meta-analysis errors (see Appendix A.6).\n4. To describe the model underlying the 4-group crossover experimental design (see Appendix A.1.3), since although the design is popular in software engineering research, it has not previously been specified in any detail.\n5. To provide a worked example of analyzing and meta-analyzing results from a family of studies that used a 4-group crossover design (see Appendix A.5).\n\nAlthough we have provided meta-analysis reporting and conduct guidelines, it must be recognized that we lack the simulation studies needed to address questions such as:\n\n\u2013 Whether there is an optimum (or minimum viable) number of experiments in a family.\n\u2013 Whether the conversion to rpb is preferably to aggregating gIG directly, given the small sample sizes and numbers of independent experiments in SE families.\n\u2013 Whether we should use non-parametric methods for analysis and meta-analysis.\n\nWe are currently undertaking research addressing these issues.\n\nFinally, whenever possible, we would ask researchers to make their data sets publicly available. Such data sets allow reviewers to check the validity of results before publication, provide a valuable resource for novice researchers, and allow data to be re-analyzed if new analysis methods become available.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We thank Silvia Abrah\u00e3o, Carmine Gravino, Emilio Insfran, Guiseppe Scaniello and Genoveffa Tortora for giving us access to their raw data. We are particularly grateful to Prof. Abrah\u00e3o for providing us with details of her statistical analysis. We thank the reviewers for their helpful comments, particularly pointing out the issue of validity and the problem of aggregating invalid data. Lech Madeyski was partially supported by the Polish Ministry of Science and Higher Education under Wroclaw University of Science and Technology Grant 0401/0201/18.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "Open Access",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This article is distributed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_11",
+      "section_index": 11,
+      "section_label": "Appendix A: Additional Statistical Details",
+      "subsections": [
+        {
+          "subsection_id": "s_11_1",
+          "subsection_index": 1,
+          "subsection_label": "A.1 Experimental Designs Used in the Primary Studies",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_11_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "A.1.1 Independent Groups Design",
+              "parent_subsection_id": "s_11_1",
+              "text": "The independent groups design, also referred to as a between-participants design, is the classic experimental design, where participants are randomly allocated to two groups. Participants in one group (group A) use one technique (with associated materials) to perform a task, and participants in the other group (group B) use the other technique (with the same materials) to perform the same task.\n\nThe standardized mean effect size (\u03b4IG), where IG stands for independent groups, is estimated by dividing the difference between the mean outcome for participants in group A and the mean outcome for participants in group B by the pooled within group standard deviation (see [UNMAPPED:26, UNMAPPED:28, UNMAPPED:29]) [W2077924088], i.e.:\n\ndIG = (M_A \u2212 M_B) / s (11)\n\nwhere dIG is an estimate of \u03b4IG, M_A is the mean value for participants in group A, M_B is the mean value for participants in group B, and s is the pooled within group standard deviation, which is the square root of the pooled within group variance shown in (12).\n\ns^2 = ((n_A - 1)varA + (n_B - 1)varB) / (n_A + n_B - 2) (12)\n\nwhere n_A and n_B refer to the number of observations in groups A and B respectively and var A and var B to the variance of the observations in groups A and B. If n_A = n_B, the pooled within group variance is simply the mean of var A and var B.\n\nEquation (11) makes it clear that effect sizes have direction as well as magnitude. Researchers aggregating results from a family of experiments must ensure that all effect sizes adopt the same direction for the difference. This is straightforward if there is a well-defined control method, otherwise the decision is arbitrary but must be consistent.\n\nEquation (11) is a valid estimate of the standardized difference between Technique A and Technique B. However, for small sample sizes, the estimate is biased and should be corrected, as recommended by Hedges and Olkin [UNMAPPED:26], to give an improved estimate: [W2007969951]\n\ngIG = J(df) \u00d7 dIG (13)\n\nJ(df) is calculated from the formula: [W2025116371]\n\nJ(df) = \u221a(2/df) [\u0393(df/2) / \u0393((df-1)/2)] (14)\n\nwhere \u0393 is the Gamma distribution and the degrees of freedom (df) is the number of participants minus 2 (because of the two groups). J tends to 1 as the sample size increases, so rather than apply some arbitrary cutoff point to stop applying the correction, it is sensible to always apply it whatever the sample size. J(df) is often approximated by c(df) for sample sizes greater than 10 using the formula: [W1998686495]\n\nc(df) = 1 - 3 / (4 \u00d7 df - 1) (15)\n\nMost meta-analyst researchers recommend aggregating the standardized effect sizes using a weighted average, where the weights are based on the inverse of the variance of the standardized effect size (see [UNMAPPED:28] or [UNMAPPED:29]). [W2016999376] The normal approximation to the exact formula for the estimate of a standardized effect variance of \u03b4IG is reported in [UNMAPPED:28]:\n\nVar(dIG) = (n_A + n_B)/(n_A n_B) + dIG^2 / (2 \u00d7 (n_A + n_B)) (16)\n\nhere n_A is the number of participants in group A and n_B is the number of participants in group B. It should be noted that this equation is inaccurate for very small sample sizes [W2097672669].\n\nIn order to find the variance of gIG, multiply the right-hand side of (16) by [J(df)]^2 and let [J(df)]^2 dIG^2 = gIG^2:\n\nVar(gIG) = [J(df)]^2 \u00d7 (n_A + n_B)/(n_A n_B) + gIG^2 / (2 \u00d7 (n_A + n_B)) (17)\n\nIf n_A = n_B = n and we let 2n = N:\n\nVar(dIG) = 4/N + dIG^2 / (2N) = (8 + dIG^2) / (4N) (18)\n\nThis is the same formula used by Pfahl et al. [W1988962172] to find the variance of their standardized effect size (see Appendix B in [W1988962172]) which they used both to perform homogeneity tests and to calculate the overall weighted average. To test for homogeneity, Pfahl et al. [W1988962172] used Q as proposed by Hedges and Olkin [UNMAPPED:26]:\n\nQ = \u2211_{i=1}^k d_i^2 / \\hat{\u03c3}^2(d_i) - (\u2211_{i=1}^k d_i^2 / \\hat{\u03c3}^2(d_i))^2 / (\u2211_{i=1}^k 1 / \\hat{\u03c3}^2(d_i)) (19)\n\nwhere Var(dIG) = \\hat{\u03c3}(d_i)^2.\n\nAlthough the above discussion might appear quite complex, the independent groups design is the most straightforward experimental design to meta-analyze using a mean difference effect size.",
+              "citations": [
+                "W2077924088",
+                "W2007969951",
+                "W2025116371",
+                "W1998686495",
+                "W2016999376",
+                "W2097672669",
+                "W1988962172",
+                "W1989733111",
+                "W2010267787",
+                "W4238354999",
+                "W1964258385"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "26",
+                "28",
+                "29"
+              ]
+            },
+            {
+              "subsubsection_id": "s_11_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "A.1.2 AB/BA Crossover Design",
+              "parent_subsection_id": "s_11_1",
+              "text": "The AB/BA Crossover design (see [W2772922594, W2772922594, W4229753260]) is a repeated measures design which was used by four families. In an AB/BA crossover, participants are spilt into two groups and each group uses one of the competing techniques with one set of materials. Subsequently, they perform the same task with a second set of materials, with each group using the other technique. The design is illustrated in Table 8.\n\nThe details of this analysis for the standard AB/BA crossover design can be found in [W2772922594]. As discussed in Section 4, all crossover designs have two different types of standardized mean difference effect size, \u03b4RM estimated by dRM using (1) and \u03b4IG estimated by dIG using (2).\n\nEquation (1) is a valid estimate of the standardized difference between Technique A and Technique B assuming that there is no significant technique by period interaction. For small sample sizes, the estimate is biased and should be multiplied by J(df) to give an improved estimate [UNMAPPED:26]:\n\ngRM = J(df) \u00d7 dRM (20)\n\nwhere the degrees of freedom (df) is the number of participants minus 2 (because of the two sequence groups). It is extremely important to note that the degrees of freedom relate to the number participants not the number of observations. We explain the reason for this below.\n\nBecause gRM is an unbiased estimate of the unstandardized mean difference divided by its variance, the equation for the t-test value related to \u03b4RM is:\n\nt = gRM / \u221a(1/n_A + 1/n_B) (21)\n\nwhere n_A and n_B are the number of observations in group A and group B respectively. As pointed out by [W2772922594], because the exact variance of a t-variable is known [W2059523379], the variance of gRM can be calculated by multiplying the formula for the variance of a t-variable by (1/n_A + 1/n_B).\n\ngIG can be calculated from the relationship between gRM and gIG, see (4). It can also be calculated directly from the raw data. dIG is based on the standardized mean difference, using sIG as the standardizer. We can estimate sIG by pooling the within cell variance for each of the four cells in Table 8 (although this assumes that the variance of each cell is estimating the same population variance). This is because with any cell, the conditions (i.e., technique, time period, material used) are the same for all participants whose results are in that cell. As pointed out by [W2772922594], if we assume that each condition is represented as a numerical effect, then each participant in a cell is modelled by the formula:\n\ny_i = \u03bc_i + T_j + P_k + M_l + e_i (22)\n\nwhere y_i is the ith participant in the cell, \u03bc_i is the mean for subject y_i, T_j, P_k and M_l are the effects for technique j, time period k and materials l, respectively, and e_i is an error term assumed to be normally distributed with zero mean and variance sIG^2. Standard statistical theory says that var(x) = var(x + A) where A is any constant. So if \u03bc_i, T_j, P_k and M_l are assumed to be constants, the variance of the y_i-values is an unbiased estimate of sIG^2. Assuming a single population variance, pooling the data from all four cell should provide a more precise estimate of sIG^2 than would be obtained by pooling only the cells in the first time period.\n\nHowever, if we mix up the data from two cells, for example, in the context of an AB/BA crossover, if we put the observations that used technique T1 together, we have some subjects with the model:\n\ny_i = \u03bc_i + T1 + P1 + M1 + e_i (23)\n\nand others with the model:\n\nx_h = \u03bc_h + T1 + P2 + M2 + e_h (24)\n\nThen, unless, P1 + M1 = P2 + M2, calculating the variance of the data from the two combined cells will not result in an unbiased estimate of sIG^2. The differences between the time period and material effects will inflate the estimate of the variance. This is, of course, the theory underlying fixed effects analysis of variance.\n\nFurthermore, although, the repeated measures allow us to calculate sIG^2 with increased precision, if we have only N participants, our estimates are based on the variation among those N participants. No matter how many times we take repeated measures on those N participants, the degrees of freedom relating to the variance remain the same, because our estimate of the population variance is still based on the same N participants.",
+              "citations": [
+                "W2772922594",
+                "W2772922594",
+                "W4229753260",
+                "W2059523379",
+                "W2295373235",
+                "W2099545896",
+                "W1988962172",
+                "W2780802628",
+                "W2131154789",
+                "W2936534160",
+                "W2076029586"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "26"
+              ]
+            },
+            {
+              "subsubsection_id": "s_11_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "A.1.3 4-Group AB/BA Crossover Design",
+              "parent_subsection_id": "s_11_1",
+              "text": "The 4-group AB/BA cross over design is a variant of the AB/BA crossover, where the basic design is duplicated with the materials used in period one and the materials used in period two exchanged. The design is illustrated in Table 9. The design appears to be unique to software engineering studies [W1964258385] and was used by seven families.\n\nLike the standard AB/BA crossover, this design permits researchers to calculate both a repeated measures effect size and an effect size equivalent to an independent groups effect size. Comparing Tables 8 and 9, it is clear that the 4-group crossover is based on two balanced AB/BA crossovers that differ only in the order in which the materials are used. Groups A and B correspond to the one AB/BA crossover while Groups C and D correspond to the other.\n\nThe design can be understood by considering the impact on a participant in each of the four groups and in each time period. We developed a model of the 4-group crossover that is shown in Table 10. The terms identify the conditions and outcome value for each participant in each cell:\n\n1. y_{g,h,i} identifies the outcome measure for participant i in time period h = 1, 2 using technique g = 1, 2.\n2. \u03bc_i is the average outcome measure for participant j\n3. \u03c4_g is the effect for technique g\n4. M_f where f = 1, 2 is the effect of performing the required task using one of the two different software applications (as represented by each application's specifications, code, documents etc.)\n5. \u03c0 is any systematic effect resulting from doing the same task a second time.\n6. CO_x where x = 1, 2 identifies which of the two duplicated crossovers a participant belongs to.\n7. \u03bb_q where q = 1, 2 is the effect of performing the task for a second time using one technique, after first performing the task using the other technique. The value of q specifies which technique was used first. Following the advice of [W4229753260] for simple AB/BA crossovers, we assume that \u03bb_q = 0, and all other possible interactions are likewise zero.\n\nAnalysis of the 4 group crossover can be understood by subtracting the outcome from time period P1 from the outcome from time period P2. This assumes that the outcome is a suitable measure, such as a measure of the time to complete a task. For measures related to understandability, the number of correct answers is acceptable unless the values are very restricted (i.e., the number of correct out of 10 is acceptable, the number correct out of two is not). The effect of calculating the time period difference is shown in Table 11. The impact of calculating the difference is to remove the effect due to the individual participant.\n\nIf we take the average of the difference values in group (i.e., calculate D\u0304I where I = 1,..., 4), it is easy to see that, in terms of expected values, we have:\n\nD\u03041 - D\u03042 + D\u03043 - D\u03044 = 4(\u03c42 - \u03c41) (25)\n\nwhere \u03c42 - \u03c41 is the unstandardized effect size. In fact, the unstandardized effect size can also be calculated by subtracting the mean value of all observations derived from participants using technique T1 from the mean value of all observations derived from participants using technique T2. However, the formal model underlying each cell makes it clear that in order to estimate the between participants variance sIG^2, it is necessary to construct the pooled within cell variance. Using the pooled variance of all observations derived from participants using the same technique would inflate the variance because subsets of the data points would be affected by different factors.\n\nWe provide a brief tutorial on analyzing and meta-analysizing data from 4-group crossover designs in Appendix A.5.\n\n**TABLE 10** Expected outcome for participants in 4-group AB/BA crossover\n\n{{TABLE:tbl_10}}\n\n**TABLE 11** Difference values for the 4 group crossover design\n\n{{TABLE:tbl_11}}",
+              "citations": [
+                "W1964258385",
+                "W4229753260",
+                "W2772922594"
+              ],
+              "tables_in_text": [
+                "tbl_10",
+                "tbl_11"
+              ]
+            },
+            {
+              "subsubsection_id": "s_11_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "A.1.4 Pretest Posttest Control Group Design",
+              "parent_subsection_id": "s_11_1",
+              "text": "The pretest posttest control group design is a repeated measures design, but rather different from a crossover style design. In this design, participants are randomly allocated to two groups. Then, both groups undertake the same test (or perform the same SE activity) using their current technique. The groups are then split and participants in one group receive one type of training and participants in the other group are given a competing form of training. They are then asked to undertake another test. This design is illustrated in Table 12. It was used only in Study 14 [W1988962172]. It is not necessary for the pretest and posttest tasks to be the same. However, in Study 14 [W1988962172], the authors asked participants to undertake a test on their SE knowledge and repeated the same test after their training.\n\nAlthough, this is a repeated measures design it has rather different properties to a crossover style design. In fact, if analysts work solely with the difference scores, the data can be analysed as if the difference data were the outcome of an independent groups study. This form of analysis is called a difference of differences analysis and the standardised effect size measures the relative difference in the average individual improvement of participants in group A compared with participants in group B.\n\nThis design includes one of the main advantages of a crossover design that is, the effect of individual differences are catered for by the analysis, but avoids the problem of technique by period interaction which is a potential risk when using a crossover design. For example, there were many studies evaluating the perspective-based code reading (PBR) methods [W2070300937], some of which used the undefined current method as a control while others used the checklist-based reading (CBR) method as a control. Using a pretest posttest control group, the current method would be used to establish a pretest baseline and then groups could be randomly assigned to training in CBR or PBR and the posttest differences used to assess whether PBR or CBR most enhanced defect detection.\n\nA model of the experimental design for each cell and for the difference data is shown in Table 13.\n\nThe model assumes a situation such as we discussed above for code reading methods, when there are three treatment conditions, one control that is used before training and then half the participants receive training in one alternative treatment and the other half receive training in the other. The effect of subtracting the mean difference values of group A from the mean difference values of group B is to obtain an estimate of \u03c41 - \u03c42 which is the unstandardized effect size. The basic design can easily be revised to cater for only two conditions (i.e., control and treatment conditions) by letting all subjects use the control conditions in time period 1 and in time period 2 to let participants in Group A use the treatment and participants in Group B to use the control. The difference between the difference values then equates to \u03c41 - \u03c4c. Effect size construction and the effect size variance formulas for this design are discussed in [W2076029586].\n\n**TABLE 12** PreTest PostTest control group design\n\n{{TABLE:tbl_12}}\n\n**TABLE 13** Model underlying pretest posttest control design\n\n{{TABLE:tbl_13}}\n\nThis design can also be used if the pretest does not involve performing the same tasks that is done in the posstest. This method allows for situations where participant skill is measured by some other means (e.g., the results of a completely different software engineering task, or, for students, their previous year grades). In this version of the design the pretest values for each participant are used as a covariate in an ANCOVA analysis.",
+              "citations": [
+                "W1988962172",
+                "W2070300937",
+                "W2076029586"
+              ],
+              "tables_in_text": [
+                "tbl_12",
+                "tbl_13"
+              ]
+            }
+          ],
+          "text": "In this section we describe the four different experimental designs used by our primary studies.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_11_2",
+          "subsection_index": 2,
+          "subsection_label": "A.2 Meta-analysis Based on the Relationship Between the Standardized Mean Difference and the Point Bi-serial Correlation",
+          "subsubsections": [],
+          "text": "Like any correlation, rpb is the correlation between two values x and y. However, for rpb, y is the value of the outcome metric and x is a categorical variable taking the value zero if y was obtained from a participant in the control group and one if y was obtained from a participant in the treatment group. Clearly, rpb is not a valid Pearson correlation coefficient because it is not the correlation between two normally distributed variables, and it is often referred to as a pseudo-correlation. In practice, rpb is often calculated as the square root of the multiple correlation coefficient, R^2, which in the context of a one-way ANOVA is calculated as the percentage reduction in the total variation due to removing the between group variation. The danger with calculating rpb from R^2 is that the direction of the effect is lost.\n\nThe process to convert from a standardized mean effect size, derived from descriptive statistics, to a point bi-serial correlation effect size is as follows:\n\n1. For each individual experiment in a family, estimate dIG from the difference between the mean values for each technique group and pooled within technique group standard deviation. Then apply the small sample size adjustment factor based on the number of participants to calculate gIG.\n2. Convert gIG to the point bi-serial correlation rpb using the formula:\n\nrpb = gIG / \u221a(gIG^2 + a) (26)\n\nwhere a = (n_A + n_B)^2 / (n_A n_B) and a = 4 if n_A = n_B (see [UNMAPPED:28]). For AB/BA crossover designs (both standard crossover and the 4-group crossover), n_A is the number of participants that used technique A in period 1 and n_B is the number of participants that used technique B in period 1.\n\n3. Apply the Fisher normalisation formula [W2121049564] to the rpb values for each experiment:\n\nZr = 0.5 ln((1 + rpb) / (1 - rpb)) (27)\n\nand the variance of each Zr is:\n\nvar(Zr) = 1 / (n_A + n_B - 3) (28)\n\n4. Use the R metafor library to perform meta-analysis on Zr. Assuming a fixed effects model, the aggregate value of Zr_i for a family of experiments is calculated from the formula:\n\nZ\u0304r = (\u2211_i w_i Zr_i) / (\u2211_i w_i) (29)\n\nwhere w_i = 1 / var(Zr_i) = n_A + n_B - 3 and i is the ith experiment in the family. The variance of Z\u0304r is calculated from the formula:\n\nvar(Z\u0304r) = 1 / (\u2211_i w_i) (30)\n\nAlthough such formulas can easily be applied manually, metafor is useful for calculating confidence intervals and producing forest plots. It also allows meta-analysts to perform a random effects analysis. A priori, a fixed effects analysis should be reasonable for families of experiments, when the different experiments in a family all test the same hypotheses, and use both the same experimental designs and the same materials. Table 1 in the supplementary material [W2965330732] reports the differences among experiments in each family. From that table, it appears that a random effects model might be preferable only for Study 1 [W2007969951] and Study 3 [W2099545896]. However, applying a random effects analysis when there is no significant heterogeneity among studies gives results very similar to a fixed effects analysis. [W2099545896] Thus, we recommend using a random effects for all analyses in order to check whether there is a substantial level of heterogeneity.\n\n5. Results in the transformed Zr scale need to be back transformed first to rpb and then to gIG. For example, to convert back to the weighted mean of the gIG values, the following two transformations are needed:\n\nr\u0304pb = (e^{2Z\u0304r} - 1) / (e^{2Z\u0304r} + 1) (31)\n\nand\n\ng\u0304IG = r\u0304pb \u221a(a / (1 - r\u0304pb^2)) (32)\n\nwhere a = (n_A + n_B)^2 / (n_A n_B) and a = 4 if n_A = n_B",
+          "citations": [
+            "W2121049564",
+            "W2965330732",
+            "W2007969951",
+            "W2099545896",
+            "W2060030072",
+            "W4301029050",
+            "W4294612833"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "28",
+            "26",
+            "29"
+          ]
+        },
+        {
+          "subsection_id": "s_11_3",
+          "subsection_index": 3,
+          "subsection_label": "A.3 Meta-analysis Using the Point Bi-serial Correlation and the Hunter Schmidt Method",
+          "subsubsections": [],
+          "text": "Study 8 [W2010267787] reported rpb and used it in their meta-analysis. However, they did not derive rpb from a standardized effect size, but from the one-sided probabilities of significance from the hypothesis tests for each experiment, i.e., the p-values. For each experiment in the family and for each metric, they used the p-value obtained either the Mann-Whitney-Wilcoxon (MMW) test or the t-test depending on the outcome of a normality test.\n\nThe p-values must come from one-sided tests in order to preserve the direction of the effect size. For example, if we are testing whether method A is more efficient than method B, a large one-sided probability (e.g., 0.96) would give a z-value of 1.751 and would indicate that method A was more efficient than method B. A small one-sided probability (e.g., 0.04) would give a z-value of -1.751 and indicate that method B was more efficient than method A.\n\nThe authors of Study 8 [W2010267787] report using the equation:\n\nrpb = \u221a(z^2 / n) (33)\n\nThis is not ideal because it does not make it clear that rpb can potentially be negative.\n\nThe study authors used the Hunter-Schmidt method to aggregate their correlations:\n\nr\u0304 = (\u2211_i^k r_i n_i) / (\u2211_i^k n_i) (34)\n\nThen, the variance of r\u0304 is given by the equation:\n\nvar(r\u0304) = (\u2211_i^k n_i (r_i - r\u0304)^2) / (\u2211_i^k n_i) (35)\n\nThey, also, appear to have used the number of observations as the basis for n_i rather than the number of participants. This is because the authors report that their family included 92 participants, but report N = 184 for their overall mean r\u0304. However, in this case using 2n_i rather than n_i in (34) to calculate the variance of r\u0304 has no effect on the value, because two is a multiplicative constant in both the top and bottom of the fraction and cancels out. The only equation that is affected by using the wrong sample size is the formula for \u03c7^2 that is used to test heterogeneity:\n\n\u03c7^2 = var(r\u0304) (\u2211_i^k n_i^2) / (1 - r\u0304^2) (36)\n\nThe effect of using 2n_i rather than n_i in (36) is to quadruple the value of \u03c7^2 and increase the likelihood of incorrectly assuming that the effect sizes were heterogeneous.",
+          "citations": [
+            "W2010267787",
+            "W2139168999",
+            "W2087898864",
+            "W4229753260",
+            "W1511920456"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_11_4",
+          "subsection_index": 4,
+          "subsection_label": "A.4 Aggregating p-values",
+          "subsubsections": [],
+          "text": "Both Study 13 [W2131154789] and Study 14 [W1988962172] aggregated one-sided p-values in order to test the null hypothesis of no significant difference between techniques. They tested whether the p-values were heterogeneous using the equation:\n\nQ = \u2211_{i=1}^k (z_i - z\u0304)^2 (37)\n\nwhere, under homogeneity, Q is \u03c7^2 with k - 1 degrees of freedom, and z_i is the standard normal deviate corresponding to the one-tailed p-values.\n\nThen, they aggregated the p-values using the formula:\n\nP = -2 \u2211_{i=1}^k ln(p_i) (38)\n\nThey tested whether P was significant using the \u03c7^2 distribution with 2k degrees of freedom. This approach, which is sometimes called Fisher's method, has a number of important limitations, particularly if the p-values exhibit heterogeneity, and is no longer recommended [W4301029050].",
+          "citations": [
+            "W2131154789",
+            "W1988962172",
+            "W4301029050",
+            "W2070300937",
+            "W2126930838"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_11_5",
+          "subsection_index": 5,
+          "subsection_label": "A.5 Parametric Analysis and Meta-analysis of Crossover Design Experiments",
+          "subsubsections": [],
+          "text": "In this section, we provide guidelines for analyzing and meta-analyzing crossover style experiments. In particular, we provide an example of analyzing the 4-group using the data provided by Prof. Abrah\u00e3o. [W1988962172]\n\nWe use the R linear mixed model package lme4 to analyze data from individual experiments. In the case of a conventional two group AB/BA crossover, for each experiment, we use a model including fixed effects:\n\n\u2013 Time Period with values P1 and P2.\n\u2013 Technique with values T1 and T2.\n\nThe personal identifier for each person is treated as a random effects factor. An example of this analysis, explaining how to obtain the estimates of dIG and dRM can be found in [W2772922594]. The data is held in what is referred to as the long format, that is there are two entries for each participant that define the conditions under which each outcome observation was obtained.\n\nTo analyze a 4-group AB/BA crossover We used a model that included fixed effects factors specifying:\n\n\u2013 Time Period with values P1 and P2.\n\u2013 Technique being compared with values T1 and T2.\n\u2013 The Objects (i.e., software materials) being used with values determined by the names given to the software object being investigated.\n\u2013 The crossover duplicate pair to which the participant belonged which had values COD1 which refers to a participant in Group A or Group B and COD2 which refers to a participant in Group C or Group D. The crossover pair factor identifies the groups that used materials in the same order.\n\u2013 Participant identifier (\"ID\") was used as the random effects factor.\n\nUsing this model with Prof. Abrah\u00e3o's data from her Italy1 experiment, we obtained the analysis shown in Figure 1. Assuming the data are held in a data frame called Italy1 (in a format corresponding to the hypothetical data shown in Table 14 which reports the data for four participants), the R instructions to perform this analysis are presented in Output 1:\n\n**Output 1.** Code for Linear Mixed Model Analysis of the Italy1 Data\n```\ninstall.packages(\"lme4\")\nlibrary(\"lme4\")\nsummary(lmer(Comprehension~TimePeriod+Technique+Materials+CO+(1|ID),data=Italy1))\n```\n\nThe assumptions underlying this analysis are:\n\n1. All observations are normally distributed.\n2. Variances calculated from each cell are all estimating the same underlying population variance.\n\nThere are several things to note:\n\n1. The analysis constructs a name for fixed effect sizes based on the name of the categorical variable and the label(s) given to categorical values. The label name used is the second in alphabetical order. So since labels for the Method variable are NODM and DM, the package calculates the effect size as NODM - DM. This is why the value of the Method effect size is negative. Since we consider the DM condition to be the treatment condition and the NODM condition to be the control, we define the unstandardized treatment effect to be -NoDM =.02125.\n2. The estimate of the within participant variance is given by the Random Effects residual term.\n\n**FIGURE 1** Linear mixed model analysis of the Italy1 data\n\n```\nLinear mixed model fit by REML ['lmerMod']\nFormula: Comprehension ~ TimePeriod + Technique + Materials + CO + (1 | ID)\nData: Italy1\n\nREML criterion at convergence: -27.3\n\nScaled residuals:\nMin 1Q Median 3Q Max\n-1.56142 -0.49641 -0.02191 0.46003 1.38365\n\nRandom effects:\nGroups Name Variance Std.Dev.\nID (Intercept) 0.01863 0.1365\nResidual 0.01029 0.1014\nNumber of obs: 48, groups: ID, 24\n\nFixed effects:\n Estimate Std. Error t value\n(Intercept) 0.59313 0.05123 11.578\nTimePeriodP2 -0.00875 0.02928 -0.299\nTechniqueNODM -0.02125 0.02928 -0.726\nMaterialsEPlat -0.03875 0.02928 -1.323\nCOCO2 0.12792 0.06295 2.032\n\nCorrelation of Fixed Effects:\n (Intr) TmPrP2 TcNODM MtrlEP\nTimePeriodP2 -0.286\nTechniqNODM -0.286 0.000\nMaterlsEPlt -0.286 0.000 0.000\nCOCO2 -0.614 0.000 0.000 0.000\n```\n\n3. COD2 corresponds to the fixed effect size of the difference between results for the A and B crossover and the results for the C and D crossover. Since the difference between the groups is the order in which they used the Objects (i.e., the application specifications), they indicate that documents related to EPlat were more difficult to understand than documents related to the other specification (ECP).\n4. The variance associated with the random effects ID terms is the estimate of the between participants variance.\n5. The standard error of the COD2 fixed effect size is larger than the other fixed effect sizes. This is because it is based on the between participants variance.\n\nThe estimate of the variance of an individual participant observation is the sum of the between subjects and within subjects variance i.e., sIG^2. In the case of the Italy1 data set we have the estimate of sIG^2 taking the value 0.01863 + 0.01029 = 0.02892.\n\nThen, from the linear mixed model analysis:\n\n\u2013 The estimate of dRM is 0.02125 / \u221a0.01029 = 0.2095.\n\u2013 The estimate of dIG is 0.02125 / \u221a0.02892 = 0.125.\n\u2013 The estimate of r, the correlation between repeated measures is r = 0.01863 / (0.01863 + 0.01029) = 0.6442\n\n**TABLE 14** Format of the Italy1 data frame showing some hypothetical data\n\n{{TABLE:tbl_14}}\n\n^a We were allowed only to analyze real data, but not to share them, hence we presented hypothetical IDs (P1...P4), not the real ones, in this column\n^b We were allowed only to analyze real data, but not to share them, hence we presented '\u25a0', not the real Comprehension values, in this column. Researchers wanting access to the data should contact Prof. Abrah\u00e3o\n\nUsing this method, we obtained standardized effect sizes and the correlation between participants for each of the five experiments undertaken by Prof. Abrah\u00e3o's and her colleagues. These results are shown in Table 15.\n\nWe applied the exact small sample size adjustment to dIG and dRM. We used (26) to calculate equivalent point bi-serial correlation effect sizes and applied Fisher's normalising transformation to obtain the zRM and zIG values. The variances for the zRM and zIG values are calculated as v(z) = 1/(n_i - 3) (which is the same for both variables from the same experiment). These results are shown in Table 16. The results for gIG obtained for each experiment are quite close to, but slightly larger than, the ones we obtained using the published descriptive statistics reported in Table 5. This is because we have fitted a more complex model to the data that accounts for all the built-in blocking factors in the experimental design and, so, provides us with a more accurate estimate of the between participant variance. When blocking factors have a significant effect on the experiment outcomes, we would expect variance estimates from the full model to be smaller than those from the descriptive statistics, so the effect size estimates should be larger. The gRM values are larger than the gIG values because of the correlation between the repeated measures.\n\n**TABLE 15** Linear mixed model estimates of the mean difference effect sizes\n\n{{TABLE:tbl_15}}\n\n**TABLE 16** Adjusted standardized effect sizes and their equivalent point bi-serial correlations\n\n{{TABLE:tbl_16}}\n\nWe used the metafor package to analyze the zIG and zRM data. For example, to analyse the zIG data we used the R instructions in Output 2:\n\n**Output 2.** Using the metafor package to analyze the zIG data\n```\ninstall.packages(\"metafor\")\nlibrary(\"metafor\")\nz=c(0.06017805,0.66520033,0.28959478,0.38170009,0.35675701)\nv=c(0.04761905,0.04761905,0.04000000,0.05882353,0.07692308)\nrma(z,v)\n```\n\nThis produced the meta-analysis results summarized in Figure 2. These results are still in the transformed data scale. Figure 3 shows a forest plot of the meta-analysis results transformed back to the gIG scale.\n\nAssuming the meta-analysis results from the rma function call are saved into a R data structure labelled AbrahaoResults, the R instructions needed to report the contents of Figure 3 as a pdf file are:\n\n**Output 3.** Code to produce forest plot of the gIG meta-analysis data\n```\nslab=c(\"Italy1\", \"Italy2\", \"Spain1\", \"Spain2\", \"Spain3\")\nmlab=\"Random Effects Analysis\"\npdf(\"AbrahaoFPgIG.pdf\")\nforest(AbrahaoResults, transf = transformZrtoHgapprox, slab = slab, mlab = mlab)\ntext(-3.8, 5.5, \"Study Name\")\ntext(5, 5.5, \"Hedges' gIG [95% CI]\")\ntext(1, 7, \"Analysis of Results from Abrahao et al. 2013\")\ndev.off()\n```\n\nThe parameter transformZrtoHgappro identifies a function we created in order for the forest function to transform from the normalized point bi-serial correlation back to the corresponding standardized mean difference effect size. The function is only permitted to have one parameter (a value corresponding to a transformed point bi-serial correlation), which means that we must assume a balanced experiment because we cannot include different group sizes as parameters, i.e. the function assumes that there are the same number of participants in groups A and B as there are in groups C and D. If this is not the case the forest plot values will be slightly biased. The instruction text is used to annotate the forest plot. In our experience the actual values required to put the annotations in the correct places need to be determined by trial and error.\n\nThe meta-analysis results for gIG and gRM are summarized in Table 17. These have been transformed to the standardized mean different effect size using functions that allow for unbalanced experiments. The functions we use to transform between the effect sizes are available in our Reproducer package (see Appendix A.7).\n\nThe p-value for gIG is less than the p-value for gRM because there is significant heterogeneity among the gRM effect sizes (QEp = 0.033). This means that the standard error of the mean is increased for gRM. The confidence interval bounds on the overall mean gRM are wider than the confidence limits bounds on gIG for the same reason.\n\n**FIGURE 2** Meta-analysis of the zIG data\n\n```\nRandom-Effects Model (k = 5; tau^2 estimator: REML)\n\nlogLik deviance AIC BIC AICc\n0.2217 -0.4434 3.5566 2.3291 15.5566\n\ntau^2 (estimated amount of total heterogeneity): 0.0039 (SE = 0.0391)\ntau (square root of estimated tau^2 value): 0.0621\nI^2 (total heterogeneity / total variability): 6.89%\nH^2 (total variability / sampling variability): 1.07\n\nTest for Heterogeneity:\nQ(df = 4) = 3.9579, p-val = 0.4117\n\nModel Results:\nestimate se zval pval ci.lb ci.ub\n0.3467 0.1054 3.2892 0.0010 0.1401 0.5533 **\n---\nSignif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n```\n\n**FIGURE 3** Forest plot of the gIG meta-analysis data\n\n```\nAnalysis of Results from Abrahao et al. 2013\n\nStudy Name Hedges' gIG [95% CI]\nItaly 1 0.12 [-0.75, 1.01]\nItaly 2 1.43 [0.48, 2.65]\nSpain 1 0.59 [-0.21, 1.47]\nSpain 2 0.78 [-0.19, 1.93]\nSpain 3 0.73 [-0.38, 2.05]\n\nRandom Effects Model 0.71 [0.28, 1.16]\n\n -1 0 1 2 3\n```\n\n**TABLE 17** Meta-analysis results\n\n{{TABLE:tbl_17}}",
+          "citations": [
+            "W1988962172",
+            "W2772922594"
+          ],
+          "tables_in_text": [
+            "tbl_14",
+            "tbl_15",
+            "tbl_16",
+            "tbl_17"
+          ],
+          "citations_unmapped": [
+            "26"
+          ]
+        },
+        {
+          "subsection_id": "s_11_6",
+          "subsection_index": 6,
+          "subsection_label": "A.6 Guidelines for Meta-analysis Reporting and Practice",
+          "subsubsections": [],
+          "text": "After analysing the reporting and conduct of our primary studies, we recommend the following reporting guidelines:\n\n\u2013 Use sufficient precision to report descriptive statistics, in terms of the number of decimal points used to report data.\n\u2013 Report the values of descriptive statistics not only figures such as box plots. It is preferable to include both the actual values and the graphical displays.\n\u2013 For repeated measures designs, report the correlation between the repeated measures.\n\u2013 Specify the particular version of the standardized mean difference effect size using a formula rather than a name.\n\u2013 Confirm whether or not the small sample size adjustment has been applied to any reported standardized mean difference effect sizes.\n\u2013 Specify the model used to aggregate the experiment effect sizes, i.e., fixed, random or mixed.\n\u2013 Report the results of the aggregation process including the overall effect size, its p-value, and confidence limit bounds, the heterogeneity test statistic (Q) and its p-value. In the case of relatively large heterogeneity, it is also worth reporting the estimate of the heterogeneity statistic.\n\nWith respect to performing meta-analysis, our results suggest researchers:\n\n\u2013 Should understand the implication of the design of each experiment on effect sizes and their variances.\n\u2013 Should ensure that effect sizes obtained from experiments that used different designs are equivalent.\n\u2013 Should be careful to maintain the direction as well as the magnitude of effect sizes. When meta-analyzing effect sizes, all the effect sizes must be based on investigating whether the effect of one specific technique is greater than the effect of the other technique, and must allow the effect size to be positive or negative. This includes occasions where the effect sizes are derived from the one-sided p-values.\n\u2013 Should undertake sanity checks of the outcomes from meta-analysis tools based on their descriptive statistics.\n\u2013 Should use a random effects model for aggregating effect sizes, unless there is a very strong argument for using a fixed effects model.\n\u2013 Should be careful about using general purpose meta-analysis tools. General purpose tools are designed to handle a variety of different experimental designs by converting the results from complex designs to the simplest design (i.e., an independent groups analysis). However, to support multiple experimental designs, they may have complex interfaces. In addition, they may not support newly developed experimental designs.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_11_7",
+          "subsection_index": 7,
+          "subsection_label": "A.7 Reproducibility of this Paper",
+          "subsubsections": [],
+          "text": "To support the reproducibility of this paper, it is complemented by the reproducer R package [W4399569022] (available from CRAN\u2014the official repository of R packages). The reproducer package includes both the collected data sets from the analyzed studies and the computational procedures developed by the first two authors (e.g., calculateSmallSampleSizeAdjustment, constructEffectSizes, transformRtoZr, transformZrtoR, transformHgtoR, calculateHg, transformRtoHg, transformZrtoHgapprox, transformZrtoHg) that are used to reproduce the results (e.g., Tables 5, 6, and 7 were automatically generated on a basis of the collected data sets and functions included in reproducer). Our aim is to promote reproducibility of research in empirical software engineering [W2562248917] by supporting our research papers by the related R package (see [W2772922594, W2772922594, UNMAPPED:42, UNMAPPED:43]).\n\nIn [W2562248917] we emphasized that reproducible research (RR) refers to the idea that the ultimate product of research is the paper plus its computational environment. Therefore, our RR document that incorporates the textual body of the paper and calls to the reproducer R functions including analysis steps (e.g., functions to calculate and transform different effect sizes) used to process the data, as well as calls to the xtable R package [UNMAPPED:44] that helps us to automatically present results in a tabular form will be available upon request from the corresponding author for reviewers and researchers interested in building on the outcomes presented in the paper. This RR document along with reproducer available in R environment can be used to compile all pieces of information into the resulting document in the pdf format.\n\nAn important part of documenting the research process with R is recording the R session info, which makes it easier for future researchers to recreate what was done in the past and which versions of the R packages were used. The information from the session we used to create this paper is shown in Output 4:\n\n**Output 4.** R session info (R command and related output)\n```\nutils::sessionInfo()",
+          "citations": [
+            "W4399569022",
+            "W2562248917",
+            "W2772922594",
+            "W2772922594"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "42",
+            "43",
+            "44"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This appendix provides additional statistical details that support the main paper.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_12",
+      "section_index": 12,
+      "section_label": "R version 3.6.0 (2019-04-26)",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_13",
+      "section_index": 13,
+      "section_label": "Platform: x86_64-apple-darwin15.6.0 (64-bit)",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_14",
+      "section_index": 14,
+      "section_label": "Running under: macOS Mojave 10.14.4",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "##",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_15",
+      "section_index": 15,
+      "section_label": "Matrix products: default",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_16",
+      "section_index": 16,
+      "section_label": "BLAS: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRblas.0.",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_17",
+      "section_index": 17,
+      "section_label": "LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "##",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_18",
+      "section_index": 18,
+      "section_label": "locale:",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_19",
+      "section_index": 19,
+      "section_label": "[1] en_GB.UTF-8/en_GB.UTF-8/en_GB.UTF-8/C/en_GB.UTF-8/en_GB.UTF-8",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "##",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_20",
+      "section_index": 20,
+      "section_label": "attached base packages:",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_21",
+      "section_index": 21,
+      "section_label": "[1] stats graphics grDevices utils datasets methods base",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "##",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_22",
+      "section_index": 22,
+      "section_label": "other attached packages:",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_23",
+      "section_index": 23,
+      "section_label": "[1] xtable_1.8-4 knitr_1.22",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "##",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_24",
+      "section_index": 24,
+      "section_label": "loaded via a namespace (and not attached):",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_25",
+      "section_index": 25,
+      "section_label": "[1] Rcpp_1.0.1 reproducer_0.3.0 magrittr_1.5 tidyselect_0.2.5",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_26",
+      "section_index": 26,
+      "section_label": "[5] lattice_0.20-38 R6_2.4.0 rlang_0.3.4 stringr_1.4.0",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_27",
+      "section_index": 27,
+      "section_label": "[9] highr_0.8 plyr_1.8.4 dplyr_0.8.0.1 tools_3.6.0",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_28",
+      "section_index": 28,
+      "section_label": "[13] grid_3.6.0 nlme_3.1-139 xfun_0.6 metafor_2.0-0",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_29",
+      "section_index": 29,
+      "section_label": "[17] assertthat_0.2.1 tibble_2.1.1 crayon_1.3.4 Matrix_1.2-17",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_30",
+      "section_index": 30,
+      "section_label": "[21] purrr_0.3.2 glue_1.3.1 evaluate_0.13 stringi_1.4.3",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_31",
+      "section_index": 31,
+      "section_label": "[25] compiler_3.6.0 pillar_1.3.1 reshape_0.8.8 pkgconfig_2.0.2",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "```",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_10",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_11",
+      "source_subsection_id": "s_11_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_11",
+      "source_subsection_id": "s_11_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_11",
+      "source_subsection_id": "s_11_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_11",
+      "source_subsection_id": "s_11_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_11",
+      "source_subsection_id": "s_11_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_11",
+      "source_subsection_id": "s_11_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_16",
+      "placeholder": "{{TABLE:tbl_16}}",
+      "source_section_id": "s_11",
+      "source_subsection_id": "s_11_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_17",
+      "placeholder": "{{TABLE:tbl_17}}",
+      "source_section_id": "s_11",
+      "source_subsection_id": "s_11_5",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2965330732_tables.md"
+}

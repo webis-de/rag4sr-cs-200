@@ -1,0 +1,488 @@
+{
+  "id": "W4286668690",
+  "metadata": {
+    "title": "Application of eye-tracking systems integrated into immersive virtual reality and possible transfer to the sports sector - A systematic review",
+    "n_sections": 11,
+    "n_subsections": 18,
+    "n_subsubsections": 0,
+    "n_tables": 2
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In recent years, Virtual Reality (VR) has become a useful tool in many different applications, such as learning tutorials, simulations of hazardous situations, sports, etc. Its multiple advantages can be used for amplifying knowledge about, for example, anxiety [UNMAPPED:75], autism therapy [UNMAPPED:99], or the importance of body perception during sport motoric task completion [W3087666022]. Using VR simplifies research by minimizing costs, time-consuming processes, accessing the needed physical surroundings. An additional benefit of VR is the synchronization with other measurement systems such as eye-tracking (ET) [W3080078178, W3033158908] or infrared motion capturing systems [W3087612718, W3087666022]. With that, extensions of possibilities arise that cannot be implemented in reality, such as occlusion of one's body parts [W3087666022] or changing and expanding body properties [W2140313855, W2100335798]. Moreover, VR has been beneficial in sports training [W2738492125] by improving athletes' performances [W2908914554, UNMAPPED:90]. Previous studies have already confirmed a positive transfer effect in sports skill acquisition from VR into the real world (RW) [W2771935013, W2965731227], for instance in attentional training [W2811467847]. Even more positive aspects have been verified, such as increased athlete motivation and a decrease in the feeling of subjective strain during sports activities [W2883784786, UNMAPPED:26, UNMAPPED:97].\n\nThrough commercial success, several devices exist in which virtual environments can be presented, e.g., the Cave Automatic Virtual Environment (CAVE) or the head-mounted displays (HMDs). Thereby, different immersions can occur, such as physically and mentally [W1963648925]. A high immersion occurs in an HMD due to the total computer-generated visual impressions [UNMAPPED:21]. Since wider Field-of-Views (FoVs) are realizable, recently released HMDs generate a higher sense of spatial presence and immersion, relevant composing the VR experience [W2623181870, W2903378723]. A high immersion ensures more natural user behavior and is essential to conclude realistic humans' reactions to VR stimuli. A few papers list available HMD technologies and what types of visual information processing have already been examined to improve mobility performances or support people with low vision [W2889411115, W3088082296, UNMAPPED:22]. Due to the first-person perspective (1PP) presented in HMD with a real-time calculation of rotations and translations of participant's body, a high relationship to realistic interaction within a computer-generalized three-dimensional world can be ensured and further recommended also for sports-related purposes.\n\nVR has established itself as a learning or training tool in different fields, and its progress is constantly increasing. This is accomplished by implementing different technologies in VR systems that enable the collection of additional data of the human behavior. Thus, gaze behavior can be captured by integrated ET in VR. Thinking about using the combined technology of ET and VR, future training applications might be more target-orientated and more efficient. The increased interest in especially HMD-based VR could lead to an overthinking of how users/athletes reach their specific training goals in future training sessions [UNMAPPED:37]. To illustrate this, we first explain what possibilities occur using ET in VR more generally. Afterward, we demonstrate what rule gaze behavior plays within the sports sector and why it is important to improve it. We specify the review's goal and purpose at the end of the introduction.",
+      "citations": [
+        "W3087666022",
+        "W3080078178",
+        "W3033158908",
+        "W3087612718",
+        "W2140313855",
+        "W2100335798",
+        "W2738492125",
+        "W2908914554",
+        "W2771935013",
+        "W2965731227",
+        "W2811467847",
+        "W2883784786",
+        "W1963648925",
+        "W2623181870",
+        "W2903378723",
+        "W2889411115",
+        "W3088082296"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "75",
+        "99",
+        "90",
+        "26",
+        "97",
+        "21",
+        "22",
+        "37"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Eye-tracking in virtual reality",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The progressive technical development enables the integration of ET in HMDs, which facilitates an easy method to analyze gaze behavior within virtual environments [W3080078178, W4221079567]. By enabling the synchronization of both systems, attractive and innovative ideas came up to expand the gaze behavior analysis in previously not realizable situations and to ensure higher sophisticated immersion of virtual environments. This can also be important within the field of sports. Previous studies show differences between experts and novices in visual information uptake [W2008462697, W2735137643]. For example, supposing a virtual learning session in which a novice should observe a new movement to be learned, VR can serve as a guideline for highlighting visual cues to attract the user's attention to the key points of movement. Meanwhile, ET can be used to determine the user's visual attention and enable gaze-controlled VR scenarios or control the processes within virtual environments dependent on the user's gaze behavior.\n\nNevertheless, ET cannot elucidate all the processes involved for visual input. A critical issue concerning the measurement of visual perception is that ET devices only analyze overt (foveal information) but no covert attention (peripheral information) [W2919197262]. In this regard, it is helpful to apply occlusion techniques and use performance parameters as indicators for the usage of visual information [W2119486501, UNMAPPED:5]. Hereby, the implementation of occlusions within the visual field of a participant can easily be developed in a virtual environment. Due to easy access to software and hardware components needed to create immersive virtual environments, it is possible to make any desired user-perceived scenario; for example, a virtual handball thrower and the handball goalkeepers had to anticipate the ball's trajectories [W2017137524]. Therefore, the VR applications are a predestinated method for realizing gaze training concepts, which can optimize or enhance gaze behavior during sports activities. We refer to [W2567445045], who also stated the benefit of simulations recreating a sports environment and how visual training improves sports performances. They described that visual perceptual and oculomotor tasks enhance the vision, leading to quicker sensory processing, more accurate motor movements, and a reduced risk of being injured [W2567445045]. To measure the athletes' skill level or examine essential visual cues, direct methods, which require the application of eye-tracking devices, ensure real-time measurement of eye movements during the observation of static pictures or natural scenes [W2766692443].",
+      "citations": [
+        "W3080078178",
+        "W4221079567",
+        "W2008462697",
+        "W2735137643",
+        "W2919197262",
+        "W2119486501",
+        "W2017137524",
+        "W2567445045",
+        "W2766692443"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "5"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Enhancing gaze behavior",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The advantages mentioned above could bring significant extensions to plan and create training that improves gaze behavior. Predominantly, visual, acoustic, and haptic sensation is used during the perception of the virtual environment [UNMAPPED:20]. The infinite selection of visual stimuli in terms of their presentation of magnitude, form, color, duration of appearance, etc., makes it easy to create standardized visual learning programs to improve vision skills. To illustrate the advantages and purpose of this, previous work was done in which studies were listed to identify the meaning of enhancing gaze behavior for sports competition [UNMAPPED:50]. Those findings show improved perceptual skills and decision-making by learning with impaired vision in basketball [W2394842791]. It was also shown that enhanced gaze behavior leads to more accurate and consistent practical performance in the golf swing [W2500522727].\n\nFurther studies revealed the superiority of the experts' perceptual and cognitive skills compared to novices, which were less efficient in using search strategies by blocking the opponents' attacks in karate [W2209633527]. Skilled athletes' ability to anticipate opponent actions or scan the environment and recognize advanced cues arises from differences in visual perception [W2017051648, W2312068578, W1967242439]. Analyzing the gaze behavior in sports is already a powerful tool in determining athletes' levels. It has been done to amplify the knowledge of perceptual-cognitive skills to assess the differences in decision-making between novices and experts [W3098707620, W2148564471].",
+      "citations": [
+        "W2394842791",
+        "W2500522727",
+        "W2209633527",
+        "W2017051648",
+        "W2312068578",
+        "W1967242439",
+        "W3098707620",
+        "W2148564471"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "20",
+        "50"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Research deficits and aim of the review",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Currently, only a few studies described how an HMD-integrated ET could be used in terms of its 'technology properties and how to extract usable gaze parameters to quantify gaze behavior analysis in virtual environments. A reason for that might be the differences that may occur due to the artificial representation of the surrounding environment via HMD. For example, the remaining distance between the users' eyes and the display(s) ensures vergence but no accommodation that decreases the possibility to rely on depth perception. Although VR has already been used in sports, less integrated ET systems have been applied to examine gaze behavior within sports-relevant scenarios within virtual environments. It could help to generate more knowledge about differences within the visual perception through the standardization of experimental procedures ensured in VR (for example, the appearance of visual stimuli the athletes should react on), reducing confounding variables. Besides, ET within VR could identify anticipatory cues during gaming and training and between different athletes' performance levels. Trainers and referees could profit to get informed about their athletes' attention within sports-specific scenarios and help them focusing the relevant part.\n\nTherefore, the present study aims to provide a systematic review of the current state of ET usage in virtual environments and what possibilities occur to use this combined technic in terms of sport-related questionnaires. The broad question in the present review is: What are the technical options for integrating ET in VR, and how can they be transferred to sports science? The review's purpose is to present actual methods applied for using ET in VR, give recommendations on how to use the combined technology during sports scenarios. The results should provide an overview for using ET in VR and serve as a source of ideas for using this combined technique to measure gaze behavior during sports or to expand and improve the opportunities and applications.\n\nTo approach the aforementioned goal step by step, we first listed the HMDs and the ET systems used to capture the gaze behavior in VR to give an overview of the accessible devices. Second, we considered all gaze parameters which were determined within each study. Nearby, we were interested in whether comparisons between VR and natural conditions of the extracted gaze parameter were accomplished to reveal possible differences that may occur due to the still uncharted new technology. Furthermore, we picked studies that include gaze parameters (fixations, saccades, pupil diameter, POR, etc.) that are transferrable for sports-related purposes. In the discussion, the studies' contents were summarized and categorized, and additional recommendations for the usage of ET in VR during sports scenarios were made and rated around the real conversion.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 Literature review method",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1 Search method",
+          "subsubsections": [],
+          "text": "The literature search was carried out using three databases, PubMed, Scopus, and IEEE Xplore. The search terms were: (virtual AND reality [also VR] AND eye tracking AND gaze). The relevant articles were screened in three stages. Sequentially, the title, the abstract, and the full text of each article were checked. The last status of the research for both databases was on October 16, 2020.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2 Study selection",
+          "subsubsections": [],
+          "text": "Various inclusion and exclusion criteria were used to filter relevant studies. The following were defined as exclusion criteria: studies that were no research articles (therefore, only \"Journal Article\" was used in the PubMed & Scopus database as well as in IEEE Xplore, in which conference papers were also considered), meaning marketing- and research trends studies, and studies in which VR is only used as a distractor to reduce for example sensation of pain [W2097166998]. Furthermore, studies in which an audience's social behavior and attention patterns were analyzed were also excluded. While the latest research shows that HMDs offer the best immersion [W2903378723], all studies with VR simulators or desktop VR were excluded. Moreover, studies related to gaze parameters that provided no product-specific HMD or ET information or gave information about participants and their role in the examination were excluded. All studies not older than 2015 (2014 was the final year cut off) are considered within the review. All inclusion criteria are also summarized in Fig. 1. As the primary goal of this review is to collect information about studies analyzing or using gaze behavior in VR, studies that did not meet both criteria were not considered in this review.",
+          "citations": [
+            "W2097166998",
+            "W2903378723"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "5.3 Data collection",
+          "subsubsections": [],
+          "text": "The following information was extracted from the remaining studies that met all criteria: application areas, the technology used (HMD and ET devices), used gaze parameters, and differences between the gaze behavior in VR compared to the RW. The gaze parameters can be separated into static and dynamic gaze parameters, respectively, defined as eye movements. The static gaze parameters include the following types: Fixations [W2889332504], quiet eye [W2121979339], and visual pivot point [W2016957819]. LaValle (2017) categorized dynamic eye movements into six movements: saccades, smooth pursuit eye movements, vestibulo-ocular reflex, optokinetic reflex, vergence, and microsaccades [UNMAPPED:39].\n\nThe following flowchart is intended to provide a comprehensive overview of the literature research. Ultimately, 38 useful and appropriate studies were included in the review.",
+          "citations": [
+            "W2889332504",
+            "W2121979339",
+            "W2016957819"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "39",
+            "2017"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6 Results",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "6.1 Technologies",
+          "subsubsections": [],
+          "text": "First, the different application areas were compiled in which ET is used in VR. The two technologies are most frequently combined and utilized in informatics (39.5%), followed by engineering with 15.8%, in the field of psychology (13.2%), and human-computer interaction (HCI) with approximately 10%. Only 2.6% of the relevant studies came from sports science and ergonomics/ healthcare. An overview is given where all application areas are listed (Table 1).\n\nAs mentioned in the literature review method, only articles with HMD devices were included. The HTC VIVE (and HTC VIVE Pro) was the most often used VR device with 63.2% in all included articles, followed by the Oculus Rift DK2 with 18.4%, the FOVE 0 with 13.2%, and a self-made HMD, which was used only in one study (2.6%), in which the display of the HTC Desire Eye was built into [W3013623946] (see Table 1). To better understand different HMD systems, we refer to [UNMAPPED:56], who tested various products, including neck strain, heat development, color accuracy, text readability, comfort, and contrast perception. The authors endorse the HTC Vive Pro that performs best which indicates the high number of uses in this review.\n\nThis section provides information about the used ET devices within the HMDs mentioned above. All ETs used in these studies are integrated into the HMDs. The SensoMotoric Instruments (SMI) integrated ET was used most frequently with 34%, followed by the Pupil Labs integrated eye tracker with 24%, FOVE 0 integrated eye tracker with 13%, Tobii Pro integrated eye tracker with 13%, HTC VIVE integrated ET with 7% and the aGlass integrated eye tracker, Oculus Rift DK2 monocular add-on cups and the self-made HMD, with endoscope cameras and an infrared light-emitting element from OSRAM with 3% each (see Table 1). The recording frequency of the ET system is also listed since the majority of sports performances take place at a fast pace. However, one should distinguish whether the Hz display of the HMD or the recording frequency of the integrated ET system was mentioned, which could not clearly be stated from some of the founded studies.",
+          "citations": [
+            "W3013623946"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "56"
+          ]
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "6.2 Common regarded gaze parameters within sports-related purposes",
+          "subsubsections": [],
+          "text": "To further develop an imagination of possible integration of the combined technic into sports, the collected gaze parameters used in the 38 studies were extracted and presented in this section. We are interested in those often regarded and can be transferred for sports-related purposes (for review, see [W2766692443]). The recording of the gaze parameters of the respective studies is described below and visualized in Table 1. A field is marked with \"No\" in the table if no gaze parameters were found in this study or their definition was not described. The authors want to notify that this review only serves as an overview without providing detailed information on each study. This section provides a better understanding of what parameters can be extracted from ET in VR and how the authors defined them. In addition, it shows how visual perception can be measured using various gaze parameters and how they are defined.\n\nIn many studies, the identification and calculation of gaze fixations were used to proceed with different applications further. Therefore, the authors often describe an algorithm for identifying fixations in VR [W3087755656], including various parameters such as fixation time and dispersion thresholds [W3081821660]. Hereby, the raw horizontal and vertical distributed gaze points data (often found in a coordination system with x and y-values) were used to determine fixations by calculating the orthodromic distance and the speed between successive gaze points [W3081662541]. Potential fixations were linked if they occurred 150 ms apart and two group centroids were displaced by less than 1\u00b0. Another criterion was to exclude fixations with less than 100 ms. [W3043857699] define fixations as stable viewpoints that can be extracted from the raw gaze data. They used an algorithm to identify fixations, which was when the gaze had a duration of a minimum of 80 ms and a maximum dispersion threshold of 3\u00b0 great circle distance. This is not in line with other findings using other thresholds from 100 to 250 ms [W2964824852], or a minimum of 150 ms and a dispersion of a maximum of 1\u00b0 [W2561270043]. In this context, \"areas of interest\" (AOIs) were often defined by identifying fixations which are defined as focusing on an object for at least 200 ms [W3025244083]. The authors analyzed the visual perception process by determining the perceived gaze fixation data from a duration of 200 ms as conscious and from a duration of 300 ms as visual.\n\n**TABLE 1** Characteristics of the studies (n = 38) using eye-tracking in VR and additionally the comparison of the gaze behavior between VR and real condition\n\n{{TABLE:tbl_01}}\n\nIn many studies, the identification and calculation of gaze fixations were used to proceed with different applications further. Therefore, the authors often describe an algorithm for identifying fixations in VR [W3087755656], including various parameters such as fixation time and dispersion thresholds [W3081821660]. Hereby, the raw horizontal and vertical distributed gaze points data (often found in a coordination system with x and y-values) were used to determine fixations by calculating the orthodromic distance and the speed between successive gaze points [W3081662541]. Potential fixations were linked if they occurred 150 ms apart and two group centroids were displaced by less than 1\u00b0. Another criterion was to exclude fixations with less than 100 ms. [W3043857699] define fixations as stable viewpoints that can be extracted from the raw gaze data. They used an algorithm to identify fixations, which was when the gaze had a duration of a minimum of 80 ms and a maximum dispersion threshold of 3\u00b0 great circle distance. This is not in line with other findings using other thresholds from 100 to 250 ms [W2964824852], or a minimum of 150 ms and a dispersion of a maximum of 1\u00b0 [W2561270043]. In this context, \"areas of interest\" (AOIs) were often defined by identifying fixations which are defined as focusing on an object for at least 200 ms [W3025244083]. The authors analyzed the visual perception process by determining the perceived gaze fixation data from a duration of 200 ms as conscious and from a duration of 300 ms as visual.\n\nThis method is standard within ET studies within real scenarios [W1999127676] but often relates to frame-by-frame analysis [W2766692443]. Hereby, VR has great potential to simplify gaze analyses using AOIs, since gaze vectors within virtual environments can easily be followed when they hit virtual objects. Determining gaze fixations within sports scenarios is essential since picking up relevant visual information is fundamental to perform sports exercises effectively [W2766692443]. The visual system is limited to the fovea centralis, which continuously forces us to initiate eye movements.\n\nIn addition, the analysis of saccades is also considered in most of the studies. [W3043857699] define them by determining the angle differences for successive fixations. One study aimed to examine the VOR that stabilizes the gaze position during a gaze fixation while the head is moving. The authors also measured saccadic eye movements by using a method that is based on the \"Developmental Eye Movement\" (DEM) test [W3017848771]. Here, the saccades are divided into \"Adapted Time\", \"Remaining Time\", and \"Transfer Time\". In the following study by [W2997152647], saccades are examined, which are identified by determining the speed of PORs. Therefore, the distance between the direction of the eyes of the next and the previous sample is divided by the time between these samples. According to [W2997152647], the amplitude of the total change in eye orientation is another criterion and must be at least 1\u00b0, and the gaze should move at least 20% faster than the ball. The authors categorized the identification of saccades into corrective and predictive saccades. Especially for saccadic detection, it is necessary to work with a high-frequency eye-tracker (at least 50 Hz) to receive undebatable results [W2766692443]. In [W2810491376], the authors examine saccades and the associated saccadic suppression. The suppression occurs before, during, and after a saccade [W2810491376]. Saccadic suppression begins with each saccade and can last up to 100 ms, whereas a visual saccade lasts from 20 to 200 ms. The previous two gaze patterns are scanned using the eye tracker to estimate the current angular speed of the user's gaze. If the angular velocity is greater than 180\u00b0 per second, this is identified as a saccade. Saccadic performances are analyzed and compared between athletes with different skill levels to examine automatisms within gaze behavior elicited by motor learning [W2017721429]. The combination of VR and ET could be helpful to investigate further saccadic eye movements and visual attentional cues within different sports situations. VR has great potential to conduct standardized training sessions and measure participants' gaze behavior within virtual environments. For example, saccadic eye movement training in web game playing is often used to reduce the abnormal occurrence, such as longer anti-saccade latencies and lower pro-saccade accuracy [W3116310404]. In addition, it has been used after a sports-related concussion to restore saccadic amplitude and velocity [W2974700838].\n\nMany studies considered the raw data extracted from the ET system to measure gaze accuracy and precision [W3033158908]. The raw data included all points of regard (PORs) measured frame by frame. The PORs are necessary to calculate the gaze parameters such as fixations, saccades, or VOR. They can also be used for foveated rendering to present a more realistic virtual environment (higher graphical components) and less computational power supporting usability. The measurement of the gaze accuracy and precision is also essential to determine the quality of the ET system, which further improves the validity of the extracted gaze parameters by using adequate algorithms.\n\nOther studies focus on the VOR for analyzing gaze behavior or developing new interaction concepts calculating the vergence angle resulting from the vergence movements of the eyes [W2953430552, W2561270043]. This is the angle between the visual axes of both eyes when the subject focuses on a point. To calculate the vergence angle, the 3D positions of both eyes are recorded, the line of sight of both eyes is converted into angles of rotation using inverse kinematics (using the OpenSim software) and the Iskander eye model. The eye tracker records the 3D position of the eyes and the point of gaze in the Unity Space. [W2561270043] shows an inverse linear relationship between head speed and the relative gaze speed when fixing a target. The reflex ensures that the eyes move against the direction of head movement. In [W2759603325], gaze accuracy and gaze precision are defined by determining the deviations from the POR. The smooth ET movements (SPEM) cause the difference in fixation accuracy between the moving target and the static fixation cross [W2759603325].",
+          "citations": [
+            "W2766692443",
+            "W3087755656",
+            "W3081821660",
+            "W3081662541",
+            "W3043857699",
+            "W2964824852",
+            "W2561270043",
+            "W3025244083",
+            "W1999127676",
+            "W3017848771",
+            "W2997152647",
+            "W2810491376",
+            "W2017721429",
+            "W3116310404",
+            "W2974700838",
+            "W3033158908",
+            "W2953430552",
+            "W2759603325"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "6.3 Objectives and possible application into sports",
+          "subsubsections": [],
+          "text": "After considering the gaze parameters found in the related studies, suggestions are made using examples and their possible application to sports. For better imagination of potential ET application in VR and future realizable gaze analyses, see Fig. 2 (Table 2).",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Based on the literature search, we found 1161 articles. From these, 38 articles met our search criteria and were therefore used and analyzed for this review.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "7 Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_7_1",
+          "subsection_index": 1,
+          "subsection_label": "7.1 Predictive eye-movements",
+          "subsubsections": [],
+          "text": "A few studies focused on fixations that can be captured through the integrated ET systems listed [W2964824852, W3081821660, W2561270043]. The main question that was worked on was how people explore and how user attention can be driven in virtual environments [W2561270043]. In this study, an existing fixation bias could be detected, which was used by the authors to adapt existing saliency predictors. The authors stated that predicting exploratory user behavior could be useful regarding gaze-contingent techniques [W2561270043]. Hereby, the numbers and duration of fixations, the speed of gaze, and VOR were considered in their analyses. Predicting gaze is also used to maintain the accuracy of the integrated ET, even if the position of the HMD changed relative to the position of the user's head [W3041790443]. The authors presented a solution for inaccurate gaze estimation by detecting the drift vector without interrupting the VR experiences, which could also be usable for foveated rendering [W3041790443]. Predictive eye movements were also analyzed in VR using ET during a task that demanded the participants hit a bouncing ball [W2997152647]. The authors concluded that predictive saccades direct the gaze above the location at which the ball will bounce for having suitable ball tracking after the touch of the ground [W2997152647] could be seen as a kind of pioneer in the use of ET in VR during sports. This feature is suitable for examining the anticipatory skill, which is more sophisticated in experts' visual behavior than novices [W2101168325, W2080069842, W2148920334]. Detecting fixations accurately and precisely while perceiving the virtual environment is suitable for examining the quiet eye duration, which is defined as the final fixation before initiating the movement and lasts at least 100 ms [W2123767457].\n\n**FIGURE 1** Flowchart of the literature search process\n\n**FIGURE 2** An example of possible gaze analyses within virtual environments during movement observation. The yellow circle indicates the binocular Point of Regard (POR) of the participant. Using colliders that are overlayed about different body regions enables the measurement of visual attention (1). (2) shows the sum of observation time in each region. (3) shows the scanning pattern (sequential POR pathway reconstruction and duration of observation indicated by the circle size) during the observation of movement execution.",
+          "citations": [
+            "W2964824852",
+            "W3081821660",
+            "W2561270043",
+            "W3041790443",
+            "W2997152647",
+            "W2101168325",
+            "W2080069842",
+            "W2148920334",
+            "W2123767457",
+            "W2017051648",
+            "W2312068578"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_2",
+          "subsection_index": 2,
+          "subsection_label": "7.2 Recognition of spatial information",
+          "subsubsections": [],
+          "text": "Among others, the gaze fixations' analyses were used to recognize of spatial information for wayfinding in virtual environments [W3025244083]. Therefore, Areas of Interests (AOIs) were created to observe gaze fixation in specific areas to obtain information on participants' cognitive processes of visual perception during wayfinding tasks. Other studies that do not fully match our search criteria exploited a recently developed VR environment in a novel RW 360\u00b0 scene. Hereby, ET was also used to determine exploratory behavior in eye movements by extracting the number and duration of fixations, saccades, and head turns [W3081662541], or with focus on color perception [W3033766742]. Using similar parameters, a visual exploration of omnidirectional panoramic scenes has been conducted to extend further the correlation between eye- and head movements [W3043857699]. In sports, it could be helpful to create AOIs not only for measuring wayfinding ability but also for finding relevant visual cues when it comes to learn new movements or inspecting the events on the playing field. Previous findings could confirm that the observation of an individual learning a new movement enhances one own performance [W2104783373].",
+          "citations": [
+            "W3025244083",
+            "W3081662541",
+            "W3033766742",
+            "W3043857699",
+            "W2104783373"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_3",
+          "subsection_index": 3,
+          "subsection_label": "7.3 Comparing different methods to analyze gaze behavior",
+          "subsubsections": [],
+          "text": "Another study using gaze fixations compared two methods, the classical frame-by-frame analysis against a newly developed algorithm that allows fixation detection in immersive virtual environments [W2964824852]. They have made use of the ray-casting originating to determine where the user is looking at. It could be shown that algorithmic solutions seem to be more efficient than conservative frame-by-frame analyses. It is fundamental to determine fixations' spatial and temporal characteristics since different definitions could lead to different results, which is also discussed in [W3081821660, W3033158908]. A further approach to developing an algorithm identifying fixations is made by [W3081821660]. They presented a guideline for algorithms detecting parameters such as the number of fixations and the percentage of points that belong to a fixation [W3081821660]. Overall, detecting fixations in virtual environments can be provided well since comparison to conventional methods has been verified using ET in VR [W2964824852, W2561270043].",
+          "citations": [
+            "W2964824852",
+            "W3081821660",
+            "W3033158908",
+            "W2561270043"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_4",
+          "subsection_index": 4,
+          "subsection_label": "7.4 Foveated rendering",
+          "subsubsections": [],
+          "text": "A high number of studies did not focus on visual perception analysis. ET was used to exploit the human visual system's limitations to increase rendering performance, which leads to a more realistic visualization of the virtual environment without an increased computational capacity [W3120983730, W3006209278, W2551546500, W2759603325, W2889743320]. Foveated rendering provided a quality loss in the peripheral regions (FoV) to ensure high fidelity in the fovea. The HMD technology develops continuously, which results from increased display resolution and target refresh rates [W2551546500]. The resulting problem is providing real-time rendering, maintaining low latencies reducing nausea and ensuring high-level immersion [W2759603325, W2889743320]. For example, the HTC Vive Pro (the most used application in VR studies, see Table 1) provides a resolution of 2880 \u00d7 1600 pixels and a FoV of 110\u00b0. The entire dynamic FoV of the human visual system requires a 32k x 24k pixels resolution and a FoV of 220\u00b0 horizontal and 150\u00b0 vertically [W2759603325]. To circumvent this problem, studies using foveated rendering have set the goal to develop different approaches to reduce the quantity of data but ensure higher fidelity, better immersion, and less motion sickness. One approach consisted of a simple technique for reducing the cost of foveated rendering by leveraging ocular dominance [W3006209278]. They could show that eye-dominance-guided foveated rendering provides similar results to conventional foveated rendering methods and ensures a higher rendering frame rate.\n\nTo guarantee smooth foveated rendering, the integrated ET system has to deliver high quality in accuracy and precision to meet perceptual requirements [W2759603325, W2889743320]. Therefore, the authors let the participants fixate on static and dynamic targets. Sufficient accuracy for static stimuli was measured, but not for moving targets [W2759603325], which is also in line with other studies [W3033158908]. In this context, another study evaluated the perceptual abilities of human peripheral vision accompanied by a foveated rendering technic [W2551546500]. The authors complained that previous methods using foveated rendering significant exhibit head- and gaze-dependent temporal aliasing, which harms the immersion and increases possible distraction. Their system ensures a reduced rendering workload, a constant visibility sampling rate, avoidance of gaze-dependent blurring artifacts, and fewer shading pixel quads without significantly impacting the perception. To generate more computational power into focused regions, the limitation of the human visual system through the depth-of-field (DoF) was used to remove high-frequency signals from the visual periphery by its inherent blur [W2889743320]. The approaches in all studies considering foveated rendering showed significant quality improvements. They can serve as recommendations, which can be used for optimizing the design of its virtual environments without obtaining new expensive hardware components. This development is interesting for all different research areas because it could simplify the accessibility due to lower costs of the hardware components and increase graphical features that host synergy effects such as higher immersion, feeling of being present, and perceiving a more detailed environment. Especially during sports, fast situations occur, and a smooth process must be ensured to keep up the user's presence impression. Also, a lot of (ET) data and movement data, such as joint angle, etc., can be recorded; shifting the computational power on the relevant mechanism within the scene could be beneficial.",
+          "citations": [
+            "W3120983730",
+            "W3006209278",
+            "W2551546500",
+            "W2759603325",
+            "W2889743320",
+            "W3033158908"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_5",
+          "subsection_index": 5,
+          "subsection_label": "7.5 Facial reenactment",
+          "subsubsections": [],
+          "text": "Another innovative use of ET data in VR was the gaze-aware facial reenactment in real-time [W2810084975]. The purpose was to create a novel way of video teleconferencing, in which two people can participate in a VR conference by using the HMD, including a photo-realistic 3d rendering of the interlocutor. A solution was found regarding the transfer of facial expressions and natural eye appearance, which was hard to realize because of the occlusion of the majority of the face due to the HMD and the possibility of relying on ET devices combined with VR [W2810084975]. An integrated ET system captures eye motion in real-time (for example, blinks), which is crucial for preventing natural eye contact that ensures realistic conversations [W2810084975]. With similar technology, another study was conducted in which available stereoscopic depth cues were found as a supportive factor to recognize images of faces [W3081456496]. Those findings could be relevant for communication in future VR applications allowing multiple users to participate in one training session.",
+          "citations": [
+            "W2810084975",
+            "W3081456496"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_6",
+          "subsection_index": 6,
+          "subsection_label": "7.6 Saccadic eye-movements",
+          "subsubsections": [],
+          "text": "A further limitation of the human visual system can be exploited to ensure infinite walking in virtual environments [W2810491376]. The size of the physical surrounding can have a massive impact on VR experiences. Therefore, [W2810491376] developed a method that detects saccadic suppression and head movements that redirect the user without notice. They could prove that rotation gains could be made without visual distortion and simulator sickness [W2810491376]. Therefore, large open virtual spaces can be explored in small physical environments (they reported to use a field as small as 12.25 m\u00b2). This presupposes a system that can detect rapid eye movements (saccades). The authors developed a method that provokes the user to make saccades without losing the focus of the essential task demands. The camera rotation (12.6\u00b0) could not be detected by the user as long as the gaze velocity was above 180\u00b0 / sec by enhancing the visual search performance. The frequency and duration of saccades, the tolerance of image displacement during saccadic suppression, and the ET-to-display latency are emphasized as the important factors that ensure redirected walking. The authors also mentioned that the effectiveness of their developed method increases when the size of the physical environment also expands [W2810491376]. This method is crucial for all VR applications and can enormously enhance the perceiving of virtual environments since rotation gains increase without introducing visual distortions or simulator sickness. It is necessary to initiate movements during sports situations quickly, and many rotations have to be completed at an enormous speed. This method could realize doing VR training also at home with limited physical space.\n\nRelated to walking methods within virtual environments, [W3162497927] dealt with a navigation method using ET data (steering in the direction to walk), ensuring continuously moving to the target instead of jumping point by point. Therefore, two methods were compared, the eye-gaze steering (gaze ray where the eyes converge) and head-ray steering (ray emitted by the headset), to examine participants' eyeball activity, which is crucial for VR training inducing lucid dreaming. Here, the interplay between saccades and fixations is crucial for realizing this method. Whether and to what extent these methods can also be used for sports is questionable, since in sports, the locomotion can deviate from the gaze- or head direction. This method may promote the activity of the eyeballs, which in turn can lead to physiological adaptations also provoked during visual training.\n\nVisual search behavior is relevant for athlete performances, especially when using the parafoveal vision to gather more information at once [W2114404847]. The importance of saccadic eye movements is also mentioned in [W3017848771], which extended the measurement of saccades in the Developmental Eye Movement (DEM) test integrated into VR. The authors showed that more parameters could be extracted more easily since head movements are inevitable during natural behavior, and gaze analyses can be completed with fixed placed HMD on participants' heads. This enables collecting more detailed data such as the time the eyes stay on the target or the delay between perceiving the target and the initiated movement [W3017848771]. Being able to detect saccades and fixations could be informative concerning the role of different sources (foveal versus peripheral) during opponents' attacks [W2083499647].",
+          "citations": [
+            "W2810491376",
+            "W3162497927",
+            "W2114404847",
+            "W3017848771",
+            "W2083499647"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_7",
+          "subsection_index": 7,
+          "subsection_label": "7.7 Interaction of eye, head and body movements",
+          "subsubsections": [],
+          "text": "Another study's purpose using ET Data in virtual environments was to examine the interaction between eye, head, and body movements and therefore given up recommendations for design implications for human-computer interaction [W2979393009]. The authors stated the importance of gaze behavior since statements of attention, interest, and intent can be drawn through gaze shifts can also initiate torso shifts to the objects observed by the user [W2979393009]. One aim was to make the VR application more suitable, for example: by placing the UI elements at a comfortable posture in the FoV to reduce the initiations of head movements or avoiding placing them at the edges of the screen, where a decreased accuracy of the integrated ET system exists, and interaction quality could suffer. This could be essential for future stand-alone training applications in VR. Regarding the practical uses, they also highlighted multiple advantages of ET in VR, such as preventing external light and a more stable system that is mounted closer to participants' eyes and is less affected through shifts triggered by head movements. Here, [W3160049074] also developed a fully convolutional network (deep learning system), which can identify corneal reflections during position shifting of the HMD with less memory and faster execution than other deep learning systems.\n\nA few studies included analyses of gaze scanning or pupil dilation, which reveal clinical implications for patients suffering from visual field loss [W3009900694], examine individual light perception [W3087755656], or provide additional information about working memory [W3083339585]. Quite similar to [W3006209278], the approach of using the combined technology to analyze gaze data of each eye separately, the researcher investigated whether the peripheral vision is limited through the performance of the \"better-eye\" [W3009900694]. It was also associated with head movements, as in other studies [W2979393009]. By letting the participants conduct a searching task, they could show that the weaker eye still provides essential information in the binocular sensitivity periphery, which is not in line with previous findings [W3009900694]. One point of examining the role of peripheral vision in sports was to determine the gaze anchor, which is a cue-optimized position allowing the monitoring of peripheral cues and avoiding saccades suppression [W2919197262]. With ET in VR, more information can be collected due to endless ways of modeling and programming sport-specific scenarios. This could be confirmed in [W3025606376], in which the user's gaze behavior in VR was investigated during dynamic scenes under free-viewing conditions to better understand the visual attention and predict user's gaze position. This could be important for VR content design, for gaze-controlled interactions, and gaze-contingent rendering. This also shows the integration of ET in VR in more complex scenes, including dynamic visual stimuli attracting user's attention comparable to sports situations.",
+          "citations": [
+            "W2979393009",
+            "W3160049074",
+            "W3009900694",
+            "W3087755656",
+            "W3083339585",
+            "W3006209278",
+            "W2919197262",
+            "W3025606376"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_8",
+          "subsection_index": 8,
+          "subsection_label": "7.8 Differences between the virtual and real environment",
+          "subsubsections": [],
+          "text": "Other authors were concerned that the HMDs cannot compete with the human eye's ability in terms of the high dynamic range of brightness and color [W3087755656]. They recommended adapting simulations to each user using gaze parameters such as pupil size and gaze direction to increase visual acuity. In contrast to other studies, the authors reveal the performance of the ET system in terms of its accuracy (~1.0\u00b0) and precision (~0.08\u00b0) instead of presenting the manufacturer's data. Considering the different task demands, the data quality is in line with other studies except for a slight loss in gaze accuracy [W3033158908]. In this study, the data quality of the gaze behavior between the VR and RW was compared. The participants wore an HMD HTC VIVE combined with an integrated SMI eye tracker in VR. In the RW condition, they used the binocular ET glasses 2.0 from SMI to record participants' gaze behavior. The participants had to complete various tasks, visualized on a 23.5-inch monitor in the virtual environment perceivable through an HMD display in VR and a real setup that includes the same physical arrangement. This study aimed to record the gaze accuracy and precision during three tasks, to investigate subsequent differences between VR and RW. First, the participants observed static crosses at the edges of the screen. Second, they had to pursue a moving target as an infinite loop from the same distance to the monitor as demanded in task 1. During the third task, the distance of the monitor was shifted, and a fixed cross in the monitor's center should be fixated for at least three seconds. The results showed no significant differences in gaze accuracy between VR and RW if the participants looked at static targets at a short distance (1 m). However, there are minor significant differences if the targets were placed at different distances and large significant differences in tracking moving targets. The results have shown less quality in VR in all tasks than in RW in terms of precision. Nevertheless, the authors stated that the precision values are still in an acceptable range, and therefore, they endorsed the use of ET in VR.",
+          "citations": [
+            "W3087755656",
+            "W3033158908"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_9",
+          "subsection_index": 9,
+          "subsection_label": "7.9 Scanning pattern",
+          "subsubsections": [],
+          "text": "An analysis of gaze scanning patterns revealed an impact evoked by different engineering information formats provided, such as 2D isometric drawing, 3D model, or VR model during task performance in a construction operation task [W3083339585]. One point is the visualization of additional information, which could lead to more cognitive load and harm the ability to extract essential information [W3083339585]. Besides, the authors emphasized the correlation between gaze scanning patterns and the levels of working memory. Due to the integration of different visualization systems, their interests were to compare them to investigate the extra affection on working memory. The results showed improved task performance due to the participants' high immersion level and sense of presence during the 3D and VR model groups.",
+          "citations": [
+            "W3083339585"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_10",
+          "subsection_index": 10,
+          "subsection_label": "7.10 Vergence-accommodation-conflict",
+          "subsubsections": [],
+          "text": "A small part of the studies found thematizes the analysis of the eye movements, to be more specific: the vergence-accommodation-conflict (VAC) [W2953430552, W2548715913]. The studies focused on how humans use allocentric information for memory-guided reaching of visual targets in depth [W2548715913]. They found that binocular depth cues such as vergence and retinal disparity provided essential information for coding target location in depths and revealed a preferred use of allocentric representations [W2548715913]. The VAC is the main contributor to visual fatigue when perceiving virtual environments [W2953430552]. Therefore, the authors tested how the HMDs could affect the vergence system to make further recommendations on how a virtual environment must be constructed to allow unrestricted and comfortable interaction through eye gaze. The authors pointed out visualizing gaze-controlled virtual objects in a specific size and distance to enhance performance.",
+          "citations": [
+            "W2953430552",
+            "W2548715913"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_11",
+          "subsection_index": 11,
+          "subsection_label": "7.11 Synchronization with other measurement systems",
+          "subsubsections": [],
+          "text": "Interaction in VR is not only limited through ET. A new way of interaction has been modified, including ET, VR, and electromyography (EMG), which allows using physiological signals as input [W2901616108]. The idea was to create a hands-free interaction method using ET data for pointing and EMG-data (muscle activity in the forearm) for selecting. Due to reliable and valid extracted data, this method improves VR interaction and increases the VR experiences [W2901616108]. As in all other studies which focused on gaze interaction during VR, the accuracy of the integrated ET system is emphasized as an essential factor to ensure trouble-free usage. [W3162826106] confirmed the importance of precisely detecting the users' gaze, secured by adjusting the IPD. Comparing different interaction methods, dwell gaze (to fixate the target for a fixed duration that allows interaction) has scored lowest, whereas the usage of motion controller (conservative approach) and the combination of ET and EMG have been similarly preferred [W2901616108]. [W3081456496] used gaze-based methods named \"OrthoGaze\", which allows the manipulation of the position of a virtual object only by using the eyes and head gaze.\n\nAn additional benefit of VR is the synchronization with infrared motion capturing systems such as Vicon Nexus [W3101652247] and Vicon Shogun [W3087666022], or systems that generate inputs like a smartphone keyboard as a typing interface [W2547130544]. Regarding sports, the visualization of a virtual avatar can simplify body parts' visual occlusion, amplifying the knowledge about the use of different visual cues [W3098707620]. A further system has been integrated, allowing measuring neurophysiological signals during training under stress in VR accompanied by ET [W3047660829] or testing the human-robot interface design [W3143281788]. The Functional Near-Infrared Spectroscopy (fNIRS) is an innovative, easy-to-apply, portable method that can measure brain activity during movement [W3084714571]. It has also been integrated into VR with ET, enabling the investigations of possible correlations between task performances and gaze movement patterns or neural features [W3047660829]. With this setup, the impact of stressors on effective learning can be examined. The integration of physiological measurements within VR scenes has also been done in which EEG signals are used to examine participants' attention further [W3124386031]. Another research direction focused on user identification methods through human kinesiological movements and gaze data [W3028219535]. For example, this method is essential for multiple users simultaneously perceiving the same virtual environment or for security to identify the individualized body properties. Gaze data such as fixations, saccades, and accelerations are additionally used as biometric features to improve individual characteristics.",
+          "citations": [
+            "W2901616108",
+            "W3162826106",
+            "W3081456496",
+            "W3101652247",
+            "W3087666022",
+            "W2547130544",
+            "W3098707620",
+            "W3047660829",
+            "W3143281788",
+            "W3084714571",
+            "W3124386031",
+            "W3028219535"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_12",
+          "subsection_index": 12,
+          "subsection_label": "7.12 Limitations of the combined technology crystallized by the outcome of the studies",
+          "subsubsections": [],
+          "text": "In the majority, the limitations of each study were considered concerning their content, but only a few reported today's technology boundaries. Even though the visualization of virtual environments has already developed further, the problem of the appearance of motion sickness still exists, which harms the participants' performance, for example, slower walking and stopping to look around the scene [W3080078178]. Longer performances can also lead to increased eye fatigue, which results in the loss of gaze accuracy, which is crucial for analyzing and the usage of methods improving scene visualization without the additional purchase of hardware allowing higher computational power (foveated rendering). A loss in gaze accuracy was also discussed in [W2901616108], who reported repeated calibration was necessary to achieve an acceptable level of accuracy. They also found differences caused by different samples, including several factors such as eye color, size, or the relative position of the eyes [W2901616108]. One study claimed the restricted FoV during the experimental conduction since it is hard to compare the visual perception or search strategies with realistic conditions [W3033158908]. The missing construction operations are also mentioned in [W3041790443], who examined in a controlled laboratory environment instead of complex RW scenarios. [W3033158908] also revealed significant differences between the integrated ET system in the HMD and mobile one. Even though the lower precise system extracts the values in the HMD, the quality is still sufficient compared to other measurement systems. In addition, the authors were restricted in using older ET systems (developed in 2015) due to the focus of the comparison between them. More sophisticated and higher developed ET and VR systems are available in which an increased quality can be expected. Nevertheless, a loss in data quality was found when the participants had to follow moving targets, which was also noticed in [W2759603325]. This could occur through tracking latency, the unpredictability of target's movement, or tracking precision itself, which is an issue of smooth pursuit eye movements. With this, the velocity of presenting the visual stimuli could harm accuracy due to physiological constraints [W2759603325].\n\nIn terms of visualization of the virtual environment, it would be helpful when the manufacturer would provide design guidelines for interactive objects. They also should present information about the lenses that were used to specify the zone of comfortable viewing [W2953430552] or provide an application programming interface (API) for further embedding [W3028219535]. As an additional limitation of the VR system itself is mentioned, the RW accommodation of the eye lenses is crucial for depth cues since the distance between the display and eye positions never changes [W2548715913]. Less precise depth perception should be considered making it hard to transfer all results in RW scenarios entirely. One experiment reported a loss in accuracy rate caused by eyelashes and provided a solution [W3013623946]. Concerning the gaze interaction method OrthoGaze, the authors stated increased usability if the user can change their viewpoint [UNMAPPED:46]. The results also showed low accuracy on the ground plane; checking which areas in the virtual environment play an essential role in the interaction is recommended. To improve the usability of gaze interaction concepts, an optimized visualization is required, based on the user's viewpoint [UNMAPPED:46]. [W3087755656] claimed the perceived visual acuity of RW lightness was impossible to realize in the HMD due to missing hardware performance [W3087755656], which was also discussed in [W2551546500]. [W2997152647] also claimed methodological limitations and emphasized the importance of using suitable hardware components (ET system with high temporal accuracy) to make statements about performances that needed high temporal constraints [W2997152647]. When using foveated rendering, it is still a challenge since artifacts due to temporal aliasing of moving objects, phase-aligned aliasing, and saliency-map-based aliasing can occur, e.g. [W3006209278]. We recommend to [W2979393009], who showed that gaze is to be understood as multimodal concerning eye-, head- and torso movements, and therefore, some limitations can be excluded for different user groups. [W2810084975] presented a way real-time gaze aware reenactment, which was limited to only one eye modification, and a second IR camera needs to be included to collect more data.",
+          "citations": [
+            "W3080078178",
+            "W2901616108",
+            "W3033158908",
+            "W3041790443",
+            "W2759603325",
+            "W2953430552",
+            "W3028219535",
+            "W2548715913",
+            "W3013623946",
+            "W3087755656",
+            "W2551546500",
+            "W2997152647",
+            "W3006209278",
+            "W2979393009",
+            "W2810084975"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "46"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The current review gives an overview of the actual state of combining ET systems in VR applications and shows the extraction of various gaze parameters that could be used within sports-related situations. In the end, 38 studies were collected that presented different approaches measure or to use gaze behavior to develop higher implementations in VR. This review does not provide a summary of the entire content of each study, but it can be seen as an overview how ET might be useful for VR scenarios in general. Furthermore, it could be further used to collect ideas using it for sports-related purposes. In this section, the content of each study, including the extracted gaze parameter, enhances the practical use concerning sports-related issues. Several significant categories emerged, which are subdivided, and the studies' content has been derived. In the end, the compiled results support new ideas for using ET in VR during sports scenarios to analyze gaze data or improve VR applications making it more suitable for sports.\n\nTremendous work has been made regarding the integration of ET systems in HMD VR for a variety of scientific purposes. Generally, ET data was not only used to expand knowledge of visual perception. In many studies, especially in informatics (brain computer interfaces, human computer interaction), the captured gaze data was used to optimize VR applications by benefitting from the weaknesses of the visual system. Before presenting the main idea behind each study, we recommend reading through studies, which clearly describe how the ET can be integrated into VR to ensure the basic comprehensive [W3080078178, W3013623946]. This may serve as a supportive step to understand each study's purpose. After reviewing the literature, different studies' goals or purposes have been crystallized. Therefore, we sorted them into similar intentions and discussed possible sports references.",
+      "citations": [
+        "W3080078178",
+        "W3013623946"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "8 Limitations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This review still has some limitations which need to be mentioned. First, it merely gives all interests an overview of different applications going in different directions, but it doesn't show a straightforward way to implement such software and hardware components. Second, incorporating the research fields has not been easy since highly interdisciplinary research has been observed, and the specific background was not easy to follow. Third, although many studies have been found and regarded in this review, one should expand the search through more conference papers (not only IEEE) since new and innovative technologies are presented there, helping to understand the potential of ET in VR. The current review should give impressions on how the combined technology can be used in future sports applications and encourage new ideas.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "9 Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The current review gives an overview of ET usage in VR and insight into the commonly used hardware components. In addition, it shows different categories and application fields in which ET data are used to analyze participants' gaze behavior within a virtual environment, improve usability and enable more realistic viewing conditions without increasing the computational requirements. Except for one example, no study has used this advanced technique to record and analyze gaze behavior during sports situations. The content of the studies leads to new ideas regarding sports science research and the permanent development of today's technology ensures the use of VR inclusive ET.\n\nIn general, it has been shown that individual gaze parameters such as gaze fixations, saccades, vergence, and accommodation can be recorded with newly developed algorithms. Furthermore, in some studies, AOIs were also defined, and gaze data within them were recorded at high frame rates (adequate to real conditions). Besides, the advantages of VR concerning the collection of viewing angle data were often mentioned, which can be extracted by the precise acquisition of distances from the viewing point to the object fixed to the camera. Due to the advantage of VR itself, any sports situation can be played without additional costs or time allowances, etc. Although HMDs equipped with ET are generally more expensive than those without, the development of VR scenarios is free of charge since game engines such as Unity and other freeware for modeling and simulating, e.g., Blender, are available and usable even for people without informatics background. This can be guaranteed through numerous tutorials giving an overview of the main functions of each program. Future virtual training sessions may be more cost-efficient than real training settings, e.g., no costs for personnel (coaches, opponents), infrastructural causes like travel costs, or material costs. The integration of further measuring systems in VR combined with ET, such as the fMRI or EMG, will enable even more user-friendly operation and help collect more data within one scene in terms of biofeedback.\n\nCompared to classical systems, the integrated ET in VR offers several advantages to measure the gaze behavior of athletes in different sports scenarios. For example, when fast movements are made, one big issue is the shifting from the position of the HMD relative to the head to generate valid and reliable data sets from the ET system. A solution for this has been provided, which is crucial for analyzing gaze behavior during sports situations. Furthermore, ET offers the possibility of making the small range of sharp vision even more realistic using today's computing systems. For virtual immersion, the degree of immersion is of immense importance, which can be guaranteed by the increased graphic representation and innovative forms of infinite walking. This would be of great advantage, especially in sports scenarios, since vast playing areas exist, for example, football, soccer, basketball, etc. When fast movements occur, the measuring systems must provide high frequencies and accurate measurements. Many studies stated suitable fresh rates of the ET systems (generating a minimum of 60 Hz and a maximum of 250 Hz in VR) for sports-related movements, whereas in real world the standard of ET devices (at least for mobile ones) is 25\u201360 Hz. Especially for saccadic detection, fast systems are necessary to measure saccadic movements over time. At this moment, the refresh rate of the HMDs should also be considered since this can be shift from the integrated ET system and influence the output. In this context, the problem frequently occurs that no information is provided or only those given by the manufacturer are reported, which is not always in line with real conditions.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "10 Future directions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Considering the usage of ET in VR during sports-related contexts, the studies' contents stimulate food for thought to further reveal athletes' visual attention. The compiled results have shown that the existing methods are feasible but still need improvement.\n\nNevertheless, we must emphasize that this equipment will not be available or accessible to everyone. Regarding the content of each study, the understanding of the development and the later application possibilities is changing. The representation of facial features could also be used in sports for a particular form of training. The HMD with integrated ET can detect gaze behavior and head movements, which also play a crucial role in sports. Based on the results of the current review, it can be suggested that analyzing the gaze behavior during sports scenarios in VR is realizable, and the advantages can be used to the full extent. The combined technology can be used to examine the correlation between eye and body movements since both data can be recorded simultaneously, and previous studies have already tried to understand the sequential order of gaze-, visual- and motor systems in planning complex movements. Instead of using the conservative method (ET and video presentation), it can be used especially for determining depth perceptional cues. For example, in VR scenarios, the binocular gaze vector is represented by a ray that can hit observed objects and gives feedback on whether objects with higher distances were really fixated by the participants. In real-world settings, 2D maps are often used and operated as an indirect indicator of users' gaze position. Furthermore, videos do not represent realistic situations, especially in sports, whereas HMD-based virtual scenarios allow the participant to experience complex situations profiting from a high immersion. Since developed algorithms can already compensate for the relative position of the HMD on the head and the eyes, it is imaginable to use it also in faster and mobile situations. Such kind of training also allows increasing variations or flexibility such as positioning changing within a team sport on the field. Gaze parameters could be collected during all these situations and could reveal the visual attention of the athletes. Trainers could comprehend the athletes' acting in different situations and innervate the athletes' attention on essential cues. Furthermore, it can be used to understand the visual behavior of advanced athletes to novices or to develop visual training scenarios within VR. Due to the advantages of VR, this can be done more easily than in the real environment, for example, being able to calculate 3D gaze points and gazed objects using colliders.\n\nFurther examinations in the sports-related context should clarify the combined technic ET and VR suitability since only one study was found in which this combined technology was used to measure gaze behavior in a virtual environment in a sport-specific scenario. Conclusions about the use of this technology could therefore only be drawn indirectly.\n\n**TABLE 2** Objectives of the studies where the extraction of gaze parameters is reported and the meaning of them concerning the usage into the sports science\n\n{{TABLE:tbl_02}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_02"
+      ]
+    },
+    {
+      "section_id": "s_11",
+      "section_index": 11,
+      "section_label": "Declarations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**Funding** Open Access funding enabled and organized by Projekt DEAL. The study was financed by the German Research Foundation (DFG) under grant WI 1456/22 - 1.\n\n**Data availability** Yes.\n\n**Code availability** Not applicable.\n\n**Ethics approval** The approval of the Ethics Committee of the Otto-von-Guericke University at the Medical Faculty and University Hospital Magdeburg was obtained under the number 132/16.\n\n**Consent of participate** Not applicable.\n\n**Consent of publication** All authors agreed for the publication process.\n\n**Conflicts of interest/Competing interest** No conflicts of interests/ competing interests.\n\n**Open Access** This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation and exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_10",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4286668690_tables.md"
+}

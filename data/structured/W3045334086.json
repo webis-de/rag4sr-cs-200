@@ -1,0 +1,419 @@
+{
+  "id": "W3045334086",
+  "metadata": {
+    "title": "Data-Driven and Artificial Intelligence (AI) Approach for Modelling and Analyzing Healthcare Security Practice: A Systematic Review",
+    "n_sections": 6,
+    "n_subsections": 10,
+    "n_subsubsections": 9,
+    "n_tables": 12
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1 Motivation, Scope and Problem Specification",
+          "subsubsections": [],
+          "text": "Healthcare Security Practice Analysis, Modelling and Incentivization (HSPAMI) is an ongoing research project in which an aspect involves modelling and analyzing data with AI methods to determine the security practices of healthcare staffs towards improving their security conscious care behavior. In analyzing healthcare related data, there is the need to consider details of the methods and data sources in view of the unique and critical nature of the sector. In a related study, Walker-Roberts et al. conducted a systematic review of \"the availability and efficacy of countermeasures to internal threats in healthcare critical infrastructure\" [W2793129310]. Among various teams, few machine learning methods were identified to be used for intrusion detections and preventions. The methods that were identified are Petri net, Fuzzy logic, K-NN, K-Decision tree (RADISH system) [W2793129310, W2582257950, W2092256938] and inductive machine learning methods [W2793129310, W2582257950, W2117818136]. In a similar way, Islam et al. conducted a systematic review on data mining for healthcare analytics [W2803287810]. Categories such as healthcare sub-areas, data mining techniques, type of analytics, data and data sources were considered in the study. Most of the data analysis were for clinical and administrative decision making. The data sources were mostly human generated from electronic health records. Other studies which explored for related methods include [W2512189246] and [UNMAPPED:18].\n\nEven though the studies [W2793129310, W2803287810] were in healthcare context, details of the algorithms and data sources were not considered. For instance, the features of the data sources and algorithm performance methods were not deeply assessed in their studies. Additionally, the studies of [W2512189246] and [UNMAPPED:18] were general and not healthcare specific. So unique challenges within healthcare environment were not considered in their study. To this end, the study aimed to explore in detail AI methods and data sources in healthcare that can be efficiently used for modeling and analyzing healthcare professionals' behavior. Healthcare professionals and healthcare staffs were used interchangeably in this study to include but not limited to nurses, physicians, laboratory staff and pharmacists who access patients records for therapeutic reasons.",
+          "citations": [
+            "W2793129310",
+            "W2582257950",
+            "W2117818136",
+            "W2803287810",
+            "W2512189246"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "18"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The enormous increase in data breaches within healthcare is frightening and has become a source of worry for many stakeholders such as healthcare providers, patients, national and international bodies. In 2018, the healthcare sector recorded about 15 million records which were compromised in about 503 data breaches [UNMAPPED:1, UNMAPPED:2]. This was a triple of 2017 data breaches in healthcare [UNMAPPED:1, UNMAPPED:2]. In the middle of 2019, the number of compromised records in healthcare were more than 25 million, implying that by the end of 2019, the number of compromised records might have skyrocketed [UNMAPPED:2]. A greater proportion of the breaches (59%) were perpetrated by insiders [UNMAPPED:1] who are authenticated users of the systems [W2023840804]. Most of the adversaries were motivated by financial gains (83%) and other motives such as convenience (3%), grudges (3%), industrial espionage (2%) [UNMAPPED:1]. The number of data breaches in healthcare has substantially exceeded that of the financial sector and almost caught up with other public sector entities [UNMAPPED:1].\n\nThe tremendous increase in data breaches in recent time within healthcare have therefore left many to ponder about the possible causes. The healthcare data is comparatively richer and has become \"honey-pot,\" thereby attracting malicious actors [UNMAPPED:4, UNMAPPED:5]. Health data has vast scientific, societal, and commercial values, which cause cyberattacks and black market targeting of this data. Healthcare data can be used to commit multiple dark activities in the dark web as detection of breaches, related updates and correction of the compromised data takes a longer time. Another angle of thought is that the healthcare personnel are busy with their core healthcare duties and are less experienced in information security conscious care behavior. This leaves room for adversarial attacks. The technological measures (such as firewall, intrusion detection or prevention systems, antiviruses and security governance configurations) have been strengthened [W2609990009] and making it difficult for external cyber criminals to inappropriately access data [W2153038337, UNMAPPED:7]. But there is no related development of \"the human firewall\" [W2026026089]. The human firewall is the information security conscious care behavior of the insiders [W2026026089, W657411145]. The human firewall has not gained equal attention, and this is the vulnerability which cyber criminals tend to exploit for easy entry [UNMAPPED:11]. By virtue of their access privileges, healthcare insiders are a \"double-edged sword.\" While their privileges enable them to provide therapeutic care to patients, healthcare staffs' errors and deliberate actions can compromise the confidentiality, integrity and availability (CIA) of healthcare data. Additionally, an attacker can masquerade as insiders to compromise healthcare data through various ways, including social engineering methods [W2023840804].\n\nFurthermore, the healthcare environment is relatively complex and delicate, making it hard for healthcare information security professionals to design stricter access control policies. So, access control mechanisms in healthcare are mostly designed with a degree of flexibility to enable efficient patient management. While such design considerations are very important and meet the availability attribute of the CIA, the healthcare systems remain vulnerable. The broad range of access flexibility can be abused by the insiders. This can also be a dream for cyber criminals to adopt various diabolic means of gaining insiders credentials to enable them to equally have larger access. The incidence of data breaches could bring various consequences including denial of service for timely medical services, negative impact on mutual trust between patient and healthcare providers, breaches to individual's privacy and huge fines to healthcare providers by national and international regulatory bodies.\n\nThe general objective of this study was therefore to identify, assess, and analyze the state-of-the-art in artificial intelligence strategies and their hybrid aspects which can be used to efficiently detect anomaly and malicious events in healthcare staff's security practices in their access related data towards improving counter-measures for healthcare staffs related security breaches.\n\nSpecific objectives include:\n\n- Identifying AI learning algorithms which can be used to efficiently profile healthcare staff security practices for anomalies detection.\n- Assess and analyze the design considerations of the methods (such as the tolerance ranges or thresholding mechanisms provided to accommodate non-treacherous user behaviors i.e., new users, mistakes and during emergencies) towards mitigating false positives.\n- Assess and analyze their performance metrics and other suitable evaluation methods.\n- Determine associated challenges in the usage of the algorithms and how these challenges can possibly be overcome.",
+      "citations": [
+        "W2023840804",
+        "W2609990009",
+        "W2153038337",
+        "W2026026089",
+        "W657411145"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "2",
+        "4",
+        "5",
+        "7",
+        "11"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Background",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Data-Driven and Artificial Intelligence in Healthcare Security Practice Analysis",
+          "subsubsections": [],
+          "text": "Advances in computational and data sciences along with engineering innovations in medical devices have prompted the need for the application of AI in the healthcare sector [W2892370045]. This has the potential of improving care delivery and revolutionizing the healthcare industry. AI can be referred to as the use of complex algorithms and software to imitate human cognitive functions [W2664267452]. It involves the application of computer algorithms in the process of extracting meaning from complicated data and to make intelligent decisions without direct human input. AI is increasingly impacting every aspect of our lives and the healthcare sector is not an exception. In recent years, the healthcare sector is experiencing massive deployments of AI in the bid to improve the overall healthcare delivery. There is currently no consensus on the classification of the applications of AI in healthcare. However, we rely on the classification of the application of AI in healthcare described in [W2888967035] to briefly discuss deployment of AI in healthcare.\n\nThe deployment of AI in healthcare sector has been classified in [W2888967035] to include expert systems, machine learning, natural language processing, automated planning and scheduling, and image and signal processing. Expert systems are AI programs that have been trained with real cases to execute complicated tasks [W2009977178]. Machine learning employs algorithms to identify patterns in data and learn from them and its applications can be grouped into three, namely: supervised learning, unsupervised learning, and reinforcement learning [W2888967035]. Natural language processing facilitates the use of AI to determine the meaning of a text by using algorithm to identify key words and phrases in natural language [W2888967035]. For automated planning and scheduling, it is an emerging field in the use of AI in healthcare that is concerned with the organization and prioritization of the necessary activities in order to obtain desired aim [W2888967035]. And image and signal processing involve the use of AI to train information extracted from a physical occurrence (images and signals) [W2888967035].\n\nThe common characteristic of all these applications is the utilization of massive data that is being generated in the healthcare sector to make better informed decisions. For instance, the collection of healthcare staffs' generated data has been used for disease surveillance, decision support systems, detecting fraud and enhancing privacy and security [W2734995629]. In fact, the code of conduct for healthcare sector of Norway requires the appropriate storage and protection of access logs of healthcare information systems for security reasons [UNMAPPED:24]. The healthcare staffs' accesses within the network or electronic health records (EHR) leave traces of their activities which can be logged and reconstructed to form their unique profiles [W2959053930, UNMAPPED:24]. So, the appropriate AI methods can then be used to mine such logs to determine the unique security practices of the healthcare staffs. Such findings can support management to adopt suitable incentivization methods towards improving the security conscious care behavior in healthcare. Therefore, this study aims to explore for the appropriate AI methods and data sources that can be used to observe, model and analyze the security practices of healthcare staffs.",
+          "citations": [
+            "W2892370045",
+            "W2664267452",
+            "W2888967035",
+            "W2009977178",
+            "W2734995629",
+            "W2959053930"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "24"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Security practice of healthcare staffs includes how healthcare professionals respond to the security controls and measures towards achieving the CIA goals of the healthcare organizations. Healthcare professionals are required to conduct their work activities in a security conscious manner to maintain the CIA of healthcare environment. For instance, borrowing of access credentials could jeopardize the purpose of access control for authorized users and legitimate accesses. Additionally, the inability to understand social engineering scammers' behavior can lead to healthcare data breaches.\n\nVarious ways can be adopted to observe, model and analyze healthcare professionals' security practices. Perception and socio-cultural context can be adopted by analyzing the healthcare staffs' security perception, social, cultural and socio-demographic characteristics with their required security practices. Also, Attack-Defense simulation can be used to measure how healthcare staffs understand social engineering related tricks. Furthermore, data-driven approach with artificial intelligence (AI) methods could be adopted to understand the security risk of each healthcare profession. The findings can then help decision makers to introduce appropriate incentive methods and solve issues which are hindering sound information security practice towards enhancing conscious care behavior. But this study is focused on exploring for appropriate AI methods and data sources that can be used to model and analyze healthcare security practices. Therefore, psycho-socio-cultural context and attack-defense simulations are beyond the scope of this paper.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Method",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Inclusion and Exclusion Criteria",
+          "subsubsections": [],
+          "text": "For an article to be included in the review, the study has to be an anomaly detection or intrusion detection in healthcare using artificial intelligence methods in healthcare professionals' generated access logs data or patterns. Any other article outside the above stated scope (such as articles in medical cyber-physical devices, body area networks etc.) including literatures in other languages, except English, were excluded.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Data Collection and Categorization",
+          "subsubsections": [],
+          "text": "The data collection and categorization were developed based on the objective and through literature reviews and authors discussions. The categories have been defined exclusively to assess, analyze and evaluate the study as follows:\n\n**Type of AI method:** This category includes explicit machine learning methods such as Support Vector Machine (SVM), Bayesian network, etc.\n\n**Type of Input:** This category includes the features which were used by the algorithm. This could include access location, time, log in failed attempts etc.\n\n**Input Sources:** This attribute refers to the kind of access logs data which was used in the study. Such sources include browser history, network logs, host-based activity logs and electronic health records logs.\n\n**Data Format, Type, Size, and Data Source:** This category could include file format such as XML, CSV.\n\n**Input Preprocessing:** Defines how the data was preprocessed from unstructured to structured, and how missing and corrupted input data were handled.\n\n**Application Scenario:** This category defines the context of which the algorithm was implemented such as intrusion or anomaly detection.\n\n**Ground Truth:** Refers to the kind of training set used in training the model.\n\n**Privacy approach:** This defines the privacy method used to safeguard the privacy right of individuals who contributed to the data source.\n\n**Performance Metrics or Evaluation Criteria:** This includes the measures used to assess the accuracy of the study. It includes metrics such as specificity, sensitivity, receiver operating characteristic (ROC) curves, and others.\n\n**Nature of Data Sources:** This category specifies if the data used was synthetic or real data.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Literature Evaluation and Analysis",
+          "subsubsections": [],
+          "text": "The selected articles were assessed, analyzed and evaluated based on the above defined categories. The analysis was performed on each of the categories (Type of AI method, type of input, input source, preprocessing, learning techniques, performance methods etc.) to evaluate the state-of-the-art approaches. Percentages of the attributes of the categories were calculated based on the total number of counts (n) of each type of the attribute. Some studies used multiple categories; therefore, the number of counts of these categories exceeded the total number of articles of these systems presented in the study.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The objective of this study was to identify, assess and analyze the state-of-the-art data-driven and artificial intelligence (AI) algorithms along with their design strategies and challenges. The study is towards analyzing healthcare professionals' security practices in the context of big data or human-generated data in Healthcare Security Practice Analysis, Modeling and Incentivization (HSPAMI) project.\n\nA literature search was conducted between June 2019 and December 2019 through Google Scholar, Science Direct and Elsevier, IEEE Explore, and ACM Digital. Different key words such as \"Healthcare\", \"staff\", \"employee\", \"Information security\", \"behavior\", \"Practice\", \"Threat\", \"Anomaly detection\", \"Intrusion detection\", \"Artificial Intelligence\" and \"Machine Learning\" were used. For a good quality searching approach, the key words were combined using Boolean functions of 'AND', 'OR' and 'NOT'. Peer reviewed journals and articles were considered. The inclusions and exclusions criteria were developed based on the objective of the study and through rigorous discussions among the authors. Basic selection was done by initially skimming through the titles, abstracts and keywords to retrieve records which were in line with the inclusion and exclusion criteria. Duplicates were filtered out and articles which seemed relevant, based on the inclusion and exclusion criteria, were fully read and evaluated. Other appropriate articles were also retrieved using the reference list of accepted literatures. Preferred Reporting Items for Systematic Reviews and Meta-Analysis (PRISMA) flow diagram was used to report the article selection and screening [UNMAPPED:26].",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "26"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Evaluation and Analysis",
+          "subsubsections": [],
+          "text": "Evaluation and analysis of the articles were carried out as described above, and the main finds are presented below.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Articles in the Study",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "I. Algorithms",
+              "parent_subsection_id": "s_4_2",
+              "text": "The algorithms which were found in the review are as shown in **TABLE 2**. KNN method was mostly used (17%), followed by Bayesian Network (14%) and C4.5 decision tree (10%).\n\n**TABLE 2. Algorithms and their respective proportions**\n\n{{TABLE:tbl_05}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_05"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "II. Features",
+              "parent_subsection_id": "s_4_2",
+              "text": "With reference to **TABLE 3**, the features which were mostly used include Users ID (19%), Date and Time attribute (17%), Patient ID (16%) and Device Identification (DID) (14%).\n\n**TABLE 3. Features used**\n\n{{TABLE:tbl_06}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_06"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "III. Data Sources",
+              "parent_subsection_id": "s_4_2",
+              "text": "Most of the data sources were EHR logs (60%) and Network logs (20%) as shown in **TABLE 4**.\n\n**TABLE 4. Data Sources Used**\n\n{{TABLE:tbl_07}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_07"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "IV. Performance Methods",
+              "parent_subsection_id": "s_4_2",
+              "text": "Regarding performance methods as shown in **TABLE 5**, FP (23%), TP (20%) and Recall (13%) were mostly used to assess the studies.\n\n**TABLE 5. Performance Methods**\n\n{{TABLE:tbl_08}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_08"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "V. Application Scenario",
+              "parent_subsection_id": "s_4_2",
+              "text": "The studies in the review were mostly applied for anomaly detection (60%) and intrusion detection (40%) as shown in **FIGURE 4**.\n\n**FIGURE 4. Application Domain**\n\n{{TABLE:tbl_09}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_09"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "VI. Data Format",
+              "parent_subsection_id": "s_4_2",
+              "text": "Regarding file format, Comma Separated Values (CSV) was commonly used as the file format [W2938414802, W2490967029]. Some studies also used SQL file format [W2499291430, W2103070240].",
+              "citations": [
+                "W2938414802",
+                "W2490967029",
+                "W2499291430",
+                "W2103070240"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "VII. Ground Truth",
+              "parent_subsection_id": "s_4_2",
+              "text": "In the review, the ground truth was being established with similarity measures, observed and controlled practices and historical data of staffs' practices as shown in **TABLE 6**.\n\n**TABLE 6. Ground Truth**\n\n{{TABLE:tbl_10}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_10"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_8",
+              "subsubsection_index": 8,
+              "subsubsection_label": "VIII. Privacy Preserving Data Mining Approach",
+              "parent_subsection_id": "s_4_2",
+              "text": "Privacy preserving methods which were adopted in study are tokenization [W2938414802], deidentification [W2056765730] and removal of medical information [W2112066329].",
+              "citations": [
+                "W2938414802",
+                "W2056765730",
+                "W2112066329"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_9",
+              "subsubsection_index": 9,
+              "subsubsection_label": "IX. Nature of Data Source",
+              "parent_subsection_id": "s_4_2",
+              "text": "With reference to **FIGURE 5**, the nature of the data sources which were used in the studies were mostly Real data (80%) and synthetic data (20%).\n\n**FIGURE 5. Nature of Data Sources**\n\n{{TABLE:tbl_11}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_11"
+              ]
+            }
+          ],
+          "text": "The articles and their related categorizations, such as algorithms, features and data sources are shown in **TABLE 1**.\n\n**TABLE 1. Algorithms, Features, their related Data Sources and Application Domain**\n\n{{TABLE:tbl_04}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_04"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "After searching in the various online databases, a total of 130 records were initially identified by following the guidelines of the inclusion and exclusion criteria in the reading of titles, abstracts, and keywords. A further assessment of these articles through skimming of the objective, method and conclusion sections led to a further exclusion of 77 articles which did not meet the defined inclusion criteria. After removing duplicates, 42 articles were fully read and judged. After the full text reading, a total of 15 articles were included in the study and analysis as shown in **FIGURE 1**. As shown in **FIGURE 2 & 3**, the topic of data-driven and AI for analyzing healthcare security practice has seen consistent interest.\n\n**FIGURE 1. Flowchart of the systematic review process**\n\n{{TABLE:tbl_01}}\n\nAs shown in **FIGURE 2**, most of the literatures were identified in Google Scholar and followed by IEEE Explore and ACM Digital Library.\n\n**FIGURE 2. Literature Sources**\n\n{{TABLE:tbl_02}}\n\nThe articles were published between 2010 and 2019 as shown in **FIGURE 3**.\n\n**FIGURE 3. Yearly Distribution**\n\n{{TABLE:tbl_03}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01",
+        "tbl_02",
+        "tbl_03"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1 AI Methods",
+          "subsubsections": [],
+          "text": "As shown in **TABLE 2** and **TABLE 7**, various algorithms were identified in the study, but the most used methods were KNN and BN algorithms. K-Nearest Neighbors (kNN) is a supervised learning-based classification algorithm [W2110054986] which gets its intelligence from labeled data. The KNN then tries to classify unlabeled data items based on the category of the majority of most similar training data items known as K. The similarity between two data items in KNN can be determined with the Euclidean distance of the various respective feature vectors of the data item. Another method which was mostly used is Bayesian Network (BN). BN is a probabilistic classifier algorithm, based on the assumption that related pair of features used for determining an outcome are independent of each other and equal [W2110054986]. There are two commonly used methods of BN for classifying text, thus the multi-variant Bernoulli and multinomial models. KNN and BN algorithms were mostly used based on their comparatively higher detection accuracy. For instance, in an experimental assessment of KNN and BN for security countermeasures of internal threats in healthcare, both KNN and BN had over 90% accuracy. BN performed better (94%) than the KNN (93%). In a related study [W2793129310], the KNN method was found to have higher detection rate with high true positive rates and low false positive rate.\n\nThe major issue with KNN in the context of healthcare staff security generated data is the lack of appropriate labeled data [W2734995629, W2946631275, W2204970668]. Within the healthcare setting, emergencies often dictate needs. In such situations, broader accesses for resources are normally allowed, making it challenging for reliable labeled data [W2734995629, W2946631275, W2204970668]. Therefore, in adopting KNN for empirical studies, the availability of appropriate labeled data should be considered but in the absence of labeled data, unsupervised clustering methods such as K-means clustering could also be considered [UNMAPPED:26].",
+          "citations": [
+            "W2110054986",
+            "W2793129310",
+            "W2734995629",
+            "W2946631275",
+            "W2204970668"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "26"
+          ]
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2 Input Data, Features, Sources, Ground Truth, Data Format and Nature of Data",
+          "subsubsections": [],
+          "text": "The input data which was mostly used include EHR logs and Network data. A study which was conducted by Yeng et al. for observational measures towards profiling healthcare staffs' security practices identified various sources including EHR logs, browser history, network logs, and patterns of keystroke dynamics [W2959053930]. Most EHR systems use an emergency access control mechanism, known as \"break the glass\" or self-authorization [W2135414215]. This enables healthcare staffs to access patients' medical records during emergency situations without passing through conventional procedures for access authorization. A study into access control methods in Norway [W2135414215] revealed that about 50% of 100,000 patients records were accessed by 12,000 healthcare staffs (representing about 45% of the users) through self-authorization. In such a scenario, EHR remains a vital source for analyzing deviations from required healthcare security practices.\n\nRegarding Ground Truth, it refers to the baseline often used for training algorithms [W2144660879]. The detection efficiency of the algorithms can be negatively impacted if the accuracy of the ground-truth is low. As shown in **TABLE 6**, various methods such as similarity measures, observed data and historical methods were used. Similarity measure compares security practices with other healthcare professionals who have similar security practices. Observed measure is a control approach of obtaining the ground truth whereby some users were observed to conduct their security practices under supervised, required security practices [W2475499499]. But the historical data basically relied on past records with a trust that the data is reliable enough for training set. These methods can be assessed for adoption in related studies.\n\nEHR contains most of the features which were identified in this review as shown in **TABLE 7**. Features such as patients ID, Actions, and User ID are primary features in EHR logs. The actions of the users such as deletion, inserting, updating and various routes such as diagnosis, prescriptions, and drugs dispensing can be tracked in EHR logs [W2135414215].",
+          "citations": [
+            "W2959053930",
+            "W2135414215",
+            "W2144660879",
+            "W2475499499"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "5.3 Application Scenario and Privacy Preserving Log Analysis",
+          "subsubsections": [],
+          "text": "The application of AI methods to analyze big data generated by healthcare professional security practice is a reactive approach. With such approaches, the primary aim is to determine deviations or outliers in healthcare security practices and further process these anomalies for possible malicious activities. As most of the algorithms were applied for anomaly detection (60%), such methods can be used to initially detect outliers. Deep learning methods such as BN can then be used to further analyze the outliers for possible intrusions. This would help in privacy preserving at the same time while saving resources. Privacy preserving in data mining provides method to efficiently analyze data while shielding the identifications of the data subjects in a way to respect their right to privacy. For instance, a limited number of less sensitive features can be used with KNN-based algorithms and if there exist outliers, BN methods can then be applied on only a large number of the outliers to further assess these anomalies. In the review, deidentification, tokenization and sensitive data removals were some of the methods adopted to preserve privacy.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The main purpose of this systematic review was to find details of Artificial Intelligence (AI) methods and suitable healthcare staffs' generated security practice data that can be efficiently mined to determine the status of healthcare security practices with respect to required security practices. The main findings in the study are as shown in **TABLE 7**.\n\nWith reference to **FIGURE 1, 2** and **3** and **TABLE 1**, there were 15 studies which met the inclusion and exclusion criteria. Recently, a related systematic review for countermeasures against internal threats in healthcare also found about 5 machine learning methods [W2793129310] which were fit for such measures. This suggests that the adoption of AI methods for modeling and analyzing healthcare professionals' generated security practice data is still an emerging topic of academic interest.\n\n**TABLE 7. Principal findings**\n\n{{TABLE:tbl_12}}",
+      "citations": [
+        "W2793129310"
+      ],
+      "tables_in_text": [
+        "tbl_12"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Based on the galloping rate of data breaches in healthcare, Healthcare Security Practice Analysis, Modeling and Incentivization (HSPAMI) project was initiated to observe, model and analyze healthcare staffs' security practices. One of the approaches in the project is the adoption of AI methods for modeling and analyzing healthcare staffs' generated security practice data. This systematic review was then conducted to identify, assess and analyze the appropriate AI methods and data sources. Out of about 130 articles which were initially identified in the context of human-generated healthcare data for security measures in healthcare, 15 articles were found to meet the inclusion and exclusion criteria. After the assessment and analysis, various methods such as KNN, Bayesian Network and Decision Trees (C4.5) algorithms were mostly applied on Electronic Health Records (EHR) Logs and Network logs with varying input features of healthcare staffs' security practices.\n\nWith these algorithms, security practice of healthcare staffs can then be studied. Deviations of security practices from required healthcare staffs' security behavior can be examined to define appropriate incentives towards improving conscious care security practice. Analyzing healthcare staff security practice with AI seems to be a new research focus area and this resulted in the inclusion of only 15 articles in this study. Among these included articles, there were no adequate recorded performance scores. As a result, the study could not adequately perform a comparative assessment of the performance of the identified algorithms. Future work would include development of a framework and a practical assessment of the performance of these methods towards implementation in real healthcare staffs' generated logs.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3045334086_tables.md"
+}

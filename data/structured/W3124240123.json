@@ -1,0 +1,279 @@
+{
+  "id": "W3124240123",
+  "metadata": {
+    "title": "A Systematic Review of Algorithms in People Images Detection Based on Artificial Vision Techniques for Energy Management in Air Conditioners",
+    "n_sections": 5,
+    "n_subsections": 7,
+    "n_subsubsections": 0,
+    "n_tables": 14
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "There are currently laws that collaborate in the preservation and proper use of energy to extend the useful life of the components involved, reduce consumption costs, and generate positive changes to the problem of excessive use of the planet's non-renewable, natural resources. The rising technological development during the 21st century has increased electrical energy consumption. The creation of countless electrical-electronic appliances and devices derived from the IoT (Internet of Things) - currently wireless connections - have made people's lives easier. Consequently, there is a higher demand for electrical energy. These factors cause excessive consumption of it, which becomes a problem through people's misuse of electrical equipment.\n\nWith the emergence of smart and energy-efficient technologies, the purpose is to manage energy [UNMAPPED:1]. Energy management is conceived as an organized and structured effort to achieve maximum efficiency in the supply, conversion, and energy resources usage [W2587541018, W2983771969, UNMAPPED:1]. That is, to achieve a more rational use of energy, which allows reducing its consumption without affecting comfort, productivity, quality of services, and, in general, without lowering the standard of living.\n\nThe misuse of air conditioners is considered a problem at present, which has exploded exponentially, as indicated [UNMAPPED:4], who estimates that by 2030, there will be 700 million Air Conditioners (A/C) and that by 2050 the figure will double. Based on these problems, one of the challenges of modern society is to go further in terms of using technologies that are sustainable, intelligent, efficient, and that, when synchronized, provide comfort in the lifestyle of its users, to a low cost in its consumption [W2529158195, W2987070807, UNMAPPED:7]. As [W3007976230] indicated, the world is increasingly inclined towards artificial intelligence and the IoT, with the development and application of techniques that they allow people to be detected, running in various scenarios, be it surveillance, identification, security, automation, electrical efficiency, among others. According to [UNMAPPED:9], detection systems must have two parts: the selection of a method that extracts one of the characteristics of people (faces, actions, poses, images of people), and the development of an efficient detection algorithm.\n\nDetection algorithms work in conjunction with computer vision because techniques must automatically analyze, recognize, and understand images and videos. As the authors indicate [W2289789804, UNMAPPED:11], this has various applications, whose main task is to recognize specific objects or people [W3017494266]. Based on the study of object detection, the purpose is to initiate research on the innovation of a person's face and detection [W3017494266]. These investigations consider development methods and techniques to detect people in images, bearing in mind that the study of an effective way for pattern recognition continues, according to [W3015342372].\n\nAccording to [W2883487533], with technological evolution, energy management has become one of the main objectives of those who make usage of it, which is why systems are developed to collaborate with energy efficiency in places or equipment in which they are applied. This factor allows for the automation of the environment so that it interacts with humans. That is, they work the moment they detect their presence. Otherwise, they remain off, so as not to generate unnecessary consumption of electrical energy obtaining an optimal service, with less energy required, less pollution, and at a lower price than the current one. According to the authors [W1539689723, UNMAPPED:7, UNMAPPED:16], automation is presented as an opportunity to achieve energy efficiency by keeping under control, regularly and continuously the desired values of the energy consumption parameters of the processes that make use of it. This allows users to avoid excess consumption of energy resources, water, raw materials, reducing environmental pollution, and improving operational safety. As a result, there are lower operating costs and improvements in competitiveness.\n\nThis research aims to identify the algorithms in the detection of people through artificial vision, and their application focused on the management of energy in air conditioners. The following research questions were established: Q1: How many studies refer to algorithms based on the detection of a person's image? Q2: How many studies refer to energy management in air conditioners based on artificial vision? Q3: Are there artificial vision techniques for the automatic switching on and off a device? Q4: What types of algorithms in detecting a person's image based on an artificial vision that exists today?\n\nThis document is divided as follows: Section 2 shows the methodology for the research's development. Section 3 focuses on analyzing the results obtained from the search for information from the questions posed for the investigation. Section 4 describes the discussion of the results obtained. Finally, there are the conclusions.",
+      "citations": [
+        "W3007976230",
+        "W2289789804",
+        "W3017494266",
+        "W3015342372",
+        "W2883487533",
+        "W1539689723"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "4",
+        "9",
+        "11",
+        "7",
+        "16"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Systematic Review",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Research planning",
+          "subsubsections": [],
+          "text": "As an effort to achieve the purpose of this research, the following questions are established: Q1: How many studies refer to algorithms based on the detection of the image of a person?, Q2: How many studies refer to energy management in air conditioners based on artificial vision?, Q3: Are there artificial vision techniques for the automatic switching on and off of a device?, and Q4: What types of algorithms in detecting a person's image based on artificial vision exist today?\n\nIn elaborating on the information search criteria, the authors [W2149815841] were considered suggestions, which indicate that the research questions must relate to specific keywords. Likewise, certain terms are identified as they encompass the subject and reflect on the keywords to be used as criteria in the research.\n\nIEEE Xplore Digital Library, Science Direct, Springer, and ACM Digital Library are the information sources with which the research was established. The search for information was developed in various ways, including logical and/or operators as connectors and keywords used to create the information search chain (indexed articles, journals, books, and records of conferences).\n\nBoth inclusion and exclusion criteria were considered for this study. Based on the inclusion criteria, available, full-text articles in journals and books were considered. These articles can be from a literature review and/or systematic review, and articles related to research questions. The research range of these articles was from years 2015 to 2020.\n\nIn the exclusion criterion, after applying a manual filter based on the reading of the document's abstract, it is determined whether the articles coincide with the inclusion criteria. In the research chain, the protocols are defined after considering the author [W2040281784], selecting information sources, and creating a research strategy. The following keywords were considered: algorithms in the detection of patterns of a person, energy management in air conditioning through artificial vision, component applied in air conditioning to improve energy efficiency, devices used in air conditioning to improve energy efficiency, component applied in air conditioning, and devices used in air conditioning. The research considers the following specific fields: Title, Abstract, Keyword, Document title, Publication title, study, areas, filters. Additionally, the search is limited by a range of years 2015-2020.",
+          "citations": [
+            "W2149815841",
+            "W2040281784"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Information search",
+          "subsubsections": [],
+          "text": "Completing the information research process presented in **FIGURE 1** considered the established criteria provided in the previous section.\n\n**FIGURE 1: Search process**\n*(Application of search criteria: Search string + IEEE Xplore |467| ACM Digital L. |101030| Springer |24620| Science Direct |31848| Studies found |148965| Relevant studies (Reading abstracts) [UNMAPPED:213] Main Studies (Detailed Reading of articles) [W2512375861])*\n\nThe application of the search chain completed the process of information collection to each of the data sources. As a result, a total of 213 relevant articles were obtained, see **TABLE 1**.\n\n**TABLE 1: General results of the search string 2015-2020**\n\n{{TABLE:tbl_01}}\n\nThe first part of the information research was developed by reading various articles' summaries while fulfilling the filter function. The documents were reviewed and refined, eliminating those that did not match the established criteria. Thus, of the 213 articles, 46 articles were considered primary studies for our research to obtain data about algorithmic models related to the detection of people's patterns and their possible improvement in the management of energy in air-conditioned.\n\n**FIGURE 2** shows the search chain results, allowing users to compare the values found in each of the bibliographic sources used in our research.\n\n**TABLE 2: Search string results**\n\n{{TABLE:tbl_02}}",
+          "citations": [
+            "W2512375861"
+          ],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02"
+          ],
+          "citations_unmapped": [
+            "213"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Results found",
+          "subsubsections": [],
+          "text": "**Results found that refer to Q1, on the algorithms in detection of images:** This section shows the results found for Q1: How many studies refer to algorithms based on the detection of a person's image? Among the research results, 17 main articles related to algorithms based on the detection of patterns of a person were considered. Algorithms of interest were identified to describe this research. They were classified based on the search sources, considering the criteria, years of publication (UNMAPPED:2015, UNMAPPED:2016, UNMAPPED:2017, UNMAPPED:2018, UNMAPPED:2019, UNMAPPED:2020) while viewing the primary studies as a reference, as shown in **TABLE 3**.\n\n**TABLE 3: Results found by years**\n\n{{TABLE:tbl_03}}\n\nTable 3 indicates the year corresponding to each article found with the criteria mentioned in section 2.1. **FIGURE 3** shows the articles found about the libraries and the years in which they were published.\n\n**TABLE 4: Articles found by year**\n\n{{TABLE:tbl_04}}\n\n**Results found in relation to Q2, on how many studies refer to energy management in air conditioners based on artificial vision:** For Q2: How many studies refer to energy management in air conditioners based on artificial vision? Of the articles found and described by year in Table 1, 15 articles were considered as they are related to energy management, technologies applied in air conditioners, and artificial vision with limited results. Finding a limited study allows the determination that the application of artificial vision techniques in relation to the Internet of Things (IoT) makes it feasible in this research. So, there are also air conditioners with inverter technology, which have a high cost according to the sector where it is used.\n\n**TABLE 5** shows the results obtained in the search for information about the distribution by year and digital library used in this research. Additionally, **FIGURE 4** graphically illustrates the articles' statistical trend due to the search by years and by a digital library, considering the authors in reference [W3036572717].\n\n**TABLE 5: Results found by years**\n\n{{TABLE:tbl_05}}\n\n**TABLE 6: Articles found by year**\n\n{{TABLE:tbl_06}}\n\n**TABLE 7: Energy management methods in air conditioners**\n\n{{TABLE:tbl_07}}\n\nConsidering the authors [W2808872741, W2966143007], Table 7 describes the characteristics, advantages, disadvantages and the tangible and intangible components related to the methods found, which allow an improvement in energy efficiency in air conditioning.\n\n**TABLE 8: Techniques applied for the automatic on and off an A / C**\n\n{{TABLE:tbl_08}}\n\n**Results found for Q3: are there artificial vision techniques for the automatic switching on and off a device?** Q3: Are there artificial vision techniques for the automatic switching on and off of a device? Fourteen studies related to the automatic switch-on and switch-off of air conditioners with the use of different types of detection sensors, considering that detection systems based on video cameras applied to air conditioners are limited and expensive. The authors [W2775168575, W2972721862] express that computer vision, and people-tracking techniques would contribute positively to the energy management in air conditioners. Therefore, Table 8 describes methods found to optimize air conditioners' use, which consider the internet of things, people detection techniques, and automatic learning of the components involved. These are developed based on artificial intelligence and its relationship with the increase of data.\n\n**TABLE 9** shows the range of years related to the publication of articles found and the search source from which the studies originate.\n\n**TABLE 9: Results found by years**\n\n{{TABLE:tbl_09}}\n\n**Results found about Q4 related to the types of algorithms in detecting a person's image based on artificial vision currently exist:** Regarding Q4: What types of algorithms in detecting a person's image based on artificial vision exist today? Five types of algorithms were found, as described in **TABLE 10**, with their respective characteristics, advantages, and disadvantages considered in this research.\n\n**TABLE 10: Types of algorithms found**\n\n{{TABLE:tbl_10}}\n\n**TABLE 11** shows the parameters of the relationship for the different types of algorithms found, which allowed us to obtain the total efficiency of the algorithm for detection, considering that these results are a contribution to our research, in this case, if we focus on the automatic on and off of an air conditioner through techniques related to artificial vision.\n\n**TABLE 11: Found and related parameters between algorithm types**\n\n{{TABLE:tbl_11}}\n\nAccording to the relationship of algorithms shown in Table 11, a comparison was made by analyzing the partial efficiency of each algorithm to obtain a total efficiency (as detailed in **TABLE 12**). Additionally, it is observed that the algorithms of Viola-Jones and Histogram of Oriented Gradients (HOG), whose main characteristic is the detection of faces, which, when mixed with other methods and algorithmic models, manages to detect human actions. This includes detecting the image of a person based on artificial vision considering the authors [W2806990378].\n\n**TABLE 12: Results of the total efficiency of the algorithms in detecting a person's image**\n\n{{TABLE:tbl_12}}\n\n**FIGURES 5 and 6** show the graphs related to the statistical trend of the percentages in partial effectiveness regarding the Viola-Jones algorithms and the Oriented Gradients Histogram with greater total efficiency.\n\n**TABLE 13: Partial effectiveness of the HOG algorithm**\n\n{{TABLE:tbl_13}}\n\n**TABLE 14: Partial effectiveness of the Viola-Jones algorithm**\n\n{{TABLE:tbl_14}}",
+          "citations": [
+            "W3036572717",
+            "W2808872741",
+            "W2966143007",
+            "W2775168575",
+            "W2972721862",
+            "W2806990378"
+          ],
+          "tables_in_text": [
+            "tbl_03",
+            "tbl_04",
+            "tbl_05",
+            "tbl_06",
+            "tbl_07",
+            "tbl_08",
+            "tbl_09",
+            "tbl_10",
+            "tbl_11",
+            "tbl_12",
+            "tbl_13",
+            "tbl_14"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This research is based on the systematic review of journals, books, and documents with scientific content related to the detection of people's image utilizing artificial vision techniques focused on the automatic on and off an air conditioning to manage the energy. The development of this systematic review is based on the criteria of the authors [W2149815841, W2040281784, W3036572717]. The established criteria are the following: Research planning, information research development, and results.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Analysis",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Analysis of the algorithms found based in detecting a person's image",
+          "subsubsections": [],
+          "text": "The studies that refer to Q1 were chosen to know the algorithms based on the detection of a person's image, considering their efficiency related to the detection, characteristics that it detects (faces, the image of a person, signs, among others). The process of this search for information was developed by collecting studies in the four libraries designated for the research where 213 relevant studies were obtained. These were methodically reviewed to verify their relevance to the research topic. From the review of relevant studies, 17 primary studies were obtained. Within these relevant studies, specific detection algorithms are detailed as they consider the year range of publication (UNMAPPED:2015, UNMAPPED:2016, UNMAPPED:2017, UNMAPPED:2018, UNMAPPED:2019, UNMAPPED:2020) and the consistency with the study subject.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Analysis on energy management in air conditioners based on artificial vision",
+          "subsubsections": [],
+          "text": "This section refers to Q2 and details studies to propose methods that generate energy savings in air conditioners with their respective application. This is possible either through a temperature sensor, movement, and thermostats. There is even described limited information from studies that mention artificial vision as control of the ignition of air conditioning systems that use cameras (either video or thermal) to fulfill the function of detecting people and turning on air conditioners. This applies mainly to large environments, such as large buildings, universities, offices, as indicated by the authors [W2966143007]. This provides different contextualization about the benefits such as temperature control, occupancy level, and outside temperature. This section mentions how energy can be managed efficiently, among which electronic components that point towards automation stand out, making their operation intelligent, obtaining benefits for the equipment, and economic benefits in terms of reducing consumption electric.",
+          "citations": [
+            "W2966143007"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Analysis of artificial vision techniques for automatic switching on and off a device",
+          "subsubsections": [],
+          "text": "This section refers to the analysis of Q3, where the techniques found in the studies obtained through the research chain are detailed. These techniques are utilized in the automatization of air conditioners. Additionally, this allows efficient use of the equipment, generating multiple benefits, including energy-saving, optimization of the equipment involved, and correct use of the energy resources used in the process. In the search for information, other techniques that appeared among the results shown and that had high coincidence with this research criteria were considered. They are described as the trends of the current world, including the IoT and machine learning through algorithms based on recognizing patterns of a person or through apps connected to an intelligent network. Today these techniques are widely applied in various fields and have significantly impacted a world that points to artificial intelligence.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Analysis of the types of algorithms of a person's image based on artificial vision existing today",
+          "subsubsections": [],
+          "text": "Regarding Q4: What types of algorithms in detecting a person's image based on artificial vision exist today? Five types of algorithms in pattern recognition related to the detection of people were identified. Based on the characteristics, advantages, and disadvantages of these algorithms, one can describe the feasibility and effectiveness of detection. From this information, parameters related to detection efficiency are represented with a 50% hierarchy since detection is the main parameter of the algorithm's correct operation. The effective distance allows the determination of the reduction in the number of false positives or negatives along with throughout the process, considering a distance of 2 to 9 meters for the proper functioning of the application in energy management. So, if the algorithm's effective distance is in that range, you will obtain 25% of the total efficiency; otherwise, you will obtain 0% since the algorithm would have many flaws in the application. For the efficiency in the recognition time, a hierarchy of 10% was assigned, in view that the algorithm needs real-time detection. Therefore, if the recognition time is in milliseconds (ms) parameters, you will obtain 10% efficiency; otherwise, you will get 0%. In regards to the recognized pattern, it is determined with a hierarchy of 10%, that this will be fulfilled as long as the algorithm detects the complete image of people, otherwise, if it detects only the face, the efficiency will be 5%, and if it does not detect faces or images of people, the efficiency will be 0%, this weighting of percentages has been estimated because in an artificial vision for energy management in air conditioners it is preferable that it detects the complete image of the person. Finally, concerning the Occlusion of light, a hierarchy of 5% was assigned when considering the exterior lights. In case of affecting the interior lights, it is established to modify the position of the camera. These percentages allow the determination of their efficiency based on equation (1) and feasible criteria for this analysis, which is described with a percentage hierarchy and obtaining a total efficiency that describes the Viola-Jones algorithms with 91.5% and Histogram Oriented Gradients (HOG) with 90.29%, as the most efficient.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Based on the questions posed and the methodology applied, a general analysis of the number of studies obtained through the data sources used in this research was determined. Considering that IEEE Xplore was the library for which the largest number of main studies were found with 21 articles, which represent 45.65%; followed by ACM Digital Library with 14 studies, representing 30.43%; Science Direct with seven studies that contemplate 15.22%; and finally, there is Springer with four studies that represent 8.70%.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Regarding the four research questions posed, it was determined that in Q1, 17 main articles were obtained that refer to algorithms based on the detection of person's image. There were various detection characteristics, all of which were based on vision, artificial (video cameras), starting from the recognition of signs in hands, facial expressions, and the detection of a person's image.\n\nRegarding Q2, there are various ways of managing energy in air conditioners, the main and most widely used being thermostats and temperature sensors, which act as a switch when opening and closing a circuit based on the user's set point. This parameterization function is performed manually. Several studies mention the automation of thermostats and various sensors that interact with air conditioners to provide comfort to users. In the industrial field, there are HVAC systems that cover everything related to air conditioning. This system tends to automate its services to provide comfort to users. In relation to air conditioning, several studies mention presence, temperature, movement sensors, and even thermal cameras that help maintain thermal comfort at the exact point of comfort.\n\nRegarding Q3, two techniques stood out within the studies obtained related to this question. Various investigations mentioned the same technique as the basis of their research, raised from different application areas. The Internet of Things (IoT) is one of the most common techniques nowadays. It allows managing various actions that are commonly manual through the network and mobile applications, including the automatic on and off of an air conditioner, the detection of people, temperature, occupation of the place, and other forms of automation of an A/C. On the other hand, automatic learning is applied to electronic components, mostly thermostats, allowing automatic temperature adjustment, saving that data to create a memory based on user experience.\n\nIn regards to Q4, considering an application established in algorithms in the detection of a person's image based on the artificial vision for the management of energy in air conditioners, and per the results obtained by establishing a hierarchical weighting that allowed considering the efficiency to determine its effectiveness in the algorithms found. The Viola-Jones algorithms were found with 91.5% and Histogram of Oriented Gradients (HOG) with 90.29% of total efficiency, so it is determined that any of these two algorithms meet the requirements necessary for energy management.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "With the systematic review of algorithms on detecting a person's image based on an artificial vision for the management of energy in air conditioners, a total of 213 studies considered relevant were found after applying selection criteria. Finally, a sample of 46 was obtained as primary studies to serve as the foundation for this research. This work was based on the research questions proposed in this document in relation to the different algorithms in the detection of people, energy management in air conditioners, artificial vision for the automatic on and off-air conditioners.\n\nFive types of algorithms were found, which are described with the respective characteristics, advantages, and disadvantages, considering the use of different electronic devices to obtain a more exact precision according to the environment in which it is applicable. Various parameters, such as effective detection, effective distance, recognition time, pattern detected, and occlusion effects, were also determined.\n\nThis research shows that the detection efficiency parameter is not the only important factor to consider when making an algorithm choice. A clear example of this is the PCA and LBP algorithm because, even though it had a high percentage (%) of efficiency when detecting people, the time and distance parameters are not feasible compared to the other algorithms.\n\nThe results of this research determine the viola-jones algorithm as the most effective, presenting greater effectiveness with 91.5% in relation to the other algorithms, followed by the HOG algorithm with 90.29% effectiveness. Thus, one can conclude that this algorithm could be used in various applications such as security, energy management, video surveillance, environment, etc. While considering the different efficiency parameters as determined in this study.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3124240123_tables.md"
+}

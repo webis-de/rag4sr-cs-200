@@ -1,0 +1,589 @@
+{
+  "id": "W4309072604",
+  "metadata": {
+    "title": "Automatic Engagement Estimation in Smart Education/Learning Settings: A Systematic Review of Engagement Definitions, Datasets, and Methods",
+    "n_sections": 6,
+    "n_subsections": 7,
+    "n_subsubsections": 8,
+    "n_tables": 13
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Recognizing learners' engagement can provide insight for enhancing learner-educator, learner-learning material, and learner-learner interactions [UNMAPPED:1]. Learner engagement has been found to be positively correlated with academic achievement [W2793005603], and higher engagement levels lead to better learning outcomes [W1657550699]. A good engagement state is associated with curiosity, interest, optimism, and passion, which enhances motivation to continue learning and pursue achievement [W2169570446]. Therefore, engagement is an essential component in the learning process that may reduce dropout rates, increase productivity and learning, and provide insights for improving course content and lecture plans [W2169570446, W2022451761].\n\nResearch on engagement can be considered from two perspectives [W2090902583]. Robot/computers/agents can be viewed as supports for increasing human engagement [W2108197984, W2055336313, W2105410877, W3143996792] or as tools for automatically estimating human engagement [W2081112272, W2121557515, W1979531823, W2077106070, W2032328623, W2080675722, W2090902583]. In this article, we mainly focus on the second perspective.\n\nMoreover, engagement estimation methods can be divided into three categories: manual, semiautomatic, and automatic [W2919890647]. In traditional offline classrooms, educators can recognize engagement levels directly or use manual observation checklists and rating scales. In contrast, in distance learning settings, learner engagement is more difficult to estimate due to limitations with learner-educator interactions. Therefore, a smart learning setting that allows automatic engagement estimation is one of potential solutions for addressing this limitation.\n\nRecent improvements in computational hardware and software that support classic machine learning and deep neural networks have led to promising research on automatic engagement estimation [W1661563386, UNMAPPED:20]. In particular, with the outbreak of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), work in this field has increased considerably [W3123986046]. Automatic engagement has become an important topic in several fields, such as human interaction research, including human-human interactions (HHIs) [W3209498350], human-robot interactions (HRIs) [W2108197984, W2802627404, W2979595880, UNMAPPED:23], human-computer interactions (HCIs) [W4221020844, W2891325162, W2345031027], and embodied conversational agents (ECAs) [W2150150736]. Furthermore, classroom applications are critical for improving smart education [W2772490252, W2982670714, UNMAPPED:1].\n\nSeveral automatic engagement estimation methods have been proposed in recent years. Among them, computer vision-based techniques are the most popular because nonverbal behaviours (including head motion, eye gaze, and body pose) play key roles in determining engagement levels [UNMAPPED:32]. In addition, computer vision-based approaches offer unobtrusive assessments, similar to classroom situations where teachers observe learners without interrupting their activities. These methods are also cost-effective and usable in the near term [W2590255117]. Therefore, in this article, we conduct a systematic review on computer vision-based automatic engagement estimation methods that utilize appearance-based cues (such as videos or images).\n\nSome physiological information-based methods that have received considerable attention in automatic engagement estimation research are also discussed. The development of cost-effective biosignal hardware, such as electroencephalogram (EEG), electrocardiogram (ECG), facial electromyogram (fEMG), and galvanic skin response (GSR), has provided simple and easy-to-use solutions [W2625929003]. Moreover, physiological signals support personalized analyses, which is pertinent for learners with special needs, such as those with autism [UNMAPPED:23].\n\nIn this review, we aim to provide new researchers and educators in smart education and distance learning settings with an overview of the primary requirements and methods used to develop automatic engagement estimation methods, particularly in education/learning settings. The definitions, datasets, and methods are summarized in benchmark tables to provide an accessible overview of the systematic frameworks.\n\nThe research questions that guided this review were defined as follows:\n\n- RQ1: How should the type of engagement to be measured be defined?\n- RQ2: What datasets are suitable for developing automatic engagement estimation methods?\n- RQ3: What automatic engagement estimation methods have been developed in the literature?\n\nWe followed the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) to select articles for this review. In the literature, we first reviewed the definition of engagement to help new researchers understand what type of engagement they want to focus on. Understanding the type of engagement being focused on is important before engagement levels are measured to determine which engagement cues, datasets and methods should be used. The widely used datasets and machine learning-based methodologies for automatic engagement estimation are then examined.\n\nThe remainder of this article is organized as follows. The procedure for selecting the articles for this review is explained in \"Review method\" section. \"Results and discussions\" section presents the key finding based on the RQs. Finally, the conclusions, including the contributions, limitations, and future directions, are summarized in \"Conclusion\" section.",
+      "citations": [
+        "W2793005603",
+        "W1657550699",
+        "W2169570446",
+        "W2022451761",
+        "W2090902583",
+        "W2919890647",
+        "W1661563386",
+        "W3123986046",
+        "W3209498350",
+        "W2150150736",
+        "W2772490252",
+        "W2982670714",
+        "W2590255117",
+        "W2625929003"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "20",
+        "32",
+        "23"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Review Method",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "Identification",
+          "subsubsections": [],
+          "text": "The literature search was carried out by selecting research articles from the following electronic databases and libraries: Scopus, Mendeley, IEEE Xplore, and ScienceDirect. The following criteria were used to define the included studies:\n\n- Focused on machine learning-based estimation\n- Deployed in education/learning settings\n- Journal publications or conference proceedings only if they developed an influential dataset for engagement estimation.\n\nBased on the above criteria, we identified articles that satisfied the following terms: (1) keywords: automatic AND engagement OR student engagement OR learner engagement AND estimation OR prediction OR recognition; (2) publication year: 2010-2022; and (3) literature type: research article, excluding books, magazines, news articles, and posters. Additionally, to obtain more references, we used the snowballing approach by searching Google Scholar. A total of 429 articles were obtained in the identification phase according to the aforementioned search terms.",
+          "citations": [
+            "W2793005603",
+            "W1657550699"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "Screening",
+          "subsubsections": [],
+          "text": "In this phase, duplicate articles were excluded. Then, the titles and abstracts were scrutinized to determine whether they met the review criteria. The exclusion criteria included systematic reviews, surveys, and preliminary works (e.g., only report designs). With the exclusion criteria, 352 articles were excluded, yielding 124 articles.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "Eligibility",
+          "subsubsections": [],
+          "text": "Journal articles and conference proceedings were assessed for eligibility in this phase. The titles, abstracts, main contents, and conclusions were examined to ensure that they met the inclusion criteria. In addition to the exclusion criteria mentioned in the screening phase, we also excluded articles that did not focus on automatic engagement estimation or were not related to education/learning settings. Even though face detection/recognition is a component of engagement estimation in some cases, we excluded articles that focused more on face detection/recognition than on engagement estimation.\n\nA total of 10 journal articles were excluded in this phase according to the exclusion criteria. For the conference proceedings, only articles that proposed an influential dataset for engagement estimation were included. With this condition, 73 out of 76 articles were excluded.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "Inclusion",
+          "subsubsections": [],
+          "text": "Finally, a total of 47 articles were selected, including 44 journal articles and 3 conference proceedings. In this review, we focused on three main topics: engagement definitions, datasets, and methods. In the discussion section, we also present some supporting articles with citations in the literature.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The systematic review methodology employed in this study was adopted from the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) model [W3144543375]. The review structure was guided from PRISMA 2020 Checklist addressing the abstract, introduction, methods, results, and discussion. However, for readability reason, we include the discussion in results section, which also is presented to address each RQ, and in conclusions section.\n\nA literature search was carried out based on PRISMA flow diagram with modification by adding eligibility phase. Therefore, there are 4 phases in the flow, i.e., identification, screening, eligibility, and inclusion. We also modify the flowchart by adding initial inclusion criteria (such as keywords, timeline, and literature type), and focus discussion (i.e., engagement definition, dataset, and method). **Figure 1** shows the modified PRISMA flowchart used to select articles in this review.\n\n**FIGURE 1**\nIllustration of the article selection process adopted from PRISMA flow diagram",
+      "citations": [
+        "W3144543375"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Results and Discussions",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "RQ1: How Should the Type of Engagement to be Measured Be Defined?",
+          "subsubsections": [],
+          "text": "In engagement estimation studies, the definition of engagement varies considerably. The definition of engagement depends on the main focus of the study [W2588855640, W2000388297]. In educational or learning contexts, we found that the three main research domains depended on the engagement stimuli: HCI, HRI, and ECAs, HHI.\n\nAlthough HRI research is novel in the field of education, robots can assist humans in different learning processes, such as helping children learn cognitive and social skills and supporting educators teaching difficult concepts [UNMAPPED:38]. Robots can not only assist in learning processes but can also measure and increase learner engagement [W2742822919, UNMAPPED:23, UNMAPPED:40]. HRI researchers defined engagement via two approaches. The first approach defines engagement as a process during interactions that combines verbal and nonverbal communication between two (or more) partners, and the second approach defines engagement as an interaction quality metric.\n\nMoreover, researchers who focused on ECAs [W1571196823] and intelligent tutor systems (ITSs) [W1982709543] viewed engagement as a value that indicates how likely a person is to remain with their partner and continue an interaction.\n\nFurthermore, engagement estimation research in the field of HCI defined engagement based on engagement cues in computer-based learning, such as learners watching videos, writing, and playing educational games, or in classroom recordings [W2081112272, W2345031027, UNMAPPED:1].\n\nThis inconsistent definition of engagement in the literature due to the lack of consensus and taxonomy for learning engagement [W2979595880] may cause confusion for new researchers in this field. To address this challenge, we introduce a taxonomy for engagement and systematically review the definition of engagement used in the selected articles (**Figure 5**). As a baseline, we follow the definition of engagement in education and learning environments proposed by Fredricks et al. [W2169570446], which has been widely used in engagement research [W2199276470, W190379316, W2071708523, W2893337773, W2129514660].\n\nEngagement is associated with internal states constructed by various cues and may not be visually apparent. Fredricks et al. [W2169570446] divided engagement into three categories: behavioural, emotional, and cognitive engagement. Although, in this definition of engagement, the components to construct each type of engagement overlap considerably, as shown in **Figure 5**.\n\nBehavioural engagement describes learners' participation in learning and tasks [W2169570446]. In classroom settings, behavioural engagement is shown by actively participating in class, such as by asking questions or displaying attention and concentration [UNMAPPED:1]. Emotional engagement refers to learners' affective reactions in the classroom or during learning, including interest, boredom, happiness, sadness, and anxiety [W2169570446]. Cognitive engagement, which is also referred to as self-regulation, incorporates learners' psychological investment in learning, including their flexibility in problem solving, learning motivation, and coping mechanisms when faced with failure.\n\n**FIGURE 5**\nTaxonomy of engagement definition and its components\n\nThe components for assessing engagement include effort, attention, and persistence for behavioural engagement; various emotional reactions (such as anger, surprise, disgust, enjoyment, fear, and sadness [W1588539311]) to the learning materials for emotional engagement; and metacognitive strategies, namely, how learners set goals, plan, and organize their study efforts, for cognitive engagement [W2169570446].\n\nIn developing automatic engagement estimation methods, these components can be obtained with several modalities (Table 2), such as log files, which include information related to learner performance, reaction times, and errors [W2533014371, W2592949236, W2183210442]; affective cues, including face and body analyses from video/images [W2081112272, W2485075409, W2462985838]; and physiological cues, such as galvanic skin responses [W2889729260, W3089637615], electroencephalograms (EEGs) [UNMAPPED:56, UNMAPPED:57], heart rates [W2994012844, W2345031027], and combinations of these cues [W2590255117].\n\nThe engagement level can be determined by grouping emotions according to Ekman's basic emotions [W1588539311] or Russel's model [W2149628368]. For example, Altuwairqi et al. [W3161832360] suggested that 'surprised' indicates strong engagement; 'enthusiastic', 'excited', and 'nervous' indicate high engagement; 'satisfied' and 'happy' indicate medium engagement; and 'bored' indicates low engagement. Other behaviours, such as not looking at the computer and playing with hair, are classified as disengagement. For two-level classification, strong, high, and medium engagement are grouped into the high engagement class, while low and disengagement are grouped into the disengagement class. In addition, Olivetti et al. [W2997084177] divided engagement level into three classes based on the first and fourth quadrants of Russell's model: Class 1 included bored, relaxed, and unresponsive; Class 2 included happy, attentive, content, and perplexed; and Class 3 included surprised, astonished, and embarrassed.\n\nConsulting the taxonomy, we then reviewed the definition of engagement with a two-step approach. First, we examined the modalities used in each article and how the engagement level was determined. The articles included three common engagement modalities: affective cues (including audio and visual), physiological cues, and log files that were annotated to determine engagement. Some works used publicly available datasets or facial expression tools that already included basic emotion labels. Therefore, we included basic emotions in the taxonomy at the same level as the other modalities to further define the type of engagement (i.e., behavioural, emotional, or cognitive). Note that one engagement cue does not exclusively correspond to one engagement type, as previously discussed.\n\nFor example, Apicella et al. [W4223434129] estimated emotional and cognitive engagement with a physiological sensor, i.e., EEG signal acquisition, because the type of stimuli considered during data collection was related to internal emotions and the cognitive task. In this case, two types of stimuli, namely, social feedback and background music, which were organized based on Russel's four quadrants, were used to estimate emotional engagement, while a cognitive task (Continuous Performance Test) was used to estimate cognitive engagement.\n\nMoreover, Goldberg et al. [W2995682556] analysed three types of engagement with one modality, namely, videos recorded in an offline classroom. The behaviour of the students (on- or off-task) in the videos and a knowledge test presented during the lecture were used to estimate the behavioural and cognitive engagement levels, while facial features were extracted from the video to analyse emotional engagement. Therefore, in addition to the engagement cues used, defining what type of engagement is being measured depends on what stimuli were presented to the participant during data collection and what physical or cognitive behaviours were observed.\n\nOverall, most of the selected articles analysed emotional engagement (n = 40; 65.57%) with affective cues (n = 38; 57.58%), including visual (from videos, which show facial, body, and head information) and audio (speech) cues (**Figures 6** and **7**) (See **Appendix Table 2**).\n\n**FIGURE 6**\nPie chart of the engagement types estimated in the selected articles\n\n{{TABLE:tbl_04}}\n\n**FIGURE 7**\nPie chart of the engagement cues measured in the selected articles\n\n{{TABLE:tbl_05}}",
+          "citations": [
+            "W2588855640",
+            "W2000388297",
+            "W2742822919",
+            "W1571196823",
+            "W1982709543",
+            "W2081112272",
+            "W2345031027",
+            "W2979595880",
+            "W2169570446",
+            "W1588539311",
+            "W2485075409",
+            "W2462985838",
+            "W2889729260",
+            "W3089637615",
+            "W2994012844",
+            "W2590255117",
+            "W2149628368",
+            "W3161832360",
+            "W2997084177",
+            "W4223434129",
+            "W2995682556"
+          ],
+          "tables_in_text": [
+            "tbl_04",
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "38",
+            "23",
+            "40",
+            "1",
+            "56",
+            "57"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "RQ2: What Datasets Are Suitable for Developing Automatic Engagement Estimation Methods?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Engagement Measurement",
+              "parent_subsection_id": "s_3_2",
+              "text": "There are various approaches for measuring engagement, including self-reports, experience sampling techniques, teacher ratings, interviews, and observations [W17686987]. In addition, different indices (such as performance indices, number of clicks, and sensor data) have been used to assess engagement [W2979595880, W4223434129, W2108197984]. However, external observations, self-reported measures and ratings are commonly used to measure engagement [W2081112272, W2588855640]. Moreover, most publicly available engagement datasets were collected based on external observations by external annotators (n=20; 43.48%) (**Figure 8**).\n\n**FIGURE 8**\nPie chart of the engagement measurements and annotations used in the selected articles\n\n{{TABLE:tbl_06}}\n\nSelf-reported measures are cheaper and easier to collect than external observations, which require more personnel to measure engagement [W2588855640]. Self-reports can be performed by self-annotating or completing questionnaires related to self-engagement [W4255441728]. However, self-reported measures are prone to Dunning-Kruger effects, as people are biased in recognizing self-competence [W2146006411, W2591092602]. In addition, these measures dependent strongly on participant compliance and diligence [W3085273257]. The bias associated with self-reported measures was also observed by Ramanarayanan et al. [W2748183556, W2767652681].\n\nFurthermore, observational measures limit the judgement quality of learners' actual effort, participation, or thinking [W2169570446, W4235543410]. An external observer is an overhearer [W2158247508] that may not consider nonverbal behaviours as signs of engagement. For example, learners who are judged to be on-task or engaged by observers may not actually be thinking about the learning material. In contrast, some learners who appear to be off-task or unengaged may be attempting to understand or relate new ideas to what they have learned [W4235543410]. In addition, in terms of cognitive engagement, cognition is not easily observable and must be inferred from behaviours or assessed according to performance or self-reported measures [W2169570446, W2494899296].\n\nAlternatively, index measurements and combination approaches have been applied to reduce bias. Among the selected articles, four (8.70%) studies used index measurements, six (13.04%) studies combined self-reported measures with external observations, and two (4.35%) studies combined self-reported measures with some index.\n\nTrindade et al. [W3127263793] performed calculations on log data from courses in Moodle to evaluate engagement. Similarly, Hasnine et al. [W3202151740] calculated concentration indices, Apicella et al. [W4223434129] combined self-reported measures with performance indices, and Yue et al. [W2979595880] combined self-reported measures with quiz scores to assess engagement.",
+              "citations": [
+                "W17686987",
+                "W2979595880",
+                "W4223434129",
+                "W2108197984",
+                "W2081112272",
+                "W2588855640",
+                "W4255441728",
+                "W2146006411",
+                "W2591092602",
+                "W3085273257",
+                "W2748183556",
+                "W2767652681",
+                "W2169570446",
+                "W4235543410",
+                "W2158247508",
+                "W2494899296",
+                "W3127263793",
+                "W3202151740"
+              ],
+              "tables_in_text": [
+                "tbl_06"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Annotations",
+              "parent_subsection_id": "s_3_2",
+              "text": "Annotation is a crucial step in building a good dataset. Single data points can be annotated manually by one or multiple annotators or by using a framework [W2108617939] or annotation tools such as CARMA [W2177245949], ANVIL [UNMAPPED:100], NOVA [W1021544130], and ELAN [UNMAPPED:102, UNMAPPED:103], as shown in Table 3.\n\nTo determine whether the labels are consistent, an agreed-upon final label must be determined by several annotators, for example, by using Cohen's kappa value [W2106947945, W2150150736, W2081112272, W2336160298, W3008959835, W2982670714]. Cohen's kappa has also been used to evaluate the efficiency of classifiers for multiclass and imbalanced data [W3135664021].\n\nThe final label can also be determined by measuring intraclass correlations (ICCs) [W2995682556, UNMAPPED:23] or by applying the majority-vote aggregation technique [W2802627404, W3206715694, W2336160298]. Highly consistent labelled data usually indicate a high degree of credibility [W2911666939].",
+              "citations": [
+                "W2108617939",
+                "W2177245949",
+                "W1021544130",
+                "W2106947945",
+                "W2150150736",
+                "W2081112272",
+                "W2336160298",
+                "W3008959835",
+                "W2982670714",
+                "W3135664021",
+                "W2995682556",
+                "W2802627404",
+                "W3206715694",
+                "W2911666939"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "100",
+                "102",
+                "103",
+                "23"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Labelling Issues",
+              "parent_subsection_id": "s_3_2",
+              "text": "Visual computer vision-based engagement estimation datasets encounter several challenges, such as various camera angles and image quality (illumination, background, occlusion, etc.). In addition, the difficulty in capturing subtle changes in visual appearance leads to mislabelling issues. For example, one video clip may show more than one engagement state annotated as one state. As a result, some frames may be mislabelled, potentially influencing the frame-by-frame estimation process [W2802627404]. Frame-based labelling is viewed as the easiest solution. However, this approach lacks continuous labels, which provide more precise information [UNMAPPED:1]. To address this issue, temporal dynamics features need to be extracted [W2802627404].\n\nHowever, in some cases, some frames are more significant for determining engagement levels, while other frames can mislead the final estimation result [W3094362551]. One solution for addressing this problem is applying an attention mechanism. The attention mechanism in deep learning directs attention to effectively choose important frames [W2800146313, UNMAPPED:108].\n\nAnother labelling issue is false interpretation. For example, learners may be engaged regardless of where they are looking, and observers might label a learner who looks down as disengaged while the learner is actually thinking or processing the learning material. Especially in higher grade levels, learners may show/hide their engagement, and engagement cues may thus be more difficult to identify [W2900537337]. Moreover, age can affect attention levels [W2900537337]. Therefore, collecting an engagement dataset that represents learners' authentic internal states is a challenging task.",
+              "citations": [
+                "W2802627404",
+                "W3094362551",
+                "W2800146313",
+                "W2900537337"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "1",
+                "108"
+              ]
+            }
+          ],
+          "text": "Adequately labelled data and a sufficient amount of data that includes as many generalized variables as possible are important criteria for developing automatic engagement estimation methods. Automatic engagement estimation approaches can be developed by using publicly available datasets or self-collected datasets. Publicly available datasets are open, freely downloadable and may have some terms and conditions, such as use in only research contexts or with consent from the authors. Moreover, self-collected datasets (also referred to as non-public datasets) are built according to specific tasks and cannot be publicly shared due to privacy policies and ethics.\n\nIn contrast to emotion recognition datasets, which are typically labelled based on Ekman's basic expressions (e.g., anger, disgust, fear, happiness, sadness, surprise, and neutral), there are only a few publicly available engagement datasets, i.e., datasets that include 'engagement' in their labelling process. However, as shown in the taxonomy of engagement estimation (**Figure 5**), an emotion recognition dataset can be used for automatic engagement estimation by modifying labels or by introducing other measurement metrics to define engagement types. In this article, we refer to datasets that are used in the automatic engagement estimation literature even though they have no straightforward engagement labels as engagement-related datasets and datasets that have 'engagement' label as engagement datasets.\n\nThe selected articles include four engagement-related datasets and three engagement datasets that are publicly available. The public engagement-related datasets include: (1) the NVIE dataset [W2106947945], (2) BAUM-1 [W2336160298], (3) the MASR dataset, which is used in Psaltis et al. [W2551247055] but was proposed in [W2551247055], and (4) AffectNet [UNMAPPED:67]. The public engagement datasets include: (1) DAiSEE [UNMAPPED:68], (2) UE-HRI [W2767263466], and (3) MHHRI [W2742822919] (see **Appendix Table 3**).\n\nDAiSEE is one of the most popular publicly available engagement datasets used in the literature [W3206715694, W3128334188, W3127770520, W4220849944, W3135664021]. Another popular publicly available engagement dataset is the Emotion Recognition in the Wild (EmotiW) dataset. This dataset was excluded from this review because the dataset is being continuously updated; however, EmotiW 2018 [W2888683367] and 2020 [W3094309768], are accessible for academic research [UNMAPPED:77].\n\nThe data in DAiSEE and EmotiW were collected in 'in-the-wild' environments, where participants contributed to the data collection process by recording themselves showing their upper body while watching learning videos. The participants could join from anywhere, and no camera or lighting specifications were considered. Therefore, the quality (e.g., illumination, background noise, and occlusion) of the videos varies. Although in-the-wild data have considerable variations, they are believed to be the closest to real-world conditions [W2888683367, W3094309768, UNMAPPED:68].\n\nDespite the ease and amount of available data, DAiSEE, EmotiW, and other publicly available datasets were collected with participants of certain ethnicities, which may not be appropriate for all target subjects. Moreover, 'in-the-wild' data may be difficult to process due to the large variations. Therefore, most engagement studies build custom engagement datasets that address the requirements of their model or system (**Appendix Table 3**). However, because data collection is costly and time-consuming, the amount of data collected may be insufficient. In such cases, self-collected data can be combined with engagement-related datasets or transfer learning data to enhance the estimation performance.\n\nTransfer learning is a type of fine-tuning, which is briefly described in Sect. \"Fine-Tuning and Transfer Learning Techniques\". In general, transfer learning involves using a pretrained neural network on a large dataset to extract features to use on tasks with smaller datasets. Some image datasets used for transfer learning include FER-2013 [W2744909235], VGGFace [W2325939864], VGGFace2 [W2963839617], FaceNet [W2096733369], AffectNet [UNMAPPED:67], 300W-LP and AFLW2000 [W2964014798], JAFFE [W2106115875], CK+ [W2101545465], and RAF-DB [W2738672149] (see **Appendix Table 3**).",
+          "citations": [
+            "W2106947945",
+            "W2336160298",
+            "W2551247055",
+            "W2767263466",
+            "W2742822919",
+            "W2888683367",
+            "W3094309768",
+            "W2744909235",
+            "W2325939864",
+            "W2963839617",
+            "W2096733369",
+            "W2964014798",
+            "W2106115875",
+            "W2101545465",
+            "W2738672149",
+            "W2793005603",
+            "W1657550699",
+            "W2169570446"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "67",
+            "68",
+            "77",
+            "1"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "RQ3: What Automatic Engagement Estimation Methods Have Been Developed in the Literature?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Pre-processing",
+              "parent_subsection_id": "s_3_3",
+              "text": "Before data can be fed into a network, the raw data must be pre-processed to extract the features. Video/image-based data can be pre-processed with face detection, tracking, and cropping techniques [W2802627404]. Alternatively, statistical values can be extracted to obtain representation information from features in a given time window [W2100127573, W2105410877, W2802627404]. Statistical rules such as sum, max, min, and mode can be utilized to aggregate meaningful information as input for classifiers, including support vector machines (SVMs) and neural networks [W2802627404].\n\n**Face detection and feature extraction.** Appearance-based features can be divided into two categories: low-level features and high-level features. Low-level features include the information generated in each video frame in a given time window. In particular, HCI engagement research has adopted low-dimensional geometry and appearance descriptors as features [W2081112272, UNMAPPED:1]. Additional low-level features include local binary patterns in three orthogonal planes (LBP-TOP), Gabor features, and box filters (BFs) [UNMAPPED:119].\n\nHigh-level features are features extracted by aggregating low-level features [W2802627404], such as facial action units (FAUs) and head poses. Facial features and head poses are some of the most commonly used features for determining engagement and attention [W1513297453, W1585512762, W1988072966, W1734489760, UNMAPPED:120]. These features can be extracted statistically or by using facial recognition tools, as shown in **Table 1**.\n\n**TABLE 1**\nFace recognition tools for face detection and feature extraction\n\n{{TABLE:tbl_08}}\n\nOpenFace is a popular computer vision toolkit for extracting facial features, including in automatic engagement estimation research (Table 1). OpenFace implements multitask cascaded convolutional networks (MTCNNs) [UNMAPPED:143] for face detection, constrained local models [W2098597588, W2885905848] for landmark detection and tracking, eye rendering [W1769933788] for eye gaze estimation, and cross-dataset learning and person-specific normalisation for facial action unit (FAU) detection. In addition, the OpenCV face detection library (Haar Cascade [W2164598857, W3097096317, W1537133930]) and Dlib library for face and landmark detection are widely used. The mean shift-based object tracker in OpenCV can also be used for face tracking. Furthermore, in HRI, face recognition can be performed by utilizing the software development kit (SDK) built into the robot, for example, the NAOqi People Perception in the Pepper robot [W2914480677]. Interested readers are referred to [W2797558164] for an in-depth explanation, especially deep learning-based face recognition.\n\n**Data augmentation.** Data augmentation is the process of creating new data based on real data without changing the original data. For image inputs, data augmentation can be performed by flipping (horizontally or vertically), cropping, scaling, or translating/rotating the images. As a result, the sampling rate for the input can be increased by adding the augmented data to the original dataset [W3206131002, W2982670714, W3206715694].\n\n**Feature selection.** Feature selection not only determines the optimal set of features but also ranks and compares the most discriminative features. Some feature selection methods include F-scores [W1484777458], RELIEF-F [W2081112272], DeepLift [UNMAPPED:23], and recursive feature elimination random forests (RFE-RFs). Alternatively, ANOVA can be used to analyse the significance of labelled features [W1608711383].\n\n**Dimensional reduction.** Dimensional reduction is the process of decreasing the dimension of the input feature to prevent overfitting [W2802627404]. Dimensional reduction can be applied to a dataset before the data are fed into the network. Some dimensional reduction methods include principal component analysis (PCA) [W2106947945, UNMAPPED:1] and forward feature selection (FFS) [W2150150736]. However, dimensional reduction can also be performed by layer reduction using various pooling layers (max, average, and variance pooling, 1x1 convolutional layers) when a convolutional neural network is utilized [W2802627404].\n\n**Addressing imbalanced data.** One major issue with engagement datasets is imbalanced data that are severely skewed towards the majority class [W2802627404]. Imbalanced class labels often occur because disengagement is rarely observed in continuous labeling. Many methods have been proposed to address this issue [W2099454382, W2090135786, W2148143831, W3201583398]. There are three categories of resampling techniques [W2914480677]: (1) undersampling methods, which aim to balance class distributions by eliminating majority class examples; (2) oversampling methods, which generate minority class examples, e.g., the synthetic minority oversampling technique (SMOTE) [W2148143831]; and (3) hybrid methods that combine both sampling methods [W2090135786, W2148143831]. Moreover, continuous scales may be discretized into groups [W2967042165, UNMAPPED:159], and weighting techniques [W3201583398, W2963351448] have also been used to address this problem.",
+              "citations": [
+                "W2802627404",
+                "W2100127573",
+                "W2105410877",
+                "W2081112272",
+                "W2098597588",
+                "W2885905848",
+                "W1769933788",
+                "W2164598857",
+                "W3097096317",
+                "W1537133930",
+                "W2914480677",
+                "W2797558164",
+                "W3206131002",
+                "W2982670714",
+                "W3206715694",
+                "W1484777458",
+                "W1608711383",
+                "W2106947945",
+                "W2150150736",
+                "W2148143831",
+                "W2090135786",
+                "W2967042165",
+                "W3201583398",
+                "W2963351448",
+                "W2793005603",
+                "W1657550699"
+              ],
+              "tables_in_text": [
+                "tbl_08"
+              ],
+              "citations_unmapped": [
+                "1",
+                "119",
+                "143",
+                "23",
+                "159"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Classic Machine Learning Methods",
+              "parent_subsection_id": "s_3_3",
+              "text": "Engagement is estimated by calculating probabilities. To calculate the engagement probability, several classic machine learning methods can be utilized, such as the support vector machine (SVM) and its variations (including support vector regression (SVR)), naive Bayes (NB), decision trees (DTs), logistic regression (LR), clustering techniques (e.g., K-nearest neighbour (KNN)), and random forest (RF). These machine learning techniques are conveniently available in machine learning toolboxes such as Waikato Environment for Knowledge Analysis (WEKA) [UNMAPPED:162] (as used in [W2105940347, W2345031027, W3127263793]), the Computer Expression Recognition Toolbox (CERT) [W1968600824] (as used in [W2081112272]), and the MATLAB library [W3209498350, W2150150736].\n\nBetween 2010 and 2022, classic machine learning methods dominated the automatic engagement estimation literature (**Figure 9**), especially SVMs (**Figure 11**). Note that some of the selected articles examined more than one algorithm. Therefore, the totals in **Figure 11** do not correspond to the number of selected articles (see **Appendix Table 4**).\n\n**FIGURE 11**\nPie chart of the use of classic machine learning methods for automatic engagement estimation\n\n{{TABLE:tbl_09}}",
+              "citations": [
+                "W2105940347",
+                "W2345031027",
+                "W3127263793",
+                "W1968600824",
+                "W2081112272",
+                "W3209498350",
+                "W2150150736"
+              ],
+              "tables_in_text": [
+                "tbl_09"
+              ],
+              "citations_unmapped": [
+                "162"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Deep Learning Methods",
+              "parent_subsection_id": "s_3_3",
+              "text": "With the development of deep learning, research on automatic engagement estimation has applied these techniques to improve the estimation performance (**Figure 9**). In this section, we briefly introduce some deep learning methods, including those used in the selected articles. For a more detailed explanation on deep learning techniques (especially for face recognition), interested readers are referred to [W2797558164, W3137650873, UNMAPPED:119].\n\n**Multilayer perceptron (MLP).** The multilayer perceptron (MLP), also called the feedforward neural network or deep forward network, was one of the first deep learning algorithms. The MLP is a mathematical function that is formed by combining many simpler functions to map some set of input values to output values [W2557283755]. An MLP consists of at least three layers of nodes, i.e., the input f\u207d\u00b9\u207e, hidden f\u207d\u00b2\u207e, and output f\u207d\u00b3\u207e layers, to define the mapping y \u2248 f*(x) = f(x) = f\u207d\u00b3\u207e(f\u207d\u00b2\u207e(f\u207d\u00b9\u207e(x))). The first and last layers are called the input and output layers, respectively, while the number of hidden layers may be varied, which determines the depth of the model. Furthermore, each layer may contain more than one unit depending on the number of inputs and outputs. This algorithm has also been used in automatic engagement estimation for performance comparison with other algorithms [UNMAPPED:32, UNMAPPED:1, UNMAPPED:23].\n\n**Convolutional neural network (CNN).** A convolutional neural network (CNN) is a specialized kind of deep learning (DL) algorithm for processing data that employs mathematical linear operations known as convolutions as opposed to matrix multiplication [W2557283755]. The convolution operation is typically denoted with an asterisk: x'(t) = (x * w)(t), where x' is the feature map, i.e., the estimated value from the convolution of the input x with a kernel w at time t [W2557283755].\n\nCNNs are currently one of the most popular methods in different fields (**Figure 12**). This technique has been widely used in various computer vision applications, including image classification [W2194775991], semantic segmentation [W1745334888], object detection [W2097117768], face recognition [W2325939864], spatiotemporal feature learning [W1522734439, W2293823684, W2802627404, W2910595231, UNMAPPED:171, UNMAPPED:174], and automatic engagement estimation (see **Appendix Table 4**).\n\n**FIGURE 12**\nPie chart of the use of deep learning methods for automatic engagement estimation\n\n{{TABLE:tbl_10}}\n\nCNNs are popular because they can be highly modified and pretrained. Some CNNs include AlexNet [W2163605009], i3D [UNMAPPED:176], VGG16 [W1686810756], and ResNet [W2194775991, W2097117768].\n\nThe inputs to a CNN are usually greyscale or RGB images. The use of multiple small filtering kernels allows the network to extract more discriminative features because multiple small kernels are easier to optimize than one large filter kernel [W3080671616, UNMAPPED:178]. However, CNNs have some crucial issues, such as large training times, gradient vanishing due to the use of deep networks, and a large number of parameters [W3135664021].\n\n**Recurrent neural network (RNN).** A facial expression changes through three stages, i.e., onset, apex, and offset [W2134860945]. In recurrent neural network (RNN) algorithms for engagement estimation, time-series images are more reasonable than static images as input since time-series present sequence-related task information [UNMAPPED:180]. RNNs capture information at earlier and later time steps by remembering each piece of information over time [W3081066422]. Therefore, this algorithm has become a more popular automatic engagement estimation method (see **Appendix Table 4**).\n\nSome types of RNNs include long short-term memory (LSTM) [W2064675550] [W2979595880, W3127770520, W4214871780, UNMAPPED:32, UNMAPPED:40, UNMAPPED:1], gated recurrent units (GRUs) [UNMAPPED:32], and network Turing machines (NTMs) [W2989842085, W3128334188].\n\nHowever, despite advantages such as considerable computational power in temporal processing models and applications, in practice, RNNs are difficult to train due to network instability [W3081066422]. Moreover, the networks may suffer from short-term memory issues if the input sequences are too long. Thus, RNNs may have difficulty capturing earlier time step information due to vanishing gradients [W3081066422].\n\nTherefore, the attention mechanism was introduced to learn to associate the elements in sequence C with the elements in the output sequence [UNMAPPED:185]. The attention mechanism essentially determines a weighted average that is used to focus on specific parts of the input sequence at each time step [W2557283755]. Although the attention mechanism was originally introduced in the context of machine translation [UNMAPPED:185], it has also been utilized in DL applications for automatic engagement estimation [W3127770520, W4220849944, W3206131002, UNMAPPED:1].\n\n**Other classifiers.** Other neural network techniques that have been used for automatic engagement estimation include the fuzzy min-max neural network (FMMNN) classifier [W2007187232, W2129021863], which was implemented by [W2108197984] for automatic engagement estimation, the deep belief network [W2136922672], which was used in [W2904198345], and linear discriminant analysis (LDA) [W4223434129, W2106947945].",
+              "citations": [
+                "W2797558164",
+                "W3137650873",
+                "W2557283755",
+                "W2194775991",
+                "W1745334888",
+                "W2097117768",
+                "W2325939864",
+                "W2163605009",
+                "W1686810756",
+                "W3080671616",
+                "W3135664021",
+                "W2134860945",
+                "W3081066422",
+                "W2064675550",
+                "W2979595880",
+                "W3127770520",
+                "W4214871780",
+                "W2989842085",
+                "W3128334188",
+                "W4220849944",
+                "W3206131002",
+                "W2007187232",
+                "W2129021863",
+                "W2108197984",
+                "W2136922672",
+                "W2904198345",
+                "W4223434129",
+                "W2106947945"
+              ],
+              "tables_in_text": [
+                "tbl_10"
+              ],
+              "citations_unmapped": [
+                "119",
+                "32",
+                "1",
+                "23",
+                "176",
+                "178",
+                "180",
+                "40",
+                "185"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Fine-Tuning and Transfer Learning Techniques",
+              "parent_subsection_id": "s_3_3",
+              "text": "One fine-tuning technique for addressing insufficient training data is applying transfer learning, which utilizes networks pretrained on a large number of images [W2951163624, W2797558164]. Various models have been trained on large face image datasets. For example, Sumer et al. [UNMAPPED:1] used AffectNet [UNMAPPED:67] and 300W-LP [W2964014798], which were trained on ResNet50, for transfer learning. The pretrained models help the engagement estimation network learn general features related to face identification [W2802627404]. As mentioned in Sect. \"RQ2\", other large datasets that have been used for transfer learning include FER-2013 [W2744909235], VGGFace [W2325939864], VGGFace2 [W2963839617], FaceNet [W2096733369], AffectNet [UNMAPPED:67], 300W-LP and AFLW2000 [W2964014798].",
+              "citations": [
+                "W2951163624",
+                "W2797558164",
+                "W2964014798",
+                "W2802627404",
+                "W2744909235",
+                "W2325939864",
+                "W2963839617",
+                "W2096733369"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "1",
+                "67"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "Performance Metrics",
+              "parent_subsection_id": "s_3_3",
+              "text": "To judge the automatic engagement estimation performance, the prediction results should be compared with human judgements in the dataset [W2081112272, W2802627404]. In machine learning pipeline, performance metrics are used to monitor and measure the performance of a model depend on the task. Automatic engagement estimation problem can be seen either as classification or regression task. An engagement estimation is a classification task if the engagement is estimated in discreet class, e.g., low engagement class vs high engagement class. Otherwise, an engagement estimation is a regression task when continuous output desired. Some metrics used to measure the performance of regression task are Mean Absolute Error (MAE), Mean Squared Error (MSE), and Root Mean Squared Error (RMSE), which mainly calculating the distance between the predicted and the ground truth.\n\nClassification performance metrics evaluate the estimation model that compares discrete classes, such as accuracy, precision and recall, F1-score, and Area Under the Curve-Receiver Operating Characteristics (AUC-ROC). Moreover, confusion matrix is also used to visualize the ground-truth labels versus the predicted results in a table.\n\nAccuracy metric defines the number of correct predictions (true positive (TP)) divided by the total number of predictions. It is the most common metric for evaluating classification performance due to its simplicity. However, Accuracy may not be reliable when the dataset is severely unbalanced. In a severely skewed dataset, the classifier may not discriminate well despite high accuracy values because the classifier identifies only the most common class.\n\nAlternatively, Precision/Recall (PR) trade-off curve (used in [W2090902583]) and F1-score [W1608711383] are used to overcome the limitation of Accuracy. Precision determines the performance by calculating the proportion of TP prediction to the total positive prediction (TP + false positive (FP)). Similarly, Recall calculates the TP prediction to the total number of TP and false negative (FN). Meanwhile, F1-score is the harmonic mean between the precision and recall.\n\nSome alternative metrics that are more informative and \"imbalance-friendly\" include the balanced accuracy, AUC-ROC [W2100127573, W2090902583] and 2-alternative forced choice (2AFC) [W2081112272].\n\nAUC-ROC visualizes the classification performance based on correct and incorrect classifications (**Figure 13**). The ROC curve plotted the trade-off between the TP rate (Recall) to the FP rate. AUC represents the degree or measure of separability between classes as a summary of the ROC curve [W2155653793]. The AUC scores between 0.7 - 0.8, 0.8 - 0.9, and > 0.9 are considered acceptable, excellent, and outstanding, respectively [W1980276147, W3113831542].\n\n**FIGURE 13**\nAUC-ROC curve illustration\n\nPrecision = TP / (TP + FP)\nRecall (TP rate) = TP / (TP + FN)\nFP rate = 1 - TP rate = FP / (TN + FP)\nF1-Score = 2 * (Precision * Recall) / (Precision + Recall)\n\nThe 2-alternative forced choice (2AFC) [W2151939376, W2046604164] is an unbiased estimate of the AUC-ROC curve since it expresses the probability of discriminating true positives (TP) from true negatives (TN). A 2AFC value of 1 indicates perfect discrimination, while a value of 0.5 indicates that the classifier performs at chance levels.\n\nFurthermore, other metrics such as Matthews correlation coefficient (MCC) [W2046604164] and specificity and sensitivity [W2802627404] are also used in the engagement estimation literature (see **Appendix Table 4**).",
+              "citations": [
+                "W2081112272",
+                "W2802627404",
+                "W2090902583",
+                "W1608711383",
+                "W2100127573",
+                "W2155653793",
+                "W1980276147",
+                "W3113831542",
+                "W2151939376",
+                "W2046604164"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Machine learning, which is a subset of artificial intelligence (AI), is known for its capability to acquire knowledge to make decisions by extracting patterns from raw data [W2557283755]. Machine learning techniques have been applied in various fields, including agriculture, transportation, business, and education. Machine learning has led to the development of affective computing methods that automatically recognize human emotions and behaviours [W2306831900, W2918378401, UNMAPPED:114, UNMAPPED:115], supporting the advancement of artificial intelligence in education applications [W3084223432, W3157202587]. Therefore, in general, automatic engagement estimation methods are referred to as machine learning (ML)-based algorithms.\n\nSince machine and deep learning methods are the most commonly used approaches for developing automatic engagement estimation tools in the literature (**Figure 9**), in this section, we briefly discuss the pre-processing steps and estimation methods (classification or regression). We classified the estimation methods as classic machine learning and deep learning techniques.\n\nDeep learning is a subset of machine learning. Both techniques work by mapping raw data features to extract the desired information. Nevertheless, it may be difficult for computers to extract features from raw data with large variations, and these features may be identifiable only using a nearly human-level understanding of data [W2557283755]. Therefore, classic machine learning methods require hand-designed features. Moreover, deep learning approaches reduce the desired complicated mapping into a series of nested mappings that can be described by layers [W2557283755]. For example, to identify image features, the input is presented as a visible layer. Then, the next layers, namely, the hidden layers, divide the image into smaller maps such as edges, corners and contours, object parts, and finally, the object identity. **Figure 10** depicts a Venn diagram showing how deep learning is distinguished from classic machine learning.\n\n**FIGURE 9**\nThe general method used in the selected articles\n\n{{TABLE:tbl_07}}\n\n**FIGURE 10**\nThe difference between machine learning and deep learning",
+          "citations": [
+            "W2557283755",
+            "W3084223432",
+            "W3157202587"
+          ],
+          "tables_in_text": [
+            "tbl_07"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Forty-seven articles were selected for this review. The articles were published between 2010 and 2022, although no included articles were published in 2013. However, research on automatic engagement estimation in education/learning settings has increased in recent years (**Figure 2**). In particular, in 2021, 14 articles (29.79%) on this topic were published (doubled from the previous year) following the outbreak of the COVID-19 pandemic, which started in 2020.\n\n**FIGURE 2**\nNumber of reviewed articles per year\n\n{{TABLE:tbl_01}}\n\nAmong the selected articles, 3 were published in conference proceedings, and the remainder were published in 33 different journals. Most of the journal articles were published in *IEEE Transactions on Affective Computing* (n = 9; 19.15%), *Computers & Education* (n = 3; 6.38%), and *Applied Intelligence* (n = 2; 4.26%), as shown in **Figure 3**.\n\n**FIGURE 3**\nNumber of reviewed articles per journal\n\n{{TABLE:tbl_02}}\n\nInterestingly, research on automatic engagement, which is aimed at education and learning settings, has been conducted in several research domains, including human-human interactions (HHIs), human-robot interactions (HRIs), human-computer interactions (HCIs), and embodied conversational agents (ECAs). From the reviewed articles, we also noted some studies based on data from offline classrooms. Therefore, we added the classroom as a separate research domain in this review.\n\nAs shown in **Figure 4**, research on automatic engagement estimation in education/learning settings was dominated by HCI (n = 28; 59.57%), followed by HRI (n = 10; 21.28%) and Classroom (n = 7; 14.89%) (see **Appendix Table 2**).\n\n**FIGURE 4**\nNumber of reviewed articles per research domain\n\n{{TABLE:tbl_03}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01",
+        "tbl_02",
+        "tbl_03"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This article reviewed recent research on automatic engagement estimation in education/learning settings, focusing on work published between 2010 and 2022. In particular, this review examined engagement definitions, datasets, and machine learning-based methods from forty-seven selected articles. The article selection and review methodology were adopted from the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) model [W3144543375] to answer three research questions:\n\n- RQ1: how should the type of engagement to be measured be defined?\n- RQ2: what datasets are suitable for developing automatic engagement estimation methods?\n- RQ3: what automatic engagement estimation methods have been developed in the literature?\n\nThe results and discussion with the presented information, figures, and tables aim at providing new researchers with insight on automatic engagement estimation to enhance smart learning with automatic engagement recognition methods.\n\nTo answer the RQ1, we examined the definitions of engagement used in the selected articles and introduced an engagement definition taxonomy (**Figure 5**) as a guide for educators and engagement estimation research, particularly for education/learning purposes. The taxonomy defined three types of engagement: behavioural engagement, emotional engagement, and cognitive engagement. Each engagement type was connected with some engagement cues, including affective cues, physiological cues, log files, and basic emotions. The modalities for obtaining engagement cues were also discussed, including speech cues, visual cues (face, head, and eye gaze), physiological sensor data, and log data.\n\nFrom the discussion, we found that to define what type of engagement is being measured depends on engagement cues used, what stimulies presented to the participant during data collection, and what physical or cognitive behaviours observed. We believe that the proposed taxonomy will allow for enhanced research on automatic engagement estimation.\n\nThe datasets used in the literature were summarized in this review to address the RQ2. The datasets include publicly available datasets and self-collected datasets. In this review, publicly available datasets were divided into two categories, namely, engagement datasets and engagement-related datasets, to distinguish the availability of engagement labels. The engagement measurement methods and annotations were highlighted because incorrect interpretations in this step lead to severe bias. The number of participants, type of samples, number of annotators, and label information were summarized in a table to provide a reference for building engagement datasets.\n\nFinally, in addressing the RQ3, we discuss machine learning-based methods that have been applied to develop automatic engagement estimation approaches in the literature. We found that between 2010 and 2022, classic machine learning algorithms (including support vector machines (SVMs) and decision trees (DTs)) were used more in previous work. However, since 2019, the trend has moved to deep learning algorithms, especially convolutional neural network (CNN)- and recurrent neural network (RNN)-based algorithms.",
+      "citations": [
+        "W3144543375"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Limitations and Remaining Challenges",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "There is bias in the subjective determination of whether an article was aimed at education/learning settings. For example, some articles appear to be aimed at other purposes, such as therapy for children with autism [UNMAPPED:23] or human-robot interactions [UNMAPPED:32]. However, the articles were included if the authors perceived that there was subtle information about a learning activity or the possibility that the proposed action could be applied in the education process.\n\nMoreover, the combination of a clear engagement definition, and suitable machine learning methods allows learners' engagement during learning activities to be measured automatically, including human-human interactions, human-computer interactions and human-robot interactions. The estimation performance is especially promising for deep learning-based methods. However, the practicality of the implementation in real education settings is not discussed in this review. Therefore, the implication and application of these automatic engagement estimation methods should be addressed in future work to address various research questions, such as \"How does engagement estimation improve learning outcomes?\", \"What conditions and requirements are needed in automatic engagement estimation applications?\", and \"In what learning settings can automatic estimation be applied?\".\n\nFurthermore, we discuss several remaining challenges, including cognitive engagement, personalized engagement, and machine-learning pitfalls.\n\n**Cognitive engagement.** Table 2 shows that most automatic engagement research has focused on behavioural and emotional engagement and that affective data, especially appearance-based video data, were mostly utilized to estimate engagement. However, cognitive engagement, which can be determined through self-regulated learning or pre-post tests, plays an important role in successful distance learning. Similar to behavioural and emotional engagement, cognitive engagement can be measured using questionnaires [W3113831542]. However, few studies (Table 2) have considered this type of engagement. Therefore, we believe that more engagement cues for cognitive engagement should be developed in future automatic engagement estimation research.\n\n**Personalized engagement.** Various definitions of engagement have been constructed in the field of education. Although engagement can be divided into three types (i.e., behavioural, emotional, and cognitive engagement), conceptualizations of engagement sometimes include only one or two of the three types. All three types can be considered to determine engagement levels [W2169570446]. To the best of our knowledge, no research has answered how these engagement types evolve and change over time. Therefore, whether the engagement cues may take different forms depending on the age range, gender, ethnicity, and education level of the participants is unknown.\n\nMoreover, facial physiognomy differences between people with different ethnic backgrounds may result in various distributions of engagement levels [W2910595231]. Several automatic engagement estimations are targeted participants with specific cultures or backgrounds. For example, as shown by Libin and Libin [W2088831794], a child's background, including their cultural or psychological profile, needs to be considered when designing therapeutic strategies.\n\nNetwork personalization can be achieved using demographic information (culture and gender), followed by individual network layers for each child [UNMAPPED:23]. However, it is unknown how engagement estimation results can be generalized in actual applications [W2485075409]. Thus, the user target must be defined, and the data must be collected from participants with the appropriate cultural background (for example, learners with autism spectrum conditions (ASCs) [W2100726884, W2116591386]) to train the model [W2910595231]. Therefore, automatic engagement estimation, which considers individual differences, remains an open challenge.\n\n**Machine learning pitfalls.** Machine learning (ML) methods have been applied in various fields; however, reproducibility is an issue, as reviewed by Kapoor et al. [W4285596585]. The review examined 20 reviews across 17 research fields and found errors in 329 papers that used ML-based methods. While experienced machine learning practitioners are well aware of these errors, researchers in other disciplines may not be [UNMAPPED:199]. Although education research was not included in the review [W4285596585], we found similar issues (such as no training-testing splits, sampling biases, and pre-processing the training and test sets together) in the selected articles (see **Appendix Table 4**). The misuse of ML can generate invalid results that are irreproducible in implementations in real-world educational settings. Therefore, automatic engagement researchers should be aware of these issues [W4285596585]. Furthermore, education experts and ML experts could collaborate on engagement research to develop more effective models [UNMAPPED:199].",
+      "citations": [
+        "W3113831542",
+        "W2169570446",
+        "W2910595231",
+        "W2088831794",
+        "W2485075409",
+        "W2100726884",
+        "W2116591386",
+        "W4285596585",
+        "W4285596585"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "23",
+        "32",
+        "199"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Appendix",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**TABLE 2**\nAn overview of the selected articles to address RQ1\n\n{{TABLE:tbl_11}}\n\n*Note: HCI = human-computer interaction; HRI = human-robot interaction; A = embodied conversational agent; H = human-human interaction; CIs. = classroom; B = behavioral; E = emotional; C = cognitive; Aff = affective; BE = basic emotions; PC = physiological cues; LF = log file (including log activity)*\n\n**TABLE 3**\nAn overview of the dataset in the selected articles to address RQ2\n\n{{TABLE:tbl_12}}\n\n*Note: ER = engagement-related dataset; E = engagement dataset; S = spontaneous; P = posed; W = in-the-wild; WE = web-environment; EA = external annotator; N/A = not available*\n\n**TABLE 4**\nAn overview of the method used in the selected articles to address RQ3\n\n{{TABLE:tbl_13}}\n\n*Note: PCA = principle component analysis; LDA = linear discriminant analysis; AAM = active appearance model; LOOCV = leave-one-subject-out cross validation; KNN = K-nearest neighbors; BNs = Bayesian Nets; LR = logistic regression; DTs = Decision Trees; NB = Naive Bayes; LBP-TOP = local binary patterns in three orthogonal planes; GBDT = gradient boosting trees; CART = classification and regression tree; CARS = childhood autism rating scale; GRU = gated recurrent unit; LSTM = long-short term memory; CNN = convolutional neural network; RF = random forest; MLP = Multi-layer Perceptron; DT = decision tree; BN = Bayesian Network; HMM = Hidden Markov Models; EDA = electrodermal activity; MK-MMD = Kernel Maximum Mean Discrepancies*",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_11",
+        "tbl_12",
+        "tbl_13"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4309072604_tables.md"
+}

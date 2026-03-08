@@ -1,0 +1,867 @@
+{
+  "id": "W4391400566",
+  "metadata": {
+    "title": "Toxic Language Detection: A Systematic Review of Arabic Datasets",
+    "n_sections": 11,
+    "n_subsections": 13,
+    "n_subsubsections": 21,
+    "n_tables": 17
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "While social media have been and continue to be a force of change in many Arab countries by providing their users with a platform for free expression [UNMAPPED:2], they are also a breeding ground for spreading toxic discourse, such as hate speech and offensive language.\n\nSocial media platforms rely on internal policies, artificial intelligence algorithms, user reporting, and content moderators to fight against inappropriate content [UNMAPPED:3]. Nonetheless, some platforms have been accused of doing little in dealing with content in languages other than English [UNMAPPED:4]. Moreover, their algorithms have been criticized for occasionally failing to distinguish between toxic language and legitimate criticism, leading to the erroneous removal of accounts or posts belonging to journalists and human rights defenders [UNMAPPED:5].\n\nThese weaknesses in the automated methods may lead not only to spreading inappropriate content but also to undermining the freedom of speech, discarding objective discourse, and causing harm to individuals and communities [W2197739446], hence the need to fight it.\n\nToxic language detection has been an active area of research in the last years and recently, many works focused on the Arabic text [W3134728912] accompanied by an increasing number of created datasets. However, beyond the widely recognized datasets, whether originating from pioneering efforts [W2901236145, W2898401058, W2747187574, W2977739081, W2972463128] or released in the context of shared tasks [W3115903740, W4210762872, UNMAPPED:13, UNMAPPED:16], little is known about other datasets regarding their accessibility, annotation quality, the context in which they were created, and their potential for reuse.\n\nWhile there are several surveys on toxic language detection [W4379801086, W3210712343, W2887782043, W3091315987, W4317566631, W4384520880, W3014487746], with some of them focusing on Arabic language [W2919234748, W3168611252, W3190941513, W4214659654, W4380568764, W3134728912], no initiative has yet focused on the Arabic datasets. Previous seminal initiatives focusing on reviewing resources [W3091315987, W3014487746] are not language-specific and reference only a limited number of Arabic datasets. In addition, due to the rapid growth of this research field, several recent datasets were not included in prior reviews. This highlights the need for additional efforts to review recent works and ensure the visibility of all accessible datasets.\n\nGiven the pivotal role of data as fuel for artificial intelligence algorithms [UNMAPPED:30], and the lack of knowledge about the available datasets on Arabic toxic language detection, this paper aims to systematically and comprehensively collect and review existing datasets dealing with Arabic toxic language. More precisely, our objective is to answer the following research questions.\n\nRQ1- What are the available Arabic datasets dealing with toxic language?\n\nRQ2- What are the specific tasks for which those datasets have been created?\n\nRQ3- How were these datasets annotated, and were the best annotation practices applied?\n\nRQ4- Can these datasets be easily reused for future research?\n\nTaking inspiration from the definition of online toxicity provided by [UNMAPPED:31], this systematic review employs the term \"toxic language\" as a broad concept encompassing various forms of language that have the potential to harm individuals, groups of individuals or entities. It encompasses a wide range of manifestations, including profanity, obscenity, abusiveness, verbal aggression, hate speech and violent language. Those concepts can be further classified into numerous fine-grained categories, such as racism, sexism, and threats. In addition, a text could be considered toxic due to its harmful content, even if it does not involve explicit offensiveness, such as disinformation. Based on this broad definition of toxicity and using a systematic methodology, we aim to achieve comprehensiveness and rigour.\n\nThe remainder of this paper is structured as follows: Section 2 presents a review of related works. Section 3 outlines the methodology used to undertake this survey. Section 4 presents an in-depth analysis of the collected datasets. Section 5 discusses the findings and provides recommendations. Finally, Section 6 concludes the paper.\n\n**TABLE 1.** Summary of some recent related works.\n\n{{TABLE:tbl_01}}\n\n\u2020: PRISMA is a methodology introduced in [W2007872832].<br>\n\u2021: We used the name of its first author to refer to the methodology described in [W2033494546].<br>\n\u00a7: We used the name of its first author to refer to the methodology described in [UNMAPPED:39].",
+      "citations": [
+        "W2197739446",
+        "W3134728912",
+        "W3091315987",
+        "W3014487746",
+        "W2007872832",
+        "W2033494546"
+      ],
+      "tables_in_text": [
+        "tbl_01"
+      ],
+      "citations_unmapped": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "30",
+        "31",
+        "39"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Related Works",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In recent years, several survey papers have been published on toxic language detection. While some of them cover multiple languages, others focus on Arabic. On the other hand, the majority of them focus on reviewing the approaches, including the classification methods and the features, while few concentrate on the datasets. Below, we provide a summary of the surveys that we deem most relevant to our work.\n\nIn their seminal work, Vidgen and Derczynski [W3014487746] analysed more than 60 abusive language datasets including six in Arabic. In their datasets collection, Arabic is the second language after English in terms of the available abusive language datasets. Datasets are analysed in terms of the following aspects: Motivation of the creation, Task definition, Content, and Annotation. The paper provides insightful recommendations on the best practices aiming to build good-quality datasets while avoiding biases and responding to real-world requirements. The authors maintain an online catalogue of abusive language data [W2747187574].\n\nPoletto et al. [W3091315987] conducted a systematic review of the available resources on hate speech detection. The analysis of resources, comprising datasets and lexicons, took into account various aspects such as the development methodology, the topical biases, and the language coverage. In this review, six Arabic datasets were referenced.\n\nHusain and Uzuner [W3134728912] focused on offensive language detection works dealing with Arabic. The paper provides the most detailed review of the techniques, resources, and approaches applied in the area. The paper cited 9 publicly available datasets published until 2020. However, apart from discussing the inter-annotator agreement of the cited datasets, the paper did not delve into the other details of the annotation process.\n\nIn addition to the surveys focusing on toxic language, Masader Plus [UNMAPPED:35], an online catalogue for Arabic text and speech data resources [UNMAPPED:41], indexes 11 toxic language datasets among more than 500 Arabic resources [UNMAPPED:42]. Each dataset is described using 25 attributes [UNMAPPED:36]. Besides, Ahmed et al. [W4210491685] provide a scoping survey of the freely available Arabic corpora, but it lists only 2 datasets related to toxic language.\n\nIn Table 1, we included additional surveys for comparison purposes. In this table, we listed among the surveys that cover multiple languages only the most recent ones. However, we tried to include an exhaustive list of the surveys focusing on Arabic. As can be observed in the table, there is an absence of systematic reviews focusing on Arabic toxic language datasets. Existing surveys concentrating on datasets are not language-specific, and those focusing on Arabic are not datasets-specific. In addition, most of the surveys that examined Arabic toxic language datasets failed to consider the dataset's accessibility as a criterion for selection, and concentrated on describing the content of the datasets, such as size and labels, while offering limited or no details regarding the annotation process. Furthermore, previous initiatives cataloguing Arabic resources have often overlooked many toxic language datasets, possibly due to the use of topic-independent keywords in their resource search. On top of that, none of the existing works covered more than 11 Arabic toxic language datasets.\n\nOur survey aims to bridge this gap by providing a comprehensive and systematic examination of the currently available Arabic datasets. To ensure comprehensiveness, we strived to employ a diverse range of keywords and conducted our research not only on literature databases but also on datasets' repositories, as elaborated in the following section.",
+      "citations": [
+        "W3014487746",
+        "W2747187574",
+        "W3091315987",
+        "W3134728912",
+        "W4210491685"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "35",
+        "41",
+        "42",
+        "36"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Search Strategy",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.1.1. Curating Keywords",
+              "parent_subsection_id": "s_3_1",
+              "text": "Given our use of toxic language as an umbrella term encompassing various related concepts, we have strived to amass a wide array of associated terms sourced from surveys and taxonomies [W2887782043, W3172559340, W3104239954]. The following keywords constitute our compiled list: Hate speech, offensive language, offence, dangerous language, toxic language, toxicity, abusive language, insult, harmful language, harmfulness, cyberbullying, racism, radicalism, misogyny, sexism, violence, hostility, profanity, sexual harassment, and fanaticism.\n\nAdditionally, as the datasets for stance detection, propaganda detection, polarised speech, polarization [UNMAPPED:44] and social bots detection may potentially include harmful language, we incorporated these terms into our list of keywords.\n\nFor better precision of the results, each of these keywords has been combined, using the operator AND, with two additional keywords, namely Arabic and dataset, given our focus is on Arabic datasets. Moreover, when the search results are excessively cluttered with irrelevant papers, we occasionally integrate the term detection into the search query, particularly if it is not already a part of the employed keyword.",
+              "citations": [
+                "W2887782043",
+                "W3172559340",
+                "W3104239954"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "44"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.1.2. Collecting Papers",
+              "parent_subsection_id": "s_3_1",
+              "text": "We conducted the research through Google Scholar, focusing on scholarly works, whether published or preprints, written in English and appearing, based on their titles and abstracts, to be related to the detection of online toxic language. If it became evident that a paper did not involve computational work or was focused on social media analysis without considering toxicity or harmfulness, we chose not to download it. For each search query, we reviewed on average around 4 pages of the search results. Beyond that point, the results become generally less relevant.\n\nWe examined the downloaded papers with the aim of retaining only those that introduce a new dataset. Therefore, papers describing experiments employing previously published datasets are discarded. We discarded also the papers mentioning clearly that the employed dataset is private.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.1.3. Collecting Datasets",
+              "parent_subsection_id": "s_3_1",
+              "text": "After confirming that the paper introduces a new dataset, our goal is to find the dataset's URL. This involves two main phases: (i) scrutinizing the paper's content seeking for URLs and (ii) conducting a web search for the dataset. In the first phase, we established a stepwise process for manually inspecting the paper. If the dataset is not found in one step, we proceed to the next. The steps are as follows:\n\na. Searching for a data availability statement in the paper.\n\nb. Using \"http\" as a keyword to identify and then inspect all URLs present in the paper.\n\nc. Scanning the paper's footnotes for any hyperlinks or hints about the dataset's availability.\n\nd. Looking for the term \"available\" within the paper, as statements about the availability of the dataset typically contain this word.\n\nIf the examination of the paper fails to reveal the dataset's URL, we move to the second phase, which is conducting a web search. However, this process is undertaken exclusively in two situations: when the paper explicitly states the current or future availability of the dataset, or when the introduced dataset stands out due to its distinctive task, specific annotation labels, or a notable citation count of its associated paper. In such cases, we formulate our search query using key details like the dataset's name (if available), the paper title, and/or the authors' names. These queries are then submitted to the Google search engine, as well as specific repositories, namely Github, Kaggle, Huggingface, Papers with Code, Open Science Framework, and Zenodo.\n\nIf, despite these efforts, the dataset's URL cannot be located, we opt to exclude the corresponding paper from our survey. This is for example the case of the papers [UNMAPPED:45] and [UNMAPPED:46] that introduce datasets on the detection of sexism and Tunisian hate speech, respectively. However, they are currently not available.\n\nNote that the aforementioned search phases are overlapping and iterative. For instance, searching for the URL of a dataset may, sometimes, lead to the discovery of other datasets. In such cases, we endeavour to find the papers describing these additional datasets. Additionally, the list of keywords used to search for papers has been gradually extended based on the examined papers.\n\nFinally, it is worth noting that we obtained a few works (papers or datasets) outside of this systematic search. Further details on this point are provided in Appendix A.\n\n**TABLE 2.** Inclusion and exclusion criteria\n\n{{TABLE:tbl_02}}\n\n**TABLE 3.** Criteria used to analyse the collected works.\n\n{{TABLE:tbl_03}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_02",
+                "tbl_03"
+              ],
+              "citations_unmapped": [
+                "45",
+                "46"
+              ]
+            }
+          ],
+          "text": "Our search strategy, aiming to collect papers and datasets is based on three stages, which are keywords curation, collecting papers, and collecting datasets' URLs. We executed this search process at different intervals, with the most recent search conducted in October 2023.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Study Selection and Quality Assessment",
+          "subsubsections": [],
+          "text": "Table 2 shows the inclusion and exclusion criteria that we applied to select the papers and the datasets to keep for this systematic review. Note that some of those criteria have been already mentioned in the above subsections.\n\nIt is essential to highlight that we opted not to introduce supplementary inclusion and exclusion criteria related to the quality of the works. This decision stems from the fact that our research question integrally investigates quality considerations about datasets, particularly regarding their annotation and reusability, and how information regarding these aspects is reported in the corresponding papers.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Data Extraction",
+          "subsubsections": [],
+          "text": "We assigned unique identifiers to the collected datasets and catalogued them, alongside numerous details, in an extensive table. We extracted these details through a thorough examination of each dataset and its corresponding paper, covering various dimensions. The formulation of these dimensions has been influenced by previous surveys, particularly the work of Vidgen and Derczynski [W3014487746], which provided guidelines for best practices in creating and reporting on abusive language detection datasets. However, we have reorganized these dimensions in our unique structure, presenting them into 18 criteria classified under four axes: availability details, content, annotation process, and reusability. Table 3 lists these criteria, defines them, and specifies whether we extracted the details related to each criterion by examining the dataset files or the related paper.",
+          "citations": [
+            "W3014487746"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Data Synthesis",
+          "subsubsections": [],
+          "text": "To attain a comprehensive understanding of the examined datasets and discern trends as well as potential gaps, the final phase in preparing this systematic review is to scrutinize the large table that describes the datasets across the 18 aforementioned criteria. Specifically, for each criterion, we examined thoroughly the details extracted from all works, aiming to cluster them into subsets or identify patterns. The outcomes of these analyses are elaborated in the subsequent section.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "We derived the main phases of undertaking this survey from the guidelines of [UNMAPPED:39] for performing systematic literature reviews in software engineering. Since our survey concerns natural language processing, and it requires searching and screening not only literature but also datasets, we adapted this methodology to suit our task. The following subsections provide details on each stage of the methodology, which are search strategy, study selection and quality assessment, data extraction, and data synthesis.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "39"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Availability Details",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.1.1. Publication Year",
+              "parent_subsection_id": "s_4_1",
+              "text": "**FIGURE 1.** Publication year of the papers corresponding to the toxic language detection datasets included in our collection.\n\n{{TABLE:tbl_04}}\n\nFigure 1 illustrates that the initial work, with an accessible dataset, addressing Arabic online toxicity was published in 2015. Subsequently, the number of datasets steadily increased until a significant surge occurred in 2021, with the publication of 12 research papers making their dataset available. Another notable leap took place in 2022, with the release of 17 new datasets. This trend highlights a growing interest in the importance of studying and addressing Arabic online toxicity through the development of dedicated datasets.",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_04"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.1.2. Host",
+              "parent_subsection_id": "s_4_1",
+              "text": "**FIGURE 2.** Hosts of toxic language detection datasets.\n\n{{TABLE:tbl_05}}\n\nAs depicted in Figure 2, GitHub hosts more than half of the datasets (23 datasets) followed by the Qatar Computational Research Institute (QCRI), which hosts 5 datasets. The rest of the hosts are either public repositories, academic publisher's repositories, or the project's website (the case of the OSCAR datasets), except for 2 datasets that we obtained by requesting the authors. Refer to Appendix C for the full URLs.",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_05"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Content",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.2.1. Source",
+              "parent_subsection_id": "s_4_2",
+              "text": "As can be observed in Table 4, Twitter is the source of text for more than half of the datasets, followed by Facebook and YouTube. Instagram and Reddit were used to build only 2 datasets, while several social media platforms are still underexplored as sources in the Arabic datasets such as Wikipedia and TikTok.\n\nBesides, three datasets are extracted from the web, which are the large-scale corpus OSCAR, where adult content is labelled [UNMAPPED:51, UNMAPPED:52], the dataset of the deleted comments from the website of the news channel Aljazeera [W2747187574] and Riabi's et al. [W4385572518] dataset, which includes user comments from a news website in addition to texts from a corpus of song lyrics.\n\nSeveral datasets are multi-sources [W4389518284, W2901236145, W4296498722, W4283275732, W4200012584, W4385723172, W4313569896, UNMAPPED:55, UNMAPPED:61], which explains their presence with more than one source in Table 4.\n\nSome datasets originated from other sources. For example, the dataset of [W3173465197] is hand-crafted based on patterns to assess the toxicity generated by large language models (see further details on this dataset in \u00a74.2.3). The dataset known as Multilingual Hatecheck [W4287888350] is a functional test that consists of synthetic texts in 10 languages, including Arabic. Within this dataset, the Arabic subset constitutes 3570 cases of both hateful and non-hateful content. These cases were carefully crafted by language experts using 716 templates, where the hate speech target and the slur word vary across the cases. The purpose of this dataset is to assess hate speech detection models based on 25 fine-grained functionalities. Each functionality reflects the ability of the model to classify correctly either a specific kind of hate speech or non-hate speech (e.g., implicit derogation, threat, non-hateful messages including profanity, counter speech), or cases exhibiting lexical or syntactic phenomena (e.g., negation, questions, and spelling variation).\n\n**TABLE 4.** Sources of the Arabic datasets on the online toxic language.\n\n{{TABLE:tbl_06}}",
+              "citations": [
+                "W2747187574",
+                "W4385572518",
+                "W3173465197",
+                "W4287888350"
+              ],
+              "tables_in_text": [
+                "tbl_06"
+              ],
+              "citations_unmapped": [
+                "51",
+                "52"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.2.2. Size",
+              "parent_subsection_id": "s_4_2",
+              "text": "**FIGURE 3.** Sizes of the Arabic toxic language detection datasets.\n\n{{TABLE:tbl_07}}\n\nAs illustrated in Figure 3, most of the datasets have a size between 1k and 50k examples, which is in line with the size of datasets in English and other languages according to a recent survey on hate speech detection [W3172559340]. Building larger annotated datasets is a challenge, as it may require recruiting many annotators, which makes the task expensive. It might also be ethically critical if each annotator is required to label a large number of examples, as this would expose them to harmful content for an extended period [W4385573644]. The largest datasets in our collection are the 2 versions of OSCAR, namely 22.1 [UNMAPPED:51] and 23.2 [UNMAPPED:52], which is an immense multilingual textual corpus employed for training large language models. Unlike their predecessors, these recent versions include automatic annotations for adult content, albeit in a very small proportion. Another dataset is about sports fanaticism detection [W3170478501]. It contains more than 230k examples, and its training subset has been annotated automatically based on a lexicon of fanaticism terms.",
+              "citations": [
+                "W3172559340",
+                "W4385573644",
+                "W3170478501"
+              ],
+              "tables_in_text": [
+                "tbl_07"
+              ],
+              "citations_unmapped": [
+                "51",
+                "52"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.2.3. Task",
+              "parent_subsection_id": "s_4_2",
+              "text": "The datasets we have collected deal with the toxic language in the context of different tasks. Upon examining those tasks, we classified the datasets into 4 generic categories and 18 subcategories representing the context or the goal for which they were created.\n\nAs shown in Table 5, the first category involves the datasets that were built mainly for training and testing toxic language detectors in textual data. Most of the datasets in this category refer to general offensive and abusive language, hate speech, and cyberbullying. We group together these tasks, despite their different names, because based on their definitions provided in the datasets' papers, differentiating them from each other is not straightforward. For example, some papers describe the task as offensive language detection [W2901236145, W3115903740, W2747187574], but their guidelines/papers include the description of hate speech as one of the cases that should be labelled as offensive. In addition to the general toxicity, some datasets address specific kinds of toxicity, such as misogyny, religious hate speech, and violence.\n\nIn the second category, datasets are designed for addressing other text processing tasks, but they include labelled toxic texts. The toxicity labels serve either to support the main task or to accommodate multitasking purposes. Below, we provide some examples.\n\nAlam, Dalvi, et al. [W3042995070] created a dataset of tweets aiming to fight disinformation about COVID-19. For each tweet, the annotators have to answer 7 questions revolving around the factuality and the harmfulness of the tweet. The harmfulness was addressed in two questions asking the annotators whether the tweet is harmful and why. This dataset has several versions. One of them was used in the NLP4IF-2021 shared tasks on fighting the COVID-19 Infodemic [W3167882386]. Another version was provided within the harmfulness detection subtask of CLEF-2022 Check That! Lab's task 1 [UNMAPPED:105], which is about identifying relevant claims in tweets.\n\nAnother example is the dataset of [W4311521079] which is labelled with 19 fine-grained classes of misinformation related to the COVID-19 pandemic including the class Hate and exclusion. The authors believe that fine-grained annotation is more helpful for fact-checking-worthiness and provides more insight into the harm level of misleading tweets.\n\nPropaganda can use toxic language to achieve its objectives. This is apparent in the definitions of the two propaganda techniques Appeal to fear/prejudices [UNMAPPED:115] and Smear [UNMAPPED:116], which are used among more than 15 techniques to annotate the propaganda datasets described in [W3213176494] [W4385574306].\n\nThe dataset of [W2139903875] is the only one in our pool that was built within the context of a social sciences study. The goal of its creation is to estimate the proportion of anti-Americanism in Arabic tweets in relation to different social and political events, namely the release of the movie Innocence of Muslims (which was considered offensive to Muslims), the hurricane Sandy and some political events in Syrian, Egypt, and Libya among other events. Although this dataset was not constructed for evaluating language models, its diverse range of topics and categories makes it suitable for training models for various tasks, namely abusive language detection, stance detection, and sentiment analysis.\n\nOSCAR is a very large multilingual dataset crawled from the web and conceived to allow the training of large language models. Due to quality concerns regarding such datasets [W3137010024], harmful text, particularly adult texts, is annotated in the recent versions of OSCAR [UNMAPPED:51, UNMAPPED:52]. By having this annotation, researchers and practitioners can apply filtering mechanisms to remove harmful text from the dataset, ensuring that their models are not trained on such content.\n\nThe third category of datasets concerns multimodal datasets, which are only two. The work of [W4283813557] is about the detection of YouTube videos with religious hate speech. The dataset used to train and evaluate the proposed solution comprises a variety of textual and non-textual features such as the video's title and description, the number of likes, the video duration, etc. Another work in this category is the one of [UNMAPPED:90]. Although it is a graduation project, this work is particularly interesting as it represents the first attempt to detect Arabic hateful memes. The constructed dataset is composed of 1674 memes and their texts [UNMAPPED:118] with 2 annotation levels: ternary and fine-grained.\n\nThe datasets in the fourth category address the issue of toxicity but do not fall into the aforementioned categories. In this category, Albadi et al. [W4288086170] focused on the detection of hateful bots. They constructed a dataset specifically for this task. The authors found that bots were responsible for almost 11% of hateful tweets, showing that bot detection can be useful in detecting hate speech. Additionally, Ousidhoum et al. [W3173465197] built a dataset to assess the toxicity generated by large language models. It is composed of cloze statements in Arabic, English, and French. Each statement starts with the name of a social group (e.g., African, Muslim, etc.) followed by an everyday action (e.g., cooking, hiking, etc.), and finally, a causal clause where the word representing the reason for the action is masked. Large language models (AraBERT [UNMAPPED:119] in the case of Arabic) were used to predict the masked word. The experiments revealed that those models tend to generate stereotypical, insulting, and confusing reasons for simple actions.\n\nIt is noteworthy that certain datasets, highlighted in bold in Table 5, have served as benchmarks in 9 shared tasks. Additional details on these shared tasks are provided in Appendix B.",
+              "citations": [
+                "W2901236145",
+                "W3115903740",
+                "W2747187574",
+                "W3042995070",
+                "W3167882386",
+                "W4311521079",
+                "W3213176494",
+                "W4385574306",
+                "W2139903875",
+                "W3137010024",
+                "W4283813557",
+                "W4288086170",
+                "W3173465197"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "105",
+                "115",
+                "116",
+                "51",
+                "52",
+                "90",
+                "118",
+                "119"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4.2.4. Dimension",
+              "parent_subsection_id": "s_4_2",
+              "text": "We use the term dimension to refer to the number of attributes used to describe each example in the dataset. Note that the attributes related to the post, the user profile, the network (e.g., ID, number of followers, number of likes..., etc.) or the raw annotations (\u00a74.4.4) are not considered in this analysis. We have observed two types of datasets: those with one annotation attribute indicating the presence or not of toxicity (e.g., Offensive, Not offensive) or its type (e.g., Abusive, Hate, Normal), and those with two or more annotation attributes. In the latter case, the annotation attributes typically represent the following:\n\n**Distinct tasks** For example, the dataset of [W2926336399] is annotated for several tasks, namely gender identification, abusive language detection, code-switching detection and emotion analysis.\n\n**Aspects of toxicity** We mean by aspect any attribute providing further details on the main task. Typically, the aspects represent the toxicity fine-grained types or targets. To illustrate, the dataset of [UNMAPPED:88] encompasses an attribute on misogyny identification and two additional attributes determining two aspects of that misogyny: the target (active, passive) and the fine-grained type (discredit, dominance, stereotyping, etc.).\n\n**TABLE 5.** Tasks addressed by the Arabic datasets that deal with toxic language. The references in bold concern datasets that have been used in shared tasks.\n\n{{TABLE:tbl_08}}\n\nWe observed that the target annotation in our datasets collection is either coarse-grained, determining whether or not the target is mentioned explicitly [W2972463128, UNMAPPED:88], or fine-grained determining the attacked group of people (e.g., Muslims, Jews, immigrants, etc.) [W2972463128, W4287888350, W3087096149, W4283813557] or the targeted personal attribute (e.g., race, gender, etc.) [W4385723172, W4225001692, UNMAPPED:90].\n\nFinally, the datasets of [W4225001692] and [W4366004244] are the only ones incorporating an attribute that determines the domain. In [W4225001692] for example, this attribute includes the labels: news, celebrities, gaming and sport.\n\n**Various toxicity concepts** For instance, in [W4385723172], the examples are labelled as offensive language or not, at the first attribute. If an example is offensive, it is further categorized as hate speech, vulgar language, or/and violent speech, at 3 additional binary attributes.\n\n**Information on the language, the dialect, or the script** For example, in the dataset described in [W4220734271], which is about hate speech against African refugees in Algeria, the examples are labelled as Arabic, Arabizi, French, or English.\n\nAs could be observed in Table 6, several datasets involve multiple types of attributes, such as the dataset introduced by Alam, Shaar, et al. [W3021955997]. We classified this dataset as multi-task since it comprises various tasks, revolving around COVID-19 misinformation and one of these tasks is the detection of social harmfulness. Additionally, this dataset comprises an attribute that specifies the type of harm if any (i.e., an aspect), namely bad cure, xenophobia, and panic, among others.",
+              "citations": [
+                "W2926336399",
+                "W2972463128",
+                "W4287888350",
+                "W3087096149",
+                "W4283813557",
+                "W4385723172",
+                "W4225001692",
+                "W4366004244",
+                "W4220734271",
+                "W3021955997"
+              ],
+              "tables_in_text": [
+                "tbl_08"
+              ],
+              "citations_unmapped": [
+                "88",
+                "90"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "4.2.5. Attributes Granularity",
+              "parent_subsection_id": "s_4_2",
+              "text": "We use the term granularity to refer to the number of classes, in one attribute, used to annotate the dataset examples. If the dataset is multi-task, we consider in our analysis only the attributes related to toxicity.\n\nAs shown in Table 7, most of the datasets address toxicity detection as a binary task distinguishing between toxic and non-toxic texts. There are also available datasets that enable ternary or multi-class classification approaches, which allow for a more nuanced understanding of the toxic content and can help design targeted interventions or moderation strategies. Typically, the ternary annotation scheme distinguishes between the clean language and two major kinds of toxic language: (i) hate speech, which targets and denigrates specific groups of people, possibly even in a subtle manner, and (ii) abusive language, which may include vulgar, profane, or obscene words but does not show hate and may not be directed towards a specific target. Among the datasets with a ternary annotation scheme, a single dataset stands out due to its different labels [W4220798742]. This dataset is about radicalism, and its annotation labels are Radical, Religious but not radical, and Unrelated.\n\n**TABLE 6.** Types of attributes in the Arabic toxic language datasets.\n\n{{TABLE:tbl_09}}\n\nThere are datasets where the set of labels include multiple classes, addressing the concerned task as a multi-class classification problem. Those classes represent typically fine-grained categories of toxic language or various kinds of text with toxic language being represented by one or more classes. A special case in our pool is represented by the datasets described in [W3042995070, W3021955997]. In those datasets, the classes represent a Likert scale showing the confidence level of the annotator regarding whether the text is harmful to society or not. The scale comprises 5 classes ranging from No, definitely not harmful to Yes, definitely harmful. For illustrations, refer to the examples provided in Table 8. Note that some datasets comprise more than one toxicity attribute with different granularities, such as [W3087096149], which is a dataset that has a hierarchical annotation scheme with 3 levels: binary, ternary and multi-classes.\n\nFinally, in [W4288086170] dataset, user accounts that disseminate hate speech were labelled by experts, assigning them a score ranging from 0 to 5, which indicates their similarity to either human or bot behaviour.\n\n**TABLE 7.** Granularity of the toxic language attributes.\n\n{{TABLE:tbl_10}}\n\n**TABLE 8.** Examples of multi-class attributes. In the column Labels, the classes indicating the presence of toxicity are represented in bold.\n\n{{TABLE:tbl_11}}",
+              "citations": [
+                "W4220798742",
+                "W3042995070",
+                "W3021955997",
+                "W3087096149",
+                "W4288086170"
+              ],
+              "tables_in_text": [
+                "tbl_09",
+                "tbl_10",
+                "tbl_11"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "4.2.6. Dialects and Scripts",
+              "parent_subsection_id": "s_4_2",
+              "text": "The Arabic language is known for its rich diversity of dialects, with vernacular variations that span across different regions and countries. On the other hand, Modern Standard Arabic (MSA), which is the formal form of Arabic used in education, news broadcasting, and formal writing, is limited to specific contexts [W2147272182]. Our datasets collection reflects this reality. As shown in Table 9, dialectal Arabic predominates, occurring in the vast majority of the datasets. On the other hand, only two datasets are entirely in MSA: one is the propaganda detection dataset sourced from the Twitter pages of news agencies [W4385574306], while the other involves synthetic textual patterns serving to investigate the toxicity generated by language models [W3173465197].\n\nSome datasets purposefully comprise texts in one dialect, whereas others are created to encompass multiple dialects [UNMAPPED:126]. The multi-dialect datasets constitute the majority, with 37 datasets. Following are the datasets in the Algerian dialect, which are five.\n\nWhile texts in Latin letters are usually discarded when building Arabic datasets, we have found in our collection datasets that comprise Arabizi [W2901236145, W4220734271, W4366004244, W4287888350, UNMAPPED:61] or are entirely written in this script [W4389518284, W2926336399, W4375824998]. Arabizi is a written form of informal Arabic that uses only Latin letters and numbers (see the references labelled with the superscript rbz in Table 9). As can be observed in the table, most of the datasets comprising Arabizi are in the Algerian dialect.\n\nBesides, some datasets are multilingual (highlighted in Bold in Table 9). Nonetheless, the examples of each language are saved in a separate file, except the dataset of De Smedt et al. [UNMAPPED:69], which comprises several languages in the same file.\n\n**TABLE 9.** Dialects present in the Arabic toxic language datasets. The references in bold concern multi-language datasets. The superscript rbz indicates that the dataset is partially or entirely in Arabizi.\n\n{{TABLE:tbl_12}}",
+              "citations": [
+                "W2147272182",
+                "W4385574306",
+                "W3173465197",
+                "W2901236145",
+                "W4220734271",
+                "W4366004244",
+                "W4287888350",
+                "W4389518284",
+                "W2926336399",
+                "W4375824998"
+              ],
+              "tables_in_text": [
+                "tbl_12"
+              ],
+              "citations_unmapped": [
+                "126",
+                "61",
+                "69"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Annotation Process",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.3.1. Annotation Method",
+              "parent_subsection_id": "s_4_3",
+              "text": "Toxic language annotation can be performed manually by human annotators, automatically based on predefined rules or trained models, or can be derived from prior annotations or actions taken by platform moderators. The three former methods were used in the examined datasets.\n\nAs depicted in Table 10, most of the datasets underwent manual annotation. Within this category, some datasets were annotated through crowdsourcing platforms, while others relied on a small number of annotators selected based on criteria such as expertise in the annotation task [W4287888350], domain knowledge [W4220798742, W4283321753, UNMAPPED:90], age [W4283321753], beliefs and gender [UNMAPPED:104] and the nationality [W2901236145].\n\nIn certain works, such as [W4205206694, W3179199540], annotators are identified as experts without specifying their domain of expertise. For many datasets, annotators were selected simply because they are native Arabic speakers (sometimes the fluency in a specific dialect is mentioned (\u00a74.2.6)) with a higher education level, such as [W4389518284, W3087096149, W4225001692, UNMAPPED:61, UNMAPPED:72]. Furthermore, some datasets were annotated by their respective authors [W4283275732, W2753540975, UNMAPPED:98], while for others, no information was provided regarding the criteria used for selecting the annotators [W2139903875, W4385574306, W4220734271, W4311521079, W4375824998].\n\nSome few datasets are annotated automatically. For example, Alqmase et al. [W3170478501] annotated automatically the training set of their sport fanaticism dataset using a rule-based approach that relies on a large lexicon of fanatic and unfanatic words. Nakov et al. [W3213176494] annotated, using SVM, a dataset of tweets on misinformation about COVID-19 vaccines. The dataset was then leveraged to analyse the tweets from various perspectives including harmfulness.\n\nAnother approach of annotation consists in labelling the examples based on a prior annotation. This approach was utilized, for example, in the dataset described in [W4389518284], wherein The Arabizi examples taken from four existing datasets were merged, and their diverse labels were unified to encompass only offensive, and not offensive. Another prior-annotation-based technique was employed in [UNMAPPED:69]. Initially, the authors manually labelled Twitter users as either jihadist or safe, considering various criteria such as keywords, photos, and observed patterns in user names. Subsequently, all tweets extracted from a labelled user were assigned the same label, either hate (for tweets extracted from jihadist users) or safe (for tweets extracted from non-jihadist users). While this method allows annotating a batch of texts simultaneously, it may lack accuracy, as not all messages written in the timeline of a user spreading toxicity are necessarily toxic.\n\nFinally, if the dataset is composed of synthetic texts, the number of examples within each category could be determined in advance based on the intended characteristics of the dataset to be created. We placed two datasets in this category because both of them are synthetic, although they are quite different. The examples of R\u00f6ttger's et al. [W4287888350] dataset were not collected from websites or social media platforms but instead created based on predefined patterns of hateful and non-hateful statements. This means that the labels were assigned to the examples at the time of their synthesis. Nonetheless, the created annotation was validated, subsequently, through crowdsourcing. The dataset of Ousidhoum et al. [W3173465197] is particular since it is created for a different task (\u00a74.2.3). The sentences of this dataset are not annotated examples, but instead structured cloze statements that consist of wildcards and causal clauses with masked words. The full sentences can be synthesized by replacing the wildcards with values from predefined lists of social groups, and the masked words are then filled with the large language model. Next, the toxicity of the generated sentences is investigated.",
+              "citations": [
+                "W4287888350",
+                "W4220798742",
+                "W4283321753",
+                "W2901236145",
+                "W4205206694",
+                "W3179199540",
+                "W4389518284",
+                "W3087096149",
+                "W4225001692",
+                "W4283275732",
+                "W2753540975",
+                "W2139903875",
+                "W4385574306",
+                "W4220734271",
+                "W4311521079",
+                "W4375824998",
+                "W3170478501",
+                "W3213176494",
+                "W3173465197"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "90",
+                "104",
+                "61",
+                "72",
+                "98",
+                "69"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.3.2. Annotator's Dialect Proficiency",
+              "parent_subsection_id": "s_4_3",
+              "text": "When dealing with multi-dialectal languages, such as Arabic, it is crucial to carefully choose annotators who are native speakers of the specific dialect used in the dataset [UNMAPPED:127]. Since Arabic dialect families are significantly different, this consideration ensures that annotators possess a nuanced understanding of the distinct vocabulary, slang, and cultural expressions associated with the dialect of the corpus to be annotated. Most works that mention the annotators' fluency or nativity in specific dialects typically pertain to datasets consisting of a single dialect (cf. Table 9). Beyond that, almost 60% of the works in our pool made no mention whatsoever of this critical consideration, while 4 studies provided minimal reporting. Specifically, Alakrot et al. [W2901236145] addressed this issue by selecting annotators whose nationalities were frequently mentioned in the datasets. Mulki and Ghanem [W4210762872] and Al Bayari and Abdallah [W4283321753] reported that their chosen annotators were proficient in dialects present in the dataset. Additionally, Mubarak, Rashed, et al. [UNMAPPED:94] stated that the selected annotator possesses a solid understanding of Arabic dialects in general. On the other hand, many works mentioned that annotators are Arabic native speakers without specifying their dialects.\n\n**TABLE 10.** Annotation approaches and number of annotators per text in the Arabic toxic language detection datasets. +: One additional annotator is added to validate the annotation and/or to solve the disagreements if any. *: One annotator annotates the whole dataset and 2 or 3 other annotators annotate only a sample to estimate the inter-annotator agreement. \u02c9: The annotator with the lowest inter-annotation agreement is excluded.\n\n{{TABLE:tbl_13}}",
+              "citations": [
+                "W2901236145",
+                "W4210762872",
+                "W4283321753"
+              ],
+              "tables_in_text": [
+                "tbl_13"
+              ],
+              "citations_unmapped": [
+                "127",
+                "94"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.3.3. Quality and Validation",
+              "parent_subsection_id": "s_4_3",
+              "text": "Out of the works we examined, 21 of them incorporated at least one strategy to ensure the accuracy of the manual annotations. We identified three distinct types of these strategies based on when they were applied: before, during, or after the annotation process.\n\nConcerning the pre-annotation measures, one approach, particularly used when the annotation process relies on crowdsourcing, involves verifying the crowdworkers' accuracy by comparing their annotations to those provided by experts. This is typically implemented in a test phase where the crowdworkers are tasked with annotating a small sample of the dataset, previously annotated by experts. In some works, the crowdworkers are evaluated, without notifying them, by incorporating texts from the pre-annotated sample into each crowdworker task. Less accurate crowdworkers are disqualified based on comparison with the expert labels [W2901236145, W2898401058, W4283813557, W4385723172, W4225001692, UNMAPPED:67]. Another approach is selecting crowdworkers with good reputation scores, which are provided on the crowdsourcing platform [W2972463128].\n\nAdditional approaches are employed, which are providing annotators with a data sample followed by feedback or discussion on their annotations [W3087096149, W4385574306], offering training to the annotators [W4288086170], and taking measures to ensure the language proficiency of crowdworkers [W2898401058, UNMAPPED:55].\n\nDuring the annotation period, in the work of [UNMAPPED:90], communication between the annotators and the dataset creators was enabled through a WhatsApp group to answer questions. In [W4288086170, W4283321753], the annotators' remarks were considered to improve or update the annotation guideline.\n\nAfter completing the annotation, for nearly all the datasets annotated by a single annotator, additional annotators are recruited to label a sample of the data and the inter-annotator agreement is computed to check the annotation quality. If the number of annotators is two, an additional one is generally brought in to solve the disagreements (see Table 10). Even with a higher number of annotators, some works, such as [W4205206694] opted for a validation phase with an additional annotator. In [W4385574306], the annotators collaborate more closely with a consolidator to reach a consensus on the final label. Conversely, Shannag et al. [W4225001692], excluded all the labels from the annotator who had the lowest inter-annotation agreement with the rest of the annotators, aiming to ensure a unanimous annotation. Some studies chose to delete the cases where one or more annotators failed to select a label [W2901236145, W2898401058, W4225001692]. Others excluded the cases with different labels [W2977739081, W2972463128, W4375824998, UNMAPPED:88].\n\nIn the case of automatic annotation, the annotation quality is typically estimated by evaluating the performance of the annotation model on a separate dataset, which is the case, for example, in the work of Nakov et al. [W3213176494].",
+              "citations": [
+                "W2901236145",
+                "W2898401058",
+                "W4283813557",
+                "W4385723172",
+                "W4225001692",
+                "W2972463128",
+                "W3087096149",
+                "W4385574306",
+                "W4288086170",
+                "W4283321753",
+                "W4205206694",
+                "W2977739081",
+                "W4375824998",
+                "W3213176494"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "67",
+                "55",
+                "90",
+                "88"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4.3.4. Guideline Availability",
+              "parent_subsection_id": "s_4_3",
+              "text": "Vidgen & Derczynski [W3014487746] recommend making the annotation guideline publicly available along with the dataset to enhance transparency about the dataset content and encourage other researchers to reuse it. Only 11 out of the analysed works published their annotation guideline, either as a separate document alongside the dataset, in the annotation platform, or on the project website (see Table 11). Besides, while the complete guideline given to the annotators was not shared, 7 works [W2898401058, W3106580412, W3087096149, W4288086170, W4283813557, W4225001692, UNMAPPED:94] did provide in the dataset-related paper, an extensive description of the annotation process. This included detailed definitions of the annotation labels with illustrative examples, as well as a description of the specific instructions and cautionary notes given to the annotators, sometimes even in cases of special or challenging scenarios such as dealing with sarcasm. Conversely, certain works (such as [W2901236145, W4283275732, W4313569896, W4366004244, UNMAPPED:55]) either did not mention whether they provided a guideline to the annotators or failed to report adequate details about it. The remaining papers (which represent the majority) included little to moderate information about the guidelines, mostly providing generic definitions of the labels with accompanying examples.\n\n**TABLE 11.** Accessibility of the annotation guidelines for toxic language datasets.\n\n{{TABLE:tbl_14}}",
+              "citations": [
+                "W3014487746",
+                "W2898401058",
+                "W3106580412",
+                "W3087096149",
+                "W4288086170",
+                "W4283813557",
+                "W4225001692",
+                "W2901236145",
+                "W4283275732",
+                "W4313569896",
+                "W4366004244"
+              ],
+              "tables_in_text": [
+                "tbl_14"
+              ],
+              "citations_unmapped": [
+                "94",
+                "55"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "4.3.5. Inter-annotator Agreement",
+              "parent_subsection_id": "s_4_3",
+              "text": "The inter-annotator agreement (IAA) refers to a calculated coefficient that demonstrates the level of consensus among annotators regarding the labels they assigned to data. This coefficient serves to indicate the reliability of the dataset by assuming that higher agreement between annotators correlates with higher reliability [W2141766660]. However, since the annotation of toxic language could be highly subjective, a low IAA should not be considered a problem [W3014487746]. Nonetheless, it remains important to report it to be considered when analysing the performance of models.\n\nOut of the 54 works we examined where the dataset annotation is manual, 15 works (29%) did not provide any information about the IAA, which is, for instance, the case in [W2753540975]. In the works that did report it, different measures were used, including Fleiss' Kappa, Cohen's Kappa, Krippendorff's Alpha, percentage of agreement, and Gwet's AC1 [UNMAPPED:131]. Some works [W2901236145, W2898401058, W2747187574] presented only the values without specifying the used measure.\n\nThe reported IAA values vary between 20% [W2972463128] and 100% [UNMAPPED:72] [UNMAPPED:132]. Nonetheless, extracting a clear trend from them is not straightforward due to their diverse interpretations. For instance, some works (e.g., [W2901236145, W2972463128, W2926336399, UNMAPPED:55]) reported multiple IAA values corresponding to each pair of annotators. Conversely, other works provided only sub-averages or a single overall average. In some works this coefficient is calculated per attribute (e.g., in [W4210762872], two IAA are computed separately for the attributes misogyny identification and the misogyny categorisation) or per class (e.g., Mubarak et al. [UNMAPPED:72] reported two values corresponding to the classes Adult and Not adult). Furthermore, while the majority of works computed the IAA on the entire dataset, there are some works where it was calculated on a sample of the dataset that includes extra annotations for validation, which is the case of [W4288086170, UNMAPPED:55, UNMAPPED:94].",
+              "citations": [
+                "W2141766660",
+                "W3014487746",
+                "W2753540975",
+                "W2901236145",
+                "W2898401058",
+                "W2747187574",
+                "W2972463128",
+                "W2926336399",
+                "W4210762872",
+                "W4288086170"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "131",
+                "72",
+                "132",
+                "55",
+                "94"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "4.3.6. Annotators' Support",
+              "parent_subsection_id": "s_4_3",
+              "text": "The financial and emotional support of the toxic language annotators is an ethical responsibility. It is considered among the best practices, which have to be considered when building datasets containing harmful content [W3014487746, W2973159684, UNMAPPED:127]. In this context, the association of computational linguistics designed the Responsible NLP Research checklist [UNMAPPED:135], which contains questions on human annotators: whether they are paid, whether they were informed about the potential risks (e.g., offensive content), and whether the study reports on the way they are recruited.\n\nOut of the analysed works, only five works [W2972463128, W3173465197, W4283813557, UNMAPPED:55, UNMAPPED:90] explicitly mentioned that the annotators were paid [UNMAPPED:136], and some of them even provided information about the given wages.\n\nWhen it comes to emotional support, only 2 works commented on that. The study by Albadi et al. [W4283813557] reported that the annotators were warned about the harmfulness of the content to be annotated and were given the freedom to stop the task at any time. Additionally, R\u00f6ttger et al. [W4287888350] stated that they used Vidgen's et al. [W2973159684] guideline to monitor and protect the annotators' well-being.",
+              "citations": [
+                "W3014487746",
+                "W2973159684",
+                "W2972463128",
+                "W3173465197",
+                "W4283813557",
+                "W4287888350"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "127",
+                "135",
+                "55",
+                "90",
+                "136"
+              ]
+            }
+          ],
+          "text": "The annotation of toxic language plays a crucial role in developing accurate and reliable toxic language detection systems. Providing information on the annotation method, the number of annotators per comment, the quality validation approach, the adopted guidelines and the resolution of annotation disagreements, all contribute to enhancing the transparency of the annotation process. This transparency allows leveraging the dataset while being aware of its potential limitations or biases. The following subsections elaborate on how these aspects were managed in the Arabic toxic language works within our datasets pool.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Reusability",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.4.1. Data-Paper Consistency",
+              "parent_subsection_id": "s_4_4",
+              "text": "Our examination revealed certain cases where the data statistics described in the research paper do not perfectly match the dataset available online, as observed in [W4283275732, W3106580412, W4313569896, W4220798742, UNMAPPED:55]. In [W4220798742], for example, the published dataset contains more than 200 additional examples compared to the dataset used in experiments as described in the paper. An extreme case is the work of [UNMAPPED:55], where there is no correspondence between the dataset and the paper, not only in the number of examples but also in the annotation labels and the ratio of offensive examples.\n\nWhile in the majority of these works, the discrepancies are generally minor, these inconsistencies between the paper and the shared dataset render the results of the authors' experiments impractical for comparison with future studies. It may also lead to unfair results comparison if the authors of future works are not aware of these differences. To prevent this situation, it is essential to explicitly document these variations in the dataset repository and, whenever possible, provide all versions of the dataset.",
+              "citations": [
+                "W4283275732",
+                "W3106580412",
+                "W4313569896",
+                "W4220798742"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "55"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.4.2. Training-Test Split",
+              "parent_subsection_id": "s_4_4",
+              "text": "Many datasets (precisely, 27 datasets) are not released with a division into training and testing sets. Unless authors' experiments are based on cross-validation using the entire dataset, this absence of official splits can hinder others from replicating the authors' results or considering them as a reference for comparison.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_4_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.4.3. Textual Content Availability",
+              "parent_subsection_id": "s_4_4",
+              "text": "Some researchers may opt to include in the dataset post IDs instead of the actual text due to various considerations, often centred around respecting social media platforms' policies (most notably Twitter). This is the case of 8 datasets in our collection [W2898401058, W3042995070, W2139903875, W3106580412, W3087096149, W4288086170, W3213176494, UNMAPPED:67]. When a dataset only contains post IDs, it becomes vulnerable to data loss due to post deletion. This data loss can significantly impact the completeness and the reusability of the dataset, potentially rendering research findings unreproducible.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_4_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4.4.4. Raw Annotations",
+              "parent_subsection_id": "s_4_4",
+              "text": "In addition to the aggregated annotation (a.k.a., gold labels), it would be beneficial to include in the dataset the annotator's raw labels. This broadens the reusability cases of the dataset by enabling the training of classifiers using approaches to learning from disagreement, which do not rely on the assumption that each example has a single gold judgment [W4200444669].\n\nWithin our collection of datasets, there are only 6 datasets that include the raw labels from all annotators [W2901236145, W2747187574, W4287888350, UNMAPPED:67, UNMAPPED:94, UNMAPPED:104].\n\nThe misogyny detection dataset, developed by Almanea and Poesio [UNMAPPED:104], distinguishes itself as it was specifically designed to investigate annotation disagreements among annotators with diverse gender and belief backgrounds. This dataset was released in the context of the SemEval-2023 learning with disagreements shared task [W4385571236]. In addition to the hard labels generated through a majority vote scheme, the dataset associates with each example the raw labels from all annotators and the soft labels computed from them. These soft labels represent the probability distribution for both misogyny and not misogyny classes. For instance, if one label indicates misogyny and two labels indicate not misogyny, the corresponding soft labels for misogyny and not misogyny are 0.33 and 0.67, respectively. The authors employed two approaches to train a classification model based on the raw annotations: a soft loss training approach treating the task as a multi-label classification and a multi-classifier approach.",
+              "citations": [
+                "W4200444669",
+                "W2901236145",
+                "W2747187574",
+                "W4287888350",
+                "W4385571236"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "67",
+                "94",
+                "104"
+              ]
+            }
+          ],
+          "text": "The primary aim of sharing datasets should be to ensure that they can be easily reused. Specifically, this involves either reusing the dataset to reproduce the experiments conducted by the original authors or using their published results computed on this dataset as a baseline for comparing new experiments. To assess the reusability of the datasets, we examined them based on three criteria: consistency between the paper and the released dataset, availability of division to training and test subsets and availability of the textual content. Below are further details.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The methodology we employed to collect papers and datasets enabled us to amass 54 works. By 'work,' we refer to a dataset with at least one paper describing it. Note that some datasets are derived from others, with variations in the number of examples or attributes they contain. In such cases, as long as they are shared through separate URLs, referenced in different papers, and exhibit any distinction, even small, we consider them as distinct datasets. An example of this is evident in the datasets initially described in [W3042995070] and [W3021955997], which have subsequently been released in various versions utilized in different shared tasks.\n\nTo the best of our knowledge, this is the most comprehensive collection of Arabic toxic language datasets published so far. Appendix C lists the references of all the collected datasets along with their URLs. Furthermore, we have established an online catalogue that will be consistently updated (see the link in Endnote 1).\n\nThis section presents our analysis of these datasets based on the 18 criteria described earlier (\u00a73.3), organized into four axes: Availability Details, Content, Annotation process, and Reusability.",
+      "citations": [
+        "W3042995070",
+        "W3021955997"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Findings and Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "RQ1- What are the available Arabic datasets dealing with toxic language?",
+          "subsubsections": [],
+          "text": "Unlike the previous surveys, the wide range of terms we used to search for papers and datasets on the Arabic toxic language allowed us to collect around 54 available datasets published between 2015 and 2023. Only one of them is accessible via payment [W4205206694], and the rest are freely available, most notably in public repositories like GitHub. Most of them are collected from Twitter, while other well-known sources such as Wikipedia [W2972657613] have not been exploited. These datasets cover all the Arabic dialect families (Egyptian, Maghrebi, Levantine, and Gulf), with the majority of them incorporating multiple dialects. Remarkably, the Algerian dialect is predominant in terms of the number of mono-dialect datasets.\n\nMoreover, Arabizi is scarcely present in toxic language datasets, except for those in the Algerian dialect. Considering the prevalence of this script in social media [W2891245574, W2104463314, W3166745283] and the potential variation in offensive language across different dialects [W4389518284], creating additional Arabizi datasets for dialects beyond the currently available ones is essential. This need arises from the fact that offensive words may differ among dialects, posing a challenge to the transfer of knowledge, from one dialect to another, when training classification models [W4389518284].",
+          "citations": [
+            "W4205206694",
+            "W2972657613",
+            "W4389518284"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "RQ2- What are the tasks for which the collected datasets have been created?",
+          "subsubsections": [],
+          "text": "These Arabic datasets have been created to serve different tasks ranging from general toxic language detection and categorisation (40% of the datasets are in this category) to the identification of specific kinds of toxic language such as extremism and misogyny. Toxic language has been also labelled in datasets created for other tasks such as misinformation detection and sentiment analysis. Only two datasets deal with modalities other than text, namely memes [UNMAPPED:90] and videos [W4283813557], and a single dataset [W3173465197] serves as prompts to large language models to assess the toxicity in the machine-generated text (\u00a74.2.3). Nonetheless, it is important to note that the range of tasks addressed in these datasets is still relatively restricted when compared to the diversity found in datasets in English. Below, we outline some aspects that are currently absent or limited in Arabic datasets.\n\n**Subtle or adversarial toxic language** Subtle toxic language conveys harmful meanings without explicit swearing [UNMAPPED:143]. A related concept is adversarial toxic language, wherein the text is intentionally encoded to deceive detection algorithms, such as by altering the spelling of offensive words [UNMAPPED:144]. Despite the significant challenge in detecting these forms of toxic language, there are currently only a few Arabic datasets addressing this issue. The Multilingual HateCheck dataset [W4287888350] involves tagged examples of implicit derogatory and hate speech with spelling variations. In addition, the misogyny detection datasets [W4210762872, UNMAPPED:88] incorporate examples labelled as stereotyping, which could be considered a form of implicit toxic language. However, the number of examples in those classes is limited. Therefore, there is a need for a larger Arabic dataset specifically focusing on this topic.\n\n**Explainability** The importance of explainability in toxic language detection systems lies in enabling users to understand why a given text was marked as toxic. On the other hand, it helps stakeholders (e.g., moderators or developers) to identify potential biases or errors in the system's judgments. While this important aspect has been addressed within some English datasets [W3184890107, UNMAPPED:145], there is currently no toxic language Arabic dataset containing annotations at the span level to enable explainability.\n\n**Counterspeech** In the context of polarized discussions, the constructive and positive remarks (a.k.a., counterspeech) not only serve as exemplary instances to follow, encouraging others to engage in debates [W3146291899] but also act as a formidable countermeasure against hate speech [W3039716027, UNMAPPED:148, UNMAPPED:150] and demonstrate solidarity with the targeted groups. Hence, to fight against toxic language, in addition to training systems for identifying it, it is essential to train them to recognize counterspeech comments [UNMAPPED:151], making it possible to highlight this positive speech for users. Thus, creating datasets that contain annotated counterspeech and its categories is required to combat toxic language, particularly hate speech, and understand its dynamics [W2963446316]. Although many datasets in our collection annotate normal or neutral texts, it remains uncertain whether these texts convey positivity and are directed at the victims of toxicity or merely represent irrelevant comments. An exception can be found in the dataset of Mohdeb et al. [W4220734271], where sympathetic comments towards African refugees and migrants are annotated and constitute 21%, and the Multilingual HateCheck functional test [W4287888350].\n\n**Degree of toxicity** Some toxicity aspects, most notably those pointing out its severity or its degree (e.g., strong, weak,...etc) [UNMAPPED:153, UNMAPPED:154, UNMAPPED:155] are not yet addressed in the Arabic datasets. Identifying such aspects of toxicity is important to allow taking the right action towards it, which may range from just hiding or removing the comment on the social media platform to legal actions. It is also helpful in the context of social and communication studies.",
+          "citations": [
+            "W4283813557",
+            "W3173465197",
+            "W4287888350",
+            "W4210762872",
+            "W3184890107",
+            "W3146291899",
+            "W2963446316",
+            "W4220734271"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "90",
+            "143",
+            "144",
+            "88",
+            "145",
+            "151"
+          ]
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "RQ3- How were these datasets annotated, and were the best annotation practices applied?",
+          "subsubsections": [],
+          "text": "While the majority of the studies offered sufficient information about aspects like the method of dataset annotation (whether manual, crowdsourcing, or automatic), the number of annotators per text, and the inter-annotator agreement, only a small number of them provided access to the guidelines given to the annotators. Moreover, most of the dataset-related papers included only minimal information about the annotation instructions.\n\nFurthermore, our analysis revealed that over half of the works did not report about measures taken to ensure annotation quality, such as assessing annotators' accuracy or language proficiency before or during the annotation task. Besides, the proficiency of annotators in handling the dialects present in multi-dialect datasets is a concern that has not received the attention it deserves. Finally, it is worth noting that the least reported practice in the examined works concerned the well-being and financial support of the annotators.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "RQ4- Can these datasets be easily reused for future research?",
+          "subsubsections": [],
+          "text": "As shown in Section 4.4, it is worth noting that over half of the datasets lack an official division into training and testing subsets. Additionally, some datasets have been released in versions that differ from those described in the published papers. While this does not necessarily hinder researchers from utilizing them, it does not allow considering the results obtained by the dataset creators, on these datasets, as a baseline for future comparisons. Another factor that can render a dataset entirely unusable is the practice of solely publishing social media post IDs instead of the actual text, which is the case for 8 datasets within our collection.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_5",
+          "subsection_index": 5,
+          "subsection_label": "5.1. Recommendations and Future Work",
+          "subsubsections": [],
+          "text": "Drawing from both the findings of this survey and the insights assembled from previous works, we recommend that future research should focus on the following areas:\n\n- Leveraging existing datasets to establish benchmarks. It is noteworthy that a few datasets have already been integrated into benchmarking efforts like ORCA [W4385572487], ALUE [UNMAPPED:157] and LAraBench [W4378465203]. However, the vast majority of the datasets have been exploited in experiments conducted solely by their authors.\n\n- Developing new datasets that focus on challenges not yet addressed in existing ones (such as explainability, counterspeech detection, subtle and adversarial toxic language detection, and the estimation of toxic language severity) and that are collected from sources different from Twitter.\n\n- Striving to implement best practices when constructing and sharing datasets to enhance their reusability and facilitate their fair exploration for model building and evaluation. These practices include establishing detailed annotation guidelines and making them available within the dataset files or in the paper appendix [W4393163454], sharing the dataset URL in the related publication, and managing the different versions of the dataset, making it clear which version is used in the reported experiments.\n\n- Incorporating ethical considerations into the dataset annotation process by focusing on the well-being of the annotators.\n\nMoreover, a potential avenue for future research in the context of dataset analysis would involve examining datasets for potential biases. Biases within datasets (e.g., topical, temporal, toxic language targets, etc.) pose a significant concern as they diminish the generalizability of models and may increase the risk of developing discriminatory models against certain social categories. Our awareness is limited to a single study [W3186955206] that reviewed biases in Arabic toxic language datasets. Specifically, the study covered six Arabic datasets and five in English. This accentuates the need for further efforts to analyse the remaining Arabic datasets, which represent a valuable continuation of this work.",
+          "citations": [
+            "W4385572487",
+            "W4378465203",
+            "W4393163454",
+            "W3186955206"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "157"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This paper represents the first effort to conduct a comprehensive survey of datasets addressing online toxicity specifically within the Arabic language. Below, we provide our findings in response to the four central research questions that guided this investigation.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this survey, we systematically gathered 54 available Arabic datasets related to toxic language detection, along with their corresponding papers. We conducted a thorough analysis of the collected works based on 18 criteria categorized into 4 axes. Through this systematic investigation, we have shed light on the content of existing datasets, offering insights into their annotation process and potential for reuse. The findings revealed issues in the annotation and sharing processes of some datasets, and discerned unexplored areas in the Arabic language, enabling us to formulate recommendations for future works.\n\nFurthermore, the analysed works are listed in a dedicated GitHub repository, creating a centralized resource accessible to researchers and practitioners. This not only enhances the accessibility and visibility of the existing datasets but also facilitates the process of acquiring data for training and testing toxic language detection solutions.\n\nTo sum up, we anticipate that this survey will empower researchers and practitioners to make well-informed decisions regarding whether there is a necessity to construct new Arabic toxic language datasets. This will aid in avoiding redundant efforts in developing datasets for tasks that have already been extensively explored. Additionally, by making the datasets accessible in one repository, we hope to assist in data selection decisions, not only for training and testing Arabic toxic language detection solutions but also for data augmentation and generalizability evaluations.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This publication was made possible by NPRP grant 13S-0206-200281 from the Qatar National Research Fund (a member of Qatar Foundation). The findings achieved herein are solely the responsibility of the authors.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Notes",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "1. https://github.com/--placeholder-for-anonymisation--/Arabic-toxic-language-datasets\n2. https://www.indexoncensorship.org/2021/07/arab-social-media/\n3. https://www.amnesty.org/en/latest/news/2019/05/facebook-says-it-doesnt-block-freedom-of-speech-but-our-research-found-accounts-belonging-to-human-rights-defenders-were-censored/\n4. https://data.gesis.org/abusive-data/\n5. https://arbml.github.io/masader/\n6. In Masader Plus, the number of toxic language datasets is 14 (as of August 2023). Among these datasets, we excluded 3 of them because they are not available or because their annotation does not explicitly include toxicity labels. We added 5 datasets that are not listed in Masader Plus.\n7. This includes partisan speech (i.e., extreme pro- and anti- discourse)\n8. https://www.azsecure-data.org/dark-web.html\n9. Appeal to fear/prejudices: seeking to build support for an idea by instilling anxiety and panic in the population towards an alternative, usually a group of people (e.g., immigrants).\n10. Smear: a generic disparaging or denigrating an individual or a group, labelling them as, e.g., corrupt, criminal, extremist, racist, etc.\n11. The textual part of the memes is extracted using optical character recognition (OCR) technology.\n12. The list of dialects, as well as their classification into families, is not reported in the Table due to space constraints.\n13. For the guidelines on harmfulness detection in this shared task, see: https://gitlab.com/checkthat_lab/clef2022-checkthat-lab/-/tree/master/task1/data\n14. The guideline is available at: https://github.com/mohamadhabash/Graduation-Project/blob/main/annotation%20guidelines.pdf\n15. This is the case of the dataset (R\u00f6ttger et al., 2022).\n16. In this work, the annotators\u2019 agreement reached 99.8% and was rounded up to 100% in the paper.\n17. https://aclrollingreview.org/responsibleNLPresearch/\n18. Note that we do not consider annotators' payments when the annotation is carried out by the authors, which is the case of many works, such as (Alshehri et al., 2020).",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Appendix A: Works Obtained Outside the Systematic Search",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**TABLE A1.** Works Acquired Outside Systematic Search.\n\n{{TABLE:tbl_15}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_15"
+      ]
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "Appendix B: Shared Tasks Dealing with Toxic Language Detection in Arabic",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**TABLE B1.** Shared tasks dealing with toxic language detection in Arabic.\n\n{{TABLE:tbl_16}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_16"
+      ]
+    },
+    {
+      "section_id": "s_11",
+      "section_index": 11,
+      "section_label": "Appendix C: Datasets List",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**TABLE C1.** List of the collected datasets.\n\n{{TABLE:tbl_17}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_17"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_9",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_16",
+      "placeholder": "{{TABLE:tbl_16}}",
+      "source_section_id": "s_10",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_17",
+      "placeholder": "{{TABLE:tbl_17}}",
+      "source_section_id": "s_11",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4391400566_tables.md"
+}

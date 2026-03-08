@@ -1,0 +1,386 @@
+{
+  "id": "W4402402080",
+  "metadata": {
+    "title": "Precise Tool to Target Positioning Widgets (TOTTA) in Spatial Environments: A Systematic Review",
+    "n_sections": 7,
+    "n_subsections": 11,
+    "n_subsubsections": 0,
+    "n_tables": 12
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Mixed reality (MR) and relative spatial environments are increasing in popularity thanks to the steady evolution of technology and the reduced costs of head-mounted displays, improved tracking, software ecosystems like SteamVR, and development tools such as Unity3D [W2803901301, W2944868213]. However, MR spatial environment management is rather limited to gaming and entertainment. Among the key reasons for the lack of adoption in \"serious\" applications is the inadequate performance of spatial interactions [W2149003305, W2169657749, UNMAPPED:5]. Many industrial applications (surgery, maintenance, welding, etc.) require the user to handle a tool and perform spatial dexterity tasks with 6 degrees of freedom (6 DOF, three positional and three rotational), with a low margin of error to avoid consequences in terms of cost, time, and even human safety [W3179487754, W2968991294, W3216800902, W2278942097]. MR has been demonstrated to be beneficial in training and guiding spatial operations using virtual reality (VR) and executing in the real world using augmented reality (AR) [W3024696459, W2981013034, W2396832950]. These spatial operations are challenging since they demand precision manipulation of virtual/real tools [W4385185732, W3042728352, W3208090461].\n\n**FIGURE 1**. Graphic representation of TOTTA widget design clusters.\n\nSpatial XR interactions used in wide application fields require precise tool-to-target (TOTTA) tasks (position/rotation). In medical surgical procedures, where implementing haptic feedback is complex and costly [W3109125302, W2037024472, W3037684272, W2995435724] and the surgeon must place the tool accurately on the preoperative target. Moreover, in industrial scenarios, tasks such as quality checks of diagnostic sensors to verify carbon fiber structures [W2791492682, W2975325236, W4220816894] require a certain precision.\n\nAlthough a 3D tool to target positioning tasks is important, there is not a specific definition of this problem that differentiates it from general 2D/3D UI research like \"drag-and-drop,\" \"aiming/aligning,\" and \"docking\" [W2124781093]. Therefore, we define it as the TOTTA (TO-to-TA), a spatial positioning task. TOTTA is usually guided by visual elements\u2014the widgets [W1967310439, W2294226227]\u2014to be aligned by spatial skills in 3D space. These widgets help manipulate the tool (physical or virtual TO) towards a spatial target (physical or virtual TA). The user manipulates a tool towards a target, supported by tool widgets (TO) and target widgets (TA), to achieve higher precision and performance.\n\n**TABLE 1**. Summary of the selected papers' used technology, interaction, visualization, and tracking device.\n\n{{TABLE:tbl_01}}\n\nThe literature on the design of TOTTA is very varied, and the impact of widgets and UI is crucial yet underestimated, especially considering that they can improve user performance, usability, comfort, and ease of use [W2169355694, W2057361680, UNMAPPED:52]. Poor design can also have side effects, like distraction from the primary task and increased mental and physical demands [W2982473313, W3125312763, W2890530318].\n\nIn the past, 3D tracking technology was the main TOTTA limiting factor due to low precision, accuracy, and latency [W2116588463, W3000334388]. However, MR technology is evolving rapidly, and more precise and cost-effective devices are expected [W4378807214]. Even assuming ideal tracking, the basic knowledge, methods, and tools for TOTTA guidance interface design (UI) are still open research [W3160155069, W4295664469]. TOTTA literature is scattered into different application domains, different research objectives (hardware validation, widget validation), and MR setups and lacks well-established guidelines.\n\nTo our knowledge, no previous literature review addressed TOTTA positioning widgets. The main contributions of this work are:\n- C1: Define the TOTTA problem and its importance,\n- C2: Provide a systematic review of TOTTA visual widgets,\n- C3: Classify and compare the approaches,\n- C4: Discuss open issues and trends,\n- C5: Guides for further research for optimal design TOTTA,\n- C6: Interest in MR developers in many domains to save time and resources and create effective, easy-to-use spatial interfaces and applications.\n\nThe research questions that motivate the literature research on the precise TOTTA spatial visual guidance in MR are: \"What are the existing approaches in literature?\", \"How are the TOTTA widgets designed?\" and \"How are TOTTA widgets evaluated?\".",
+      "citations": [
+        "W2803901301",
+        "W2944868213",
+        "W2124781093",
+        "W1967310439",
+        "W2294226227",
+        "W2116588463",
+        "W3000334388",
+        "W4378807214",
+        "W3160155069",
+        "W4295664469"
+      ],
+      "tables_in_text": [
+        "tbl_01"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Methodology: Systematic Review",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Bibliometric Analysis",
+          "subsubsections": [],
+          "text": "We visualized the keywords of the selected papers using word clusters [W2973183252] (**FIGURE 4**). This graph shows that \"3D user interfaces\" and \"3D interaction\" are the key topics, and \"computer-assisted surgery\" and \"object manipulation\" are common applications. The colors demonstrate how recent studies (yellow) VR first, then AR, later in green to \"user studies\" and visualization, as the effect of natural technology evolution and optimization.\n\n**FIGURE 5** supports the topic's novelty and demonstrates a positive trend. More than 50 percent of the found literature papers have been published in the last five years, and the increased number of citations and the majority of the papers are conference proceedings (16/24 papers, 67%).\n\nThe application domain is general in most of the cases (19/24 papers, 80%), with some verticalizations in medical (2) and industrial (3). This can be explained by the fact that TOTTA is a very common task, and these widgets can be useful in many domains.\n\n**FIGURE 4**. Bibliographic keywords connection of the TOTTA papers.\n\n**TABLE 2**. The 24 TOTTA paper's publication year and citations.\n\n{{TABLE:tbl_02}}\n\n**FIGURE 5**. The 24 TOTTA paper's publication year and citations.",
+          "citations": [
+            "W2973183252",
+            "W2944868213",
+            "W2149003305"
+          ],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. TOTTA Widgets in Literature",
+          "subsubsections": [],
+          "text": "This section presents the key aspects of the TOTTA widget design in chronological order, along with the main research drivers and findings.\n\nBoritz et al. [W2171749759] propose a direct midair TOTTA interface using a new tetrahedron-shaped physical input device. The TOTTA widgets, which mimic the input device, are two identical tetrahedrons (1.73 cm height and 0.87 cm width), with one face perpendicular to the base and with a checkerboard texture (**FIGURE 6**). The user must align TO on TA geometric shapes. When the distance is less than a threshold (0.5 cm), a red box appears at the tip of the TA. They found higher positional error along z (front direction of depth) with the monoscopic display vs stereo.\n\n**FIGURE 6**. Boritz et al. [W2171749759] use Tetrahedron, No: 1.\n\nFiorentino et al. [W2344331849] implement TO with a 3D Model\u2014a simplified representation of the physical pen held by the user; for TA, a green Box with colored 3D Axes (**FIGURE 7**). With only a 3D positioning test, they find that difficulty varied with the target position: the targets in front of the user and above the head lead to greater error.\n\n**FIGURE 7**. Fiorentino et al. use Model TO, Box TA and Axis TA.\n\nVeit et al. [W2098746242] investigate touch screen interactions with DOF separation (height axis vs. depth axis) using a monochromatic (green) 3D Axes TO (15 cm length) and a semi-transparent blue globe TA (7.5 cm radius). At collimation, the TO 3D Axes flash (**FIGURE 8**). Results indicate that isolating the depth axis manipulation increases precision, while haptic cues do not improve user precision.\n\n**FIGURE 8**. Veit et al. [W2098746242] use 3D Axes TO and Globe TA, No: 2.\n\nRagan et al. [W2151647616] propose a multi-touch input device for TOTTA. They use two Boxes of different sizes: TO is opaque blue, and the TA is semi-transparent purple, with eight small gray spheres in the vertexes. As additional feedback, the spheres turned red when only a vertex was aligned and green when all eight were aligned (**FIGURE 9**). They found that touch-based interfaces increased the task completion time compared to wand or joystick interactions.\n\n**FIGURE 9**. Ragan et al. [W2151647616] use Box No: 3.\n\nRaj et al. [W2150281176] utilize two different colored 3D Axes: TO, purple, and TA, gray. Both 3D Axes had unique-colored spheres at the endpoints to match the orientation (**FIGURE 10**). The results differed between participants' gender and video game experience. This paper shows how the user's gender, avatar representation, and experience can influence performance. The self-avatar visualization resulted in a slightly faster rotation time than a sphere visualization of an avatar.\n\n**FIGURE 10**. Raj et al. [W2150281176] use 3D Axes, No: 4.\n\nHa et al. [W2057016016] implemented a bare-hand user interface with a green Box for TO and a blue Box for TA combined with semi-transparent grey guidelines and shadows where the lines intersect in the AR environment (**FIGURE 11**). The TA Box turns red as the target achieved feedback. This design is interesting as it claims that anteroposterior depth visual feedback by shadows and guidelines enables precise manipulation.\n\n**FIGURE 11**. Ha et al. [W2057016016] use Box No: 5.\n\nVuibert et al. [W2028240794] compared the tetrahedrons versus two chair models in desktop VR; they use a pair of same-sized Tetrahedrons rendered as a colored wireframe (**FIGURE 12**). TO has an opaque sphere in the center, and TA has a larger semi-transparent sphere. This research found that virtual 3D models can perform better (time and precision) than tetrahedrons, probably by leveraging natural human skills from the real world. However, the 3D Model must allow unique positional and angular collimation.\n\n**FIGURE 12**. Vuibert et al. [W2028240794] use Tetrahedron, No: 6.\n\nWang et al. [W1572730362] developed an Object Impersonation metaphor that enables switching the DRIVE (avatar view on a tablet and tetrahedron's view on HMD) and VIEW methods (avatar view on HMD and tetrahedron's view on a tablet). They use a pair of same-size Tetrahedrons with small colored spheres in the vertexes and additional Crosshair (**FIGURE 13**). This widget comprises two coplanar, perpendicular lines (forming a 2D cross) surrounded by concentric circles. TO is semi-transparent blue with gray edges and orange crosshair, and TA is non-transparent turquoise with non-transparent crosshair. The object impersonation method gave better orientational precision but required higher cognitive demand.\n\n**FIGURE 13**. Wang et al. [W1572730362], Tetrahedron & Crosshair, No: 7.\n\nFeng et al. [W2070344950] evaluate one-hand free vs novel two-handed input devices for 7 DOF manipulation techniques. The input device corresponds to virtual spherical cursors (blue-left, pink-right). They use Box TOTTA with colored faces, but different in size and frame color: red (TO) and white (TA) (**FIGURE 14**). The virtual cursors are linked with an orange-colored cylinder \"spindle\" with a small red sphere mid-point. The technique's result is equivalent when the TOTTA size is the same and faster with their input device when the TOTTA size is different.\n\n**FIGURE 14**. Feng et al. [W2070344950] use Box, No: 8.\n\nMendes et al. [W2547735422] present an opaque 3D Model with colored 3D Axes with sphere endpoints for TO, and a transparent 3D Model for TA (**FIGURE 15**). Interactive secondary feedback is provided by the Model TO color gradually turning green with the distance from TA. An interesting aspect is the 3D axes allowed to control a single DOF. The PRISM technique dynamically adjusts between hand and object motion ratio. Experimentation demonstrated how DOF separation brings benefits but at the cost of task completion time.\n\n**FIGURE 15**. Mendes et al. [W2547735422], 3D Axes, No: 9.\n\nKrichenbauer et al. [W2583078593] compare AR vs VR, TO as a composition of an opaque Box with a single red face textured with the number two, colored 3D Axes, and a wireframe-colored Globe (**FIGURE 16**). TA is a box like TO with different sizes, transparency, and dashed edges. The results claim that AR resulted in faster completion time than VR when using a 3D input device and mouse.\n\n**FIGURE 16**. Krichenbauer et al. [W2583078593], 3D Axes/Globe/Box; No: 10.\n\nRo et al. [W2964745038] present a novel physical input device using the Laser pointer metaphor AR pointer. The user collimates the Box TO (green, blue, red) remotely with a touch on the mobile device to a different size semitransparent TA (**FIGURE 17**). The AR pointer performs better in task completion time than the direct free hand 3D manipulation metaphor.\n\n**FIGURE 17**. Ro et al. [W2964745038] use Box No: 11.\n\nKim et al. [W2891877950] compared \"DOF separation (1DOF, only axis-handles)\", \"without DOF separation (3DOF, only center-handle),\" and \"switchable DOF (1-DOF/2-DOF/3DOF, center, and axis-handles)\" for mid-air manipulation. They utilize TO as a combination of a 3D Model (a teapot), colored 3D Planes, and colored 3D Axes with spheres in the endpoint (**FIGURE 18**). TA is represented only as a semi-transparent 3D model. During manipulation, the constrained axis becomes yellow along lines or planes. The switchable DOF outperformed others in terms of time and precision efficiency.\n\n**FIGURE 18**. Kim et al. [W2891877950] use 3D Axes/Plane/Model, No: 12.\n\nSchlunsen et al. [W2973183252] evaluate free hand vs widget-based manipulation techniques and different multimodal cues for 3D manipulation of system control tasks. Green framed gray Box TO with 3D Axes TO (translation) with spheres in the endpoints and gray framed Globe TO (rotation) is used (**FIGURE 19**). TA is a brown framed yellow box. The free-hand manipulation resulted in faster and most preferred by the participants. They claim that multimodal feedback (audio) improved the user experience.\n\n**FIGURE 19**. Schlunsen et al. [W2973183252], 3D Axes/Globe/Box, No: 13.\n\nHeinrich et al. [W2921041867] compare three visual widgets (circle, the crosshair, and the arrow concept) for AR-supported medical needle insertion (**FIGURE 20**). They use different-sized 2D Crosshair TOTTA, small crosshair TO (color change red-orange-green), and bigger crosshair (transparent-yellow-green-red for depth feedback). Each concept has distinct color mapping and indicator scaling. The Crosshair outperformed in orientation and depth parameters. The results for the color and indicator scaling factors are less consistent.\n\n**FIGURE 20**. Heinrich et al. Center TOTTA, No: 14.\n\nSun et al. [W3125312763] compare DOF manipulation modes in WebVR to explore user workload and task performance effects. TO use colored 3D Axes (translation) with cones in the endpoints and Globe TO (rotation) with three wireframes with different colored rings with spheres of interaction points (**FIGURE 21**). The manipulated axis appeared yellow while others disappeared (1DOF). Multiple DOFs provide less perceived workload and higher presence. The results indicated that users feel less workload or more presence and tend to spend less time completing tasks on WebVR.\n\n**FIGURE 21**. Sun et al. [W3125312763] use Sphere/Axes/Plane, No: 15.\n\nAndersen et al. [W3111155113] elaborate on three semi-transparent widget designs for mid-air interaction. The 3D Axes TOTTA, Crosshair TOTTA (white and red), and triangular pyramid TOTTA (**FIGURE 22**). The crosshair and triangular TOTTA have the shortest alignment time. In contrast, 3D Axes TOTTA performs best in translation and rotation errors. A novel aspect is that visual elements' size affects how far the user extends the arm, influencing torque forces.\n\n**FIGURE 22**. Andersen et al. [W3111155113] use Crosshair, No: 16.\n\nLiu et al. [W3021670584] evaluate which type of gaze-based manipulations (eye vs. head) performs best when combined with OrthoGaze. OrthoGaze allows the user to manipulate gray Box TO using the orthogonal Planes TO. The TA is represented as the green-colored Box TA (**FIGURE 23**). During TOTTA, the gaze-selected Plane activates, and the user adjusts the 2-DoF position by looking at the target location and confirming placement through a gaze dwell. The eye gaze results are more accurate than the head gaze for continuous aiming.\n\n**FIGURE 23**. Liu et al. [W3021670584] use Box and Plane, No: 17.\n\nWei\u00df et al. [W3092811950] investigate DIY tasks such as woodworking (drill, saw, and screw) using various levels of guidance: 2D video instructions, VR, and AR. They use distinct-size Crosshairs for TO and TA (**FIGURE 24**). The TOTTA gives dynamic feedback to the user to avoid user error during drilling. The results indicate that context-aware situated visualizations are less likely to rely on empirical methods.\n\n**FIGURE 24**. Wei\u00df et al. [W3092811950] use Crosshair, No: 18.\n\nFuvattanasilp et al. [W3123294955] implemented SlidAR+, a novel handheld AR device (HAR) with an interaction method. They use a red-colored Line TO and a translucent, green-colored arrow with a thin blue line TA (**FIGURE 25**). The user matches the TO (red arrow) with the TA (green arrow with the base of the virtual pillar). To align perfectly, a red line appears from the arrow TO tip to the TA, and the user slides TO using the Line. SlidAR+ resulted in faster task completion and is preferred by users.\n\n**FIGURE 25**. Fuvattanasilp et al. [W3123294955] use Line, No: 19.\n\nLee et al. [W3209745450] propose a novel near-field interaction metaphor for distant object manipulations. They compare widget-based metaphor with unimanual metaphor (one hand & scaled replicated model) and bimanual metaphor (both hand & scaled replicated model). The Box TO has eight pair-colored small spheres in the vertex points (**FIGURE 26**). For translation, a colored 3D Axes TO is used with a small yellow cube visually indicating the manipulated axis and red text for numerical feedback. For rotation, a colored wireframe Globe TO with a sphere is used. TA is a white wireframe with colored spheres on vertex points. The unimanual metaphor has the highest efficiency, the widget-based metaphor has the slowest, and the bimanual metaphor, with a scaled replica, grants the lower movement. Interestingly, subjective impressions are most favorable with the bimanual metaphor.\n\n**FIGURE 26**. Lee et al. Sphere/3D Axes/Plane TOTTA, No: 20.\n\nYu et al. [W3163078982] compare four gaze-supported interaction techniques: gaze grab, remote hand, 3D Magic gaze, and implicit gaze. They used a 3D Model for TO (a rabbit) and a transparent replica (**FIGURE 27**). During the manipulation, the TO has a blue outline, and when the target is achieved, it turns red. The results indicate that gaze does not influence performance when the TO is in front of the user, but it can be useful for distant targets and larger spaces. The gaze input reduces the arms fatigue issue and potentially allows future TOTTA manipulation.\n\n**FIGURE 27**. Yu et al. Model TOTTA, No: 21.\n\nDastan et al. [W4313033854] present a 5DOF guidance applied to dental implantology as the rotation along the drill axis is not influent. TO comprises three triangle pairs\u2014colored differently for each direction\u2014and two semi-circle pairs\u2014colored differently for each rotation (**FIGURE 28**). The pairs visualize in real time and amplify the position and rotation distance values. TA is a static green line with a concentric cylinder. This approach leverages human reification from Gestalt theory [W2070344950], seeking a quick, pre-attentive reaction. Their method performed better in angular (with major effects) and positional precision and accuracy, with less mental demand and frustration than the literature. However, this gain is obtained with a significant increase in task time and physical demand.\n\n**FIGURE 28**. Dastan et al. Axes/Globe/Line TOTTA, No: 22.\n\nGanias et al. [W4321488224] compare grasping visualizations, auto-pose (realistic grasp), single pose (hands do not penetrate with object), and disappearing hand (hand disappears). They used a colored Box for TO (solid) and a transparent replica for TA (**FIGURE 29**). At the end of each positioning, the visual cue of the changed color was used (the yellow returned green). The results indicated no significant difference in user performance in any visualizations. The auto pose is a user preference and provides a stronger perceived sense.\n\n**FIGURE 29**. Ganias et al. Box TOTTA, No: 24.",
+          "citations": [
+            "W2171749759",
+            "W2344331849",
+            "W2098746242",
+            "W2151647616",
+            "W2150281176",
+            "W2057016016",
+            "W2028240794",
+            "W1572730362",
+            "W2070344950",
+            "W2547735422",
+            "W2583078593",
+            "W2964745038",
+            "W2891877950",
+            "W2973183252",
+            "W2921041867",
+            "W3125312763",
+            "W3111155113",
+            "W3021670584",
+            "W3092811950",
+            "W3123294955",
+            "W3209745450",
+            "W3163078982",
+            "W4313033854",
+            "W4321488224"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Being a multidisciplinary and cross-domain problem, the query definition is divided into four categories: \"spatiality,\" \"task,\" \"technology,\" and \"objective\" (**FIGURE 2**). We used the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines for conducting a systematic review [W2576440140].\n\n```\nTITLE-ABS-KEY (\"DOF*\" OR \"degree of freedom*\" OR \"widget*\" OR \"3D interaction*\" OR \"3D object\" OR \"three-dimensional object*\" OR \"user interface\")\nTITLE-ABS-KEY (\"3D docking*\" OR \"superimpose*\" OR \"align*\" OR \"assembly*\" OR \"3D manipulation\" OR \"object manipulation*\" OR \"manipulation technique*\" OR \"orientation\" OR \"mid-air*\" OR \"position*\")\nTITLE-ABS-KEY (\"virtual environment*\" OR \"mixed reality\" OR \"extended reality\" OR \"virtual reality*\" OR \"augmented reality*\")\nTITLE-ABS-KEY (\"precis*\" OR \"performance\" OR \"accura*\")\n```\n\n**FIGURE 2**. The research query of the systematic review.\n\n**FIGURE 3**. PRISMA flow chart approved by [W2576440140].\n\n```\nIdentification: Records identified from Scopus, IEEE, ACM (n=206)\n \u2192 Duplicates removed (n=11)\nScreening: Records screened (n=195)\n \u2192 Records excluded (n=152)\nEligibility: Full-text articles accessed (n=43)\n \u2192 Full-text articles excluded (n=19)\nInclusion: Studies included in review (n=24)\n```\n\nThis method is often used in conducting literature reviews [W3113525080, W3189935440, W3123497531]. We launched the search on the Scopus, ACM, and IEEE databases in August 2023. The PRISMA-based data collection stage is summarized in **FIGURE 3**. From the initial 206 papers, we eliminated the papers that do not present or describe the widgets, the ones that focus on only hardware devices without user interfaces, and tasks that do not include a tool or target widgets. These aspects were essential in our systematic review and pointed out the key connection of papers, that they all present a spatial manipulation task of a visual real/virtual tool to a real/virtual target using TOTTA visual widgets. These criteria enabled detailed manual reading of the final selection of 24 papers in **TABLE 1**.",
+      "citations": [
+        "W2576440140"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Widget Design Analysis",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Collimation Feedback",
+          "subsubsections": [],
+          "text": "The TO and TA shapes must provide positional and orientation graphical/geometrical clues for unique collimation configuration. This aspect is not trivial and is key in widget design. We found eight diverse types of shapes: Box, 3D Axes, 3D Model, Crosshair, Globe, Tetrahedron, Lines, and Planes (**FIGURE 31**).\n\n**TABLE 3**. Eight different visual designs were used for the TO and TA widgets.\n\n{{TABLE:tbl_03}}\n\n**FIGURE 31**. Eight different visual designs were used for the TO and TA widgets.\n\nThe box is the most preferred geometry (21/70 design, 30%, 10 TO/11 TA). It is simple, has predictable orthogonal angles, and is easy to implement in all graphical engines. The Box design is preferred by 10/24 papers [W2098746242, W2150281176, W1572730362, W2583078593, W2964745038, W2891877950, W2921041867, W3111155113, W3123294955, W4321488224] (**FIGURE 32**). It's also curious how boxes are used in physical child toys in learning motor skills. Box widgets with different dimensions can provide unique positional reference and partial angular. For angular, unique primary Box is supported by additional shapes or different colored/textured faces, edge styles, or sizes.\n\n3D Axes are also common (11/70 design, 16%, 9 TO/2 TA), with a clear and familiar design for CAD users and gamers. The 3D Axis design is preferred by 9/24 papers [W2344331849, W2070344950, W2547735422, W2891877950, W2921041867, W3125312763, W3123294955, W4313033854, W2151647616] (**FIGURE 32**). The presence of a center supports positional placement, and the orthogonal lines facilitate angular arrangements. TO and TA are differentiated by colors or additional geometries, like spheres in the vertices.\n\n3D Models (9/70 design, 13%, 5 TO/4 TA) (e.g., rabbit, teapot, arrow) instead of basic geometries. This design is preferred by 5/24 papers [W2070344950, W2583078593, W2964745038, W3092811950, W3209745450] (**FIGURE 32**). TO and TA 3D Models are commonly differentiated by color and transparency. However, the choice of a specific model is limited as some 3D models may be inefficient in positional and orientational guidance. Therefore, they are substandard or rarely used by the end user.\n\nCrosshair (8/70 design, 11%, 4 TO/4 TA) is common in aviation, military, and healthcare interfaces. The Crosshair design was chosen from 4/24 papers [W2028240794, W2973183252, W3125312763, W3021670584] (**FIGURE 32**). Planar or 3D crosshairs are used in spatial interactions with reduced DOF, like needle insertion and drilling.\n\nGlobe (6/70 design, 9%, 5 TO/1 TA) is a familiar widget design for desktop applications and games. Interestingly, 6/24 papers (**FIGURE 32**) preferred Globe and they are often preferred singularly only TO or only TA without having them together in the task [W2344331849, W2547735422, W2891877950, W2921041867, W3123294955, W4313033854]. Globe is often represented as wireframe rings or semi-transparent to avoid visual occlusion.\n\nThe tetrahedron (6/70 design, 9%, 3 TO/3 TA) is geometrically the simplest (having minimum entities) shape for the TOTTA widget. 3/24 papers use it [W2975325236, W2344331849, W2098746242] (**FIGURE 32**). The corners help with orientation but are less familiar compared to the other shapes and have no orthogonal angles.\n\nLine (6/70 design, 9%, 4 TO/2 TA) can provide single DOF guidance with reference to mid/end points by distinctive styles (dashed, solid, transparent, or color). However requires the combination of elements to be functional in the 3D space. The Line widget is preferred by 4/24 papers [W1572730362, W2583078593, W3125312763, W3209745450] (**FIGURE 32**).\n\nPlanes (4/70 design, 6%, 2 TO/1 TA) are usually represented in three perpendicular surfaces. Their intersection can also generate 3D axes. However, Planes are less intuitive and more prone to visual occlusion than others. The Planes is preferred by 4/24 papers [W2891877950, W3125312763, W3021670584, W3209745450] (**FIGURE 32**). Some other visual representation methods are used in TOTTA to support collimation feedback (**FIGURE 33**).\n\n**TABLE 4**. Single basic shape type used by literature.\n\n{{TABLE:tbl_04}}\n\n**FIGURE 32**. Single basic shape type used by literature.\n\nAs theorized by perception, the same or similar shapes for TO and TA are used principally (22/24 papers, 92%).\n\nTo further distinguish the tools from the targets, colored minor parts of widgets (such as frames/vertices/faces) (18/24 papers, 75%) or entirely colored widgets (17/24 papers, 71%) are used frequently.\n\nTransparency (16/24 paper, 67%) is also used to reduce visual cluttering and enhance depth perception during collimation.\n\nFollowing, TO/TA pairs are differentiated by containing additional/different geometrical elements like small spheres and cubes (14/24 papers, 59%).\n\nSome preferred (13/24 papers, 54%) more than one design of widgets, we defined them as \"Mixed widgets\", [W2891877950, W2973183252, W3209745450]. They have used the composition of shapes (from **FIGURE 31**), requiring more cues for guidance\u2014even redundant in some cases\u2014since they can result in more complexity.\n\nFinally, the different widget sizes (11/24 papers, 46%) are used to distinguish TO from TA, especially if the task requires resizing.\n\n**TABLE 5**. Collimation feedback mechanics: graphical clues.\n\n{{TABLE:tbl_05}}\n\n**FIGURE 33**. Collimation feedback mechanics: graphical clues.",
+          "citations": [
+            "W2098746242",
+            "W2150281176",
+            "W1572730362",
+            "W2583078593",
+            "W2964745038",
+            "W2891877950",
+            "W2921041867",
+            "W3111155113",
+            "W3123294955",
+            "W4321488224",
+            "W2344331849",
+            "W2070344950",
+            "W2547735422",
+            "W3125312763",
+            "W4313033854",
+            "W2151647616",
+            "W3092811950",
+            "W3209745450",
+            "W2028240794",
+            "W2973183252",
+            "W3021670584",
+            "W2975325236"
+          ],
+          "tables_in_text": [
+            "tbl_03",
+            "tbl_04",
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. During Manipulation Feedback",
+          "subsubsections": [],
+          "text": "This feedback supports the user during the TOTTA task through continuous guidance feedback (**FIGURE 34**). Only 14/24 literature papers use during manipulation continuous feedback; they are interactive and not just signals. The majority of these TOTTA designs use continuous color change (e.g., red-orange-green) to convey guidance (9/24 papers, 13%).\n\nText feedback (2/24 papers, 13%) is also preferred to indicate the real-time error values. Some use sonification (2/24 papers, 8%), which is a simultaneously generated sound (e.g., drums with variable rhythm) to guide the user interactively [W2028240794, W2973183252]. Text feedback can provide precision control during TOTTA. However, since there is a continuous change of text in the field of view, it may frustrate the user or cause a high task load.\n\nAs dynamic novel approach visual error visualization (1/24 papers, 4%) is used during the manipulation. This approach promises intuitive feedback; it allows dynamic visualization of the target distance by widgets' forms of distance [W4313033854]. Another unique aspect is that the widgets disappear at the target threshold, reducing clutter. The widgets' more dynamic and complex behavior is demonstrated to improve user performance but at the cost of physical and cognitive demand. This aspect of widget design has an undisclosed potential to guide the user along the interaction in addition to collimation.\n\n**TABLE 6**. During manipulation, continuous feedback.\n\n{{TABLE:tbl_06}}\n\n**FIGURE 34**. During manipulation, continuous feedback.",
+          "citations": [
+            "W2028240794",
+            "W2973183252",
+            "W4313033854"
+          ],
+          "tables_in_text": [
+            "tbl_06"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. TA Reached Feedback",
+          "subsubsections": [],
+          "text": "As the TO and TA shapes begin to superimpose, visual collimation feedback becomes increasingly inefficient. Therefore, \"supplementary\" feedback is often provided concurrently with the collimation (**FIGURE 35**). This feedback conveys the end-of-task information as signals and they are triggered at the TOTTA positional and rotational distance threshold, probably to substitute haptic feedback (e.g. vibration) [W2057016016, W2891877950, W2973183252, W3021670584].\n\nCommonly instant color change is used after the task completion (17/24 papers, 71%) as it is intuitive for the user and is easy to implement. Further, at the collimation event, playing a completion sounds (9/24 papers, 38%) followed by a new object/target appearance (6/24 papers, 25%) [W1572730362] and text flash (1/24 papers, 4%) \"Right There!\".\n\n**TABLE 7**. TA reached Feedback at the end of the task.\n\n{{TABLE:tbl_07}}\n\n**FIGURE 35**. TA reached Feedback at the end of the task.",
+          "citations": [
+            "W2057016016",
+            "W2891877950",
+            "W2973183252",
+            "W3021670584",
+            "W1572730362"
+          ],
+          "tables_in_text": [
+            "tbl_07"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "A key aspect of TOTTA widgets is the distance of interactions. Near-field interactions allow the ability to direct manipulation of tool and target in proximity and are advantageous for the precision of small-size objects. On the other hand, the far-field interactions rely on distant object manipulations beyond the user's arm reach, which is advantageous for large tools and target size and distance flexibility. There is no prevalence between the near-field (12/24 papers, 50%) or far-field interaction (9/24 papers, 37%), and few studies (3/24 papers, 13%) employ both (**TABLE 1**).\n\nThe TOTTA may require various levels of DOF, so we analyze that it requires superimposing or aiming. The most common widget guidance mechanic is the visual 3D superimposition of TO over TA (20/24 papers, 83%) (**FIGURE 30**).\n\nA limited number also includes the scaling (8/24 papers, 33%) with the superimposing task, which consists of changing the size of the TO widget to match the TA. Visual scaling has no direct meaning for TOTTA collimation, even if it may have the potential to set some tool parameters (e.g., drill speed value). However, this usage is not envisioned in the selected papers.\n\nFew papers prefer the aiming task (4/24 papers, 17%), which provides a reference point for the user to aim and align the TO used for 5DOF tasks (e.g., needle insertion, drill positioning).\n\n**FIGURE 30**. Three main TOTTA tasks in the evaluations.\n\nFor a precise TOTTA, users receive multimodal guidance feedback associated with TOTTA widgets. At first glance, TOTTA visual widgets use basic shapes. However, each TOTTA representation is unique in detail. Therefore, the whole design gathered in a TOTTA widget cluster, resulting in 70 different graphical designs (**FIGURE 1**).\n\nIn the next subsections, we analyzed the widget guidance mechanics through their feedback to the user. We divided the TOTTA widget design as feedback factors, \"Collimation Feedback,\" \"End of task feedback,\" and lastly, \"During manipulation feedback.\"",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Evaluation Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Research Questions",
+          "subsubsections": [],
+          "text": "Common literature research questions are manipulation methods (10/24 papers, 42%): DOF separation, multi-level DOF, learning (knowledge retention, skill acquisition, and transferability), or user experience evaluation (presence and engagement), **FIGURE 36**.\n\n**TABLE 8**. Research Questions of the TOTTA papers.\n\n{{TABLE:tbl_08}}\n\n**FIGURE 36**. Research Questions of the TOTTA papers.\n\nA secondary research question concerns interaction devices (5/24 papers, 21%), such as hand-held controllers, finger-tracking, and eye-tracking, and their effect on user experience regarding usability, user satisfaction, and performance. A third common research question concerns visualization techniques (5/24 papers, 21%) and the effects of AR/VR user experience on presence and engagement.\n\nOur research discovers that the research questions on widget visual design are limited (3/24 papers, 13%) despite its significant impact on the user experience and performance.\n\nOther research questions are specific: gender video game experience affects self-avatar representation (1/24 papers, 4%) on the 3D manipulation task.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_08"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Participants",
+          "subsubsections": [],
+          "text": "Within-subject (20/24 papers, 83%) is the most utilized methodology among the literature papers. The average number of participants is 21 \u00b1 SD 12.9, with a minimum age of 18 and a maximum age of 50. Most are right-handed (92%), young (SD 3.1, mean 25.8), and male (65%) (**FIGURE 37**). The majority are student participants (90%), some unpaid volunteers (4/24 papers), and some paid (4/24 papers), while the rest is not specified.\n\n**TABLE 9**. Participants' demographic information: Gender.\n\n{{TABLE:tbl_09}}\n\n**TABLE 10**. Participants' demographic information: Handedness.\n\n{{TABLE:tbl_10}}\n\n**FIGURE 37**. Participants' demographic information.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_09",
+            "tbl_10"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Procedure",
+          "subsubsections": [],
+          "text": "TOTTA validations are more commonly tested in VR (19/24 papers, 79%) than in AR. Twelve papers use VR HMD, five desktop VR, three AR HMD, two Projected AR, one Fish Tank VR, one VST-HMD, and one hand-held AR, as shown in **TABLE 1**.\n\nOften the participants are provided with a hand-held device (17/24 papers, 71%) since it simulates the feeling of a TO being picked up or provides physical feedback when interacting with an input device or controller, **TABLE 1**. A custom-made object input device is the most preferred (9/24 papers, 37%), followed by controller (7/24 papers, 29%) and mouse (2/24 papers, 8%) input devices. Moreover, 5/24 papers (21%) involved a free-hand interaction, and 2/24 papers (8%) included a gaze interaction as well. In some cases, the participants were also provided with virtual avatars and input device representation (8/24 papers, 33%), which influences self-perception and the sense of presence in mixed realities.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Metrics",
+          "subsubsections": [],
+          "text": "The literature papers measure performance, acceptance, and preference using similar metrics. The most inquired metric is task completion time (24/24 papers, 100%), followed by subjective data (20/24 papers, 83%), positional error (15/24 papers, 63%), angular error (11/24 papers, 46%), scale error (4/24 papers, 17%), and count (e.g., attempts, click) (4/24 papers, 17%) (**FIGURE 38**).\n\nWe analyzed the Subjective data since it is essential for comprehensively understanding the user experience, needs, emotions, and behaviors collected during the experiment. The most investigated metric is user preference (14/24 papers, 58%), followed by the perceived performance (9/24 papers, 38%), NASA-TLX (7/24 papers, 29%), difficulty rate (6/24 papers, 25%), comfort rate (6/24 papers, 25%), SUS (4/24 papers, 17%), intuitiveness (4/24 papers, 17%), PQ-presence questionnaire (3/24, 13%), UEQ (2/24 papers, **FIGURE 39**). The least used metrics are AttrakDiff (1/24 papers, 5%), ARI (1/24 papers, 4%), and HARUS (1/24 papers, 4%).\n\n**TABLE 11**. Quantitative TOTTA collected metrics.\n\n{{TABLE:tbl_11}}\n\n**FIGURE 38**. Quantitative TOTTA collected metrics.\n\n**TABLE 12**. The subjective TOTTA collected metrics.\n\n{{TABLE:tbl_12}}\n\n**FIGURE 39**. The subjective TOTTA collected metrics.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_11",
+            "tbl_12"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "TOTTA widgets perform differently and can be physically and mentally demanding for the user. Not much research has been done to highlight how the literature compares and evaluates different TOTTA designs. Therefore, in this section, we analyzed the literature evaluation methods in four subsections: research questions, Participants, Procedure, and Metrics.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1. Limitations and Future Works",
+          "subsubsections": [],
+          "text": "This study acknowledges its limitations because no previous research has been done in the literature to analyze the TOTTA widget design and evaluation methods. We examined papers that required a specific tool to align targets using visual widgets. Tasks such as assembly were excluded since the user searches for tools and targets in the environment and constructs a whole. This limitation allows us to analyze each method deeply.\n\nFor future works, it is important to evaluate the possible trade-off between the widget complexity and the cognitive overload as experienced in some experiments [W1572730362, W4313033854]. We think that to achieve better performance, as requested by the industry, widget behavior will increase in complexity, and the future challenge is to balance this with users' cognitive overload.\n\nAlso, DOF separation improved user precision so that it may be investigated better as a design solution in future studies. On the grounds of this study, we can draw the future TOTTA research:\n- Define and implement a standard experiment framework.\n- Equally compare the existing TOTTA widgets.\n- Improve widget design by perception theory.\n- Improve widgets with continuous guidance.\n- Enforce diversity in user tests.",
+          "citations": [
+            "W1572730362",
+            "W4313033854"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2. Key Findings",
+          "subsubsections": [],
+          "text": "We extracted some main research outcomes and key findings approved by TOTTA papers, considering that they are valid in the specific context, widget design, and experimental conditions.\n- TOTTA stereoscopic performs better than monoscopic view [W2171749759].\n- 6DOF direct hand manipulations [W2151647616, W2973183252], DOF separation [W2098746242, W2547735422], switchable DOF [W2891877950], increased precision, completion time, and qualitative results.\n- Self-avatar visualizations reduce task time [W2150281176], and participants preferred the semi-transparent hand [W2057016016].\n- Object impersonation (user embodiment in TO) provides better orientational error but increases cognitive demand than DRIVE and VIEW metaphors [W1572730362].\n- If TO vs. TA sizes differ (the user must also apply to scale), the physical input device influences the task precision and time, and bimanual interactions are better suited than unimanual [W2070344950].\n- The participants perform faster in AR than in VR with a 3D input device [W2583078593].\n- Free-hand manipulation is faster than widget-based manipulation and is preferred by the participants, and multimodal cues improve the user experience [W2973183252].\n- The 2D crosshair performs better than the 2D arrow for translation and rotation [W2921041867].\n- 3D Model TOTTA performs better than 3D Axes/Globe [W3209745450].\n- The tetrahedron shape has better orientational precision, but the task time increases [W2028240794] compared to the model shape.\n- Gaze-based manipulation causes more fatigue than controller-based manipulation [W3021670584].",
+          "citations": [
+            "W2171749759",
+            "W2151647616",
+            "W2973183252",
+            "W2098746242",
+            "W2547735422",
+            "W2891877950",
+            "W2150281176",
+            "W2057016016",
+            "W1572730362",
+            "W2070344950",
+            "W2583078593",
+            "W2921041867",
+            "W3209745450",
+            "W2028240794",
+            "W3021670584"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This systematic review showed that TOTTA widget designs are non-standard and differ in design, feedback, and interaction. In all studies, the TOTTA guidance is supported by the Gestalt theory's visual overlap or cognitive psychology as a \"collimation feedback,\" intuitive and pre-attentive feedback.\n\nThe visual overlap of similar basic shapes is supported by reification, a pre-attentive human capability of interpreting visual information as theorized by the Gestalt laws, such as proximity, closure, similarity, and continuation.\n\nThis aspect is not always supported from a theoretical/cognitive point of view in the studies. Box, 3D Axis, and 3D Models are the most preferred ones. However the geometries that are missing a center (e.g., wireframe Box) can have problems in precise positioning.\n\nThe alignment of the same basic-shaped TO and TA presents the challenge of differentiating them. Some evaluated approaches are frames/vertices/faces color or style (75%), different-colored TO/TA (71%), transparency (67%), additional shapes (59%), multiple widgets (54%), and size (46%). Using colored, partial elements and transparency, TO and TA are differentiated. Transparency can also be beneficial for reducing visual occlusion during the TOTTA task.\n\nAlthough some patterns are visible and probably lead to effective solutions, few studies provide scientific ground for visual and interaction design. We argue that a deeper comprehension of the perception of shapes (e.g., Gestalt theories) can lead to better results in terms of performance and usability.\n\nAnother aspect is the common design of the continuous \"during manipulation feedback.\" Sonification and animations can bring large margins of improvement. The latest papers are evolving from the one-time signal at goal reach to a potentially more effective, dynamic, and responsive guidance method.\n\nAnother key finding is the lack of a well-established golden standard and direct comparisons of the present widgets or a partial set. The hardware systems used in the selected papers vary in terms of immersion, tracking, and visual quality, deeply impacting the resulting experience, user performances, and acceptance.\n\nThe TOTTA validation methods found in this systematic review use quite different\u2014thus not comparable\u2014experiment designs (target configuration, avatar, background, etc.), and we spot some bias (VR is more tested than AR, right-handed, and male participants). Another aspect to highlight is that the accessibility issues are not investigated or mitigated (e.g., color code and color blindness), and none of the studies reviewed addressed this topic.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This work defined the TOTTA guidance problem and its importance in several applications. We provided a systematic review, starting from 206 papers, and we selected 24 papers that deeply analyzed dedicated widgets. We described the existing approaches, studied TOTTA widget design characteristics and evaluation methods, and presented key findings of the selected papers. We are encouraged by this study's findings, which identify the gaps and provide context for future research. This research provides interesting perspectives and guides for the many research applications and industries where the precise tool to target object manipulation is required, such as medicine, aviation, industry, retail, etc. This study concludes with acknowledgment of the need to address TOTTA problems and the necessity of a standardized but flexible evaluation methodology due to the different declinations of MR systems in the scientific community.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Acknowledgments",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Co-founded by MICS (Made in Italy - Circular and Sustainable) - National Recovery and Resilience Plan (PNRR), 4-2-1.3 - No. 341, Italian Ministry of University and Research, European Union - NextGenerationEU PE00000004, CUP D93C22000920001. Co-funding by Emme Evolution S.r.l. FESR 2014\u20132020 Obiettivo Convergenza. Project development organizations: with Polytechnic University of Bari, CUP B95H22000810007.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_4",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4402402080_tables.md"
+}

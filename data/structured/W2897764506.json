@@ -1,0 +1,458 @@
+{
+  "id": "W2897764506",
+  "metadata": {
+    "title": "Machine and deep learning for sport-specific movement recognition: a systematic review of model development and performance",
+    "n_sections": 9,
+    "n_subsections": 9,
+    "n_subsubsections": 0,
+    "n_tables": 7
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Key Words:",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Sport movement classification; inertial sensors; computer vision; machine learning; performance analysis.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Performance analysis in sport science has experienced considerable recent changes, due largely to access to improved technology and increased applications from computer science. Manual notational analysis or coding in sports, even when performed by trained analysts, has limitations. Such methods are typically time intensive, subjective in nature, and prone to human error and bias. Automating sport movement recognition and its application towards coding has the potential to enhance both the efficiency and accuracy of sport performance analysis. The potential automation of recognising human movements, commonly referred to as human activity recognition (HAR), can be achieved through machine or deep learning model approaches. Common data inputs are obtained from inertial measurement units (IMUs) or vision. Detection refers to the identification of a targeted instance, i.e., tennis strokes within a continuous data input signal [W2023302299, W2511719117]. Recognition or classification of movements involves further interpretations and labelled predictions of the identified instance [W2023302299, W2511719117, W2511719117], i.e., differentiating tennis strokes as a forehand or backhand. In machine and deep learning, a model represents the statistical operations involved in the development of an automated prediction task [W2919115771, W4236362309].\n\nHuman activities detected by inertial sensing devices and computer vision are represented as wave signal features corresponding to specific actions, which can be logged and extracted. Human movement activities are considered hierarchically structured and can be broken down to basic movements. Therefore, the context of signal use, intra-class variability, and inter-class similarity between activities require consideration during experimental set-up and model development. Wearable IMUs contain a combination of accelerometer, gyroscope, and magnetometer sensors measuring along one to three axes. These sensors quantify acceleration, angular velocity, and the direction and orientation of travel respectively [W2129591854]. These sensors can capture repeated movement patterns during sport training and competitions [W2793667086, W2038605780, W2766106096]. Advantages include being wireless, lightweight and self-contained in operation. Inertial measurement units have been utilised in quantifying physical output and tackling impacts in Australian Rules football [W2129591854, W2096859093] and rugby [W2150154218, W2102525680, W2620970755, W2580153924, W2612661119]. Other applications include swimming analysis [W2216964382], golf swing kinematics [W2041005575], over-ground running speeds [W2056956916], full motions in alpine skiing [W2319084577]; and the detection and evaluation of cricket bowling [W2165782109, W1537860477, W2612661119].\n\nComputer vision has applications for performance analysis including player tracking, semantic analysis, and movement analysis [W2753693229, W2609286783]. Automated movement recognition approaches require several pre-processing steps including athlete detection and tracking, temporal cropping and targeted action recognition, which are dependent upon the sport and footage type [W2095426704, W1975875545, W2609286783]. Several challenges including occlusion, viewpoint variations, and environmental conditions may impact results, depending on the camera set-up [W2106996050, W2736707111]. Developing models to automate sports-vision coding may improve resource efficiency and reduce feedback times. For example, coaches and athletes involved in time-intensive notational tasks, including post-swim race analysis, may benefit from rapid objective feedback before the next race in the event program [W4389881014, W2618857625]. For detecting and recognising movements, body worn sensor signals do not suffer from the same environmental constraints and stationary set-up of video cameras. Furthermore, multiple sensors located on different body segments have been argued to provide more specific signal representations of targeted movements [W4200094653]. But it is not clear if this is solely conclusive, and the use of body worn sensors in some sport competitions may be impractical or not possible.\n\nMachine learning algorithms learn from data input for automated model building and perform tasks without being explicitly programmed. The algorithm goal is to output a response function h\u03c3(x\u0304) that will predict a ground truth variable y from an input vector of variables x\u0304. Models are run for classification techniques to predict a target class [W2096352448], or regression to predict discrete or continuous values. Models are aimed at finding an optimal set of parameters \u03c3 to describe the response function, and then make predictions on unseen unlabelled data input. Within these, model training approaches can generally run as supervised learning, unsupervised learning or semi-supervised learning [W2604319603, UNMAPPED:34].\n\nProcessing raw data is limited for conventional machine learning algorithms, as they are unable to effectively be trained on abstract and high-dimensional data that is inconsistent, contains missing values or noisy artefacts [W2511719117, W3180241828]. Consequently, several pre-processing stages are required to create a suitable data form for input into the classifier algorithm [W2097575504]. Filtering [W2097575504, W2027604141, W1872773245, W2027604141], window capture durations [W2069725995, W2132691216, W1872773245], and signal frequency cut-offs [W2027604141, W1990627964] are common techniques applied prior to data prior to dynamic human movement recognition. Well-established filters for processing motion signal data include the Kalman filter [W3180241828, W2183475719, W2766669256] and a Fourier transform filter [W1993761347] such as a fast Fourier transform [W2033533120, W2132691216]. Near real-time processing benefits from reducing memory requirements, computational demands, and essential bandwidth during whole model implementation. Signal feature extraction and selection favours faster processing by reducing the signals to the critical features that can discriminate the targeted activities [W2023302299]. Feature extraction involves identifying the key features that help maximise classifier success, and removing features that have minimal impact in the model [W2127095067]. Thus, feature selection involves constructing data representations in subspaces with reduced dimensions. These identified variables are represented in a compact feature variable [W2127095067]. Common methods include principal component analysis (PCA) [W2595303241, W1980161980], vector coding techniques [W2548464106] and empirical cumulative distribution functions (ECDF) [UNMAPPED:54]. An ECDF approach has been shown to be advantageous over PCA as it derives representations of raw input independent of the absolute data ranges, whereas PCA is known to have reduced performance when the input data is not properly normalised [UNMAPPED:54]. For further detailed information on the acquisition, filtering and analysis of IMU data for sports application and vision-based human activity recognition, see [W3180241828] and [W2511719117], respectively.\n\nDeep learning is a division of machine learning, characterised by deeper neural network model architectures and are inspired by the biological neural networks of the human brain [W2919115771, W4236362309, W2604319603]. The deeper hierarchical models create a profound architecture of multiple hidden layers based on representative learning with several processing and abstraction layers [W2511719117, W4200094653]. These computational models allow data input features to be automatically extracted from raw data and transformed to handle unstructured data, including vision [W2919115771, W2563686712]. This direct input avoids several processing steps required in machine learning during training and testing, therefore reducing overall computational times. A current key element within deep learning is backpropagation [W2039708501, W4240768087]. Backpropagation is a fast and computationally efficient algorithm, using gradient descent, that allows training deep neural networks to be tractable [W2604319603]. Human activity recognition has mainly been performed using conventional machine learning classifiers. Recently, deep learning techniques have enhanced the bench mark and applications for IMUs [W4200094653, W2563686712, W2342792048, W2002261403, W2577415454, W2002261403] and vision [W237546731, W2016053056, W2163605009, W2618823585] in human movement recognition producing more superior model performance accuracy.\n\nThe objective of this study was to systematically review the literature investigating sport-specific automated movement detection and recognition. The review focuses on the various technologies, analysis techniques and performance outcome measures utilised. There are several reviews within this field that are sensor-based including wearable IMUs for lower limb biomechanics and exercises [W2171731706, W2792932721], swimming analysis [W2216964382, W2042572748], quantifying sporting movements [W2038605780] and physical activity monitoring [W2083539525]. A recent systematic review has provided an evaluation on the in-field use of inertial-based sensors for various performance evaluation applications [W2793667086]. Vision-based methods for human activity recognition [W2511719117, W2106996050, W2736707111, W2056339039, W2034899024], semantic human activity recognition [W2038746778] and motion analysis in sport [W2095426704] have also been reviewed. However, to date, there is no systematic review across sport-specific movement detection and recognition via machine or deep learning. Specifically, incorporating IMUs and vision-based data input, focusing on in-field applications as opposed to laboratory-based protocols and detailing the analysis and machine learning methods used.\n\nConsidering the growth in research and potential field applications, such a review is required to understand the research area. This review aims to characterise the evolving techniques and inform researchers of possible improvements in sports analysis applications. Specifically: 1) What is the current scope for IMUs and computer vision in sport movement detection and recognition? 2) Which methodologies, inclusive of signal processing and model learning techniques, have been used to achieve sport movement recognition? 3) Which evaluation methods have been used in assessing the performance of these developed models?",
+      "citations": [
+        "W2023302299",
+        "W2511719117",
+        "W2919115771",
+        "W4236362309",
+        "W2129591854",
+        "W2096859093",
+        "W2216964382",
+        "W2041005575",
+        "W2056956916",
+        "W2319084577",
+        "W2753693229",
+        "W2609286783",
+        "W2106996050",
+        "W2736707111",
+        "W4389881014",
+        "W2618857625",
+        "W4200094653",
+        "W2096352448",
+        "W2604319603",
+        "W2511719117",
+        "W3180241828",
+        "W2097575504",
+        "W2027604141",
+        "W1990627964",
+        "W2183475719",
+        "W2766669256",
+        "W1993761347",
+        "W2033533120",
+        "W2132691216",
+        "W2127095067",
+        "W2595303241",
+        "W1980161980",
+        "W2548464106",
+        "W2563686712",
+        "W2039708501",
+        "W4240768087",
+        "W2171731706",
+        "W2792932721",
+        "W2042572748",
+        "W2038605780",
+        "W2083539525",
+        "W2793667086",
+        "W2056339039",
+        "W2034899024",
+        "W2038746778",
+        "W2095426704"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "34",
+        "54"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "2. Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Search strategy",
+          "subsubsections": [],
+          "text": "The preferred PRISMA recommendations [W4294215472] for systematic reviews were used. A literature search was undertaken by the first author on the following databases; IEEE Xplore, PubMed, ScienceDirect, Scopus, Academic Search Premier, and Computer and Applied Science Complete. The searched terms were categorised in order to define the specific participants, methodology and evaluated outcome measure in-line with the review aims. Searches used a combination of key words with AND/OR phrases which are detailed in Table 1. Searches were filtered for studies from January 2000 to May 2018 as no relevant studies were identified prior to this. Further studies were manually identified from the bibliographies of database-searched studies identified from the abstract screen phase, known as snowballing. Table 2 provides the inclusion and exclusion criteria of this review.\n\n**TABLE 1 near here: Key word search term strings per database**\n\n**TABLE 2 near here: Inclusion and exclusion criteria**",
+          "citations": [
+            "W4294215472"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Data extraction",
+          "subsubsections": [],
+          "text": "The first author extracted and collated the relevant information from the full manuscripts identified for final review. A total of 18 parameters were extracted from the 52 research studies, including the title, author, year of publication, sport, participant details, sport movement target(s), device specifications, device sample frequency, pre-processing methods, processing methods, feature selected, feature extraction, machine learning model used, model evaluation, model performance accuracy, validation method, samples collected, and computational information. A customised Microsoft Excel\u2122 spreadsheet was developed to categorise the relevant extracted information from each study. Participant characteristics of number of participants, gender, and competition level, then if applicable a further descriptor specific to a sport, for example, 'medium-paced cricket bowler'. Athlete and participant experience level was categorised as written in the corresponding study to avoid misrepresentations. The age of participants was not considered an important characteristic required for model development. The individual ability in which the movement is performed accounts for the discriminative signal features associated with the movements. For the purposes of this review, a sport-specific movement was defined from a team or individual sport, and training activities associated with a particular sport. For example, weight-lifting as strength training, recognised under the Global Association of International Sports Federations. The targeted sports and specific movements were defined for either detection or recognition. Model development techniques used included pre-processing methods to transform data to a more suitable form for analysis, processing stages to segment data for identified target activities, feature extraction and selections techniques, and the learning algorithm(s). Model evaluation measures extracted were the model performance assessment techniques used, ground-truth validation comparison, number of data samples collected, and the model performance outcomes results reported. If studies ran multiple experiments using several algorithms, only the superior algorithm and relevant results were reported as the best method. This was done so in the interest of concise reporting to highlight favourable method approaches [W1840637580]. Any further relevant results or information identified from the studies was included as a special remark [W1840637580]. Hardware and specification information extracted included the IMU or video equipment used, number of units, attachment of sensors (IMUs), sample frequency, and sensor data types used in analysis (IMUs). Studies identified and full data extracted were reviewed by a second author.",
+          "citations": [
+            "W1840637580"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Experimental design",
+          "subsubsections": [],
+          "text": "A variety of sports and their associated sport-specific movements were investigated, implementing various experimental designs as presented in Tables 5 and 7. Across the studies, sports reported were tennis (n = 10), cricket (n = 3), weightlifting or strength training (n = 6), swimming (n = 4), skateboarding (n = 2), ski jumping (n = 2), snowboarding (n = 1), golf (n = 4), volleyball (n = 2), rugby (n = 2), ice hockey (n = 2), gymnastics (n = 2), karate (n = 1), basketball (n = 3), Gaelic football (n = 1), hurling (n = 1), boxing (n = 2), running (n = 2), diving (n = 1), squash (n = 1), badminton (n = 1), cross-country skiing (n = 2) and soccer (n = 4). The Sports 1-M dataset [W2016053056] was also reported, which consists of 1,133,158 video URLs annotated automatically with 487 sport labels using the YouTube Topic API. A dominant approach was the classification of main characterising actions for each sport. For example, serve, forehand, backhand strokes in tennis [W2020950468, W2086893960, W1526830775, W2593493570, W2245838994], and the four competition strokes in swimming [W4389881014, W2618857625, W2340251525, W2083334113]. Several studies further classified sub-categories of actions. For example, three further classes of the two main classified snowboarding trick types Grinds and Airs [W2500148847], and further classifying the main tennis stroke types as either flat, topspin or slice [W2245838994]. Semantic descriptors were reported for classification models that predicted athlete training background, experience and fatigue level. These included running [W2621129872, W2086821499], rating of gymnastic routines [W2557528993], soccer pass classification based on its quality [W1960993122], cricket bowling legality [W2133481474, W2620515263], ski jump error analysis [W2608983188, UNMAPPED:91] and strength training technique deviations [W2614559277, W1941632715, W2614557479]. One approach [W2046589395], encoded the mutual context of human pose and sporting equipment using semantics, to facilitate the detection and classification of movements including a cricket bat and batsman coupled movements.\n\nTotal participant numbers for IMU-based studies ranged from one [W2133481474] to 30 [W2590106597]. Reported data individual instance sample sizes for sensor studies ranged from 150 [W2620515263] to 416,737 [W2726032781]. Vision-based studies that explicitly reported total participant details ranged from five [W2020950468] to 40 [W2618857625]. Vision dataset sample sizes varied across studies, from 50 individual action clips [W4389881014] to 15,000 [W2618857625]. One study [W2016053056] used the publicly available Sports-1M, as previously described. Vision-based studies also reported datasets in total time, 10.3 hours [W2602920898], 3 hours [W2091500922], 1,500 minutes [W1526830775], and 50 hours [W2033533120], and by frame numbers, 6,035 frames [W2145472570] and 10,115 frames [W2557528993].",
+          "citations": [
+            "W2016053056",
+            "W4389881014",
+            "W2618857625",
+            "W2340251525",
+            "W2083334113",
+            "W2500148847",
+            "W2245838994",
+            "W2621129872",
+            "W2086821499",
+            "W2557528993",
+            "W1960993122",
+            "W2133481474",
+            "W2620515263",
+            "W2608983188",
+            "W2046589395",
+            "W2590106597",
+            "W2726032781",
+            "W2020950468",
+            "W2016053056",
+            "W2602920898",
+            "W2091500922",
+            "W1526830775",
+            "W2033533120",
+            "W2145472570"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "91"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Inertial measurement unit specifications",
+          "subsubsections": [],
+          "text": "A range of commercially available and custom-built IMUs were used in the IMU-based studies (n=30), as presented in Table 3. Of these, 23% reported using a custom-built sensor. Of the IMU-based studies, the number of sensors mounted or attached to each participant or sporting equipment piece ranged from one to nine. The majority of studies (n=22) provided adequate details of sensor specifications including sensor type, axes, measurement range, and sample rate used. At least one characteristic of sensor measurement range or sample rate used in data collection was missing from eight studies. All studies used triaxial sensors and collected accelerometer data. For analysis and model development, individual sensor data consisted of only accelerometer data (n = 8), both accelerometer and gyroscope data (n = 15), and accelerometer, gyroscope and magnetometer data (n = 7). The individual sensor measurement ranges reported for accelerometer were \u00b11.5 g to \u00b116 g, gyroscope \u00b1500 \u00b0/s to \u00b12000 \u00b0/s, magnetometer \u00b11200 \u03bcT or 1.2 to 4 Ga. Individual sensor sample rates ranged from 10 Hz to 1000 Hz for accelerometers, 10 Hz to 500 Hz for gyroscopes and 50 Hz to 500 Hz for magnetometers.\n\n**TABLE 3 near here**",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Vision capture specification",
+          "subsubsections": [],
+          "text": "Several experimental set-ups and specifications were reported in the total 23 vision-based studies (Table 4). Modality was predominantly red, green, blue (RGB) cameras. Depth cameras were utilised [W2295856981, W2605450916, W2557528993], which add depth perception for 3-dimensional image mapping. Seven studies clearly reported the use of a single camera set-up [W2295856981, W2605450916, W2557528993, W2087617234, W2618823585, W2127764091, W1972921994]. One study reported 16 stationary positioned cameras at a 'bird's eye view' [W2091500922], and [W2020950468] reported the use of one overhead and 8 stationary cameras around a tennis court baseline, although data from two cameras were only used in final analysis due to occlusion issues. Sample frequency and, or pixel resolution were reported in seven of the studies [W2091500922, W2145472570, W2295856981, W2557528993, W2618823585, W2127764091, W2086094811], with sample frequencies ranging from 30 Hz to 210 Hz.\n\n**TABLE 4 near here**",
+          "citations": [
+            "W2091500922",
+            "W2020950468"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Inertial measurement unit recognition model development methods",
+          "subsubsections": [],
+          "text": "Key stages of model development from data pre-processing to recognition techniques for IMU-based studies are presented in Table 5. Data pre-processing filters were reported as either a low-pass filter (n = 7) [W2621129872, W2614559277, W2614557479, W1972921994, W2479906820, W1997420081, W2780731227], high-pass filter (n = 2) [W2590106597, UNMAPPED:112], or calibration with a filter [W2620515263]. Processing methods were reported in 67% of the IMU-based studies [W2020950468, W2086893960, W2340251525, W2500148847, W2621129872, W2086821499, W2133481474, W2620515263, W2614559277, W1941632715, W2614557479, W2590106597, W2726032781, W1972921994, W2479906820, W1997420081, W2006074914, W2784192698, W4388562292, W2618004911, W2500148847, W2340251525, UNMAPPED:91, UNMAPPED:112]. Methods included, calibration of data [W2500148847, W2133481474, W4388562292, W2618004911], a one-second window centred around identified activity peaks in the signal [W1972921994, UNMAPPED:112], temporal alignment [W1868663739], normalisation [W2020950468], outlier adjustment [W2086821499] or removal [W2620515263], and sliding windows ranging from one to 3.5 seconds across the data [W2340251525]. The three studies that investigated trick classification in skateboarding [W4388562292, W2618004911] and snowboarding [W2500148847] corrected data for different rider board stance styles, termed Regular or Goofy, by inverting signal axes.\n\nMovement detection methods were specifically reported in 16 studies [W2020950468, W2086893960, W2340251525, W2500148847, W2086821499, W2133481474, W2620515263, W2590106597, W1972921994, W2479906820, W2780731227, W2784192698, W4388562292, W2500148847, W2340251525, UNMAPPED:112]. Detection methods included thresholding (n = 5), windowing segmenting (n = 4), and a combination of threshold and windowing techniques (n = 5).\n\nSignal feature extraction techniques were reported in 80% of the studies, with the number of feature parameters in a vector ranging from a vector of normalised X, Y, Z accelerometer signals [W2020950468] to 240 features [W2614559277]. Further feature selection to reduce the dimensionality of the feature vector was used in 11 studies. Both feature extraction and selection methods varied considerably across the literature (Table 5).\n\nAlgorithms trialled for movement recognition were diverse across the literature (Table 5). Supervised classification using a kernel form of Support Vector Machine (SVM) was most prevalent (n = 16) [W2020950468, W2621129872, W2086821499, W2620515263, W2608983188, W2590106597, W1972921994, W2479906820, W2784192698, W4388562292, W2618004911, W2500148847, W1868663739, W2587520514, UNMAPPED:91, UNMAPPED:112]. The next highest tested were Na\u00efve Bayesian (NB) (n = 8) [W2086893960, W2621129872, W2620515263, W2590106597, W4388562292, W2618004911, W2500148847, UNMAPPED:112] and k-Nearest Neighbour (kNN) (n = 8) [W2020950468, W2621129872, W2620515263, W2590106597, W4388562292, W2618004911, W2500148847, W2587520514], followed by Random Forests (RF) (n = 7) [W2621129872, W2620515263, W2614559277, W2614557479, W2590106597, W2618004911, W2587520514]. Supervised learning algorithms were the most common (n = 29). One study used an unsupervised discriminative analysis approach for detection and classification of tennis strokes [W2593493570]. Five IMU-based study investigated a deep learning approach including using Convolutional Neural Networks (CNN) [W2590106597, W2726032781, W2784192698, W2802278363, UNMAPPED:91] and Long Short Term Memory (LSTM) [W2064675550] architectures [W2726032781, W2666791934]. In order to assess the effectiveness of the various classifiers from each study, model performance measures quantify and visualise the predictive performance as reported in the following section.\n\n**TABLE 5 near here**",
+          "citations": [
+            "W2590106597",
+            "W2620515263",
+            "W2500148847",
+            "W2133481474",
+            "W4388562292",
+            "W2618004911",
+            "W1972921994",
+            "W1868663739",
+            "W2020950468",
+            "W2086821499",
+            "W2340251525",
+            "W2086893960",
+            "W2479906820",
+            "W2780731227",
+            "W2784192698",
+            "W2500148847",
+            "W2340251525",
+            "W2614559277",
+            "W2621129872",
+            "W2614557479",
+            "W2587520514",
+            "W2593493570",
+            "W2726032781",
+            "W2802278363",
+            "W2064675550",
+            "W2666791934"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "112",
+            "91"
+          ]
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5 Inertial measurement unit recognition model evaluation",
+          "subsubsections": [],
+          "text": "Reported performance evaluations of developed models across the IMU-based studies are shown in Table 6. Classification accuracy, as a percentage score for the number of correct predictions by total number of predictions made, was the main model evaluation measure (n = 24). Classification accuracies across studies ranged between 52% [W2608983188] to 100% [W2621129872]. Generally, the reported highest accuracy for a specific movement was \u2265 90% (n = 17) [W2020950468, W2086893960, W2593493570, W2621129872, W2086821499, W2614559277, W1972921994, W2479906820, W2780731227, W2784192698, W4388562292, W2500148847, W1868663739, W2587520514, W2083334113] and \u2265 80% to 90% (n = 7) [W2620515263, W2608983188, W2614557479, W2590106597, W2618004911, W2340251525]. As an estimate of the generalised performance of a trained model on n - x samples, a form of leave-one-out cross validation (LOO-CV) was used in 47% of studies [W2020950468, W2621129872, W2086821499, W2620515263, W2614557479, W2479906820, W4388562292, W2618004911, W2500148847, W1868663739, UNMAPPED:112]. Precision, specificity and sensitivity (also referred to as recall) evaluations were derived for detection (n = 6) and classification models (n = 10). Visualisation of prediction results in the form of a confusion matrix featured in six studies [W2621129872, W2590106597, W2479906820, W2618004911, W2340251525, W2587520514].\n\n**TABLE 6 near here**",
+          "citations": [
+            "W2608983188",
+            "W2621129872",
+            "W2020950468",
+            "W2086893960",
+            "W2593493570",
+            "W2086821499",
+            "W2614559277",
+            "W1972921994",
+            "W2479906820",
+            "W2780731227",
+            "W2784192698",
+            "W4388562292",
+            "W2500148847",
+            "W1868663739",
+            "W2587520514",
+            "W2083334113",
+            "W2620515263",
+            "W2614557479",
+            "W2590106597",
+            "W2618004911",
+            "W2340251525"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6 Vision recognition model development methods",
+          "subsubsections": [],
+          "text": "Numerous processing and recognition methods featured across the vision-based studies to transform and isolated relevant input data (Table 7). Pre-processing stages were reported in 14 of studies, and another varied 13 studies also provided details of processing techniques. Signal feature extraction and feature selection methods used were reported in 78% of studies.\n\nBoth machine (n = 16) and deep learning (n = 7) algorithms were used to recognise movements from vision data. Of these, a kernel form of the SVM algorithm was most common in the studies (n = 10) [W2020950468, W1526830775, W2557528993, W1960993122, W2091500922, W2145472570, W2295856981, W2605450916, W2557528993, W2127764091, W2086094811, W2790942794, W2589728242]. Other algorithms included kNN (n = 3) [W2020950468, W2091500922, W2087617234], decision tree (DT) (n = 2) [W4389881014, W2033533120], RF (n = 2) [W2295856981, W2605450916], and Multilayer Perceptron (MLP) (n = 2) [W2033533120, W2091500922]. Deep learning was investigated in seven studies [W2618857625, W2016053056, W2602920898, W2618823585, W2618857625, W2259801182, W2963274633] of which used CNNs or LSTM RNNs as the core model structure.\n\n**TABLE 7 near here**",
+          "citations": [
+            "W2020950468",
+            "W2091500922",
+            "W2087617234",
+            "W4389881014",
+            "W2033533120",
+            "W2295856981",
+            "W2605450916"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7 Vision recognition model evaluation",
+          "subsubsections": [],
+          "text": "Performance evaluation methods and results for vision-based studies are reported in Table 8. As with IMU-based studies, classification accuracy was the common method for model evaluations, featured in 61%. Classification accuracies were reported between 60.9% [W2016053056] and 100% [W2618823585, W2127764091]. In grouping the reported highest accuracies for a specific movement that were \u2265 90% (n = 9) [W2020950468, W1526830775, W2557528993, W2091500922, W2295856981, W2605450916, W2618823585, W2127764091, W2790942794], and \u2265 80% to 90% (n = 2) [W1960993122, W2046589395]. A confusion matrix as a visualisation of model prediction results was used in nine studies [W2016053056, W2020950468, W1526830775, W2295856981, W2605450916, W2127764091, W2086094811, W2259801182, W2738617613]. Two studies assessed and reported their model computational average speed [W2086094811] and time [W2557528993].\n\n**TABLE 8 near here**",
+          "citations": [
+            "W2016053056",
+            "W2618823585",
+            "W2127764091",
+            "W2020950468",
+            "W1526830775",
+            "W2557528993",
+            "W2091500922",
+            "W2295856981",
+            "W2605450916",
+            "W2790942794",
+            "W1960993122",
+            "W2046589395",
+            "W2086094811",
+            "W2259801182",
+            "W2738617613"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "An outline of the search results and study exclusions has been provided in Fig 1. Of the initial database search which identified 4885 results, a final 52 studies met criteria for inclusion in this review. Of these, 29 used IMUs and 22 were vision-based. One study [W2020950468] used both sensors and vision for model development separately then together via data fusion. Tables 3 - 8 provide a description of the characteristics of the reviewed studies, detailed in the following sections.\n\n**FIGURE 1 near here: PRISMA flow diagram**",
+      "citations": [
+        "W2020950468"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "4 Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The aim of this systematic review was to evaluate the use of machine and deep learning for sport-specific movement recognition from IMUs and, or computer vision data inputs. Overall, the search yielded 52 studies, categorised as 29 which used IMUs, 22 vision-based and one study using both IMUs and vision. Automation or semi-automated sport movement recognition models working in near-real time is of particular interest to avoid the error, cost and time associated with manual methods. Evident in the literature, models are trending towards the potential to provide optimised objective assessments of athletic movement for technical and tactical evaluations. The majority of studies achieved favourable movement recognition results for the main characterising actions of a sport, with several studies exploring further applications such as an automated skill quality evaluation or judgement scoring, for example automated ski jump error evaluation [UNMAPPED:91].\n\nExperimental set-up of IMU placement and numbers assigned per participant varied between sporting actions. The sensor attachment locations set by researchers appeared dependent upon the specific sporting conditions and movements, presumably to gain optimal signal data. Proper fixation and alignment of the sensor axes with limb anatomical axes is important in reducing signal error [W2171731706]. The attachment site hence requires a biomechanical basis for accuracy of the movement being targeted to obtain reliable data. Single or multiple sensor use per person also impacts model development trade-off between accuracy, analysis complexity, and computational speed or demands. In tennis studies, specificity whilst using a single sensor was demonstrated by mounting the IMU on the wrist or forearm of the racquet arm [W2086893960, W2593493570, W2245838994, W2587520514]. A single sensor may also be mounted in a low-profile manner on sporting equipment [W2500148847, W4388562292, W2618004911, W2340251525]. Unobtrusive use of a single IMU to capture generalised movements across the whole body was demonstrated, with an IMU mounted on the posterior head in swimming [W2340251525, W2083334113], lower back during running [W2086821499], and between the shoulder blades in rugby union [W2479906820].\n\nThe majority of vision-based studies opted for a single camera set-up of RGB modality. Data output from a single camera as opposed to multiple minimises the volume of data to process, therefore reducing computational effort. However, detailed features may go uncaptured, particularly in team sport competition which consists of multiple individuals participating in the capture space at one time. In contrast, a multiple camera set-up reduces limitations including occlusion and viewpoint variations. However, this may also increase the complexity of the processing and model computational stages. Therefore, a trade-off between computational demands and movement recording accuracy often needs to be made. As stated earlier, the placement of cameras needs to suit the biomechanical nature of the targeted movement and the environment situated in. Common camera capture systems used in sports science research such as Vicon Nexus (Oxford, UK) and OptiTrack (Oregon, USA) were not present in this review. As this review targeted studies investigating during on-field or in-situation sporting contexts, efficiency in data collection is key for routine applications in training and competition. A simple portable RGB camera is easy to set-up in a dynamic and changing environment, such as different soccer pitches, rather than a multiple capture system such as Vicon that requires calibrated precision and are substantially more expensive.\n\nData acquisition and type from an IMU during analysis appears to influence model trade-off between accuracy and computational effort of performance. The use of accelerometer, gyroscope or magnetometer data may depend upon the movement properties analysed. Within tennis studies, gyroscope signals were the most efficient at discriminating between stroke types [W2593493570, W2479906820] and detecting an athlete's fast feet court actions [W2479906820]. In contrast, accelerometer signals produced higher classification accuracies in classifying tennis stroke skills levels [W2086893960]. The authors expected lower gyroscope classification accuracies as temporal orientation measures between skill levels of tennis strokes will differ [W2086893960]. Conversely, data fusion from all three individual sensors resulted in a more superior model for classifying advanced, intermediate and novices tennis player strokes [W2086893960]. Fusion of accelerometer and vision data also resulted in a higher classification accuracy for tennis stroke recognition [W2020950468].\n\nSupervised learning approaches were dominant across IMU and vision-based studies. This is a method which involves a labelled ground truth training dataset typically manually annotated by sport analysts. Labelled data instances were recorded as up to 15,000 for vision-based [W2618857625] and 416,737 for sensor-based [W2726032781] studies. Generation of a training data set for supervised learning can be a tedious and labour-intensive task. It is further complicated if multiple sensors or cameras are incorporated for several targeted movements. A semi-supervised or unsupervised learning approach may be advantageous as data labelling is minimal or not required, potentially reducing human errors in annotation. An unsupervised approach could suit specific problems to explain key data features, via clustering [W2604319603, UNMAPPED:34]. Results computed by an unsupervised model [W2467856464] for tennis serve, forehand and backhand stroke classification compared favourably well against a proposed supervised approach [W2086893960].\n\nRecognition of sport-specific movements was primarily achieved using conventional machine learning approaches, however nine studies implemented deep learning algorithms. It is expected that future model developments will progressively feature deep learning approaches due to development of better hardware, and the advantages of more efficient model learning on large data inputs [W2604319603]. Convolutional Neural networks (CNN) [W2112796928] were the core structure of five of the seven deep learning study models. Briefly, convolution applies several filters, known as kernels, to automatically extract features from raw data inputs. This process works under four key ideas to achieve optimised results: local connection, shared weights, pooling and applying several layers [W2919115771, W4200094653]. Machine learning classifiers modelled with generic hand-crafted features, were compared against a CNN for classifying nine beach volleyball actions using IMUs [W2590106597]. Unsatisfactory results were obtained from the machine learning model, and the CNN markedly achieved higher classification accuracies [W2590106597]. The CNN model produced the shortest overall computation times, requiring less computational effort on the same hardware [W2590106597]. Vision-based CNN models have also shown favourable results when compared to a machine learning study baseline [W2016053056, W2618823585, W2618857625]. Specifically, consistency between a swim stroke detection model for continuous videos in swimming which was then applied to tennis strokes with no domain-specific settings introduced [W2618857625]. The authors of this training approach [W2618857625] anticipate that this could be applied to train separate models for other sports movement detection as the CNN model demonstrated the ability to learn to process continuous videos into a 1-D signal with the signal peaks corresponding to arbitrary events. General human activity recognition using CNN have shown to be a superior approach over conventional machine learning algorithms using both IMUs [W4200094653, W2563686712, W2342792048, W2577415454, W119403003] and computer vision [W2919115771, W237546731, W2163605009]. As machine learning algorithms extract heuristic features requiring domain knowledge, this creates shallower features which can make it harder to infer high-level and context-aware activities [W4200094653]. Given the previously described advantages of deep learning algorithms which apply to CNN, and the recent results of deep learning, future model developments may benefit from exploring these methods in comparison to current bench mark models.\n\nModel performance outcome metrics quantify and visualise the error rate between the predicted outcome and true measure. Comparatively, a kernel form of an SVM was the most common classifier implemented and produced the strongest machine learning approach model prediction accuracies across both IMU [W2500148847, W2621129872, W2608983188, W1972921994, W2479906820, W2784192698, W4388562292, W2618004911, W2500148847, W1868663739, W2587520514, UNMAPPED:112] and vision-based study designs [W1526830775, W2557528993, W1960993122, W2091500922, W2295856981, W2605450916, W2790942794, W2589728242, W2259801182]. Classification accuracy was the most common reported measure followed by confusion matrices, as ways to clearly present prediction results and derive further measures of performance. Further measures included sensitivity (also called recall), specificity and precision, whereby results closer to 1.0 indicate superior model performance, compared to 0.0 or poor model performance. The F1-score (also called a F-measure or F-score) conveys the balances between the precision and sensitivity of a model. An in-depth analysis performance metrics specific to human activity recognition is located elsewhere [W2060233269, UNMAPPED:134]. Use of specific evaluation methods depends upon the data type. Conventional performance measures of error rate are generally unsuitable for models developed from skewed training data [W2096942889]. Using conventional performance measures in this context will only take the default decision threshold on a model trained, if there is an uneven class distribution this may lead to imprecision [W2096942889, W2135107501]. Alternative evaluators including Receiver Operating Characteristics (ROC) curves and its single numeric measure, Area Under ROC Curve (AUC), report model performances across all decision thresholds [W2135107501]. Making evaluations between study methodology have inherent complications due to each formulating their own experimental parameter settings, feature vectors and training algorithms for movement recognition. The No-Free-Lunch theorems are important deductions in the formation of models for supervised machine learning [W2100483895], and search and optimisation algorithms [W2151554678]. The theorems broadly reference that there is no 'one model' that will perform optimally across all recognition problems. Therefore, experiments with multiple model development methods for a particular problem is recommended. The use of prior knowledge about the task should be implemented to adapt the model input and model parameters in order to improve overall model success [W4236362309].\n\nAcquisition of athlete specific information, including statistics on number, type and intensity of actions, may be of use in the monitoring of athlete load. Other potential applications include personalised movement technique analysis [W2614557479], automated performance evaluation scoring [W2557528993] and team ball sports pass quality rating [W1960993122]. However, one challenge lies in delivering consistent, individualised models across team field sports that are dynamic in nature. For example, classification of soccer shots and passes showed a decline in model performance accuracy from a closed environment to a dynamic match setting [UNMAPPED:112]. A method to overcome accuracy limitations in dynamic team field sports associated with solely using IMUs or vision may be to implement data fusion [W2020950468]. Furthermore, vision and deep learning approaches have demonstrated the ability to track and classify team sport collective court activities and individual player specific movements in volleyball [W2259801182], basketball [W2963274633] and ice hockey [W2738617613]. Accounting for methods from experimental set-up to model evaluation, previous reported models should be considered and adapted based on the current problem. Furthermore, the balance between model computational efficiency, results accuracy and complexity trade-offs calculations are an important factor.\n\nIn the present study, meta-analysis was considered however variability across developed model parameter reporting and evaluation methods did not allow for this to be undertaken. As this field expands and further methodological approaches are investigated, it would be practical to review analysis approaches both within and between sports. This review was delimited to machine and deep learning approaches to sport movement detection and recognition. However, statistical or parametric approaches not considered here such as discriminative functional analysis may also show efficacy for sport-specific movement recognition. However, as the field of machine learning is a rapidly developing area shown to produce superior results, a review encompassing all possible other methods may have complicated the reporting. Since sport-specific movements and their environments alter the data acquisition and analysis, the sports and movements reported in the present study provide an overview of the current field implementations.",
+      "citations": [
+        "W2171731706",
+        "W2086893960",
+        "W2593493570",
+        "W2245838994",
+        "W2587520514",
+        "W2500148847",
+        "W4388562292",
+        "W2618004911",
+        "W2340251525",
+        "W2340251525",
+        "W2083334113",
+        "W2086821499",
+        "W2479906820",
+        "W2020950468",
+        "W2618857625",
+        "W2726032781",
+        "W2604319603",
+        "W2467856464",
+        "W2112796928",
+        "W2919115771",
+        "W4200094653",
+        "W2590106597",
+        "W2016053056",
+        "W2618823585",
+        "W2618857625",
+        "W2563686712",
+        "W2342792048",
+        "W2577415454",
+        "W119403003",
+        "W237546731",
+        "W2163605009",
+        "W1526830775",
+        "W2557528993",
+        "W1960993122",
+        "W2091500922",
+        "W2295856981",
+        "W2605450916",
+        "W2790942794",
+        "W2589728242",
+        "W2259801182",
+        "W2060233269",
+        "W2096942889",
+        "W2135107501",
+        "W2100483895",
+        "W2151554678",
+        "W4236362309",
+        "W2614557479",
+        "W2963274633",
+        "W2738617613"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "91",
+        "34",
+        "134",
+        "112"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "5 Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This systematic review reported on the literature using machine and deep learning methods to automate sport-specific movement recognition. In addressing the research questions, both IMUs and computer vision have demonstrated capacity in improving the information gained from sport movement and skill recognition for performance analysis. A range of methods for model development were used across the reviewed studies producing varying results. Conventional machine learning algorithms such as Support Vector Machines and Neural Networks were most commonly implemented. Yet in those studies which applied deep learning algorithms such as Convolutional Neural Networks, these methods outperformed the machine learning algorithms in comparison. Typically, the models were evaluated using a leave-one-out cross validation method and reported model performances as a classification accuracy score. Intuitively, the adaptation of experimental set-up, data processing, and recognition methods used are best considered in relation to the characteristics of the sport and targeted movement(s). Consulting current models within or similar to the targeted sport and movement is of benefit to address bench mark model performances and identify areas for improvement. The application within the sporting domain of machine learning and automated sport analysis coding for consistent uniform usage appears currently a challenging prospect, considering the dynamic nature, equipment restrictions and varying environments arising in different sports.\n\nFuture work may look to adopt, adapt and expand on current models associated with a specific sports movement to work towards flexible models for mainstream analysis implementation. Investigation of deep learning methods in comparison to conventional machine learning algorithms would be of particular interest to evaluate if the trend of superior performances is beneficial for sport-specific movement recognition. Analysis as to whether IMUs and vision alone or together yield enhanced results in relation to a specific sport and its implementation efficiency would also be of value. In consideration of the reported study information, this review can assist future researchers in broadening investigative approaches for sports performance analysis as a potential to enhancing upon current methods.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Not applicable.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Disclosure statement",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "No potential conflict of interest was reported by the authors. However, the last author is co-author of three studies included in this systematic review.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Funding",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The authors received no specific funding for this work.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    }
+  ],
+  "tables_file": "W2897764506_tables.md"
+}

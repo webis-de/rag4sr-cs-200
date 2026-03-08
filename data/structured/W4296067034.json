@@ -1,0 +1,500 @@
+{
+  "id": "W4296067034",
+  "metadata": {
+    "title": "A Systematic Review of Technologies to Teach Control Structures in Preschool Education",
+    "n_sections": 8,
+    "n_subsections": 11,
+    "n_subsubsections": 12,
+    "n_tables": 9
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1. Related Work",
+          "subsubsections": [],
+          "text": "Previous work has focused on reviewing technological and unplugged tools to promote CT in young children. However, most of the available reviews on this topic focus on the broad aspects of CT and robotics without specifically analyzing the affordances of particular technological tools for learning a specific concept, such as control structures. For example, Silva et al. [UNMAPPED:34] focused on describing the available technology for 2\u20138 year old children as well as curricula implemented for these ages, while Kakavas and Ugolini [W3083486074] focused on the way the teaching of CT has evolved in primary education in the last decades and was successful in identifying the context in which the technology was implemented and in which way CT was assessed. In a recent review [W3167723192] we also analyzed the characteristics of robots and activities used in preschool education to promote CT skills with a focus on empirical research, however the specific ways in which each concept encompassed by CT was targeted was not part of our scope. Recent work by Taslibeyaz et al. [W3111691553] shed light into the way studies with young children considered the concept of CT by analyzing its definitions, which skills were targeted and which variables were assessed and included the technological tools used to promote these skills. However, the implications as to how a specific technology causes this improvement and what are the nuances of using different technological tools were not discussed. Similarly, a recent review by Toh et al. [W2572190574] on the use of robots for young children provided context on the type of study conducted and on the effects of robotics on children's cognitive outcomes as well as parents', educators' and children's opinions regarding the use of these tools. However, the possible benefits are discussed generally regarding robotics and this work does not focus on the outcomes of specific tools. Yu and Roque [W2937431250] provide a comprehensive review of computational toys and kits for young children (7 and under) describing their design features, which computational concepts and practices they target and how they relate to other domains in knowledge. In particular, they analyzed the way conditionals were presented in the technological tools and argued that most of the time conditionals were implemented in an implicit way (thus not represented using explicit if-then statements). In addition, the authors explored the presentation of loops, pointing out many of the available tools used repeat blocks which encapsulated a given sequence, whether digital or concrete. In order to expand upon these findings, this review will focus specifically on the ways technology has implemented control structures and provide an overview of the evidence surrounding these implementations with young children. In this sense, our review will provide a summary of the empirical experiences in which these control structures have been taught to young children and analyze these results. To our knowledge, there is not thus far a systematic review of literature which focuses on the implementation of control structures and provides a thorough analysis of how technological tools aimed at early childhood allow its users to learn them. In addition, we conducted a SLR on the existing empirical evidence in which control structures have been taught to children, shedding light into which practices and tools are supported by evidence and thus favorable for its inclusion in the classroom.",
+          "citations": [
+            "W3083486074",
+            "W3167723192",
+            "W3111691553",
+            "W2572190574",
+            "W2937431250"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "34"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In 2006, Jeanette Wing popularized the term \"computational thinking\" as a universal set of skills which could allow everyone to use computer science concepts for problem solving [W2339183141, UNMAPPED:2]. Grover [UNMAPPED:3] defined two viewpoints on CT: one is that CT is the cognitive or \"thinking\" counterpart to practicing computer science in CS classrooms. This means CT is a specific characteristic of practicing computer science and is bound to this discipline. The other viewpoint is that CT is a skill to be integrated by other disciplines and it is a way to approach sense-making in different subjects. Wing's original definition of CT was broad enough that it ignited educators and policy-makers' interest in CT [UNMAPPED:4]. Thus, over the past decade there has been an increase in research around CT interventions targeted at most levels of formal education [W2100029531, W2811233214, W2791667883, W3040672238, W4213367728], its inclusion within other disciplines [W1687473687, W1687473687, W2772265198], its association with other well-established cognitive skills [W2522521125, W3022993766, W3194396893, W4200179496], and focusing on creating reliable and valid assessment methods [W3000232414], amongst others. Moreover, both public and privately-led initiatives have been successfully implemented to foster CT in children and adolescents [W2550175427, W1498491353], as it is regarded as a valuable twenty-first century skill [W2413080797].\n\nSeveral of the most widely accepted and cited definitions of CT propose the use and understanding of control structures such as loops and conditionals as an integral part of CT. For example, Brennan and Resnick [UNMAPPED:21] named loops, conditionals and events as central computational concepts in their framework; Grover and Pea [W2100029531] highlighted the use of conditional logic and iteration as well as Shute et al. [W2760706586]. In some cases there is no direct reference to control structures in CT definitions, but algorithm design [W3092173789, W2969802521] is considered as an essential part of CT. Control structures are basic building components for algorithms [UNMAPPED:25], and therefore an integral part of CT. Moreover, several of the assessments created for evaluating students' CT in formal education include the evaluation of loops and conditionals, such as Rom\u00e1n-Gonz\u00e1lez and collaborators' CTt [W3037610611]; Relkin et al.'s TechCheck [W3031790629] or the CT sections that were incorporated to the PISA mathematics testing in OECD [UNMAPPED:28].\n\nAuthors such as Bers [W2976108167, UNMAPPED:30] have argued for the inclusion of CT skills in early childhood education, particularly through the use of robots as an embodied, tangible tool which would be intuitive and developmentally appropriate for young children. Teaching young children CT related concepts prepares them to solve real-life challenges in a logical and systematic way, and some authors consider CT as relevant as reading, writing and mathematics [W2237126349]. The early exposure to computing has potential to engage both boys and girls mitigating gender-related barriers [W2100712682, UNMAPPED:33].\n\nThis work aims at presenting the current state of the art of teaching control structures to preliterate children between 3 and 6 years of age using electronic tools (physical, virtual and hybrid systems) that allow users to construct explicit programs. Our work consists of three parts (see Figure 1): (1) review 1: a systematic literature review (SLR) of reviews aimed at identifying technology used to promote CT in young children; (2) technology overview: an analysis of the characteristics of these tools based on information we found in tool websites and user manuals; (3) review 2: a SLR of empirical evidence related to the use of the tools in teaching control structures to preliterate children between the ages of 3 and 6.\n\nThe research questions that guide this study are the following:\n\n- What electronic tools exist to support the development of CT in young children? (review 1)\n- Which tools are appropriate for preliterate children between the ages of 3 and 6? (technology overview)\n- How can children introduce control structures into their programs using electronic tools? (technology overview)\n- What tools have been reported to be successful for teaching control structures to young children? (review 2)\n\nIn the remainder of the paper we present related works that systematize the knowledge about existing tools that support the development of CT, next we present the methodology and findings of the first SLR that aims to identify existing tools for teaching CT to young children (see Figure 1). In the following step we analyze the tools to identify those that are electronic-based and appropriate for preliterate children between 3 and 6 years old, and provide details related to their price and possibilities that they offer to introduce control structures in children's code. The resulting list of appropriate tools is used in the second SLR to search for empirical evidence related to teaching control structures to young children. The limitations and results are discussed in the final section of the article and conclusions are laid down.\n\n**FIGURE 1** | An overview of the research pipeline.",
+      "citations": [
+        "W2339183141",
+        "W3000232414",
+        "W2550175427",
+        "W1498491353",
+        "W2413080797",
+        "W2100029531",
+        "W2760706586",
+        "W3092173789",
+        "W2969802521",
+        "W3037610611",
+        "W3031790629",
+        "W2976108167",
+        "W2237126349",
+        "W2100712682"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "2",
+        "3",
+        "4",
+        "21",
+        "25",
+        "28",
+        "30",
+        "33"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. SLR of Existing Tools (Review 1)",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Methodology",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.1.1. Search Strategy",
+              "parent_subsection_id": "s_2_1",
+              "text": "To identify reviews of technology to support the development of CT in young children we applied an automated search [W2612764117] in the Scopus search engine [UNMAPPED:42]. The search term was the following:\n\nTITLE-ABS-KEY (( review AND {computational thinking} AND ( preschool OR child OR {early age} OR kindergarten OR {lower education} OR {early years} OR {elementary education} OR {young learners} OR {primary school} OR {primary education} OR k-6 OR k-8 OR childhood )))\n\nWe used three keywords: review, computational thinking and childhood (and synonyms) to search in the title, abstract, and keywords.",
+              "citations": [
+                "W2612764117"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "42"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.1.2. Study Selection",
+              "parent_subsection_id": "s_2_1",
+              "text": "We defined the following inclusion criteria for the studies' selection:\n\n- Articles that review electronic-based tools to promote the development of CT in young children.\n- Publications focused on children between 3 and 5 years old, including 6 years old, if attending pre-primary school educational level.\n\nExclusion criteria were:\n\n- Articles written in a language other than English or Spanish.\n- Publications that target children older than 6 years.\n- Articles limited to unplugged tools.\n- Case studies.\n- Conference proceedings.\n\nThe first round of the selection was made based on the information available in the abstract. Two researchers applied the criteria independently and filtered out publications that do not review tools focused on promoting CT in young children. The articles were tagged as \"relevant\" or \"irrelevant.\" If an article was classified differently by the reviewers, the full text was reviewed. If there were doubts about an article, they were discussed with two other reviewers that supervised this revision step. Also the articles that were considered relevant by both reviewers were analyzed in detail to confirm or reject their relevance.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.1.3. Data Extraction",
+              "parent_subsection_id": "s_2_1",
+              "text": "We used a spreadsheet to extract tools found in the publications and articles that mention each tool. We sorted each tool using categories that we developed (see Section 2.4).",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Systematic literature review (SLR) is a method that allows identifying relevant material to a given topic using an objective, analytical, and repeatable approach [W2612764117]. We carried out our literature review following the PRISMA guidelines [W2208053283]. Four reviewers participated in the review process. Firstly, they defined the search term, inclusion and exclusion criteria, and data to extract from the publications. Secondly, two reviewers analyzed the publications to identify the relevant articles. One reviewer extracted the tools from relevant articles. A quality assessment stage was not included, as we were not interested in filtering out low quality studies since we still reviewed each tool or investigating changes in quality over time.",
+          "citations": [
+            "W2612764117",
+            "W2208053283"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Findings",
+          "subsubsections": [],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Relevant Articles",
+          "subsubsections": [],
+          "text": "The search was conducted on 6th of August 2021 and we obtained 54 articles to review (see Figure 2). In the screening phase the reviewers tagged identically 51 of 54 articles reaching an agreement of 94%. In the selection process we identified 10 articles relevant for this study. We added to our analysis 3 articles [W3083486074, W3167723192, UNMAPPED:34] that were identified by the manual search and that we considered a valuable source of information\u2014Kakavas and Ugolini [W3083486074] that was not indexed by Scopus, Papadakis [W3099327041] that does not contain the word \"review\" in title, abstract and keywords and Silva et al. [UNMAPPED:34] that is a preprint submitted to Elsevier.\n\n**FIGURE 2** | Steps of the selection process of the first SLR. Reported in line with the PRISMA statement [W2208053283].\n\nA total of 13 articles (see Table 1) were used to elaborate the list of relevant tools. All the articles were published between 2018 and 2021.\n\n**TABLE 1** | 13 relevant publications that we identified in the first SLR.\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W3083486074",
+            "W3099327041",
+            "W2208053283"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "34"
+          ]
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Categories to Classify the Tools",
+          "subsubsections": [],
+          "text": "To classify the tools we adapted and expanded categories proposed by Yu and Roque [W2937431250]. We obtained 4 main categories (see Figure 3): Physical, Virtual, Hybrid and No information. We divided Physical, Virtual and Hybrid into subcategories and obtained 9 categories which we used to classify existing tools: Robots with tangible programming interface, Construction kits with no explicit program, Unplugged, Virtual with explicit program, Virtual with no explicit program, Robots with virtual programming interface, Construction kits with virtual programming interface, Virtual tools with tangible programming interface, No information. In Figure 3 there are more than 8 categories, but only those highlighted in yellow were used to classify the tools.\n\n**FIGURE 3** | Categories developed to classify the physical aspect of the tools.\n\nWe used the category Physical for tools that are fully tangible and do not require screen-based applications. We divided it into Unplugged and Physical tools with electronics. The last category was composed of Robots with tangible programming interface and Construction kits with no explicit program. The category Construction kits with no explicit program contains electronic building blocks that can be connected together to cause certain behavior of the system, but do not require the user to write an explicit program.\n\nVirtual contains fully screen-based tools, such as desktop, mobile, or web apps. This category encompasses tools that do not require the user to write an explicit program (e.g., tools like CompThink App where the user has to solve logical problems without writing code) and those which need an explicit program.\n\nHybrid tools combine physical and virtual parts. We divided them into Virtual tools with tangible programming interface or Physical tools with virtual programming interface. The first category consists of applications with tangible programming interfaces. The second category is composed of Robots with virtual programming interface and Construction kits with virtual programming interface. The last category contains embedded systems like Arduino that can be programmed using a virtual programming interface.\n\nThe \"No information\" category was used if there was no information about the tool that could be used to classify it.",
+          "citations": [
+            "W2937431250"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5. Tools",
+          "subsubsections": [],
+          "text": "From the 13 relevant publications we extracted 110 tools (106 unique tools). In the case of Code & Go Robot Mouse, we found three different names that referred to this tool: Robot Mouse [W2937431250, W2965853216], Colby robotic mouse [W3167723192, W3099327041] and Code & Go Robot Mouse [W2800019557, UNMAPPED:34], and we analyzed it as one single tool.\n\nWhile reviewing the tools mentioned in the articles we found in external sources 4 more tools that we considered relevant for our work. We added Qobo (Physical and Hybrid), VEX 123 (Physical and Hybrid), Sphero indi (Physical and Hybrid), Scottie Go (Virtual) and ended up with a total of 117 tools (110 unique tools, see Table 2).\n\nWe classified 35 as Physical, 34 as Virtual, 44 as Hybrid and 4 as No information (see Figure 3).\n\nIt is important to say that seven tools were present in more than one category (Blue-Bot, Qobo, VEX 123, Sphero indi, VBOT, Makeblock Neuron, Tuk Tuk). For example, Blue-Bot is a robot that can be programmed using buttons on its back and because of that it belongs to the category Robots with tangible programming interface, but there is also a possibility to program it using an application, so it was also classified as a Robot with a virtual programming interface. That is why we refer to 110 unique tools, although we analyzed 117 relevant tools that included duplicated items.\n\nIn three cases (Ozobot, LEGO, Robotis and roboplus software) the names that we found in publications were names of brands, not names of specific tools, so it was impossible to classify them, and they were categorized as No information. One publication mentioned Robo Cup Junior as a tool. As far as we know RoboCup Junior [UNMAPPED:52] is an educational initiative, not one particular technology, so we categorized this item as No information as well.\n\n**TABLE 2** | 117 tools extracted from 13 relevant publications that we identified in the first SLR.\n\n{{TABLE:tbl_02}}",
+          "citations": [
+            "W2937431250",
+            "W2965853216",
+            "W3167723192",
+            "W3099327041",
+            "W2800019557"
+          ],
+          "tables_in_text": [
+            "tbl_02"
+          ],
+          "citations_unmapped": [
+            "34",
+            "52"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "We used a systematic literature review [W2612764117] to answer our first research question: What tools exist to support the development of CT in young children?",
+      "citations": [
+        "W2612764117"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Technology Overview",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Methodology",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.1.1. Tools Selection",
+              "parent_subsection_id": "s_3_1",
+              "text": "We were interested in electronic tools that allow users to construct explicit programs, so we did not further analyze the tools classified as Unplugged, Construction kits with no explicit program, Virtual with no explicit program, and No information.\n\nWe identified the relevant tools by filtering out those not appropriate for children between 3 and 6\u2014tools that target children older than 6 years old or that should be programmed using interfaces that require reading skills (see Table 2). During tool selection we first analyzed the target age of each tool. If the information of the target age was expressed using educational levels like \"elementary school\" or \"kindergarten\" we translated this information into age using the United States educational system as reference. If the tool was designed for children older than 6, we tagged it as inappropriate and did not analyze its programming interfaces. If the age was of our interest, we proceeded with the inspection of the user interface. In many cases hybrid tools offered different programming languages/interfaces to cover a wide age spectrum of users, for example, Finch Robot can be programmed using 8 different programming languages and its promotional video states that it is suitable for users from \"from kindergarten to college.\" In those cases we evaluated only programming languages appropriate for preliterate children. If there was no interface suitable for preschoolers, we marked it as a tool that requires reading skills.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.1.2. Data Extraction",
+              "parent_subsection_id": "s_3_1",
+              "text": "To collect the information about the tools we reviewed the official websites, video material provided by the manufacturer, online manuals, as well as YouTube videos and Amazon websites.\n\nDuring data extraction we were interested in classifying different types of control structures that can be used with each tool, so we defined categories that we present in Sections 3.2.2.1 and 3.2.2.2.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Four reviewers participated in the revision of existing tools. Two of them reviewed the available online information and extracted the information of interest. The other two participated in the definition of the categories to classify tools' characteristics and helped to classify doubtful cases.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Findings",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1. Tools Selection",
+              "parent_subsection_id": "s_3_2",
+              "text": "We identified 46 tools (44 unique) appropriate for preliterate children (see Table 3). Twenty Robots with tangible programming interface, 11 Virtual with explicit program and 15 Hybrid tools: 8 Robots with virtual programming interface, 1 Construction kit with virtual programming interface and 6 Virtual tools with tangible programming interface. Two tools (Blue Bot and Sphero indi) were classified as both: Robots with tangible programming interface and Robots with virtual programming interface.\n\nThere were three tools that we analyzed together: KIBO, KIWI and CHERP. KIBO is a robot currently available in the market, formerly known as \"KIWI\" or Kids Invent with Imagination [UNMAPPED:53]. CHERP is a programming language that is used to program KIBO and KIWI, so evaluating CHERP is equivalent to evaluating KIBO and KIWI.\n\nIn the case of some tools, the programming interface contained images which made it accessible for preliterate children, but we had the impression that the systems were designed for children older than our target age. They contained text-based challenges (Scottie Go) and menus (BOTS, Neuron App, Move the turtle, RoboZZle), design that we consider unattractive for young children (RoboZZle, BOTS), text-based options with no associated image (\"tap\" event in Roberto), or comparisons involving high numeric values (Neuron App). Although these tools raised some doubts, we decided to include them in our analysis as we wanted to provide an inclusive overview of the existing tools.\n\n**TABLE 3** | An overview of 46 relevant tools considering their price and possibilities to incorporate control structures into the code.\n\n{{TABLE:tbl_03}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_03"
+              ],
+              "citations_unmapped": [
+                "53"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2. Categories to Classify Control Structures",
+              "parent_subsection_id": "s_3_2",
+              "text": "We developed categories related to the use of control structures to classify tools suitable for young children (see Table 3) that we identified during tools selection step (see Section 3.2.1).\n\n##### 3.2.2.1. Conditionals\n\nTo identify how the children can introduce decision making based on certain conditions into their programs we reviewed the programming interfaces and classified the existing tools with categories that we defined in an iterative process. Introducing conditions in the code was typically based on conditional branches (e.g., if-else structures) or based on events (e.g., blocking the program execution until some event occurs). From now on we will refer to those two forms of incorporation of conditions into the code as \"conditionals.\"\n\nTo classify the degree of liberty that the children have while using and building conditionals in their programs, we propose three levels, ordered by increasing complexity for the user:\n\n1. Predefined connection of condition and action: it is possible to use a predefined programming statement that connects an event with an action. For example, the Qobo robot detects coding cards below it and acts according to the statement stored in the card. It has a specific card for conditional turning\u2014if the robot passes over a card with a banana before passing over a bifurcation card, it turns left, but if it passes over a card with an apple, it turns right. Neither the condition nor the resulting action can be modified by the user.\n2. Free connection of predefined condition and predefined action: it is possible to combine predefined conditions with predefined actions to build custom conditionals. For example, the Sphero Edu Jr application (see Table 5) allows users to associate a color sensed by the robot (predefined condition) with an action involving movement, light, and/or sound of the Sphero indi robot (predefined actions). The user needs at least two programming statements (condition and action) to build a conditional. In the case of Kodable and RoboZZle these two statements are combined in one coding block: the background color of the block defines the condition (e.g., \"if the tile is pink\") and the arrow, the action (e.g., \"go right\"). The user is able to modify both: the background color and the arrow direction (see Table 5).\n3. Free condition building: there are blocks that have to be combined with condition and action. In these cases the user has to use at least three components (bridge-block, condition, and action) to define a conditional. For example, the Matatalab Coding Set contains a \"wait until\" block that should be combined with a condition (e.g., dark or light) and a sequence of actions in order to build conditionals.\n\nWe provide the description and graphical example for each tool that supports conditionals in three tables: Table 4 gathers tools that implement the first level, Table 5 corresponding to the second level, and Table 6 corresponding to the last one.\n\nThe only tools that enable the definition of conditionals using logical operators (e.g., AND, OR) were Makeblock Neuron and Thymio. Neuron online mode allows users to program behaviors using Neuron App, which supports multiple conditions. In the case of Thymio, the user has to associate events sensed by the robot with its behavior. It is possible to combine the sensing and internal state of the robot (e.g., if Thymio touched AND internal state equal to 1) to program advanced robot responses.\n\nIn the case of BOTS, Move the turtle, and Makeblock Neuron + Neuron (app) conditionals are based on numerical variables (e.g., a > 5) which makes them more complex than conditionals with non-numerical conditions (e.g., \"if the sensed color is red\"), as the children have to understand the concept of variable.\n\nIn the case of Coding Awbie, the Caution Block is the only means to introduce conditionals into the code, and is a phased out feature as the block is not included in new kits [UNMAPPED:54].\n\nWe also analyzed how the code related to a certain condition interacts with the main program, and identified that they occur within either event-based or procedural programming paradigms. Within event-based programming, we identified the following categories:\n\n- Blocking event: the main program contains a condition that blocks the execution until the condition is fulfilled. For example, KIBO contains a \"wait for clap\" block that makes the robot wait for a clap before executing commands stored in the following blocks.\n- Interruption: the main program is interrupted when a certain event occurs. For example, in the case of Pro-bot the main program is interrupted if the sound sensor is triggered and the procedure associated with this event is executed.\n- Parallel execution: It is possible for an event to lead to actions to occur in parallel or in addition to those already occurring. For example, an event in Scratch Jr. could generate a sound while a sprite continues moving on the screen.\n\nUsing a procedural programming paradigm, we identified the following category:\n\n- Integrated if: the main program contains conditions expressed using the \"if\" structure that is evaluated during the program's execution. For example, KIBO allows to incorporate an if-statement into the sequence of commands. If the condition that is evaluated is true, the conditional code is executed and then, the remaining statements.\n\n**TABLE 4** | Tools that allow building conditionals categorized as \"Predefined connection of condition and action.\"\n\n{{TABLE:tbl_04}}\n\n**TABLE 5** | Tools that allow building conditionals categorized as \"Free connection of predefined condition and predefined action.\"\n\n{{TABLE:tbl_05}}\n\n**TABLE 6** | Tools that allow building conditionals categorized as \"Free condition building.\"\n\n{{TABLE:tbl_06}}\n\n##### 3.2.2.2. Loops\n\nAnother control structure that was relevant for us to analyze was the availability of loops enabling the iteration of commands.\n\nWe observed two modalities of implementing the iteration of commands:\n\n- Single command repetition: the tool does not provide the possibility to repeat a sequence of commands, it allows only the repetition of a single action.\n- Multiple command repetition: it is possible to repeat multiple commands. In this category we find tools that, due to the design of loop structure, limit the number of pieces that can be repeated (e.g., in Kodable the user is allowed to repeat only two commands) and tools that do not have this restriction.\n\nWe also analyzed how the amount of repetitions can be expressed:\n\n- Fixed number of repetitions: the number of repetitions is fixed and cannot be changed by the user.\n- Configurable number of repetitions: the amount of repetitions can be defined by the user.\n- Infinite loop: it is possible to build infinite loops.\n\nWe provide an example for each category in Table 7.\n\nIn most cases the amount of repetitions was expressed by associating the number of repetitions with a sequence of statements (similar to a for loop in more advanced programming languages), only BOTS uses exclusively conditions to stop the iteration process (similar to a while loop). KIBO, Finch, Run Marco!, Tynker: Coding for Kids, Scottie Go and VEX 123 offer both types (\"repeat X times\" and \"repeat while\") of repetition statements.\n\nWe found many different ways to implement infinite loops: using repeat forever (ScratchJr) or \"go to start\" command (VEX 123) at the end of the program, elements that contain pieces of code equivalent to \"repeat forever\" command (Roberto, Code.org), by building circular transitions between states (Dash and Dot), or by calling auxiliary functions (LightbotJr, RoboZZle).\n\n**TABLE 7** | Examples of tools for categories developed to classify code iteration.\n\n{{TABLE:tbl_07}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_04",
+                "tbl_05",
+                "tbl_06",
+                "tbl_07"
+              ],
+              "citations_unmapped": [
+                "54"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Cost and Availability",
+          "subsubsections": [],
+          "text": "Some tools that we analyzed are currently not available for sale: Plobot is a Kickstarter project that finished in [UNMAPPED:60], Robotito, BOTS, Roberto, and T-Maze are academic developments, KIWI is KIBO's predecessor and is no longer manufactured, Makeblock Neuron and Puzzlets Starter Pack do not appear in online stores and CHERP is a programming language for KIBO and is not sold separately. All these tools were tagged as \"unavailable.\"",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "60"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The first aim of this part of our study was to identify how young, preliterate children can introduce conditionals and iterations into their programs using existing tools. This section is motivated by the following research questions:\n\n- Which tools are appropriate for preliterate children between the ages of 3 and 6?\n- How can children introduce control structures into their programs using electronic tools?",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. SLR of Empirical Evidence (Review 2)",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Methodology",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.1.1. Search Strategy",
+              "parent_subsection_id": "s_4_1",
+              "text": "We used an automated search [W2612764117] in Scopus search engine [UNMAPPED:42] to identify empirical studies with preschoolers that were developed using tools that we considered relevant (see Table 3). The search term was the following:\n\nTITLE-ABS-KEY (( {Tool name} AND ( preschool OR child OR {early age} OR kindergarten OR {lower education} OR {early years} OR {elementary education} OR {young learner} OR {primary school} OR {primary education} OR k-6 OR k-8) ))\n\nIt had two keywords: tool name and young learners (and synonyms) and was used to search in title, abstract and keywords.\n\nIn some cases we used curly brackets, that limit the search to exact words, ignoring spelling variation or plurals, around the name of the tool ({Tool name}) to avoid false positive results. For example, in the case of \"Coffee Platform\" when we used Coffee AND Platform instead of Coffee Platform, the results contained irrelevant publications that did not target the robotic platform. In some cases we excluded publications from areas related to medicine, as some tools' names were equal to terms used in medicine and also brought false positive results (as in the case of T-Maze). The search term used and the amount of publications found with each tool can be consulted in appendix.",
+              "citations": [
+                "W2612764117"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "42"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.1.2. Study Selection",
+              "parent_subsection_id": "s_4_1",
+              "text": "The inclusion criteria for the studies' selection were the following:\n\n- Articles that report empirical studies with young children using an electronic-based tool that enables activities with control structures.\n- Publications that report activities or evaluations focused on control structures.\n- Publications focused on children between 3 and 5 years old, including 6 years old, if attending pre-primary school educational level.\n\nExclusion criteria were:\n\n- Publications that target children older than 6 years.\n- Publications that do not report activities or evaluations focused on control structures.\n- Off topic articles.\n- Articles that describe experiences with users with neurodevelopmental disorders.\n- Articles written in a language other than English or Spanish.\n- Conference proceedings.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.1.3. Data Extraction",
+              "parent_subsection_id": "s_4_1",
+              "text": "In the data extraction step we used a spreadsheet to collect information related to the age of participants, number of participants, type of the study, learning outcome, activities aimed at programming conditions, activities that incorporate iterations. Based on the extracted data, two researchers conducted a thematic analysis to summarize study results.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Two reviewers reviewed abstracts and tagged them as \"irrelevant\" or \"relevant.\" The last category was used in the cases of publications that meet inclusion criteria or when it was impossible to evaluate the article relevance based on the information available in the abstract. One reviewer reviewed studies that were classified differently among reviewers in the previous step and tried to resolve the doubtful cases. If it was impossible, the articles were considered as \"relevant\" cases. One reviewer reviewed full-texts of relevant publications and took the final decision about their relevance for this study. We decided not to carry out any quality assessment of the studies as we wanted to provide a broad view of the existing empirical evidence. Two reviewers extracted the data.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Findings",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.2.1. Scopus Search Result",
+              "parent_subsection_id": "s_4_2",
+              "text": "The Scopus search for all tools was conducted on 13th of October 2021. In many cases the search brought no results. Only 26 tools of 44 unique tools that we identified, counted with Scopus entries (see Appendix). A total of 205 (202 unique) publications were analyzed. Three publications appeared as repeated because the research that they described involved two relevant tools, for example, Pugnali et al.'s research [W2766568637] involved KIBO and ScratchJr, so it was found under the search query for KIBO and ScratchJr. We identified 24 unique publications (see Table 8) that met all inclusion criteria. In the screening phase the reviewers identically tagged 152 of 202 unique articles reaching an agreement of 75%.\n\nThe 24 relevant publications reported experiences with 10 different tools that we identified as relevant: ScratchJr (evaluated in 7 articles), KIBO (8), KIWI (2), CHERP (2), Code.org (2), BOTS (1), Kodable (1), Move the turtle (1), Strawbies (1) and T-maze (1). Strawbies is an alternative name for Coding Awbie that was used for the search, as the search term with \"Coding Awbie\" brought no results. Daisy the Dinosaur was mentioned in a study related to Kodable [W2891613388], but it targets older children (see Table 2). We also found one case of a custom tool [W2737855565]: a game with both ScratchJr-like and Lightbot style programming interface.\n\n**TABLE 8** | 24 relevant publications that we identified in the second SLR.\n\n{{TABLE:tbl_08}}",
+              "citations": [
+                "W2766568637",
+                "W2891613388",
+                "W2737855565",
+                "W3040672238",
+                "W2339183141"
+              ],
+              "tables_in_text": [
+                "tbl_08"
+              ],
+              "citations_unmapped": [
+                "2"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.2.2. Thematic Analysis",
+              "parent_subsection_id": "s_4_2",
+              "text": "##### 4.2.2.1. KIBO/CHERP/KIWI Articles\n\nThe only set of technologies for which control structures have been evaluated multiple times was KIBO/CHERP/KIWI, developed by Marina Bers' group at Tufts University. Of the articles we identified using this technology, five evaluated children's use of control structures while separating the performance of young children from that of older children, or only including children within our inclusion criteria. All these evaluations used the Solve-It assessments, which were developed by the same research group. Through these assessments, in four of the publications, children who fit our inclusion criteria demonstrated proficiency when programming repeat loops (with a given number of repetitions) and \"wait for clap\" programs, but were not tested on or were unable to be proficient in the use of sensor loops or conditionals [W2520903787, W2146567769, W2548714592, W2114878393]. There was one outlying study where children in Kindergarten were able to demonstrate proficiency across all Solve It assessment areas, including repeat loops, sensor loops, \"wait for clap\" programs, and conditionals [W2582042082]. Four other evaluations of this tool did not include specific evaluations of control flow [W2976108167, W3040643967, W2110670045, UNMAPPED:68] while two others did not separate children in our age range of interest from older children.\n\n##### 4.2.2.2. Scratch Jr and Others\n\nMost of the other evaluations involved Scratch Jr. [W2945099883, W2592216038, W2136834230, W2489550445] and did not evaluate children's use or understanding of control structures, even though the tool enables the use of control structures. The same happened with evaluations of other systems [W2023924594, W2891613388, W2737855565, W3000696469, W2990788823, UNMAPPED:76, UNMAPPED:82]. The evaluations that did include reports on the use of control structures, without an evaluation, involving Scratch Jr., reported either little use or difficulty with control flow blocks [W2766568637, W2888438995]. Another included children in our target age, but also older children without separating their performance [W2766568637]. One evaluation of LEGO WeDo found some success with repeat loops, but greater success with CHERP [W2114878393].\n\n##### 4.2.2.3. Bottom Line\n\nOnly one study [W2582042082] provides evidence of children in Kindergarten mastering conditionals and sensor loops. Multiple studies provide evidence of children in our target age group mastering the use of simple repeat loops (repeat a given number of times) or wait for clap programs. The caveat with all these studies is that they are all from the same research group, use the same system, and the same assessment.\n\nWith other tools, except for a study of Lego WeDo which also included CHERP [W2114878393], there are no specific assessments of control flow, other than reports of low use or difficulty with using control flow structures for children in our target age range. In other words, in spite of the great diversity of options for children in our target age range to learn about control flow structures, in our review we found only one technology for which there have been multiple empirical studies to understand whether these children can learn how to use these features.",
+              "citations": [
+                "W2582042082",
+                "W2976108167",
+                "W3040643967",
+                "W2110670045",
+                "W2766568637",
+                "W2888438995",
+                "W2114878393"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "68"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "We conducted a second SLR (see Figure 4) to identify literature that reports empirical studies with tools that we considered relevant (see Table 3), in which control structures were taught and/or evaluated in order to respond to the following research question: What tools have been reported to be successful for teaching control structures?\n\n**FIGURE 4** | Steps of the selection process of the second SLR. Reported in line with the PRISMA statement [W2208053283].",
+      "citations": [
+        "W2208053283"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Limitations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Although we tried to carry out our study in a systematic way, document all the decisions, and report doubtful cases, the current study still has certain limitations. To complement the tools characteristics related to control structures and cost, we had to appeal to online information. We firstly reviewed official websites and online user manuals, but in some cases the information contained in these sources was not sufficient to answer our research questions. In those cases we reviewed unofficial sources such as YouTube videos, blogs and private web pages to complete the missing information. We understand that these are not the most convenient information sources, but we used them if there was no available information through official channels. Another limitation related to our online search is that we reported information that we were able to find, which does not ensure that it is the complete existing information. For example, we reported that the application The Foos allows users to build conditionals of \"Free condition building\" type based on a YouTube video that we found, but we cannot ensure that the tool does not allow building other types of conditionals. There is no free online manual that could provide required information, so to confirm that \"Free condition building\" is the only type that the tool supports it is necessary to pass all the levels that the game offers, and it was impossible for our team to acquire and personally analyze all the relevant tools. Also, our initial list of tools for young children is limited to the tools reported in scientific publications. It is possible that there are valuable tools that were not mentioned in reviews that we analyzed. We tried to address this issue by adding 3 publications that were not found by SLR and by adding four tools that we found in external sources.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The present study reviewed the state of the art in the teaching of control structures to young children, specifically preliterate children 3 to 6 years of age. While many of the definitions of CT for young children which gather large amounts of consensus amongst academics describe control structures such as conditionals and loops amongst central aspects of CT [W2100029531, UNMAPPED:21], how this aspect of CT should be developmentally adapted for young children remains unclear. Our findings suggest there is still a large knowledge gap regarding how children acquire early notions about control structures and what the best tools are to introduce children to these concepts. Despite this, these concepts are often included in the interventions targeted at young children and assessed through specific items in the validated CT tests available for young children [W3031790629, W3037610611].\n\nOur findings demonstrate that there is a wide variety of technological tools which include robots, virtual applications and hybrids, which aim to teach control structures and are targeted to children of these ages. Thus, we infer it is considered relevant that children acquire these concepts early on. Despite this, our findings regarding the reported classroom based research show that the specifics of how children learn these concepts through the available tools remains unexplored. None of the systematic review articles we identified presented results that were specific to control structures, instead focusing on broader concepts such as CT [UNMAPPED:68], programming literacy [W2976108167], or engagement [W2945099883]. Given that CT is an umbrella term which encompasses a wide variety of components such as sequencing, using control structures, abstraction, debugging, amongst others [W2760706586] we must focus on the specifics of each of them in order to have a better sense of the concept as a whole. This is especially relevant for younger children, as the learning curves for each specific skill might differ with age. So far, we found most of the studies focus on several concepts at once but do not further explore learning outcomes for each activity. Thus, the assessments used were more holistic and successful in detecting general learning and engagement outcomes but lacked information on each of the specific tasks and concepts encompassed. An exception to this general approach was the study reported by Kazakoff and Bers [W2110670045] where they focused specifically on sequencing skills, however we did not find any similar study for the learning of control structures, even though our search targeted this term specifically.\n\nExploring these aspects is also necessary to determine which approaches provide the adequate affordances to enhance learning of each aspect of CT. For example, in our technology overview we observed several approaches to including the use of control structures in tools, such as interrupting events, active wait, or procedural conditions, however there are currently no studies contrasting the strengths and weaknesses of each of these approaches and whether they produce different results in children's understanding of the concepts. As a result, there is only evidence of one tool successfully enabling children to learn some aspects of control structures, mainly due to a lack of studies on the use of other tools by young children that include an assessment of control structure use or understanding.\n\nMoreover, future studies on specific tools should focus on the feasibility of their inclusion in the classrooms in a scalable way. Specifically, our findings regarding the cost of several robots suggest some of them are simply too expensive to be available to all children in a given school or classroom. In addition, some of these tools are more adequately designed for individual at-home use, which hinders group-based activities thus elevates the cost of its use even more. Thus, so far the use of robots in education at a large-scale would entail a substantial investment for administrators and policy makers, a problem which could be partially subsided through the design of tools with a group-based focus.\n\nThe results of our systematic reviews therefore are encouraging in terms of the wide range of approaches designed for young children to learn about control structures, but also identify a large gap in that we know very little about which of these approaches may work better, or how to structure their use. There is therefore a need for future research to further explore the strengths and weaknesses of the available approaches and understand the feasibility of their use in a variety of contexts (e.g., individual vs. shared, home vs. school).",
+      "citations": [
+        "W2100029531",
+        "W3031790629",
+        "W3037610611",
+        "W2976108167",
+        "W2945099883",
+        "W2760706586",
+        "W2110670045"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "21",
+        "68"
+      ]
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "7. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The present work demonstrates that there are many diverse tools to support the development of CT in young children. It seems that both academia and industry have interest in designing approaches to enable young children to develop this so-called twenty-first century skill, as we found through our systematic reviews. Although many existing tools allow children to approach advanced programming concepts such as control structures, it is not clear which tools and activities are the most appropriate for teaching them to the youngest programmers. In order to lay the basis for the future research that targets this gap, we provide a systematic overview of existing tools for preliterate children between the ages of 3 and 6. We developed categories that classify the type and complexity of conditionals and iteration structures and used them to categorize each tool. We also provided graphical examples of conditionals that the tools provide.\n\nThe analysis of empirical evidence showed that KIBO/CHERP/KIWI is the only tool that consistently demonstrates positive results in teaching control structures to young children. Other tools in our review have not gone through similar evaluations, making it difficult to reach conclusions about their appropriateness for introducing these concepts. The contrast between the diversity of approaches available and the scarcity of evaluations focused on control structures calls for more research, ideally by groups independent of the tools being evaluated, to compare and contrast these approaches in a variety of contexts (e.g., home, preschool).",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Appendix",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**TABLE A1** | Search terms and results for each tool in the second SLR.\n\n{{TABLE:tbl_09}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_09"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_8",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4296067034_tables.md"
+}

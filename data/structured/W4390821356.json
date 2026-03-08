@@ -1,0 +1,411 @@
+{
+  "id": "W4390821356",
+  "metadata": {
+    "title": "Application of Computer Vision and Mobile Systems in Education: A Systematic Review",
+    "n_sections": 6,
+    "n_subsections": 15,
+    "n_subsubsections": 0,
+    "n_tables": 10
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "KEYWORDS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "computer vision (CV), mobile system, computer vision and mobile application, education, systematic review",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "1. INTRODUCTION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Education is vital for shaping society's structure, impacting employment, health, trade, income, family dynamics, and economic and political status. Enhancing education can lead to overall progress in a country [W2105710755]. Computer vision (CV) technology plays a significant role in national improvement by enabling humans to extract intelligence from their surroundings through computers. In the 21st century, CV is increasingly prevalent due to multimedia and image-based interactions on the web. It has evolved from a research notion to a widely used technology that dominates industries and enhances quality of life [W2163636861]. Despite the diverse applications and aspects of CV, it has diverse applications in education, including anomaly detection, attendance monitoring, educational robots, facial recognition, medical training, online proctoring, perception monitoring, and plagiarism checking. Anomaly detection, particularly in workplace sexual abuse studies, has shown significant progress using video sequence intrusion detection [W3156566534]. Identifying anomalies, such as violence, from surveillance camera streaming video is a common use of CV [W2997302758]. Convolutional neural networks (CNNs), like Keras (VGG16, DenseNet), and Support Vector Machine (SVM) models, are commonly employed for image processing and intrusion detection [W3006568366]. Another major CV application is monitoring student attendance using the face detection and recognition framework [W2800047890]. They have been widely applied in education to monitor student attendance. Researchers have utilized this technology to enhance educational quality through the development of attendance monitoring systems. These systems involve creating a database with student images linked to identification numbers, detecting students' faces in classroom videos, recognizing them from the database, and generating attendance reports. Numerous approaches have been employed to improve the accuracy of these systems. Many of the image processing algorithms included in OpenCV are now used in Advanced Robotic Systems (ARS) courses to provide support for teaching computer vision concepts using a mobile's camera and processing power to observe real-time effects generated on an image [W3032229541]. The integration of robots in education has sparked interest in recent years [W3136654910]. One notable aspect of educational robots is their use of computer vision (CV), particularly in object detection and recognition. Numerous studies have showcased the incorporation of CV technologies in educational settings, with popular methods including OpenCV and CNN. CV primarily focuses on image processing and facial recognition to identify individuals in different scenarios. Researchers in this field have made significant progress in analyzing facial landmark motions, head pose, face expressions, and eye gazing [W3158858017]. Advancements in CV are also reshaping traditional medical research. Medical trainees now familiarize themselves with medical imaging using machine learning (ML) algorithms. Simulation-based environments enable them to develop proficiency while ensuring patient safety [W2792633707]. With the rise of online learning, the demand for proctoring examinations has increased. Researchers have taken an interest in using CVs to monitor student activity during online tests, and several studies have emerged in this area [W2783098383, W2944535136, W4310187922, W4310187275, W2557795864, UNMAPPED:11]. Additionally, CV can assist in checking documents for plagiarism. As CV continues to advance, its applications in various disciplines, including education, are expanding. Vision technology is expected to become more prevalent in educational settings.\n\nHowever, there is a big gap in the research that looks at how computer vision and mobile systems affect student learning outcomes, teaching methods, and accessibility when used together. This is because the use of these technologies in education has gotten a lot of attention and grown a lot in recent years. Although there are a plethora of studies highlighting the potential benefits of these technologies in isolation, there is a paucity of research that systematically investigates the synergistic effects and challenges that arise from their integration in educational settings. This research gap necessitates a thorough review that not only synthesizes the existing knowledge but also identifies areas where computer vision and mobile systems can be effectively harnessed in tandem to revolutionize the education landscape and, conversely, where potential pitfalls and limitations may impede their successful implementation. Such an analysis is crucial for educators, policymakers, and technology developers aiming to optimize the use of these tools for enhancing teaching and learning in diverse educational contexts.",
+      "citations": [
+        "W2105710755",
+        "W2163636861",
+        "W3156566534",
+        "W2997302758",
+        "W3006568366",
+        "W2800047890",
+        "W3032229541",
+        "W3136654910",
+        "W3158858017",
+        "W2792633707"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "2. LITERATURE REVIEW",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Attendance Monitoring",
+          "subsubsections": [],
+          "text": "CV-based attendance monitoring is gaining popularity due to its affordability, efficiency, and accuracy. Singh et al. [W3093910125] developed a system that captures and stores student images for a CNN-based model. A recent study utilized the Haar Cascade algorithm for face detection and the LBPH model for recognition, with CNN and Microsoft Face APIs [W3089383390] also suggested as alternatives. Another study used the HAAR classifier for face detection and developed a server-based module, addressing the challenge of natural changes in faces by storing detected faces for model training [W2792633707]. The study [W2783098383] applied Linear Discriminant Analysis (LDA) and Principal Component Analysis (PCA) using Fisherfaces and Eigenfaces projection, with PCA demonstrating faster execution time and LDAs achieving higher recognition rates. Mothwa et al. found that combining LDA and PCA yielded higher accuracy than other methods [W2944535136]. In a comparison study, the Mahalanobis distance-based system outperformed traditional Euclidean and Manhattan distances [W3032298417]. Another approach involved converting grayscale student images for attendance using LBPH and achieving high accuracy [W3163329085]. While many object detection systems rely on a CNN backbone network predefined for ImageNet, researchers [W3032298417] highlighted limitations in image classification and object detection using ImageNet alone. ImageNet's spatial resolution hampers the detection of large and small objects. To address this, the author of [W2894651257] proposed DetNet as a backbone for object detection, combined with FPN for feature extraction. Considering the importance of image quality, Bah, Serign [W2998153539] employed advanced image processing techniques such as light condition and contrast modification, bilateral filtering, linear image blend, and histogram equalizer to enhance image quality. An article shows a smart attendance monitoring system relying on facial recognition to track the attendance of students during classes, while another describes the same system using barcodes [W2944535136, W3160226153]. **TABLE 1** summarizes CV and mobile system attendance monitoring.\n\n**TABLE 1. A summary of CV and mobile system attendance monitoring**\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W3093910125",
+            "W3089383390",
+            "W2792633707",
+            "W2783098383",
+            "W2944535136",
+            "W3032298417",
+            "W3163329085",
+            "W3032298417",
+            "W2894651257",
+            "W2998153539",
+            "W2944535136",
+            "W3160226153"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Educational Robots",
+          "subsubsections": [],
+          "text": "CVs in robots are used as educational tools and for assisting teachers in lessons. In a survey of 46 12-year-old students [W2112050719], one group was taught vocabulary using robotics-assisted language learning (RALL) by a teacher, which resulted in better performance compared to the traditionally taught group. The teaching activity was carried out by the social robot NAO [W2902841042, W3006482577]. Jim\u00e9nez et al. [W3002158501] conducted a study using NAO robots to teach children with Down syndrome to recognize colors through CV techniques. Esteban et al. [W3107414685] developed a smartphone-dependent educational robot by integrating CV algorithms into the smartphone's operating system (Android and iOS). The system utilized OpenCV code for ArUco marker detection, basic CV operations for lane detection, and a CNN model based on TensorFlow MobileNetv3 for object identification. Focusing on a particular attention on the hands-on training sessions with Rovio mobile robots, another work outlines the most pertinent aspects of the module content and assessment methodology [W2144503148]. The authors of [UNMAPPED:32] proposed a CV-based system for teaching children the alphabet. Kusumota et al. [W2906871598] designed an educational robot that produces sounds, draws geometric shapes, displays mathematical questions on a screen, interacts with people by asking for answers, and expresses emotions through body movements and LCD screen emojis. For a summary of CV and mobile system educational robots, refer to **TABLE 2**.\n\n**TABLE 2. A summary of CV and mobile system educational robots**\n\n{{TABLE:tbl_02}}",
+          "citations": [
+            "W2112050719",
+            "W2902841042",
+            "W3006482577",
+            "W3002158501",
+            "W3107414685",
+            "W2144503148",
+            "W2906871598"
+          ],
+          "tables_in_text": [
+            "tbl_02"
+          ],
+          "citations_unmapped": [
+            "32"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Medical Training",
+          "subsubsections": [],
+          "text": "Scientists are striving to enhance the applicability of computer vision (CV) in medical technology, as per research [W2892748219] that evaluated two common algorithms. CNN extracts feature vectors from images, while RCNN integrates CNN and region features for object detection. Selective search is employed to extract 2000 proposed regions, and each region undergoes CNN processing to calculate features. The study concludes that trained CNN and RCNN can replace many outdated classification methods in medical technology. Prior to actual surgeries, doctors acquire the necessary skills through CV-assisted Virtual Reality (VR). CV algorithms can analyze pre-recorded surgical videos to evaluate operation quality by assessing parameters such as speed, acceleration, needle rotation, and duration. Hisi, Rebecca et al. [W2794293093] introduced a method for real-time detection and feedback during central venous catheterization training. Nugent et al. [W2074156841] developed a simulation-based laparoscopic training system called ProMIS, which combines haptic feedback and VR modules. Camera tracking systems capture equipment motion, instrument path length, acceleration, and movement uniformity from three different angles at a rate of 30 frames per second. Law, Hei, et al. [W2794225190] proposed a CV-based video analysis system for robotic surgery that reviewed information on the motion of the robotic device. They employed crowdsourcing on Amazon Mechanical Turk (AMT) to annotate robotic needles in the video. The annotated data was then used to train Stacked Hourglass Networks, and an SVM was trained using video recordings from 12 surgeries. Kil, Irfan, et al. [W2606412710] presented a method to assess surgeons' suturing skills by extracting relevant metrics from videos. With the help of a customized lens attached to the mobile's camera, a mobile app is now constantly updated with heart rate, blood pressure, and oxygen levels collected by sensors on the patient's wrist, and patients can use assistive technologies using mobile devices [W2960139494, W2513263058] (see **TABLE 3**).\n\n**TABLE 3. A summary of CV and mobile system medical training**\n\n{{TABLE:tbl_03}}",
+          "citations": [
+            "W2892748219",
+            "W2794293093",
+            "W2074156841",
+            "W2794225190",
+            "W2606412710",
+            "W2960139494",
+            "W2513263058"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Online Proctoring",
+          "subsubsections": [],
+          "text": "Surveillance of student activity during online activities is necessary due to the absence of physical invigilators. Sarthak et al. [W3196640230] proposed an automated system to monitor students' activity during online examinations. The system uses functions such as eye gaze tracking, facial movement, object detection, face detection, and audio-to-text conversion. It leverages the OpenCV Python package for computer vision, using the Dlib model for face detection and the YOLOv3 model for object detection. Similar work was done in another paper [W3208139683], which evaluated head pose, eye gaze, audio detection, and fraudulent activity prediction using the RealHePoNet CNN model. The study used the XGBoost and MLP classifiers, achieving 94% and 0.059% accuracy, respectively, in predicting cheating behavior. Another study suggested using a machine learning-based system [W4313051193] that was 96.04% accurate to help examiners spot cheating and malpractice in e-exams. An image-hashing-based proctoring system was proposed [UNMAPPED:44] to address privacy concerns in online proctoring. The system protects student privacy by blurring faces or using masks. Real-time assessment during online testing is challenging, and a video summarization process can aid post-test review [W2399428441]. The proposed method involves detecting head pose, using the Hidden Markov Model (HMM) for behavioral modeling, and generating summaries for evaluation. The OpenCV algorithm is used for head tracking. Some works have described an online remote examination proctoring system for mobile devices that monitors the candidate's surroundings using a number of approaches, such as live video and audio streaming [W3116820692, W3196640230]. **TABLE 4** provides a summary of CV and mobile system online proctoring.\n\n**TABLE 4. A summary of CV and mobile system online proctoring**\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W3196640230",
+            "W3208139683",
+            "W4313051193",
+            "W2399428441",
+            "W3116820692",
+            "W3196640230"
+          ],
+          "tables_in_text": [
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "44"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5. Perception Monitoring",
+          "subsubsections": [],
+          "text": "The attention level of students in class has a significant impact on their academic success, as positive learning outcomes are strongly associated with student engagement [W2167214196]. Ngoc Anh et al. [W2988553495] proposed a system to monitor students' behavior in the classroom using CV methods like face identification, face embedding, gaze estimation, facial landmark identification, and face classification. However, their study did not track facial expressions, emotions, or head/body posing estimation, which are crucial factors in monitoring human behavior. Canedo et al. [W2809123732] addressed these limitations by introducing an agent to monitor students' attention, while Van der Har and Dustin [W2996032628] focused on recognizing students' emotions for the same purpose. The dynamic switch of a smartphone and gesture recognition allowed students to quickly engage with virtual content [W2912504209]. In another study [W2944980529], classroom involvement was evaluated using a semi-automated process that combined CV techniques with human observations. This model successfully recognized students' attention levels based on eye gestures but faced challenges in determining attention based on emotions. Savov, Teodor et al. [W2910876480] investigated how integrating IoT technology (e.g., PIR sensors, noise sensors) with CV enhances the accuracy of facial recognition for monitoring students' moods and assessing attention levels. In addition to students' perceptions, considering the teacher's point of view is crucial, although it is often overlooked by researchers. The authors [UNMAPPED:55] proposed a model that evaluates teacher perception in the classroom by integrating gaze data from a mobile eye tracker with egocentric vision. By using an eye tracking glass worn by the teacher, all students' faces can be recognized, and the model can also detect nonverbal activities that keep students engaged, such as moving around, gesturing, and making eye contact [W2808947522]. This model aims to automatically detect such teacher activities and establish their relationship with students' self-reported attention. **TABLE 5** provides a summary of CV and mobile system perception monitoring.\n\n**TABLE 5. A summary of CV and mobile system perception monitoring**\n\n{{TABLE:tbl_05}}",
+          "citations": [
+            "W2167214196",
+            "W2988553495",
+            "W2809123732",
+            "W2996032628",
+            "W2912504209",
+            "W2944980529",
+            "W2910876480",
+            "W2808947522"
+          ],
+          "tables_in_text": [
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "55"
+          ]
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "2.6. Plagiarism Checking of the Handwritten Document",
+          "subsubsections": [],
+          "text": "Plagiarism, the act of stealing someone's work without proper credit, has become widespread in recent years. In a paper [W2094327534], a technique for extracting texture features and an enhanced SVM method are presented, utilizing four feature vectors to express features like Energy, Entropy, Moment of inertia, and Correlation. The classification method used is DAG_SVM (Directed Acyclic Graph SVM), with Minimal Hypersphere and achieves the highest accuracy at 93.32%. In a similar study by Yunyan Wang et al. [W2980720988], transfer learning-based convolutional neural networks were employed to classify images. The approach involved extracting features using the Histogram of Oriented Gradient (HOG) method from training data, which were then fed into SVM for pre-classification. By utilizing a transfer network in CNN, the results were compared to typical classifier algorithms, achieving an accuracy of 95%. Authors of article [W2743142445] aimed to determine the similarity of text images by calculating a similarity score based on text reuse patterns, slight differences in word morphology, word order, and content interpretation. The suggested CNN feature technique outperformed conventional hand-held design feature extraction when comparing similar images. However, this technique has a limitation as it only recognizes similarities in written texts, potentially overlooking graphs or diagrams present in documents. In a study [W3097112803], both OCR (Optical Character Recognition) and CNN were employed to convert images to text. OCR was used to convert digital images into machine-encoded text, and CNN provided additional refinement to the OCR output. It was observed that OCR alone produced satisfactory results compared to CNN. Oleg et al. [W3207683489] conducted a challenging task of checking for plagiarism in handwritten texts or documents. They demonstrated a process of recognizing such papers and determining if they are comparable to another document, known as a near-duplicate document. Dynamic time warping (DTW) was utilized as a function to compare similar documents. One drawback of the studies [W3097112803, W3207683489] can be addressed by employing the strategy presented in the study [W2766049485]. Jithin S Kuruvila et al. [W2910876480] showcased a strategy to identify similarly shaped flowcharts in two documents. The operation consists of four modules: the first module applies the Canny edge detection (CED) algorithm to transform the image into binary form. The second module utilizes area detection algorithms to recognize various shapes present in the flowchart. A directed graph is formed to determine the orientation of the generated shapes. The final module compares the resulting graph with previously generated graphs in the repository to determine flowchart similarity. Moreover, detecting plagiarism in sentences using GLSA (Generalized Latent Semantic Analysis) has become noticeable in mobile learning [W3196640230]. **TABLE 6** provides a summary of CV and mobile system plagiarism checking of a handwritten document.\n\n**TABLE 6. A summary of CV and mobile system plagiarism checking of the handwritten document**\n\n{{TABLE:tbl_06}}",
+          "citations": [
+            "W2094327534",
+            "W2980720988",
+            "W2743142445",
+            "W3097112803",
+            "W3207683489",
+            "W2766049485",
+            "W2910876480",
+            "W3196640230"
+          ],
+          "tables_in_text": [
+            "tbl_06"
+          ]
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "2.7. Other Potential Applications",
+          "subsubsections": [],
+          "text": "Identifying heritage sites, detecting cracks in concrete [W2810123099], and recognizing scholars and well-known individuals from images are significant tasks in image classification. In a research study [W2765107853], the authors employed transfer learning to incorporate a preexisting CNN model for heritage data classification. Fabric defect identification can also be addressed using computer vision (CV). P.R. Jayaraj et al. [W2942685721] proposed a multi-scaling deep CNN approach for fabric defect classification, examining six different defect classes. Sexual abuse is a serious violation of internal and external rights that is increasing in society. A study [W2516828042] suggested a CNN-based model with 95% accuracy to detect workplace harassment in social media videos. Additionally, the Social Force Model [UNMAPPED:68] has been introduced to detect abnormal behavior. For security purposes, a CNN-based helmet detection model linked to an Automated Teller Machine (ATM) can detect anomalies with a 95.3% accuracy, as demonstrated in [W2528999066]. The LRCN, a deep neural network model, was developed to detect five intrusion behaviors [W2768115053]. An updated version of the Gaussian Mixture Model has also been developed for object detection and tracking dynamic video sequences to identify intrusion [W2588771651]. Moreover, an IDS (Intrusion Detection System) implemented in [W3011127951] incorporates an object detection method (YOLO) and Real-time Tracking algorithm (SORT) with a 97% accuracy and an average frame rate of 30.\n\nAnother study [W4242383620] proposed an efficient framework for violence identification from surveillance camera streaming video using Linear SVM, Cubic SVM, Random Forest (RF), and Violent Flows (ViF) algorithms. OpenFace is an open-source real-time platform for facial behavior analysis, including landmark detection, head pose tracking, eye gaze, and facial action unit estimation. In OpenFace, CNN is trained using randomly distributed landmark positions [W2395639500]. OpenFace 2.0, which utilizes the SVR-HOG technique, was introduced to increase accuracy from 76.1% to 92.9% [W2807126412]. Researchers continuously strive to intelligently analyze and detect facial motions. A study [W2181824145] uses an ASM (Active Shape Model) and SVM classifier to identify front-view human faces in real-time with 93% accuracy. Facial Expression Recognition (FER) classifies facial features linked to six emotions using Adaboost and Haar Cascade classifiers [W2593696810]. Some FER investigations used LBP, LDP, and KNN classifications to reach 96.83% recognition [W2786063530]. STLMBP, SVM, and 3NN were used to analyze face expressions in [W2396728763]. A hybrid deep convolutional recurrent neural network can identify facial expressions based on landmark placements better than snipping [UNMAPPED:80]. Learning management systems (LMS) use CV traits for testing and performance assessment because CV is crucial in education [W2910876480]. Based on student time and features, some algorithms may detect boredom, bewilderment, enthusiasm, aggravation, and attentive involvement with 98% accuracy [W2462985838]. The Hidden Markov Model (HMM) and Independent Bayesian Classifier Combination (IBCC) recognized hand and finger movements with 96% accuracy for single-hand gestures and 94% accuracy for double-hand gestures [W2765113481]. **TABLE 7** provides a summary of other potential applications for CV.\n\n**TABLE 7. A summary of CV-based other potential applications**\n\n{{TABLE:tbl_07}}",
+          "citations": [
+            "W2810123099",
+            "W2765107853",
+            "W2942685721",
+            "W2516828042",
+            "W2528999066",
+            "W2768115053",
+            "W2588771651",
+            "W3011127951",
+            "W4242383620",
+            "W2395639500",
+            "W2807126412",
+            "W2181824145",
+            "W2593696810",
+            "W2786063530",
+            "W2396728763",
+            "W2910876480",
+            "W2462985838",
+            "W2765113481"
+          ],
+          "tables_in_text": [
+            "tbl_07"
+          ],
+          "citations_unmapped": [
+            "68",
+            "80"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "3. DESIGN AND METHODS",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Research Questions",
+          "subsubsections": [],
+          "text": "- RQ1: What are the current research trends in CV and mobile systems in the educational sector?\n- RQ2: How are these beneficial to the educational sector?\n- RQ3: How can different aspects of these be applied in education?\n- RQ4: How will these benefit from the perspective of future education?",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Paper Searching Approach",
+          "subsubsections": [],
+          "text": "Google Scholar was used to find research publications on this study's topic because of its high-quality relevance ranking. A search query was developed to find relevant articles, where the first 10 pages (100 research papers) of each search result is considered. See **BOX A** for detailed search queries.\n\n**BOX A. Search Query**\n\n```\nSearch Query = ('null' || 'Attendance Monitoring' || 'Online Proctoring' || 'Image Classification' || 'Object Detection' || 'Face Identification' || 'Educational Robot' || 'Training' || 'Medical Training' || 'Plagiarism Checking' || 'Handwritten Document' || 'Perception Monitoring' || 'Anomaly Detection' || 'Behavior Monitoring' || 'Engagement' || 'Handwritten document') && ('null' || 'Students' || 'Classroom' || 'Education' || 'Educational Institute' || 'Application') && 'Computer Vision'\n```",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Screening of Relevant Paper",
+          "subsubsections": [],
+          "text": "Many articles were found using our search criteria, but not all of these publications addressed our study's concerns and needs. So, from this list, we selected 318 papers related to CV applications in education and 30 articles on CV applications that have not yet been implemented in education but are likely to be used (see **TABLE 8**). These selection processes are carried out following identification, screening, eligibility tests, and inclusion-exclusion criteria. To determine current research trends, we graphically presented the year-wise distribution of those publications and classified all of those selected papers' relevant categories.\n\n**TABLE 8. Current research trends in computer vision and mobile system in education**\n\n{{TABLE:tbl_08}}\n\n**Inclusion criteria:**\n- CV-related research is aimed and has potential towards the educational sector.\n- Articles published in the English Language.\n- Research articles published between 2010 to 2021 (see **FIGURE 2**)\n\n**Exclusion criteria:**\n- CV research is not related to education and is unlikely to be used in the education sector.\n- Short papers, review articles, less popular papers, unpublished research articles, Wikipedia content, and online blog.\n\n**FIGURE 2. Annual distribution of published articles on computer vision and mobile system in the education sector**\n\n{{TABLE:tbl_09}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_08",
+            "tbl_09"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Literature Review Execution",
+          "subsubsections": [],
+          "text": "After reviewing all of the selected research papers, we independently selected some papers for discussion in the literature review section to answer some of the research questions raised.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The main purpose of this article is to identify the most current CV research trends in the education sector to fulfill the study objectives, which are listed below on the research questions. So, we collected published research papers on this topic from 2010\u20132021 and categorized them. Literature review sections find answers to those questions by analyzing some of the most important research papers. At the beginning of all our work, we studied numerous concepts of systematic review before proceeding with the popular guidelines provided by Okolio, Chitu et al. [W2173536757], where each stage is explained in depth and has also acquired popularity among researchers in recent years. Here, **FIGURE 1** presents the workflow of our systematic review.\n\n**FIGURE 1. Workflow of this systematic review**\n\n*[Image: Workflow diagram showing: Identify Research Questions \u2192 Find relevant research articles \u2192 Select some of these article list \u2192 Final paper selection for literature review \u2192 Apply inclusion and exclusion criteria \u2192 Categorize them to reveal research trend \u2192 Review literature by category \u2192 Discussion & Critical Review \u2192 Conclusion]*",
+      "citations": [
+        "W2173536757"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "4. RESULT AND DISCUSSION",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Trends of CV and Mobile System in the Educational Sector",
+          "subsubsections": [],
+          "text": "**FIGURE 3** illustrates the current research trajectory in the education sector regarding CVs and mobile systems. The domain of attendance monitoring is the most widely studied. Perception monitoring is the second step, followed by handwritten documents. The prevalence of online proctoring and pedagogical robots has decreased. Medical education, in conclusion, is the least researched field within education. The potential impact of integrating CVs and mobile systems into the education sector is a paradigm shift in the way students engage with and acquire knowledge from educational materials. An extensive selection of mobile applications pertaining to computer vision are presently available for free installation from the Google Play Store [W3032229541], enabling students to conveniently access them. A concentration on a variety of subjects, including attendance tracking, educational robots, medical training, online proctoring, perception monitoring, and OC, has been identified through our investigation of current research trends [W3136654910, W2792633707, W2783098383, W2944535136, W4310187922, W2074156841, W2794225190, W2606412710, W2912504209, UNMAPPED:11]. However, it is crucial to acknowledge that the implementation of CV-assisted teaching may also present obstacles or ethical concerns that require attention. We have outlined the most recent developments in CV and mobile system research within the educational sector in the present paper. Almost certainly, our paper introduces these developments to comprehension by discussing how computer vision technology is presently being utilized or researched in the field of education.\n\n{{TABLE:tbl_10}}\n\n**FIGURE 3. Current research trends in computer vision and mobile systems in education**",
+          "citations": [
+            "W3032229541"
+          ],
+          "tables_in_text": [
+            "tbl_10"
+          ]
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Benefits of CV with Mobile System",
+          "subsubsections": [],
+          "text": "To address our second research question, computer vision (CV) technology has the potential to improve the educational sector in a variety of ways. One of the primary advantages is the capacity to create tailored learning experiences for each student through the use of a small device known as a mobile device [W4313051193, W2809123732]. This can help ensure that each student receives the necessary assistance and resources. Furthermore, CV technology can be used to make education more accessible to students with varied needs or abilities by providing images or other sorts of support. This can help to create a more inclusive and equitable learning environment.\n\nFurthermore, our data imply that CV-assisted mobile teaching has the potential to significantly improve efficiency, accessibility, and student participation.",
+          "citations": [
+            "W4313051193",
+            "W2809123732"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Applications of CV and Mobile System in Different Avenues",
+          "subsubsections": [],
+          "text": "We focused on the applications of CV and mobile systems in various avenues to answer our third research question, such as monitoring student attendance, engaging students in interactive learning experiences, enabling medical training, facilitating remote testing, grading exam papers, tracking student conduct, digitizing printed texts, object detection, face recognition, eye contact monitoring, emotion capturing, gesture recognition, picture categorization, and augmented reality. This study reveals that the use of CV and mobile technologies makes these applications possible [W3032229541, W3158858017, W2944535136, W3160226153, W3107414685, W2794225190, W2960139494, W2513263058, W2988553495].",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Future Prospect",
+          "subsubsections": [],
+          "text": "To answer the fourth research question, we found that integrating computer vision (CV) and mobile system in education can bring significant changes to how students learn and interact with educational material, potentially revolutionizing the sector. It is evident that CVs and mobile systems have the potential ability to enhance efficiency, accessibility, and student engagement that led to improved educational outcomes [W2996032628, W2944980529, W2786063530, W2570594714]. It enables personalized learning experiences, immersive environments, improved accessibility for students with disabilities, automated assessments, and advanced research. Image classification and object identification algorithms can be applied across various fields such as medicine, ecology, civil engineering, and textile engineering. In the future, CV could detect abnormal activities like harassment and bullying, as well as identify strangers on educational premises.",
+          "citations": [
+            "W2996032628",
+            "W2944980529",
+            "W2786063530",
+            "W2570594714"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "5. CONCLUSION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The rapid growth of the computer vision industry and its integration with mobile applications have paved the way for transformative possibilities in education. Our systematic review of 84 research publications underscores the multifaceted advantages of utilizing computer vision technology, shedding light on its potential to revolutionize the educational landscape. By enabling the monitoring of students' perceptions, mitigating academic dishonesty, and automating administrative tasks like attendance tracking, computer vision and mobile technology offer substantial benefits to educators and institutions, optimizing the efficient use of classroom time. Moreover, its applications extend to diverse educational domains, from engineering to medical science, presenting opportunities to enrich the learning process across faculties.\n\nBeyond academic enhancement, the technology's capacity to create safer campus environments by detecting and addressing abnormal activities such as ragging, bullying, and harassment is a testament to its broader societal impact. As we navigate the ever-evolving landscape of education, the fusion of computer vision and mobile systems opens up new horizons for both academic excellence and student well-being. These findings provide valuable insights for educational institutions, policymakers, and technology developers seeking to harness the full potential of this dynamic partnership in shaping the future of education.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_7",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_1",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4390821356_tables.md"
+}

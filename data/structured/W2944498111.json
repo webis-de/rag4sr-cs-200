@@ -1,0 +1,133 @@
+{
+  "id": "W2944498111",
+  "metadata": {
+    "title": "Strengths and Weaknesses of Traditional and Agile Processes \u2014 A Systematic Review",
+    "n_sections": 5,
+    "n_subsections": 0,
+    "n_subsubsections": 0,
+    "n_tables": 5
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Before 2001 [W2900227202, W2768174908, W2020503784, W2802297447, W2088754681, W2738891665, W2887644131, W2510213621, W2622792182, W2571055766, W2844024151, W2599979419, UNMAPPED:7], the software industry used traditional software development processes (i.e., Classical waterfall model, iterative waterfall model, spiral model, RAD model). While these traditional models are known to be cost-saving for bigger, off-shore projects, there is criticism that exists [W2599979419, W2672391842, W2606474476, W2004092822, W2752972787, W2461673143, W2748846891, W2885245303, W1978655394, W2781369908, W1809117658, W2589673187, UNMAPPED:24]. Due to these criticisms and the high ratio of software failures that used traditional models, it led to a change in software process development in 1999. This evolution started to encourage lightweight processes and a broader approach for better software development.\n\nIn 2001 [W2900227202], the original contributors of this evolution met and tried to identify the areas that these existing software methodologies had in common. Focusing on this common ground, led to the \"Agile Manifesto\".\n\nSince the introduction of the \"Agile Manifesto\" in 2001, Agile methodologies have gained much popularity and success. The software industry had a huge shift from practicing traditional software development to now adopting Agile methodologies. There are several reasons why the software industry has chosen Agile over traditional models. Some of the reasons are faster product delivery, iterations, customer satisfaction, high product quality, etc. In general, the shift in Agile methodologies focuses more on individuals and interactions over processes and tools, working process over detailed documentation, customer collaboration over contact negotiation and responding to change rather than following a plan [W2885245303, W2781369908]. It was also seen that Agile software development could handle changing requirements flexibly [W2606474476].\n\nAgile method basically put more focus on quality product development, simplicity and enhancing knowledge from change incorporation. Several Agile methodologies such as Scrum, eXtreme programming (XP), and Lean work well with the organization but also have potential risks associated with them. These Agile methodologies are often easily misunderstood. It is also difficult to manage methods like Scrum in an organization because it requires all team players to be motivated.\n\nThe core engineering processes are well defined and followed properly because they are usually life critical products. Consider an example of the civil engineering discipline, it is important that the engineers properly design and deliver whatever they make. People think software development is different from the engineering design practice. While every other discipline follows almost the same engineering process, software development has different approaches towards development. If these engineering design approaches are integrated in the present software development practices, then there would be less failure and the process would turn out to be more advantageous.\n\nThe rest of the paper is organized as follows \u2013 section 2 consists of the research process that was used to do this systematic review. It provides keywords that were used to search for research papers and the inclusion and exclusion criteria used to select important papers. Section 3 consists of the research question. Section 4 has the related work and section 5 is the conclusion and future directions.",
+      "citations": [
+        "W2900227202",
+        "W2885245303",
+        "W2781369908",
+        "W2606474476"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Research Process",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "There were 91 papers found by using the search keywords as in **TABLE 1**. Of these 91 papers, 72 papers were selected by reading the abstract. 25 papers were selected for primary study by using the inclusion and exclusion criteria. The search process which involved identifying the relevant papers was done by using different combinations of keywords. The search took place in steps in which the very first step was to search papers using the search keywords. The quality of the papers was determined after reading the papers in detail. Both the authors searched and downloaded the papers. Author 2 was responsible for reading the abstract and deciding if a particular paper was relevant or not by using the inclusion and exclusion criteria. Author 1 was responsible for determining the quality of the papers by reading them in detail. A summary of each paper after detailed reading was created by author 1.\n\nThe search keywords used to find the papers are shown in **TABLE 1** and **FIGURE 1** shows the phases that were involved in the searching process.\n\n**TABLE 1. Search Keywords**\n\n{{TABLE:tbl_01}}\n\nThe inclusion criteria was as follows \u2013\n1) Papers were published between 2012 to 2019\n2) Papers written in English\n3) Papers that were scholarly & peer reviewed and journal articles\n4) Papers having computer science and engineering discipline\n5) Papers having search terms software engineering, software and engineering\n6) Papers where the search terms were found in the abstract\n7) Papers that spoke about Agile, traditional or core engineering design process\n\nThe exclusion criteria was \u2013\n1) Papers that are duplicates of papers that were already included\n2) Papers that did not talk about traditional, Agile or core engineering design process\n3) Papers that were older than 2012\n\n**FIGURE 1. Systematic search process.**\n*(Search papers using the search keywords -> Filter out relevant papers reading the abstract and using inclusion, exclusion criteria -> Determine the quality of papers by detailed reading -> Create summary of each paper -> Reflecting back on the summaries of each paper to create this review)*\n\n**TABLE 2** below shows the papers that were included in the study. The table provides a brief description of each paper along with the year they belong to.\n\n**TABLE 2. Brief Description of each Paper with Year**\n\n{{TABLE:tbl_02}}\n\n**FIGURE 2. Publication by year.**\n\n{{TABLE:tbl_03}}\n\nThe fig above shows that there was one paper from 2019, six papers from 2018, ten papers from 2017, three papers from 2016, three from 2015, one from 2013, and one from 2012 and there were none from 2014.\n\nOnly Journal articles were selected for this study. **TABLE 3** below shows the publication channel and the number of articles related to that publication channel.\n\n**TABLE 3. Papers by Publishers**\n\n{{TABLE:tbl_04}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01",
+        "tbl_02",
+        "tbl_03",
+        "tbl_04"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Research Question",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This review has been done in order to address the strengths and weaknesses of traditional vs. Agile software development. Hence, the research question is can an ensemble method help in achieving a higher success rate in software development?",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Related Works",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "According to Mandal et al. [W2004092822] the primary perceived weaknesses of traditional software development processes are as follows \u2013 excessive documentation, too sequential, excessive planning, a lack of results until the end, late communication to stakeholders, delays in project delivery and increased project costs. Agile methodologies were developed to overcome these weaknesses. Mandal et al. [W2004092822] also said that \"Agile was a significant departure from the heavyweight document driven traditional software methodologies\". There are 12 principles of Agile manifesto [W2900227202] whose detailed description is out of the scope of this paper. However, summarization of these principles was done by Mandal et al. [W2900227202] and are presented as follows \u2013 Customer satisfaction, incorporation of rapid system change, frequent working software delivery, continues corporation of client and developer, motivated trusted individuals, continuous improvement, arrangement of face-to-face conversation, progress measurement, sustainable development, attention to technical excellence, simplicity, self-organizing teams, internal assessment for knowledge enhancement, quality assurance and economic development.\n\nThe meaning of these principles is often misunderstood, wrongly interpreted and commercialized [W2900227202]. Many people claim to be Agile in the present software industry only because it is fashionable to be Agile [W2900227202]. There is a difference between \"doing Agile\" and \"being Agile\" [W2900227202]. Agile methods and practices are often poorly implemented [W2900227202]. There are still several organizations who are struggling to adopt Agile methods successfully [W2887644131, W2622792182].\n\nIn spite of the fact that Agile has been accepted well by the software industry, it still has strengths and weaknesses which are highlighted by Tarwani et al. [W2589673187]. According to them, the strengths of Agile methodologies are early warning of risk, constant testing, iterations, small teams, customer feedback, quality, on time and on budget. Tarwani et al. [W2589673187] said that \"the main strength of Agile due to which it had gained popularity over traditional and sequential waterfall model is that it is based on the concept of iterations\". The weakness of Agile methodologies as presented by Tarwani et al. [W2589673187] are miscommunication, resource increase, overall cost increase, inappropriateness for large projects and lack of coordination.\n\nSpecifically talking about individual Agile methodologies, Scrum is one most of the widely used Agile methodologies. This methodology mainly relies on effective and efficient communication among the team members [W2781369908]. It is one of the best in management practices. The core values as stated by Qureshi in [W2781369908] are daily inspections, self-organized teams, the Scrum master, every sprint having a delivery and product owner setting priorities to the product backlog. According to [W2020503784], Scrum has short iterations which involve continuous feedback from the customer that makes it easy to cope with the changing needs and requirements of the industry. This in turn helps in delivering a quality product with customer satisfaction. Daily Scrum meetings and sprint meetings make it easier to measure the growth and productivity of a product and an individual working in that team. Also, testing is done at the end of each sprint which guarantees the quality and bugs are fixed right away. With several Scrum meetings, it becomes easier to follow the schedule and deliver the product on time. In spite of having several known strengths in Scrum methodology, it has its own weaknesses. Scrum software development is suitable for small projects and it becomes comparatively difficult to follow Scrum in large organizations. One of the main weaknesses of Scrum is reported in [W1809117658] that many employees in the software industry lack the knowledge of Scrum. They complete one simple course on Scrum and call themselves as Scrum masters. Another weakness is it lacks engineering practices [W2781369908] and so there were many attempts to combine Scrum with other methodologies; Scrum is simple to understand but difficult to master [W2748846891].\n\nAnother famous Agile methodology is eXtreme programming (XP). Like any other Agile methodology, XP also consists of iterations and in return gives quality products with customer satisfaction. XP can also handle unclear and changing requirements in the industry [W2088754681]. Many researchers have made attempts to integrate XP with Scrum or XP with any other methodology. Pair programming and continuous integration are the most used practices in XP and results in improving the productivity [W2589673187]. XP works well with simple and small scale projects and focuses more on coding than on the design [W2622792182]. The weaknesses of XP as stated in [W2088754681] are lack of documentations, poor architectural structure and less focus on design. There were 18 papers reviewed in [W2088754681] that showed that there were several attempts made to overcome these weaknesses. Some of them had solutions to a few weaknesses but not all. In [W2088754681], a simplified XP model has been proposed which overcomes all the weaknesses stated above but there is no validation done for the same. There are several studies which show that simply placing two programmers in front of the computer is not enough (pair programming in XP) [UNMAPPED:7]. Pair programming requires mutual understanding of both the programmers and a common skillset. It requires much knowledge and expertise of that domain by both programmers [W2088754681].\n\nLean is an Agile toolkit which has principles mainly focused on elimination of waste and maximization of value [W2020503784, UNMAPPED:24]. The Lean methodology has been claimed as the fastest growing methodology for product development in the past decade [W2768174908]. It has a very behavioral approach [W2900227202]. However, Lean does not cover the technical and managerial issues. Its concerns are mostly about minimizing the wastage and hence improving the quality [W2020503784]. One of the most popular principles of Lean approach is Kanban [W2768174908]. Kanban is a visual method that helps in managing the production of a product [W2020503784]. This methodology can not only be used for development but also has its strengths in teaching, like used in [W2510213621]. With the usage of Kanban there is a positive increase in interaction and communication between the teams and stakeholders [W2510213621]. A total of 37 primary studies have been investigated in [W2768174908] which gives details about the strengths and weaknesses of Kanban. Although there are several definitions that have been defined in [W2461673143] for Kanban and lean, there is still lack of guidelines that say how both should be applied in software industry [W2768174908]. There is very limited research that gives guidelines in implementation of Kanban to the practitioners [W2768174908]. There is a strong need for systematic studies in the area of Lean and Kanban [W2768174908].\n\n**TABLE 4. Strengths and Weaknesses of Software Processes**\n\n{{TABLE:tbl_05}}\n\nIn a tertiary study done in [W2461673143], it has been revealed that test driven development (TDD) has a very positive impact on external quality of a product. The quality attribute included external quality, complexity, code size, etc. However, no conclusion was made on the impacts of TDD on code size. Test driven development is one of the most advantageous approaches that has produced several successful products. because of its approach of writing the test cases and test code first by using the requirements. This reduces defect rate and improves quality of the product. It also helps in writing clean code and removing duplicates in each iteration [W2738891665]. Sometimes, TDD can be very time consuming due to repeated test failures [W2738891665]. Specific knowledge and special skills are required in order to implement TDD [W2738891665, W2844024151].\n\nDepending upon the size, complexity and team size, Crystal methodology can be used. There are several strengths and weaknesses about Crystal that are highlighted in [W2738891665]. Projects can be clearly classified using Crystal. It provides good risk control. However, out of four Crystal methods available, only two (Crystal clear and Crystal orange) of them are defined in detail. Life critical systems are difficult to develop using Crystal because it lacks system validation practices [W2738891665].\n\nLike any other Agile methodologies, Feature driven development (FDD) has adaptive and incremental nature [W2752972787]. The emphasis of FDD is quality. It focuses more on designing and building aspects of the software development. As the name says, FDD has more focus on its feature development [W2738891665]. FDD does not provide any guidance about requirements gathering, analysis and risk management [W2738891665]. A simplified FDD process model was introduced in [W2752972787] to overcome its limitations (i.e., less responsiveness to changes, reliance on experienced staff and less appropriateness for small scale projects). There were 14 research papers that were discussed in [W2752972787]. Several processes were proposed in those papers but none overcame all of its limitations. However, this simplified FDD was not validated.\n\nThere are several methodologies that exist for software development. Each of these has their own strengths and shortcomings. No particular process exists that satisfies all the weaknesses of a project and gives the best result. A new process can be developed by integrating all these methodologies and core engineering practices so that this new process uses all of their strengths, overcomes the weaknesses of each other and yields the best results.",
+      "citations": [
+        "W2004092822",
+        "W2900227202",
+        "W2887644131",
+        "W2622792182",
+        "W2589673187",
+        "W2781369908",
+        "W2020503784",
+        "W1809117658",
+        "W2748846891",
+        "W2088754681",
+        "W2768174908",
+        "W2510213621",
+        "W2461673143",
+        "W2738891665",
+        "W2844024151",
+        "W2752972787"
+      ],
+      "tables_in_text": [
+        "tbl_05"
+      ],
+      "citations_unmapped": [
+        "7",
+        "24"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Conclusion and Future Work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this study a systematic review of 25 papers were done. The findings from this study show that there does not exist a one-size-fits-all methodology in software development which does not have any limitation. Every methodology including Agile or traditional has its own limitation as shown in table IV. This systematic review discusses about several strengths and weaknesses of the two methodologies. Many organizations use a combination of processes. Usage of such combinations has helped the organizations overcome weaknesses of a single process. For future directions, this study suggests that a new process be worked upon which integrates all the simple and value added features of all the processes that were discussed in Section 4. By integrating the traditional and Agile with the core engineering design process a new process can be developed. The new process can also undergo double validation (i.e. validating it twice).",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2944498111_tables.md"
+}

@@ -1,0 +1,555 @@
+{
+  "id": "W4400302907",
+  "metadata": {
+    "title": "Confounded or Controlled? A Systematic Review of Media Comparison Studies Involving Immersive Virtual Reality for STEM Education",
+    "n_sections": 8,
+    "n_subsections": 16,
+    "n_subsubsections": 17,
+    "n_tables": 8
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Objective and Rationale",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Media comparison research involves comparing the learning outcomes of students who learn with different instructional media such as with immersive virtual reality versus conventional modes of instruction (e.g., slideshow presentations, textbook readings, or video lessons). In other words, students in one condition are taught the same content with one type of medium, and students in another condition are taught with a different type of medium, and the learning outcomes of the two are compared [UNMAPPED:1]. Despite the prevalence of these kinds of studies, a persistent challenge in media comparison research is to implement control and treatment conditions that differ with respect to the instructional medium but are equivalent with respect to the instructional methods and content they contain [W2120414497, W2072910891, W1981952032, UNMAPPED:5].\n\nOur goal is not to contribute to the long-standing debate on the merits of media comparison research but rather is to pinpoint ways to improve the methodological rigor of this literature base. Our particular interest is in research on immersive virtual reality (IVR) for STEM education which has been the focus of recent media comparison research. IVR refers to a computer-supported device that visually transports and immerses a learner in a new computer-generated environment and allows users to feel they are present in an environment that is different from their physical environment [W4298381182]. IVR differs from augmented reality wherein augmented reality presents computer-generated items overlaid in a learner's physical environment [W145587688].\n\nThe use of IVR has been rising in popularity within the last decade, with strong claims made about the effectiveness of using IVR in STEM education. However, the extent to which the specific affordances of IVR can be pinpointed as the causal factor in enhancing learning has yet to be systematically investigated. As Cromley et al. [W4324358715] found in their meta-analysis on the use of virtual reality (VR) in STEM learning, the strongest effects of VR were for those conditions that included active learning techniques\u2014that is, benefits were found when specific instructional methods were embedded in VR. Similarly, Conrad et al. [W4391782664] found that IVR is advantageous as compared to other media when learners are actively involved as compared to passively involved. It is important to highlight that active learning techniques are not necessarily unique to the VR device and can be used in conventional media, thus potentially conflating the usefulness of VR itself. Therefore, the aim of this systematic review was to examine whether conclusions about the effectiveness of the IVR technology itself can confidently and appropriately be made or are limited by the confounding of other instructional methods and content that is non-specific to the technology. This systematic examination of the literature provides important insights into the degree of confidence we can have in conclusions about the effectiveness of the IVR technology itself.",
+      "citations": [
+        "W2120414497",
+        "W2072910891",
+        "W1981952032",
+        "W4298381182",
+        "W145587688",
+        "W4324358715",
+        "W4391782664"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "5"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Background on Technology in Education",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The use of technology in education has been popular for over a century, with new waves of learning media occurring with the introduction of technologies such as motion pictures, radio, educational television, overhead projectors, programmed teaching machines, video, personal computers, the Internet, and extended reality devices [UNMAPPED:10, UNMAPPED:11, UNMAPPED:12]. As noted in the 1980s, the introduction of each new medium brings with it advocates who argue that students will experience learning improvements because of these new technologies [W2120414497]. In fact, much of the promotion of educational technology stems from the perspective that incorporating new technologies into the learning process will result in learning outcomes that are educationally significant [W2517956086]. These claims have led to subsequent media comparison studies to determine the effectiveness of a new instructional medium as compared to conventional media [W2120414497].\n\nMedia comparison studies are popular in educational psychology and educational technology despite methodological concerns that have been raised for over four decades [W4313399483, W3146922120]. In the 1960's and 70's, when televised and computerized instruction were prominent, some researchers expressed that media comparison studies were not fruitful and that learning objectives could be achieved using a variety of different instructional media [W2120414497, UNMAPPED:16]. These concerns highlighted questions of whether media comparison studies were worthwhile and if media could influence learning. These questions became the focus of a special issue (Vol. 42, No. 2) in the journal Educational Technology Research and Development (ETRD) during 1994. This special issue on the media comparison debate involved researchers such as Clark [W2072910891, W1981952032], Jonassen et al. [W1965337694], Kozma [W2040225622, W2064083597], Morrison [W2010925207], Reiser [W1988379427], and Shrock [W2095414429].\n\nOne overarching issue raised in the debate was that studies involving the comparison of different media could be confounded. More specifically, Clark [W2072910891] argued that underlying all media are instructional methods, and it is these instructional methods that are the important ingredient rather than the medium itself. When he examined meta-analyses comparing audiotutorial and conventional instruction or comparing computerized and conventional college instruction, he identified uncontrolled methods and content (including differences in the time it took to complete lessons) that made it difficult to know whether the results could be attributed to the medium specifically or to other elements of the intervention [W2120414497]. In more recent reviews, similar confounds have been identified. For example, Honebein and Reigeluth [W3146922120] reviewed 39 media comparison articles (years 1980\u20132019) in the journal ETRD and 41 media comparison articles (years 2009\u20132018) in other journals and found that the majority of comparative articles confounded the instructional media and the instructional methods.\n\nAs stated by Clark [W2120414497], \"It was Mielke [UNMAPPED:51] who reminded us that when examining the effects of different media, only the media being compared can be different. All other aspects of the treatments, including the subject matter content and method of instruction, must be identical\" (p. 448). This notion of isolating and controlling variables is a hallmark of rigorous, unconfounded experimental research and is critical for making valid, causal conclusions [W2104732510, W4388342847]. Revisiting the media comparison debate, there are some, like Clark [W2072910891, W1981952032], who argue that media do not influence learning and are mere delivery trucks whereas there are others, like Kozma [W2040225622, W2064083597], who argue that media have unique attributes and that we should be focusing on how the media and methods work together to facilitate meaning-making and knowledge construction. Regardless of the side of the debate a researcher is on\u2014or if they fall somewhere in the middle\u2014if we are to determine whether media influence learning, one or more instructional components should be selectively contrasted and studied in a systematic fashion to determine which components are most important for learning (e.g., see De La Paz, [W2077142314]).\n\nOne issue for research on instructional practices, such as those within science education, is the use of \"baggage-laden terms\" without the accompaniment of clear operational definitions of what different instructional conditions entail [W2098873710], p. 14076). When key features of different types of instruction are not outlined, it is difficult to determine how they differ. Without an understanding of how they differ, pinpointing why one approach was more or less effective than another becomes challenging, if not impossible. In this effort of exploring the \"why,\" it is important to identify features that are unique to the medium itself\u2014as some capabilities cannot be replicated/recreated via other media [W2064806530]\u2014and those that can be controlled between instructional conditions, with the goal of shedding light on the role a specific medium plays in learning. These systematic approaches to media comparison research are as relevant and needed as ever with the wave of new technologies surfacing in the educational market.",
+      "citations": [
+        "W2120414497",
+        "W2517956086",
+        "W4313399483",
+        "W3146922120",
+        "W2072910891",
+        "W1981952032",
+        "W1965337694",
+        "W2040225622",
+        "W2064083597",
+        "W2010925207",
+        "W1988379427",
+        "W2095414429",
+        "W2104732510",
+        "W4388342847",
+        "W2077142314",
+        "W2098873710",
+        "W2064806530"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "10",
+        "11",
+        "12",
+        "16",
+        "51"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Immersive Virtual Reality",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Of the new technologies entering the market, IVR has emerged as a tool \"poised to revolutionize education\" [W4386895632], p. 1). In recent years, there has been a large push to use IVR as a tool for teaching students new content, particularly STEM content. In fact, the global market for virtual reality in education is projected to reach 28.70 billion USD by 2030 [UNMAPPED:52]. Companies such as Meta have been promoting the idea that the IVR technology they have been building is creating new opportunities for student learning and have even partnered with different universities to teach instructors about how to use immersive technology for learning in their classroom [UNMAPPED:53]. Suggestions for practitioners within the IVR literature are often of the form \"using IVR can improve learning\" (e.g., [W4220735007, W4206715553]).\n\nThis push for the use of IVR in classrooms stems, at least partly, from the generally positive results that the literature is presenting. When examining meta-analyses for information on the effectiveness of IVR in education as compared to more traditional or non-immersive approaches, the results often show positive effects on learning (e.g., [W4220735007, W4391782664, W4206715553, W3084427344]). Despite these positive effects on learning, media comparison studies can present challenges in determining whether it was the media itself that influenced learning, the methods themselves that were attributable to the results, or the two working in tandem to produce learning outcomes. As such, researchers have expressed the need for a \"thorough, scientific discussion\" of the designs and methods used in IVR research [W4388570618], p. 1).",
+      "citations": [
+        "W4386895632",
+        "W4220735007",
+        "W4206715553",
+        "W4391782664",
+        "W3084427344",
+        "W4388570618"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "52",
+        "53"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Systematic Review Research Questions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Considering the media comparison debate and the issues that can arise in the design of conditions within these studies, it is important to establish the extent to which the instructional methods and content are controlled between instructional conditions in IVR comparative studies. This examination would provide insight into whether the results of comparative studies could be attributed to specific affordances of the particular medium. Therefore, the present review was conducted to examine the extent to which the instructional methods and content were controlled (labeled throughout paper as the \"degree of control\") between IVR and conventional conditions in STEM education research with students in K-12 and higher education.\n\nOperationally, we defined IVR for the present review as involving a head-mounted display (such as from Oculus Quest or HTC Vive). Our focus was on STEM education given that the media comparison literature is abundant in this area and has not yet been systematically examined with regard to the designs and methods used. Further, the importance of ensuring diverse populations of students are attracted to and retained in STEM fields cannot be overstated [W4313609116]. As noted in the visionary report from the National Science Foundation, students should have \"an equitable opportunity to acquire foundational STEM knowledge\" wherein an \"understanding of how people learn with modern technology [is needed] to create more personalized learning experiences, to inspire learning, and to foster creativity form an early age\" [UNMAPPED:34], p. 5).\n\nThere were two primary research questions that guided our review:\n1. Are the instructional conditions in IVR comparison studies controlled on instructional method and content?\n2. When looking at different study outcomes, how confounded are the comparisons between IVR and conventional conditions?",
+      "citations": [
+        "W4313609116"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "34"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Method",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "Literature Search",
+          "subsubsections": [],
+          "text": "We used two primary approaches to locate published articles, dissertations, and conference proceedings for consideration after an iterative search process that is detailed on OSF [^1]. First, seven databases were searched using a variety of search terms. Second, articles included in recently published meta-analyses and reviews of the related literature were examined. For our database searches, OpenDissertations, ProQuest Dissertations and Theses, Compendex, Web of Science, ERIC, PubMed, and PsycInfo were included as they cover STEM subjects. Document types were limited to dissertations (from OpenDissertations and ProQuest Dissertations and Theses), conference articles and proceeding papers (from Compendex and Web of Science, respectively), and peer-reviewed scholarly journal articles (from Compendex, ERIC, PubMed, PsycInfo, and Web of Science). Dissertations and proceeding papers were incorporated to include research that had not yet been published in peer-reviewed journals. The dates of inclusion were from January 1, 2013 to December 31, 2022. The starting year of 2013 was chosen for three reasons: (1) related, previous meta-analyses and critical analyses have often used 2013 as their start date for admission to their review (e.g., [W3041285464, W3084427344]); (2) the Oculus Rift HMD-VR headset (specifically the Oculus development kit V1) first debuted in 2013; and (3) the iterative search process (described in a document on OSF [^1]) determined that searches prior to a 2013 publication year did not result in relevant articles.\n\nThe final search string used in these databases was: [IN ABSTRACT] (\"virtual reality\" OR \"head mounted display\" OR \"head-mounted display\" OR \"immersive learning\" OR \"immersive VR\" OR \"educational VR\" OR \"VR learning\") AND (training OR education OR educational OR learning OR classroom OR instruction OR teach OR teaching) AND (intervention* OR experiment* OR empirical OR control OR treatment* OR quantitative OR group)) NOT [IN TITLE] (\"systematic review\" OR \"meta analysis\" OR meta-analysis OR \"case study\" OR rehabilitati* OR elderly OR animal* OR \"intellectual disability*\" OR \"physical disability*\"). The search was limited to English language documents. The literature searches yielded 11,432 articles. However, after the first deduplication process in Zotero, the number was reduced to 9076 articles. After the second and final deduplication process in Rayyan, there were a total of 8973 unique articles (the PRISMA flow chart is presented in **FIGURE 1**).",
+          "citations": [
+            "W3041285464",
+            "W3084427344",
+            "W2120414497",
+            "W2072910891"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1"
+          ]
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "Criteria for Inclusion",
+          "subsubsections": [],
+          "text": "The primary aim of this systematic review was to examine articles that compared learning outcomes involving STEM content of K-12 or higher education students who learned with IVR (e.g., involving a head-mounted display) versus with more traditionally used learning media (e.g., video lectures, textbook readings, or online lessons). To be considered for inclusion in the present review, the following inclusion criteria had to be met: The articles needed to include (a) a non-clinical sample of children or adults in a K-12 or higher education environment; (b) a virtual reality learning experience that was fully immersive; (c) the use of a head-mounted display for the IVR device (i.e., not using a CAVE system); (d) a focus on presenting learners with new academic content with an associated posttest assessment rather than practicing a skill, refining body movements, developing social or emotional skills, or developing spatial skills; (e) a lesson on STEM-related content (note: this criterion is different from the pre-registered protocol and was decided upon during screening due to the volume of articles and refined research questions); (f) an IVR condition where the main introduction to new content took place in IVR (i.e., students needed to learn new content exclusively within an IVR lesson but could practice content outside of IVR); (g) a conventional condition that reflected more traditional educational experiences (i.e., a learning environment that did not use IVR, desktop VR, simulations, or games-for-learning); and (h) an experimenter and/or instructor who was physically present to monitor participants (i.e., not a remote experiment) during the duration of the experiment in both conditions. The articles also needed to be original empirical work and be written in English.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "Screening",
+          "subsubsections": [],
+          "text": "Both co-first authors as well as the third and fourth authors conducted title-abstract screening for the 8973 articles (see **FIGURE 1**). For purposes of interrater agreement, 20% of the articles were double screened (blinded review) by the third and fourth authors (12% and 8%, respectively). The interrater agreement level was 99.1%. The nine conflicts were discussed among the screeners, and resolutions were reached for each. After the screening process, 1477 articles were reviewed to determine whether the use of the term \"virtual reality\" referred to immersive virtual reality. After this process, 100 articles moved on to full-text review. The same screening authors were tasked with reviewing a random subset of these articles (percentage reviewed varied across screening authors), alongside the fifth, sixth, and seventh authors. Authors were contacted for clarification on any of the inclusion criteria. If the information received did not meet the inclusion criteria or authors did not respond, the article was excluded. After full-text review, the number of articles that were included in the final set was 38. The final list of articles is listed in OSF. PDFs for included articles were obtained from the University's library holdings, through Interlibrary Loan, or through contacting authors.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "Coding Procedure",
+          "subsubsections": [],
+          "text": "Articles were coded across 12 primary categories (see **TABLE 1**) and three supplemental categories (see supplemental Table S1). The supplemental categories provided a deeper look into what the conditions involved (e.g., whether the conventional condition involved technology, what type of headset was used in the IVR condition). The primary categories were designed for the extraction of information needed to answer our two primary research questions. Each column in the spreadsheet represented a coding category, and each row, our unit of analysis, represented a comparison between one IVR condition and one conventional condition from each article. Articles could have multiple rows if they involved multiple comparisons (e.g., IVR 1 vs. conventional and IVR 2 vs. conventional; IVR vs. conventional 1 and IVR vs. conventional 2) across the same experiment or across multiple experiments. For articles that included factorial designs, we chose to include only those comparisons that were controlled on one of the two variables. For example, for a factorial design that compared media (IVR vs. conventional learning) with generative learning strategies (summarizing vs not summarizing), we only included the comparisons (1) IVR without summarizing vs traditional without summarizing and (2) IVR with summarizing vs traditional with summarizing. The total number of comparisons was 50 across the 38 articles (five articles included multiple comparisons, either with one IVR condition compared to two different conventional conditions or two IVR conditions compared to one conventional condition).",
+          "citations": [
+            "W2120414497"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1"
+          ]
+        },
+        {
+          "subsection_id": "s_5_5",
+          "subsection_index": 5,
+          "subsection_label": "Coding Categories",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_5_5_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Foundational Details of IVR and Conventional Conditions to Answer Research Questions 1 and 2",
+              "parent_subsection_id": "s_5_5",
+              "text": "**Categories 1 and 2: Were All Features of the Conventional Condition and the IVR Condition Operationally Defined?** To determine how conditions differ and establish why one condition did or did not lead to greater learning than the other condition(s), specific definitions and procedures need to be provided within a study [W2098873710, W4388342847]. As such, we coded for whether a complete operational definition was provided for each condition. Although this variable is continuous, for the purposes of this review, we coded for whether there was a complete definition, a partial definition, or no definition of what occurred during the lesson in both the IVR and conventional conditions. A complete operational definition included specifics as to the methods, features, and/or procedures involved in each lesson. To be considered complete, the description of the condition would need to allow another researcher to be able to replicate the lesson and/or list out all essential features involved in the instructional conditions of the study (for example, see [W3080093691]). A partial definition involved providing some information about the methods, features, and/or procedures involved in each lesson\u2014that is, it went beyond a simple label\u2014but did not include enough information to determine how that lesson was specifically implemented in practice (for example, see definition of conventional condition in [W4212848690]). No definition involved simply labeling the condition (e.g., traditional lecture, virtual reality lesson) without describing what specifically occurred during the lesson or not providing any details about the condition.\n\n**Categories 3 and 4: Did the Conventional Condition and the IVR Condition Receive Activities During the Lesson?** There is a large literature base on the effectiveness of including students in participatory activities during a lesson (often termed active learning) and allowing them to have opportunities to practice. Activities can include, for example, answering practice questions, completing class worksheets, working on a hands-on laboratory task, building concrete models, creating concept maps, and discussing content with peers. When these activities help students engage in generative learning (i.e., meaning is actively constructed through the organization of new information and the integration of this new information with prior knowledge; [W3160398006, W2173798076]), they can be effective for student learning. We therefore coded for whether students received activities during the lesson to practice or extend their learning (coded yes) or did not engage in such activities (coded no), such as being instructed to simply watch a video or listen to a lecture.\n\nIt is important to note that the conventional condition could be coded as likely no for having activities if it was only described with a general term such as traditional lecture and no other information was provided to determine definitively whether activities were integrated into the lesson as traditional lecture is commonly referred to as passive learning [W2971755171, W2010593734, W2991570219]. The conventional condition could also be coded as likely yes for having activities if it was only described with a general term such as active learning and no other information was provided as active learning typically involves the use of activities to engage students in the learning process [W4388342847]. When the IVR or conventional condition did not involve an operational definition or was not specifically labeled with a phrase that indicated activities were/were not likely involved (e.g., active learning condition, passive lecture condition), the condition was coded difficult to determine.\n\n**Category 5: Did the IVR Condition Involve Non-IVR Activities?** When IVR conditions involve activities, these activities may not necessarily be implemented within the IVR lesson. Rather, these activities could be implemented outside of the IVR environment where they become non-IVR activities such as class discussions that take place in the physical classroom or paper-based worksheet activities. Therefore, we coded for whether an IVR condition included non-IVR activities (with the coding options yes and no). In the event that an IVR condition was not well operationalized and we could not determine if there were any activities that occurred outside of IVR, the condition was given the code difficult to determine.\n\n**Category 6: What Were the Learning Outcome Results of the Comparisons?** To determine the achievement-based learning outcomes of each comparison between a conventional condition and an IVR condition, the learning outcomes were coded as IVR better (IVR condition had statistically significantly greater learning on all dependent measures), conventional better (conventional condition had statistically significantly greater learning on all dependent measures), tied (conditions resulted in nonsignificant differences on all dependent measures), mixed (the results differed based on the dependent learning measures examined [e.g., IVR was better on a measure(s) of transfer and conventional was better on a measure(s) of retention]), and inconclusive (statistics were not presented or were questionable).",
+              "citations": [
+                "W2098873710",
+                "W4388342847",
+                "W3080093691",
+                "W4212848690",
+                "W3160398006",
+                "W2173798076",
+                "W2971755171",
+                "W2010593734",
+                "W2991570219"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "The left column of **TABLE 1** lists the names and possible designations for each of 12 primary coding categories. Each coding category was represented by a question with specific codes that addressed each question. These categories serve as the foundation for answering the two primary research questions.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_6",
+          "subsection_index": 6,
+          "subsection_label": "Research Question 1: Are the Instructional Conditions in IVR Comparison Studies Controlled on Instructional Method and Content?",
+          "subsubsections": [],
+          "text": "**Category 7: Were the Conditions Controlled on Whether the Lessons Included Activities?** To determine if there was a confound between the medium and the methods (e.g., IVR condition with practice activities vs. conventional condition with no practice activities), categories 3 and 4 were examined for consistency between conditions with coding options of yes, likely yes, no, and likely no. See **TABLE 2** for how categories 3 and 4 were used to determine whether conditions in each comparison were controlled on participatory activities. If one or both of the conditions had received a code of difficult to determine for categories 3 and 4, the comparison would be given a code of difficult to determine in response to the conditions being controlled on participatory activities.\n\nFor those comparisons that met the requirements of having conditions that were controlled on the involvement of activities during the lesson, the conditions were further examined to ensure the activities were implemented in the same way between conditions. If there was a confound related to the activities (e.g., activities in one condition involved group work, and activities in the other condition involved independent work), the comparison was coded no for conditions being controlled on activities.\n\n**Category 8: Were Any Non-IVR Activities Controlled Between Conditions?** If an IVR condition includes non-IVR activities and the conventional condition does not, it becomes difficult to strictly point to the immersive lesson as the causal factor. To determine if this variable was controlled between conditions, category 5 was examined, and for any comparisons where the IVR condition involved non-IVR activities, the conventional condition was evaluated for the presence of these activities as well. Therefore, we coded for whether any non-IVR activities were controlled between conditions with coding options of yes and no. If an IVR condition did not have non-IVR activities, the comparison was coded not relevant. In the event that an IVR or conventional condition was not well operationalized and we could not determine if there were any activities that occurred outside of IVR, the comparison was coded difficult to determine.\n\n**Category 9: Did Both Conditions Receive the Same Amount of Practice with the Dependent Measure?** Receiving multiple opportunities to retrieve information from memory can be an effective way to improve students' retention of content [W2163569782]. As such, we coded for whether students in both conditions received the same amount of practice with the dependent measure (such as completing a procedural task similar to the one on the posttest or completing multiple-choice practice questions and then taking a multiple-choice posttest). The options were yes and no. In the event that the IVR and/or conventional condition was not well operationalized and we could not determine whether students in one condition receive more practice with the dependent measure than their peers in the other condition, the comparison was coded difficult to determine.\n\n**Category 10: Was the Time Spent Learning the Content Controlled Between Conditions?** Different interventions may be afforded more time for students to engage with the content, leading to an issue surrounding whether it was the independent variable (i.e., particular teaching approach) that led to differences in student performance or a difference in time-on-task/the exposure to the content [W3018344243] or lesson efficiency due to more design effort given to one condition [W2120414497]. To combat this potential confound, it is important to hold time spent learning in an experiment constant, meaning that both groups should be given the same or similar amount of time to learn the material. We therefore coded for whether students in the conditions compared in each study received the same amount of time to learn the content, within a range of 20% difference in time, with the options being yes and no. In some cases, if it was difficult to determine a strong \"yes\" or \"no\" due to the comparison presenting ranges of times that learners could spend learning in either condition, the comparison was coded likely yes or likely no depending on if the range of times overlapped. Finally, if the authors did not provide a time range or specific duration of the lessons in the IVR and/or conventional condition and we could not determine if the time spent learning was controlled between conditions, the comparison was coded difficult to determine.\n\n**Category 11: Was the Content of the Lesson Matched?** Lessons taught in the IVR condition and conventional condition should be matched on content (i.e., involve teaching the same concepts and general information) to ensure valid comparisons can be made. Although the degree to which the lessons were matched on content varies on a continuous scale, for the purposes of this review, the content was either deemed the same (with a code of yes) or different (with a code of no) between conditions. Examples of matched content could include statements such as \"Concepts covered in the VR work were identical to those covered in each of the other conditions\" (see [W2803423315], p. 21) or information that discussed consistency across conditions (see paragraph with heading \"Consistency Across Conditions\" in [UNMAPPED:44], p. 10). A no code would be given if there were differences in the topics/concepts/procedures presented in the lesson that could be identified based on the lesson or content description or if content differences were acknowledged. When details about the lesson involved in the IVR and/or conventional condition were not provided or an explicit statement that the content was identical were not made and we could not determine if the content was matched between conditions, the comparison was coded difficult to determine.\n\n**Category 12: What is the Degree of Control Across Five Control Criteria?** To determine the degree to which the IVR and conventional conditions were controlled on instructional method and content in each article, five control criteria were assessed. Definitions of these criteria as well as examples of adherences to and violations of each criterion are shown in **TABLE 3**. These five control criteria were as follows:\n1. Any activities involved in the lesson needed to be matched between the conditions (category 7). Code options for the question \"were the conditions controlled on whether the lessons included participatory activities?\" were yes, likely yes, no, likely no, and difficult to determine. The codes yes and likely yes counted as meeting this criterion.\n2. Activities that were completed outside of IVR needed to be matched between conditions to isolate the effects of the immersive technology (category 8). Code options for the question \"were the conditions controlled on any activities that occurred outside IVR?\" were yes, no, not relevant, and difficult to determine. The codes yes and not relevant were counted as meeting this criterion.\n3. Practice with the dependent measure needed to be matched between conditions (category 9). Code options for the question \"did both conditions receive the same amount of practice with the dependent measure?\" were yes, no, and difficult to determine. The code yes was counted as meeting this criterion.\n4. The time spent learning the material needed to be matched between conditions (category 10). Code options for the question \"was the time spent learning the content controlled between conditions?\" were yes, likely yes, no, likely no, and difficult to determine. The codes yes and likely yes were counted as meeting this criterion.\n5. The content of the lessons needed to be matched (category 11). Code options for the question \"was the content of the lesson matched?\" were yes, no, and difficult to determine. The code yes was counted as meeting this criterion.\n\nTo determine the degree of control between IVR and conventional conditions in each article, we took two approaches. The first approach was to count how many of the five criteria were explicitly met. Across all conditions, no, likely no, and difficult to determine codes were counted as not meeting the control across all control criteria. If all five criteria were met, the comparison was deemed \"fully controlled.\" If four criteria were met, the comparison was deemed \"mostly controlled.\" If three criteria were met, the comparison was deemed \"somewhat controlled.\" If two criteria were met, the comparison was deemed \"somewhat not controlled.\" If one criterion was met, the comparison was deemed \"mostly not controlled.\" If zero of the five criteria were met, the comparison was deemed \"fully not controlled.\" See the top half of **TABLE 4** for an example of how the degree of control was assigned for this first approach.\n\nThe second approach was identical to the first approach but with one difference. In this approach, difficult to determine codes were no longer counted as not meeting a criterion; rather, if a comparison was assigned this code for any of the five criteria, the comparison was labeled \"degree of control difficult to determine.\" The purpose of this approach was twofold. First, if a criterion was actually met but this information had not been presented clearly (or at all) in the article to be coded as such, the comparison would not be not penalized. Second, this approach would afford insight into the number of comparisons that were affected by a lack of information provided in an article for at least one of the five criteria. See the bottom half of **TABLE 4** for an example of how the degree of control was assigned for this second approach.",
+          "citations": [
+            "W2163569782",
+            "W3018344243",
+            "W2120414497",
+            "W2803423315"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "44"
+          ]
+        },
+        {
+          "subsection_id": "s_5_7",
+          "subsection_index": 7,
+          "subsection_label": "Research Question 2: When Looking at Different Study Outcomes, How Confounded Are The Comparisons Between IVR and Conventional Conditions?",
+          "subsubsections": [],
+          "text": "To determine how confounded the comparisons were between IVR and conventional conditions when looking at different study outcomes, each comparison was examined across the five control criteria to determine if at least one of these criteria was explicitly not met (codes of no or likely no). If at least one control criterion was not met, regardless of whether another criterion was determined to be difficult to determine, the comparison was deemed \"confounded.\" If a comparison did not explicitly fail on any criterion but had at least one difficult to determine code, it was deemed \"confounding difficult to determine.\" Finally, if a comparison explicitly met all five criteria (codes of yes, likely yes, or not relevant), it was deemed \"not confounded.\" These grouping of comparisons were then compared against category 6 (i.e., learning outcome results) for an examination of how confounded the comparisons were when looking at different study outcomes. See **TABLE 5** for an example of how comparisons were determined to be confounded or not.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_8",
+          "subsection_index": 8,
+          "subsection_label": "Interrater Agreement",
+          "subsubsections": [],
+          "text": "There were two rounds of coding. In the first round, comparisons were coded according to categories 1, 2, 5, 8\u201311, S1, and S2. The third, fourth, fifth, sixth, and seventh authors each received a random number of articles to code across these categories. The co-first authors double coded each article under blinded conditions; the average agreement level for this first round of coding was 76.65%. Both co-first authors reviewed and resolved all discrepancies. With interrater agreement being lower than initially deemed acceptable (80% or higher), an independent research methodologist (see details on research methodologist in \"Acknowledgements\" section) coded all articles and compared his codes to the codes developed from the process described above. The average agreement level was 99.23%. The remaining discrepancies were reviewed and resolved by the co-first authors and the research methodologist.\n\nTo more thoroughly investigate the first research question, a second round of coding occurred wherein categories 3, 4, 6, 7, 12, and S3 were created and independently coded by the co-first authors under blinded conditions. The average agreement level was 90.60%. The remaining discrepancies were reviewed and resolved by these authors. As interrater agreement was deemed acceptable for this round of coding, the research methodologist was not brought in for coding of these additional categories.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_9",
+          "subsection_index": 9,
+          "subsection_label": "Data Analysis",
+          "subsubsections": [],
+          "text": "Frequency counts were determined for each code within the different coding categories. These frequencies were turned into a percentage of comparisons (out of 50) that received a particular code.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The complete pre-registered search strategy and screening process are available on the Open Science Framework (OSF) [^1]. The OSF pre-registration protocol follows the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines. The only PRISMA guidelines that were not incorporated were those outside the scope of the present review. A condensed version of our methodology is presented below.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "Foundational Details of IVR and Conventional Conditions in Service to Research Questions 1 and 2",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_6_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Category 1: Were All Features of the Conventional Condition Operationally Defined?",
+              "parent_subsection_id": "s_6_1",
+              "text": "The conventional condition had a complete operational definition in fewer than half of the comparisons (21 or 42.00%), a partial definition in 14 of the comparisons (28.00%), and no definition in 15 of the comparisons (30.00%). Therefore, 35 of the comparisons (70.00%) had at least a partial operational definition of the conventional condition.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_6_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Category 2: Were All Features of the IVR Condition Operationally Defined?",
+              "parent_subsection_id": "s_6_1",
+              "text": "The IVR condition had a complete operational definition in half of the comparisons (25 or 50.00%), a partial definition in 14 of the comparisons (28.00%), and no definition in 11 of the comparisons (22.00%). Therefore, 39 of the comparisons (78.00%) had at least a partial operational definition of the IVR condition.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_6_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Category 3: Did the Conventional Condition Receive Activities During the Lesson?",
+              "parent_subsection_id": "s_6_1",
+              "text": "The highest percentage of comparisons (23 or 46.00%) involved conventional conditions that did not involve participatory activities, with an additional nine (18.00%) that likely did not involve activities. Therefore, in 32 of the comparisons (64.00%), conventional conditions were coded as either no or likely no for involving activities. In these conditions, 18 were video slideshows/lectures, four were live lectures, two were lectures (format not specified), four were texts/readings, three were paper print-outs or images of the lesson, and one was projected diagrams. Only 10 of the comparisons (20.00%) had conventional conditions where participants received activities, and there were no comparisons that had these conditions coded as likely receiving activities. When the activities were explicitly named or described, they included, for example, self-explanations, lab exercises, item construction (e.g., a DNA molecule), and worksheets. Finally, in eight of the comparisons (16.00%), the conventional conditions were not labeled or described well enough to know whether the lesson involved activities.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_6_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Category 4: Did the IVR Condition Receive Activities During the Lesson?",
+              "parent_subsection_id": "s_6_1",
+              "text": "Unlike the conventional conditions, half of the comparisons (25 or 50.00%) involved IVR conditions that did involve participatory activities. When the activities were explicitly named/described, they included, for example, self-explanations, lab exercises, practice multiple-choice questions, class discussion, and worksheets. Approximately one-third of the comparisons (16 or 32.00%) had IVR conditions in which participants did not receive activities. In these conditions, 10 involved a passive, narrative tour through the lesson or a virtual lecture, and six had an added component where participants were able to interact with the virtual world given the immersion specifically afforded by IVR technology. These hands-on experiences were not specific activities to practice the content but did allow participants interact with the lesson using the IVR technology. For example, in [W3080093691], participants could touch and move red blood cells that they encountered during the narrated tour of the parts and functions of a blood vessel and cell. Finally, in nine of the comparisons (18.00%), the IVR conditions were not described well enough to know whether the lesson involved activities.",
+              "citations": [
+                "W3080093691"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_6_1_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "Category 5: Did the IVR Condition Involve Non-IVR Activities?",
+              "parent_subsection_id": "s_6_1",
+              "text": "Four of the IVR conditions (8.00%) involved activities that were completed outside of IVR. These included completing a worksheet, manipulating physical tools during a real-life task, engaging in a class discussion, and responding to questions asked by experimenter (i.e., providing oral self-explanations). Forty-two of the IVR conditions (84.00%) did not involve non-IVR activities, and four (8.00%) were difficult to determine for this category.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_6_1_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "Category 6: What Were the Learning Outcome Results of the Comparisons?",
+              "parent_subsection_id": "s_6_1",
+              "text": "In 12 of the comparisons (24.00%), the IVR condition was found to be statistically significantly better than the conventional condition. Only one comparison (2.00%) resulted in the conventional condition having statistically significantly better learning outcomes than the IVR condition. The most common outcome (27 or 54.00%) was the conditions resulting in non-statistically significant learning differences (i.e., they \"tied\"). The results were mixed for seven of the comparisons (14.00%) with different outcomes depending on which of the dependent learning measures were examined. Finally, the results were inconclusive in three of the comparisons (6.00%). Overall, there was not strong evidence that IVR was more or less effective than traditional media in promoting learning of STEM content.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "Research Question 1: Are the Instructional Conditions in IVR Comparison Studies Controlled on Instructional Method and Content?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_6_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Category 7: Were the Conditions Controlled on Whether the Lessons Included Activities?",
+              "parent_subsection_id": "s_6_2",
+              "text": "In 13 of the comparisons (26.00%), there was not enough information provided in the article to determine if the conditions were controlled on participatory activities. For those articles that did provide enough information: over one-third of all comparisons (18 or 36.00%) involved IVR and conventional conditions that were controlled on activities, with an additional two comparisons (4.00%) demonstrating that this variable was likely controlled between conditions (total: 20 or 40.00%). The percentage of comparisons where the involvement of activities was not controlled between conditions was 14 (28.00%), with an additional three comparisons (6.00%) demonstrating that activities were likely not controlled between conditions (total: 17 or 34.00%).\n\nFor the 17 comparisons where activities were not controlled (or likely not controlled) between conditions, the IVR condition seemed to provide an advantage in terms of learning in 14 of them. These advantages consisted of the IVR condition having learning activities when the conventional condition did not (11 of the 14) and the IVR condition having a confound in the activity that seemed to favor it over the conventional condition (three of the 14). For example, in [W2803423315], participants in the IVR condition had to correctly complete each component of the DNA activity before they could progress but their peers in the conventional, hands-on activity condition did not receive this type of mastery criterion/feedback during their DNA activity.\n\nThe IVR condition did not seem to have an advantage in terms of learning in three of these 17 comparisons where activities were not controlled. In these three comparisons, there was a confound related to the activities that was difficult to determine whether it gave one of the two conditions an advantage over the other. For example, in [W2994691988], the participants in the conventional condition worked in groups of two on the lab exercise whereas their peers in the IVR condition worked one-on-one with a virtual teaching assistant (TA) who provided assistance as needed. It is difficult to say whether working alone with TA supports or working as a group provided a potential learning advantage to one condition versus another. However, this difference could introduce a confound and create an advantage for one group over another. Similarly, in [UNMAPPED:44], participants in the conventional condition worked with small groups during the lesson whereas those in the IVR condition participated in the simulation individually and did not interact with peers. It is also difficult to say whether the individualized VR instruction was more or less advantageous than the interaction with group members afforded in the conventional condition; this methodological difference created a confound nonetheless (a limitation noted in their article).",
+              "citations": [
+                "W2803423315",
+                "W2994691988"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "44"
+              ]
+            },
+            {
+              "subsubsection_id": "s_6_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Category 8: Were Any Non-IVR Activities Controlled Between Conditions?",
+              "parent_subsection_id": "s_6_2",
+              "text": "In 42 of the comparisons (84.00%), the IVR condition did not have non-IVR activities and was given a not relevant code. Four of the comparisons (8.00%) involved at least one condition that was not described well enough to know if conditions were controlled on non-IVR activities. In three comparisons (6.00%), non-IVR activities were controlled between conditions. Finally, one comparison (2.00%) did not provide the conventional condition with the same kinds of activities that IVR participants completed outside of IVR.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_6_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Category 9: Did Both Conditions Receive the Same Amount of Practice with the Dependent Measure?",
+              "parent_subsection_id": "s_6_2",
+              "text": "In the majority of comparisons (32 or 64.00%), both conditions were given the same amount of practice with the dependent measure. However, in six of the comparisons (12.00%), one condition was given more practice with the dependent measure than the other condition. Interestingly, it was always the IVR condition that received more practice with the dependent measure than the conventional condition. In 12 of the comparisons (24.00%), the description of the conditions was too ambiguous to determine whether both conditions received the same amount of practice with the dependent measure.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_6_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Category 10: Was the Time Spent Learning the Content Controlled Between Conditions?",
+              "parent_subsection_id": "s_6_2",
+              "text": "Over half of the comparisons (28 or 56.00%) did demonstrate that the time spent with the learning materials was controlled between conditions, with one additional comparison (2.00%) coded as a \"likely yes\" for time being controlled. There were no comparisons where the time spent with the learning materials was not controlled between conditions; however, seven of the comparisons (14.00%) were coded as a likely no for time being controlled. Finally, 14 of the comparisons (28.00%) did not include a specification as to the length of time spent with the learning material across both conditions.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_6_2_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "Category 11: Was the Content of the Lesson Matched?",
+              "parent_subsection_id": "s_6_2",
+              "text": "The content was matched in 33 (66.00%) of the comparisons. However, 16 of the comparisons (32.00%) did not involve enough information to determine if the content taught was the same between the two conditions. There was only one comparison (2.00%) in which the content was not matched between the IVR and conventional conditions.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_6_2_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "Category 12: What is the Degree of Control Across Five Control Criteria?",
+              "parent_subsection_id": "s_6_2",
+              "text": "As previously discussed, there were two approaches to our examination of the degree of control across the five control criteria. In the first approach, difficult to determine codes were counted as not meeting the criterion. In the second approach, difficult to determine codes for any of the criteria led the comparison to be counted as degree of control difficult to determine. **FIGURE 2** shows the number of comparisons that fit within each degree of control for the first approach, and **FIGURE 3** shows the number of comparisons that fit within each degree of control for the second approach. The results of each approach are presented below.\n\n**Approach 1** For the degree of control across comparisons, 13 (26.00%) were fully controlled, 11 (22.00%) were mostly controlled, eight (16.00%) were somewhat controlled comparisons, 10 (20.00%) somewhat not controlled comparisons, six (12.00%) were mostly not controlled, and two (4.00%) were fully not controlled.\n\n**Approach 2** For the degree of control across comparisons, 13 (26.00%) were fully controlled, six (12.00%) were mostly controlled, one (2.00%) was somewhat controlled, three (6.00%) were somewhat not controlled, zero (0.00%) were mostly not controlled, and zero (0.00%) were fully not controlled. Finally, the number of degree of control difficult to determine comparisons was 27 (54.00%).",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "Research Question 2: When Looking at Different Study Outcomes, How Confounded Are The Comparisons Between IVR and Conventional Conditions?",
+          "subsubsections": [],
+          "text": "As previously stated in the \"Method\" section, for the purposes of answering research question 2, a comparison needed to explicitly fail on at least one of the five criteria to be deemed \"confounded.\" There were 20 (40.00%) confounded comparisons in total. How confounded the comparisons were between IVR and conventional conditions when looking at different study outcomes are presented below and shown in **FIGURE 4**.\n\n**IVR better:** For those 12 comparisons where the IVR condition resulted in statistically significantly better learning across all measures, five (41.67%) were confounded, one (8.33%) was not confounded, and six (50.00%) were difficult to determine as to whether they were confounded. **Conventional better:** There was only one comparison where the conventional condition was better across all measures, and it was confounded. **IVR and conventional tied:** For those 27 comparisons where the IVR and conventional conditions tied for all measures (i.e., were not statistically significantly different on learning outcomes, six (22.22%) were confounded, 11 (40.74%) were not confounded, and 10 (37.04%) were difficult to determine as to if they were confounded. **Mixed:** For those seven comparisons where the results were mixed, six (85.71%) were confounded, one (14.29%) was not confounded, and zero (0.00%) were difficult to determine as to if they were confounded. **Inconclusive:** For those three comparisons where the results were inconclusive (either because no inferential statistics were reported or the statistics were questionable), two (66.66%) were confounded, zero (0.00%) were not confounded, and one (33.33%) was difficult to determine as to if it was confounded.\n\nOverall, we conclude that it is difficult to gather a clear picture of the benefits or pitfalls of IVR when much of the literature is confounded and/or lacks sufficient information to determine if the conditions are controlled on instructional methods and content.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "**TABLE 1** shows the number (and percentage) of experimental comparisons falling into each coding designation for each of the 12 primary coding categories (for a breakdown of results in the supplementary categories, see Table S1 in supplemental material). Results for each category follow.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_7_1",
+          "subsection_index": 1,
+          "subsection_label": "Research Question 1: Are the Instructional Conditions in IVR Comparison Studies Controlled on Instructional Method and Content?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_7_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Degree of Control",
+              "parent_subsection_id": "s_7_1",
+              "text": "There were five criteria on which we assessed the degree of control between IVR and conventional conditions in teaching STEM education. These criteria included controlling participatory activities, non-IVR activities, practice with the dependent measure, time spent learning the material, and the content of the lessons. For both the first and second approach to assessing the degree of control between conditions, we found that only 26% of comparisons were fully controlled\u2014that is, the majority of comparisons did not meet all five control criteria. With the first approach where all five criteria needed to be explicitly met, 32 comparisons (64%) met three or more of the criteria and 18 comparisons (36%) met two or fewer. Therefore, a high percentage of articles had more control issues than not, leading to questions surrounding which features of the IVR conditions were attributable to the results of the study.\n\nWith the second approach, when any comparison received a difficult to determine code for one or more of the control criteria, it was labeled degree of control difficult to determine. With this approach, 20 comparisons (40%) met three or more of the criteria, three comparisons (6%) met two or fewer, and 27 comparisons (54%) lacked information for at least one of the criteria to determine the exact degree of control. This second approach lends insight into the number of comparisons that suffered from a lack of sufficient detail in the article to determine whether it was fully not controlled, mostly not controlled, somewhat not controlled, somewhat controlled, or mostly controlled. We therefore urge researchers to include and journal editors to require sufficient methodological details in IVR comparison papers.\n\nOverall, the main findings are that just over one-quarter of the IVR comparison studies we reviewed were fully controlled across all five of our criteria and just over half lacked sufficient information on at least one of the criteria. We conclude that much work needs to be done to improve the methodological quality and reporting of media comparison studies involving IVR in STEM disciplines.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Frequent Confounds",
+              "parent_subsection_id": "s_7_1",
+              "text": "When looking within each of the five criteria specifically, the number of comparisons that met each control criterion varied substantially. The criterion where issues were most glaring was whether the use of activities in each condition was held constant. In fewer than half of the 50 comparisons, activities were controlled (or likely controlled) between conditions whereas approximately one-third of comparisons were not controlled (or likely not controlled) on this variable. When conditions differ on the presence or absence of student engagement via participatory activities, the instructional methods and instructional media become confounded. These confounds make it difficult to deduce why one condition outperformed (or did not outperform) the other. For example, in a study by [W2955556477], participants in the IVR condition received voice-over guidance, hands-on tasks, multiple-choice questions, and feedback (including elaboration) whereas those in the conventional condition (text condition) received a 14-page safety manual without any of these same instructional methods. Thus, not only did the use of IVR differ between conditions but so did the instructional methods used in each condition. As such, drawing conclusions about the unique benefits that IVR, as compared to conventional instructional methods, has for teaching STEM content is difficult. As noted in the meta-analysis by [W4324358715] and systematic review by [W4391782664], virtual reality conditions that included active learning techniques showed stronger effects on learning than when conditions were more passive. Therefore, it may be the case that these active learning techniques are the key ingredient for improved learning, regardless of the media that is used.\n\nIt is important to note that any active engagement that was unique to IVR conditions was not considered a confound of participatory activities. For example, allowing participants to touch and move red blood cells that they encountered during a narrated tour of the parts and functions of a blood vessel and cell in the IVR environment (see [W3080093691]) was a unique affordance of the medium and was not counted as a confound. However, active learning strategies, particularly those that allowed students to practice or further encode the content, which were not unique to IVR, were problematic in confounding the instructional methods with the instructional media. Active learning strategies are not a unique feature of IVR as many conventional learning environments include the same types of strategies to promote learning (see [W2010593734, W4388342847, W2794769810] for discussions of the frequency of active learning in conventional STEM classrooms).",
+              "citations": [
+                "W2955556477",
+                "W4324358715",
+                "W4391782664",
+                "W3080093691",
+                "W2010593734",
+                "W4388342847",
+                "W2794769810"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Occasional Confounds",
+              "parent_subsection_id": "s_7_1",
+              "text": "Although not as problematic as the activity confound, there were differences between conditions on the amount of time participants spent learning the content of the lesson. We found that more than half of comparisons were controlled (or likely controlled) on the time spent learning the content whereas 14% were likely not controlled on this variable. Although the percentage of comparisons that had this confound was on the lower side, it is unclear how many of the 14 comparisons that did not provide a lesson duration had an issue with this control criterion. In order to make sound claims about the benefits of IVR, it is essential that comparison groups receive an equal amount of time engaging with the content. As such, the presence of this confound is problematic in that it is difficult to determine if it was the independent variable that caused the results or a difference in time-on-task, exposure to class content, or lesson efficiency due to more design effort in one of the conditions.\n\nAnother confound that occurred occasionally was related to how much practice each group received with the dependent measure. We found that in just under two-thirds of comparisons, both conditions were given the same amount of practice with the dependent measure; however, 12% of comparisons were not controlled on this variable. Interestingly, it was always the IVR condition that received more practice with the dependent measure than the conventional condition. Although the percentage of comparisons that had this confound was on the smaller side, it is unclear how many of the 12 comparisons that did not provide sufficient information about what occurred in the conditions had an issue with this control criterion. However, the mere presence of this confound is problematic in that it provides students with multiple opportunities to retrieve information from memory or to familiarize themselves with the content and format of the test.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Infrequent Confounds",
+              "parent_subsection_id": "s_7_1",
+              "text": "Not matching content between conditions was a confound that was scarcely seen within the comparisons examined in our review. More specifically, the content of the lessons was matched in just under two-thirds of the comparisons and was not matched in only one comparison. Although it is positive that we only found one instance of content not being matched, there were 16 comparisons that did not involve enough information to determine if the content taught was the same between the two conditions. Without specific details provided to ensure both conditions received identical content, it is difficult to confirm it was not differences in what students learned that affected the outcome of the study. More specifically, if the IVR condition is taught different content than the conventional condition, one cannot make valid comparisons on an assessment of their learning outcomes.\n\nFinally, the majority of IVR conditions did not involve activities that occurred outside of IVR, meaning that any activity provided to students was conducted within the IVR environment. However, for those four comparisons that did involve non-IVR activities in the IVR condition, one did not provide the conventional condition with the same activities. If an IVR condition includes non-IVR activities and the conventional condition does not, it becomes difficult to strictly point to the immersive lesson as the causal factor. Although this confound only affected one out of four comparisons, it was still present in the literature base we reviewed and thus needs to be considered when designing future research to investigate the use of IVR in STEM education.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_2",
+          "subsection_index": 2,
+          "subsection_label": "Research Question 2: When Looking at Different Study Outcomes, How Confounded Are The Comparisons Between IVR and Conventional Conditions?",
+          "subsubsections": [],
+          "text": "When looking at the outcomes of the articles included in our systematic review, the IVR condition was most often found to be better for student learning when comparisons lacked sufficient information to determine if a confound was present or not (i.e., 50.00% of comparisons where IVR was better). When results were tied between conditions, the comparisons were most often found to not have a confound (i.e., 40.74%). In fact, the outcome of IVR and conventional conditions leading to similar learning was the only outcome in which there were more studies that were not confounded than were confounded. When results were mixed based on different outcomes examined, the comparisons were most often found to be confounded (i.e., 85.71%). The results seem to suggest that the way in which the conditions have been designed and the attention given to designing studies without confounds between conditions may play a role in the outcomes of the studies\u2014a major finding of this review. However, given that confounds were present across all learning outcomes, more rigorous, controlled research is needed to shed light on the effectiveness of IVR as compared to conventional instruction.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_3",
+          "subsection_index": 3,
+          "subsection_label": "Recommendations Moving Forward",
+          "subsubsections": [],
+          "text": "Given the common methodological issues identified in our systematic review, we offer three primary recommendations to researchers with the aim of improving the value of media comparison research involving IVR and STEM content.\n\nFirst, we recommend researchers and journal editors ensure the IVR and conventional conditions in each study are well described, with specific methods and procedures outlined clearly. As demonstrated throughout the findings of this systematic review, many articles presented incomplete information concerning the way in which their conditions were designed and implemented. In fact, only 42% of comparisons involved conventional conditions that had a complete operational definition and only 50% of comparisons involved IVR conditions that had a complete operational definition. Without detailed knowledge of what occurred in each condition, it becomes more difficult to determine how well variables were controlled in each study. By providing more thorough descriptions of the conditions in each experiment and outlining all critical features of each instructional intervention, readers will be better able to compare between conditions and identify any potential limitations of the study.\n\nSecond, researchers need to intentionally design both the IVR and conventional conditions in media comparison research according to the research question of interest. For example, if the central question of interest is whether immersing students in a virtual world promotes greater learning, the only difference that should arise between conditions is immersion. Any other differences between the conditions (e.g., activities, time on task) would serve as confounds and prevent the researchers from drawing conclusions about the use of immersion, specifically, in learning. Given that research questions about IVR can have real-world implications (e.g., how content is taught in classrooms), it is imperative to determine the causal factor driving the results. Due to the fact that researchers, educators, and technology designers read and draw conclusions from research published in education journals, educational psychology journals, and educational technology journals, authors should emphasize what can and cannot be drawn from studies conducted in this area, particularly with an eye towards potential confounds in the research design.\n\nThird, all critical variables outside of the independent variable, such as the ones presented in this paper, need to be controlled between conditions in order to draw causal conclusions regarding the impact of a particular medium or instructional method. Controlling variables is a basic tenant of experimental design but continues to be a persistent problem present in the media comparison research we reviewed.\n\nThe literature on the use of IVR in STEM education consists of a high percentage of comparisons between conventional and IVR conditions that are confounded. To draw conclusions about the unique affordances of IVR in STEM education, studies need to control and isolate variables such as those evaluated in this paper. This will allow for a better understanding of when and how IVR can serve as an effective instructional tool in STEM education and when it cannot.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_4",
+          "subsection_index": 4,
+          "subsection_label": "Limitations",
+          "subsubsections": [],
+          "text": "There were three potential limitations to the present review. First, the search strategy was limited to IVR conditions that were exclusively IVR and conventional conditions that were exclusively non-IVR. The purpose of this decision was to compare the primary method of teaching new content in IVR versus in another more traditionally used medium. The results of the present review may differ when the main learning event(s) takes place in the real-world and IVR is used as an active learning tool. Second, the search strategy was limited to studies involving STEM content, and the findings may not generalize to lessons involving non-STEM content. Third, extensive steps were taken to ensure the accuracy of the coding. Although the final levels of agreement were at or above 80%, it is possible that other researchers could code articles differently than the team of the present review. Similarly, other research teams may believe other criteria are important to include when asking a similar question. Therefore, the results and conclusions should be interpreted as based on our assessment of the articles which may or may not be representative of how other researchers would analyze them.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The present review was conducted to examine the extent to which the instructional methods and content were controlled between the instructional conditions in IVR comparison studies involving STEM content. Given the numerous methodological problems we identified in the current research base on media comparison studies involving IVR, our overarching goal is to improve the quality of media comparison research in the field of educational psychology and educational technology, with IVR comparison studies as an example. Results of our critical analysis are discussed according to the two primary research questions.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The media comparison literature involving IVR in STEM education contains a number of issues that need to be addressed if we are to determine the extent to which IVR is effective for STEM learning. Consider that just over one-fourth of comparisons involved conditions that were deemed \"fully controlled\" on five control criteria related to instructional method and content, and almost half of all comparisons had at least one confound related to the instructional methods and content. When confounded, IVR conditions were more likely to involve activities than the conventional condition and involve more practice with the dependent measure(s), presenting a potential confound(s) between the medium and the methods. Finally, a major concern of the reviewed literature base was that many articles did not present enough relevant information to determine whether conditions were controlled on critical variables. The present review suggests that future research should carefully address issues related to the design of conventional and IVR conditions in media comparison studies to gain a better understanding of the effects of different IVR and conventional interventions and move toward being able to provide more practical implementation recommendations.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    }
+  ],
+  "tables_file": "W4400302907_tables.md"
+}

@@ -1,0 +1,524 @@
+{
+  "id": "W2967267206",
+  "metadata": {
+    "title": "Blockchain Applications in Supply Chains, Transport and Logistics: A Systematic Review of the Literature",
+    "n_sections": 6,
+    "n_subsections": 13,
+    "n_subsubsections": 10,
+    "n_tables": 2
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Since the invention of blockchain and the introduction of Bitcoin in 2008 by Nakamoto [W4248175462], this decentralised and trustless peer-to-peer (P2P) technology has become one of the major transformative forces in business and is expected to be widely adopted by various industry and service sectors [W4381547703]. Recent surveys of industry experts and supply chain and logistics managers show an inclination to adopt blockchain technology, especially in the context of supply chains [UNMAPPED:3] and transport and logistics [UNMAPPED:4]; however, we are still in the early stages of unlocking the true potential of blockchain technology in global supply chains, and logistics and transport operations. While there is still some hype surrounding the application of blockchains, and while we might be some years away from the actual commercialisation of blockchains, the future for this technology looks promising [W4386571993].\n\nAcademic papers on the topic of blockchains in supply chain, logistics and transport journals remain scarce. However, with increasing interest in the topic, it is very likely that in the coming years we will witness a spike in the quantity of blockchain publications offering various applications of this technology for supply chains, logistics and transport. This movement has already begun, as evidenced by a number of papers published recently that provide a holistic view on the future of blockchain technology for supply chain management. For example, Kshetri [W2773929027] uses a multiple case study method to investigate the impact of the blockchain on various objectives of supply chain management by providing successful industry cases as examples for each objective. Saberi et al. [W2898069736] explore the main barriers to adopting blockchains and especially smart contracts to fulfil sustainable supply chain management goals. Finally, Babich and Hilary [W3022085691] provide a comprehensive review of blockchain studies in operations and supply chain management and the potential application of blockchains in this field, including inventory management, data aggregation, contracting, supply chain risk management and sustainable supply chain management, to name a few. In addition to the aforementioned academic publications, industry and thought leadership papers published by top-tier consulting firms such as McKinsey [UNMAPPED:9], Deloitte [UNMAPPED:3, UNMAPPED:10] and Ernst and Young [W4362237983] are paving the way for academics and professionals into the world of blockchains.\n\nBlockchains and other advanced technologies such as the Internet of Things (IoT) and artificial intelligence are predicted to rapidly transform supply chains, transport and logistics by 2023 [W2789444712, W2897753864, UNMAPPED:12]. While there are a number of use cases already existing in the industry that reveal the hidden transformative powers of blockchain technology such as increased supply chain transparency, freight tracking, carrier onboarding and Mobility as a Service [W3022085691, UNMAPPED:4, UNMAPPED:15], this paper aims to contribute to these attempts by reviewing the latest academic debates, industry use cases and possible future trends that might emerge in this domain.\n\nTo achieve this objective, we have made an attempt to answer the following research questions: (i) What is the latest progress made by the scientific literature to examine the adoption and implementation of blockchain technology in supply chains, logistics and transport operations? (ii) What are some of the key knowledge areas in supply chain, logistics and transport studies that blockchains can contribute to? (iii) What are some of the key research questions to be addressed in each knowledge area? (iv) Which future applications and research streams can be envisaged for blockchains in supply chains and logistics aside from the current use cases?\n\nThe present paper is organised as follows. First, we provide an overview of blockchain technology and its main features. Next, we discuss the method we used to identify relevant academic publications that discuss the application of blockchains in supply chains, transport or logistics. We use an inductive approach to reveal the main research streams [W2149604183, W2016123827, W2111628838], taking an iterative approach to categorise the main research clusters arising from our analyses, and elaborate on them by accessing additional relevant resources and use cases. To identify the main clusters in our identified pool of articles, we conduct co-citation network analysis and, using the clusters of articles appearing from the co-citation analysis, we discuss the main themes in each cluster and their relevance to the literature and future research in this domain. We conclude by providing implications for future research and applications of blockchains in supply chains, logistics and transport.",
+      "citations": [
+        "W4248175462",
+        "W4381547703",
+        "W4386571993",
+        "W2773929027",
+        "W2898069736",
+        "W3022085691",
+        "W4362237983"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "3",
+        "4",
+        "9",
+        "10",
+        "15"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. How Do Blockchains Work?",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Blockchains: Key Features",
+          "subsubsections": [],
+          "text": "Blockchains are associated with Bitcoin and other cryptocurrencies such as Ethereum and Ripple. However, it should be emphasised that cryptocurrencies are a by-product of blockchains and blockchains are able to exist independently of any cryptocurrencies [UNMAPPED:19]. There are numerous sources that explain how blockchains work in simple technical language [W4381547703, W2890547303, W4243906601]. Here we explain the technology behind blockchains and the main features of blockchains as a basis for assessing applications in supply chains, logistics and transport.\n\nBlockchains are ledgers that record transactions in a trustless environment and are protected by the science of cryptography. A finite set of transactions is placed on each block, which is protected by digital signatures and cryptographic hash functions. Using the hash of the immediate preceding block, the next block makes a link with this preceding block. With blockchain technology there is no need for a third party to verify the transactions; indeed, this verification is decentralised and performed by the nodes connected to each block. A node is a client on the blockchain that has a copy of the same blockchain and can add data to the blockchain. To create a valid digital signature for each user on blockchain that cannot be forged, each user is given a public key and a private key. Christidis and Devetsikiotis [W2392113277] provide further details on how users of blockchains interact and reach consensus. Some of the main features of blockchains are that they are immutable, transparent, secure, decentralised, irreversible and based on consensus [W3022085691]. These features provide a range of advantages and some disadvantages for the application of blockchains, which we will discuss in the following sections.\n\nIn addition to the above, blockchains offer a number of unique opportunities such as the use of smart contracts and tokenisation of assets. Smart contracts were first proposed in 1994 [W4252918910, UNMAPPED:24] and later became popular as a built-in feature on the NXT and Ethereum blockchains. The Ethereum blockchain specifically provides the means to develop customised and smart contracts and is by far the most commonly used platform for smart contracts. Smart contracts are protocols on blockchain that are executed automatically by machine if the terms of the contract are met [W2757509496]. Smart contracts could be the most promising feature of blockchains as they automate transfers and payments of currency and other assets [W4381547703] and on paper they can replace any kind of financial agreement [UNMAPPED:26]. Nevertheless, smart contracts have their share of inadequacies and weaknesses, including the need for an intermediary in the real world for external validation [W3022085691] and security issues and theft [UNMAPPED:26] that make them a high-risk choice. One specific application of smart contracts is tokens that represent tokenised assets or utilities that can be traded on blockchains. For decentralised apps (DAPPs) on a blockchain like Ethereum, tokens bought by Ether (the cryptocurrency of the Ethereum blockchain) can be the means for the owner of those tokens to access a certain type of service or asset such as rights to the production or warehousing capacity of a supplier for a given period of time. More information on this can be found in Manoj [UNMAPPED:27].",
+          "citations": [
+            "W4381547703",
+            "W2890547303",
+            "W4243906601",
+            "W2392113277",
+            "W3022085691",
+            "W4252918910",
+            "W2757509496"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "19",
+            "24",
+            "26",
+            "27"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Blockchain: Implementation, Values and Impact",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.2.1. Implementation",
+              "parent_subsection_id": "s_2_2",
+              "text": "Blockchains guarantee a single version of truth in a trustless environment across various entities or agents who have access to this decentralised ledger [W2904264105]. A full list of IT blockchain artifacts (e.g., distributed ledgers, consensus mechanisms, encryption mechanisms, smart contracts and immutable audit trails) and their descriptions are included in Du et al. [W2899766515]. The literature on the actual implementation of blockchain technology in industry and its implications/limitations is still scarce [W2899766515, W2768761455]. Thus, insights from the success and failure of blockchain implementation projects are limited. However, it should be noted that, so far, reported failure rates of such projects are high and in 2016, out of 26,000 blockchain projects, only 8% were reported to be successful [UNMAPPED:31].\n\nBlockchain technology has so far been envisaged to be implemented in machine-to-machine coordination through IoT [W2392113277] or to create decentralised electronic marketplaces [W2778126034], to name a few applications. Some of the proposed advantages of implementing blockchain technology in organisations and supply networks include increased speed of data and financial transactions, improved security of shared data, digitised assets and a reduced number of intermediaries mainly due to enablers such as smart contracts. Smart contracts specifically make execution of pieces of software on the blockchain network possible once the conditions mentioned on the software are met [UNMAPPED:33]. Thus, smart contracts enable autonomous transactions and the trade of digital assets or rights to a tangible or intangible asset in the form of tokens, implemented through autonomous contracts [UNMAPPED:24].\n\nConsidering the advantages of implementing blockchain projects, including automating transactions and contracts and reducing intermediaries, global supply networks and the logistics operations with multiple agents within them are deemed to be the best use case of blockchains [W2899766515, UNMAPPED:3]. Du et al. [W2899766515] suggest a number of decision rules that should be considered before implementing blockchain projects. These are: (i) considering incremental changes rather than radical disruptions to operations by implementation teams; (ii) avoiding use cases with large amounts of data and transactions as this will slow down the blockchain and reduce its efficiency; and (iii) building a sandbox for pilot implementing and understanding the risks of blockchain projects.",
+              "citations": [
+                "W2904264105",
+                "W2899766515",
+                "W2768761455",
+                "W2392113277",
+                "W2778126034"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "31",
+                "33",
+                "24",
+                "3"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.2.2. Values and Impact",
+              "parent_subsection_id": "s_2_2",
+              "text": "Blockchains impede data and transaction frauds since all transactions on a block are continuously validated. In addition, the use of smart contracts with no centralised entity (e.g., banks or logistics service providers) to control operations, increases the transparency of transactions and therefore trust among agents on the blockchain network [W2804990926]. Blockchains can help protect both digital and information assets from being copied, stolen or infringed, thereby adding to the trust levels among agents on the blockchain [W2768761455, W2885714782]. The increased transparency and traceability enabled by implementing blockchains can help resolve disputes by following the audit trail of transactions or by ensuring that terms mentioned in contracts are fully implemented once all the conditions on smart contracts have been met [W2781983157, W2911582145].\n\nUse of blockchains promises improved regulatory compliance, increased speed in transactions and local and international exchanges, and digitised assets for ease of trade, especially in global supply networks [UNMAPPED:38]. Furthermore, the by-product of blockchains, cryptocurrencies, creates opportunities to facilitate P2P transactions and money transfer in a global trade environment [W2804990926]. The combination of asset digitisation, smart contracts and cryptocurrencies creates a trade environment free of intermediaries with full transparency and trust among any group of stakeholders involved in the trade.",
+              "citations": [
+                "W2804990926",
+                "W2768761455",
+                "W2885714782",
+                "W2781983157",
+                "W2911582145"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "38"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Method",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Source Identification and Selection",
+          "subsubsections": [],
+          "text": "Given the scarcity of the literature and our intention to achieve maximum coverage of the current academic publications on the topic, we initially opted for both Scopus and ISI Web of Knowledge to search for relevant journal publications. To conduct the source search, we used an advanced search tool and two-level keywords with level one consisting of blockchain, distributed ledger and smart contract, while level two included supply chain, logistics and transport. The search continued until the end of October 2018.\n\nThe Web of Knowledge title search resulted in 61 records (38 journal articles) and the topic search resulted in 20 records (14 journal articles) with 10 out of 14 journal articles already appearing in the title search. The title, abstract and keywords search on Scopus resulted in 132 records (48 journal articles). A comparison of the results of the two search engines enabled us to conclude that the Scopus search results completely covered the Web of Knowledge search outcomes and introduced more academic resources. Therefore, we used the Scopus search results to conduct our bibliometric and network analysis.\n\nNext we refined the 132 results and only chose journal articles that included article, article in press and review articles (a total of 48 journal articles). To ensure the relevance of the 48 articles to the blockchain and supply chain, logistics and transport studies, each of the co-authors independently reviewed the articles to filter out irrelevant articles. Figure 1 shows the word cloud extracted from the index keywords of the 48 articles.\n\n**FIGURE 1.** Word cloud of the most frequent keywords used in the pool of 48 papers",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Source Evaluation: Bibliometric Analysis",
+          "subsubsections": [],
+          "text": "The initial bibliometric analysis of the 48 articles showed that the publication frequency was distributed between 2016 (two articles), 2017 (25 articles) and (October) 2018 (21 articles), a significant increase in the frequency of publications and interest in this topic since 2017. The authors with the highest number of publications were Angappa Gunasekaran [W2897753864, W2890784719], Joseph Sarkis [W2898069736, W2897961228], Mahtab Kouhizadeh [W2898069736, W2897961228] and Nil Kshetri [W2773929027, W2758039286, W2746553616]. The other authors had only one publication each in this area and could not be classified as prolific. The United States (15 articles) and China (10 articles) have the highest rate of publication so far with South Korea and the United Kingdom following with four publications each. The three most cited articles were Hofmann and R\u00fcsch [W2607075461], Kshetri [W2746553616] and Sharma, Moon, and Park [W2731079083]. The *International Journal of Production Research* with five publications contained the highest number of publications. The remaining journals with two or more publications included *Intelligent Systems in Accounting, Finance and Management* (three articles), *IEEE Access* (two articles), *IEEE Communications Magazine* (two articles) and *International Journal of Environmental Research and Public Health* (two articles). While the bibliometric data and their frequency are not as significant as more established fields of research in supply chains, logistics and transport, by conducting co-citation analysis we aim to shine some light on the main themes and topics that were covered in the 48 articles.",
+          "citations": [
+            "W2897753864",
+            "W2890784719",
+            "W2898069736",
+            "W2897961228",
+            "W2773929027",
+            "W2758039286",
+            "W2746553616",
+            "W2607075461",
+            "W2731079083"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Source Analysis: Co-Citation Analysis",
+          "subsubsections": [],
+          "text": "There are multiple ways of assessing similarities and extracting themes in scholarly literature, and each has its advantages and disadvantages [W1975107573, W4255497883]. Some of the main tools adopted by operations and supply chain management scholars to this end include citation analysis, co-citation analysis and bibliographic coupling. Co-citation analysis in particular has become the preferred and most common method for scholarly network analysis [W1728272581, W2769593477, W2932270818, W2514112036, W2885251002, W2039393712]. Moreover, it has been found that co-citation analysis provides a better coverage of the literature for clustering analysis, and in terms of accuracy of outcomes, is very close to bibliographic coupling [W4255497883]. In fact, it has been shown that bibliographic and co-citation networks are very similar [W1975107573]. Thus, given the caveats of citation analysis [W2137174507] and its diminishing application in the academic literature, we opted for co-citation analysis to identify the main themes appearing in the field of blockchains and supply chains, transport and logistics. Two articles are co-cited if they are referenced by the same article [W2005207065]. The main idea behind co-citation analysis is that as the frequency of the citations of the same two articles increases in a pool of pre-selected articles, the likelihood of the similarity in their topics increases as well [W2530004744]. If two articles are co-cited more frequently in a pool of articles, it is more likely that they will end up in the same cluster due to a stronger link between them [W2047940964, W2963978788]. Thus, each cluster represents a set of articles that has a strong two-by-two connection with each other and weaker connections with articles from other clusters.\n\nTo conduct the co-citation analysis, we used the Sci\u00b2 Tool [W4250479618] and Gephi 0.9.1\u00b9 software packages for graph network analysis and visualisation of the co-citation network. We first exported the CSV format of the 48 articles we found from Scopus to Sci\u00b2 Tool and conducted the co-citation analysis. The co-citation network was strongly connected and had 1,327 nodes, which represents the total number of references for all 48 articles. The network also had 34,004 edges which represent the number of times any two articles were co-cited. Next, we used Gephi to visualise the co-citation network. To develop meaningful clusters that correspond to a specific theme in the co-citation network, we first had to filter the network and limit the in-degree feature of the network to a minimum threshold to eliminate isolated nodes (i.e., references that were not co-cited) or weakly connected nodes (i.e., references that were weakly connected to the network due to low co-citation frequency). Next we conducted a modularity analysis to assign the nodes to clusters. The modularity index can take any number between -1 and +1, which represents the strength of links within and between clusters [W1965746216, W1965746216]. The modularity index of our co-citation network was 0.649, which indicates a strong connection between nodes within clusters but not a strong connection between each cluster. Thus, the modularity index implies distinguishable themes in each cluster. Four main clusters emerged from our co-citation and modularity analysis. By using the Gephi layout options we sorted and colour-coded the four clusters. Figure 2 shows the whole co-citation network and each cluster, respectively. To assign a theme to each cluster, each co-author independently reviewed the articles within each cluster and suggested a theme. Usually each cluster has a variety of themes, but one theme is dominant and determines the overall direction of the cluster. Thus, after several discussions, the authors agreed on the dominant themes for each cluster as follows: Technology (*n* = 164 resources), Trust (*n* = 91 resources), Trade (*n* = 85 resources) and Traceability/Transparency (*n* = 85 resources), which we named 'the 4Ts' for brevity. The proposed sequence of the clusters is based on the frequency of resources in each cluster. Most resources in the first cluster use keywords such as IoT or RFID as well as blockchain or supply chain in their title or index keywords (if the resource is a journal article). Since IoT and RFID imply the use of sensors technology, we labelled this cluster Technology. Most resources in the second cluster use keywords such as cyber attacks, cyber threats, cyber security and trust. Since cyber security issues can adversely impact trust levels in supply chain and logistics networks, and blockchains can help alleviate this issue, we labelled this cluster Trust. Most resources in the third cluster use keywords such as trade, Bitcoin, cryptocurrency and smart contracts. After a closer examination of the main theme of the resources in this cluster, we labelled it Trade. The main theme of the fourth cluster is sustainability and transparency in supply networks. Looking closely at the resources included in this cluster, there are many discussions revolving around blockchains ensuring the sustainable procurement of goods by increasing traceability of inventory data. This, in turn, increases the transparency of operations for both supply chain partners as well as end customers. Therefore, we labelled this cluster Traceability/Transparency. Section 4 provides more in-depth discussions on each cluster and their implications for blockchain applications in supply chain, logistics and transport operations.\n\n**FIGURE 2.** Four clusters emerging from co-citation analysis of 48 articles",
+          "citations": [
+            "W1975107573",
+            "W4255497883",
+            "W2137174507",
+            "W2005207065",
+            "W2530004744",
+            "W2047940964",
+            "W2963978788",
+            "W4250479618",
+            "W1965746216",
+            "W1965746216"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "We leveraged an inductive approach [W2149604183, W2016123827, W2111628838] to conduct a systematic literature review of the publications in blockchain and supply chain logistics and transport. Seuring and Gold [W2016123827] suggest a two-step approach where the basic categories (or clusters) are developed based on theory and then each category is discussed and refined inductively. Since the studies surrounding the topic of the current literature review are in their early stages and there are no existing theories to categorise the literature based on them, we used the clusters emerging from co-citation analysis of the literature to conduct our inductive elaboration on each emerging cluster from the literature.\n\nThus, we conducted the systematic literature review by following these steps [W3147181238, W2055458040]: (1) source identification, (2) source selection, (3) source evaluation and (4) data analysis. The main reason we opted for a systematic literature review was to minimise the selection bias in reviewing the pertinent literature to the subject matter, which benefits from a recursive and iterative process of selecting and refining keywords and the searched academic resources to be incorporated within the review process [UNMAPPED:41]. It should be noted that in the case of blockchain publications on supply chain logistics and transport, the keyword selection and filtering was less complicated than in more developed knowledge areas in supply chain logistics and transport [W1728272581, W1965746216]. Using the systematic literature review framework, we explain below how the keyword selection and source evaluation and analysis were conducted.",
+      "citations": [
+        "W2016123827",
+        "W3147181238",
+        "W2055458040",
+        "W1728272581",
+        "W1965746216",
+        "W4248175462",
+        "W4381547703"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "41",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Blockchain Applications in Supply Chains, Logistics and Transport: The 4Ts",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Technology",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.1.1. Relevance to Supply Chain Management",
+              "parent_subsection_id": "s_4_1",
+              "text": "One of the most important aspects of blockchain application is their interface with the physical world, which requires the right tools and technology such as IoT [W2392113277, UNMAPPED:73]. IoT is a term that is used to describe interconnected sensing devices that can share information on a common platform, enabling innovative applications [W2111619626]. Some of the main enabling technologies behind IoT are RFID tags, Wireless Sensor Networks, and data analysis and visualisation platforms [W2111619626].\n\nDespite the wide applications of IoT devices in supply chains [W2769593477, W2044010408, W2039719269], the high costs of maintaining centralised IoT systems in supply chains [W2392113277] and the security concerns surrounding IoT devices such as RFID-enabled products [W2513619713] that could easily breach the critical manufacturing information of supply chains or the personal information of users, there is a perfect case for the application of trustless and P2P blockchain networks.\n\nBlockchains arguably help with the connectivity and capacity issues of IoT systems by facilitating new devices that identify and authenticate each other so that the network is able to extend to billions of devices without any intermediary servers becoming a bottleneck in the process [UNMAPPED:85]. In addition, blockchains are considered to record IoT devices' configurations by storing their cryptographic hashes [UNMAPPED:86]. An example of the application of blockchains for IoT systems is delivering messages between devices on a blockchain where each message is treated similarly to a transaction [W4389105737]. Smart contracts are used in this instance to verify and allow actions by the devices, and any out of the ordinary message will not activate the functions of the smart contract, thereby increasing the security of the IoT platform.\n\nOne commonly applied aspect of pairing IoT devices on blockchain networks is the identification and elimination of counterfeit medicine using a mix of RFID, analytics and blockchains [W2602679156]. According to the World Health Organization (WHO), in 2017 alone, counterfeit drugs had a significant 10% share of the pharmaceutical market in low- and middle-income countries [W2980328922]. The importance of eliminating the counterfeit drug supply chain is a matter of controlling the adverse effects of these drugs on patients' non-treatment, resistance to drugs and death [W2143785588].",
+              "citations": [
+                "W2392113277",
+                "W2111619626",
+                "W2769593477",
+                "W2044010408",
+                "W2039719269",
+                "W2513619713",
+                "W4389105737",
+                "W2602679156",
+                "W2980328922",
+                "W2143785588"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "73",
+                "85",
+                "86"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.1.2. Relevance to Logistics and Transport Management",
+              "parent_subsection_id": "s_4_1",
+              "text": "One way of using tracking tools and blockchains in transport and logistics is to couple them with smart contracts that can facilitate payments to suppliers or 3PLs once they fulfil their tasks such as delivering goods to a warehouse or to a port in a predefined specification (e.g., quality and quantity). For instance, the RFID tracking device at a buyer's warehouse is directly connected to the blockchain and once it receives the cargo from the supplier, it checks if the agreed quantity is delivered, and if there are no other conditions to be met (e.g., deliveries undergoing quality assessments and approved by the buyer), the smart contract can automatically release the payment to the supplier.\n\nAnother implication of coupling IoT with blockchain technology is better control of physical environment characteristics (e.g., temperature and pressure) provided by the fleet for perishable food products or biopharmaceutical products, which has been given the term 'cold chain'. A successful case of such technology use is IBM's Hyperledger Fabric blockchain for the vaccine cold chain to connect all stakeholders in the vaccine supply chain including manufacturers, public health hosting organisations and authorities, and audit and regulatory organisations that can gain instant access to the location, status and conditions under which vaccines have been prepared and distributed [UNMAPPED:89]. Smart contracts can be used across this cold chain to ensure that desirable conditions are maintained during manufacturing and transportation as well as issuing warning signs in case the sensors report any abnormalities in handling vaccines across the cold chain. Similarly, in 2017, Walmart filed a patent for drones using blockchains for last mile delivery. The main idea behind this technology is a blockchain identifier associated with a delivery box and an encrypted key that can authenticate an approaching drone, automatically unlock the box and accept the package from the drone [UNMAPPED:90]. The same principle could be used to make last mile delivery more flexible and customised to consumer needs such as deliveries to houses or cars or designated boxes for consumers using a blockchain identifier and encrypted key.\n\nUsing IoT technology in transportation fleet and inter-vehicle communications usually exposes the fleet to a range of security risks, such as the recent hack of Jeep Cherokee digital systems where the central system of the car was remotely controlled by hackers, jeopardising 1.4 million similar products from this manufacturer [UNMAPPED:91]. Blockchain technology can provide a secure and decentralised system to secure the privacy of users as well as the security of inter-vehicle communications [W2605157201].",
+              "citations": [
+                "W2605157201"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "89",
+                "90",
+                "91"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Trust",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.2.1. Relevance to Supply Chain Management",
+              "parent_subsection_id": "s_4_2",
+              "text": "Trust and trustworthiness in supply chains affect information sharing and forecasting accuracy [W2150095491, W2011284835], which in turn play a pivotal role in matching supply and demand in supply chains. One issue that can decrease the level of trust in supply chains is the cybersecurity of supply chain members. Cybersecurity has become one of the biggest challenges for global supply chains in recent years [W2795288464, W2569486666]. In the most recent Global Risk Report by the World Economic Forum (WEF) [UNMAPPED:97], cyber attacks along with extreme weather are categorised as the most disruptive risk categories threatening societies and global businesses. The WEF also estimates that the prevalence and negative financial impacts of cyber attacks are increasing rapidly. Blockchain technology can contribute to strengthening the security of supply chain data flows and the IoT data generated in the end-to-end supply chain. The latter can be achieved by decentralising the currently centralised cloud network that is used to manage the operations of IoT devices and controlling the types of data that are shared on blockchain and between supply chain tiers. One major issue with having a centralised cloud system for all IoT devices within a supply chain is its susceptibility to cyber attacks that can make supply chain services unavailable until the cyber issue is eliminated. Using blockchain technology, the transactions between IoT devices are protected by cryptography and are verified to ensure the originator of the message is not a malware or external intermediary [W2746553616, UNMAPPED:86]. Other ways of increasing trust in multi-tier supply chains include providing proof of identity and enabling supply chain members to record, validate and track transactions in their supply chain. The function behind this is called Mutual Distributed Ledgers (MDLs), which are 'multi-organizational databases with a super audit trail' [75, p. 4]. MDLs in supply chains will ultimately make the storage and transfer of signed documents secure, thereby increasing trust among all members in the blockchain. Another example of using blockchains to create trusted identity networks is a company called Securekey who collaborated with IBM in 2017 to create a secure digital identity-sharing platform on IBM's blockchain that enables customers to share their trusted credentials with their chosen organisations, which saves on time and the costs of identity verification [UNMAPPED:98].\n\nConflicting objectives or a lack of aligned goals in supply chains, especially between buyers and suppliers, is another factor that deteriorates trust in supply chains [W2118922756, W2093651004]. Using blockchains to record supply chain data free of errors would hold relevant supply chain members accountable and resolve disclosure issues, minimising the impact of conflicting objectives and increasing trust in supply chains.",
+              "citations": [
+                "W2150095491",
+                "W2011284835",
+                "W2795288464",
+                "W2569486666",
+                "W2746553616",
+                "W2118922756",
+                "W2093651004"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "97",
+                "86",
+                "98"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.2.2. Relevance to Logistics and Transport Management",
+              "parent_subsection_id": "s_4_2",
+              "text": "One of the ideal applications of blockchain technology is in complex extended transportation networks where there are multiple modes of transportation (e.g., road, rail, air) and multiple transport intermediaries (e.g., 3PLs, freight forwarders, insurance providers). Such a transportation network includes multiple players that do not necessarily trust or even know each other and in most cases do not have a standardised method of sharing the transport data to facilitate the transport processes. Using a customised blockchain that connects these parties would ensure sharing the required transaction and shipment data, which are both secure and reliable given the inherent features of the blockchain [UNMAPPED:101].",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "101"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Trade",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.3.1. Relevance to Supply Chain Management",
+              "parent_subsection_id": "s_4_3",
+              "text": "In reviewing the articles in the third cluster, two groups of cited articles provide notable discussions on the trade aspect of blockchain application in supply chain, logistics and transport management. The first group of papers discusses P2P trade and especially energy trade using blockchain technology [W2531399364, W2619984247]. Most of the models provided for P2P energy trading are based on the notion of smart contracts [UNMAPPED:24], which make bidirectional and decentralised energy trading on blockchains secure. The implications of such applications to facilitate P2P energy (especially green energy) trading among supply chain tiers not only contributes to sustainable energy consumption in supply chains but also saves on energy and utility costs across supply chains [W2898069736]. The second group of papers in this cluster builds on the concept of crypto trading, cryptocurrencies such as Bitcoin and the economics of blockchain technology to facilitate the transfer of funds within a network [W2154505708, W2295894398], which can be applied to supply chain networks for various payment purposes (e.g., overseas payment) including supply chain finance [W3022085691].",
+              "citations": [
+                "W2531399364",
+                "W2619984247",
+                "W2898069736",
+                "W2154505708",
+                "W2295894398",
+                "W3022085691"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "24"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.3.2. Relevance to Logistics and Transport Management",
+              "parent_subsection_id": "s_4_3",
+              "text": "With the rise of China's One Belt One Road (OBOR) initiative and considering the many countries in Eurasia, Africa and Oceania involved in the project, applying a trustless and immutable distributed ledger technology for streamlining logistics and transport operations has already been considered by the Chinese Government. The Belt and Road Blockchain Consortium, launched in 2016 in Hong Kong\u00b2, primarily uses blockchain technology to provide Shariah-compliant provenance and to ensure the greening of OBOR. Another critical aspect of the successful implementation of the OBOR project is funding construction projects across more than 56 countries. With the Asian Infrastructure Investment Bank being a major sponsor of such projects across the OBOR region, there will need to be a fast and efficient way of transferring funds across borders for various construction projects. With the successful implementation of blockchain technology to transfer funds across borders in significantly less time and with lower costs compared to traditional methods (such as the Interbank Information Network project by JP Morgan Chase [UNMAPPED:102]), blockchain technology sounds like a viable option for funding projects across OBOR. Another aspect of blockchain technology that can facilitate trade across OBOR is the use of a unified currency such as a cryptocurrency to reduce transaction costs and create a single trade market for OBOR countries [UNMAPPED:103].",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "102",
+                "103"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Traceability/Transparency",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.4.1. Relevance to Supply Chain Management",
+              "parent_subsection_id": "s_4_4",
+              "text": "The traceability of inventory and information transparency are the main themes of the fourth identified cluster in our co-citation analysis. While traceability aims to answer the 'what/when/where' questions of inventory transfer in supply chains, transparency attempts to shed light on the 'how' aspect, for example, how a product is sourced, how it is processed by suppliers and how it is handled while being transported [UNMAPPED:104]. With the ever-increasing rate of globalisation and the expansion of supply chains all over the world, developing transparent operations is pivotal to ensuring environmental sustainability and social responsibility [W2020412065, W2911642320]. Transparency is at the core of developing sustainable supply chains [W2025883194] and can be achieved if the right tools and measures are applied to end-to-end sustainable supply chain management [W2102255599]. Early use of RFID tags and online verification codes in supply chains has been argued to help with transparency and sustainability in supply chains. Nevertheless, the validity and security of this data cannot be ensured unless the cryptographic features of blockchains are put to use. In this way, blockchains will be the core facilitating technology ensuring traceability and thus transparency in supply chains by tracking the social and environmental conditions across supply chain tiers [W2765093693]. Saberi et al. [W2898069736] argue that in order to ensure sustainability and ethical business conduct in supply chains, blockchains can help increase traceability of inventory and transparency through, among other means, coupling blockchains with RFID, maintaining the accountability of supply chain partners towards their social and environmental responsibilities and helping trace the carbon footprint of supply chains accurately.\n\nAnother aspect of achieving traceability in supply chains is the traceability of inventory, especially food traceability, across supply chains using blockchains. When it comes to food safety and traceability, the WHO estimated in 2015 that, globally, one in 10 people contract foodborne diseases, which results in 420,000 deaths every year [UNMAPPED:109]. One of the main reasons behind food contamination is the lack of traceability and transparency in the food supply chain, which makes it prone to manipulation of food sources for profit maximisation or results in a lack of standards for handling and storing food [UNMAPPED:110]. A recent success story where blockchains were used to identify contaminated food is Walmart employing IBM's Blockchain Platform, where information on the food source is collected at the farm, and in the packing houses and transportation systems using smart IoT devices, and then stored on blockchain [W2810507576]. By scanning a code on the final food package that is handed over to customers, there is access to all this information in the IBM Blockchain Platform, which ensures food safety and quality [UNMAPPED:104, UNMAPPED:112]. Moreover, by using blockchain technology, permanent records kept on the blockchain can be traced back to the main contaminators in the supply chain, thereby eliminating the contaminating sources from the supply chain [W4413725329].",
+              "citations": [
+                "W2020412065",
+                "W2911642320",
+                "W2025883194",
+                "W2102255599",
+                "W2765093693",
+                "W2898069736",
+                "W2810507576",
+                "W4413725329"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "104",
+                "109",
+                "110",
+                "112"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.4.2. Relevance to Logistics and Transport Management",
+              "parent_subsection_id": "s_4_4",
+              "text": "A major implication of using blockchain technology for tracking cargo is the faster processing of insurance claims in cases where cargo has been lost or damaged. Considering that the tracking data on blockchains are trustworthy and traceable to the origin of loss, insurance companies can process the causes of the incident, the carrier involved, the type of cargo and the validity of the claims faster and easier. A very recent example of such an application is the world's first marine insurance platform on blockchain called Insurwave, which leverages blockchain technology, the Microsoft Azure analytics platform using ACORD data standards [UNMAPPED:114]. Insurwave is designed to support half a million transactions and manage the risk of shipping for more than 1,000 commercial vessels by connecting all stakeholders in the insuring process including third parties, clients, insurers and brokers. Table 2 provides a summary of the 4Ts and their implications for supply chains, logistics and management by enumerating the main themes and using cases for each cell in the table.\n\n**Table 2.** Summary of 4T applications in supply chain, logistics and transport management\n\n{{TABLE:tbl_02}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_02"
+              ],
+              "citations_unmapped": [
+                "114"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "4.5. Limitations of Blockchain Technology",
+          "subsubsections": [],
+          "text": "Despite current and future applications of blockchain technology in supply chains, logistics and transport, this technology still has caveats that limit its widespread commercialisation. Most blockchains today have transactional throughput (volume of transactions), latency (time required to add data to the blockchain) and size (bytes per transaction) constraints that make them less agile than their centralised or decentralised counterparts such as Visa or Mastercard. While credit cards can handle on average 5,000 transactions per second, a single Bitcoin transaction might take a few minutes or sometimes a few days depending on the traffic in the network [UNMAPPED:115]. In addition, blockchains such as Bitcoin were primarily created to facilitate high-value transactions rather than high-volume transactions [UNMAPPED:4], and in the context of supply chains and transport, where the volume of transactions is high, the inability of blockchains to fulfil such high volumes is troubling.\n\nWhile this paper does not provide an in-depth analysis of the technical aspects of blockchains, it does consider the integration of blockchain systems with current data management systems in supply chain logistics and transport systems such as ERP, WMS, CRM and SRM to be a turning point in the wide adoption of blockchains. This technical knowledge should help clarify how various companies' blockchains within a supply chain can be connected or merged to develop a unified blockchain system. Currently, lack of communication between blockchains hinders them from interoperability and therefore mass adoption to form a higher-order and more capable data storage and analysis mechanism [UNMAPPED:116, UNMAPPED:117].\n\nAnother constraint of blockchains is their immutability, which might hinder erasing erroneous data on blockchains, making the data entry to blockchains irreversible [W4391342947, UNMAPPED:119]. Consider, for instance, a buyer who reports that a certain product in their inventory is low, and when these data are entered into the blockchain a smart contract automatically places a purchase order for the supplier(s). If the data entered are for any reason incorrect, and the purchase order needs to be cancelled, erasing the ordering data from the blockchain is not easy and might require extra time and effort to fix the error. Moreover, there is always a risk that the private key of a node on the blockchain (in this context a node represents a supply chain tier or a transport intermediary) gets lost or damaged and renders the blockchain unusable [UNMAPPED:120]. Eventually, the high costs of implementing blockchain technology, in addition to issues surrounding data privacy and governance, make this technology challenging to adopt [W2890784719]. Saberi et al. [W2898069736] provide a conceptual framework of barriers to adopting blockchain in sustainable supply chains by categorising these barriers into inter-organisational barriers, systems-related barriers, intra-organisational barriers and external barriers.",
+          "citations": [
+            "W4391342947",
+            "W2890784719",
+            "W2898069736"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "115",
+            "4",
+            "116",
+            "117",
+            "119",
+            "120"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The 4Ts of blockchain are interconnected concepts rooted in the nature of blockchains and are inherently designed for non-trusting members doing business with each other. Despite this, each component of the 4Ts has a cluster of scientific articles behind it that offer various applications for supply chains. Table 1 presents the most popular and prestigious academic resources for the topic of each cluster. In order to choose the most prestigious papers in a cluster that contains hundreds of papers, we needed a measure that simultaneously considered the importance (i.e., the global citation count of the paper) as well as the connectedness of the paper within the cluster (i.e., the number of citations by paper in the cluster). A paper might be well connected within a cluster but it is not necessarily an important paper, which might reduce its prestige. To select papers for each cluster we used PageRank analysis, as originally proposed by Brin and Page [W2066636486] to analyse the connectivity of web pages. The adoption of PageRank analysis for co-citation analysis is increasing and widespread among researchers in the field of supply chain, logistics and transport management [W1965746216, W2932270818, W2885251002, W1728272581]. In the context of co-citation analysis, PageRank prioritises publications that have a higher global citation count as well as papers that are cited by these publications with high citation counts [W2949130492]. Since PageRank is a probability distribution, it yields a number between zero and one to rank papers in each cluster with larger numbers showing a higher degree of importance for any cited paper. To select the top five papers for each cluster we first sorted them according to their PageRank scores. Considering that most of these articles were published recently, their PageRank scores were very small. However, using PageRank was helpful in selecting the top five articles in each cluster. Additionally, given that PageRank scores do not have any inherent value and are only used comparatively, we did not include them in Table 1 but they are available upon request. We also filtered out the articles that did not have any particular relevance to blockchain, supply chain or transport/logistics topics. For example, if an article only discussed the topic of counterfeit medicine with no implications for associated supply chains, logistics or transport, or if it did not include the role of blockchain in identifying or eliminating counterfeit medicine, it was not included in Table 1. Moreover, as can be seen in Table 1, there can be overlaps between the clusters where the same article has been included in two or more clusters (e.g., Christidis and Devetsikiotis [W2392113277] is included in both clusters 1 and 2). This type of overlap is a common occurrence in network analysis [W1972675431, W2164928285] and it shows that the aforementioned articles have been commonly referred to in multiple research areas.\n\n**Table 1.** Most notable journal articles per cluster identified by co-citation analysis\n\n{{TABLE:tbl_01}}\n\nIn the Technology cluster there are a number of articles that focus on IoT\u2013blockchain [W2392113277, W4389105737, UNMAPPED:73], IoT\u2013supply chain [W2769593477] or IoT\u2013blockchain\u2013supply chain in the context of the pharmaceutical industry [W2602679156]. In the Trust cluster, the articles presented in Table 1 represent supply chain\u2013trust or blockchain\u2013trust topics. The main themes in these articles are trust and accountability in supply chains (i.e., supply chain\u2013trust) [UNMAPPED:15], the application of blockchains in a trustless context (i.e., blockchain\u2013trust) [W2392113277], avoiding cyber attacks using blockchains (i.e., blockchain\u2013trust) [W2746553616, W2792850657] and addressing the trust issue by using blockchains for proof of identity (blockchain\u2013trust) [W3176587695]. Overall in this cluster, we could not find an article that directly examined how the use of distributed ledger technology can affect the issue of trust in supply chains. The articles in the Trade cluster in Table 1 mainly discuss energy trade in utilities supply networks using blockchains [W2531399364, W2619984247, W2629433172] and the use of cryptocurrency and Bitcoin in trade and economics [W2154505708, W2295894398]. While Gualandris et al. [W2185550989] and Mol [W2020412065] focus on supply chain sustainability through accountability and transparency in the Traceability/Transparency cluster, Kouhizadeh and Sarkis [W2897961228], Saberi et al. [W2898069736] and Kshetri [W2773929027] specifically investigate the role of blockchains in ensuring sustainability and increasing transparency in supply chains.\n\nBelow we elaborate on the discussion of the 4Ts and their current and future applications in supply chains, logistics and transport. Considering that academic studies of blockchain applications in these areas are still scarce, most resources cited in the discussion of the 4Ts are media pieces, industry and thought leadership papers, and industrial blogposts, which are not included in Table 1; however, we use them for elaboration. In discussing each cluster, we have incorporated two sub-categories where we specifically elaborate on the relevance of the cluster to either supply chain management or transport and logistics management.",
+      "citations": [
+        "W2066636486",
+        "W1965746216",
+        "W2932270818",
+        "W2885251002",
+        "W1728272581",
+        "W2949130492",
+        "W2392113277",
+        "W1972675431",
+        "W2164928285",
+        "W4389105737",
+        "W2769593477",
+        "W2602679156",
+        "W2746553616",
+        "W2792850657",
+        "W3176587695",
+        "W2531399364",
+        "W2619984247",
+        "W2629433172",
+        "W2154505708",
+        "W2295894398",
+        "W2185550989",
+        "W2020412065",
+        "W2897961228",
+        "W2898069736",
+        "W2773929027"
+      ],
+      "tables_in_text": [
+        "tbl_01"
+      ],
+      "citations_unmapped": [
+        "73",
+        "15"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1 Contribution",
+          "subsubsections": [],
+          "text": "This paper is an attempt to collect and elaborate on the existing academic and industrial knowledge base regarding the applications of blockchains in supply chains, logistics and transportation. Recent attempts have been made to set the future research agenda on blockchain technology's applications in supply chain management. For instance, Babich and Hilary [W3022085691] investigated the research opportunities that could be further explored with regard to this topic in various aspects of operations management such as production, procurement, inventory management, contracting, supply chain risk management and sustainable supply chain management, to name a few. Saberi et al. [W2898069736] set a research agenda for post-adoption of blockchain technology and its theoretical implications for supply chain management. They covered supply chain topics such as opportunism, trust in the buyer\u2013supplier relationship, supply chain governance, sustainable supply chain management and supply chain risk management, and investigated the contributions of blockchain studies to further understanding of these topics and their supporting theoretical frameworks.\n\nWhile this paper acknowledges the invaluable attempts that have initiated the dialogue on the application of blockchains in supply chain studies, we have systematised and elaborated on these discussions using the proposed 4T structure and its implications for the supply chain, logistics and transport literature. By identifying the four main clusters (the 4Ts \u2013 technology, trust, trade, traceability/transparency) emerging from our co-citation analysis of the academic publications on this topic, we were able to expound on the implications of each of these clusters for supply chain and transportation networks. This condenses the (thus far) scattered literature on blockchain applications in logistics and supply chain management beyond the single arguments being made in the aforementioned review papers.",
+          "citations": [
+            "W3022085691",
+            "W2898069736"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2 Limitations",
+          "subsubsections": [],
+          "text": "The theoretical limitations derive from the more inductively driven analysis allowed by the bibliometric cluster analysis. While four clusters emerging from the citation analysis is quite straightforward, the labels given are based on the interpretation of the research team. This might be questioned, while the 4Ts are justified against the explanatory power elaborated in the findings section.\n\nThis immediately links into the strengths and weaknesses of the method. Given that the application of distributed ledger technologies in logistics and supply chain management is an emerging topic, a method that is geared more towards exploring the field seems well justified. The documentation of its application ensures reliability, while the cluster analysis guarantees a high degree of internal validity. The typical shortcoming of such a method is that it only partly links to existing theoretical framings, for example, the application of IoT in logistics and supply chain management. This might open up directions for future research, which are discussed next.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "5.3. Implications for Research",
+          "subsubsections": [],
+          "text": "By leveraging the 4T framework that we extracted from the co-citation analysis of the existing literature, we systematise the future research agenda in supply chain, logistics and transport management through the lens of the 4Ts of blockchains.\n\n- **Technology:** Supply chain, logistics and transport operations across all industries are experiencing a rapid transformation in their use of disruptive technologies [W2810507576]. While blockchains and advanced analytics and big data platforms [W2618763773] are at the heart of this transformation, the development and adoption of hardware technologies such as IoT [W2769593477] and RFID [W2088251042] feed the required data into these platforms [W1966778069, W2794721428]. Despite the increased interest in these topics in the academic literature, frameworks surrounding the adoption, integration and implementation of the combination of these technologies remain scarce. Case study research [W2023254989, W2047655553] is recommended to investigate the integration of hardware and software technologies into supply chain, logistics and transport operations.\n\n- **Trust:** The study of trust in supply chains and logistics, and especially trust in sharing information in supply chains, is a well-established area of research [W2607669254, W2120252821, W2232637590, W1860455018]. One of the main ideas behind this stream of research is how to ensure that the right and accurate information is shared among supply chain partners in a timely manner. Since blockchains have been developed to perform in a trustless environment, it is expected that when a supply chain is using a blockchain platform to share data among supply chain partners, all the relevant supply chain partners have access to the same sets of data required to extract insights. The latter will have theoretical implications so researchers should consider first whether blockchains will eliminate the need for trust in supply and transport networks and second how the dynamics in the buyer\u2013supplier relationship might change when there is not a dire need to build trust between supply chain partners.\n\n- **Trade:** Blockchains can have significant implications for trade in global supply chains. First, by facilitating payments through cryptocurrencies, supply chain partners can use instant money transfers with lower commissions to pay for goods and services. Second, product ownership and transfer and the contractual arrangements for them can be facilitated by smart contracts [W2898069736] so that the contract terms will be executed instantly after they are met. This will save on the time and costs (e.g., intermediaries, paperwork) required to execute contracts and carry out the terms by both parties. The latter, as well as changes in information sharing [W2802642817, W2052699943, W2513814007], can initiate a debate in the current state of our knowledge on supply chain contracting and how distributed ledger technology can affect contracting and coordination mechanisms in supply chains.\n\n- **Traceability/Transparency:** The increased transparency and traceability of inventory in supply chains using blockchains can have multiple implications for research. First, the use of blockchains in inventory and capacity management can help mitigate the bullwhip effect [W2135123147, W2106625936] by sharing inventory information with supply chain partners that place orders across the supply chain [W3022085691]. The application of advanced analytics [W2893740026] to the data provided by blockchains can lead to better predictions of the impending risks in the supply chain and transport networks, and the ability to devise better customised plans to manage potential disruptions to these networks. Furthermore, and as mentioned earlier, one of the most anticipated applications of blockchains is in sustainable supply chain and transport operations where the data collected on blockchains can report on the environmental and social sustainability of supply chain partners [W2898069736].\n\nFinally, we would like to encourage future research to empirically investigate the 4T structure and the links between the 4T constructs that emerge from the application of blockchain technology in supply chain, logistics or transport networks. Our proposed framework is based on our discussion in sub-section 2.2 (Blockchain: Implementation, values and impact), where implementation represents the technological aspect of blockchains, values indicates traceability, transparency and trust as the main advantages arising from the implementation of blockchains, and impact refers to the effects on trade operations which contain all aspects of trade in supply networks that can benefit from implementing blockchain technology. Impact (Traceability/Transparency and Trust) follows effective implementation (Technology) and implementation is also a prerequisite for extracting value (Trade) from investments in blockchain technology [W2899766515]. We therefore propose a hypothetical structural model in Figure 3, in which we assume that Technology is an independent variable that increases Traceability/Transparency in supply chain and transport networks, which in turn facilitates Trade within these networks. We also assume a moderating role for Trust to better regulate the relationship between increased Traceability/Transparency and Trade.\n\n**FIGURE 3.** Proposed structural model for blockchain application in supply chain, logistics and transport networks",
+          "citations": [
+            "W2810507576",
+            "W2618763773",
+            "W2769593477",
+            "W2088251042",
+            "W1966778069",
+            "W2794721428",
+            "W2023254989",
+            "W2047655553",
+            "W2898069736",
+            "W2135123147",
+            "W2106625936",
+            "W3022085691",
+            "W2893740026",
+            "W2899766515"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Blockchain technology is still in the early stages of commercialisation and while there are many industry experts who believe there is a promising future for the application of this technology across industry, many others believe there is an inflated expectation from blockchains, which might in fact exacerbate the effect of the failed adoption of blockchains in industry. However, while there have been many failed attempts to use blockchain technology, there have also been many successful business cases, such as those mentioned in this paper. The latter render a rather optimistic view that as more progress is made in addressing the limitations of blockchains, like many other emerging technologies, blockchains will find their place in practice and become widely accepted.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_4",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2967267206_tables.md"
+}

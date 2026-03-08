@@ -1,0 +1,395 @@
+{
+  "id": "W4317569062",
+  "metadata": {
+    "title": "What is \u201ctechnology integration\u201d and how is it measured in K-12 education? A systematic review of survey instruments from 2010 to 2021",
+    "n_sections": 6,
+    "n_subsections": 11,
+    "n_subsubsections": 3,
+    "n_tables": 8
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1. A multiplicity of views on TI",
+          "subsubsections": [],
+          "text": "In this section, we present and discuss different existing definitions and conceptualizations of TI, with a focus on those explicitly referring to the term \u201cTI.\u201d Thereby, we aim to provide initial insight into different directions of TI research and clarify which TI concept guided our review.\n\nOne of the most comprehensive definitions of TI we found is that given by the Education Research Information Center (ERIC) thesaurus:\n\n> The process of making technological tools and services, such as computer systems and the Internet, a part of the educational environment \u2013 includes changes made to the curriculum as well as to educational facilities [UNMAPPED:19].\n\nIn this definition, TI is conceived of as a process rather than a state, and the focus seems to be primarily on technological tools and services. The mentioned changes to the curriculum do not seem to be required, and it is unclear whether they also include changes regarding pedagogy and teaching methods. Thus, it can be considered a rather \"technocentric\" understanding of TI [W4312794376]. Especially in the early days of the introduction of digital technologies in schools, there was a tendency to focus on digital tools and skills; more recently, the focus shifted toward the pedagogical use of technology to achieve specific learning goals [W198366145, W4312794376]. The definition provided by the ERIC thesaurus mainly reflects the first tendency. It is important to keep in mind that the definition has been formulated with the purpose of categorizing studies rather than contributing to the theoretical discourse on TI. However, precisely for this reason, we believe that it provides us with insight into how TI has been conceived and operationalized in research.\n\nIn a handbook chapter on TI in schools, Davies and West [W198366145] defined TI as the \u201ceffective implementation of educational technology to accomplish intended learning outcomes\u201d (p. 843). This definition focuses on effectiveness and learning outcomes and thus implies that TI is more than the mere uptake of technological devices into classroom practices. This definition reflects the more recent trend of focusing on the pedagogically sound use of technology to enhance teaching and learning practices and adds an emphasis on effectiveness. However, it does not yet explicitly refer to the need to transform pedagogies and teaching practices.\n\nThe way scholars conceptualize TI is sometimes grounded on frameworks and models rather than on definitions. One example is the TI concept underlying the Technological Pedagogical and Content Knowledge (TPACK) framework [W4245034476]. Referring to this framework, Wentworth et al. [UNMAPPED:22] defined TI as follows: \"Ways in which technology is integrated into teaching methods [pedagogy] and curriculum [content].\" Further, in this case, TI refers to a concept beyond the mere use of technology in classroom practices, namely to the result of a complex interplay among three fundamental components of learning environments: technology, pedagogy, and content. Mishra and Koehler [W4245034476] emphasized that teachers must develop sophisticated knowledge that enables them to use technology by taking into account the features of the teaching content, adequate teaching methods, and the educational context. What is distinctive of this conceptualization is that TI cannot follow always-valid principles but must adapt to the content to be taught and the context.\n\nAnother conceptualization of TI that focuses on pedagogy and instructional practices is the Technology Integration Matrix (TIM) [UNMAPPED:23]. This framework combines the dimensions of \"good teaching\" (active, constructive, goal-directed, authentic, and collaborative) with five levels of TI (entry, adoption, adaptation, infusion, and transformation). These are combined to form a matrix of 25 cells, which should help researchers and practitioners evaluate TI practices. Furthermore, the TIM considers TI from different perspectives by formulating descriptors to assess TI from the viewpoints of students, teachers, and learning environments. This conceptualization of TI considers TI both as a stepwise process to be gradually achieved and as a challenge related to pedagogy and teaching quality. It also implies that technology should be used to transform teaching and learning practices by making them more student-centered and constructivist. This is one of the most sophisticated conceptualizations of TI that we found.\n\nApart from frameworks and models of TI focusing on pedagogy and instructional practices, many other models focus on teachers' professional development and investigate the interplay of factors influencing teachers' uptake of technologies in educational practices [W3118779761, UNMAPPED:24]. The Technology Acceptance Model by Davis [UNMAPPED:26], the Unified Theory of Acceptance and Use of Technology Model by Venkatesh et al. [W2100379340], and the Will Skill Tool model by Christensen and Knezek [W2023035742] are some of the most frequently used models. Studies based on these models often conceptualize TI as the entire process leading to teachers' adoption of technologies in classroom practices, as the output variable of this process, or as both process and outcome.\n\nFollowing Duran [W4312794376] and most of the conceptualizations discussed above, we believe that TI should always consider aspects related to pedagogy and teaching quality rather than focusing solely on aspects related to the quantity of TI. Indeed, the results of large-scale studies stress that the mere frequency of technology use at school does not lead to better learning outcomes [UNMAPPED:14], whereas experimental studies focusing on the use of technology to foster meaningful learning goals have found an overall positive impact of TI on learning [W1817853878, W3011365287]. Consequently, several scholars have started focusing increasingly on the quality instead of the quantity of TI (see [W4303437960, W4206555364, W3126695962, W3210747570, W2956643443, W2397007049]). The following section provides some examples of how researchers operationalize the quality and quantity of TI to measure it.",
+          "citations": [
+            "W4312794376",
+            "W198366145",
+            "W4245034476",
+            "W3118779761",
+            "W2100379340",
+            "W2023035742",
+            "W1817853878",
+            "W3011365287"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "19",
+            "22",
+            "23",
+            "24",
+            "26",
+            "14"
+          ]
+        },
+        {
+          "subsection_id": "s_1_2",
+          "subsection_index": 2,
+          "subsection_label": "1.2. Quantitative measures of the quality and quantity of TI",
+          "subsubsections": [],
+          "text": "In this section, we present some ways in which the quantity and quality of TI have been operationalized and measured in research. These examples are intended to provide a better understanding of what is meant by the terms \u201cquantity\u201d and \u201cquality of TI.\u201d\n\nAs stated by several scholars, the expression \u201cquantity of TI\u201d is commonly used to refer to quantitative indicators, such as the frequency of technology use at school, the student\u2013computer ratio, or the amount of time spent using digital devices [W2040516125, W3126695962, W2397007049]. If there is any evidence of a good consensus among researchers on the operationalization of the \u201cquantity of TI,\u201d it is much less the case regarding operationalizing the \u201cquality of TI.\u201d As an illustrative example, Proctor et al. [W2040516125] developed an instrument to \u201cmeasure the quantity and quality of ICT curriculum integration experienced by students in classroom\u201d (p. 69). The authors operationalized the quality of TI as the use of technology to support the dimensions of \u201cproductive pedagogies\u201d (e.g., connectedness to the world and inclusivity). Differently, Bowman et al. [W3107589039], developed Bloom\u2019s Digital Taxonomy scale to measure the \u201cquality of TI.\u201d As the name of the scale suggests, the instrument is based on Bloom\u2019s [UNMAPPED:34] learning goal taxonomy and measures classroom technology use to facilitate lower- and higher-order critical thinking tasks.\n\nFor the purpose of this study, we consider \u201cquality of TI\u201d as all concepts, operationalizations, and aspects related to the instructional use of digital technologies, with considerations beyond the mere frequency of use of different technological devices (e.g., the use of technology to support pedagogical goals).",
+          "citations": [
+            "W2040516125",
+            "W3126695962",
+            "W2397007049",
+            "W3107589039"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "34"
+          ]
+        },
+        {
+          "subsection_id": "s_1_3",
+          "subsection_index": 3,
+          "subsection_label": "1.3. Previous studies on TI measures",
+          "subsubsections": [],
+          "text": "In a previous systematic review, Lai and Bower [W2913861772] collected instruments used to evaluate the use of technology in education. The review has a very broad focus and includes all types of studies (e.g., quantitative, qualitative, experiments, surveys), contexts, and perspectives. The analysis of the studies shows that studies evaluating technology use focus mostly on the following aspects: learning outcomes, affective elements, behaviours, design, and technology elements. The analysis also found that the diversity of instruments and methods used to assess technology use is high, that 66.6% of the studies used an established instrument to evaluate the use of technology, that only 1.4% of the studies considered the institutional environment, and that only 7% of the studies assessed the use of the technology holistically by considering four or more aspects of education. However, this review focuses on the effects and perceptions of technology use rather than TI, and only considers studies published between 2015 and 2017 in *Computers & Education*, thus running the risk of leaving out studies published in other scientific journals and in other years.\n\nIn addition to this systematic review, in a handbook chapter on TI measurements, Christensen and Knezek [UNMAPPED:36] listed many \u201crespectable instruments\u201d to measure \u201cattitudes, skills (competencies), and pedagogical practices, in the general realm of technology integration\u201d (p. 370). The authors conceptualize TI as a complex phenomenon with at least three components and distinguish between attitudinal measures, competency and self-efficacy measures, pedagogy measures and strictly TI measures that directly assess TI. According to the authors, the following instruments belong to the latter category:\n- The Apple Classrooms of Tomorrow (ACOT) survey [UNMAPPED:37].\n- Stages of Adoption of Technology (Stages) [W2096859876].\n- The Concerns-Based Adoption Model Level of Use (CBAM LoU) [W1981883686].\n- Technology Integration Scale (TIS) [W2004573427, UNMAPPED:41].\n- The TPACK Assessment Instrument for Pre-Service Teachers [UNMAPPED:42].\n\nThe fact that the authors first describe TI as a complex phenomenon composed of at least three dimensions and then list one-dimensional instruments to measure TI \u201cdirectly\u201d highlights the terminological ambiguity concerning the term \u201cTI\u201d. In their conclusion, the authors recommended using different types of instruments to assess all components of TI.\n\nChristensen and Knezek [UNMAPPED:36] did not follow a systematic selection process for the instruments. Further, both studies presented in this section gave no particular attention to the aspects related to the quality of TI in instructional practices and omitted consideration of the conceptual or theoretical underpinnings of the instruments analyzed.",
+          "citations": [
+            "W2913861772",
+            "W2096859876",
+            "W1981883686",
+            "W2004573427"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "36",
+            "37",
+            "41",
+            "42"
+          ]
+        },
+        {
+          "subsection_id": "s_1_4",
+          "subsection_index": 4,
+          "subsection_label": "1.4. Research questions",
+          "subsubsections": [],
+          "text": "As previously noted, the lack of a shared and sophisticated definition of TI and the absence of a unified view of how to measure TI make it difficult for researchers to rely on a coherent theoretical discourse and sound research practices. By clarifying which operationalizations of TI have been used in survey studies from 2010 to 2021 and critically evaluating current research practices, this study aims to contribute to the development of a coherent theoretical discourse on TI and sound research practices. Given the current research interest in operationalizing aspects regarding the quality of TI, and considering that these aspects have been ignored by previous studies on TI measures, we focus particularly on them.\n\nWe focused on quantitative survey instruments because they are widespread and suitable for comparison. Furthermore, a particular focus on K\u201312 education was chosen by including only studies that considered at least one K\u201312 level.\n\nThe following research questions guided our study.\n1. Which quantitative survey instruments have researchers used to measure TI in K\u201312 education from 2010 to 2021?\n2. What are the main properties of the instruments (e.g., number of items, number of dimensions measured, and information on validity and reliability)?\n3. Are the instruments based on concepts or theories?\n4. What dimensions/aspects of TI are measured?\n5. Which aspects related to the quality of TI in instructional practices are measured?",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Technology integration (TI) in education has been one of the most significant areas of educational technology research in recent decades [W3217592719]. Nevertheless, several scholars have claimed that a common understanding of the term \"TI\" has not yet been reached [W2033110002, W198366145, W1966370548, W1511672693, W2604936060, W2040516125]. They pointed out that whereas some researchers use the expression as a synonym for technology use (e.g., [W842806313]), others refer to a far more complex phenomenon, such as the transformation or enhancement of teaching and learning practices through the use of technology (e.g., [W198366145]), a school development challenge (e.g., [W2071945342]), or even educational reform (e.g., [W1182663309]). To complicate matters even further, the expression \"TI\" is also used to refer to an outcome, a process, a condition, or a state [UNMAPPED:11].\n\nFurthermore, some scholars have highlighted that TI has often been poorly defined, which has led researchers to measure the concept inappropriately. Proctor et al. [W2040516125], for example, criticize that several studies measure TI in an overly simplistic way (e.g., by measuring student\u2013computer ratio or the frequency of computer use) and argued that \u201cunless more sophisticated notions of defining ICT curriculum integration are developed, researchers run the risk of promulgating severely restrictive ways of measuring it\u201d (p. 69).\n\nThe lack of an elaborate and shared definition of TI could perhaps be due to the fact that educational technology research is an under-theorized research field. Hew et al. [W2921836496] conducted a systematic literature review of 305 empirical studies published in education-technology-related, highly ranked peer-reviewed journals and found that many of them have vague (\\(N = 120\\)) or no (\\(N = 209\\)) theoretical underpinnings and that very few articles contribute to theory advancement (\\(N = 77\\)). One reason for this poor engagement with theory may be that educational technology research is often practice-oriented and context-specific [W2017980205].\n\nThe above-mentioned problems are also reflected in the absence of a unified measure, with researchers developing a variety of instruments that target different aspects of TI. However, independently from the fact that these instruments measure either a single or several aspects of TI, their developers often present them as overall measures of TI [W1511672693, W2604936060]. For this reason, Hsu [W1511672693] argued that it is difficult to compare TI rates across studies and to interpret the results obtained from such different instruments.\n\nThe current situation makes it very difficult for researchers to orient themselves in TI research. Nevertheless, in recent years, there has been a renewed interest in TI research, even with an additional shift in its focus. More and more researchers have argued that what matters is how technologies are integrated into instructional practices, not the frequency of technology use [UNMAPPED:14]. Consequently, new instruments for measuring aspects related to the quality of TI (e.g., the use of technology to support pedagogical goals) are emerging (see [W4303437960, W4206555364, W3126695962, W3210747570]). By providing an overview of the survey instruments measuring TI used in educational research from 2010 to 2021, critically assessing the current research practices, and identifying directions for future research, this study aims to provide guidance and orientation to researchers who, despite the different issues highlighted above, intend to develop and advance TI research.\n\nBefore introducing our systematic review, we discuss some views on defining and conceptualizing TI, present examples of survey instruments measuring the quality and quantity of TI, and provide an overview of previous studies on TI measures.",
+      "citations": [
+        "W3217592719",
+        "W842806313",
+        "W198366145",
+        "W2071945342",
+        "W1182663309",
+        "W2040516125",
+        "W2921836496",
+        "W2017980205",
+        "W1511672693",
+        "W2604936060"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "11",
+        "14"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Systematic review",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.1.1. Search",
+              "parent_subsection_id": "s_2_1",
+              "text": "To locate studies focusing on TI, we used the following expressions: \"technology integration,\" \"ICT integration,\" \"ICTs integration,\" \"computer integration.\" Due to the lack of an unambiguous and commonly accepted definition of TI, and thus the possibility of determining the synonyms for this concept, we focused on the manifest language level and searched for studies containing the term \"integration.\" Therefore, we have consciously ignored studies that exclusively use related expressions, such as \"technology use,\"\n\n**TABLE 1**\n**Databases, search strings, search options and n. of articles found.**\n\n{{TABLE:tbl_01}}\n\n\u201ctechnology implementation,\u201d or \u201ctechnology adoption.\u201d This was also necessary to narrow the corpus of our review and to ensure a clear focus on TI. Given that we intended to focus on studies measuring TI generally, terms referring to specific digital tools and devices were not included. The terms survey*, scale*, questionnaire*, measur* were used to locate quantitative survey studies, and the terms education*, school*, teach*, learn*, instruction*, student*, were used to narrow our review to the field of educational research. We combined all those terms with Boolean operators, field tags, and parentheses (see Table 1) and conducted our search in four comprehensive digital databases (PsycINFO, ERIC, Web of Science, and Scopus) to ensure that the review included all the relevant studies.\n\nTo guarantee that only studies meeting the standards of the scientific community were identified, we focused exclusively on peer-reviewed articles and excluded gray literature. Given our interest in analyzing and assessing current research practices, we opted to consider studies published since 2010. The year 2010 is also pivotal in terms of digital technologies, for example, with the release of the first electronic tablet (Apple iPad), which opened the door to new ways of using technology in teaching and learning practices. We searched only for studies published in English.\n\nWe conducted our search on February 5, 2021, and obtained 1415 records (see Table 1). After downloading the bibliographic references and importing them into the literature management software \"citavi,\" we deleted the duplicate articles (automatically and manually) and obtained 695 unique articles.",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_01"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.1.2. Screening and selection",
+              "parent_subsection_id": "s_2_1",
+              "text": "According to the PRISMA flow diagram [W4236476849], we divided our screening and selection process into three main steps (see Fig. 1). In the first screening step, we considered only the titles and abstracts of the articles. We included all studies that: have an abstract written in English, mention the expression \"technology integration\" (or \"ICT integration,\" \"ICTs integration,\" \"computer integration\"), and report the results of an empirical survey study. We excluded studies using methodologies other than surveys (e.g., meta-analysis, observation studies, purely qualitative studies, etc.), studies not published in peer-reviewed academic journals (e.g., master's theses, dissertations, books, conference proceedings, etc.), studies from research fields other than educational research, studies that do not consider any K\u201312 level, and studies focusing on TI-related constructs without measuring TI itself. Based on the information in the title and abstract alone, it was not always possible to determine whether to include the articles. All articles for which\n\n**FIGURE 1**\n**PRISMA 2020 flow diagram for new systematic reviews, which included searches of databases and registers only.**\n\n*[Image description: A flow diagram detailing the selection process for the systematic review. It shows 1415 records initially identified. After removing 720 duplicates, 695 records were screened. 379 records were excluded, leaving 316 reports sought for retrieval. 4 reports were not retrieved, leaving 312 reports assessed for eligibility. 276 reports were excluded for reasons including: No English (n=6), No K12 (n=3), No scientific journal (n=1), No full instrument available in English (n=131), TI is not measured quantitatively (n=21), Does not intend to measure TI (n=108), Not enough participants (n=1), Ambiguous terminology (n=5). This results in 36 studies included in the review.]*\n\ndoubt occurred were coded as such and included in the subsequent screening and selection step. During this first screening step, 379 documents were excluded.\n\nIn the second screening step, we checked the availability of the studies. If the studies were not fully available online, or if we could not access the article by contacting university libraries and authors, we excluded them (\\(n = 4\\)).\n\nIn the last step, we considered the full articles and applied our exclusion and inclusion criteria. Again, we excluded studies that were not in English (\\(n=6\\)), that did not consider a K\u201312 level (\\(n=3\\)), and that were not published in scientific journals (\\(n=1\\)). We also excluded studies that did not use fully documented survey instruments in English (available inside the study or in another study) (\\(n=131\\)). We included only studies in which TI was measured quantitatively within a survey study and that explicitly stated an intention to measure TI (or \"ICT integration,\" \"ICTs integration,\" \"computer-integration\") or an aspect of it. We excluded all studies that exclusively intended to measure related constructs, such as attitude or self-efficacy toward TI, without measuring TI directly. However, we included studies that explicitly stated that they operationalized TI by measuring related constructs, such as attitude or self-efficacy toward TI. In this last step, we also excluded articles with 10 or fewer than 10 participants (\\(n=1\\)) and articles in which the term TI was used in an ambiguous way (\\(n=5\\)). During this phase, we excluded 276 articles and selected 36 articles that used 35 instruments to include in our content analysis.",
+              "citations": [
+                "W4236476849"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Data extraction and content analysis",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.2.1. General information",
+              "parent_subsection_id": "s_2_2",
+              "text": "For each instrument, we collected the following information: number of items; number of dimensions measured; whether the instrument measures TI holistically; whether the instrument TI as a process with different stages; whether information about validity is available; whether information about reliability is available; whether the instrument is based on a theory/concept of TI; whether the instrument is based on another theory/concept (e.g. technology use, diffusion of innovations); whether the instrument is based on an educational document, program, or curriculum; and whether the instrument is based on other instruments; school level; type of participants; number of participants. For almost every aspect, we used the following answer options/codes: yes, no, vague/not clear. Table 3 indicates the meaning of the different codes in cases in which it is not intuitive.\n\n**TABLE 2**\n**Survey-Instruments found with the systematic review.**\n\n{{TABLE:tbl_02}}\n\n**TABLE 3**\n**Coding scheme for general information.**\n\n{{TABLE:tbl_03}}\n\n##### 2.2.2. Dimensions of TI\n\n2.2.2.1. Teacher-related aspects. For each instrument, we examined whether the instrument considers teachers' attitudes or beliefs toward TI-related practices, teachers' actual technology practices for teaching-related purposes, teachers' TI-related knowledge, skills, competencies or self-efficacy, teachers' professional development related to TI, and teachers' reflectiveness toward their TI practices.\n\n2.2.2.2. Students' related aspects. For each instrument, we examined whether the instrument considers students' attitudes or beliefs toward TI-related practices, students' actual technology practices for school-related purposes, students' TI-related knowledge, skills, competencies or self-efficacy. And students' motivation or engagement.\n\n2.2.2.3. School-related aspects. For each instrument, we examined whether the instrument considers the school ICT infrastructure, leadership-related factors such as school vision and policy, and school ICT culture (e.g., aspects such as teachers' support and collaboration among teachers).\n\n##### 2.2.3. Aspects related to the quality of TI in instructional practices\n\nFor each instrument, we examined a) whether the instrument considers the general quality of TI, b) the effectiveness of teaching and learning practices, c) the use of technology to support different instructional activities, d) the use of technology to implement and emphasize constructivists/student-centered pedagogies, e) students' activities requiring students' cognitive activation/higher-order thinking skills, f) students' support, g) classroom management, h) differentiation of the teaching practices, i) students' technology use for investigation and (re)searches online, j) students' technology use for self-regulated learning, k) students' technology use for collaboration and cooperation, l) the classroom use of simulations, animations and visualizations, and m) the emphasis on media literacy, safety and ethics. We coded these aspects according to the coding scheme presented in Table 4.\n\nThe categories cognitive activation, students' support, and classroom were deductively inferred and are based on the German framework of Three Basic Dimensions of Teaching Quality [W2788963943]; all the other categories were inductively inferred from the analyzed material.\n\n**TABLE 4**\n**Coding scheme for aspects related to the quality of technology integration.**\n\n{{TABLE:tbl_04}}",
+              "citations": [
+                "W2788963943"
+              ],
+              "tables_in_text": [
+                "tbl_02",
+                "tbl_03",
+                "tbl_04"
+              ]
+            }
+          ],
+          "text": "After concluding the systematic review and identifying the 35 available survey instruments used by researchers to measure TI from 2010 to 2021, we analyzed them by applying content analysis focusing on the aspects addressed in the research questions.\n\nAs a first step, we collected general information about the instruments. If the studies themselves contained the complete documentation of the instrument, we relied on them; if they did not, we considered either the most recent publication containing the full instrument available online or the original one (e.g., CBAM LoU, [UNMAPPED:46]). In both cases, the publication referenced was retrieved and coded. We assessed only the parts of the instruments referred to in the studies identified in the systematic review. For each instrument, we collected the following information: the name of the instrument (when available), references of studies (found with the systematic review) using the instrument, and reference of publication used for data extraction. We also assigned an identification number to each instrument (see Table 2).\n\nIn the second step, we analyzed the instruments by applying content analysis (following the steps done by Tang et al. [W3000232414]). We first familiarized ourselves with the collected material (journal articles found with the systematic review and instruments' documentation). Second, we developed a coding scheme to systematically extract information from our material that took into account our research questions and the specificity of our data. Third, we applied the coding scheme to all the collected material. During this process, we improved the initial coding scheme (by adding, removing, and clarifying categories) and started over again with the information extraction procedure. Fourth, after reaching a stable coding scheme, two coders individually coded the same randomly selected 8 (22.86%) of the instruments and reached an overall inter-rater agreement of 96.54%. Any discrepancies were discussed and resolved. Finally, one coder coded the remaining instruments.\n\nFor each instrument, we extracted a) general information (including information about the instruments' theoretical and conceptual underpinnings); b) dimensions of TI measured (teacher-related aspects, student-related aspects, and school-related aspects); and c) information about aspects related to the quality of TI in instructional practices.",
+          "citations": [
+            "W3000232414"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "46"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "To answer the first research question, we conducted a systematic review [UNMAPPED:43, UNMAPPED:44] of quantitative survey studies measuring TI using questionnaires. We used the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) [W4236476849] as guidelines to report our review process. We retrieved 695 records published between January 2010 and March 2021. Thirty-six articles that used 35 different survey instruments met our eligibility criteria. We then analyzed the instruments collected in the systematic review by applying content analysis to address our four other research questions.",
+      "citations": [
+        "W4236476849"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "43",
+        "44"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Results",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this session, we present the results of the study organized by research question.\n\n**a) Which quantitative instruments have researchers used to measure TI in K\u201312 education from 2010 to 2021?**\n\nTable 2 contains the survey instruments that were identified in the systematic literature review. Apart from the Stages of Adoption of Technology (SoA) [W2096859876, W2565504410], which has been used five times, and CBAM-LoU [UNMAPPED:46], which has been used two times, all instruments were used once in the included studies.\n\n**b) What are their main properties?**\n\nTable 5 shows that the instruments are composed of 1\u201370 items and measure from 1 to 10 dimensions of TI. Eight of the instruments measure TI as a holistic construct that includes both school-related and people-related factors. Four instruments measure TI as a process, while 31 measure TI as a state or result. Most instruments were developed for primary and secondary education levels. Twenty-six instruments were designed for in-service teachers, five for pre-service teachers, two for students, and two for school principals or ICT coordinators. Only a few instruments have been developed to measure TI in upper secondary schools or kindergartens. Furthermore, 10 survey instruments have vague or no indications of validity, and 11 have vague or no indications of reliability.\n\n**c) Are the instruments based on concepts or theories?**\n\nAccording to Table 5, 10 instruments are based on TI-specific concepts or theories (e.g., TPACK), 7 are based on other more general theories (e.g., diffusion of innovations), and 4 are based on specific educational programs, documents, or curricula. Nine instruments have no theoretical or conceptual underpinnings but are based on previous instruments, and the other nine instruments are neither based on concepts or documents nor on previous instruments.\n\n**d) What dimensions/aspects of TI are measured?**\n\nA clear trend emerges when analyzing the data reported in Table 6 that most instruments (\\(n=32\\)) are related to classroom practices (i.e., teachers' and students' technology practices for teaching and learning purposes). All instruments but one consider at least one teacher-related factor. Ten instruments do not include student-related aspects. Only eight instruments comprise factors related to the school context.\n\n**e) Which aspects related to the quality of TI in instructional practices are measured?**\n\nMost of the instruments analyzed measure at least one aspect related to the quality of TI in instructional practices (\\(n = 31\\)). Two ask\u2014each with a single item\u2014the perceived general quality of TI; ten instruments ask the participants if TI makes teaching or learning more effective. Twenty-nine instruments measure (at least with one item) some pedagogical aspects, and six of them focus particularly on constructivist pedagogies.\n\nAmong the most considered pedagogical aspects of TI are using technology to carry out activities requiring students' cognitive activation and higher-order thinking skills (\\(n=16\\)), using technology to promote collaboration and cooperation between students (\\(n=14\\)), and using technology to allow students to carry out investigations and (re)searches online (\\(n=13\\)). From the perspective of the three basic dimensions of teaching quality [W2788963943], many of the instruments measure the use of technology to foster cognitive activation or higher order thinking skills. However, only eight instruments measure whether teachers use technology to support students in some way, and only one instrument considers the use of technology in relation to classroom management.\n\nIn addition, eight instruments probe whether technologies are used to increase teaching differentiation, 3 ask whether they are used\n\n**TABLE 5**\n**General information about the instruments.**\n\n{{TABLE:tbl_05}}\n\n*Note: X = Yes; ? = Vague/Not clear.*\n\n**TABLE 5 (continued)**\n**General information about the instruments.**\n\n{{TABLE:tbl_06}}\n\n*Note: X = Yes; ? = Vague/Not clear.*\n\n**TABLE 6**\n**Dimensions/aspects measured by the instruments.**\n\n{{TABLE:tbl_07}}\n\n*Note: X = Yes; ? = Vague/Not clear.*\n\nto promote independent/self-regulated learning among students, and 8 ask whether digital technologies are used for visualizations and simulations. Finally, five instruments measure whether issues such as the ethics and safety of technology use, the evaluation of the reliability of online sources, or the impact of technology on society are addressed in teaching.",
+      "citations": [
+        "W2096859876",
+        "W2565504410",
+        "W2788963943"
+      ],
+      "tables_in_text": [
+        "tbl_05",
+        "tbl_06",
+        "tbl_07"
+      ],
+      "citations_unmapped": [
+        "46"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "a) Which quantitative instruments have researchers used to measure TI in K\u201312 education from 2010 to 2021?",
+          "subsubsections": [],
+          "text": "The results of our systematic review (see Table 2) revealed that only the SoA [W2565504410] and CBAM-LoU [UNMAPPED:46] were used in more than one study. Therefore, it seems that these two instruments are the most well-known and established instruments for measuring TI. Nevertheless, considering the recent shift of research focus on the quality of TI in instructional practices and the importance of addressing aspects related to the quality of TI, their use may be problematic, as they do not properly measure pedagogical or other aspects related to the quality of instructional practices. For example, in the CBAM-LoU instrument, which was developed for teachers, the only answer option that might correspond to the consideration of pedagogical or instructional design aspects is the following:\n\n> \u201cI vary the use of information technology in education to increase the expected benefits within the classroom. I am working on using information technology to maximize the effects with my students.\u201d [UNMAPPED:46]\n\nHowever, no details are asked about the concrete integration of technologies for teaching or learning practices. Furthermore, it is not clear what is meant by \u201cbenefits\u201d and \u201ceffects.\u201d Another problem with these two instruments is that they both measure the attitudes and self-efficacy of teachers more than their actual behaviors or practices. For example, even if a teacher recognizes themselves in the last stage of the SoA instrument (item wording of Stage 6: \u201cI can apply what I know about technology in the classroom. I am able to use it as an instructional tool and integrate it into the curriculum\"), there is no certainty that the teacher is actually integrating technology into their lessons, only that they feel able to do so. Petko [W2080816315] has already raised similar issues regarding the SoA instrument. He pointed out that the use of the SoA instrument in the will, skill, and tool model can lead to invalid results, as the presence of measures related to teacher attitude and competence in both the independent and the dependent variables may lead to issues of autocorrelation.\n\nFurther, it must also be highlighted that the SoA instrument is based on a theory about the learning stages of adults starting to use email [W2009627170], and the CBAM-LoU instrument is based on a general theory about innovation adoption [W1981883686]. Thus, both instruments are based on general theories and not on theories specific to teaching or TI in a formal educational context.\n\nLastly, both instruments conceive TI as the process teachers go through when they start integrating technology into their teaching practices. For this reason, we believe that the two instruments are only useable in studies with teachers who began their careers without integrating digital technologies in their teaching practices. Therefore, it might be inappropriate to apply these measures in studies with teachers who have learned to integrate digital technologies from the beginning of their careers or in contexts where the use of technology is mandatory, ubiquitous, or taken for granted.\n\nThe fact that all the other instruments from the systematic review are used only once indicates that regardless of the many different instruments developed and available, none of those has established itself as a reference or standard instrument for measuring TI and that several studies do not consider it necessary to use established instruments. This fact could further be interpreted as an indicator of the great heterogeneity of research on TI.",
+          "citations": [
+            "W2565504410",
+            "W2080816315",
+            "W2009627170",
+            "W1981883686"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "46"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "b) What are their main properties?",
+          "subsubsections": [],
+          "text": "Our analysis showed that some instruments measure TI as a state and others as a process and that some studies measure TI as a holistic construct, whereas others capture it as a particular construct. This highlights the lack of a shared understanding of how to define and measure TI. As explained regarding the SoA instrument, TI is sometimes conceptualized as the process that teachers go through as they begin to use technologies in their teaching practices. In other instruments, however, TI is the frequency of use of technologies in classroom practices (e.g., Id. 34 \u2013 Table 2), and for many others, it is a complex and holistic phenomenon that involves factors related to teachers, students, and school culture (e.g., Id. 32). The results presented in Tables 6 and 7 reveal that TI can be conceptualized with yet additional meanings (e.g., the use of technology to enhance learning and teaching practices or the transformative use of technology to make teaching and learning practices more constructivist). We believe that the existence of different\n\n**TABLE 7**\n**Aspects related to the quality of TI in instructional practices.**\n\n{{TABLE:tbl_08}}\n\n*Note: X = Yes; ? = Vague/Not clear.*\n\ninstruments that measure such diverse aspects of TI is not problematic. What is problematic is that all these instruments claim to measure TI. The problem thus lies mainly in the lack of precision in the use of the term \u201cTI.\u201d\n\nAs teachers are regarded as playing a key role in the TI process [UNMAPPED:24], it is understandable that most of the instruments have been developed for them. The scarcity of instruments targeting school leaders and ICT coordinators (Id. 3 and 17) probably results from the fact that the school factors of TI are often overlooked [W1991244612].\n\nThe few instruments targeting kindergarten and upper secondary school may indicate that the research focused primarily on primary and secondary school, leaving other school levels under-researched.\n\nAbout one-third of the studies lacked indications of the validity or reliability of the instruments. In some cases (e.g., Id. 23), this deficiency went hand in hand with the poor quality of the studies and in others (e.g., Id. 1, 2, 3, 11), it seems that the authors of the studies did not intend to develop statistically valid instruments but simply to describe a specific situation.\n\nOur results confirm the findings of Lai and Bower [W2913861772], who found a huge diversity of instruments but only a few that consider the school level and assess the use of technologies holistically.",
+          "citations": [
+            "W1991244612",
+            "W2913861772"
+          ],
+          "tables_in_text": [
+            "tbl_08"
+          ],
+          "citations_unmapped": [
+            "24"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "c) Are the instruments based on concepts or theories?",
+          "subsubsections": [],
+          "text": "The lack of conceptual or theoretical basis in many instruments is in line with the findings of Hew et al. [W2921836496], who found a general lack of theoretical underpinnings in the field of educational technology. In the screening procedure, we found that several studies used the term \u201cintegration\u201d as a synonym for \u201cuse\u201d (e.g., Id. 27), and it seems that they consider its meaning to be something self-evident that does not need any definition or explanation. Therefore, many studies do not adequately define and operationalize the term TI, formulate the instruments\u2019 items intuitively, or apply existing instruments without reflecting on their appropriateness and validity.\n\nThe examined studies and instruments often do not refer to theories. When they do, they are often not specific to educational and learning science but are more general (e.g., the theory of planned behavior or the theory of diffusion of innovation). Moreover, in some cases, the studies are based on frameworks and models (e.g., the TPACK framework and the Will Skill Tool model) rather than on elaborated explanatory theories (for a more detailed discussion of the difference between theories, frameworks, and models, see [W3118779761]). Thus, the contribution of the examined studies to the development of educational theories is often minimal or completely absent.\n\nInterestingly, four of the instruments are based on curricula or educational programs (Id. 3, 13, 15, 17). These instruments measure whether technology is used to achieve both technology-specific and more general learning goals set by a program or curricula. With such assessments, it is possible to measure whether teachers integrate technology to ensure good teaching as well as effective teaching (see [W2020917648]). However, these instruments can be used only where certain programs and curricula are being implemented, and the results obtained are, therefore, context-specific and not generalizable.",
+          "citations": [
+            "W2921836496",
+            "W3118779761",
+            "W2020917648"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "d) What dimensions/aspects of TI are measured?",
+          "subsubsections": [],
+          "text": "Although the instruments are quite different, they all tend to focus mainly on factors related to teachers and classroom practices, leaving other aspects (e.g., school-related factors) under-investigated. The lack of attention to school-level aspects of TI was previously observed by Tondeur et al. [W1991244612]. The fact that 10 instruments do not consider any aspect related to students could be an indicator that the scholars who developed have a teacher-centered view of teaching. However, several researchers argue that digital technologies are highly suitable for student-centered and constructivist teaching and learning practices [W1992413446, W1982326117, W2167742771, UNMAPPED:88]. These practices require students to use technology themselves. Thus, assessing students' technology-related activities in the classroom is often seen as crucial. Furthermore, having items that also consider students' and not just teachers' TI practices is important to reduce the risk of social desirability bias that might occur when using self-reporting instruments in which teachers have to assess their own TI practices [W842806313, W2115966279, W2035094573, W2091704709].\n\nThe lack of consideration given to students' digital competencies and 21st-century skills within measures of TI might be problematic, as several scholars have stated that they are of primary importance and the ultimate goal of integrating digital technologies into teaching and learning practices [W4312794376, W1525639677, W2987399914].",
+          "citations": [
+            "W1991244612",
+            "W842806313",
+            "W2115966279",
+            "W2035094573",
+            "W2091704709",
+            "W4312794376",
+            "W1525639677",
+            "W2987399914"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "e) Which aspects related to the quality of TI in classroom practices are measured?",
+          "subsubsections": [],
+          "text": "Contrary to what may be thought considering the current debate around the quantity and quality of IT, our systematic review shows that instruments measuring pedagogical or other aspects related to the quality of TI have been used for several years (e.g., Id. 3, 9, 15, or 30, which is based on [W2040516125]). However, these instruments are sometimes based on specific pedagogical programs and curricula, and thus the results obtained are not generalizable. In other cases (e.g., Id. 1, 10, 12), studies using instruments measuring aspects related to the quality of TI do not contain any conceptual or theoretical reflections on the quality of TI and, for this reason, have probably not been considered by the current debate about the quantity and quality of TI.\n\nIt should also be mentioned that often, only a small part of the instrument items measure aspects related to the quality of TI in instructional practices. For example, in the instrument developed by Men and Noordin [W2986514909], only 2 items (of 13) measure overtly pedagogical aspects (\u201cDrill and Practice\u201d and \u201cGame-based learning\u201d); all other items ask about the frequency of use of different devices and applications.\n\nInterestingly, our review shows that six instruments focus on using technology to implement constructivist or student-centered pedagogies. Given that digital technologies are highly suitable for student-centered and constructivist teaching and learning practices [W1992413446, W1982326117, W2167742771, UNMAPPED:88], this focus reflects some of the trends and consensus we also find in TI research.\n\nRegarding the three basic dimensions of teaching quality [W2788963943], the use of technology to foster students' cognitive activation seems to be the most important dimension. This aspect is also reflected in the instruments' focus on constructivist pedagogies, which imply students' active engagement in constructing their knowledge, and in the presence of items that assess specific activities with a higher potential for cognitive activation, such as students' technology use to conduct online (re)searches and investigations or to collaborate online. In contrast, the other two dimensions of the three basic dimensions framework are seldom considered. This is problematic because classroom management and student support are crucial dimensions in ensuring quality teaching and good learning outcomes [W2788963943, UNMAPPED:96].\n\nAmong the aspects related to the quality of TI measured by the instruments, we found some related to the affordances of digital technologies for teaching and learning practices. The term \"digital affordances\" in the context of learning theories refers to the specific potential of digital technology to change the way we learn and teach [W3013077979]. Previous research has identified numerous digital affordances in the school context (see, for example, [UNMAPPED:98]). In our content analysis, we found the following aspects regarding digital affordances: the use of technologies to promote connectivity and collaboration among students; the use of technologies to enable simulations, animations, and visualizations, the use of technologies to increase differentiation in teaching practices, and the use of technology to promote self-regulated and independent learning. The presence of these affordances is important because it highlights that TI, for many scholars, does not only mean using technologies to reproduce or enhance traditional teaching and learning practices but also to extend and develop those practices by considering the new potentials of digital technologies.\n\nDigital technologies not only have the potential to change the way we teach and learn, but they are also radically changing our society, bringing with them both new chances and new risks. Therefore, some educational technology experts have suggested that digital media education should not only help learners understand how technology works but also teach them how they can use it and its effects on society [W154757115, UNMAPPED:99]. Furthermore, competencies such as being able to handle digital information (i.e., to access, evaluate, share, and communicate it) are crucial for actively participating in 21st-century society [W2987399914]. The fact that only five instruments consider aspects related to the ethical, societal, and security implications of TI is thus problematic.\n\nFinally, our analysis highlights different ways to operationalize aspects related to the quality of TI in instructional practices. To measure the quality of TI, survey instruments can, for example, ask whether digital technologies are used to achieve specific learning goals, to make teaching and learning practices more effective, to sustain dimensions of teaching quality (e.g. cooperative activation, classroom management and students' support), to support pedagogy (e.g. constructivists pedagogies), to exploit the affordances digital technologies, to address ethical and safety aspects related to the use of digital technologies, or to foster students' digital and media literacies. This variety highlights the lack of a shared concept of the quality of TI, but on the other hand, it may inspire scholars who intend to develop survey instruments to measure aspects related to the quality of TI.",
+          "citations": [
+            "W2040516125",
+            "W2986514909",
+            "W2788963943",
+            "W3013077979",
+            "W154757115",
+            "W2987399914"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "96",
+            "98",
+            "99"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This study conducted a systematic review to identify survey instruments used to measure TI from 2010 to 2021 in K\u201312 educational research. Our review yielded 35 complete instruments available online in English. The instruments were analyzed following a content analysis methodology. The results highlight several underlying problems in TI research, which will be addressed in response to each of our research questions.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Limitations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The present study has several limitations. One of these is that only studies and instruments published in English were considered. This likely leads to an underrepresentation of countries in which the English language is not, or is rarely, the language used for research publication. Another limitation is that we focused only on peer-reviewed journal articles. This choice was made with the intent to examine only scientifically sound studies and instruments and lead to filtering out the gray literature, and probably also studies that present non-significant results (publication bias). Another limitation lies in the accessibility of the instruments; as per our screening process, only those fully available online were considered. However, this also raises the question of research transparency and the need for authors to share their material to allow for further analysis or replication.\n\nThe lack of a shared definition of TI highlighted by this study is also an important limitation of the study itself, for which screening had to be conducted based on a linguistic level (i.e., on the use of the term \u201ctechnology integration\u201d) rather than conceptual or theoretical aspects. As a result, studies, and instruments that researchers may consider as investigating TI but that do not explicitly refer to the term \u201cTI\u201d in their title or abstract were filtered out.\n\nFinally, we opted to focus on quantitative survey instruments, but other types of instruments (e.g., rubrics or qualitative measures) are also used (see, for example, [W2956643443]). Therefore, we believe that future research should also consider these different types of instruments and examine whether there are differences between different research methods and approaches.",
+      "citations": [
+        "W2956643443"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Conclusions and recommendations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This study illustrates several underlying problems of TI research and may help researchers to select appropriate instruments measuring TI or to develop new instruments measuring the quantity and quality of TI. Furthermore, by highlighting several ways to operationalize aspects related to the quality of TI into instructional practices, our study also contributes to shifting the focus of TI research from purely technological aspects (such as the frequency of use of different devices) to more qualitative ones. Focusing more on pedagogical and other aspects related to the quality of TI can also be useful for practitioners seeking to improve teaching and learning practices through technology. Several recent studies have empirically demonstrated that TI quality positively impacts student learning outcomes [W4206555364, W3210747570, W3011365287].\n\nOne of the biggest issues highlighted by the study is the lack of a shared conceptualization of TI and of the quality of TI. To provide greater clarity, we recommend that future research on TI make sure to explain what they precisely mean by the term \"TI\"\u2014the use of technology? The process of teachers starting to use technology in teaching? The degree to which technology is integrated into pedagogy and vice versa? The use of technology to enhance teaching and learning practices? The digital transformation of school culture? The use of technology to improve students' media literacy? All of these constructs are different, but, as we expounded earlier, they are so far still indistinctively labeled as TI.\n\nBased on the definitions reported at the beginning of the article and the results of the present content analysis, we propose to define TI as the use of technology in educational contexts to support educational goals, or as the process leading to that. Our results pointed out that even if it is often conceptualized as a process, TI is typically measured as a state at a given stage or as a result. This definition is broad enough to be appropriate for most of the instruments analyzed and implies considering aspects related to the quality of TI. As an extension of the definition provided by Davies and West [W198366145], it stresses the role of the alignment of technology use to the educational context, such as teaching methodologies, pedagogy, teachers' and students' skills and beliefs, students' characteristic and learning outcomes, school culture and infrastructure, educational environment, curriculum, and assessment. Whether technology use succeeds in effectively supporting educational goals might depend on how well it is integrated and aligned with important aspects of the educational context. As the term \"technology integration\" implies, considering aspects regarding the educational context might be the defining aspect of research on TI in comparison to other strands of research on educational technology and technology use in general. To avoid ambiguity, we also find it important to always state whether TI is conceptualized as a holistic or as a particular phenomenon. Finally, we recommend that the instruments used in the studies be fully published and documented within the study so that it is possible to determine what exactly is measured and how.\n\nSimilar to Hew et al. [W2921836496], our study also showed that many of the studies analyzed had little to no theoretical underpinning. To contribute to theory development about TI, researchers should develop valid and reliable instruments based on theories, frameworks, models, or concepts. Further, if the purpose of a study is to develop a theory, the study should seek to obtain generalizable results and not just to describe a particular situation.\n\nOverall, our study showed that in most cases, TI instruments focus on classroom practices and measure TI from the teachers' perspective. Future studies, including the development of new TI instruments, could therefore consider aspects of the concept that have so far received little attention (e.g., school-level aspects or student digital competencies). The PISA 2021 ICT framework [W2944113112], which was developed to assess TI in an educational context, conceptualizes TI as a holistic phenomenon and offers an overview of additional aspects of TI that can be studied. Regarding the quality of TI in instructional practice, future studies should more closely consider the dimensions of classroom management and student support. More instruments could also be developed to measure TI from the perspectives of students and school leaders.\n\nAnother perspective derived from this study is the combined use of different instruments. In this way, it would be possible to show the complexity of the TI while cross-validating the instruments.",
+      "citations": [
+        "W4206555364",
+        "W3210747570",
+        "W3011365287",
+        "W198366145",
+        "W2921836496",
+        "W2944113112"
+      ],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4317569062_tables.md"
+}

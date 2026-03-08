@@ -1,0 +1,381 @@
+{
+  "id": "W1505282872",
+  "metadata": {
+    "title": "Statistical Control of Software Process: A Systematic Review",
+    "n_sections": 3,
+    "n_subsections": 3,
+    "n_subsubsections": 7,
+    "n_tables": 19
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The systematic review is a means of assessing and interpreting all available information corresponding to a given research topic, which allows proper breadth, depth, rigor, and consistency in the analysis and a more efficient synthesis of the literature [W2168894761].\n\nThe aim of this paper is to analyze critically the current state of the Statistical Process Control applied to software processes. According to the ISO/TR 10017 report, the usefulness of statistical techniques is easier control of the variability that can be observed in the behavior and outcome of practically all processes, even under seemingly stable conditions. The report also presents SPC within the set of statistical techniques used [W220935706]. The use of SPC in the software industry began in the 1980s when some researchers adopted it as a tool for process improvement [W2132505929, UNMAPPED:3]. The vast majority of studies have referred to using SPC as a tool for improvement, although there are debates about its application in software engineering processes [W2062579743, W1976740603] and the level of maturity that the organization must have. SPC is based on the use of control charts, from which performance is monitored and evaluated, after establishing the acceptable limits of operation of process variation and supervising its progress over time. From control charts can be extracted different indicators, some of them not used often in software processes as they differ profoundly from industrial processes sectors. Hence, in order to apply properly SPC in software processes it is essential to know the nature of such processes compared with manufacturing processes that have been applied SPC [W1584023401].\n\nIn this vein, it is understood that the literature can help to determine the interest in the SPC and the use of this powerful tool in quantitative management of software engineering.\n\nTo carry out the systematic review process and definition of the protocol, the guidelines represented in Figure 1 have been followed. In general, a systematic review can be seen as a process consisting of three main stages: planning, execution, and reporting. Kitchenham [W2032860265] provides more detail on how to set up and execute the systematic review.\n\nThis article describes in detail the search, the review process, and selection of studies to determine the point where the research focus is located. The following section develops the systematic review process in the following activities: i) formalize the research questions according to the problem or problems faced; ii) search the available literature for testing according to a systematic protocol and retrieve data from the identified sources to perform a state of the art of SPC; iii) analyze the evidence gathered and use it to support decision-making and conclusions that establish the starting point for defining the documentation to structure a methodology for implementation of SPC. Hence, the most appropriate methods can be identified for applying SPC as an effective strategy for improving the quantitative management of software processes. Finally, the main conclusions and lines of future work are presented.",
+      "citations": [
+        "W2168894761",
+        "W220935706",
+        "W2132505929",
+        "W2062579743",
+        "W1976740603",
+        "W1584023401",
+        "W2032860265"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "3"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Systematic Review of the SPC",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Planning of the Review",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.1.1 Questioning",
+              "parent_subsection_id": "s_2_1",
+              "text": "**Approach.** The research establishes a general framework that clearly defines the objectives of the investigation, to show various problems and formulate questions. The purpose of the questions is to identify, within the literature, the most important works that have focused on statistical process control for quantitative management in Software Engineering.\n\n**Issue.** The companies' quality personnel who use SPC valuated in CMM Level 5 are often concerned that SPC does not seem to give significant benefits to the company or the managers of software projects. In particular, managers complain that information is not precise enough to help them with their productive activities. This seems to demonstrate that SPC techniques are not being adequately or properly used in the production of software, perhaps for the specific characteristics of software processes.\n\nOn the other hand, it is suggested that to assess whether SPC is being used effectively by professionals is of importance, because misuse of control charts usually arises from lack of statistical foundations that support them. According to Ruiz-Falc\u00f3 [W4289888736], control charts are often used incorrectly or the limitations are unknown. Additionally, when supporting management decisions, control charts, along with their indicators, the performance of the process is assessed in order to establish the acceptable limits of operation and variations thereof, as well as monitor and evaluate the evolution in time. However, many indicators that can be extracted from a control chart are not used often in the software processes that differ profoundly from manufacturing sectors [W1976740603].\n\nSPC constitutes a diagnostic methodology of the stability of a quality indicator of a process and its ability to meet its specifications or tolerances [UNMAPPED:14]. In this context, the indicators that conform to the appropriate metrics and allow the characteristics to be established, limits and process capability by defining control charts are unknown, as are substantially unclear the processes within Engineering Software that require and can apply SPC.\n\nIn the context of control and monitoring there are no known methods to establish criteria for systematic monitoring, so the following problems [W1506259978] are evident: monitoring involves the need to define the appropriate thresholds and use them to evaluate the performance of what is expected, considering that you cannot set limits of universal validity due to the heterogeneity of the operating environments and the large number of monitored processes; identifying abnormal behavior and promptly react to this, so it is necessary to understand what is abnormal behavior and how it can be identified; and determining how to adjust the sensitivity of monitoring in the light of continuous change of the behavior of a process that quickly reflects the variation according to the observed phenomenon or process anomalies, monitoring criterion, and implementation method, in order to articulate SPC to the management and, if possible, apply SPC to emerging companies. In this respect, it is essential to find the starting point to understand whether SPC can be used in the software and how.\n\n**Questions:** In Table 1, the research questions raised in this review are indicated.\n\n**Table 1. Research Questions**\n\n{{TABLE:tbl_01}}",
+              "citations": [
+                "W4289888736",
+                "W1976740603",
+                "W1506259978"
+              ],
+              "tables_in_text": [
+                "tbl_01"
+              ],
+              "citations_unmapped": [
+                "14"
+              ]
+            }
+          ],
+          "text": "The first phase of the planning requires the focus of the research, development, and protocol validation. To conduct a systematic review of statistical control of process in software engineering the protocol presented in Brereton, Kitchenham, Budgen, Turner, and Khalil [UNMAPPED:9] was followed, and the guidelines for systematic reviews of Kitchenham [W2032860265], along with other published systematic reviews, such as that of Baldassarre, Boffoli, Caivano, and Visaggio [W1493656870], Pino, Garc\u00eda, and Piattini [W1988388703], and Genero, Fern\u00e1ndez, Nelson, and Piattini [UNMAPPED:12].",
+          "citations": [
+            "W2032860265",
+            "W1493656870",
+            "W1988388703"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "9",
+            "12"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Protocol Development",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.2.1 Protocol Validation",
+              "parent_subsection_id": "s_2_2",
+              "text": "The SPC systematic review of Baldassarre, Caivano, Kitchenham, and Visaggio [W109804711] defines a control for the protocol, while others validate it. The validation is performed by following the protocol criteria of Brereton, Kitchenham, Budgen, Turner, and Khalil [UNMAPPED:9], and the guidelines for systematic reviews of Kitchenham [W2032860265] and Pino, Garcia, and Piattini [W1988388703].",
+              "citations": [
+                "W109804711",
+                "W2032860265",
+                "W1988388703"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "9"
+              ]
+            }
+          ],
+          "text": "To obtain the search chain the considerations of Kitchenham [W2032860265] were taken into account.\n\n**Keywords and synonyms.** Statistical Process Control, Six Sigma, Quantitative Management, and ISO/TR 10017.\n\n**Intervention.** To understand, analyze, and study the techniques of SPC, control charts, and fundamentals, its benefits and limitations, and to apply correctly these techniques to Software Engineering. To understand the application of methods to establish a systematic monitoring of diagnostic of the stability through a quality indicator of a process and its ability to meet specifications or tolerances and Six Sigma, the processes of software engineering that require SPC and appropriate metric for distributed SPC processes. This is identified with terms of quantitative management, Six Sigma, and the best known statistical techniques in the technical report [W220935706].\n\n**Control.** The systematical review of Baldasarre, Caivano, Kitchenham, and Visaggio [W109804711], which summarizes the most used SPC charts in quantitative management of software processes.\n\n**Result.** Present the current state of the art regarding the experiences and initiatives proposed by the SPC to software engineering, and carry out research activities for the knowledge of SPC techniques, applicable quantitative management, and innovative software engineering.\n\n**Population.** The experiences and SPC proposed initiatives that have been applied to software engineering and published in the source list.\n\n**Application.** Those interested in using SPC in software engineering as a tool for quantitative management to measure and improve the overall quality.\n\n**Experimental design.** Statistical techniques will not be applied to the primary studies but to the secondary ones for data synthesis, considering the control reference.\n\n**Definition of criterion for source selection.** The sources have been identified on the basis of expert opinion in the workspace, which is the scope of the systematic review.\n\n**Language of the study.** English\n\n**Search method for sources.** The execution of search results from primary sources will be conducted through web search engine SCOPUS.\n\n**Search chain.** These were based on the questions. The result is the search string S1 detailed in Table 2.\n\n**Listed sources.** Sources associated with Scopus: conferences, journals, conference proceedings, and book series, considering also contacting the authors, research groups, and experts.\n\n**Table 2. Search Chain**\n\n{{TABLE:tbl_02}}",
+          "citations": [
+            "W2032860265",
+            "W220935706",
+            "W109804711"
+          ],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Conducting the Review",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.3.1 Source Search Process",
+              "parent_subsection_id": "s_2_3",
+              "text": "The search process is given by S1 search. SPC is among the 12 most known and used statistical techniques. SPC can be traced back to the 1920s as a technique used in the context of industrial production. Since then, plenty of literature has been produced. However, its application to software is very recent; the first paper about the application of SPC for software is by Gardiner and Montgomery [W1974237200], which is considered the baseline.\n\nBaldassarre, Boffoli, Caivano, and Visaggio [W1506259978] suggest not searching articles published before 1987. In response to this recommendation, the searched documents concerning SPC for software processes range between 1989 and 2012. The search results associated S1 yielded 179 sources in digital libraries linked to Scopus: university digital libraries, printed editions of ACM, IEEE, Springer, Crosstalk, Elsevier, Alfa Omega, etc., and in commercial publications, magazines, conference proceedings, and series books.\n\nThe list of primary sources related to the investigation starts from 2002. Figure 2 shows a tendency of all sources listed by the search S1; and a tendency of the sources for extraction selected as primary sources.",
+              "citations": [
+                "W1974237200",
+                "W1506259978"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.3.2 Selection of Primary Studies: Inclusion and Exclusion Criteria",
+              "parent_subsection_id": "s_2_3",
+              "text": "The selection phase consisted of identifying the primary sources of the search sources using the criteria of inclusion and exclusion to reach the set of appropriate publications from which the data for the extraction could be taken. Consequently, the selection process was divided into two parts, ending with data synthesis.\n\n**Inclusion criterion.** The next step was to select primary studies according to the inclusion criterion. First, the title, publication year, and keywords were recognized, to exclude those sources that seemed totally irrelevant. If there was no certainty in this scan, the abstracts were read. The inclusion of the documents in this review refers mainly to the fact that the simplest information will present: concepts, tools, and techniques of SPC and statistical foundations necessary for its quantitative application of software processes. In particular, theoretical works are included that discuss SPC techniques in the context of software processes, empirical studies that incorporate real data analysis of software processes, documents that expose a theoretical and empirical content of application methods and implementation of SPC to software. As a result, 11 duplicate documents were removed and 78 relevant studies selected.\n\n**Exclusion criterion.** From the relevant sources an exploration of content and reading the introduction and conclusions was performed to ensure that the exclusion criterion was met. Documents that discussed methods to control software development using measurements that do not explicitly include the SPC as quantitative management technique were excluded, as well as documents that do not respond to the application of SPC to software production, and documents and reports that are just a summary or PowerPoint presentation. Twenty five documents were selected as primary studies, which are listed and stored along with the information that could have been accessed, and the most important ideas of the study registered.\n\n**Table 3. Types of Work in the Search Result**\n\n{{TABLE:tbl_03}}\n\n**Table 4. Attributes to Synthesize the Results**\n\n\n{{TABLE:tbl_04}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_03",
+                "tbl_04"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.3.3 Study for Assessing the Quality and Data Extraction",
+              "parent_subsection_id": "s_2_3",
+              "text": "For information extraction the quality of primary studies is estimated by examining the entire document. The quality of the sources is evaluated by attributes (R1,..., R5) (Table 4).\n\nThe quality assessment is introduced as criterion for inclusion/exclusion, with verification of the selection criteria, giving quality attributes to documents on a scale range of [W2168894761, UNMAPPED:0], as shown in Table 5. Quality assessment allows for the detailed recognition of information sources, distinguishing the nature of the document (theoretical or empirical) and evaluating it against the research questions to extract the necessary information.\n\nThe inclusion/exclusion criteria result in primary studies which refer to the search chain S1. Many documents did not meet the inclusion criteria. This generated the identification of 25 sources including conference proceedings, journal articles, conference papers, and books that provide a current status of SPC and its application to advanced quantitative management software processes.\n\n**Table 5. Quality Assessment of Study Document \u21166**\n\n{{TABLE:tbl_05}}",
+              "citations": [
+                "W2168894761"
+              ],
+              "tables_in_text": [
+                "tbl_05"
+              ],
+              "citations_unmapped": [
+                "0"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_3_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "2.3.4 Results from Extraction",
+              "parent_subsection_id": "s_2_3",
+              "text": "The results of the quality assessment allow to distinguish the nature of the document and the information that answers the research questions (RQ1, RQ2,... RQ5). The information of the primary studies that approves the attribute (R1, R2,... R5) is extracted to a registration form for each of the primary studies.\n\n**Registration form for the extraction.** The format is structured with the following rows: number, name, document type (conference proceedings, conference, magazine publishing, book, monograph), date, author, country; Results of the study: methodology followed (theoretical, empirical validation, case study); if applies to R1 theoretical approach: SPC techniques in software, statistical foundations, concepts and techniques that complement it; used control charts; processes capacity concept and Six Sigma, metrics, entities that can be measured with SPC in the software process; if applies to R2, benefits and limitations of SPC, SPC empirical validation in software; if applies to R3 study cases of SPC applied in measuring process with CMMI < 4 or emerging organizations and process requirements as pre stage to apply SPC; if applies the SPC implementation to the process, monitoring methods, anomalies, stability tests, and settings; Six Sigma management methodology, R5 Study cases of the software quantitative management in organizations with distributed processes, organizational level, application of SPC in software process improvement and project management processes. Table 6 shows the format for document No. 6.\n\n**Data synthesis.** The results of the evaluation indicate the correspondence of the document to the questions, showing the status of the topic of interest. The extraction and synthesis of data will be communicated in a document that permits to conclude the current state of SPC software processes. This paper presents a first report of results from 25 primary sources, of which 56% are lectures, 24% journal articles, 8% monographs, 8% books, and 4% Acts of Congress (Figure 3).\n\nThe assessment determines the proportion of documents that answers the research questions for data extraction (Figure 4).\n\n**Table 6. Register Form for the Extraction of Study Document \u21166**\n\n{{TABLE:tbl_06}}\n\n**Objective Results of the Study**\n\n{{TABLE:tbl_07}}\n\n**R1: Theoretical Concepts**\n\n{{TABLE:tbl_08}}\n\n**R2: Benefits and Limitations**\n\n{{TABLE:tbl_09}}\n\n**R3: Standard Process Maturity**\n\n{{TABLE:tbl_10}}\n\n**R4: SPC Applied Methods**\n\n{{TABLE:tbl_11}}\n\n**R5: Distributed Processes Management Methodologies**\n\n{{TABLE:tbl_12}}\n\n**Subjective Results of the Study**\n\nBased on data, the exceptional point is analyzed to find and eliminate the exceptional cause. Statistical methods such as Pareto chart, diagram cause-effect, and the scatter plot are useful. A Pareto chart is a bar frequency table in descending order; frequency bars are usually associated with the types or causes of problems. When organizing causes based on frequency of problems, a Pareto chart can identify the few causes that account for most of the problems. Indicating that problems should be solved first in the processes improvement. The Pareto analysis commonly refers 80:20 (20% of causes represents 80% of the problems). This helps to identify areas that cause the most problems, which usually means getting the best return on investment when they are arranged.\n\n**Figure 3. Percentage of the Type of Documents**\n\n{{TABLE:tbl_13}}\n\n**Figure 4. Correspondence Percentage of Sources for Information Extraction**\n\n{{TABLE:tbl_14}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_06",
+                "tbl_07",
+                "tbl_08",
+                "tbl_09",
+                "tbl_10",
+                "tbl_11",
+                "tbl_12",
+                "tbl_13",
+                "tbl_14"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_3_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "2.3.5 Documentation of the Review",
+              "parent_subsection_id": "s_2_3",
+              "text": "This paper presents a first report of results from 25 primary sources, of which 56% are lectures, 24% journal articles, 8% monographs, 8% books, and 4% Acts of Congress (see Figure 3).\n\nThe assessment permits to determine the proportion of documents that answers research questions for data extraction (Figure 4).\n\nBelow, a synthesis of the obtained main results that permit answering the research questions is provided:\n\n**For RQ1: What are the initiatives and experiences of SPC in Software Engineering, the SPC control charts being used, statistical techniques, and addressed tools to complement its implementation?**\n\nR1 classifies in 85% of the documents which present initiatives and experiences of SPC techniques in software, metrics, and entities that can be measured with SPC in the software process. They also contain: theoretical basis for the SPC, and present the basic definitions and concepts; the statistical foundations of average, median, mode, range, standard deviation, variance, normal distribution, and central limit theorem; the techniques of statistical process control [SPC]; the variability by common causes and assignable causes; support tools for statistical control (data types, types of control charts); process capability and potentiality; and the concept of Six Sigma metrics.\n\nThese documents, which evidence the experiences of SPC application in software, permit to synthesize data to determine the type of control charts that are used in the software cycle processes where SPC has been applied.\n\nIt is determined that the top three processes of the development cycle that mostly use SPC techniques applying control charts are the development and code review with 27%, followed by the testing process, design, and planning (14%), and management undefined activities (14%); while processes such as maintenance, inspection, and detection of defects account for 9% each (Figure 5).\n\nData provided by the control systematic review as a reference for comparison with the data obtained is considered. It can be seen in Table 7 that the process of development and code review preceded the testing process in the application of SPC.\n\nIn the context of control charts, the documents are evidence of the most used type of charts: XmR (44%); Xbar R chart, c chart, u chart, and z chart are also applied (around 13% each), as shown in Figure 6.\n\nWhen considering the data provided by the control systematic review as reference of comparison with the obtained data, it appears that the XmR graph remains the most applied (see Table 8).\n\nTo Baldassarre, Boffoli, Caivano, and Visaggio [W1506259978], according to the contributions of the literature, the interest in the use of SPC in the context of software focuses on: applications in inspection and review, testing, maintenance, and personal software process. Other contributions have successful results of the use of SPC in the context of software, however, they do not show a clear understanding of the meaning of control charts in the context of the application in software processes.\n\nThe SPC in software requires choosing the critical processes for its application, considering that it is possible to control and improve the quality of primary processes by measuring the support processes [W2090137162].\n\nFor the choice of the chart, in the theoretical model of SPC, much of the data in the appropriate conditions can have a binomial distribution, Poisson or normal. From a practical point of view, depending on the type of data, Binomial and Poisson distribution are of considerable interest because they help to discriminate the choice of control charts. However, for Ferreiro [UNMAPPED:14] control charts are based on the properties of the normal curve for two basic purposes: to show whether a process has been operating under statistical control and to point out the presence of special causes of variation which must be corrected as they are presented; to allow maintaining the state of statistical control, since you can make decisions based on process performance over time.\n\nDepending on the quality characteristic to control and according to the type of data, control charts are divided into two groups: control charts for variables and control charts for attributes.\n\nAccording to Weller [W2090137162], the most used charts in software processes are the control chart for single variables and moving range, i.e. XmR, due to the scarcity of data, since measurements often occur only as individual values.\n\nKomuro [W2138128243] argues that the management of individual data becomes more important in the use of control charts and concludes that the XmR is more useful than ever, while X-bar-R seems to be ineffective; since it is difficult to obtain a large homogenous data set in software development, charts which can register individual data are more useful. Therefore, XmR, Z or U-graphics are adequate. Moreover, the bar chart XR, which was the most popular chart in Total Quality Management [TQM], seems to be inadequate in software development processes, as it usually assumes the size of the subgroups as constant. X-bar-S can be applied for the analysis of effects because it can be used either with a variable size of subgroups and has bound of control more accurate than Xbar-R.\n\nSome studies in which can be observed cases of application of control charts for software processes are: Wang et al. [UNMAPPED:18], Card, Domzalski, and Davies [W2102893957], Hale and Row [W4244440979], Salin, Monteiro, and Marcal de Oliveira [W4246363160], Wang, Gou, Jiang, and Che [W2144449589], Tarhan and Demir\u00f6rs [W1515385319], Alzate and Molina [UNMAPPED:24], Xiaosong, Zhen, Fangfang, and Shenqi [UNMAPPED:25], and Boffoli, Bruno, Caivano, and Mastelloni [W2065543740].\n\n**Figure 5. Percentage of Software Engineering Processes as Object of Measurement with SPC**\n\n{{TABLE:tbl_15}}\n\n**Table 7. Processes Object of Measurement**\n\n{{TABLE:tbl_16}}\n\n**Figure 6. Percentage of Control Charts Used in Software Processes**\n\n{{TABLE:tbl_17}}\n\n**Table 8. Percentage of Used Control Charts**\n\n{{TABLE:tbl_18}}\n\n**Table 9. Relation of the Use of SPC Charts in Software Processes**\n\n{{TABLE:tbl_19}}\n\n**For RQ2: What are the benefits and limitations of SPC identified in the context of software, and the evidence of the supposed benefits?**\n\nR6 responds with 85% of the documents to the benefits and limitations of SPC, SPC empirical validation in software.\n\nMost of the acquired knowledge about SPC to software processes is given by analogy with other disciplines and some experiences of its application in these processes, despite the difficulties in its implementation. According to Komuro [W2138128243], there is evidence that the SPC has positive effects on product quality, making it necessary to focus more on the processes than on the product.\n\nFor Manlove et al. [W2090137162], implementation of SPC in software processes is logically commented, but this is problematic in practice for several reasons: the software is produced by people, not machines; there are significant sources of variability within software development environment that can be difficult to minimize or control, i.e., there are multiple causes; indicators of the process behavior vary with the development cycle; and most software measurement data were not normally distributed.\n\nCritical issues for the successful implementation of SPC are: process stability, measurement capability, and reliability of the data, in other words, if the process has been standardized, the right metrics have been selected, and a reliable data collection mechanism has been established, it may be possible to benefit from the application of SPC techniques.\n\nFour main problems in monitoring software process with control charts have been detected: establishing baselines, detecting anomalies, investigating the causes, and adjusting sensitivity. Baldassarre, Boffoli, Caivano, and Visaggio [W1506259978] suggest that this makes the process of monitoring activities a difficult task; this is how, in a first step, SPC can contribute to solve problems of monitoring and guide professionals toward a more disciplined use of this approach, based on the experience gained by the authors in empirical researches. However, for Boffoli, Bruno, Caivano, and Mastelloni [W2065543740], the application of SPC in monitoring processes still has limitations, so there are issues related to measuring software processes such as the difficulty of collecting metrics and its reliability, and the selection of monitored characteristics of the process that must be carefully considered. The assumptions surrounding the SPC, as the prevalence of human factors in software process, theory, and effectiveness of monitoring, may affect the implementation of SPC in software contexts.\n\nThe correct application of a control chart is essential because it acts as an auditor evaluating the existing non-conformities about a process/product, and ensuring that the necessary preliminary steps are always taken. Therefore, it provides an opportunity to identify problems and improve software processes through a visual interface with a scientific basis.\n\nObtaining the appropriate data for the application of SPC is therefore essential to the reliability of the control limits, i.e. the measured data should be appropriate to apply SPC techniques. In this sense, the evaluation method of measurement repository, as noted by Perini, Rocha, and Falbo [W2057079063], is a first approach which makes evident that the measurement plan, the repository measurement structure, the defined measures, and data collection should be suitable for SPC, and provide useful information about the process behavior.\n\nFinally, the cost of using SPC can be considered negligible after the initial effort. Indeed, the benefits are better process control, more effective detection of limit values, and monitoring the process of improvement actions. Hence, the profitability that can be achieved is high, especially in the medium and long term.\n\nTwenty papers and empirical validation of SPC in software from the 25 primary sources are checked. The studies complementing solutions to limitations that demonstrate aspects and requirements considered important to the application of SPC techniques in the measurement of software processes, guiding the management of data and metrics to be considered valid to represent the aims and meet their objectives, include: Salin Monteiro and Marcal de Oliveira [W4246363160], Paulk, Weber, Garcia, Chrissis, and Bush [W2003542868], Batini and Sacannapieco [W1984524279], Juran [W1986565273], Kasunic, McCurley, Goldenson, and Zubrow [W4252462871], Molina, Alzate, and Rincon [UNMAPPED:35], Caballero [UNMAPPED:36], Tarhan and Demirors [W1505627659], Baldassarre, Caivano, and Visaggio [W2143248394], Boffoli, Bruno, Caivano, and Mastelloni [W2065543740], Montoni, Rocha, and Weber [W4240486064], and Tarhan and Demirors [W1515385319].\n\n**For RQ3: Can SPC be applied to companies with minor maturity levels or emerging companies? And what would be the conditions, settings, characteristics, and environments to apply SPC in software processes?**\n\nR3 classifies 25% of the documents that present study cases of SPC applied in measuring processes with CMMI < 4 or emerging organizations.\n\nFrom the experience of Weller [W2090137162], control charts are typical in many high maturity organizations. However, with care, good evaluations of process stability can be obtained, indicating that SPC can be applied only when a subprocess has multiple executions. It is also stated that developers have successfully implemented SPC in many software projects.\n\nIn Wang et al. [UNMAPPED:18] SPC is defined as a fundamental tool in measurement, analysis, and control. Many preliminary issues must be resolved before SPC can actually be effectively used in software organizations, thus needing enough observations to allow a proper definition of the process or project to identify and warn about anomalies and failures that a decision is based on, and adapting the necessary changes for a better performance.\n\nThe maturity level of the process is a factor that influences the amount of effort expended before using SPC. At this point the organizations with high maturity level have a stable and capable process that allows them to address this approach more effectively. On the other hand, it is not easy to implement SPC in an emerging software company; processes with relatively low maturity may require additional effort before the actual implementation of SPC but have the possibility of applying it [W2105627575].\n\nRuss, Sperling, Rometsch, and Louis [W1544831711], moreover, observe that CMMI practices have been implemented in most of the operative units on maturity level 2 and 3 supporting these practices with integrated tools by establishing methods and quantitative management processes with statistical techniques to process problems in the area of peer review, code inspection, requirements, engineering, management of latent defects, sales, and management. The reason is that high levels of maturity of CMMI\u00ae are implemented with long-term guidance, besides providing no methodical or tool support. CMMI is a process model and not a rapid reaction force.\n\n**For RQ4: What are the methodologies that support an adequate SPC implementation in quantitative management?**\n\nR4 classifies 84% of the documents that guide the implementation of SPC through the development cycle processes, using a combination of methods, Six Sigma management methodology, study cases for software, and other quality statistical tools and data processing, considering the fact that software engineering requires more indicators because its diversity of processes is greater.\n\nIt must be understood the factors that may influence the selection of metrics. Florac and Carleton [W1532498222], and Piattini, Garcia-Rubio, Garzas-Parra, and Genero-Bocco [UNMAPPED:43] offer procedures that can help to develop an understanding of many of these factors, so that they can choose the appropriate measures. It is important to note that the objective is to find measures that provide relevant information.\n\nManlove and Kan [W2090137162] propose the IASMR method, Instrument for Assessing Suitability of the Measurement Repository to SPC, in which measures and data are evaluated. If the collection of data can be plotted correctly on a control chart, then the action is considered appropriate for SPC and provides useful information about the behavior of the process and information related to the objectives of the organization. Otherwise, the measurement repository would have to be restructured.\n\nThe starting point is to understand whether SPC can be used in software and its contribution to the solution of the existing problems in software process monitoring, from four general patterns proposed by Baldassarre, Boffoli, Caivano, and Visaggio [W1493656870] and Caivano [W1584023401], who determined a guideline for the use of control charts in software, monitoring methods for the detection of anomalies, stability tests, and adjustments to make.\n\nSPC becomes a requirement for improving the quality of the processes. A suitable method for the implementation of SPC in quantitative management in software process improvement is Six Sigma. Although in its most fundamental form Six Sigma is a quality measure, the term is now used to encompass concepts and tools designed to help to achieve almost perfect processes [W2478155925]. The statistical tools used to solve different problems are similar to those used in other strategies to improve modern quality. However, Six Sigma emphasizes the application of these tools in a methodical and systematic way to achieve improvements with economically measurable results [UNMAPPED:44], so its high standards of achievement make necessary the knowledge and use of various statistical tools for the articulation of SPC at corresponding stages DMAIC: Define-Measure-Analyze-Improve-Control.\n\nFor Barbiero, Flury, Pagura, Quaglino, and Ruggieri [UNMAPPED:44] the Six Sigma methodology is a strong strategy to achieve important improvements; they conclude that some big companies are beginning to adopt it, and also that the interest of some PYMES is evident.\n\nThe studies of Russ, Sperling, Rometsch, and Louis [W1544831711], Xiaosong, Zhen, Fangfang, and Shenqi [UNMAPPED:25], and Park, Choi, and Baik [W2127544597] demonstrate results using the Six Sigma methodology for software quality, showing that this method is feasible in processes improvement and, undoubtedly, applicable in Software Engineering. Other studies that complement the experience with Six Sigma in Project management are those of Lefcovich [W4390025182], Tayntor [W2478155925], Xiaosong, Zhen, Fangfang, and Shenqi [UNMAPPED:25], Muro [UNMAPPED:48], and L\u00f3pez [UNMAPPED:48].\n\n**For RQ5: What activities and control methods are being raised for monitoring software distributed processes in companies with minor maturity level or emerging companies?**\n\nR5 classifies the 4% of the documents that favor the starting point. Caivano [UNMAPPED:50] shows how to measure and, consequently, to manage companies in business and industries with Six Sigma, and provides principles and tools that can be applied to any process as a means used to measure defects or error rates.",
+              "citations": [
+                "W1506259978",
+                "W2090137162",
+                "W2090137162",
+                "W2138128243",
+                "W2102893957",
+                "W4244440979",
+                "W4246363160",
+                "W2144449589",
+                "W1515385319",
+                "W2065543740",
+                "W2057079063",
+                "W2003542868",
+                "W1984524279",
+                "W1986565273",
+                "W4252462871",
+                "W1505627659",
+                "W2143248394",
+                "W4240486064",
+                "W2105627575",
+                "W1544831711",
+                "W1532498222",
+                "W1493656870",
+                "W1584023401",
+                "W2478155925",
+                "W2127544597",
+                "W4390025182"
+              ],
+              "tables_in_text": [
+                "tbl_15",
+                "tbl_16",
+                "tbl_17",
+                "tbl_18",
+                "tbl_19"
+              ],
+              "citations_unmapped": [
+                "14",
+                "18",
+                "24",
+                "25",
+                "35",
+                "36",
+                "43",
+                "44",
+                "48",
+                "50"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "It is proposed conducting a systematic review of the application of SPC techniques in software production processes. In order to identify what has been done and what is required, the systematic review process is carried out, following the guidelines indicating its general identification as a process consisting of three main stages \u2013 planning, conducting, and report of the review \u2013 which are described in more detail in the following subsections.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Conclusions and Future Work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The systematic review has demonstrated the primary studies that show a current state of SPC and its application to advanced quantitative management in software processes. It allows to answer the questions concerning the aspects of the software process to consider to implement SPC, the criteria for selecting control charts, metrics, monitoring, and implementation methods for software process management with SPC and quality improvement.\n\nThe cost of using SPC can be considered negligible after initial effort. Indeed, the benefits are better process control, more effective detection of limit values, and the ability to track the process of improvement actions. Therefore, the profitability that can be achieved is high, especially in the medium and long term.\n\nThe results of the analysis of literature have established the starting point for defining a methodology of implementation of SPC, where the most appropriate methods for its application are identified as effective strategy for improving the quantitative management of software processes with Six Sigma. This is a greater management program focused on continuous improvement, as a first step that must be established to coordinate with other responsibilities within a management model for the DGS.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_16",
+      "placeholder": "{{TABLE:tbl_16}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_17",
+      "placeholder": "{{TABLE:tbl_17}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_18",
+      "placeholder": "{{TABLE:tbl_18}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_19",
+      "placeholder": "{{TABLE:tbl_19}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W1505282872_tables.md"
+}

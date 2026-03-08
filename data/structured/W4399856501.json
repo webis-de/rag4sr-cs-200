@@ -1,0 +1,329 @@
+{
+  "id": "W4399856501",
+  "metadata": {
+    "title": "Sensory System for Swarm Drone: A Systematic Review",
+    "n_sections": 5,
+    "n_subsections": 6,
+    "n_subsubsections": 5,
+    "n_tables": 9
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Swarm drones are a collection of drones that are connected and communicate with each other. Unmanned aircraft are called drones, which are also known as unmanned aerial vehicles (UAVs) or unmanned aircraft systems. Basically, it is a flying robot that can be either controlled remotely or fly autonomously using software-controlled flight plans in its embedded systems, in collaboration with sensors and the global positioning system (GPS). Drones are emerging technologies that have their roles in different services, such as military, data gathering, rescue, personal use, etc., in which they can replace people and save lives in critical cases. It proves its effectiveness in different aspects, including productivity, functionality, cost efficiency, time efficiency, quality of service, precision, and improved energy consumption. It consists of various imperative components like different controllers, GPS modules, batteries, cameras, sensors, an accelerometer, and an altimeter [UNMAPPED:1]. Smaller UAVs are not only more portable but also more agile, enabling them to maneuver in confined spaces and, because of their lightweight, inflict less harm on their surroundings [UNMAPPED:2]. In our review, we collected sixty studies based on drone swarm usage in different aspects, aiming to facilitate upcoming studies and assist researchers by providing an overview in one article. This review focused on three key categories, which are services, tracking, and communication and control. The service category concerns the swarm drone's ability to perform several services, including inventory services, health care services, delivery services, defense and military services, and rescue services. The tracking category focuses on tracking objects in different circumstances. The communication and control category concentrates on determining the path of aircraft squadrons and tracking their movement and the distance between them. It also covers the center's communication with the aircraft squadrons, directing and controlling their movement, and connecting them to the rest of the squadron using many methods, such as the hierarchical approach and some other methods mentioned in this review. The review is organized as follows: the methodology (see Section 3), and we discuss the results, stimulation, and SWOT analysis (see Section 4). Finally, the conclusion is presented in Sections 5.\n\nOur main research question is: What are the different usage fields of drone swarms in our lives?",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Methodology",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In our systematic literature review, we reviewed many articles, and then narrowed it down to 60 articles. During our synthesis, we ensured that the selected articles met our standards. We filtered the data to get only recent articles between 2019 and 2024, as the technical field is rapidly changing; therefore, we need to cope with the most recent changes. Table 1 summarizes our inclusion and exclusion criteria, as shown:\n\n**Table 1: List of inclusion and exclusion criteria**\n\n{{TABLE:tbl_01}}\n\nFor our literature review, we depended on Google Scholar, which helped us to highlight latest discoveries. Moreover, we used several terms to extract most related articles. We illustrated these terms using Boolean operators for clarification, in which OR connects similar terms while AND connects the flow of different terms, detailed as follows: (Drone* OR UAV*) AND (Swarm*). We have categorized the collected information according to main categories, which are objective, methodology, findings, to find out the answers to our main research question. In the below, we will discuss, synthesize, analyze, and evaluate each selected paper in order to clarify the privacy concerns of using smart speakers and their violation risks, in addition to the suggested prevention and improvements methods as follows:",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Literature Review",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "Drone Usage in Services",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Drone in Inventory Services",
+              "parent_subsection_id": "s_3_1",
+              "text": "This study [W4291891033] presents a mathematical model and solution for controlling the inventory of logistic warehousing using drones. The proposal model shows the path-planning concept based on three steps: pre-processing, which identifies the structure and capabilities of the warehouse; during processing, the pre-processed path determines the real-time movement of the camera to capture the image. Post-processing, which involves processing the captured image for QR code identification and examination of matches for inventory control. The outcome of the model is divided into two parts: firstly, to improve the path for warehouses by knowing the warehouse characteristics and taking pictures from the center of the aisle that make the drone-made activities like identifying QR codes and evaluating products easier. Secondly, control the drone by giving it instructions on where to go, how to get there, and what activities to do.\n\nThis study [W4368366915] proposes a Supervisory Control and Data Acquisition System (SCADA) that facilitates DHL inventory system processes controlled by drones. The SCADA system was a method used in this research, which combined remote measures and data collected and is used in industry for distribution and storage. The automation system is useful to increase productivity, safety, and accuracy of selling and sending inventory items by reducing time.\n\nThe study [W4309679275] discusses solving problems related to inventory tasks in warehouses using a mathematical model without GPS or other techniques. The method determines using a drone to access warehouse compartments by controlling drone movement during and after processing to define an empty compartment. The drones are showing significant effects on logistic services through speed, energy efficiency, and automation for warehouse task processing.\n\nThis study [W4389787391] paraded the best flight paths for UAVs inside warehouses to maximize accurate and quick operations. The methodology used is divided into three parts: a structural description of the proposal, a simulation environment for the UAV model, and an experimental test. It focuses on two types of paths: zigzag and up-down paths. The result of the simulation shows that the zigzag path is more efficient than the up-down path in a warehouse environment.\n\nThis study [UNMAPPED:7] aims to analyze the effect and directions of drone delivery in the logistics sector as a solution and innovation. The methodology used in this article was a questionnaire that was distributed to specific people who work in the logistics domain. In addition, they use SWOT measures to analyze the effectiveness of drone delivery in the logistics sector. The use of drone delivery makes a difference in the logistical industry, where it offers many features such as cost savings, being environmentally friendly, improved accessibility, and being faster. However, there are some limitations, for example, technical issues, restricted flight range, and limited payload capacity.",
+              "citations": [
+                "W4291891033",
+                "W4368366915",
+                "W4309679275",
+                "W4389787391"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "7"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Drone in Healthcare Services",
+              "parent_subsection_id": "s_3_1",
+              "text": "This study [W3095261329] discusses the use of drones to enhance healthcare efficiency and sustainability by improving intra-operative consultations through the drone transportation of biological samples. The methodology used integrates a Value Proposition Canvas (VPC) and a SWOT analysis to assess the system's value to multiple beneficiaries and its implications. The finding of this study is that the approach represents a significant innovation with potential for further advancements in healthcare and beyond.\n\nThis study [UNMAPPED:9] aims to determine if drones are useful in low-income countries for the refinement of the healthcare industry. The methodology used is comparative analysis by key performance indicators (KPIs), which were compared and calculated between plausible alternative UAV solutions and the current distribution plan for the Regional Medical Supplies Division (RMSD). The results of using drones in Sri Lankan vaccine transfusion proved efficiency in logistical services, financial savings in low-income countries through an avoidance of poor infrastructure and network transportation, and enhanced use of electric vehicles rather than fuel-powered vehicles.\n\nAccording to [UNMAPPED:10], specifically for San Raffaele Hospital in Milan, Italy, this study intends to design a cutting-edge drone service that will ensure users' needs, safety, and regulatory compliance while taking into account UAM principles from international and European organizations. The intended aspirational scenario was created with the intention of utilizing drones to enhance the intra-hospital medicine delivery workflow. The primary potential end users were interviewed using a co-creation approach with this goal in mind. They developed a drone service for pharmaceutical delivery that benefits the healthcare logistics sector and could be scaled to interhospital transport of medical goods to reduce urban traffic and CO\u2082 emissions. UTM services are expected to coordinate drones controlled by different operators in the same airspace. The UAM ecosystem enabled and allowed information exchange through digital platforms managed by different actors.",
+              "citations": [
+                "W3095261329"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "9",
+                "10"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Drone in Delivery Services",
+              "parent_subsection_id": "s_3_1",
+              "text": "The study [W4220944062] presents a solution to delivery service by integrating UAVs and vehicles to serve multiple customers at once. They create a model for specific UAV tasks and the path planning of vehicles, considering the effect of changing payloads on energy consumption. The proposed method was a hybrid heuristic algorithm based on the k-means algorithm and ant colony. The simulation results after fifteen cases from initialization were optimal, which means the number of k clusters significantly increased, therefore the rate of efficiency improvement scope increased from 17% to 203.35%, and 126.5% was the average rate.\n\nIn article [UNMAPPED:12], the researchers proposed an approach for allocating drone swarms for delivery, which is known as swarm-based drone-as-a-service (SDaaS). The proposed allocation approach focuses on the lowest cost to drone swarm providers, taking into account the service customers' time requirements and the delivery environment constraints (such as limited recharging pads and congestion). The approaches have shown their feasibility on scaling when compared to a brute force baseline approach, and the experimental results have shown that the heuristic-based algorithm performance was the best when compared with the other two.\n\nArticle [UNMAPPED:13] proposes a new framework for creating Swarm-based Drone-as-a-Service (SDaaS) for delivery bearing in mind the different behaviors of drone swarms, sequence and parallel approaches have been designed with consideration of the various constraints that can affect the delivery, such as recharging time and limited battery life. Also, they have used a modified A* algorithm for their proposed SDaaS algorithm. In addition, to solve delivery issues, they decrease recharging and waiting times by integrating a cooperative behavior model. The efficiency of the proposed approach has been validated by experimental results and proven against Dijkstra's and Brute Force's approaches. It showed that the parallel composition performed better than the sequential composition. Also, it showed the positive effect of integrating cooperative behavior on delivery times. Moreover, results also show the effect of varying the number of maximum splits allowed and the lookaheads of considered neighboring nodes from the current node.\n\nThe research in [UNMAPPED:14] proposes a new formation-guided approach for selecting Swarm-based Drone-as-a-Service (SDaaS) for delivery to fix the swarm's limited flight endurance issues and energy consumption. In a detailed study, they highlighted the effect of swarm formations on energy consumption. In the proposed framework, bearing in mind the different swarm formation decisions, fixed and adaptive SDaaS selection approaches have been designed, and SDaaS selection algorithms have been proposed for each of them while considering external constraints like wind speed and direction. In regard to energy consumption, the adaptive algorithm performed better than the fixed algorithm, as per the experimental results.",
+              "citations": [
+                "W4220944062"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "12",
+                "13",
+                "14"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Drone in Defense and Military Services",
+              "parent_subsection_id": "s_3_1",
+              "text": "This study [UNMAPPED:15] aims to display the possibilities of autonomous drones for defense against combat and non-combat operations with artificial intelligence (AI) in the military sector. It applied the YOLOv5 approach to vital military object detection for enhanced military drone surveillance. The result of the YOLOv5 approach includes detecting objects from large distances, helping commanders and personnel in the military make decisions, identify objects, and track them. The results of integrating AI with drones include reducing personal risk, enhancing the effectiveness of combat operations, increasing protection, providing information, and delivering medical materials.\n\nThe authors of [W4311868390] focus on the use of drone swarms in sensitive operations to avoid ground radar detection. They concentrate on a scaled drone swarm geometry, which can protect the target electromagnetically from radar disclosure. For developing both ground and in-flight tests, various swarm configurations have been analyzed. Within the applied tests, a compact software radar has been used for target detection, and many different formations and conditions have been tested to find the most feasible drone swarm geometry that prevents detection. The proposed design helped measure the distance between the swarm agents and between the swarm and the target, which needed to be protected from detection.\n\nResearch [W4319988671] uses the drone swarm in defense through its decision-making and control abilities. They designed a defense scenario called cooperative threat engagement capability for the swarms via collaboration between the AI-based decision-making and control techniques among them in an efficient and destructive manner. The loyal wingman MAVs will collaborate to defend against kamikazes with explosive capabilities and protect the manned leader and the infrastructure using two kinds of weapons, which are vaporizer guns and freezing guns. In addition, to decrease complexity, the focus was split between both low-level and high-level control layers. Also, the decision-making has been implemented by the behavior tree technique and reduced to modular behaviors. The design has been validated for its efficiency by using a high-fidelity 3D simulation.\n\nThe research [W4394016213] aims to analyze combat drone capabilities to deliver massive strikes against enemy targets using swarms of drones, the formation of the least risky flight routes in the conditions of military threats, the rational distribution of drone groups according to targets, and the anti-drone actions of the enemy. Mathematical methods and models used for the study of a combat drone swarm consist of system analysis, lexicographic ordering of options, integer optimization, and agent simulation modeling. The findings are as follows: create a system representation of enemy targets, plan drone routes in the presence of threats, distribute drone groups, coordinate enemy anti-drone actions, and optimize drone distribution.",
+              "citations": [
+                "W4311868390",
+                "W4319988671",
+                "W4394016213"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "15"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "Drone in Rescuing Services",
+              "parent_subsection_id": "s_3_1",
+              "text": "Researchers in [W3133973691] propose a novel forest fire suppression system using a swarm of hundreds of UAVs able to emulate the rain effect using a continuous flow of extinguishing liquid. The researchers defined some requirements that are supposed to be fulfilled by the drone system for their approach, including approximately 24 hours of availability, exchanging batteries automatically and recharging them using the charging circuit, and having multiple attached extinguishing liquid refills. Also, they specified some factors for evaluating its effect on the forest fire spreading, consisting of fire intensity, flame length, vegetation, moisture content, wind speed and direction, each drone payload, and duration of reaching the fire front. In addition, calculating the water flow rate and the number of linear meters of active fire front that can be suppressed. Besides that, a fire spread cellular automata model has been used for examining the fire evolution and the effects of the UAV platform. The suggested approach can fulfill the needed waterflow to suppress low-intensity and limited forest fires or can be a supplement to the current fire suppression techniques.\n\nDrones, or unmanned aerial vehicles, are already a crucial component of the tools used by firefighters to keep an eye on wildfires. This work uses numerical techniques, including Monte Carlo simulation, to convey the findings of systematic research. The utilization of straightforward, reliable, practically implementable distributed decision functions that can facilitate swarm self-organization with the aim of the group objective was given special attention. Strong nonlinear effects in the interaction between components that the empirical law can roughly approximate are confirmed by the results. On a case-by-case basis, these findings can help mobilize sufficient resources based on accepted probability and established task characteristics [UNMAPPED:20].\n\nThis study [W4308041846] investigates, via simulation, the use of huge autonomous UAV swarms that can cover territories the size of California to identify wildfires in their early stages. The following four decentralized control algorithms are put to the test: dynamic space division, pheromone avoidance, dispersion, and random walking. While the last adaptation is brand new, the previous three are well-known from literature. To verify the system's spatial coverage in a 24-hour simulation, the algorithms are run with swarms of varying sizes.",
+              "citations": [
+                "W3133973691",
+                "W4308041846"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "20"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "Drones in Communication and Control",
+          "subsubsections": [],
+          "text": "The concentration of [W4285115265] is on securing the D2D communication in the swarm-drones network for the 5G architecture while maintaining the required performance level. The authors presented their proposed distributed delegation-based authentication mechanism for minimizing traffic overhead on the 5G core network. For authentication purposes, legitimate drones are authorized as proxy-delegated signers on behalf of the core network. Also, their proposed scheme included a selection mechanism to relocate a new leader relay drone from the swarm. For validation, a 5G D2D-based communication package over NS-3 has been used for executing the authentication algorithm, while the RaspberryPi3 device has been used for executing the computational calculations. The performance results proved the significant role of the proposed authentication in optimizing authentication period efficiency, reliability, scalability, and compatibility.\n\nResearchers in [W3155135300] discussed the development of drone swarms and how NCS improved performance when facing environmental and operational challenges. Analyze the topologies and technologies that necessitate the execution of two types of deployment strategies: interactive and non-interactive deployment strategies. Providing a comprehensive description of the two building blocks of any drone swarm\u2014the networking and computational systems\u2014and how to integrate them. The findings of this study were helping to solve challenges in developing drone swarms as networked control systems that depend on computational functions existing in any drone to build network systems and improve the properties of swarm self-organization.\n\nThis study [UNMAPPED:24] aimed to introduce a framework (ICCSwarm) for integrating communication and control of swarms of unmanned aerial vehicles (UAVs). ICCSwarm consists of two phases of approach: planning and deploying for integrated communication and control in UAVs, and comparing their design to the traditional approach. ICCSwarm was implemented on a physical UAV testbed and used a case study to evaluate its effectiveness through NASA's JPL. This study used a UVA swarm to compare two types of network routing protocols for satellite data gathering. The result appears to be that multi-hop routing exceeds single-hop in simulation and field testing. The UAVs validated the design and demonstrated the capabilities of ICCSwarm by testing small satellite orbits for data collection on asteroids. The ICCSwarm result includes a multi-hop approach that outperforms the single-hop approach in field and simulation testing; simulation is more accurate for multi-hop routing in field-testing; and their system has the ability to communicate and control UAVs.\n\nThis study [W4390951782] suggests a new method for drone identification based on the communication scale of drones, their communication intensity, and their distributed features. First, build a dynamic communication prediction network (DCPN) and then a dynamic giant connected component (GCC)-based scale-intensity centrality (DGSIC). The model outcomes seek to maximize the disruption to the malevolent swarm. To be more accurate, the dynamic communication of drones is first predicted using an extended DCPN model. DGSIC can be used to identify essential drones for targeted attacks. By optimizing the drone assault sequence for directed energy attacks, DGSIC makes sure that each attack damages the system more severely and sets off more extensive cascade failures of hostile drone swarms.\n\nThe researchers in this study [W3135223881] suggest a large-scale, semi-flat swarm drones' network (SND) network architecture called a novel self-timing synchronization approach. The proposed approach is composed of three parts involving clustering, intra-cluster timing synchronization, and inter-cluster timing synchronization. By self-synchronizing the MD in a semi-flat swarm drone network, the suggested method seeks to minimize skew, drift, and clock offset errors. As a result, performance and throughput are improved over current clock synchronization techniques. The self-timing synchronization method reduces overhead by up to 75% of total transmission while providing reasonable accuracy.\n\nThis study [UNMAPPED:27] suggests the SmrtSwarm model, which is based on the traditional Reynolds model. The swarming model takes neighboring drones into account and includes leader-follower behavior. It used three new rules\u2014migration, obstacle avoidance, and confinement\u2014to increase robustness and coordination. Swarming rules with GPS assistance rely on tag, velocity, and location characteristics. The weighted sum of these principles is used to get the final velocity. Results of the simulation showed that drones migrated in the direction of the leader, but if disable migration rules were used, the drones wouldn't move, collided with obstacles when absent obstacle avoidance rules, and all of the followers drones moved far from the leader when absent confinement force.\n\nThis article [UNMAPPED:28] discussed the formation methods and strategies for controlling UAV swarms. It introduces the concept of a UAV swarm using an extended Kalman filter as well as leader-follower control. Also, it discusses the control strategies for UAV swarms, which consist of centralized, decentralized, and distributed strategies for controlling information interaction between UAV swarms. Approaches to formation control to control and maintain UAV swarm formation consist of a leader-follower approach, a behavior-based control approach, and a virtual structure approach. The results show that the proposed control scheme is effective in maintaining UAV position, reducing UVA position errors, making reliable formation easy, and improving follower performance in various situations.\n\nThis study [W3184023560] discusses two main views on the control aspect of a swarm, focusing on human factor considerations and the implications of such control. From a human factors perspective, they found the direct approach is better at the tactical level over short time scales, and the indirect approach allows for the identification of abstract goals at the operational level over long-term objectives.\n\nThe study [W3029953548] measures the quality of drone swarm functionality based on its algorithms. It proposed cross-entropy as a measure and presented formalization and its applications in some instances. It focuses on the disorganization of the swarm and its reactions and behaviors. The cross-entropy calculation is relative to the referential probability distribution, which is affected by the real-world influence and different circumstances in which the swarms can go through it. The simulation validates the efficiency and ability of differentiation between disorganization levels.\n\nThe primary driving forces for aerial swarm applications and related research projects are presented in this document. Moreover, the primary research results for state estimation and mission planning\u2014two essential components of any airborne swarm system\u2014are also provided. This work offers a suggested abstraction of an aerial swarm system architecture that may aid developers in comprehending the primary components needed for such systems [UNMAPPED:2].\n\nIn [W2972204506], the approach showed a nature-inspired algorithm that enables a UAV swarm to operate as a collective with real-time data. This swarm can be adapted to the resolution requirements of specific spots in the monitored area. They started with swarm-based real-time data collection, which included some stages such as identifying the problem, suggesting solutions and measurements (including coverage and resolution, comparing drone versus swarm performance, resolution and performance measures, and analyzing drone versus swarm penalty and performance), and a nature-inspired re-allocation algorithm (including local optimization, reallocation, penalty, and stochastic decision). They made a drone prototype design that included control and flight modules and used control station side (Dispatch Module), UAV/drone side (MSP Control Module), and communication protocols in their implementation. The result showed that the collective drone swarm approach is scalable and gives good performance results as it can effectively cover an area and maintain the data quality, as in the video coverage, even if the resolution requirements of a specific location are not constant.\n\nA swarm of unmanned aerial vehicles (UAVs) conducting continuous surveillance in an unknown and complicated metropolitan region has great promise for low-cost future applications in catastrophe monitoring, counterterrorism, and situational awareness on the battlefield. A two-level semi-distributed control framework is presented to overcome these restrictions and accomplish continuous control of the UAV swarm in two distinct monitoring stages, based on simulated city blocks. This strategic group's surveillance performance is assessed based on varying drone launch patterns and swarm sizes. The simulation findings show that the control framework may be used for continuous UAV swarm surveillance of unidentified metropolitan regions [W2998573272].\n\nThe issue of swarm formation control for fixed wing unmanned aerial vehicles (UAVs) is examined in this study. The drones form a group-based hierarchical structure that divides the drones into many unique, non-overlapping groups. Drones organize into hierarchies within each group, with one drone selected to serve as the group leader. Under the control input limitations of fixed-wing UAVs, the proposed control rule guarantees global asymptotic stability of the whole closed-loop swarm system. Numerical simulations and theoretical justifications are given to validate the efficacy of the suggested approach [W3022497817].\n\nParticle swarm optimization and Reynolds flow, two distinct swarm intelligence (SI) methods, were employed in this study to develop a complete system for managing and guiding groups of autonomous drones over uncharted territory. In order to avoid collisions, this work provides two standard models for regulating agent systems in three-dimensional (3D) environments: drone lock control (DFC) and particle swarm optimization paths (PSOP), a dynamic and cooperative approach. A real-time application, a simulation environment, a data collection device, and the Unity game engine were used to construct the applications. The performance of DFC-controlled drones, which navigate using either the D*Lite program or the PSOP algorithm, was compared. In a basic simulation scenario, this work illustrated the potential of SI methods for multi-agent UAV system control [W3217515785].\n\nThis research provides a novel method of employing Ferro fluids to apply genuine pheromones to swarm robots in outdoor conditions. The deposition and magnetization systems of the Ferro fluid solution are described in detail. The suggested substance is suitable for human use and does not include any environmentally hazardous components. The material accurately depicts the placement, dispersion, and evaporation of pheromones on a variety of surfaces in outdoor settings, according to validation. A step toward testing swarm robots in uncontrolled outside conditions is represented by the current study. Furthermore, the pheromone technology given here may be used in several aspects of swarm robotics for robot navigation and exploration [W4282983209].\n\nThis research presents a novel integrated strategy that improves movement efficiency and safety during UAV swarm operation planning and control. A novel approach for designing parallel swarm missions based on evolution is suggested. With the use of evolutionary computing, we may enhance safety and achieve efficiency goals by planning and optimizing drone pathways at runtime while decreasing trip distance. This method encourages a thorough approach that considers the full design process, from formal requirement creation to software development, to effectively satisfy the indicated limitations. Comparing this strategy to state-of-the-art systems, benchmarking findings demonstrate that it improves route efficiency by up to 10% without compromising crowd management [W3080322112].\n\nThis study examines how social interactions among members of a flying robot swarm lead to the following of a scalar field's gradient in the environment without the requirement for any kind of gradient sensing capabilities. This is an example of collective and emergent sensing. Suggested two techniques, with and without alignment control: desired distance modulation and speed modulation. In the former case, people adjust their preferred distance from their neighbors, whereas in the latter one, they adjust their speed in response to social interactions and environmental measures. Swarm sizes and densities, two measures with distinct scalar field models, are used to systematically evaluate the methods. A kinematic simulator, a physics-based simulator, and a real nano-drone swarm are used in the experiments [W4307313723].\n\nThis study due to its many real-world uses, such as target monitoring, cooperative exploration, and search and rescue, unmanned aerial vehicle (UAV) swarm coordination has drawn a lot of interest. It was suggested to use a cooperative navigation technique for networked UAV swarms that included a geometry-based collision avoidance algorithm, task reassignment algorithm, and adaptive circular formation control protocol. To confirm the strategy's viability and efficacy, it was put to the test in outdoor flying tests and simulations of monitoring forest fires [W4220849261].\n\nThe focus of [W4362563422] is on achieving global coordination in a limited time for a controlled largescale drone swarm. Based on local interaction for large-scale drone swarms, system architecture and semi-autonomous coordination algorithms have been proposed to ensure that large-scale drone swarms can rapidly reach coordination under the constraints of limited communication resources and node loss. Using the proposed approach, global coordination with regard to leaders can happen when drones interact with adjacent drones. Also, they used a prediction mechanism to handle the time delay issue of local interaction during information delivery. Moreover, they adapt the Runge-Kutta method to discretize the algorithm, which enables its application in large-scale drone swarm systems. In addition, they proposed a merging algorithm to deal with the multi-drone swarm merging problem. As per the simulation results, the large-scale drone swarm achieved leader follower consensus in a time-efficient manner and even in a confrontational environment with poor communication conditions.\n\nThis study addresses a sensor-based swarm clustering problem in which values perceived from the environment and the geographical distribution of values and agents are used to create clusters. Furthermore, it is dealt with in a setting where agents are mobile, values are dynamic, and computation and interaction are decentralized. The field computing paradigm was suggested as a solution, in which interaction and computation are described in terms of functional field processing, distributed, and dynamic data structures that gradually assign values to each member of the system [W4296366012].\n\nUnmanned aerial vehicle (UAV) swarms, both centralized and decentralized, rely on networked communication to facilitate information sharing and foster cooperative behaviors. If communication is obstructed or fails, this study suggests using an information-fusion-based decentralized swarm decision algorithm (IFDSDA) to coordinate UAV swarms. With a monocular camera, each UAV can see what's in front of it. To standardize the unification of the two forms of information derived from communication and visual perception, an information fusion technique is given. If there is a communication breakdown, this method allows UAVs to fully exploit diverse information. Every UAV is managed by a decentralized swarm decision module, which combines the fundamental UAV action rules to determine the heading orientation based on the fused information as inputs [W4386485289].\n\nThe two main disturbances are wind and obstacles in the path, especially when using aerial aircraft. In this study, to correctly replicate these perturbations in simulations, a multi-step procedure is initiated. Various techniques are used to represent wind and obstacles, which are then included in the simulation situations. Its existence has been demonstrated in simulations, using potential scenarios and focused observations. The study concluded that adding properly designed interruptions (such as wind and obstacles) to simulation settings that did not exist before could fundamentally change how resilience is documented and demonstrated in swarm deployments [W4392920244].\n\nWith an emphasis on the connection between MAC, TC, and routing policy, the research investigates the application of UAVs in crowd monitoring operations. To improve PDR, reduce retransmissions, and shorten end-to-end delays, a two-phase topology control strikes a compromise between communication and mission performance. Local optima and routing holes can be avoided with the use of the TAQR exploration and exploitation method. For optimal performance, UAV motion must be gradually controlled [W4281384602].\n\nThis article [W2980940401] integrates images taken from drones and satellites to obtain precise terrain information, such as bare land, dense vegetation, and sparse vegetation, to help in civil and defense applications, especially in identifying terrain for troop movement. The method used was information extracted from Sentinel-2 photos using a neural network-based method, which has the potential to be used in both defense and civilian contexts, according to quantitative analysis. Drone data has proven to be an effective way to detect changes in the behavior of terrain by providing additional information to satellite data. Here, drone data is utilized to train the neural network so that its output may be applied to other datasets without the need for additional training. Precise computation of terrain data might be advantageous for both military and non-defense applications.\n\nArticle [W2944170662] highlights improving the flocking control in the drone swarm network while considering the energy and quality aspects. They propose a swarm intelligence-inspired autonomous flocking control scheme for UAV networks. To solve the flocking control problem, a swarm intelligence-inspired multi-layer flocking control scheme is built according to the concept of the intelligent emergence of swarm agents. Also, for organizing the drone's calculations of its distances to its neighbors and its deviation angle, an integrated sensing and communication method has been added. The results of experiments that have been carried out on the simulator developed on OMNeT++ and the flocking prototype have validated the effectiveness of the presented model in providing flocking control with acceptable levels of energy consumption and service quality.\n\nThe article [W4379387397] Focus on presenting a drone swarm control scheme based on hybrid bionic swarm intelligence that is capable of achieving multi-drone obstacle avoidance through formation control. The proposed scheme of a hybrid UAV swarm control algorithm uses the leadership mechanism of the pigeon flock and the virtual leaders in order to fix the unfixed relative position of the level-1 leader problem. Also, they used the artificial potential field theory and analysis of the bionic mechanism for designing the control law for drone swarm formation, in addition to adding guidance phase and flocking algorithm analysis to avoid local minima and initiate a cooperative interaction control model. Moreover, the improved artificial potential field function was the basis for establishing the cooperative interactive control law for drone swarm obstacle avoidance. Using the mixed bionic swarm intelligence, both the bionic swarm control models have been integrated for formation and avoidance purposes. The simulations showed the efficiency and scalability of the presented control law in surviving the formation and reforming again after the obstacle avoidance tasks.\n\nThe researcher in [W4293370924] proposes a solution for the time-varying rendezvous problem of a swarm of drones with a leader-follower consensus hierarchy. They used the structure of the extended state observer that depends on the state estimates of the neighboring agents rather than the actual states for managing the drone swarm by the proposed fully distributed adaptive leader following time-varying disturbance rejection pinning control for the rendezvous of drones. The algebraic graph theory has been used for designing the communication topology, which considers an active leader agent with non-zero control input and is directed between leader and follower while undirected between follower and follower. The leader drone states that it is unavailable for the full graph but only for a subset. Simultaneously, the extended state observer estimates the local states and disturbances of each drone, and the adaptive control actively compensates for the external disturbances according to the output information between the neighboring drones. The analytical and simulation results prove the leverage of the proposed model.",
+          "citations": [
+            "W4285115265",
+            "W3155135300",
+            "W4390951782",
+            "W3135223881",
+            "W3184023560",
+            "W3029953548",
+            "W2972204506",
+            "W2998573272",
+            "W3022497817",
+            "W3217515785",
+            "W4282983209",
+            "W3080322112",
+            "W4307313723",
+            "W4220849261",
+            "W4362563422",
+            "W4296366012",
+            "W4386485289",
+            "W4392920244",
+            "W4281384602",
+            "W2980940401",
+            "W2944170662",
+            "W4379387397",
+            "W4293370924"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "24",
+            "27",
+            "28",
+            "2"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "Drones in Tracking",
+          "subsubsections": [],
+          "text": "Research [W4293371141] improves swarm navigation through an autonomous approach employing deep reinforcement learning. For tracking various dynamic targets, the model was in a complex 3D environment with static and dynamic obstacles, resistive forces, and used a reward function as well. To overcome formation and targeting challenges, its strategy has three phases: methods for managing the dynamic swarm, specifying the best path towards the target while avoiding obstacles as well, tracking the targets, and island modeling. The results prove the efficiency of the proposed strategy in promoting swarm navigation and target tracking in complex environments.\n\nThe researchers in this study [W4292548938] used drones to detect grassland animals in real time through their proposed YOLOv5 network model. The methodology used is the YOLOv5 network model, which consists of the backbone, neck, and prediction layers, SENet Network, SPP Module, and BottleNeckCSP Module. The results of the YOLOv5s model include a small size and fast model, the ability to highly detect objects, greater accuracy, and meeting drone needs.\n\nThe article [W4226035654] focuses on the drone swarm's scalability while considering critical perceptual factors such as visual occlusions. The visual neighbor selection model has been proposed to predict the occlusion effect on detecting the neighbors. The visibility model has been tested by a possible field-based flocking algorithm and includes a number reaching a thousand agents to show the occlusion influences on the swarm and show that it can be eliminated if an agent neighbor has been selected from adjacent Voronoi regions. Also, the resulting flocking algorithm has been validated by up to one hundred agents with quadcopter dynamics and subjected to sensor noise in a high-fidelity physics simulator. The results prove that Voronoi-based interactions help vision-based swarms to prevent collisions and stay organized and consistent in occlusion situations.\n\nThe authors of [W4293371141] improve swarm navigation through an autonomous approach employing deep reinforcement learning in addition to using the island model to improve the swarm tracking functionality. In the proposed model, a complex 3D environment with obstacles and resistive forces. In addition, a new reward function for learning swarm behavior and a novel island policy optimization model for synchronized tracking for multiple targets. Some challenges have been identified, and the strategy was to deploy four components to conquer them, which are: multiple target tracking with an island policy-based optimization framework, novel reward functions, managing the dynamic swarms with the improved policy and a critic-based framework, and memory. The simulation proves the efficiency of the model in tracking targets and validates the strategy role in improving swarm navigation through high cumulative reward and a low policy loss.\n\nArticle [UNMAPPED:52] focuses on tracking, detecting, and relative localization of swarm drones from a human perspective. They have used a headset equipped with a single camera and an Inertial Measurement Unit (IMU), an Automatic Dataset Generator (including the YOLOv3 algorithm), Multi-Agent Tracking using a Joint Probabilistic Data Association Filter (JPDAF), and a 6-DoF Pose Estimator. Also, for detecting the drones, a deep neural network detector on image data was used. The experiment results show the proposed approach's efficiency, which can be used in different fields like virtual and augmented reality, human-robot interaction, and multi-robot formation control.\n\nLarge-scale aerial robot deployments are underway, yet even in heavily populated areas like thick woods, drones\u2014and especially drone swarms\u2014cannot penetrate. Tight passageways and previously uncharted terrain, together with the need for swarm coordination, might provide difficulties in these situations. Small yet completely autonomous drones have been constructed with a path planner that can respond quickly and precisely based on limited information from onboard sensors, enabling mass navigation in the wilderness. The planning problem achieves a scalable layout by satisfying several mission objectives, such as flying efficiency, obstacle avoidance, inter-robot collision avoidance, dynamic feasibility, and swarm coordination [W4229007520].\n\nMulti-agent unmanned aerial vehicle (UAV) teams play a crucial role in contemporary research missions, disaster relief efforts, and military surveillance. To provide continuous sensor coverage and network service, this study suggests a continuous monitoring technique for a UAV swarm. To ensure precise monitoring of objects of interest (AOI), a two-layer hierarchy of UAV teams\u2014high-altitude and low-altitude\u2014is used. In a coordinate tracking simulation, centralized and decentralized control strategies will be compared by incorporating the UAV communication channel model into the route planning [W3160854990].\n\nThe article [W4385490702] focuses on using collaboration to accomplish tasks that couldn't be done by an individual drone. In this research, they used synthetic aperture (SA) sensing, which is a method of processing signals that collect measurements from limited-size sensors and computationally combine the data to simulate (copy) a larger-width sensor. Beside proposing an adaptive real-time particle swarm optimization (PSO) strategy for independent drone swarms for detection and tracking purposes for invisible targets in intense forest spaces, Simulation results show that the proposed approach achieved a maximum target visibility of 72% within 14 seconds. In comparison, blind sampling strategies resulted in only 51% visibility after 75 seconds and 19% visibility in 3 seconds for sequential brute force sampling and parallel sampling, respectively.\n\nThe discipline of coverage path planning (CPP) explores how drones may effectively cover an area of interest, either individually or in swarms. This study proposes a CPP method to identify and gather data from locations of interest using a swarm of unmanned aerial vehicles. The simulation results are used to assess the algorithm's efficacy. Each drone's coverage path, swarm speed, and radius of coverage are determined by a set of attributes. The findings indicate that as swarm numbers increase, tasks take less time to complete, and additional areas of interest may be found nearby. The findings demonstrated that covering parallel lines is more time-efficient since, for every scenario, the spiral increases the amount of time needed by an average of 5% to identify the same number of points of interest [UNMAPPED:56].\n\nThe authors of article [W3166331718] highlight a planning approach for drone swarm tasks in an inimical environment. The planning framework includes methods of planning routes for drone swarms using mixed integer linear programming (MILP) and methods of detecting potentially dangerous objects using EO/IR camera images and synthetic aperture radar (SAR), which can also be used in the mission planning process to re-plan the swarm's flight paths. The paths' planning model is presented using the drone formations managed by one UAV that communicates through another UAV with the ground control station (GCS). In addition, they practically used detection algorithms for the re-planning of swarm paths. The experimental results emphasized the ability of real-time stream image analysis. This article presents the results for a network consisting of 10, 20, and 30 vertices for a swarm of 3\u20135 UAVs. Mission planning was tested for two different optimization models.\n\nThe research in [W3204345415] suggests a solution for the current swarms' disabilities in flying in intensely cluttered environments by proposing predictive models that can avoid collisions, predict, and synchronize their routes in real-time. They achieved the result of consistent, self-organized, and safe flight in cluttered environments by proposing a distributed model predictive control (MPC) model for aerial swarms. The DMPC algorithm, with the continuous collision avoidance method, creates collection-free routes even in cases of sensor noise at levels up to 70% of the magnitude of the agent safety margin distance. Then, they used two different simulated environments with obstacles and 16 palm-sized drones flying in a real forest-like indoor environment for validation purposes. They have validated their method through real-world experiments, and the results proved the agent's capability of collision-free flight with noisy sensor measurements.\n\nThe main goal of this study is to analyze how an autonomous swarm behaves when it encounters either stationary or dynamic obstacles. In this scenario, only the leader or a dedicated group of agents can make intelligent decisions, and other agents only respond to the information that these dedicated agents receive. To maximize the sensing energy depending on the volume of environmental data gathered, an energy-aware information management method is suggested to prevent over sensing. The self-awareness or self-localization properties of the swarm in the space domain dictate the information required from each unit [W3139077565].\n\nThe preliminary study of the swarm algorithm in this study is described as basic UAV navigation using a radio navigation network for communication and location. Drone Mode RF communications provide an easy and efficient way to synchronize and coordinate a group of drones. Regulating communication between the drones used the radio navigation network (WNN) of the drone connects to both the transmitter and the receiver. The swarm can be the target of the drone's locomotion mechanism. Movement: Drones operate randomly without coordination or a pilot. It is called the Apus Model Swarm Drone (AMSD). In addition, it can be targeted. The type of following movement in which one drone follows another drone is known as the Boid Model Swarm Drone (BMSD) and is completely autonomous [UNMAPPED:60].\n\nThis study [W3155489633] presents particle swarm optimization using a Bresenham algorithm-based distributed 3-D route planning system for numerous UAVs. It presents a multidynamic fitness function with optimization indices such as flight danger, energy consumption, and relevance of the surveillance region. The ideal weight of SAI for a trajectory free of collisions is also determined by the study.\n\nAfter reviewing the collected articles, highlighting their main purposes, proposed frameworks, and results while focusing on our main categories of usage, we can show our results in the following results and discussion section.",
+          "citations": [
+            "W4293371141",
+            "W4292548938",
+            "W4226035654",
+            "W4293371141",
+            "W4229007520",
+            "W3160854990",
+            "W4385490702",
+            "W3166331718",
+            "W3204345415",
+            "W3139077565",
+            "W3155489633"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "52",
+            "56",
+            "60"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "We finalize the most discussed categories of drone usage fields, which involve services, communication and control, and tracking, in addition to the type of simulation focusing on our research question.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Results and Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Drone Usage in Services",
+          "subsubsections": [],
+          "text": "As shown in Table 4 and Figure 2, we categorized the recognized services into five domains: inventory services, healthcare services, rescue services, defense and military services, and delivery services. In inventory, drones helped factories determine the right product place in warehousing, reduce worker costs, and increase the effectiveness of factory processes. In healthcare, the drone helped doctors and paramedics transport and send medical tools in cases of natural disasters and difficulty reaching the place. In delivery, companies use drones to deliver packages more quickly and on time, which increases efficiency and reduces shipping and labor costs. In rescue, it plays a very crucial role in search, rescue, and the decrease and prevention of losses in catastrophes. In defense and the military, drones enable the army to detect objects and defend in war situations and attacks against enemies.\n\n**Table 4: Various domains of covered services per article**\n\n{{TABLE:tbl_04}}\n\n**Table 5: Total number of studies in each service**\n\n{{TABLE:tbl_05}}\n\n**Figure 2: Total number of studies in each service**\n\n*(Bar chart showing Inventory 5, Healthcare 3, Defense & Military 4, Rescuing 3, Delivery 4)*",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_04",
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Simulation",
+          "subsubsections": [],
+          "text": "We have distributed the articles according to the simulation aspect, as shown in Table 6 and Figure 3. The presented simulation types in the reviewed articles are: Gazebo simulation, numerical simulation, dynamic simulation, cellular automata (CA) model, ProcTree simulation, Qualnet simulation, MATLAB simulation, and NS-3 simulation. On the other hand, some articles didn't present the simulation type used, and some didn't involve any simulation.\n\n**Table 6: Simulation**\n\n{{TABLE:tbl_06}}\n\n**Table 7: Total number of studies based on simulation**\n\n{{TABLE:tbl_07}}\n\n**Figure 3: Total number of studies based on simulation**\n\n*(Bar chart showing Applied specified simulation 12, Applied unspecified simulation 31, Not applied simulation 17)*",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_06",
+            "tbl_07"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "SWOT Analysis for Drone Usage",
+          "subsubsections": [],
+          "text": "According to the reviewed articles, we have explored different aspects of the drone that have been highlighted through the SWOT analysis, as shown in Figure 4.\n\n**Figure 4: Drone usage SWOT analysis**\n\n{{TABLE:tbl_08}}\n\n{{TABLE:tbl_09}}\n\nIn this section, we will discuss the findings of our review. We have summarized the selected articles based on their objectives, methods, and results to specify the main field differences, chosen simulations, and drone usage analysis. We have appointed the most and least-covered usage fields and split one of them into more detailed categorizations. The notable limitations in the selected articles were the failure of the aircraft in some experiments and the need for improvement, security threats, accuracy, data sets, lack of success measures, GPS-related issues, limited ranges, scalability, and live camera image blurring. Lack of time, the need for method, experiment, simulation, or model for concept proof, the necessity of a wider review for articles, and the demand for narrowing the research question for more precision were our biggest limitations.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_08",
+            "tbl_09"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "As shown in Figure 1 and Table 2, the most covered category of usage fields was communication and control in twenty-seven articles, followed by other fields like services in nineteen articles with various domains, and the least covered one was tracking in fourteen articles.\n\n**Table 2: Summary of covered categories**\n\n{{TABLE:tbl_02}}\n\n**Table 3: Overview of the highlighted usage categories**\n\n{{TABLE:tbl_03}}\n\n**Figure 1: Overview of the highlighted usage categories**\n\n*(Bar chart showing Services 31.7%, Communication and Control 45.0%, Tracking 23.3%)*",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_02",
+        "tbl_03"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The primary applications of drone swarm systems in various domains were outlined in this review, concentrating on three main categories: services, tracking, and communication and control in the reviewed articles. Also, the simulation overview and SWOT analysis have been provided. In conclusion, this review could be a helpful stage that might assist developers in comprehending the essential modules, simulators, and schemes. In addition, it may help them to avoid the noted limitations and overcome them to achieve the desired results. In our future work, we would like to expand the research to cover a significant number of articles while narrowing the scope to be more specific, establishing our own proposed framework, applying experiments and simulation, and gaining notable findings.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4399856501_tables.md"
+}

@@ -1,0 +1,407 @@
+{
+  "id": "W4381705785",
+  "metadata": {
+    "title": "NLP Techniques for Automating Responses to Customer Queries: A Systematic Review",
+    "n_sections": 6,
+    "n_subsections": 6,
+    "n_subsubsections": 11,
+    "n_tables": 4
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1 Related Systematic Reviews",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_1_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "1.1.1 Human\u2013Computer Interaction in Customer Service",
+              "parent_subsection_id": "s_1_1",
+              "text": "A systematic literature review of customer experience with customer service chatbots was conducted by [W4280577403] to (1) determine the main factors that have a significant impact on customer experience with customer service AI chatbots; and (2) investigate the customer's opinions, views, and emotions about the use of AI chatbots, as well as the customer's responses and behaviors. The results show that chatbot-related, customer-related, and context-related factors influence customer experience with chatbots.",
+              "citations": [
+                "W4280577403",
+                "W3089889604",
+                "W2954762064"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_1_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "1.1.2 The Impact of Chatbots on Customer Loyalty",
+              "parent_subsection_id": "s_1_1",
+              "text": "The objective of this review was to find out how chatbots affect how loyal customers are to a business. The findings of this systematic review of the literature indicated that there is a correlation between customer experience and customer satisfaction when using a chatbot, leading to customer loyalty [W4206061172].",
+              "citations": [
+                "W4206061172"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_1_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "1.1.3 Service Chatbots",
+              "parent_subsection_id": "s_1_1",
+              "text": "This review explored the state-of-the-art in chatbot development as measured by the most popular components, approaches, datasets, fields, and assessment criteria from 2011 to 2020. The review findings suggest that exploiting the deep learning and reinforcement learning architecture is the most common method to process user input and produce relevant responses [W3184966646].\n\nWhile these review papers provide valuable information on the use of chatbots and their impact on customer experience, our study aims to provide a contribution to this field of study by investigating the recent applications of NLP techniques to the automation of customer service inquiries. Specifically, we intend to conduct a systematic literature review on automating customer queries through the use of several NLP techniques. A systematic literature review (SLR) is critical as it can serve as a beneficial basis to support and facilitate the execution of future research [W2072668705]. In conducting this review of the literature, we attempted to answer the research questions identified below.\n\n1. RQ1: What is the current state of NLP techniques to automate customer query responses?\n2. RQ2: What are the main advantages of NLP applications in customer-focused industries?\n3. RQ3: What limitations are associated with the implementation of NLP techniques within the customer service domain?\n4. RQ4: What are the prospects for NLP applications in the business domain?\n\nThe goal of this review is to provide answers to the questions highlighted above by performing an SLR on the NLP techniques used in the automation of customer queries. In order to obtain more in-depth and comprehensive insight into the research topic, SLR studies seek to discover relevant primary publications, retrieve the necessary data, evaluate, and synthesize results [W3149778443, UNMAPPED:39] and aids grasp the depth and breadth of current research, identify research gaps, test a hypothesis and/or formulate new ideas [W2750168540]. Consequently, in this paper, we seek to identify and summarize recent studies that have consolidated on the applications of NLP in customer-centric environments, the significant benefits that result from using NLP in businesses that focus on the needs of customers, the corresponding challenges in the implementation of the NLP techniques in customer-centric industries, and the solutions directions.\n\nThe organization of the subsequent sections of this paper is as follows. An overview of NLP techniques is provided in Sect. 2, and the methodologies for conducting research are discussed in Section 3, while Sect. 4 discusses the results. In Sect. 5, we examine the relevance of the study findings and Section 6 offers recommendations for further research.",
+              "citations": [
+                "W3184966646",
+                "W2072668705",
+                "W3149778443",
+                "W2750168540"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "39"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Applications of NLP have been identified as a possible alternative to manipulate and represent complex inquiries in customer-centric industries. As technology and the human\u2013computer interface progress, NLP usage and applications are attracting increasing attention, prompting widespread recognition and implementation in a variety of industries. NLP has found its use in the banking sector [W3089889604, W2954762064, UNMAPPED:3], in supply chains [W2890315891, UNMAPPED:5], in education [W2990599173, W4210363535, W2505695199, UNMAPPED:8, UNMAPPED:9], within the legal space [W3180168080, W3091147850, UNMAPPED:12], and among medical practitioners [W3133087578, W3181852897]. The combination of artificial intelligence (AI) and automation is causing significant changes in the business world. In order to reach previously unachievable levels of efficiency and quality, businesses are presently focusing their attention on developing new applications of AI and automating their work processes [UNMAPPED:16]. Several studies have shown that NLP can be used to comprehend and interpret speech or text in natural language to accomplish the desired goals [W4293083491, W2989613245, W2904112547, UNMAPPED:17, UNMAPPED:18]. NLP has become increasingly integrated into our daily lives over the past 10 years. For example, text classification prevents junk in our email inboxes; semantically, search engines have evolved beyond pattern matching and networking; integrated conversational tools offer a standard and efficient means of gathering and exchanging information; and social networks and the Internet frequently use automatic machine translation [UNMAPPED:22].\n\nUsing interactive chatbots, NLP is helping to improve interactions between humans and machines. Although NLP has existed for a while, it has only recently reached the level of precision required to offer genuine value on consumer engagement platforms. Businesses value customer service\u2014employing NLP in customer service allows employees to concentrate on complex and nuanced activities that require human engagement. E-mail, social networking sites, chatrooms, web chat, and self-service data sources have evolved as alternatives to the traditional method of delivery, which was mostly done via the telephone [UNMAPPED:23]. The transmission of discourse with the help of digital assistants such as Google assistant, Alexa, Cortana and Siri is another significant advancement for NLP applications. These apps allow users to make phone calls and search on-line simply using their voices, and then receive the relevant results and data [W2745975416, UNMAPPED:24].\n\nFurthermore, NLP techniques are used in software programs that run database queries, collect text-based data, retrieve pertinent material from a collection, translate between languages, produce text responses and even recognize human speech and transform them into text, and automatically generate responses to human-generated questions in natural language [W2911204067, W4206061172]. The contribution of NLP to the understanding of human language is one of its most appealing components. The field of NLP is linked to several ideas and approaches that address the issue of computer-human interaction in natural language. It explores techniques for tasks including automatic comprehension and summarisation of text [UNMAPPED:28], machine translation (MT)\u2014automated text translation across languages [W2901497874], part of speech tagging (POS) [W3129162509, W2902135563], optical character recognition (converting human and machine written text into machine-readable format) [W3088337003, W3081407480] and named entity recognition (NER) when attempting to collect data to categorize recognized name entities into predetermined groups [UNMAPPED:34].\n\nComputers could be considered intelligent if they can execute the above tasks on natural language representations (written or verbal) and if they can comprehend what humans see. The recent strides in the application of NLP have led to the development of advanced algorithms that are now able to automatically respond to queries asked by customers. While a significant proportion of earlier reviews in this field emphasized the impact of chatbots, chatbot design, the human customer experience with customer service chatbots, and the implementation of these technologies in customer service, among other things. In this study, we provide a comprehensive analysis of the existing literature on the application of NLP techniques for the automation of customer query responses. To contextualize our study, we review the most relevant papers and related reviews on the topic. Several of these related concepts are discussed below.",
+      "citations": [
+        "W2890315891",
+        "W3133087578",
+        "W3181852897",
+        "W2745975416",
+        "W2911204067",
+        "W4206061172",
+        "W2901497874",
+        "W3129162509",
+        "W2902135563",
+        "W3088337003",
+        "W3081407480"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "5",
+        "16",
+        "22",
+        "23",
+        "24",
+        "28",
+        "34"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 An Overview of Natural Language Processing",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Natural Language Understanding",
+          "subsubsections": [],
+          "text": "Machines nowadays can analyze human speech using NLU to extract topics, entities, sentiments, phrases, and other information. This technique is employed in call centers and other customer service networks to assist in the interpretation of verbal and written complaints from customers [W2949597526, UNMAPPED:50]. Several techniques are required to make a machine understand human language. These tasks include classifying phrases and sentences into a sequence of characters, determining the intended meaning of a sentence, determining whether it follows grammatical rules, and extracting or understanding the meaning of a sentence [W3151521290]. The respective terms for these five tasks are morphological analysis, syntactic analysis, semantic analysis, phonological analysis, and pragmatic analysis [W2993901066, UNMAPPED:50].",
+          "citations": [
+            "W2949597526",
+            "W3151521290",
+            "W2993901066"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "50"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Natural Language Generation",
+          "subsubsections": [],
+          "text": "The generation of meaningful phrases, words, and sentences from an internal representation\u2014converts information collected from a computer's language into human-readable language [W3212789071, UNMAPPED:50]. Computer systems that can translate information from some underlying non-linguistic representation into texts that are comprehensible in human languages [W3179795304, W2604799547].",
+          "citations": [
+            "W3212789071",
+            "W3179795304",
+            "W2604799547"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "50"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "NLP refers to a computer system's capability of comprehending human languages\u2014a technique to leverage machines to analyze texts that involves comprehending how people use and understand language [W2745975416, W3151521290]. NLP comprehends the language, sentiments, and context of customer service inquiries. It analyzes and interprets customer conversations and responds to them without the need for human participation. The foundation of NLP may be found in the 1950s, when Alan Turing put forth and explored the idea of \"can machines think\", which established the course for future studies on language processing and natural language comprehension [W4206554112, W4281713872, UNMAPPED:42].\n\nHumans communicate with machines on a daily basis, from sending a message to speaking with Siri or Alexa, as well as Google search, grammar, and spell check. Using application models such as chatbots, virtual assistants, and client relationship management, NLP and AI play a vital role in enterprise customer care. ELIZA, PARRY, and ALICE were earlier chatbots that used simple syntax, information extraction, or classification techniques for evaluating user input and generate responses based on human-created rules [W3184966646, UNMAPPED:45]. The precision and scalability of NLP systems have been substantially enhanced by AI systems, allowing machines to interact in a vast array of languages and application domains.\n\nThe advancement of various approaches, including deep learning, rule-based techniques, statistical models, recurrent neural networks (RNN) and machine learning (ML), can be seen as a consequence to the development of NLP [W3194730353, W2897620540, UNMAPPED:24]. NLP is useful for many businesses, however customer service benefits the most. Individuals are actively researching and advancing technology as it serves businesses as well as consumers. For example, it results in cost savings for operations, particularly for businesses, and generates more revenue for businesses [W2945210383, W2792284791]. NLP systems are designed to relieve the burden of simple and routine questions that accumulate in customer service support centers and support desks so that employees can focus on more challenging and complex activities that require human interaction.\n\nNLP transforms unusable unstructured textual data into usable computer language. To accomplish this, NLP employs algorithms to identify and retrieve natural language rules. The computer receives the text data, decrypt it using algorithms, and then extracts the key information. NLP can be classified into two basic components; Natural Language Understanding (NLU) and Natural Language Generation (NLG) [W4212806832, UNMAPPED:50, UNMAPPED:51]. Figure 1 shows the broad classification of NLP.\n\n**Figure 1.** Broad classification of NLP (Source: [UNMAPPED:50])",
+      "citations": [
+        "W2745975416",
+        "W3151521290",
+        "W3184966646",
+        "W3194730353",
+        "W2897620540",
+        "W2945210383",
+        "W2792284791"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "45",
+        "24",
+        "50"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Planning the Review",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.1.1 Objectives of the Review",
+              "parent_subsection_id": "s_3_1",
+              "text": "The study\u2019s purpose is to outline the present situation of NLP techniques to automate customer query responses, the key advantages of these techniques in customer-focused industries, the challenges in implementing this strategy, and the future potential of NLP applications in the business sector.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.1.2 The Review of the Protocol",
+              "parent_subsection_id": "s_3_1",
+              "text": "The procedure for the review is critical in improving the review\u2019s overall quality, as it minimizes the probability that a reviewer is biased in the data selection and analysis processes. For example, it is entirely feasible that the choice of existing studies or the assessment will be influenced by the assumptions of the researcher without a protocol [UNMAPPED:39]. Additionally, the establishment of a standardized protocol that others can use to replicate the study adds credibility to the review. The next section discusses the protocol review process.\n\n##### 3.1.2.1 The Search Process\nThis study aims to synthesize unbiased research on NLP approaches for automated customer inquiries from as many sources as possible while excluding works that are not directly related to the subject matter at hand. Initial searches focused on identifying the current comprehensive assessment and estimating the number of possibly eligible studies using appropriate phrases based on research questions. We used five digital libraries (ScienceDirect, Springer, Web of Science, Scopus, and IEEE) to perform an automatic search for research articles as an answer to inquiries about research from relevant journals and conferences. Furthermore, we use a backward and forward search strategy to perform manual searches for alternative sources of evidence [W2775303056].\n\n##### 3.1.2.2 Search String\nA widely used search string strategy is to base the string on the research questions and add a list of synonyms, abbreviations, and alternate spellings [UNMAPPED:39]. After identifying keywords and synonyms, the search string was established and implemented in electronic databases to retrieve the most relevant studies to ensure the integrity of this research. A Boolean \"AND\" and \"OR\" expression was used to describe the search string. All searches were carried out between August and September 2022 in order to identify relevant journal papers and conference proceedings. Consequently, we employed the following broad search term:\n\n`(\"NLP\" OR \"Natural Language Processing\") AND (\"Techniques\" OR \"Approaches\" OR \"Methodologies\") AND (\"Automation\" OR \"Automating\" OR \"Automated\") AND (\"Responses\" OR \"Reply\") AND (\"Customer\" OR \"Consumer\") AND (\"Queries\" OR \"Inquiries\" OR \"Questions\")`.\n\n##### 3.1.2.3 Inclusion and Exclusion Criteria\nThe quality of a review's research depends on its inclusion and exclusion criteria [W2964523010]. We deliberately broadened the search string to avoid missing any studies of interest. Using the study selection criteria provided below, we were able to identify relevant studies. The criteria used for inclusion were:\n\n1. The scientific studies must be written in English.\n2. Studies must be published between 2016 and 2022.\n3. The results of only studies that have been published in conferences and journals.\n4. The research should focus on NLP and automated customer queries, or employ NLP in customer service as a key component of their approach.\n5. The publications provide an answer that is directly applicable to at least one of the research questions addressed in this study.\n\nThe criteria used for exclusion were:\n\n1. Studies that were not written in English.\n2. Remove duplicate articles.\n3. Studies published in publications other than journals and conferences should be removed.\n4. Studies without an emphasis on NLP techniques and automated customer queries.\n5. Studies that are irrelevant to the study topic or questions should be discarded.\n\n##### 3.1.2.4 Data Extraction\nThe extraction method started by generating search strings. These strings were used to search the selected libraries for study-related articles. There were 2362 articles found in the original search, and there were 429 downloads. Table 1 below shows the number of articles that were retrieved from each selected database.\n\n**Table 1.** Overview of search results\n{{TABLE:tbl_01}}",
+              "citations": [
+                "W2775303056",
+                "W2964523010"
+              ],
+              "tables_in_text": [
+                "tbl_01"
+              ],
+              "citations_unmapped": [
+                "39"
+              ]
+            }
+          ],
+          "text": "The primary focus of the planning phase is the preparation of the research undertaking to be carried out in order to perform the SLR. It entails determining the review's goal, developing relevant hypotheses according to established goals, and devising a thorough review methodology. A systematic review approach should be employed if the review's primary goal is to assess and compile data showing how a certain criterion has an impact [W2964523010].",
+          "citations": [
+            "W2964523010"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Conducting the Review",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1 Study Selection",
+              "parent_subsection_id": "s_3_2",
+              "text": "We used five digital libraries (ScienceDirect, Springer, Web of Science, Scopus, and IEEE) to perform an automatic search for research articles as an answer to inquiries about research from relevant journals and conferences. Our initial database search yielded a total of 2362 articles. As a result of differing approaches taken by the numerous search engines in the pursuit of relevant articles, the total number of publishing results varied between databases. We then improved the search results using criteria to find only the articles that addressed our main study questions and objectives. These studies were reviewed by a second reviewer to avoid potential bias. Disagreements in viewpoint were aired and ultimately resolved. The authors reached a consensus over the final inclusion and exclusion of the articles. After removing duplicates and studies that were not written in English, there were 429 studies remaining. To proceed, we remove irrelevant studies by assessing titles, abstracts, and keywords, resulting in 175 articles. We progressed to the subsequent phase, where the entire study's contents were reviewed. A more thorough evaluation of the remaining 175 publications led to the rejection of 76 studies, as there were still instances in which some articles were missed during the initial screening, such as duplicate articles and abstracts that were ambiguous. The reviewers conducted a thorough analysis of the remaining 99 studies, leading to the exclusion of an additional 26 studies. As a result, the foundation for this SLR was made up of a total of 73 primary studies. Figure 3 shows the process of study selection.\n\n**Figure 3.** Study selection process for SLR",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2 Quality Assessment",
+              "parent_subsection_id": "s_3_2",
+              "text": "The selected articles for the final sample must be subjected to a thorough evaluation of their quality [W2942708520]. The quality of each article was assessed in accordance with the research purpose using the requirements stated in Table 2 for reliability. Using the quality evaluation criteria, which were all quantified on a rating scale (Poor = 1, Good = 2, and 3 = Excellent), each researcher conducted the review objectively. When the quality evaluation criteria specified in Table 2 are satisfied by an article, a rating will be assigned to that article (a journal or conference paper). For example, if an article sufficiently addresses the QA1 (Does the study meet the criteria for inclusion and exclusion?) question, it receives a rating of 3 = \"Excellent\", if the answer is adequate, it receives a rating of 2 = \"Good\", and if it fails to address the question, it receives a rating of 1 = \"Poor\". This procedure will be repeated for the remaining QA questions. The final score would then be calculated as presented in Table 3.\n\n**Table 2.** Quality assessment checklist\n{{TABLE:tbl_02}}\n\n**Table 3.** Quality assessment results\n{{TABLE:tbl_03}}\n\n{{TABLE:tbl_04}}\n\n**Figure 4.** Year-wise distribution of articles relevant to study",
+              "citations": [
+                "W2942708520"
+              ],
+              "tables_in_text": [
+                "tbl_02",
+                "tbl_03",
+                "tbl_04"
+              ]
+            }
+          ],
+          "text": "This step involved performing searches against the selected database searches to find the appropriate articles for this study, using the inclusion or exclusion criteria as the basis for these queries. Quality assessment standards were used to double-check identified primary studies, and details about each item that met the criteria were compiled.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Reporting the Review",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.3.1 RQ1: What is the Current State of NLP Techniques to Automate Customer Query Responses?",
+              "parent_subsection_id": "s_3_3",
+              "text": "The NLP domain and its numerous potential uses have seen an increase in popularity with the advancement of technology and the development of the human involvement. In response to this, NLP has been implemented in many different settings. The review indicates that a huge number of studies are being conducted in this field, resulting in a substantial rise in the implementation of NLP techniques for automated customer queries. The review of those studies are discussed below.\n\n##### 3.3.1.1 Question Answering and Chatbots\nNLP in customer service tools can be used as a first point of contact to answer basic questions regarding services and technologies. Using NLP techniques such as keyword extraction, intent recognition, and sentiment analysis, chatbots can be trained to comprehend and respond to customer queries. Chatbots are computer programs that employ NLP to simulate conversations with humans [W3091814041]. Chatbots are the most widely used NLP application in customer service, according to studies. In the finance sector, chatbots are used to solve complex problems\u2014assists clients in resolving their daily banking-related queries. NLP algorithms that the system is cognizant of are employed to collect and answer customer queries. Customers can ask questions in natural language, and the chatbot can provide the appropriate response [W3089889604, W2954762064]. In the health industries, AI algorithms are used by medical chatbots to analyze and understand customer queries and respond appropriately to them [W3181852897, W3124120833, W2734554970].\n\nIn addition, the technique has been used to provide medical consultation on vulnerable and mental health problems, depression, nutritional information, monitoring user activity, and prescribing medications to patients [W4281854914, W3029168934, W2973363064, W2912822285]. Chatbot technology is a huge advancement for e-learning; in effect, it has emerged as the most inventive method of bridging the gap between learning and technology, deployed to give students the accurate information to their concerns. The review indicates that the most common application for chatbots is in educational settings, both for facilitating teaching and for learning, being utilized to evaluate students' reading, writing, and speaking skills in order to produce tailored feedback that takes into consideration each student's needs [W2990599173, W4210363535, W2961313234, W3019914501, W2893032043, W2905533004, UNMAPPED:9, UNMAPPED:70].\n\nChatbots are assisting educators in the grading of student continuous assessments such as assignments, tutorials, tests, and examinations [W3039023360, W2563509697, UNMAPPED:8], providing advisory services for students and visitors searching for locations on the Academic road campus, used to interactively address students' queries regarding frequently asked questions on educational portals [W3107933966, W3008865237, W2772103329]. For administrative purposes, chatbots have been used in education to automatically respond to questions from students in relation to the services the school system provides for the academics. The chatbot has the potential to assume the function of an intelligent assistant, offering higher learning institutions the opportunity to improve the quality of the services they now offer, decrease the amount of money spent on personnel, and develop new and groundbreaking services [W2905533004, W3107933966, W3164929237].\n\nStudies have shown that chatbot systems are a viable solution for customer service\u2014presenting an effectiveness for automated customer experience. Several digital channels are available for customers to contact service providers, including company websites, social networking services like Facebook, Twitter, and Instagram, email, and chat [W3193034270, W3012220842, W2611049140, W3036071193, W2547538942, UNMAPPED:23]. Also with automation of the process of allocating petitions to their respective fields of law, legal services have seen significant usage of NLP, which has resulted in a decrease in costs and time associated with such procedure while permitting the allocation of human resources to more complicated tasks [W3180168080, W3091147850].\n\n##### 3.3.1.2 Language Translation\nThe process of transforming spoken or written language from one language to another is called language translation. Human translators or machine translation tools can accomplish this. In customer query response, language translation can be used to automate the process of providing answers to customer queries in a diverse range of languages, which is useful in customer care and support. For example, a virtual assistant can be built to translate inbound questions and responses from customers into other languages in real time. This can be especially helpful for customer care teams who receive questions from consumers who speak multiple languages. Integration of MT with other NLP techniques, such as text classification, text generation, sentiment analysis, and text summarization, is possible in order to deliver an appropriate response to the customer in the client's native language. The review has shown that MT is a good indication of how NLP is used to enhance human communication in customer service. MT has advanced to the point where it can produce results that are generally accurate as a result of intensive scientific research and business effort over the last 10 years [W2745975416].\n\nSeveral applications have employed MT in customer service. For example, Google Translate converts a customer's inquiry from one language to another without human involvement, Facebook automatically translates posts and comments using MT to remove language barriers and enable global communication, and similarly eBay uses MT to link users globally, facilitating cross-border transactions [W3126896034, UNMAPPED:24]. The transmission of discourse and discussion using NLP is another significant development for applications of NLP via speech-to-text devices such as Siri, Google Assistant, Alexa, and Cortana. These applications enable users to make calls and perform voice-based online searches, receiving relevant information and results [W2792106437]. Neural Machine Translation (NMT) is a deep learning-based approach that uses neural networks to translate text. NMT models are trained on large amounts of bilingual data and can handle various languages and dialects, which is useful for customer service that requires multilingual support. Humans can speak naturally to their smartphones and other smart gadgets with a conversational interface in order to obtain information, use Web services, give instructions, and engage in general conversation [W3009426261, W2794636065, W2496446539].\n\n##### 3.3.1.3 Sentiment Analysis\nIn customer query response, machine learning can be used to train models on a large dataset of customer queries and responses, to classify customer queries into predefined categories, to analyze the sentiment of customer queries and to generate automated responses. The Customer service departments can better comprehend customer sentiment with the aid of NLP techniques according to some studies. Companies can evaluate consumer feedback to find common topics of interest, uncover complaints, and monitor important patterns over time using sentiment analysis, the technique of finding and categorizing views expressed in text [W2982255395, W2954371498, UNMAPPED:91, UNMAPPED:92]. In order to analyze sentiment in real time, businesses are already using NLP in customer care, deploying sentiment analysis technologies that automatically monitor written content, such as reviews and posts on social networks. This enables businesses to proactively address user complaints and criticism.\n\nThe techniques are frequently used to collect, evaluate, and analyze textual opinions and classify them as positive, negative, or neutral sentiment in the fields of finance trading, manufacturing, healthcare, politics, the hospitality industry, the food industry, events, and enterprises [W3087506570, W3153113868, W3120559821, W2998433004, W2889278889, W2806120898, UNMAPPED:99]. Additionally, it aids businesses in enhancing product recommendations based on earlier consumer feedback and better comprehending their chosen products. Businesses would be restricted to segmenting customers who have similar needs together or promoting only well-known products if they did not have access to AI-driven NLP technologies. AI-enabled customer care has already been proven to be useful for organizations, and this trend is expected to continue. Businesses that implement NLP technology are able to improve their interactions with customers, better comprehend the sentiments of customers, and enhance the overall satisfaction of their customers.\n\n##### 3.3.1.4 Named Entity Recognition\nNER is an NLP technique that can be used for automating responses to customer queries. This entails locating and extracting specific entities such as persons, organizations, places, and dates from a text. NER techniques have the ability to extract vital information from customer queries, such as product names, account numbers, and contact information, for use in customer service and support. Customer service can then use this information to deliver more precise and personalized responses to customer queries [UNMAPPED:34]. Deep learning models have produced unprecedented outcomes in NLP tasks in recent times, notably in NER. For example, extracting the name of a product from a customer's inquiry and then utilizing that name to tell the customer about the product's price, qualities, and availability. This technique is also able to extract account numbers, which can be subsequently utilized to look up customer information and provide personalized services. It can also assist in determining what the consumer is attempting to accomplish, and can identify keywords like \"cancel\" and \"refund\" to determine the customer's intent and send the query to the right department or representative for processing [W3007343994, UNMAPPED:103]. In general, NER is an NLP technique that may be used to extract pertinent information from customer queries and give more accurate and personalized responses.\n\n##### 3.3.1.5 Pre-trained Models\nRecent developments in the field of NLP have been ushered in by the introduction of pre-trained models. Pre-trained models are ML models that have been trained on a large dataset of text, allowing them to understand the context of the text and handle various languages and dialects. In customer query response, pre-trained models can be fine-tuned on a dataset of customer queries and responses to classify customer queries into predefined categories, analyze the sentiment of customer queries, generate automated responses, translate customer queries, and manage the flow of conversation. For example, ML models can be pre-trained on a dataset of customer queries and responses to address similar questions from customers using NLP techniques such as text classification to categorize and answer customer queries. Pre-trained models such as BERT (Bidirectional Encoder Representations from Transformers), GPT-2 (Generative Pre-trained Transformer 2), RoBERTa (Robustly Optimized BERT Pre-training), T5 (Text-to-Text Transfer Transformer), and ALBERT (A Lite BERT), amongst others, can be fine-tuned on specific customer service datasets to improve the performance of virtual assistants in understanding and responding to customer queries [W3011574394, W3215476720, UNMAPPED:105, UNMAPPED:106, UNMAPPED:108, UNMAPPED:109]. They enhance model performance and save both time and resources compared to training models from scratch.",
+              "citations": [
+                "W3091814041",
+                "W3089889604",
+                "W2954762064",
+                "W3181852897",
+                "W3124120833",
+                "W2734554970",
+                "W3039023360",
+                "W2563509697",
+                "W2905533004",
+                "W3107933966",
+                "W3164929237",
+                "W3180168080",
+                "W3091147850",
+                "W2745975416",
+                "W3126896034",
+                "W2792106437",
+                "W3007343994"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "8",
+                "24",
+                "34",
+                "103"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.3.2 RQ2: What are the Main Advantages of NLP Applications in Customer-Focused Industries?",
+              "parent_subsection_id": "s_3_3",
+              "text": "In this section, we discuss the advantages of NLP applications in customer-focused industries. Review of the relevant literature shows that advances in AI have allowed for the creation of NLP technology that is accessible to humans. The fundamental gap between machines and people that NLP bridges benefits all businesses, as discussed below.\n\n##### 3.3.2.1 Improve Customer Satisfaction\nIn today's highly competitive business, immediate service is required [W3112394254]. Businesses are already seeing the benefits of artificial intelligence-based customer service. NLP techniques are helping companies connect with their customers better, understand how they feel, and improve customer satisfaction across the board. The availability of automated customer service is not affected by schedules or locations. This allows businesses to provide ongoing customer care so that problems can be resolved as soon as they emerge. This enables customers to have their questions answered at any time without having to wait for a response, which could take anything from a few hours to several days\u2014a significant impact on the level of customer satisfaction. Furthermore, it shows that the business is focused on providing service to customers, which is an asset for the general reputation of the brand and trust [W3164929237, W3207535763].\n\n##### 3.3.2.2 Minimizes Costs and Improves Processes\nThe adoption of NLP technology allows businesses to offload manual effort by employing chatbots powered by NLP. This enables them to focus on more innovative tasks, such as solving problems to drive sales. NLP technologies automate a major portion of business customer service operations by answering simple questions and analyzing customer feedback in real-time, allowing businesses to know instantly if their product or service is creating instability. This enables businesses to recruit fewer customer care and call center representatives, resulting in cost savings [W3124120833, W3012220842].\n\n##### 3.3.2.3 Translate and Deliver Accurate Information\nNLP-powered technologies can be programmed to learn the lexicon and requirements of a business, typically in a few moments. Consequently, once they are operational, they execute considerably more precisely than humans ever could. Additionally, you can adjust your models and continue to train them as your industry or business terminology changes [W2745975416, UNMAPPED:112]. Global customers can receive reliable information in a variety of languages through chatbots powered by AI that can circumvent the language barrier [W3126896034, W2792106437, W3047397334].\n\n##### 3.3.2.4 Evaluation of Consumer Opinions\nAccording to the review, one of the significant advantages of NLP techniques is that they enable organizations to recognize and comprehend the opinions and sentiments of their customers online. The emotions and attitude expressed in online conversations have an impact on the choices and decisions made by customers. Businesses use sentiment analysis to monitor reviews and posts on social networks. This allows companies to address customer problems proactively. These strategies are used to collect, assess and analyze text opinions in positive, negative, or neutral sentiment [W3153113868, W2968802820, UNMAPPED:91].",
+              "citations": [
+                "W3112394254",
+                "W3164929237",
+                "W3207535763",
+                "W3124120833",
+                "W3012220842",
+                "W2745975416",
+                "W3126896034",
+                "W2792106437",
+                "W3047397334",
+                "W3153113868",
+                "W2968802820"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "112",
+                "91"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.3.3 RQ3: What Limitations are Associated with the Implementation of NLP Techniques within the Customer Service Domain?",
+              "parent_subsection_id": "s_3_3",
+              "text": "NLP in customer service promotes research and innovation, helping consumers and businesses. NLP in customer service technology answers simple questions about themes, features, product availability, related products, etc. This frees up human workers to handle escalating client complaints. However, the deployment and use of NLP applications can present significant challenges, as will be explored in the following, as the literature has shown.\n\n##### 3.3.3.1 Data Ambiguities\nNLP has difficulty comprehending all the subtle nuances and relevant facts because human language is so complex and has numerous layers of abstraction. The importance of semantics in determining the link between concepts and products cannot be underestimated. Unless context and semantics of interaction are identified, retrieval of textual and visual objects and domains cannot generate reliable information [W3126896034]. The challenge in NLP is the complexity of natural language, which causes ambiguity at different levels. Ambiguity is a widespread problem that affects human\u2013computer interaction; however, its evolving nature complicates design. Data ambiguities present a significant challenge for NLP techniques, particularly chatbots. Multiple factors, including polysemy, homonyms, and synonyms, can cause ambiguities. The customer experience may suffer as a result of these ambiguities, which can lead to misunderstanding and inaccurate chatbot responses. Incorrect user interpretations may drive users to stop using the system [W2910192556, UNMAPPED:115]. Various techniques have been proposed to address data ambiguities in NLP, such as word sense disambiguation, neural machine translation, pre-trained models, text summarization, named entity recognition, dialogue management and others.\n\n##### 3.3.3.2 Information Overload\nThe most significant obstacle of NLP applications in customer service is the enormous amount of information available, which makes it extremely difficult to retrieve a precise and relevant piece of data from enormous datasets. Summarization systems must understand the semantics and context of information to function properly, however this can be difficult owing to accuracy and readability issues [UNMAPPED:24, UNMAPPED:117].\n\n##### 3.3.3.3 A Domain-Specific Language\nLanguage used by various industries and businesses often vary widely. For example, the NLP processing model required for the processing of medical records might differ greatly from that required for the processing of legal documents. Although there are many analysis tools available now that have been trained for particular disciplines, specialized companies may still need to develop or train their own models [UNMAPPED:118].",
+              "citations": [
+                "W3126896034",
+                "W2910192556"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "115",
+                "24",
+                "117",
+                "118"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.3.4 RQ4: What are the Prospects for NLP Applications in the Business Domain?",
+              "parent_subsection_id": "s_3_3",
+              "text": "##### 3.3.4.1 Language Understanding\nAccording to the reviewed literature, the goal of NLP in the future is to create machines that can typically understand and comprehend human language [UNMAPPED:119, UNMAPPED:120]. This suggests that human-like interactions with machines would ultimately be a reality. The capability of NLP will eventually advance toward language understanding. The amount of data available around the world is constantly growing. The vast majority of businesses now think of data as a commodity, and a large portion of these data is unstructured. This is an indication that the use of NLP is necessary. NLP already has a firm place in the progression of machine learning, despite the dynamic nature of the AI field and the huge volumes of new data that are accumulated daily.\n\n##### 3.3.4.2 Available Pre-trained Models\nIn its current iteration, NLP can be taught to answer a number of questions, some of which are rather complex. In the near future, however, NLP will be trained to do more than just answer questions; it will be able to deliver complicated solutions that directly address the underlying questions being asked. In the years to come, we can anticipate that NLP technology will become increasingly sophisticated and precise [W3011574394, W3202031169, W3144701084].",
+              "citations": [
+                "W3011574394",
+                "W3202031169",
+                "W3144701084"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "119",
+                "120"
+              ]
+            }
+          ],
+          "text": "The outcomes of this study are described and discussed with reference to the research questions introduced earlier in this section. The SLR process must be reported in significant detail to ensure that the literature reviews are credible and reproducible consistently [W1539987097]. After conducting a comprehensive review of these papers in order to choose just the articles from journals and conferences that were the most relevant to the use of NLP techniques for automating customer queries. In the end, 73 articles were selected for inclusion in the study. On the basis of the full texts, QAs were utilized on the studies in order to conduct an assessment of the quality of the selected papers. Again, to illustrate the finding, the results of these articles were categorized, organized, and structured. The 73 primary studies that we included in this review are listed in Table 3. These studies were published between 2016 and 2022. Figure 4 shows the distribution by year.",
+          "citations": [
+            "W1539987097"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section describes the methodical procedure for retrieving publications and analyzing the literature on NLP techniques to automate customer query responses using the Kitchenham and Charters-introduced guidelines [UNMAPPED:39]. An integral component of academic research is a literature review, as new knowledge must be established in the existing literature prior to review [W2750168540]. Three crucial steps make up a successful review, according to the standards outlined by Kitchenham and Charters: planning, conducting, and reporting the review [W2118328848, UNMAPPED:39]. Figure 2 shows the three stages of the review process. The SLR's stages are discussed below.\n\n**Figure 2.** Overview of SLR stages (Source: [W3184966646])",
+      "citations": [
+        "W2750168540",
+        "W2118328848",
+        "W3184966646"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "39"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The purpose of the research was to better understand the current state of NLP techniques to automate responses to customer inquiries by performing a systematic evaluation of the literature on the topic. This would enable a deeper comprehension of the advantages, limitations, and prospects of NLP applications in the business domain. Across the course of the research into the relevant literature, it became abundantly evident that the NLP domain and its myriad of possible applications have gained in popularity as a direct result of the growth of technology and the expansion of human involvement\u2014applied in a wide variety of contexts. Currently, a large number of studies are being carried out on this subject, resulting in a substantial rise in the implementation of NLP techniques for the automated processing of client inquiries.\n\nThe study findings suggest that the application of NLP techniques in customer service can function as an initial point of contact for the purpose of providing answers to fundamental queries regarding services. Chatbots have been widely employed to handle difficult problems in the finance sector, such as assisting clients with everyday banking-related enquiries, providing medical counseling on vulnerable and mental health problems, depression, dietary information, tracking user activity, and prescribing drugs to patients. The analysis suggests that chatbots are most commonly used in educational settings to test students' reading, writing, and speaking skills and provide customized feedback. Legal services have used NLP extensively, reducing costs and time while freeing up staff for more complex duties. Using sentiment analysis to track customers' reviews and social media posts in order to proactively address customer complaints. Additionally, the utilization of language translation techniques in order to eliminate linguistic barriers and automate the process of providing answers to customer queries in a diverse range of languages.\n\nThe recent developments in AI have made it possible to develop NLP technology that is accessible to humans. NLP helps bridge the fundamental divide between technology and people, which is beneficial for all businesses. The review highlights several benefits, among which are significantly improved level of customer satisfaction, the minimization of costs and the improvement of processes, the ability to translate and transmit reliable information and the evaluation of consumer comments. In the reviewed articles, the difficulties that are linked with the implementation of NLP techniques within the customer service area were identified. Data ambiguities present a significant challenge for NLP techniques, particularly chatbots. Multiple factors, including polysemy, homonyms, and synonyms, can cause ambiguities and customer experience may suffer because of these ambiguities, which can lead to misunderstanding and inaccurate chatbot responses. The enormous amount of available information makes it challenging to get precise and useful information from large datasets, while a domain-specific language remains a barrier in customer service. Word sense disambiguation, neural machine translation, pre-trained models, text summarization, named entity recognition, dialogue management, and a variety of other techniques have been suggested as potential solutions to the problem of data ambiguity in NLP.\n\nFurthermore, the study found that NLP is now the most researched subject in the fields of AI and ML. The research on NLP is conducted by businesses because they have the goal of developing technologies that will facilitate consumer engagement. The ultimate aim of NLP is to one day build machines that are capable of normal human language comprehension and understanding. This provides support for the hypothesis that human-like interactions with machines will one day become a reality. In the long run, NLP will develop the potential to understand natural language better. We anticipate that in the coming future, NLP technology will progress and become more accurate.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 Limitations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The SLR's goal is to assess and analyze primary studies on NLP techniques for automating customer query responses. While the data is logically valid, it is mostly concerned with the context of certain research questions. Numerous variables could have had an impact on the study's accuracy such as data extraction process and studies focus. Five major scientific databases were searched at in order to retrieve the relevant studies. However, these databases are not exhaustive, and, as a result, the quality of this research may have been impacted. In a similar vein, the study concentrates largely on the techniques of NLP for automating customer query responses in specific industries (as covered in Section 3), with no consideration given to other industries, such as the automotive, manufacturing, and entertainment industries, among others. In the future, these limitations may be addressed using keywords that link to various industries.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6 Conclusion and Future Work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In recent years, NLP techniques have been identified as a promising tool to manipulate and interpret complex customer inquiries. As technology and the human\u2013computer interface advance, more businesses are recognising and implementing NLP. NLP understands the language, feelings, and context of customer service, interprets consumer conversations and responds without human involvement. NLP systems are designed to reduce the burden of simple and routine questions in customer service support centers and support desks, so that personnel can focus on more complicated activities that require human interaction. In this review, NLP techniques for automated responses to customer queries were addressed.\n\nIn general, NLP techniques for automating customer queries are extensive, with several techniques and pre-trained models available to businesses. These methods can boost customer service efficiency and quality. NLP techniques can provide more personalized and human-like responses, which can improve customer service and customer satisfaction; handle multilingual customer service; better understand customer intent; handle a large volume of customer queries which can be useful for businesses with a high volume of customer interactions; and extract useful information from customer queries and use it for better decision-making. These techniques have opened new opportunities for businesses in education, e-commerce, finance, and healthcare to improve customer service and reduce costs. The implementation of NLP techniques within the customer service sector will be the subject of future works that will involve empirical studies of the challenges and opportunities connected with such implementation.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4381705785_tables.md"
+}

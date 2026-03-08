@@ -1,0 +1,462 @@
+{
+  "id": "W3183848791",
+  "metadata": {
+    "title": "Deep Learning for Temporal Data Representation in Electronic Health Records: A Systematic Review of Challenges and Methodologies",
+    "n_sections": 7,
+    "n_subsections": 6,
+    "n_subsubsections": 4,
+    "n_tables": 4
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "An electronic health record (EHR) [W2058924226] collects patients' health information in structured and unstructured digital formats. While the primary objective of an EHR is to improve the efficiency of healthcare systems, it also contains valuable information for secondary uses purposes [W2508255435]. EHR contains two types of data: structured data such as diagnoses, procedures, medication prescriptions, vital signs, lab tests, and unstructured data such as clinical notes, physiological signals, and medical images. Most structured EHR data are documented with timestamps by tracking repeated measurements of a patient's conditions over time. Compared to static data, temporal data provide longitudinal information on a patient's medical history, where hidden patterns (e.g., disease progression or changing variables over time) could be exploited. The growing amount of temporal EHR data presents an opportunity to develop more comprehensive and usable models for risk stratification, disease prognosis, or chronic disease management such as chronic kidney disease prediction [W2015462679] and adverse drug event detection [UNMAPPED:4].\n\nAlthough researchers have demonstrated that incorporating temporal EHR data into predictive models can improve discriminative performance [W2015462679, W3036955987, UNMAPPED:5], such information is not often fully utilized due to its temporal nature [UNMAPPED:7]. Most conventional regression and machine learning methods are unable to efficiently extract the temporal pattern from data that contains multiple sets of repeated variables. Some traditional approaches rely on extracting a single value aggregated from the time series, such as mean, median, or other aggregated statistics [W3045837041]. It resulted in the loss of potentially valuable sequential information due to the inability to exploit the temporal dynamics of the data [W2559646245]. Therefore, how to better account for the temporality of time series clinical data becomes an important research question.\n\nTemporal EHR data with complex structure and unevenly distributed clinical events present multiple technical challenges, including data irregularity, heterogeneity, sparsity, and model opacity, among others. In view of the limitations of standard learning algorithms in dealing with these challenges, the state-of-the-art deep learning-based methods, such as recurrent neural networks (RNNs) [W2964010366, W2971724044], long short-term memory (LSTM) [W2742491462, W2922594471, W3045063674], and gated recurrent unit (GRU) [W2883762974], have been proposed for temporal EHR data representation. These sequential deep learning architectures present potential suitability for dealing with the temporal nature of the EHR. With their ability of learning, flexibility, and generalizability by complex nonlinearity, deep learning algorithms have demonstrated superiority when modeling temporal EHR data in many applications [W3043596964, W2888788502, W2756184660, W2755895186].\n\nSeveral recent reviews have summarized the use of deep learning for analyzing general EHR data [W2805089815, W2625625371, W3000238064, W3092301826]. Nevertheless, none of them provide a systematic and in-depth summary of the technical challenges and deep learning solutions for handling temporal EHR data. In this review, we sought to consolidate the recent development of novel deep learning methods for representing temporal data and evaluate selected studies from the perspective of primary challenges and the methodologies that address them. We systematically explored the primary issues involved in analyzing temporal EHR data and thoroughly investigated state-of-the-art deep learning solutions. Moreover, we identified that there are still open challenges such as usability and transferability, which suggest potential topics for further research.",
+      "citations": [
+        "W2058924226",
+        "W2508255435",
+        "W2015462679",
+        "W3036955987",
+        "W3045837041",
+        "W2559646245",
+        "W2964010366",
+        "W2971724044",
+        "W2883762974"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "4",
+        "5",
+        "7"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Search strategy and data sources",
+          "subsubsections": [],
+          "text": "We performed a systematic review of methodological studies on the use of deep learning techniques for temporally structured EHR representations. We conducted the literature search in five databases: PubMed, EMBASE, the Institute of Electrical and Electronics Engineers (IEEE) Xplore Digital Library, the Association for Computing Machinery (ACM) Digital Library, and Web of Science. We also searched relevant articles in several prestigious computer science conference proceedings (i.e., Conference on Neural Information Processing Systems [NeurIPS], International Joint Conference on Artificial Intelligence [IJCAI], and Association for the Advancement of Artificial Intelligence [AAAI] Conference) that are not included in the above databases. The searched terms on EHR were ('electronic health record' OR 'EHR' OR 'EHRs' OR 'electronic medical record' OR 'EMR' OR 'EMRs') [UNMAPPED:7]. We also added terms ('deep learning' OR 'neural network' OR 'deep' OR 'CNN' OR 'RNN' OR 'LSTM') to limit the search to deep learning-based studies, and ('embed' OR 'embedding' OR 'representation' OR 'time series' OR 'sparse' OR 'temporal' OR 'concept' OR 'sequential' OR 'attention') to include studies of temporal data representation. We further restricted our search to papers published between January 1, 2010, and August 30, 2020. We anticipated that only few relevant articles would be published before 2010, since deep learning for EHR is a relatively new development in the last decade.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "7"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Inclusion and exclusion criteria",
+          "subsubsections": [],
+          "text": "We followed the PRISMA [W2134833483] guidelines to report our systematic review. We included all methodological papers published in English, which employed deep learning for handling temporal EHR data. Review articles, duplicate records, and studies not relevant to EHR or deep learning were excluded. We further excluded pure application papers that did not propose novel methods to address challenges and papers that only dealt with static data (i.e., non-temporal data) or unstructured data (for example, free texts, physiological signals, and medical images). Two reviewers (FX and HY) independently screened all studies and, if ambiguous, discussed with NL to reach a consensus on paper selection.",
+          "citations": [
+            "W2134833483"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Data extraction, synthesis, and analysis",
+          "subsubsections": [],
+          "text": "First, we categorized included papers according to the technical challenges that they attempted to address. We identified four main categories of technical challenges in temporal EHR data analysis: data irregularity, data sparsity, data heterogeneity, and model opacity. Second, we evaluated these papers in detail from three aspects: nature of time series, methodology, and model implementation. With regard to the nature of time series, we extracted information including the time series components and the method of sparse code representation. In terms of methodology, we extracted the name of the method, the technical challenges it addressed, and the architecture of deep neural networks. For model implementation, we collected information on the clinical application, EHR datasets used (e.g., Medical Information Mart for Intensive Care [MIMIC] [W2396881363]), the main evaluation metrics (e.g., area under the receiver operating characteristic curve [AUROC]), and their main comparators. Finally, we consolidated all extracted information for subsequent analysis and investigation.",
+          "citations": [
+            "W2396881363"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4 Definition of temporal EHR data",
+          "subsubsections": [],
+          "text": "In this review, we present a unified definition of temporal EHR data, denoted as D.\n\n$$\n\\boldsymbol{D}_{i}=[v_{i,1},v_{i,2},v_{i,3},\\ldots,v_{i,T_{i}-1},v_{i,T_{i}}]\n$$\n\nwhere i represents the i-th patient and $T_{i}$ is the total number of time steps of the i-th patient. Different patients might have different numbers of time steps. For each time step t, $v_{i,t} = <c_{i,t}, d_{i,t}>$, where $c_{i,t}$ denotes the data type of sparse medical concepts (e.g., medications, diagnoses, and procedure codes) and $d_{i,t}$ represents dense data such as lab test results and vital signs.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Selection process and results overview",
+          "subsubsections": [],
+          "text": "Our initial search yielded 1421 papers, of which 495 duplicates had been removed, while 926 records went through title and abstract screening. Then, 780 records were excluded as they were either not relevant to EHR (n=246), nor did they utilize deep learning methods (n=185), nor did they involve temporal data representation (n=61), just applications using existing methods (n=23), or review articles (n=22), or were based on unstructured data (n=243). As a result, we included 146 articles for full-text review. A total of 98 papers were eventually included, as shown in Table 1. Figure 1 illustrates the PRISMA diagram on literature selection.\n\nFigure 2 summarizes the statistics for the included papers. Between 2010 and 2020, the volume of articles has increased significantly. Besides the publication date, we also identified the primary research journals and conferences. ACM Conference on Knowledge Discovery and Data Mining (n=9), IEEE International Conference on Bioinformatics and Biomedicine (n=6), IEEE International Conference on Healthcare Informatics (n=6), Journal of Biomedical Informatics (n=6) were the top four publication venues. Among the included articles, data irregularity (n=37) was the most frequently studied challenge, diagnosis (n=61) was the most commonly used temporal variable, and LSTM (n=35) was the most widely adopted deep learning architecture. Of the 98 studies, the majority (n=88) used encounters (e.g., episodes, visits, admissions) as the time step $v_{i,t}$, while others chose fixed time windows (e.g., one hour, day, or month) as the $v_{i,t}$ for composing time series.\n\n**Table 1: Characteristics of the included papers in this review**\n\n<table border=\"1\" style=\"margin: auto; width: max-content; font-size: 0.9em;\">\n<thead>\n<tr>\n<th rowspan=\"2\">Year</th>\n<th rowspan=\"2\">Paper</th>\n<th colspan=\"4\">Challenge</th>\n<th colspan=\"2\">Deep learning solution</th>\n<th rowspan=\"2\">Clinical Application</th>\n</tr>\n<tr>\n<th>Irregularity</th><th>Sparsity</th><th>Heterogeneity</th><th>Interpretability</th><th>Method name</th><th>Main Architecture</th>\n</tr>\n</thead>\n<tbody>\n<tr><td>2013</td><td>Lasko et al.[W1973825638]</td><td>\u2713</td><td>\u2713</td><td></td><td></td><td></td><td>Autoencoder</td><td>Phenotyping</td></tr>\n<tr><td>2015</td><td>Esteban et al.[W2294329458]</td><td></td><td>\u2713</td><td></td><td></td><td></td><td>ANN</td><td>Clinical events prediction</td></tr>\n<tr><td>2015</td><td>Mehrabi et al.[W2293197871]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>RBM</td><td>Diagnosis association discovery</td></tr>\n<tr><td>2015</td><td>Tran et al.[W2027106132]</td><td>\u2713</td><td>\u2713</td><td>\u2713</td><td></td><td>eNRBM</td><td>RBM</td><td>Suicide risk stratification</td></tr>\n<tr><td>2016</td><td>Choi et al.[UNMAPPED:30]</td><td>\u2713</td><td></td><td></td><td></td><td>Doctor AI</td><td>RNN</td><td>Diagnosis and medication prediction</td></tr>\n<tr><td>2016</td><td>Miotto et al.[W2404901863]</td><td></td><td>\u2713</td><td></td><td></td><td>Deep Patient</td><td>Autoencoder</td><td>Multiple diseases prediction</td></tr>\n<tr><td>2016</td><td>Zhu et al.[W2584780866]</td><td></td><td></td><td>\u2713</td><td></td><td></td><td>CNN, Word2vec</td><td>Phenotyping</td></tr>\n<tr><td>2016</td><td>Choi et al.[W2956513391]</td><td></td><td></td><td></td><td>\u2713</td><td>RETAIN</td><td>RNN</td><td>Heart failure prediction</td></tr>\n<tr><td>2017</td><td>Baytas et al.[W2742491462]</td><td>\u2713</td><td></td><td></td><td></td><td>T-LSTM</td><td>LSTM, Autoencoder</td><td>Parkinson's disease progression prediction</td></tr>\n<tr><td>2017</td><td>Che et al.[W2963034797]</td><td></td><td></td><td></td><td></td><td>ehrGAN</td><td>CNN</td><td>Heart failure and diabetes classification and data generation</td></tr>\n<tr><td>2017</td><td>Che et al.[W2772027160]</td><td></td><td></td><td></td><td>\u2713</td><td>GRU-D</td><td>GRU</td><td>Multiple clinical tasks</td></tr>\n<tr><td>2017</td><td>Feng et al.[W2773114958]</td><td></td><td>\u2713</td><td></td><td></td><td>MG-CNN</td><td>CNN</td><td>Costs and length of stay prediction</td></tr>\n<tr><td>2017</td><td>Mei et al.[W2786983438]</td><td>\u2713</td><td>\u2713</td><td></td><td></td><td>Deep Diabetologist</td><td>RNN</td><td>Personalized hypoglycemia medication prediction</td></tr>\n<tr><td>2017</td><td>Nguyen et al.[W2481271618]</td><td>\u2713</td><td>\u2713</td><td></td><td></td><td>Deepr</td><td>CNN</td><td>Unplanned readmission prediction</td></tr>\n<tr><td>2017</td><td>Pham et al.[W2607113351]</td><td>\u2713</td><td></td><td></td><td></td><td>DeepCare</td><td>LSTM</td><td>Diagnoses prediction and Intervention recommendation</td></tr>\n<tr><td>2017</td><td>Sha et al.[W2745673637]</td><td></td><td></td><td></td><td>\u2713</td><td>GRNN-HA</td><td>GRU</td><td>Mortality prediction</td></tr>\n<tr><td>2017</td><td>Stojanovic et al.[W2460054580]</td><td></td><td>\u2713</td><td></td><td></td><td>disease+procedure2vec</td><td>Skip-gram</td><td>Healthcare quality prediction</td></tr>\n<tr><td>2017</td><td>Suo et al.[W2785806165]</td><td></td><td></td><td>\u2713</td><td>\u2713</td><td></td><td>GRU</td><td>Diagnosis prediction</td></tr>\n<tr><td>2017</td><td>Suo et al.[W2772905286]</td><td></td><td></td><td>\u2713</td><td></td><td></td><td>CNN</td><td>Multiple disease prediction</td></tr>\n<tr><td>2017</td><td>Zheng et al.[W2767786571]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>GRU</td><td>Severity scores prediction</td></tr>\n<tr><td>2017</td><td>Yang et al.[W2756184660]</td><td>\u2713</td><td></td><td>\u2713</td><td></td><td></td><td>LSTM, GRU</td><td>Therapy decisions prediction</td></tr>\n<tr><td>2017</td><td>Yang et al.[W2604836086]</td><td></td><td></td><td></td><td>\u2713</td><td>TaGiTeD</td><td>Tensor Optimization</td><td>Hospitalization and medical expense prediction</td></tr>\n<tr><td>2018</td><td>Bai et al.[W2809396336]</td><td>\u2713</td><td></td><td></td><td>\u2713</td><td>Timeline</td><td>RNN</td><td>Disease progression prediction</td></tr>\n<tr><td>2018</td><td>Cheung et al.[W2798092656]</td><td></td><td></td><td>\u2713</td><td>\u2713</td><td>AXCNN</td><td>CNN</td><td>Readmission prediction</td></tr>\n<tr><td>2018</td><td>Le et al.[W2963806310]</td><td>\u2713</td><td></td><td></td><td></td><td>DMNC</td><td>LSTM</td><td>Disease progression and drug prescription prediction</td></tr>\n<tr><td>2018</td><td>Lee et al.[W2907646605]</td><td></td><td></td><td></td><td>\u2713</td><td>MCA-RNN</td><td>RNN</td><td>Diagnosis prediction</td></tr>\n<tr><td>2018</td><td>Lei et al.[W2911463506]</td><td></td><td></td><td>\u2713</td><td></td><td>RNN-DAE</td><td>RNN, Autoencoder</td><td>Mortality prediction</td></tr>\n<tr><td>2018</td><td>Lin et al.[W2883553986]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>CNN, LSTM</td><td>Sepsis prediction</td></tr>\n<tr><td>2018</td><td>Ma et al.[UNMAPPED:52]</td><td></td><td></td><td></td><td>\u2713</td><td>KAME</td><td>GRU</td><td>Diagnosis prediction</td></tr>\n<tr><td>2018</td><td>Nguyen et al.</td><td>\u2713</td><td></td><td></td><td></td><td>Resset</td><td>RNN</td><td>Diabetes and mental health prediction</td></tr>\n<tr><td>2018</td><td>Park et al.[UNMAPPED:53]</td><td></td><td></td><td></td><td>\u2713</td><td>FA-Attn-LSTM</td><td>LSTM</td><td>Cardiovascular disease risk prediction</td></tr>\n<tr><td>2018</td><td>Park et al.[W2904676244]</td><td></td><td></td><td></td><td>\u2713</td><td>COAM</td><td>RNN</td><td>Medical code prediction</td></tr>\n<tr><td>2018</td><td>Rajkomar et al.[UNMAPPED:55]</td><td></td><td></td><td>\u2713</td><td></td><td></td><td>LSTM, TANN, ANN</td><td>Mortality, readmission, length of stay, diagnoses prediction</td></tr>\n<tr><td>2018</td><td>Suo et al.[W2886951144]</td><td></td><td></td><td>\u2713</td><td></td><td></td><td>CNN</td><td>Phenotyping</td></tr>\n<tr><td>2018</td><td>Suresh et al.[W4289257494]</td><td></td><td></td><td>\u2713</td><td></td><td></td><td>LSTM, Autoencoder</td><td>Mortality prediction</td></tr>\n<tr><td>2018</td><td>Wu et al.[W2806153517]</td><td></td><td></td><td>\u2713</td><td></td><td></td><td>LSTM</td><td>Asthma phenotyping</td></tr>\n<tr><td>2018</td><td>Xiao et al.[W2796547658]</td><td></td><td></td><td></td><td>\u2713</td><td>TopicRNN</td><td>GRU</td><td>Readmissions prediction</td></tr>\n<tr><td>2018</td><td>Yang et al.[W2914655379]</td><td>\u2713</td><td></td><td></td><td></td><td>TGBA-F</td><td>LSTM</td><td>Septic shock prediction</td></tr>\n<tr><td>2018</td><td>Zhang et al.[W2897007327]</td><td></td><td></td><td></td><td>\u2713</td><td>Patient2Vec</td><td>GRU</td><td>Hospitalizations prediction</td></tr>\n<tr><td>2018</td><td>Huang et al.[W2739340771]</td><td></td><td></td><td>\u2713</td><td></td><td>SDAE</td><td>Autoencoder</td><td>Acute coronary syndrome risk prediction</td></tr>\n<tr><td>2018</td><td>Choi et al.[W2963208729]</td><td></td><td>\u2713</td><td></td><td></td><td>MiME</td><td>GRU</td><td>Multiple disease prediction</td></tr>\n<tr><td>2019</td><td>An et al.[W2967597710]</td><td></td><td></td><td></td><td>\u2713</td><td>DeepRisk</td><td>LSTM</td><td>Cardiovascular diseases prediction</td></tr>\n<tr><td>2019</td><td>Ashfaq et al.[W2963650911]</td><td></td><td></td><td>\u2713</td><td></td><td></td><td>LSTM</td><td>Readmission prediction</td></tr>\n<tr><td>2019</td><td>Fiorini et al.[W2980717669]</td><td>\u2713</td><td></td><td></td><td></td><td>Tangle</td><td>LSTM</td><td>Diabetes therapy initiation prediction</td></tr>\n<tr><td>2019</td><td>Guo et al.[W2956513391]</td><td></td><td></td><td></td><td>\u2713</td><td>COAM</td><td>RNN</td><td>Multiple disease prediction</td></tr>\n<tr><td>2019</td><td>Jun et al.[W2977676495]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>Autoencoder</td><td>Mortality prediction</td></tr>\n<tr><td>2019</td><td>Kwon et al.[W2804604520]</td><td></td><td></td><td></td><td>\u2713</td><td>Retain-Vis</td><td>RNN</td><td>Risk prediction model visualization</td></tr>\n<tr><td>2019</td><td>Lee et al.[W2949915161]</td><td>\u2713</td><td></td><td></td><td></td><td>Recent context-aware LSTM</td><td>LSTM</td><td>Clinical events prediction</td></tr>\n<tr><td>2019</td><td>Li et al.[W2966008801]</td><td>\u2713</td><td></td><td></td><td></td><td>VS-GRU</td><td>GRU</td><td>Mortality and disease prediction</td></tr>\n<tr><td>2019</td><td>Lin et al.[W2957430216]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>LSTM</td><td>Unplanned ICU readmission prediction</td></tr>\n<tr><td>2019</td><td>Liu et al.[UNMAPPED:73]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>GRU</td><td>Mortality and ICU admission prediction</td></tr>\n<tr><td>2019</td><td>Liu et al.[W2980349752]</td><td>\u2713</td><td></td><td>\u2713</td><td></td><td></td><td>LSTM</td><td>Sepsis prediction</td></tr>\n<tr><td>2019</td><td>Macias et al.[W2999765556]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>LSTM</td><td>Sepsis prediction</td></tr>\n<tr><td>2019</td><td>Peng et al.[W3004402226]</td><td></td><td>\u2713</td><td></td><td></td><td>TeSAN</td><td>GRU</td><td>Mortality prediction</td></tr>\n<tr><td>2019</td><td>Ruan et al.[W2996036738]</td><td>\u2713</td><td></td><td></td><td></td><td>RNN-DAE</td><td>GRU</td><td>Mortality, comorbidity prediction and phenotyping</td></tr>\n<tr><td>2019</td><td>Wang et al.[W2947566953]</td><td>\u2713</td><td></td><td></td><td>\u2713</td><td>MCPL-based FT-LSTM</td><td>LSTM</td><td>Clinical events prediction</td></tr>\n<tr><td>2019</td><td>Wang et al.[W2983825113]</td><td></td><td>\u2713</td><td></td><td></td><td>CompNet</td><td>CNN, GCN</td><td>Medication prediction</td></tr>\n<tr><td>2019</td><td>Wang et al.[W2958149604]</td><td></td><td>\u2713</td><td></td><td></td><td>Patient2vec</td><td>RNN</td><td>Diagnosis prediction</td></tr>\n<tr><td>2019</td><td>Wang et al.[W3005251548]</td><td>\u2713</td><td></td><td></td><td></td><td>MRM</td><td>LSTM</td><td>Mortality and potassium ion concentration abnormality prediction</td></tr>\n<tr><td>2019</td><td>Xiang et al.[W2939903565]</td><td></td><td>\u2713</td><td></td><td></td><td></td><td>LSTM</td><td>Concept similarity analysis and disease prediction</td></tr>\n<tr><td>2019</td><td>Xu et al.[W2990899307]</td><td></td><td></td><td></td><td>\u2713</td><td></td><td>RNN</td><td>Adverse cardiovascular events prediction</td></tr>\n<tr><td>2019</td><td>Yang et al.[W3004621080]</td><td></td><td></td><td></td><td>\u2713</td><td>GcGAN</td><td>GAN</td><td>Data generation evaluated by treatment recommendation</td></tr>\n<tr><td>2019</td><td>Zhang et al.[W3004471907]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>LSTM, Autoencoder</td><td>Missing data Imputation</td></tr>\n<tr><td>2019</td><td>Zhang et al.[W3003385226]</td><td></td><td></td><td></td><td>\u2713</td><td>KNOWRISK</td><td>LSTM</td><td>Heart failure prediction</td></tr>\n<tr><td>2019</td><td>Zhang et al.[W2991417788]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>LSTM</td><td>Septic shock prediction</td></tr>\n<tr><td>2019</td><td>Zhang et al.[UNMAPPED:88]</td><td></td><td></td><td></td><td></td><td>MetaPred</td><td>CNN, LSTM</td><td>MCI, Alzheimer, Parkinson's disease prediction</td></tr>\n<tr><td>2020</td><td>Afshar et al.[UNMAPPED:89]</td><td></td><td></td><td>\u2713</td><td></td><td>TASTE</td><td>Tensor Factorization</td><td>Heart failure phenotyping</td></tr>\n<tr><td>2020</td><td>An et al.[W3043314599]</td><td></td><td></td><td>\u2713</td><td></td><td>RAHM</td><td>LSTM</td><td>Medication stocking prediction</td></tr>\n<tr><td>2020</td><td>Barbieri et al.[UNMAPPED:91]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>RNN</td><td>ICU readmission prediction</td></tr>\n<tr><td>2020</td><td>Chu et al.[W3044345313]</td><td></td><td></td><td>\u2713</td><td></td><td>DAL-EP and MTL-EP</td><td>RNN</td><td>Heart failure prediction</td></tr>\n<tr><td>2020</td><td>Duan et al.[W2998314166]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>RNN</td><td>Clinical events prediction</td></tr>\n<tr><td>2020</td><td>Gao et al.[W3081510302]</td><td></td><td></td><td>\u2713</td><td></td><td>COMPOSEN</td><td>CNN</td><td>Patient-trial matching</td></tr>\n<tr><td>2020</td><td>Gao et al.[UNMAPPED:95]</td><td></td><td></td><td>\u2713</td><td></td><td>StageNet</td><td>LSTM</td><td>Mortality prediction</td></tr>\n<tr><td>2020</td><td>Jin et al.[UNMAPPED:96]</td><td></td><td></td><td></td><td></td><td>CarePre</td><td>RNN</td><td>Diagnosis prediction</td></tr>\n<tr><td>2020</td><td>Jun et al.[W3080823838]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>RNN</td><td>Mortality prediction</td></tr>\n<tr><td>2020</td><td>Landi et al.[W3042895962]</td><td></td><td></td><td>\u2713</td><td></td><td>ConvAE</td><td>CNN, Autoencoder</td><td>Disease prediction</td></tr>\n<tr><td>2020</td><td>Lauritsen et al.[W3008421095]</td><td>\u2713</td><td></td><td></td><td></td><td></td><td>CNN, LSTM</td><td>Sepsis prediction</td></tr>\n<tr><td>2020</td><td>Li et al.[W3048964647]</td><td></td><td>\u2713</td><td></td><td></td><td>GNDP</td><td>CNN</td><td>Diagnosis prediction</td></tr>\n<tr><td>2020</td><td>Li et al.[W3017637887]</td><td>\u2713</td><td></td><td></td><td>\u2713</td><td>BEHRT</td><td>Transformer</td><td>Disease prediction</td></tr>\n<tr><td>2020</td><td>Li et al.[W3037355965]</td><td></td><td>\u2713</td><td></td><td></td><td>CCAE</td><td>RNN</td><td>Clinical endpoint prediction</td></tr>\n<tr><td>2020</td><td>Liu et al.[W3002102497]</td><td>\u2713</td><td>\u2713</td><td></td><td></td><td>Medi-Care AI</td><td>RNN</td><td>Medication prediction</td></tr>\n<tr><td>2020</td><td>Liu et al.[W3036836886]</td><td></td><td></td><td>\u2713</td><td></td><td>RGNN</td><td>LSTM, GNN</td><td>Prescription prediction</td></tr>\n<tr><td>2020</td><td>Luo et al.[W3080098168]</td><td>\u2713</td><td></td><td></td><td>\u2713</td><td>HiTANet</td><td>Transformer</td><td>Disease prediction</td></tr>\n<tr><td>2020</td><td>Panigutti et al.[UNMAPPED:106]</td><td></td><td></td><td></td><td>\u2713</td><td>DoctorXAI</td><td>RNN</td><td>Next visit prediction</td></tr>\n<tr><td>2020</td><td>Qiao et al.[W3035219237]</td><td></td><td></td><td>\u2713</td><td></td><td>MHM</td><td>GRU</td><td>Diagnosis prediction</td></tr>\n<tr><td>2020</td><td>Rongali et al.[W3005713150]</td><td></td><td></td><td>\u2713</td><td></td><td>CLOUT</td><td>LSTM</td><td>Mortality prediction</td></tr>\n<tr><td>2020</td><td>Song et al.[W3021541414]</td><td></td><td>\u2713</td><td></td><td></td><td>LGMNN</td><td>LSTM</td><td>Medication prediction</td></tr>\n<tr><td>2020</td><td>Su et al.[W3041319475]</td><td>\u2713</td><td></td><td></td><td></td><td>GATE</td><td>GRU</td><td>Medication prediction</td></tr>\n<tr><td>2020</td><td>Wang et al.[W3005061930]</td><td></td><td></td><td></td><td>\u2713</td><td>FReaConv</td><td>CNN</td><td>Heart failure and mortality prediction</td></tr>\n<tr><td>2020</td><td>Xiang et al.[W3046382668]</td><td></td><td></td><td></td><td>\u2713</td><td>TSANN</td><td>LSTM</td><td>Asthma exacerbation prediction</td></tr>\n<tr><td>2020</td><td>Yin et al.[W3080826732]</td><td></td><td></td><td>\u2713</td><td></td><td>TAME</td><td>LSTM</td><td>Sepsis phenotyping</td></tr>\n<tr><td>2020</td><td>Yu et al.[W2991357568]</td><td></td><td></td><td></td><td>\u2713</td><td></td><td>LSTM</td><td>Mortality prediction</td></tr>\n<tr><td>2020</td><td>Yu et al.[W2945248062]</td><td></td><td></td><td></td><td>\u2713</td><td></td><td>LSTM, GRU</td><td>Mortality prediction</td></tr>\n<tr><td>2020</td><td>Zeng et al.[W2991018224]</td><td>\u2713</td><td></td><td>\u2713</td><td>\u2713</td><td>MSAM</td><td>Encoder</td><td>Disease and medical cost prediction</td></tr>\n<tr><td>2020</td><td>Zhang et al.[W3080628425]</td><td></td><td>\u2713</td><td></td><td></td><td>HAP</td><td>RNN</td><td>Procedure and diagnosis prediction</td></tr>\n<tr><td>2020</td><td>Zheng et al.[W3029016840]</td><td></td><td></td><td></td><td>\u2713</td><td>Tracer</td><td>RNN</td><td>AKI and mortality prediction</td></tr>\n<tr><td>2020</td><td>Park et al.[W3043596964]</td><td></td><td></td><td></td><td>\u2713</td><td></td><td>RNN, ANN</td><td>Bacteremia prediction</td></tr>\n<tr><td>2020</td><td>Thorsen-Meyer et al.[W3011812967]</td><td></td><td></td><td></td><td>\u2713</td><td></td><td>LSTM</td><td>Mortality prediction</td></tr>\n</tbody>\n</table>\n\n**Figure 1: Literature selection flow of deep learning models in temporal EHR data**\n\n<div style=\"text-align: center;\">\n<img src=\"imgs/img_in_image_box_181_157_1131_686.jpg\" alt=\"PRISMA flow diagram\" width=\"79%\"/>\n</div>\n\n*Extracted text:* \nPubMed n = 301, IEEE Xplore n = 238, ACM Digital Library n = 294, Web of Science n = 255, Embase n = 300, NeurIPS/IJCAI/AAAI n = 33. Total records = 1421. Duplicates removed = 495. Screened = 926. Excluded = 780 (246 not EHR, 243 not structured, 185 not deep learning, 61 not temporal, 23 applied existing methods, 22 reviews). Full-text review = 146. Excluded = 48 (33 applied existing methods, 8 not temporal, 5 not structured, 2 not EHR). Included = 98.\n\n**Figure 2: Summarized statistics for all included papers**\n\n{{TABLE:tbl_01}}\n\n**(c) Key architecture of deep learning**\n\n{{TABLE:tbl_02}}\n\n**(b) Addressed challenges of temporal EHR**\n\n{{TABLE:tbl_03}}\n\n**(d) Main temporal variables**\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W1973825638",
+            "W2294329458",
+            "W2293197871",
+            "W2027106132",
+            "W2404901863",
+            "W2584780866",
+            "W2956513391",
+            "W2742491462",
+            "W2963034797",
+            "W2772027160",
+            "W2773114958",
+            "W2786983438",
+            "W2481271618",
+            "W2607113351",
+            "W2745673637",
+            "W2460054580",
+            "W2785806165",
+            "W2772905286",
+            "W2767786571",
+            "W2756184660",
+            "W2604836086",
+            "W2809396336",
+            "W2798092656",
+            "W2963806310",
+            "W2907646605",
+            "W2911463506",
+            "W2883553986",
+            "W2904676244",
+            "W2886951144",
+            "W4289257494",
+            "W2806153517",
+            "W2796547658",
+            "W2914655379",
+            "W2897007327",
+            "W2739340771",
+            "W2963208729",
+            "W2967597710",
+            "W2963650911",
+            "W2980717669",
+            "W2956513391",
+            "W2977676495",
+            "W2804604520",
+            "W2949915161",
+            "W2966008801",
+            "W2957430216",
+            "W2980349752",
+            "W2999765556",
+            "W3004402226",
+            "W2996036738",
+            "W2947566953",
+            "W2983825113",
+            "W2958149604",
+            "W3005251548",
+            "W2939903565",
+            "W2990899307",
+            "W3004621080",
+            "W3004471907",
+            "W3003385226",
+            "W2991417788",
+            "W3043314599",
+            "W3044345313",
+            "W2998314166",
+            "W3081510302",
+            "W3080823838",
+            "W3042895962",
+            "W3008421095",
+            "W3048964647",
+            "W3017637887",
+            "W3037355965",
+            "W3002102497",
+            "W3036836886",
+            "W3080098168",
+            "W3035219237",
+            "W3005713150",
+            "W3021541414",
+            "W3041319475",
+            "W3005061930",
+            "W3046382668",
+            "W3080826732",
+            "W2991357568",
+            "W2945248062",
+            "W2991018224",
+            "W3080628425",
+            "W3029016840",
+            "W3043596964",
+            "W3011812967"
+          ],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02",
+            "tbl_03",
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "30",
+            "52",
+            "53",
+            "55",
+            "73",
+            "88",
+            "89",
+            "91",
+            "95",
+            "96",
+            "106"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Challenges and deep learning solutions",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1 Data irregularity in temporal EHR",
+              "parent_subsection_id": "s_3_2",
+              "text": "Irregular data is pervasive in temporal EHR [W2607113351, W2261646039], where the time intervals between various encounters vary, resulting in challenges modeling the whole time series. These irregular time intervals may contain valuable hidden information. For example, shorter time intervals may imply more frequent examinations, indicating the worsening condition of a patient. To utilize the latent information, researchers usually extract a series of time intervals [W2015462679, W2809396336], represented as follows for the i-th patient.\n\n$$\n\\boldsymbol{\\varphi}_{i,(a-1,a)}=\\left|t_{a}-t_{a-1}\\right|,a=1,\\cdots,T\n$$\n\nDeep learning could naturally capture this long-term sequential effect, and two groups of deep learning solutions have been proposed. One group of methods directly model time series, taking irregular time intervals as the input variables, where customized neural network architectures ingeniously fuse each irregular time point [W2404901863, W2481271618, W2947566953, W2939903565]. Although the time lapse between successive elements in patients' records may vary from days to years, novel deep learning approaches can fit the unequally distributed data with their inherent temporal structure (e.g., gate architecture of the LSTM) based on the time distribution and its interval $\\varphi_{i,(a-1,a)}$ directly, such as T-LSTM [W2947566953]. Moreover, a variety of integrated data processing systems have been proposed based on diverse deep learning structures. For example, Deep Patient [W2404901863] utilized a three-layer stack of denoising autoencoders to capture hierarchical regularities and dependency in the temporal coding data. Reverse Time AttentIoN (RETAIN) [W2956513391] was developed based on a two-level neural attention model to detect influential past visits. Deepr [W2481271618] ingeniously transformed a record into a sequence of discrete elements separated by coded time gaps and hospital transfers. Xiang et al. [W2939903565] applied dynamic input windows to acquire time-sensitive coding information.\n\nAnother group of approaches attempts to transform irregular data into regular ones by determining a fixed interval and then treating the time points without data as missing [W3041152376]. While the irregular data could naturally be transformed into regular data with the same time intervals, this strategy may result in many missing values [W2914655379, W2966008801, UNMAPPED:122], since there are many time intervals without measurements, necessitating imputation. In this situation, a masking vector $u \\in \\{0,1\\}$ [W2964010366] is usually used to represent its missing status. The missing values would reduce statistical power and cause bias in estimating mass parameters in deep learning methods [W3043150318].\n\nMost researchers used carry-forward imputation to address the missing value issue in temporal EHR [W2075034210], where the last observed values were used for all subsequent missing observation points. However, this solution is likely to introduce bias, as it assumes that the value remains unchanged from the last observation. Traditional imputation methods, such as median imputation and multiple imputation, may not capture hidden patterns in temporal data effectively, calling for deep learning approaches with temporal representations. Recently, Macias et al. [W2999765556] proposed a novel imputation method in an ICU setting by exploiting temporal dependencies through autoencoder-represented information. Zhang et al. [W3004471907] imputed missing values of multivariate time series by a denoising autoencoder. Based on GRU, Che and colleagues [W2772027160] designed GRU-D to utilize informative missingness with prior-based regularization. Furthermore, Jun and colleagues [W2977676495] developed a general framework to incorporate effective missing data imputation with a variational autoencoder.",
+              "citations": [
+                "W2607113351",
+                "W2261646039",
+                "W2015462679",
+                "W2809396336",
+                "W2404901863",
+                "W2481271618",
+                "W2947566953",
+                "W2939903565",
+                "W2956513391",
+                "W3041152376",
+                "W2914655379",
+                "W2966008801",
+                "W2964010366",
+                "W3043150318",
+                "W2075034210",
+                "W2999765556",
+                "W3004471907",
+                "W2772027160",
+                "W2977676495"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "122"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2 Data sparsity in temporal EHR",
+              "parent_subsection_id": "s_3_2",
+              "text": "There are a wide range of concepts in medicine, such as medical diagnosis, medication, and treatment information. We denote them as $(\\pmb{c}_{i,t})$, which are the most commonly investigated temporal variables (used in 78 out of 98 included papers). Most medical concepts are mapped to a corresponding coding system, such as the International Classification of Diseases (ICD) [W3012139133], Current Procedural Terminology (CPT) [W2763871115], and Medication Reference Terminology (MED-RT) [W2234082985]. Their sparsity and high dimensionality, however, may hinder analysis. Traditionally, medical ontologies such as SNOMED [W1967653863], Charlson Comorbidity Index [W2154692607], RxNorm [W2034626816], and Logical Observation Identifiers Names and Codes (LOINC) [W2109019042] provide structured hierarchical approaches to convert the medical concepts into lower-dimensional representations. Despite this, they are unable to extract abundant relations inherent in the temporal data [W2773114958, W3004402226, W2973281329]. As a result, the growth in temporal EHR data raises an unmet need for effective representations of temporal data with structured medical codes.\n\nOne-hot encoding [W2077997370] is the most straightforward technique, converting these categorical variables into several binary columns, where 'one' indicates the presence of the medical code. Nevertheless, it is not an ideal method for encoding high-dimensional categorical variables. Moreover, one-hot encoding no longer holds the promise of preserving hidden relationships in sparse coding. As an example, pneumonia and bronchitis are highly concurrent, but such an internal relationship between their codes is not reflected in one-hot coding.\n\nTherefore, medical concept embedding has become a mainstream method [W2584780866] for learning latent representations from high-dimensional sparse medical codes. We denote a set of medical codes as $C = [c_{1}, c_{2}, c_{3}, \\ldots, c_{n}]$ in an EHR dataset and n is the total number of codes within the data, which is usually a large number. A visit $v_{t}$ comprising of several medical codes can be represented as:\n\n$$\n\\boldsymbol{v}_{t}\\in\\{0,1\\}^{n}\n$$\n\nThen, the embedding function $f_{C}$ can be represented as:\n\n$$\nf_{C}\\colon C\\to\\mathbb{R}^{m}\n$$\n\nwhere m represents the dimensionality of the embedding vector and is often a much smaller number than n.\n\nMedical code embedding originated from Word2Vec [W2153579005], an unsupervised feature extraction method for natural language processing (NLP), which converts words to numerical embedding by mapping each word token into a high-dimensional vector space. The basic form of the one-layer embedding neural network is shown below in equation (5),\n\n$$\nu_{t}=ReLU(\\boldsymbol{W}_{c}\\boldsymbol{v}_{t}+\\boldsymbol{b}_{c})\n$$\n\nwhere $u_{t}$ is the low-dimensional vector for subsequent downstream tasks, and $W_{c}$ denotes the embedding matrix. Recently, Choi et al. [W2518582440, UNMAPPED:136] proposed to learn distributed representations of sparse medical codes (e.g., diagnoses, medications, and procedure codes) using Word2Vec and applied them to several clinical prediction tasks. Subsequently, Med2Vec [W2284851926] was proposed to extend the original Word2Vec with a multilayer perceptron for learning both succinct codes and visit-level representations. Med2Vec was further extended to integrate embedding systems with different deep learning architectures for sparse temporal EHR data. Lu and colleagues [W2973180967] proposed utilizing hyperbolic embeddings of medical concepts instead of traditional Euclidean space geometry. Moreover, the cross-field categorical attributes embedding (CCAE) [W3037355965] was developed to learn a vectorized representation for cancer patients at attribute-level by orders, where strong semantic coupling among categorical variables was exploited effectively. Esteban et al. [W2294329458] employed the Markov model to learn personalized Markov embeddings. MC2Vec [W2973281329] was then designed to capture the proximity relationships between medical concepts through a two-step optimization framework that recursively refines the embedding for superior output. Patient2vec [W2958149604] introduced the use of the RNN model to learn sequential context-aware features of visits and the correlations between physical symptoms and associated treatments. Zhang et al. [W3080628425] developed hierarchical attention propagation (HAP), a hierarchically propagating attention across the entire ontology structure, where a medical code adaptively learns its embedding from all other codes in the hierarchy instead of only its ancestors.",
+              "citations": [
+                "W3012139133",
+                "W2763871115",
+                "W2234082985",
+                "W1967653863",
+                "W2154692607",
+                "W2034626816",
+                "W2109019042",
+                "W2773114958",
+                "W3004402226",
+                "W2973281329",
+                "W2077997370",
+                "W2584780866",
+                "W2153579005",
+                "W2518582440",
+                "W2284851926",
+                "W2973180967",
+                "W3037355965",
+                "W2294329458",
+                "W2958149604",
+                "W3080628425"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "136",
+                "5"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.2.3 Data heterogeneity in temporal EHR",
+              "parent_subsection_id": "s_3_2",
+              "text": "Heterogeneity is another challenge undermining the quality of data analyses, where EHRs generally consist of multiple data modalities and outcomes. In this review, we focused on two types of heterogeneity: patient phenotypes and clinical outcomes.\n\nPatient phenotyping identifies patient sub-cohorts that satisfy complex criteria [W1808652302]. Conventionally, phenotypes are identified based on patient similarity, either through statistical distances like Euclidean distance [W2886951144] or by machine learning methods such as k-means [W2584780866]. However, when dealing with high-dimensional and multimodal longitudinal data, these traditional methods cannot identify complicated patient phenotypes and were unable to retain most long-term temporal information [W2584780866]. In contrast, a deep learning structure could capture these complex temporal dynamics in the longitudinal EHR for evaluating patient similarity. The typical deep neural network architectures include CNN [W2584780866, W2772905286, W2886951144], LSTM [W2806153517], and autoencoder [W4289257494, W2739340771]. For instance, Yang et al. [W2756184660] utilized the RNN model to improve the phenotyping of asthma using ICU time sequence data.\n\nAnother form of heterogeneity is related to the diversity of clinical outcomes and disease conditions, including their complex interrelationships. In this context, a single-task approach (e.g., binary logistic regression) is ineffective. Even though statistics methods, such as multinomial logistic regression, are capable of making a multi-label prediction, deep learning presents great promise for handling them since neurons in neural networks can be used for more than one task, aiming to jointly learn multiple prediction tasks simultaneously. As reported in [W2785806165, W2990899307, W2945248062], several multitask frameworks were proposed based on RNN, which shared the same networks, but with a task-specific layer to monitor a particular disease or outcome. The advantages include sharing the same layers, saving computing resources, and extracting certain useful temporal information. In addition, Suresh et al. [W4289257494] improved the method through a two-step procedure, with the first step being unsupervised clustering through a sequence-to-sequence autoencoder, and the second step being the outcome prediction. Harutyunyan and colleagues [UNMAPPED:141] summarized the advantages of multitask learning over single-task learning, by proposing clinical prediction benchmarks using temporal EHR data obtained from the MIMIC-III database.",
+              "citations": [
+                "W1808652302",
+                "W2886951144",
+                "W2584780866",
+                "W2772905286",
+                "W2886951144",
+                "W2806153517",
+                "W4289257494",
+                "W2739340771",
+                "W2756184660",
+                "W2785806165",
+                "W2990899307",
+                "W2945248062"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "141"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.2.4 Opacity in modeling temporal EHR",
+              "parent_subsection_id": "s_3_2",
+              "text": "While deep learning provides diversified solutions to deal with temporal EHR data, its black box nature presents another significant challenge. Due to the depth of neural network layers and the complexity of each module, understanding sophisticated deep learning models remains elusive, particularly when dealing with temporal data. Many researchers have attempted to explain deep learning models with post hoc explanations (e.g., Doctor XAI) [W2887597525, UNMAPPED:106], while others advocate that the models themselves should be interpretable [W2945976633, UNMAPPED:144].\n\nTwo groups of approaches have been proposed to interpret black box deep learning models: mimic learning and attention mechanisms. Mimic learning simulates deep learning models through an inherently transparent model such as logistic regression [UNMAPPED:145]. Gradient boosting trees (GBT) [W2772027160] was also used to imitate the process of GRU and achieved superior performance and good interpretability when extracting the importance of features.\n\nThe concept of attention mechanism [UNMAPPED:146], originally derived from NLP and used in machine translation to adjust weights of different words, has been popular in research on temporal EHR [W1902237438]. Researchers have used attention to determine which time points in the patients' medical history are more predictive of outcomes [W2785806165, W2904676244, W2897007327, W2990899307, W2945248062, W3029016840, UNMAPPED:148]. Attention can also provide insight into the importance of different visits or variables for aiding medical decision making, where larger attention represents greater importance. An example from Shi et al. [UNMAPPED:148] is used here to illustrate the attention mechanism. Given the input data $D_{i}$ and hidden layer $H_{i}$ after RNN layers processing, as formulated by equation (6),\n\n$$\n\\boldsymbol{H}_{i}=[h_{i,1},h_{i,2},h_{i,3},\\ldots,h_{i,T-1},h_{i,T}]\n$$\n\nthe attention $\\alpha_{i}$ is calculated through equation (7), where $w^{T}$ is the parameter obtained from the model training.\n\n$$\n\\boldsymbol{\\alpha}_{i}=softmax(\\boldsymbol{w}^{T}\\tanh(\\boldsymbol{H}_{i}))\n$$\n\nAfterward, we obtain the attention tensor $T_{i}$ for downstream tasks.\n\n$$\nT_{i}=\\boldsymbol{tan}(\\boldsymbol{H}_{i}\\boldsymbol{\\alpha}_{i}^{\\mathrm{T}})\n$$\n\nThere are two major attention approaches, one of which treats all temporal variables at the same level, while the other takes data hierarchy into account. As shown in [W2798092656, W2907646605, W3041935397, W2913977338], neural networks were proposed with the attention layer to calculate the weights in the absence of data hierarchy. Crossover attention model (COAM) [W2956513391] was designed through the crossover attention mechanism by leveraging the correlation between diagnosis and treatment information. Park et al. [W2900593459] further improved the attention mechanism by adding feature occurrence frequency to capture critical temporal variables that appeared infrequently. Bai et al. [W2809396336] enhanced the attention by learning time decay factors, making it possible to interpret the chronic disease progression and understand how the risks of future visits change over time. Furthermore, some models incorporated heterogeneous data such as treatment, medication, procedures, and diagnoses. Specifically, DeepRisk [W2967597710] integrated multiple time-ordered clinical data as a whole by handling correlation among predictors via a single DNN and three attention-based LSTMs. KAME [UNMAPPED:52] was further developed as a knowledge-based attention mechanism, which used medical domain knowledge, and computed the attention based on a directed acyclic graph of various medical concepts.\n\nAnother major attention approach exploited the hierarchical structure of temporal data, such as the data from both admission and medical event levels [UNMAPPED:152]. During the course of admission, a number of events occur, which are usually recorded by medical codes like ICD-9. This hierarchical structure with multiple attention levels was intended to integrate local and global time information and enhance model performance and interpretation. Several studies [W2956513391, W2745673637, W3080098168, W3046382668, W2991018224] have applied a two-level neural attention model within RNN, where the first level pertains to medical events, while the second level pertains to visits. A good example is RETAIN [W2956513391], which integrates two levels of attention to make use of time information in feature aggregation and explain the critical medical event in the input sequence. To improve the interpretability of RETAIN, Kwon et al. [W2804604520] developed RetainVis, an interactive visualization tool. Another attempt was to apply graph-level attention (based on knowledge graph) simultaneously with other attentions [W3003385226]. Overall, the hierarchical attention could not only digest the sequence information correctly in temporal EHR, but also provide an insightful interpretation of the importance of each variable or timepoint.",
+              "citations": [
+                "W2887597525",
+                "W2945976633",
+                "W2772027160",
+                "W1902237438",
+                "W2785806165",
+                "W2904676244",
+                "W2897007327",
+                "W2990899307",
+                "W2945248062",
+                "W3029016840",
+                "W2798092656",
+                "W2907646605",
+                "W3041935397",
+                "W2913977338",
+                "W2956513391",
+                "W2900593459",
+                "W2809396336",
+                "W2967597710",
+                "W2956513391",
+                "W2745673637",
+                "W3080098168",
+                "W3046382668",
+                "W2991018224",
+                "W2804604520",
+                "W3003385226",
+                "W3036955987"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "106",
+                "144",
+                "145",
+                "146",
+                "148",
+                "52",
+                "152",
+                "7"
+              ]
+            }
+          ],
+          "text": "The following section will summarize the four major challenges (i.e., data irregularity, data sparsity, data heterogeneity, and model opacity) posed by the temporal EHR data and examine their corresponding deep learning solutions.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This review summarized the challenges related to temporal EHR data and discussed how deep learning solutions could help to overcome them. While temporal EHR data is valuable for biomedical informatics research, its complex structure poses a challenge to standard learning algorithms. Deep learning models have shown the ability to present temporal data in a novel manner while retaining sequential information efficiently. This study aimed to address a knowledge gap on deep learning for temporal EHR by exploring current challenges and summarizing methodologies. Through a systematic literature review, we identified four major challenges, including data irregularity, sparsity, heterogeneity, and model opacity. During the last decade, nearly one hundred novel deep learning methods have been proposed, and this number continues to grow rapidly over time, demonstrating the importance and potential of deep learning in temporal EHR data analysis. While these deep learning techniques have shown promising results, several challenges remain, including the need for high-quality data and the issue regarding their applicability to clinical practice. Ideally, future studies could consider designing a comprehensive system that combines solutions to all challenges.\n\nDespite various attempts to address data irregularity, heterogeneity and sparsity, there is still a great need for improvements to the data itself. For deep learning algorithms to be successful, large-scale EHR datasets are always required. The most commonly used dataset in our included papers was MIMIC (n=36/98) [W2396881363], a well-organized and freely accessible critical care database developed at the Beth Israel Deaconess Medical Center. The majority of studies analyzed only one dataset, and only ten utilized two or more datasets, raising questions about the transferability and generalizability of the models. Therefore, we recommend the development of more large-scale EHR databases that are freely accessible worldwide, providing the opportunity for multicenter validation of current models. Aside from data size, the quality of a dataset is another important factor affecting model performance; improvements in data collection and processing, such as the correction of outliers due to mistyping or misalignment, may be considered.\n\nAlthough the availability of large, labeled data is always desirable, situations with limited data are common in medical settings because of the costs of labeling and the sensitive nature of their sharing. Many approaches have been proposed to solve this issue, including data augmentation and optimal utilization of data. Generative Adversarial Networks (GANs) provide a compelling solution to amplify temporal data, and Che et al. [W2963034797] demonstrated that the newly generated data are of appropriate quality. Zhang et al. [UNMAPPED:88], on the other hand, managed to take advantage of limited data through the novel representation framework MetaPred based on longitudinal patient EHRs. Another potential solution would be transfer learning, which allows us to transfer knowledge between multiple hospitals or EHRs, and combine various sources to extract knowledge, referred to as multi-source transfer [W2560476520]. General transfer learning consists of a two-stage paradigm [W2788388592], where the leading deep learning network is generally trained on a large-scale, publicly available benchmark dataset. Next, the pre-trained network is further conditioned on the specific local data with limited samples. Transfer learning has the potential to relieve the data shortage in healthcare and improve the model's generalizability [W3110006982].\n\nThere has been considerable discussion of the opacity issue for temporal deep learning models, especially for medical applications where there are high-stakes decisions. Several attention mechanisms have been proposed to address these black box models [W2956513391, W2745673637, W3080098168, W3046382668, W2991018224]. Grad-CAM [W2962858109] is a widely adopted algorithm developed initially to provide visual explanations for CNN by highlighting the important regions, and was recently extended to the medical field [W2981534530]. However, these post-hoc interpretability approaches may lead to explanations resulting from certain artifacts learned by the model rather than actual knowledge derived from the data [W2964027122]. This limitation raises concerns on model usability in actual healthcare settings. As a comparison, ante-hoc interpretable models are preferred by doctors and nurses in clinical practice because they can understand them naturally and inherently [W2945976633, W3137125108, W2888487581]. Recently, Ustun and Rudin developed the Risk-calibrated Supersparse Linear Integer Model (RiskSLIM) [W2164878629] and further improved it through the optimization of risk scores [UNMAPPED:162]. Apart from that, Xie et al. provided practical solutions, AutoScore [W3045837041] and its extensions [W3182698277, W3168344432], by leveraging interpretable machine learning for clinical score generation. These intrinsically interpretable methods have considerable potential for integrating deep learning techniques to facilitate model validation in real-world settings.\n\nIn addition to CNN (n=9), RNN (n=18), and LSTM (n=35) as the most commonly used deep learning architectures, Transformer [UNMAPPED:166] and MLP-Mixer [UNMAPPED:167] have recently emerged as popular alternative frameworks. Transformer computes temporal representations entirely on the basis of self-attention without the use of sequence-based RNNs or convolution. It has shown great potential in temporal EHR representation [W3017637887, W3080098168]. Furthermore, MLP-Mixer [UNMAPPED:167] was later developed with a simpler structure, not requiring any convolutions or attention. With one MLP for per-location features and another for spatial information, MLP-Mixer appears to be a conceptually and technically succinct alternative for processing temporal EHR data.\n\nThis study has several limitations. First, we sought to understand the current state of the literature from a methodological perspective. Still, we did not attempt to summarize all clinical applications and report the performance of deep learning solutions. Second, considering the heterogeneity of data pre-processing, parameter tuning approaches, and clinical tasks among the included studies, we were unable to recommend the overall best deep learning methods for temporal EHR data analysis. Third, this review focused exclusively on deep learning methods for analyzing structured temporal EHR data. It will be beneficial in the future to investigate techniques that deal with both structured and unstructured data (e.g., clinical notes, medical images, and physiological signals). Lastly, the exclusion of preprints in our analysis may have overlooked some new evidence but was able to ensure the inclusion of only peer-reviewed scientific results.",
+      "citations": [
+        "W2396881363",
+        "W2963034797",
+        "W2560476520",
+        "W2788388592",
+        "W3110006982",
+        "W2956513391",
+        "W2745673637",
+        "W3080098168",
+        "W3046382668",
+        "W2991018224",
+        "W2962858109",
+        "W2981534530",
+        "W2964027122",
+        "W2945976633",
+        "W3137125108",
+        "W2888487581",
+        "W2164878629",
+        "W3045837041",
+        "W3182698277",
+        "W3168344432",
+        "W3017637887"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "88",
+        "162",
+        "166",
+        "167"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We comprehensively reviewed the primary issues in analyzing temporal EHR data and presented state-of-the-art deep learning solutions. Various significant challenges arising from the representation of EHR temporal data were addressed to some extent by current solutions. Future research may focus on model transferability, clinical domain knowledge incorporation into study design, and model interpretability enhancement to facilitate clinical implementation.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Abbreviation",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "ANN Artificial Neural Network \nAUC Area Under Curve \nBi-LSTM Bi-directional Long Short-Term Memory \nBi-RNN Bi-directional Recurrent Neural Network \nBOW Bag of Words \nBPR Bayesian Personalized Ranking \nCEL Cross-entropy Loss \ncFSGL Least Convex Fused Group Lasso \nCNN Convolutional Neural Network \nDAE Denoising Autoencoder \nDDI Drug-Drug Interaction \nDPCA Binary Coding with Dimensionality Reduction \nDT Decision Tree \nEM Expectation Maximization \nF1 F1 score \nF2 F2 score \nFFL Feed-Forward Layer \nFNR False Negative Rate \nFPR False Positive Rate \nGAN Generative Adversarial Network \nGBDT Gradient Boosting Decision Tree \nGBM Gradient Boosting Machine \nGBRT Gradient Boosting Regression Tree \nGCN Graph Convolutional Network \nGMM Gaussian Mixture Model \nGNN Graph Neural Network \nGRAM Graph-based Attention Model \nGRU Gated Recurrent Unit \nHP Hawkes Process \nKNN K-nearest neighbors method \nLDA Latent Dirichlet Allocation \nLM Linear Model \nLR Logistic Regression \nLSTM Long Short-Term Memory \nMAE Mean Absolute Error \nMCC Matthews Correlation Coefficient \nMEWS Modified Early Warning Score \nMF MissForest \nMLP Multi-Layer Perceptron \nMod Modularity \nMSE Mean Squared Error \nNBN Naive Bayesian Network \nnFSGL Least Non-Convex Fused Group Lasso \nNMI Normalized Mutual Information \nPCA Principal Component Analysis \nPPV Positive Predictive Value \nPRC Precision Recall curve \nRBM Restricted Boltzmann Machine \nRF Random Forest \nRMSE Root Mean Squared Error \nRNN Recurrent Neural Network \nROC Receiver Operating Characteristic Curve \nSDAE-SM SDAE appending a softmax layer \nSensitivity = Recall \nSIRS systemic inflammatory response syndrome \nSOFA Sequential Organ Failure Assessment \nSpec Spectral Clustering \nSVM Support Vector Machine \nTANN Time-aware neural network \nTCN Temporal Convolutional Network \nTNR True Negative Rate \nTPR True Positive Rate",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Appendix",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**Search strategy for each database**\n\n**PubMed** \n('deep learning' OR 'neural network' OR 'deep' OR 'CNN' OR 'RNN' OR 'LSTM') AND ('embed' OR 'embedding' OR 'representation' OR 'time series' OR 'sparse' OR 'temporal' OR 'concept' OR 'sequential' OR 'attention') AND ('electronic health record' OR 'EHR' OR 'EHRs' OR 'electronic medical record' OR 'EMR' OR 'EMRs')\n\n**IEEE Xplore** \n('deep learning' OR 'neural network' OR 'deep' OR 'CNN' OR 'RNN' OR 'LSTM') AND ('embed*' OR 'representation' OR 'time series' OR 'sparse' OR 'temporal' OR 'concept' OR 'sequential' OR 'attention') AND ('electronic health record*' OR 'EHR*' OR 'electronic medical record*' OR 'EMR*')\n\n**ACM Digital Library** \n(\"deep learning\" OR \"neural network\" OR \"deep\" OR \"CNN\" OR \"RNN\" OR \"LSTM\") AND (\"embed*\" OR \"representation\" OR \"time series\" OR \"sparse\" OR \"temporal\" OR \"concept\" OR \"sequential\" OR \"attention\") AND (\"electronic health record*\" OR \"EHR*\" OR \"electronic medical record*\" OR \"EMR*\")\n\n**Web of Science** \n((TS = (deep learning OR neural network OR deep OR CNN OR RNN OR LSTM)) AND (TS = (embed* OR representation OR time series OR sparse OR temporal OR concept OR sequential OR attention)) AND (TS = (electronic health record* OR EHR* OR electronic medical record* OR EMR*)))\n\n**Embase** \n(\"deep learning\" OR \"neural network\" OR \"deep\" OR \"CNN\" OR \"RNN\" OR \"LSTM\") AND (\"embed*\" OR \"representation\" OR \"time series\" OR \"sparse\" OR \"temporal\" OR \"concept\" OR \"sequential\" OR \"attention\") AND (\"electronic health record*\" OR \"EHR*\" OR \"electronic medical record*\" OR \"EMR*\")",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3183848791_tables.md"
+}

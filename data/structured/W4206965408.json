@@ -1,0 +1,522 @@
+{
+  "id": "W4206965408",
+  "metadata": {
+    "title": "Part of Speech Tagging: A Systematic Review of Deep Learning and Machine Learning Approaches",
+    "n_sections": 14,
+    "n_subsections": 12,
+    "n_subsubsections": 12,
+    "n_tables": 5
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Natural language processing (NLP) has become a part of daily life and a crucial tool today. It aids people in many areas, such as information retrieval, information extraction, machine translation, question-answering speech synthesis and recognition, and so on. In particular, NLP is an automatic approach to analyzing texts using a different set of technologies and theories with the help of a computer. It is also defined as a computerized approach to process and understand natural language. Thus, it improves human-to-human communication, enables human-to-machine communication by doing useful processing of texts or speeches. Part-of-speech (POS) tagging is one of the most important addressed areas and main building block and application in the natural language processing discipline [W3120310580, W2114894602, UNMAPPED:1]. So, Part of Speech (POS) Tagging is a notable NLP topic that aims in assigning each word of a text the proper syntactic tag in its context of appearance [UNMAPPED:4, UNMAPPED:5, UNMAPPED:6, UNMAPPED:7, UNMAPPED:8]. Part-of-speech (POS) tagging, also called grammatical tagging, is the automatic assignment of part-of-speech tags to words in a sentence [W2046224275, W2486838646, W3128199078]. A POS is a grammatical classification that commonly includes verbs, adjectives, adverbs, nouns, etc. POS tagging is an important natural language processing application used in machine translation, word sense disambiguation, question answering parsing, and so on. The genesis of POS tagging is based on the ambiguity of many words in terms of their part of speech in a context.\n\nManually tagging part-of-speech to words is a tedious, laborious, expensive, and time-consuming task; therefore, widespread interest is becoming in automating the tagging process [UNMAPPED:12]. As stated by Pisceldo et al. [UNMAPPED:4], the main issue that must be addressed in part of speech tagging is that of ambiguity: words behave differently given different contexts in most languages, and thus the difficulty is to identify the correct tag of a word appearing in a particular sentence. Several approaches have been deployed to automatic POS tagging, like transformational-based, rule-based and probabilistic approaches. Rule-based part of speech taggers assign a tag to a word based on manually created linguistic rules; for instance, a word that follows adjectives is tagged as a noun [UNMAPPED:12]. And probabilistic approaches [UNMAPPED:12] determine the frequent tag of a word in a given context based on probability values calculated from a tagged corpus which is tagged manually. On the other hand, a combination of probabilistic and rule-based approaches is the transformational-based approach to automatically calculate symbolic rules from a corpus.\n\nTo accomplish the requirements of an efficient POS tagger, the researchers have explored the possibility of using Deep learning (DL) and Machine learning (ML) techniques. Under the big umbrella of artificial intelligence, both ML and DL aim to learn meaningful information from the given big language resources [UNMAPPED:13, UNMAPPED:14]. Because of the growth of powerful graphics processor units (GPUs), these techniques have gained widespread recognition and appeal in the field of natural language processing, notably part of speech tagging (POST), throughout the previous decade [W1851422430, UNMAPPED:13]. Both ML and DL are powerful tools for extracting valuable and hidden features from the given corpus and assigning the correct POS tags to words based on the patterns discovered. To learn valuable information from the corpus, the ML-based POS tagger relies mostly on feature engineering [W2148499754]. On the other hand, DL-based POS taggers are better at learning complicated features from raw data without relying on feature engineering because of their deep structure [W2118023920].\n\nDifferent researchers forwarded numerous ML and DL-based solutions to make POS taggers effective in tagging part of speech of words in their context. However, the extensive use of POS tagging and the resulting complications have generated several challenges for POS tagging systems to appropriately tag the word class. The research on using the DL methods for POS tagging is currently in its early stage, and there is still a gap to further explore this approach within POS tagging to effectively assign part of speech within the sentence.\n\nThe main contributions of this paper are addressed in three phases. Phase I; we selected recent journal articles focusing on DL- and ML-based POS tagging (published between 2017 and February 2021). Phase II; we extensively reviewed and discussed each article from various parameters such as proposed methods and techniques, weaknesses, strength, and evaluation metrics. Phase III; in this phase, recent trends in POS tagging using AI methods are provided, challenges in DL/ML-based POS tagging are highlighted, and we provided future research directions in this domain. This review paper is explored based on three aspects: (i) Systematic article selection process is followed to obtain more related research articles on POS tagging implementation using Artificial Intelligence methods, while others reviewed without using the systematic approach. (ii) Our study emphasized the research articles published between 2017 and July 2021 to provide a piece of updated information in the design of AI-oriented POST. (iii) A recent POS tagging model based on the DL and ML approach is reviewed according to their methods and techniques, and evaluation metrics. The intent is to provide new researchers with more updated knowledge on AI-oriented POS tagging in one place.\n\nTherefore, this paper aims to review Artificial Intelligence oriented POS tagging and related studies published from 2017 to 2021 by examining what methods and techniques have been used, what experiments have been conducted, and what performance metrics have been used for evaluation. The research paper provides a comprehensive overview of the advancement and recent trends in DL- and ML-based solutions for POS tagger Systems. The key idea is to provide up-to-date information on recent DL-based and ML-based POS taggers that provide a ground for the new researchers who want to start exploring this research domain.\n\nThe rest of the paper is organized as follows: \"Methodology\" section describes the research methodology deployed for the study. \"POS tagging approaches\" section presents the basic POS tagging approaches. \"Artificial intelligence methods for POS tagging\" section describes the ML and DL methodologies used. The details about the evaluation metrics are shown in \"Evaluation metrics\" section. Recent observations in POS implementation, research challenges, and future research directions are also presented in \"Remarks, challenges, and future trends\" section. Finally, the conclusion of the review article is presented in \"Conclusion\" section.",
+      "citations": [
+        "W1851422430",
+        "W2148499754",
+        "W2118023920"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "12",
+        "4",
+        "13",
+        "14"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Methodology",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This study explores a systematic literature review of various DL and ML-based POS tagging and examines the research articles published from 2017 to 2021. A systematic article review is a research methodology conducted to identify, extract, and examine useful literature related to a particular research area. We followed two stages process in this systematic review.\n\nStage-1 identifies the information resource and keywords to execute query related to \"POST\" and obtain an initial list of articles. Stage-2 applies certain criteria on the initial list to select the most related and core articles and store them into a final list reviewed in this paper. The main aim of this review paper is to answer some of the following questions: (i) What is state-of-the-art in the design of AI-oriented POS tagging? (ii) What are the current ML and DL methodologies deployed for designing POS tagging? (iii) What are the strengths and weaknesses of deployed methods and techniques? (iv) What are the most common evaluation metrics used for testing? And (v) What are the future research trends in AI-oriented POS tagging?\n\nIn the first phase, keywords and search engines are selected for searching articles. As a potential search engine, Scopus document search is selected due to searching all well-known databases. The search query is executed using the initial keyword like \"Part of speech tagging\" and filter the publication duration that showed between 2017 and 2021. The initial query search results from articles that proposed POS tagging using different methods like AI-oriented, rule-based stochastic etc., for different applications. Then the query keyword is redefined by combining the keyword deep learning or machine learning to get more important research articles. Accordingly, important articles from query search based on the defined keywords were taken and stored as an initial list of articles. The process of stage-1 is presented in Figure 1.\n\n**FIGURE 1** Stage one methodology\n\nWhereas in stage-2, we defined criteria to get a more focused article from the initial list used for analysis. As a result, articles were selected that proposed new ML and DL methods written in English. In this review, we did not include papers with keywords like survey, review, and analysis. Based on these criteria, we selected articles for this review and stored them in the final article list, then used them for analysis. All selected articles which are stored in the final list were analyzed based on the DL or ML methodology proposed and the strengths and weaknesses of the proposed methodology. And also analyzed performance metrics used for evaluation and testing purposes. At last, future research directions and challenges in the design of effective and efficient AI-based POS tagging are identified. The complete process used in stage-1 and stage-2 is summarized in Figures 1 and 2, respectively.\n\n**FIGURE 2** Stage two methodology",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "POS Tagging Approaches",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "Rule Based",
+          "subsubsections": [],
+          "text": "A rule-based approach for POS tagging uses hand-crafted rules to assign tags to words in a sentence. According to [W2081687495, UNMAPPED:25], the rules generated mostly depend on linguistic features of the language, such as lexical, morphological, and syntactical information. Linguistic experts may construct these rules or use machine learning on an annotated corpus [W2486838646, W3128199078]. The first way of getting rules is tedious, prone to error, and time-consuming. Besides, it needs highly a language expert on the language being tagged. For the second process, a model built using experts then learns and stores a sequence of rules using a training corpus without expert rule [W2081687495].",
+          "citations": [
+            "W2081687495",
+            "W2486838646",
+            "W3128199078"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "25"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "Artificial Neural Network",
+          "subsubsections": [],
+          "text": "Artificial Neural Network is an algorithm inspired by biological neurons and is used to estimate functions that can depend on a large number of inputs, and they are generally unknown [W2611454988, W2136165309]. It is presented as interconnected systems of \"neurons\" that are used to exchange messages. The associations between neurons have numeric loads that can be changed dependent on experience, making neural organizations versatile to sources of info and ready to learn. It is an assortment of an enormous number of interconnected handling neurons cooperating to tackle given issues (Figure 3).\n\n**FIGURE 3** ML/DL Based POS Tagging Model\n\nLike other approaches, an ANN approach that can be used for POS tagger developments requires a pre-processing activity before working on the actual ANN-based tagger [W3128199078, UNMAPPED:14]. The output from the pre-processing task would be taken as an input for the input layer of the neural network. From this pre-processed input, the neural network trains itself by adopting the value of the numeric weights of the connection between input layers until the correct POS tag is provided.",
+          "citations": [
+            "W2611454988",
+            "W2136165309",
+            "W3128199078"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "14"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "Hidden Markov Model",
+          "subsubsections": [],
+          "text": "The hidden Markov model is the most widely implemented POS tagging method under the stochastic approach [W2317438879, UNMAPPED:6, UNMAPPED:23]. It follows a factual Markov model in which the tagger framework being demonstrated is thought to be explored from one state to another with an inconspicuous state. Unlike the Markov model, in HMM, the state is not directly observable to the observer, but the output that depends on the hidden state is visible. As stated in [W2914111352, UNMAPPED:23, UNMAPPED:32], Hidden Markov Model is a familiar statistical model that is used to find the most frequent tag sequence T = {t1, t2, t3... tn} for a word sequence in sentence W = {w1, w2, w3... wn} [W2914111352]. The Viterbi algorithm is a well-known method for tagging the most likely tag sequence for each word in a sentence when using a hidden Markov model.",
+          "citations": [
+            "W2317438879",
+            "W2914111352"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "6",
+            "23",
+            "32"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "Maximum Entropy Markov Model",
+          "subsubsections": [],
+          "text": "Maximum Entropy Markov is a conditional probabilistic sequence model [W2021137987, UNMAPPED:12, UNMAPPED:34]. Maximum entropy modeling aims to take the probabilistic lexical distribution that scores maximum entropy out of the distributions to complement a certain set of constraints. The constraints limit the model to perform as per a set of measurements collected from the training corpus.\n\nThe most commonly deployed statistics for POS tagging are: how often a word was annotated in a certain way and how often labels showed up in a sequence. On the other hand, unlike HMM in the maximum entropy approach, it is likely to effortlessly characterize and include much more complex measurements, which are not confined to n-gram sequences [W2143455647]. Also, the problem of HMM is solved by the Maximum Entropy Markov model (MEMM) because it is possible to include random features sets. However, the MEMM approach has a business problem in labeling because it normalizes not the whole sequence; rather, it normalizes per state [W2021137987].",
+          "citations": [
+            "W2021137987",
+            "W2143455647"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "12",
+            "34"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section first describes the details about approaches of POS tagging based on its methods and techniques deployed for tagging the given word. Several POS tagging approaches have been proposed to automatically tag words with part-of-speech tags in a sentence. The most familiar approaches are rule-based [W2081687495, UNMAPPED:18], artificial neural network [W2081687495], stochastic [UNMAPPED:21, UNMAPPED:22] and hybrid approaches [UNMAPPED:22, UNMAPPED:23, UNMAPPED:24]. The most commonly used part of speech tagging approaches is presented as follows.",
+      "citations": [
+        "W2081687495",
+        "W2081687495"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "18",
+        "21",
+        "22"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Artificial Intelligence Methods for POS Tagging",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Machine Learning Algorithms",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Naive Bayes",
+              "parent_subsection_id": "s_4_1",
+              "text": "In some circumstances, statistical dependencies between system variables exist. Notwithstanding, it may be hard to definitively communicate the probabilistic connections among these factors [W1997993599]. A probabilistic graph model can be used to exploit these casual dependencies or relationships between the variables of a problem, which is called Na\u00efve Bayesian Networks (NB). The probabilistic model provides an answer for \"What is the probability of a given word occurrence before the other words in a given sentence?\" by following conditional probability [W2901022602].\n\nHirpassa et al. [UNMAPPED:39] proposed an automatic prediction of POS tags of words in the Amharic language to address the POS tagging problem. The statistical-based POS taggers are compared. The performances of all these taggers, which are Conditional Random Field (CRF), Naive Bays (NB), Trigrams'n'Tags (TnT) Tagger, and an HMM-based tagger, are compared with the same training and testing datasets. The empirical result shows that CRF-based tagger has outperformed the performance of others. The CRF-based tagger has achieved the best accuracy of 94.08% during the experiment.",
+              "citations": [
+                "W1997993599",
+                "W2901022602"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "39"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Support Vector Machine",
+              "parent_subsection_id": "s_4_1",
+              "text": "Support vector machines (SVM) is first proposed by Vapnik (1998). SVM is a machine learning algorithm used in applications that need binary classification, adopted for various kinds of domain problems, including NLP [W2148499754, W2798811941]. Basically, an SVM algorithm learns a linear hyperplane that splits the set of positive collections from the set of negative collections with the highest boundary. Surahio and Maha [W2798811941] have tried to develop a prediction System for Sindhi Parts of Speech Tags using the Support Vector Machine learning algorithm. Rule-Based Approach (RBA) and SVM experiment on the same dataset. Based on the experiments, SVM has achieved better detection accuracy when compared to RBA tagging techniques.",
+              "citations": [
+                "W2148499754",
+                "W2798811941"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "1998"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Conditional Random Field (CRF)",
+              "parent_subsection_id": "s_4_1",
+              "text": "A conditional random field (CRF) is a method used for building discriminative probabilistic models that segment and label a given sequential data [W2914111352, W2791588528, UNMAPPED:12, UNMAPPED:46, UNMAPPED:48]. A conditional random field is an undirected x, y graphical model in which each yi vertex represents a random variable whose distribution is dependent on some observation variable X, and each margin characterizes a dependency between xi and yi random variables. The dependency of Yi on Xi is defined in a set of functions of f(Yi-1, Yi, X, i). Khan et al. [UNMAPPED:22] proposed a conditional random field (CRF)-based Urdu POS tagger with both language dependent and independent feature sets. It used both deep learning and machine learning approaches with the language-dependent feature set using two datasets to compare the effectiveness of ML and DL approaches. Also, Hirpassa et al. [UNMAPPED:39] proposed an automatic prediction of POS tags of words in the Amharic language to address the POS tagging problem. The statistical-based POS taggers are compared. The performances of all these taggers, which are Conditional Random Field (CRF), Naive Bays (NB), Trigrams'n'Tags (TnT) Tagger, and an HMM-based tagger, are compared with the same training and testing datasets. The empirical result shows that CRF-based tagger has outperformed the performance of others. The CRF-based tagger has achieved the best accuracy of 94.08% during the experiment.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "22",
+                "39"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Hidden Markov Model (HMM)",
+              "parent_subsection_id": "s_4_1",
+              "text": "The Hidden Markov model is the most commonly used model for part of speech tagging appropriate [W2896105608, W2927062526, W1972243012, UNMAPPED:51]. HMM is appropriate in cases where something is hidden while another is observed. In this case, the observed ones are words, and the hidden one is tagged. Demilie [UNMAPPED:53] proposed an Awngi language part of speech tagger using the Hidden Markov Model. They created 23 hand-crafted tag sets and collected 94,000 sentences. A tenfold cross-validation mechanism was used to evaluate the performance of the Awngi HMM POS tagger. The empirical result shows that uni-gram and bi-gram taggers achieve 93.64% and 94.77% tagging accuracy, respectively. The other author, Hirpassa et al. [UNMAPPED:39], proposed an automatic prediction of POS tags of words in the Amharic language to address the POS tagging problem. The statistical-based POS taggers are compared. The performances of all these taggers, which are Conditional Random Field (CRF), Naive Bays (NB), Trigrams'n'Tags (TnT) Tagger, and an HMM-based tagger, are compared with the same training and testing datasets. As the empirical result shows, CRF-based tagger has outperformed the performance of others. The CRF-based tagger has achieved the highest accuracy of 94.08% during the experiment.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "53",
+                "39"
+              ]
+            }
+          ],
+          "text": "Machine Learning could be a set of AI that has all the strategies and algorithms that enable the machines to learn automatically by using mathematical models to extract relevant knowledge from the given datasets [W1851422430, W2922650329, W3199810304, UNMAPPED:38, UNMAPPED:39, UNMAPPED:42]. The most common ML algorithms used for POS taggers are Neural Network, Na\u00efve Bayes, HMM, Support Vector Machine (SVM), ANN, Conditional Random Field (CRF), Brill, and TnT.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Deep Learning Algorithms",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Multilayer Perceptron (MLP)",
+              "parent_subsection_id": "s_4_2",
+              "text": "The neural network (NN) is a machine learning algorithm that mimics the neurons of the human brain for processing information (Haykin, 1999). One of the widely deployed neural network techniques is Multilayer perceptron (MLP) in many NLP and other pattern recognition problems. An MLP neural network consists of three layers: an input layer as input nodes, one or more hidden layers, and an output layer of computation nodes. Besides, the backpropagation learning algorithm is often used to train an MLP neural network, which is also called backpropagation NN. In the beginning, randomly assigned weights are set at the beginning of algorithm training. Then, the MLP algorithm automatically performs weight changing to define the hidden layer unit representation is mostly good at minimizing the misclassification [W3028444716, W4248192148, UNMAPPED:55]. Besharati et al. [W3028444716] proposed a POS tagging model for the Persian language using word vectors as the input for MLP and LSTM neural networks. Then the proposed model is compared with the results of the other neural network models and with a second-order HMM tagger, which is used as a benchmark.",
+              "citations": [
+                "W3028444716"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Long Short-Term Memory",
+              "parent_subsection_id": "s_4_2",
+              "text": "A Long Short-Term Memory (LSTM) is a special kind of RNN network architecture, which has the capability of learning long-term dependencies. An LSTM can also learn to fill the gap in time intervals in more than 1000 steps [W2905521123, W2998080215, UNMAPPED:14].",
+              "citations": [
+                "W2905521123",
+                "W2998080215"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "14"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Bidirectional Long Short-Term Memory",
+              "parent_subsection_id": "s_4_2",
+              "text": "Bidirectional LSTM contains two separate hidden layers to process information in both directions. The first hidden layer processes the forward input sequences, while the other hidden layer processes it backward; both are then connected to the same output layer, which provides access to the future and past context of every point in the sequence. Hence BLSTM beat both standard LSTMs and RNNs, and it also significantly provides a faster and more accurate model [W2998080215, UNMAPPED:14].",
+              "citations": [
+                "W2998080215"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "14"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Gate Recurrent Unit",
+              "parent_subsection_id": "s_4_2",
+              "text": "Gated recurrent unit (GRU) is an extension of recurrent neural network which aims to process memories of sequence of data by storing prior input state of the network, which they plan to target vectors based on the prior input [W2998080215, UNMAPPED:14].",
+              "citations": [
+                "W2998080215"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "14"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "Feed-Forward Neural Network",
+              "parent_subsection_id": "s_4_2",
+              "text": "A feed-forward neural network (FNN) is one artificial neural network in which connections between the neuron units do not form a cycle. Also, in Feedforward neural networks, information processing is passed through the network input layers to output layers [UNMAPPED:59].",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "59"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "Recurrent Neural Network (RNN)",
+              "parent_subsection_id": "s_4_2",
+              "text": "On the other hand, a recurrent neural network (RNN) is among an artificial neural network model where connections between the processing units form cyclic paths. It is recurrent since they receive inputs, update the hidden layers depending on the prior computations, and that make predictions for all elements of a sequence [W2914111352, W2902980024, W2970354905, UNMAPPED:46, UNMAPPED:61].",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "Deep Neural Network",
+              "parent_subsection_id": "s_4_2",
+              "text": "In a normal Recurrent Neural Network (RNN), the information pipes through only one layer to the output layer before processing. But Deep Neural Networks (DNN) is a combination of both deep neural networks (DNN) and RNNs concepts [W2914111352, W2911630059].",
+              "citations": [
+                "W2914111352",
+                "W2911630059"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_8",
+              "subsubsection_index": 8,
+              "subsubsection_label": "Convolutional Neural Network",
+              "parent_subsection_id": "s_4_2",
+              "text": "A convolutional neural network (CNN) is a deep learning network structure that is more suitable for the information stored in the array's data structure. Like other neural network structures, CNN comprises an input layer, the memory stack of pooling and convolutional layers for extracting feature sets, and then a fully connected layer with a softmax classifier in the classification layer [W2947781656, W3176502972, UNMAPPED:65, UNMAPPED:66, UNMAPPED:68].",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Currently, deep learning methods are the most common word in machine learning to automatically extract complex data representation at a high level of abstraction, especially used for extremely complex problems. It is a data-intensive approach to come with a better result than traditional methods (Na\u00efve Bayes, SVM, HMM, etc.). During the text-based corpora, deep learning sequential models are better than feed-forward methods. In this paper, some of the common sequential deep learning methods such as FNN, MLP, GRU, CNN, RNN, LSTM, and BLSTM are discussed.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section provides a general methodology of the AI-based POS tagging along with the details of the most commonly deployed DL and ML algorithms used to implement an effective POS tagging. Both DL and ML are broadly classified into supervised and unsupervised algorithms [W1983541059, UNMAPPED:22, UNMAPPED:32, UNMAPPED:38]. In supervised learning algorithms, the hidden information is extracted from the labeled data. In contrast, unsupervised learning algorithms find useful features and information from the unlabeled data.",
+      "citations": [
+        "W1983541059"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "22",
+        "32",
+        "38"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Evaluation Metrics",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This section describes the most commonly deployed performance metrics for validating the performance of ML and DL methods for POS tagging. All the evaluation metrics are based on the different metrics used in the Confusion Matrix, which is a confusion matrix providing information about the Actual and Predicted class which are; True Positive (TP)\u2014assigns correct tags to the given words, false positive (FP)\u2014assigns incorrect tags to the given words, false negative (FN)\u2014not assign any tags to given words [W2805470984, UNMAPPED:14, UNMAPPED:55].\n\ni. True Positive (TP): The word correctly tagged as labelled by experts\nii. False Negative (FN): The given word is not tagged to any of the tag sets.\niii. False Positive (FP): The given word tagged wrongly.\niv. True Negative (TN): The occurrences correctly categorized as normal instances.\n\nIn addition to these, the various evaluation metrics used in the previous works are:\n\n- **Precision:** The ratio of correctly tagged part of speech to all the samples tagged words:\n \n $$Precision = \\frac{TP}{TP+FP}$$\n\n- **Recall:** The ratio of all samples correctly tagged as tagged to all the samples that are tagged by expert (aka a Detection Rate):\n \n $$Detection\\ Rate = \\frac{TP}{TP+FN}$$\n\n- **False alarm rate:** the false positive rate is defined as the ratio of wrongly tagged word samples to all the samples:\n \n $$False\\ Alarm\\ Rate = \\frac{FP}{FP+TN}$$\n\n- **True negative rate:** The ratio of the number of correctly tagged samples to all the samples:\n \n $$True\\ Negative\\ Rate = \\frac{TN}{TN+FP}$$\n\n- **Accuracy:** The ratio of correctly tagged part of speech to the total number of instances (aka Detection accuracy):\n \n $$Accuracy = \\frac{TP+TN}{TP+TN+FP+FN}$$\n\n- **F-Measure:** It is the harmonic mean of the Precision and Recall:\n \n $$F\\text{-}Measure = 2\\frac{(Precision \\times Recall)}{Precision+Recall}$$",
+      "citations": [
+        "W2805470984"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "14",
+        "55"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Remarks, Challenges, and Future Trends",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "Observations and State of Art",
+          "subsubsections": [],
+          "text": "The effectiveness of AI-oriented POS tagging depends on the learning phase using appropriate corpora. For classical machine Learning techniques, the algorithms could be trained under a small corpus to come with better results. But in the presence of a larger corpus size, deep learning methods are preferable compared to the classical machine learning techniques. These methods learn and uncover useful knowledge from given raw datasets. To make POS tagging efficient in tagging unknown words, it needs to be trained with known corpus. In nature, deep learning algorithms are resource hungry in terms of computational resources and time consumption, so the large corpus and deep nature of the algorithms make the learning process difficult.\n\nTable 1 highlights the summary of the strengths and weaknesses of the reviewed articles. It is observed that deep learning-oriented POS tagging methodologies are preferred by researchers nowadays over the machine learning methods because of their efficiency in learning from the large-size corpus in an unlabeled text. The introduction of GPUs and cloud-based platforms nowadays has eased the implementation of the deep learning method due to the need for extensive computational resources by Deep Learning (DL).\n\nBased on the reviewed article, we observed that for the past three years, the majority of the researchers preferred Deep Learning (DL) tools for developing the POS tagging model, as depicted in Figure 4. It is observed that 68% of the proposed approaches are based on the deep learning approaches, 12% of proposed solutions use a hybrid approach by combining machine learning with deep learning algorithms, and the remaining 20% of proposed POS tagger models are implemented based on machine learning methods.\n\n**TABLE 1** Strength and weakness of the proposed methodologies\n\n{{TABLE:tbl_01}}\n\n**FIGURE 4** Methods distribution\n\n{{TABLE:tbl_02}}\n\nBesides, Table 2 shows the frequency of Deep Learning and Machine Learning algorithms deployed by different researchers to design an effective POS tagger model. It is shown that the three most frequent deep learning algorithms used are LSTM, RNN, and BiLSTM, respectively. Then the machine learning approaches like CRF and HMM come into the list and are most commonly deployed in the hybrid approach to improve deep learning algorithms. Also, machine learning algorithms like KNN, MLP, and SVM are less frequently used algorithms during this period.\n\n**TABLE 2** Summary of Methodology and Current deep learning (DL) and machine learning (ML) based part of speech tagging studies\n\n{{TABLE:tbl_03}}\n\nThe analysis of the evaluation metrics used in various researches for evaluating the performance of the methodology is presented in Figure 5. It is well known that the most commonly deployed performance metrics are Accuracy and Recall (Detection rate). For efficient POS tagging, the model needs a higher Accuracy and Recall. It is observed that the most widely used metrics are accuracy, recall, precision, and F-measure. So, to examine the effectiveness and efficiency of the proposed methodology, these four evaluation metrics should be taken as performance metrics. For a typical POS tagger developed using machine learning and deep learning algorithms, Accuracy, Recall, F-measure, and Precision should be the compulsory metric to evaluate the methodology.\n\n**TABLE 3** Performance evaluation metrics\n\n{{TABLE:tbl_04}}\n\n**FIGURE 5** Evaluation metrics\n\n{{TABLE:tbl_05}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02",
+            "tbl_03",
+            "tbl_04",
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "Research Challenges",
+          "subsubsections": [],
+          "text": "This subsection presents the research challenges that existed in the field of POS tagging.\n\n**Lack of Enough and standard dataset:** Most recent research studies indicated the unavailability of enough standard corpus for building better POS taggers for a particular language. The proposed methodologies faced difficulties in getting a balanced corpus size for some part of speech within the corpus. To come up with a better POS tagger, it needs to be trained and tested using a balanced and verified corpus. By incorporating a balanced and maximum number of tokens within a corpus, it should enable the DL and ML-based POS tagger to learn more patterns. Then the POS tagger could label words with an appropriate part of speech. But preparing a suitable language corpus is a tedious process that needs plenty of language resources and language experts' knowledge to verify. Therefore, the research challenge for developing an efficient POS tagging model is the preparation of enough and standard corpus with enough tokens of almost all balanced parts of speech. The corpus should be released publicly to help reduce the resource scarcity of the research community.\n\n**Lower detection accuracy:** It is observed that most of the proposed POS tagging methodologies reveal lower detection accuracy of the POS tagging model as a whole, for some parts of speech tags in particular. This low detection accuracy problem is faced because of the imbalanced nature of the corpus. The ML/DL-based POS tagger trained with less frequent part of speech tags provides low detection accuracy than part of speech with more part of speech. To overcome these problems, it should come up with a balanced corpus and also an efficient technique like Synthetic Minority Over-sampling Technique (SMOTE), RandomOverSampler; which are techniques used to balance unbalanced classes of the corpus. These techniques can be used to increase the number of minority parts of speech tag instances to come up with a balanced corpus. But there is still a research gap to improve accuracy and demands more research effort in this arena.\n\n**Resource requirement:** Most recent POS tagging methodologies proposed are based on very complex models that need high computing resources and time for processing. These can be solved by using a multi-core high-performance GPU to fasten the computation process and reduce time, but it will incur a high amount of money. The deployment of these complex models may experience an extra processing overhead that will affect the performance of the POS tagger. Besides alleviating the overhead of processing units and computational processes, the most important features must be selected to speed up the processing by using an efficient feature selection algorithm. Although various research works have been explored to come up with the best feature selection algorithm, there is still room for improvement in this direction.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "Future Directions",
+          "subsubsections": [],
+          "text": "This part of the article provides the area which needs further improvement in ML/DL-oriented POS tagging research.\n\n1. **Efficient POS Tagging Model:** As stated, POS tagging is one of the most important and groundwork for any other natural language processing tools like information extraction, information retrieval, machine translation. Recent research works show that there is a constraint in automatically tagging \"Unknown\" words with a high false positive rate. To this end, the performance of the POS tagger can be improved by using a balanced, up-to-date systematic dataset. An attempt to propose an efficient and complete POS tagging model for most under resource languages using ML/DL methodologies is almost null. So, research can be explored in this area to come up with an efficient POS tagging model that can automatically label parts of speech to words. The POS tagging model should incorporate sentences from different domains in a corpus and repeatedly train the model with the updated corpus to enable the model to learn the new features. This mechanism will ultimately improve the POS tagging model in identifying UNKNOWN words and then minimize false positive rates. Despite the fact that several research studies are being conducted in order to develop an efficient and successful POS tagging strategy, there is still room for improvement.\n\n2. **Way forwards to complex models:** Recently, like other domains, ML/DL-oriented POS tagging has been popular because of the ability to learn the feature deeply so as to generate excellent patterns in identifying parts of speech to words. Obviously, the DL-oriented POS tagging models are too complex that need high storage capacity, computational power, and time. This complex nature of the DL-based POS tagging implementation challenges the real-world scenario. The solution to address this problem is to use GPU-based high-performance computers, but GPU-based devices are costly. So, to reduce computational costs, the model can be trained and explored on cloud-based GPU platforms. The second solution forwarded is to use efficient and intelligent feature selection algorithms for reducing the complex nature of deep learning algorithms. This will use less computing resources by selecting the main features while the same detection accuracy is achieved using the whole set of features.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section first presents the researcher's observation in POS tagging based on their proposed methodology and performance criteria. It also highlights the potential research gap and challenges and lastly forwards the future trends for the researchers to come up with a robust, efficient, and effective POS tagger.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This review paper presents a comprehensive assessment of the part of speech tagging approaches based on the deep learning (DL) and machine learning (ML) methods to provide interested and new researchers with up-to-date knowledge, recent researcher's inclinations, and advancement of the arena. As a research methodology, a systematic approach is followed to prioritize and select important research articles in the field of artificial intelligence-based POS tagging. At the outset, the theoretical concept of NLP and POS tagging and its various POS tagging approaches are explained comprehensively based on the reviewed research articles. Then the methodology that is followed by each article is presented, and strong points and weak points of each article are provided in terms of the capability and difficulty of the POS tagging model. Based on this review, the recent development of research shows the use of deep learning (DL) oriented methodologies improves the efficiency and effectiveness of POS tagging in terms of accuracy and reduction in false-positive rate. Almost 68% of the proposed POS tagging solutions were deep learning (DL) based methods, with LSTM, RNN, and BiLSTM being the three topmost frequently used DL algorithms. The remaining 20% and 12% of proposed POS tagging models are machine learning (ML) and Hybrid approaches, respectively. However, deep learning methods have shown much better tagging performance than the machine learning-oriented methods in terms of learning features by themselves. But these methods are more complex and need high computing resources. So, these difficulties should be solved to improve POS tagging performance. Given the increasing application of DL and ML techniques in POS tagging, this paper can provide a valuable reference and a baseline for researches in both ML and DL fields that want to pull the potential of these techniques in the POS tagging arena. Proposing an efficient POS tagging model by adopting less complex deep learning algorithms and an effective POS tagging in terms of detection mechanism is a potential future research area. Further, the researcher will use this knowledge to propose a new and efficient deep learning-based POS tagging which will effectively identify a part of the speech of words within the sentences.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Abbreviations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "AE: Autoencoder; AI: Artificial Intelligence; ANN: Artificial Neural Network; BLSTM: Bidirectional Long Short-Term Memory; CNN: Convolutional Neural Network; CRF: Conditional Random Field; DBN: Deep Belief Network; DL: Deep Learning; DNN: Deep Neural Network; FAR: False Alarm Rate; FN: False Negative; FNN: Feedforward Neural Network; FP: False Positive; GRU: Gated Recurrent Unit; SMOTE: Synthetic Minority Over-sampling Technique; HMM: Hidden Markov Model; KNN: K-Nearest Neighbor; LSTM: Long Short-Term Memory; MEMM: Maximum Entropy Markov Model; ML: Machine Learning; MLP: Multilayer Perceptron; NB: Naive Bayes; NLP: Natural Language Processing; POS: Part of Speech; POST: Part of Speech Tagging; RNN: Recurrent Neural Network; SVM: Support Vector Machine; TN: True Negative; TP: True Positive.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Not applicable.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "Authors' Contributions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "AC prepared the manuscript including summarizing some of the surveyed work. BY prepared the technical report upon which the manuscript is based and summarized several of the surveyed work. Both authors read and approved the final manuscript.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_11",
+      "section_index": 11,
+      "section_label": "Funding",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Not applicable.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_12",
+      "section_index": 12,
+      "section_label": "Availability of Data and Materials",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Not applicable.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_13",
+      "section_index": 13,
+      "section_label": "Declarations",
+      "subsections": [
+        {
+          "subsection_id": "s_13_1",
+          "subsection_index": 1,
+          "subsection_label": "Ethics Approval and Consent to Participate",
+          "subsubsections": [],
+          "text": "Not applicable.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_13_2",
+          "subsection_index": 2,
+          "subsection_label": "Consent for Publication",
+          "subsubsections": [],
+          "text": "Not applicable.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_13_3",
+          "subsection_index": 3,
+          "subsection_label": "Competing Interests",
+          "subsubsections": [],
+          "text": "The authors declare that they have no competing interests.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_14",
+      "section_index": 14,
+      "section_label": "Author Details",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "1 Department of Information Systems, College of Computing, Debre Berhan University, Debre Berhan, Ethiopia.\n2 Department of Computer Science, College of Computing, Debre Berhan University, Debre Berhan, Ethiopia.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_1",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4206965408_tables.md"
+}

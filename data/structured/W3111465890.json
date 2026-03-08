@@ -1,0 +1,676 @@
+{
+  "id": "W3111465890",
+  "metadata": {
+    "title": "Synergies of Learning Analytics and Learning Design: A Systematic Review of Student Outcomes",
+    "n_sections": 10,
+    "n_subsections": 11,
+    "n_subsubsections": 15,
+    "n_tables": 9
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Keywords",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Analytics framework, collaborative learning, effect size, higher education, learning analytics, learning design, learning gain, personalized learning, online learning, self-regulation, student learning\n\n**Submitted:** 03/01/20 \u2014 **Accepted:** 25/10/20 \u2014 **Published:** 17/12/20\n\n**Corresponding author:** $^{1}$ **Email:** m.blumenstein@auckland.ac.nz **Address:** Faculty of Science, The University of Auckland, 23 Symonds Street, Auckland 1142, New Zealand, **ORCID ID:** https://orcid.org/0000-0002-1769-5588",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "1. Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1. The Current Research",
+          "subsubsections": [],
+          "text": "The present systematic review responds to the need for further research into the opportunities and benefits of LA for data-enabled designs for wider adoption in HE (e.g., [W2341162996, W2193902461]). Recent meta-analyses offer some insight into more effective LA-LD alignments, focusing on student retention and academic success [W2901503724], the current state of LA-based interventions in HE [W2885000341, UNMAPPED:15], and an LA-LD taxonomy [W2890544186]. Navigating the vast LA evidence base is problematic for practitioners who centre design decisions on empirically validated and commonly accepted principles and theories of learning and teaching. Moreover, \"the overall potential of LA is [still] so far higher than the actual evidence\" [16, p. 108], and much work still needs to be done to overcome the widespread unease about adoption [W2994732601].\n\nAs Alhadad, Thompson, Knight, Lewis, and Lodge [W2790490315] argue, LA needs to move its focus away from \"end-state outcomes\" (p. 429) toward designs for student learning and teaching practice. However, education systems are continuously evaluated in terms of student outcome and value of investment, where student achievement needs to be measurable in some way. Learning is complex, combining different dissections of academic and behavioural performance (e.g., [W128053457]), and no single proxy for measuring student outcomes exists (e.g., [W2769669737]). Embedding learning gain approaches into the curriculum for the meaningful measurement of student outcomes as proposed by Evans, Kandiko Howson, and Forsythe [W2892120767] is an appealing concept for the purpose of informing effective practice within teaching contexts. Moreover, the use of \"big data\" and LA in learning gain approaches has the potential to obtain actionable insight on students' learning processes and trajectories to support enhancements to HE practice [W2892120767]. In doing so, the emphasis is shifted from data to pedagogy for the informed use of LA that can support student learning.\n\nThe present systematic analysis of effect sizes of instructional approaches explores the potential of LA to offer insight into learning gains: what worked, for whom, and why. It contributes to the ongoing LA-LD debate and proposes a new model of the integration of LA data with LD and learning gain. Following Evans et al.'s [W2892120767] premise that learning gain approaches in HE should be integral to curriculum design and delivery, the primary purpose of the present study is to provide evidence of data-informed teaching and learning effectiveness within specific contexts to stimulate the dialogue between teachers, learning designers, and curriculum managers. Two existing frameworks provided the necessary dimensions for the development of an integrated data-to-design-to-student-outcome model. The \"Future of Learning\" framework [UNMAPPED:23] places collaboration, informalization, and personalization at the centre of strategies that shape the future of education in response to the needs and challenges of today's learners. It is well aligned with current issues and common goals in the HE sector globally, which increasingly calls for the use of data to improve student outcomes in employability, equitable access, lifelong learning, and digital literacy. The \"Learning Gains in HE\" model [W2890112699] provides robust conceptions of cognitive, metacognitive, socio-communicative, and affective learning that have been validated across students' subject-specific and non-subject-specific knowledge, skills, and attitudes. This classification aided the mapping of LD effects on students' cognitive and behavioural learning processes reported in the primary studies, answering a call for the inclusion of richer LA data (e.g., [W2743726230]) to inform more nuanced teacher actions.\n\nThree research questions (RQs) guided the systematic analysis in two phases: first, to extract and synthesize the evidence presented in selected studies covering the years 2011 to 2016 for the development of a new model that integrates LA with LD for improved student outcomes, and, second, to evaluate the new model (literature spanning 2016 to 2019) and provide evidence-based linkages between LA data types and sources, and LD and intended outcomes, as follows:\n\n* **RQ1:** What kinds of LA are examined in relation to student learning outcomes utilizing collaborative, independent, and personalized learning approaches?\n* **RQ2:** Can LA effectively guide LD to optimize cognitive, metacognitive, socio-collaborative, and affective processes with the goal of an integrated model of data-informed learning gain?\n* **RQ3:** What is the evidence that an integrated model of data-informed learning gain developed in RQ2 can be effectively employed to inform LD decisions to improve student outcomes?\n\nGiven the focus on practice, only studies that proposed instructional approaches as an integral part of the design were included, excluding research on data mining, modelling, and proof of algorithmic principles.",
+          "citations": [
+            "W2341162996",
+            "W2193902461",
+            "W2901503724",
+            "W2885000341",
+            "W2890544186",
+            "W2994732601",
+            "W2790490315",
+            "W128053457",
+            "W2769669737",
+            "W2892120767",
+            "W2890112699",
+            "W2743726230"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "15",
+            "23"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The field of learning analytics (LA) is influenced by analytic methods and data capture and handling practices from a range of fields, including computer science, social sciences, and educational psychology, employing various mathematical models, algorithms, and processes [W2166827970, UNMAPPED:1]. LA can be defined as the \"... measurement, collection, analysis and reporting of data about learners and their contexts, for purposes of understanding learning and the environments in which it occurs\" [UNMAPPED:3]. In recent years, the LA literature has seen a shift from its early conceptual papers and review articles that established common ground [UNMAPPED:4] to more applied LA research via technology mediation of learning in order to optimize student engagement and outcomes in the context of relevant theories (e.g., [W2506452353]) and learning design (LD) frameworks (e.g., [W2341162996, UNMAPPED:6]). However, transferring LA research into the higher education (HE) classroom, whether face to face, blended, or fully online, can be problematic for practitioners [W1982464953, UNMAPPED:9]. Therefore, the aim of the present study is to disentangle the complex interrelationships between LA (the data) and LD (the environment) within various teaching and learning contexts and provide a new framework to guide HE educators in their design decision-making processes to enable meaningful data capture for desired learning gains.\n\nLD as a methodology enables practitioners to make pedagogically informed decisions about how activities and resources prompt optimal learning in diverse contexts [W2238759989, UNMAPPED:11]. From an increasing awareness of the close connection between LA data and pedagogic theories and practice [W1982464953, W2168156812], have emerged several conceptual frameworks that can facilitate and support analytics-informed teaching practices. Some researchers focus on institutional implementation [W2193902461]; others on the evaluation of LD pedagogy and LA [UNMAPPED:6] and teacher inquiry [W2341162996]. Therefore, LA will be of little practical value if isolated from a careful analysis of the teaching context and pedagogical intent.",
+      "citations": [
+        "W2166827970",
+        "W2506452353",
+        "W2341162996",
+        "W1982464953",
+        "W2238759989",
+        "W2168156812",
+        "W2193902461"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "3",
+        "4",
+        "6",
+        "9",
+        "11"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "2. Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Selection Criteria and Search Procedures",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.1.1. Electronic Literature Search",
+              "parent_subsection_id": "s_3_1",
+              "text": "A comprehensive online database search for the extant literature was conducted in two phases, as illustrated in Figure 1. Phase One covered the years 2011 until March 2016 (steps 1 to 3) and formed the basis for the development of an integrated LA Learning Gain Design (LALGD) model (RQ1 and RQ2). The year 2011 was chosen as the starting point because it coincided with an agreed definition of the term learning analytics [UNMAPPED:3]. Phase Two searches (April 2016 until end of 2019 in step 4) provided the key studies for evaluation of the newly proposed model. The following search terms were applied:\n\n* **First-order search:** The title, abstract, and/or keywords must contain at least one of the terms learning analytics OR academic analytics OR educational data mining OR learning analytics data AND\n* **Second-order search:** The title, abstract, and/or keywords must contain at least one of the terms quantitative OR statistic OR correlation OR regression OR machine learning OR predict AND\n* **Third-order search (Phase Two only):** The title, abstract, and/or keywords must contain the terms learning AND analytics AND design (OR instruction).\n\n**FIGURE 1: Summary of the systematic review process**\n*(Electronic database searches: Phase One 2011-2016 (Mar) n = 1119 studies. Duplicates removed n = 357. Elimination based on inclusion/exclusion criteria n = 172. Elimination based on quality criteria (concurrent coding) n = 48. Final iteration 25 studies for development of LALD-Practice Model. Updated database searches: Phase Two 2016 (Apr)-2019. Repeating steps 1 to 3. Total of 38 studies included in this review. Refined search terms n = 145. 13 studies considered for evaluation of new model.)*\n\nThe terms in the second-order search were based on commonly used statistical techniques in LA research [W2166827970] in anticipation of revealing measures of effect size (RQ2). For the updated search in Phase Two (step 4), search terms were refined to reveal studies where the link between LA and LD was made explicit by including the terms design and learning and analytic. Differences in database search functionality required the delimitation of outputs from ACM and Google Scholar, which produced results in the thousands. Therefore, search strings were adapted to machine learning AND (academic analytics OR learning analytics OR educational data mining). Subsequent searches simply replaced the first term with either quantitative, statistic, correlation, regression, or predict. Google Scholar searches were not included in Phase Two of this review due to a threefold increase in overall LA publications since 2016, many with little relevance to the posed RQs. Database filters were applied to all searches in steps 1 to 4 to reveal studies that:\n1. were published in English.\n2. were published in peer-reviewed journals/conference proceedings,\n3. were published between January 2011 and December 2019,\n4. were a case study or technical report, and\n5. relied on students as participants (LIMIT-TO students).",
+              "citations": [
+                "W2166827970"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "3"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.1.2. Inclusion and Exclusion Criteria",
+              "parent_subsection_id": "s_3_1",
+              "text": "After the elimination of duplicates in EndNote X8 and applying the inclusion/exclusion criteria outlined below, 172 studies were retained and prepared for coding to answer RQ1 and RQ2, and 145 academic papers were selected for the retrospective evaluation of the newly developed model (RQ3). In a second step, the titles, abstracts, and publication format were scanned for relevance. Qualitative and purely descriptive studies, books, editorials (e.g., [W2008942609]), conference abstracts (not proceedings), and theoretical papers were excluded. To reduce selection bias, technical reports and case studies were included if data procedures were adequately presented (e.g., [W2115838577]), whereas scoping studies were eliminated (e.g., [W1509067259]). Studies about massive open online courses (MOOCs) were included if they covered academic subject content and showed practical significance for HE (e.g., [W2187065649]). Participants were students enrolled in postsecondary education, that is, undergraduate and postgraduate programs at tertiary/university level worldwide.",
+              "citations": [
+                "W2008942609",
+                "W2115838577",
+                "W1509067259",
+                "W2187065649"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.1.3. Quality Assessment, Data Extraction, and Coding",
+              "parent_subsection_id": "s_3_1",
+              "text": "First, studies that met the initial inclusion criteria ($n = 172$ for 2011\u20132016; $n = 145$ for 2016\u20132019) were assessed based on Kitchenham and Charters [26, pp. 25\u201327]. Evaluative questions (see Table S1 in Appendix A \u2013 Supplementary Material) were designed collaboratively by the author and two LA experts (coders), paying attention to the following factors:\n* **Research design:** The aims had to be clearly stated and variables fully defined and adequately measured to answer the RQ(s).\n* **Conduct:** The data collection procedures were explained, biases/confounders addressed, and dropouts or exclusions explained.\n* **Analysis:** Variables, data, sampling and analysis methods, and effects were appropriately described.\n* **Conclusion:** The RQ(s) were answered, and implications for LA practice and LD discussed (i.e., the LA-LD link was made explicit).\n\nSecond, to answer RQ1 and RQ2 (Phase One) and develop a new LA-LD model that integrates learning outcomes, comprehensive descriptions of each study and a rationale for elimination were collated into a sharable data extraction form based on Kitchenham and Charters [26, pp. 30\u201331; see Supplementary Table S2]. The author worked collaboratively with the coders in an online document, which allowed us to examine each other's criteria for inclusion of a paper in the current review. Through an iterative process of checking the information in the sheet against the criteria, 48 out of 172 studies remained (see step 3, Figure 1). Another 23 studies were excluded, in particular those that focused solely on algorithmic modelling of LA data (e.g., [W2090715537, W1830345458]), resulting in a final set of 25 papers (see Supplementary Table S3 for details). Specifically, the included studies:\n* focused on learning outcomes revealed by LA collected with pedagogical intent.\n* emphasized the role of instruction and design to identify learning variables.\n* reported effects on learning outcomes using statistical techniques rather than descriptive analysis to query the data, and\n* provided a section on the practical significance of findings and/or recommendations for practice.\n\nThird, to answer RQ3 (Phase Two), 13 studies resulting from the updated search (UNMAPPED:2016, UNMAPPED:2017, UNMAPPED:2018, UNMAPPED:2019) that met the quality criteria in steps 2 and 3 (Figure 1) were deductively coded against the three categories outlined in Section 2.2.1 below: collaboration, independent learners, and personalization. Details of each study, regarding context, sample size, effects on learning outcomes, and implications for LD, are summarized in Supplementary Table S4.",
+              "citations": [
+                "W2090715537",
+                "W1830345458"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Categorization Scheme",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.2.1. Future of Learning Framework",
+              "parent_subsection_id": "s_3_2",
+              "text": "Three broad themes were developed: (1) collaboration, (2) independent learners, and (3) personalization. Specifically, the selected studies were categorized as follows:\n* **Collaboration \u2014 social learning and collective efficacy:** These studies utilized collaborative tools such as asynchronous discussions, social networks, and peer learning in groups to foster collaboration and social presence.\n* **Independent learners \u2014 self-regulation and real-life learning:** These studies investigated students' skills of self-regulating, managing time, and developing awareness of learning as a process, as well as the effect of authentic learning on outcomes.\n* **Personalization \u2014 tailored learning and predictive analytics:** In these studies, personalized feedback was provided to students to support learning persistence, engagement, self-regulation, and cognition.\n\nOriginally, Redecker et al. [UNMAPPED:23] coined the second category (here independent learners) as informalization-lifewide learning and learning skills for lack of a more appropriate term at the time (see note, p. 44). This perspective acknowledged the importance of reflection and authentic and holistic learning to lifelong learning. To better suit the HE context, the term was replaced for the current review with independent learners.",
+              "citations": [
+                "W2166827970"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "23",
+                "1",
+                "3"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.2.2. Effects on Learning Gains",
+              "parent_subsection_id": "s_3_2",
+              "text": "To critically examine which LA-informed designs and approaches were most effective for improving student outcomes related to RQ2 \u2014 can LA effectively guide LD to optimize cognitive, metacognitive, socio-collaborative, and affective processes with the goal of an integrated model of data-informed learning gain? \u2014 effect sizes reported in the primary studies were recalculated as Cohen's d [W4299627282]. To capture both subject- and non-subject-specific student learning, extracted effect sizes were categorized according to learning gains across four components [24, pp. 274\u2013275]:\n1. **cognitive,** such as reasoning abilities and critical and analytical thinking;\n2. **metacognitive,** for example, self-regulation, learning to learn, information seeking, monitoring and modifying attitudes and behaviours toward certain learning goals;\n3. **affective,** such as attitudes toward learning, motivation, social and emotional engagement, academic interest;\n4. **socio-communicative,** for example, belonging in social learning networks, social embeddedness, communication skills.\n\nTo aid the interpretation of instructional approaches to student learning outcomes reported in the key studies, effects were broadly categorized into learning performance (defined as grades, exam marks, scores, final mark, GPA), course outcome (pass/fail, completion, re-enrollment), and online presence (cognitive presence, cognitive learning, online behaviour changes); see Supplementary Table S3 for details. Email nudges and infographics directed at students were categorized as affective because nudging requires consideration of engagement pedagogy [UNMAPPED:61] and students' connectedness to the learning environment [W2905050135].",
+              "citations": [
+                "W4299627282",
+                "W2905050135"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "61"
+              ]
+            }
+          ],
+          "text": "The selected studies were categorized in two ways: first, thematically according to three perspectives adapted from Redecker et al. [23; see Supplementary Figure S1 for the original framework], and, second, according to effects on learning across four components in light of Vermunt et al.'s [W2890112699] framework of learning gains in HE.",
+          "citations": [
+            "W2890112699"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Recalculating Effect Sizes",
+          "subsubsections": [],
+          "text": "A statistician prepared a document for each study, extracting the main hypotheses and correlation coefficients ($r, R^{2}$), regression coefficients ($b$), Hedges' g, and model precision indicators (e.g., odds ratio) for transformation into Pearson correlation coefficient r as well as Cohen's d according to Rosenthal and DiMatteo [W1870939480]. Where effect sizes were not reported, confidence intervals, standard errors, F ratios, and t ratios were used [W1870939480]. The author checked and re-checked the tables provided by the statistician against the original studies to ensure correct representation of findings for the subsequent meta-analysis. The focus of the present review is on the impacts of LD on learning outcomes as seen through an LA lens, which can be either positive or negative. To ease interpretation of the results, this study focused on reporting main effects (not interactions), which were predominantly positive, corroborating previous findings that negative effects are often underreported in the education literature due to publication bias [W2470242385]. If several main effects were reported in a study, then the negative effects were only included when one instructional method (or learning intervention) was shown to be less effective than another (see Supplementary Table S3).\n\nTo answer RQ2 and simplify complex interrelationships between instructional variables and learning outcomes, effect sizes were classified into no to small (Cohen's $0 < d < 0.35$), medium ($0.35 < d < 0.66$), and large ($> 0.66$) based on achievement correlates in HE proposed by Schneider and Preckel [W2600289216]. Sample sizes of the selected studies were grouped into small (up to 100 students), medium (UNMAPPED:100, UNMAPPED:101, UNMAPPED:102, UNMAPPED:103, UNMAPPED:104, UNMAPPED:105, UNMAPPED:106, UNMAPPED:107, UNMAPPED:108, UNMAPPED:109, UNMAPPED:110, UNMAPPED:111, UNMAPPED:112, UNMAPPED:113, UNMAPPED:114, UNMAPPED:115, UNMAPPED:116, UNMAPPED:117, UNMAPPED:118, UNMAPPED:119, UNMAPPED:120, UNMAPPED:121, UNMAPPED:122, UNMAPPED:123, UNMAPPED:124, UNMAPPED:125, UNMAPPED:126, UNMAPPED:127, UNMAPPED:128, UNMAPPED:129, UNMAPPED:130, UNMAPPED:131, UNMAPPED:132, UNMAPPED:133, UNMAPPED:134, UNMAPPED:135, UNMAPPED:136, UNMAPPED:137, UNMAPPED:138, UNMAPPED:139, UNMAPPED:140, UNMAPPED:141, UNMAPPED:142, UNMAPPED:143, UNMAPPED:144, UNMAPPED:145, UNMAPPED:146, UNMAPPED:147, UNMAPPED:148, UNMAPPED:149, UNMAPPED:150, UNMAPPED:151, UNMAPPED:152, UNMAPPED:153, UNMAPPED:154, UNMAPPED:155, UNMAPPED:156, UNMAPPED:157, UNMAPPED:158, UNMAPPED:159, UNMAPPED:160, UNMAPPED:161, UNMAPPED:162, UNMAPPED:163, UNMAPPED:164, UNMAPPED:165, UNMAPPED:166, UNMAPPED:167, UNMAPPED:168, UNMAPPED:169, UNMAPPED:170, UNMAPPED:171, UNMAPPED:172, UNMAPPED:173, UNMAPPED:174, UNMAPPED:175, UNMAPPED:176, UNMAPPED:177, UNMAPPED:178, UNMAPPED:179, UNMAPPED:180, UNMAPPED:181, UNMAPPED:182, UNMAPPED:183, UNMAPPED:184, UNMAPPED:185, UNMAPPED:186, UNMAPPED:187, UNMAPPED:188, UNMAPPED:189, UNMAPPED:190, UNMAPPED:191, UNMAPPED:192, UNMAPPED:193, UNMAPPED:194, UNMAPPED:195, UNMAPPED:196, UNMAPPED:197, UNMAPPED:198, UNMAPPED:199, UNMAPPED:200, UNMAPPED:201, UNMAPPED:202, UNMAPPED:203, UNMAPPED:204, UNMAPPED:205, UNMAPPED:206, UNMAPPED:207, UNMAPPED:208, UNMAPPED:209, UNMAPPED:210, UNMAPPED:211, UNMAPPED:212, UNMAPPED:213, UNMAPPED:214, UNMAPPED:215, UNMAPPED:216, UNMAPPED:217, UNMAPPED:218, UNMAPPED:219, UNMAPPED:220, UNMAPPED:221, UNMAPPED:222, UNMAPPED:223, UNMAPPED:224, UNMAPPED:225, UNMAPPED:226, UNMAPPED:227, UNMAPPED:228, UNMAPPED:229, UNMAPPED:230, UNMAPPED:231, UNMAPPED:232, UNMAPPED:233, UNMAPPED:234, UNMAPPED:235, UNMAPPED:236, UNMAPPED:237, UNMAPPED:238, UNMAPPED:239, UNMAPPED:240, UNMAPPED:241, UNMAPPED:242, UNMAPPED:243, UNMAPPED:244, UNMAPPED:245, UNMAPPED:246, UNMAPPED:247, UNMAPPED:248, UNMAPPED:249, UNMAPPED:250), and large (more than 250) based on Cheung and Slavin's [W2470242385] findings that effect sizes can be influenced by sample size as well as research design. Effect sizes from selected studies identified in the updated search (RQ3) were recalculated into Cohen's d (see Supplementary Table S4), where appropriate, using online freeware available at www.psychometrica.de.",
+          "citations": [
+            "W1870939480",
+            "W2470242385",
+            "W2600289216"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Limitations",
+          "subsubsections": [],
+          "text": "While the database searches were conducted in a systematic way according to robust criteria characteristic of systematic reviews, a manual search was not undertaken, potentially biasing the selection process. However, new research published in the field is contained in the ACM Digital Library, including relevant conferences such as LAK and IEEE. Limitations to the search query may not have captured important research in the fields of design and instruction because the searches were conducted in the context of LA. The author and two coders identified suitable papers for the model development (Phase One) using a sharable form for consistency of applying inclusion/exclusion criteria. A lack of interrater reliability may pose a risk to the unbiased selection, particularly in Phase Two, where coders were not part of the data collection process.\n\nDue to the inconsistency of reported effects in the key papers, common coefficients (Cohen's d and r) were calculated, which may threaten the generalizability due to student factors as well as variation in contexts (e.g., [W2600289216]). However, Cohen's d is commonly used for comparison purposes in meta-analyses and can guide the reader toward the main messages contained in the data. Extracted effect sizes were categorized qualitatively into four perspectives of learning gains [W2890112699], which may add a level of subjectivity. Furthermore, the inconsistency and lack of an overarching definition for student learning outcome resulted in a broad categorization of effects on learning performance, course outcome, and online presence, which may be invalid as a general definition of outcome. The intention was to aid the interpretation of results based on pragmatic themes according to existing frameworks [W2890112699, UNMAPPED:23] and to ensure external validity. Another limitation is that qualitative studies that investigated the effects of analytics-informed LDs on students' perceived performance and learning were not included.",
+          "citations": [
+            "W2600289216",
+            "W2890112699"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "23"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "To ensure rigour and minimize researcher bias, the present study follows Kitchenham and Charters's [UNMAPPED:26] guidelines for performing systematic reviews in software engineering, which closely align with the interdisciplinary nature of LA research.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "26"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Overview of the Selected Studies",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.1.1. Phase One",
+              "parent_subsection_id": "s_4_1",
+              "text": "To answer RQ1 and RQ2 for the development of the new LALGD model, 25 key studies (18 journal articles, 7 conference proceedings) identified in Phase One of the current review underwent an in-depth analysis (see Supplementary Table S3). Initially, 172 studies were considered after applying the inclusion and exclusion criteria (Figure 1). A large number ($n = 71$ or 41%) of those were published at conferences. This is not surprising due to the relatively new field of LA and the dissemination of novel research findings via conferences. Limiting the search criteria to journal articles would have significantly reduced the number of eligible studies.\n\nThe selected studies were representative of the HE sector globally, being conducted at medium to large public universities across five continents involving mainly undergraduate students (68% of studies), ranging from small studies with only 24 students [W2178800800] to very large studies involving hundreds or thousands of students [W1776756068, W2115838577]. Fifteen studies applied convenience (purposive) sampling, and seven assigned students to a control group. Randomization of participating students was rare ($n=3$).\n\nThe majority of studies were conducted within fully online ($n=11$) and blended ($n=8$) courses. For this study, blended learning, if not specifically stated, was a scenario whereby students attended lectures on campus (face-to-face instruction) combined with online modes of learning, which is a commonly accepted definition. Twenty-three studies required students to complete assignments to earn grades, marks, final exams, a pass/fail, etc., as part of the course work, except for MOOCs [W2187065649] and a summer bridging course [W1978990273]. There was an apparent gap of representative studies from the arts and humanities \u2014 most students were enrolled in traditionally quantitative disciplines: computing and engineering ($n=14$), business and economics ($n=6$), and science ($n=2$). Li, Lam, and Lam [W2346940405] argued that STEM subjects are heavily reliant on technology-enhanced learning, which may well drive some of the LA research in need of computational models appropriated from other disciplines.",
+              "citations": [
+                "W2178800800",
+                "W1776756068",
+                "W2115838577",
+                "W2187065649",
+                "W1978990273",
+                "W2346940405"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.1.2. Phase Two",
+              "parent_subsection_id": "s_4_1",
+              "text": "A refined search identified 145 out of 1276 studies covering the period April 2016 to 2019. After assessing the studies according to the criteria in steps 2 and 3, 13 were selected for inclusion. The characteristics were similar to the academic papers described for Phase One, that is, conducted in Europe (4), the United States (2), Asia (2), and Australia (4), with sample sizes ranging from under 100 students (3 studies) to large and very large (9) cohorts; one was of medium size. In alignment with the proposed LALG model (Figure 3, below), the selected studies were mapped onto collaborative (3), independent (6), and personalized learning (4), as summarized in Supplementary Table S4.",
+              "citations": [
+                "W2166827970"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "4",
+                "9",
+                "3",
+                "6"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. The Use of LA in Collaborative, Independent, and Personalized Learning (RQ1)",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1. LA Data Sources",
+              "parent_subsection_id": "s_4_2",
+              "text": "Analysis of the key studies found no single definition of learning outcome, which was mainly derived from assessment (e.g., [W2039958052, W1994211543]) and grades or pass rates (e.g., [W2115838577]). Unsurprisingly, the most commonly used data were extracted from digital environments tracking students' total login frequency and time, time spent in discussion forums, and number of submissions. LMS click data are generally considered poor indicators of student engagement [W2153378020]. To gain a deeper understanding of learning processes for effective LDs, researchers increasingly combined log data with students' learning dispositions (e.g., [W1994211543]), indicators of time management (e.g., [W1978990273, W2256531795]), and cognition (e.g., [W1504818606]). To answer RQ1 about what kinds of LA can effectively guide LD to support teaching practice, the 25 studies were characterized according to collaboration, independent learners, and personalization as follows.\n\n**TABLE 1: Key Studies on Collaboration \u2014 Social Learning and Collective Efficacy**\n\n{{TABLE:tbl_01}}\n\n**Collaboration \u2014 Social Learning and Collective Efficacy**\nThe nine studies summarized under this theme focus on student-to-student and/or student-to-instructor interactions (Table 1). A key finding is that teacher-assigned roles and scaffolds in online collaborative spaces can improve student performance by optimizing cognitive as well as social presence. A good example of how to achieve this is by Ga\u0161evi\u0107, Adesope, Joksimovi\u0107, and Kovanovi\u0107 [W2047508072], whereby role assignment in asynchronous discussions supported collaborative learning and produced high cognitive presence, indicating a deeper engagement with the subject matter. Moreover, teacher presence via moderation of online discussions supported the development of students' social presence [W1504818606]. Most studies also reported on moderating variables outside a teacher's control. For example, Giesbers et al. [W1978990273] found high drop-out rates do not always associate with lack of motivation and grouping factors may affect learning performance [W2292165329]. To sum up, social learning opportunities often produced reliable academic performance indicators with high predictive accuracy (77%) based on students' participation, social network status (prestige), and message quality [W1966165526, UNMAPPED:50].\n\n**Independent Learners \u2014 Self-Regulation and Real-Life Learning**\nA common theme in Table 2 is that effective LDs facilitate independent learning by encouraging students to reflect on their progress and take necessary steps to adjust their study behaviour in order to do well. Researchers showed increased awareness of capturing more nuanced LA that reflected students' cognitive and metacognitive skills. These included learner-controllable factors such as time management (e.g., [W2256531795, UNMAPPED:53]), self-efficacy [W2187065649], and academic procrastination [W2176002632], which are easily obtainable LA upon which teachers can act. Also, giving students choices of resources can have a positive impact on academic performance [W2073147468]. Consequently, successful LDs included those that fostered active participation within social constructivist, assessment-driven, and balanced-variety designs [UNMAPPED:11]. Another important finding was that students' learning trajectories (cognitive skills) during authentic tasks were far more reliable predictors of learning outcome than LA from LMS activities (e.g., [W2123536472, W2039958052]). Interestingly, students spending more time communicating with teachers negatively influenced outcomes [W2322804385].\n\n**TABLE 2: Key Studies on Independent Learners \u2014 Self-Regulation and Real-Life Learning**\n\n{{TABLE:tbl_02}}\n\n**Personalization \u2014 Tailored Learning and Predictive Analytics**\nWhile disciplinary differences, technology use, and LD have consequences for the generalizability of predictive models [W2238759989], the majority of studies shown in Table 3 advocated the use of predictive analytics to enable more targeted learning interventions. Specifically, authors utilized personalized email messages [W1776756068, W2146079223, W2115838577] or visual graphics [W1593190983, W1897126621] based on individuals' engagement and/or performance data. The main concerns for this type of learning intervention were about student retention [W2238759989, W2115838577] and timely feedback to those most at risk of failing (e.g., [W1776756068]). The impact on final grades varied greatly among studies, ranging from no overall effect [W1593190983] to only affecting subgroups of students [W2146079223]. Moreover, analytics-based nudges that provided detailed information about progress and support provisions were more effective than generic tips [W1897126621]. The type of outreach (email or phone call) and students' stage of study also played a role. Importantly, for personalized interventions to improve outcomes, LA related to students' cognitive processes (e.g., formative assessment data combined with engagement data) were far more effective than LMS activity alone [W1994211543].\n\n**TABLE 3: Key Studies on Personalization \u2014 Tailored Learning and Predictive Analytics**\n\n{{TABLE:tbl_03}}",
+              "citations": [
+                "W2039958052",
+                "W1994211543",
+                "W2115838577",
+                "W2153378020",
+                "W1978990273",
+                "W2256531795",
+                "W1504818606",
+                "W2047508072",
+                "W1504818606",
+                "W2292165329",
+                "W1966165526",
+                "W2187065649",
+                "W2176002632",
+                "W2073147468",
+                "W2123536472",
+                "W2322804385",
+                "W2238759989",
+                "W1776756068",
+                "W2146079223",
+                "W1593190983",
+                "W1897126621"
+              ],
+              "tables_in_text": [
+                "tbl_01",
+                "tbl_02",
+                "tbl_03"
+              ],
+              "citations_unmapped": [
+                "50",
+                "53",
+                "11"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Effectiveness of LA for an Integrated Data-to-Design-to-Outcomes Model (RQ2)",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.3.1. Overview of Reported Effects",
+              "parent_subsection_id": "s_4_3",
+              "text": "The analysis of effect sizes reported in the 25 key papers from Phase One of this study revealed 77 main effects (see Supplementary Table S3 for coding, recalculated Cohen's d, and Pearson r). These are summarized by learning gain, instructional method, sample size, and level of effect in Figure 2. A key finding is that activities that fostered social collaboration consistently yielded medium to large effects on performance and course outcome, through the development of students' cognitive and metacognitive skills (Table 4). Learning interventions appealing to the affective domain of learning, such as analytics-informed infographics and email nudges, had no or little overall effect on course outcome and performance (Table 4). The influences of instructional methods on learning gains through the lens of LA can be summarized as follows.\n\n**FIGURE 2: Forest plots of effects sizes (n = 77) extracted from studies included in Phase One of this review. Cut-off values for Cohen's d are based on Schneider and Preckel [W2600289216]; sample sizes are according to Cheung and Slavin [W2470242385]**\n*(Note: Data underlying Figure 2 presented in Table below)*\n\n**TABLE: Data Underlying Figure 2 (Effect Sizes by Category)**\n\n{{TABLE:tbl_04}}\n\n**Cognitive Gains**\nAs mentioned earlier, LMS engagement remains a weak predictor of students' final grades, while learning tasks that foster deep learning and are meaningful within students' contexts are strongly associated with improved achievement (3% versus 21.8% variance explained, respectively; [W2039958052]). Some of the larger effects ($d = 1.6$ and $d = 1.05$) stemmed from students' independent learning and meaning making, which can be gleaned from actual learning trajectories in virtual spaces [W2123536472, W2039958052]. Self-steered formative assessment, such as students' time spent in e-tutorials and mastery of specific tasks, also had a large impact on learning performance ($d = 1.13$; [W1994211543]).\n\n**Metacognitive Gains**\nThis category comprised the largest proportion of medium to large effect sizes (77%). The greatest overall impact of LD activities was related to online presence (Figure 2; also Table 4), pointing to the importance of embedded supports that enable students to monitor and adjust their learning behaviour through time management, self-reflection, and interactions with peers and teachers (e.g., $d = 0.88$; [W2509596490]). Academic procrastination behaviour as an indicator of failed self-regulation, such as online absence and late submissions, had large negative effects on students' final scores ($d = -1.41$ and $d = 1.16$, respectively; see You [W2176002632] in Supplementary Table S3).\n\n**Socio-Communicative Gains**\nStudents' increased social and cognitive presence in online learning communities to a large extent associates with improved learning performance and course outcome. As can be seen from Figure 2, cognitive indicators of students' level of understanding captured via message quality of online discussion posts had a large effect on performance [W2178800800] and pass rates [W1966165526]. Learning outcomes were highly influenced by peers' comments, students' social ability, and collective efficacy, resulting in medium ($d=0.7$) to large ($d=1.1$) effects on learning performance (e.g., [W2150275839, W2178800800]). Another important aspect is a student's social network status, such as centrality and prestige, which can have large effects on supporting students' online presence ($d=1.29$; [W1966165526]), impacting performance downstream.\n\n**Affective Gains**\nThere is no doubt that learning emotions impact student outcomes. However, the overall impact of affect found in this meta-analysis was negligible. Adamopoulos [W2187065649] found that negative sentiments in discussion forums impacted completion with a small effect ($d=0.1$), while posts expressing appreciation or complimenting others were negative predictors of outcome ($d=-0.08$; [W1504818606]). Personalized learning interventions appear to be most effective for those most in need, for example, students from lower socioeconomic backgrounds, rather than lifting overall achievement; however, the effects were negligible [W1776756068] to small [W2146079223]. Milliron et al. [W2115838577] found that email messages combined with supports from academic advisors increased course completion threefold, whereas nudges alone were only effective for those students identified as at risk, with a very small effect size ($d=0.013$). Researchers remarked that personalized interventions using affective and metacognitive cues (encouragement, connectedness, and revealing individual progress) in an attempt to modify students' learning behaviour were often not enough to trigger substantial action to improve overall outcome.\n\n**TABLE 4: Summary Statistic of Effect Sizes on Learning Outcomes by Learning Gain**\n\n{{TABLE:tbl_05}}\n\n*Note: Means in bold are medium ($\\geq$ 0.35 or < 0.65) or large ($\\geq$ 0.66) effects based on Schneider and Preckel's [W2600289216] classification. NR, not reported in the primary studies. A total of 77 main effects were extracted from 25 key papers.*\n\nFinally, to guide design decisions based on LA that were shown to be effective indicators of student learning gains, the author proposes the consolidated LALGD model, as shown in Figure 3. This model incorporates existing concepts of future education strategies in response to the worldwide challenges of meeting employment markets, ensuring equitable access to education, and increasing online and blended learning as proposed by Redecker et al. [UNMAPPED:23]. Redecker et al.'s [UNMAPPED:23] three main concepts (ways of learning) were mapped onto effective LA data derived from the meta-analysis of selected studies, establishing the link between pedagogic intentions and meaningful data capture on one hand, and desired outcomes (learning gains) informed by Vermunt et al. [W2890112699] on the other. While the complex relationships between behavioural and cognitive learning processes and instructional methods cannot be fully integrated into one model, the aim of the proposed LALGD model is to emphasize LA for learning gain, that is, focusing on student outcomes. It is intended to enable dialogue between teachers and learning designers to situate expectations around outcomes when designing for learning with data in mind. The following section explores the utility of the LALGD model based on the findings from Phase Two of the current review and how it could be applied to broader educational goals.\n\n**FIGURE 3: The LA Learning Gain Design (LALGD) Model**\n*(Segment 1/2: Learning Gain Design. Ways of Learning: Collaboration (Social learning, Collective efficacy), Independent learners (Self-regulation, Real-life learning), Personalization (Tailored learning, Predictive analytics). Learning Analytics: Social network indicators, Posts timing/reading/quality, Group formation factors, Group sentiments, Learning patterns/trajectories, Formative assessment, Time management indicators, Motivation indicators, Engagement indicators, Demographics, Feedback triggers, Time on task, Learning dispositions. Learning Gains: Socio-communicative (Fostering relatedness, Peer support, Role assignment, Setting expectations), Cognitive/metacognitive (Authentic learning, Checking understanding, Scaffolding timeliness, Student reflections), Metacognitive/affective (Teacher presence, Student belonging, Revealing progress, Analytics-based feedback).)*\n*Note: The bi-directional links between ways of learning (adapted from Redecker et al. [UNMAPPED:23]) are based on the meta-analysis of effect sizes to support learning design approaches toward socio-communicative, cognitive, metacognitive, and affective learning gains (adapted from Vermunt et al. [W2890112699]) on the left and meaningful LA data capture on the right. LA indicators need to be based on pedagogic intent, and overlaps may occur between categories; for example, learning patterns might be used as a feedback trigger to personalize student learning.*",
+              "citations": [
+                "W2600289216",
+                "W2470242385",
+                "W2039958052",
+                "W2123536472",
+                "W1994211543",
+                "W2509596490",
+                "W2176002632",
+                "W2178800800",
+                "W1966165526",
+                "W2150275839",
+                "W2187065649",
+                "W1504818606",
+                "W1776756068",
+                "W2146079223",
+                "W2115838577",
+                "W2890112699"
+              ],
+              "tables_in_text": [
+                "tbl_04",
+                "tbl_05"
+              ],
+              "citations_unmapped": [
+                "23"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Evaluating the Model in Light of the Evidence from Phase Two (RQ3)",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.4.1. The LALGD Model as Data-Informed Student Agency",
+              "parent_subsection_id": "s_4_4",
+              "text": "One way to relate the LALGD model to practice is by way of supporting student agency through LA-based personalized and tailored feedback to students (e.g., [W2768077796, UNMAPPED:63]). Examples of how to support student agency include timed adaptive release of activities to support time on task [W2122423307]; dashboards that reveal students' learning behaviour [W2751483387]; and methods that model positive self-regulation, countering negative learning emotions [W2566084804]. Essentially, this type of intervention puts the data back into students' hands and enables reflection on their own progress. While the targeted interventions were perceived favourably by students, and at times produced large effects (e.g., [W2954475117]), the overall impact on academic outcome varied greatly (Cohen's $d = 0.14$ to $1.63$, mean $= 0.69$, $SD = 0.49$, $n = 12$ effects; see Supplementary Table S4). Learners valued tailored feedback over undifferentiated, non-individualized messages [W2954475117, W2297178645] and comparisons between their previous and current performance [W2891578888]. In practice, LDs need to predetermine triggers or key indicators of learning/progress to enable LA capture that can inform appropriate actions. Automated systems such as OnTask [W2768077796], whereby rules of engagement and/or disengagement can be set up in advance, can be helpful. Barriers to adoption by teachers in the classroom may include a need for training in collection and use of data, capability of systems to enable integration of LA, and increased staff costs to allow for the scaling of personalization in large courses (author's own observations).",
+              "citations": [
+                "W2768077796",
+                "W2122423307",
+                "W2751483387",
+                "W2566084804",
+                "W2954475117",
+                "W2297178645",
+                "W2891578888"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "63"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.4.2. The LALGD Model as Outcomes-Focused LA",
+              "parent_subsection_id": "s_4_4",
+              "text": "As previously stated, LD activities that foster cognition and metacognition had a large impact on learning gains and students' online presence (Supplementary Table S4). Independent learner activities are crucial design elements for improving outcomes. However, there was large variation in the reported effects sizes on gains using independent learning ($d=0.09$ to $3.2$, mean $= 0.97$, $SD = 0.80$, $n = 18$) and socio-collaborative approaches ($d=0.24$ to $2.34$, mean $= 0.67$, $SD = 0.60$, $n = 10$), complicating LD decisions about improving student retention and perseverance. For example, personalized call campaigns targeting at-risk students had little impact ($d=0.142$) on re-enrollment despite predictive models promising larger effects (31%; see [UNMAPPED:63]). This was likely due to other student-specific features, for example, demographics, academic load, and whether a student responded to an intervention attempt.\n\nThe findings from Phase Two revealed the importance of capturing rich data contexts, such as motivational dispositions to enable interventions that are engaging and empowering for students [W2743726230]. This confirmed the already mentioned shift to a more holistic approach to improving student outcomes and experience (e.g., [W2768077796, W2891578888]), as well as their self-efficacy (e.g., [UNMAPPED:74]), self-regulation (e.g., [W2888853498, W2566084804]), and emotions (e.g., [W2743726230]). Utilizing rich data contexts can help with students' self-reflection and evaluation of their learning for improved outcomes. A caveat is that these often rely on self-reports, which either are difficult to obtain or may suffer from selection bias (e.g., [UNMAPPED:74]). The LALGD model can help us to situate our expectations of student outcomes and pair these with instructional methods (ways of learning) linked to relevant LA. However, effective interventions showing high impact in one context may differ in others, which needs to be considered when applying the model to practice.",
+              "citations": [
+                "W2743726230",
+                "W2768077796",
+                "W2891578888",
+                "W2888853498",
+                "W2566084804"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "63",
+                "74"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.4.3. The LALGD Model as Data-Informed Curriculum Design",
+              "parent_subsection_id": "s_4_4",
+              "text": "The LALGD model is aimed at encouraging dialogue among key stakeholders involved in the planning and development of curriculum, to help design learning for student success. Much can be gleaned from LA on the effectiveness of instructional methods on specific outcomes. Nguyen, Rienties, Toetenel, Ferguson, and Whitelock [W2595316996] found that the type of LD activities strongly influenced academic retention. Their study of over 70 modules involving 72 thousand students concluded that assimilative activities and fewer student-centred approaches received significantly higher evaluation scores but had no correlation to retention. Socio-collaborative learning was seen as an enabler of effective online learning, shifting the focus away from cognitive learning. In addition, students' goal-setting ability was an important regulator of metacognitive skills and highly correlated with self-regulation, time management, and achievement [W2888853498]. While the LALGD model can be helpful in mapping LA to instructional approaches and outcomes, levels and assessment criteria are not included, requiring contextualization and alignment to other taxonomies of learning (e.g., [W1967747674]). In addition, design considerations of physical and online environments greatly influence the way students learn; this aspect is not represented in the model. For example, Kim et al. [W2888853498] suggested that students benefit from virtual spaces that encourage help-seeking behaviour and metacognitive feedback in asynchronous online learning spaces, while certain seating configurations in lab-based teaching can improve student performance [W2297178645].",
+              "citations": [
+                "W2595316996",
+                "W2888853498",
+                "W1967747674",
+                "W2297178645"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Through the systematic analysis of the 13 selected studies from Phase Two of this research, it became increasingly obvious that the newly developed LALGD model shown in Figure 3 could be further developed and applied to broader issues in today's HE. To fully understand its value for practice, the empirical evidence is viewed through the lens of enablers and barriers to support LA-informed student agency, outcomes-focused LA for retention, and curriculum development as follows.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "4. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Pitfalls of Basing Learning Outcomes on Effect Size",
+          "subsubsections": [],
+          "text": "Effective teaching relies on both design and what the teacher does. Most studies on the impact of instructional methods on learning outcomes report at least one moderator effect [W2600289216, W2331604167], warranting caution against the generalizability of effects (e.g., [W2238759989, UNMAPPED:15]). Cheung and Slavin [W2470242385] found that research design can impact effect sizes, likely through greater variability or increased contextual factors, making it difficult to reliably replicate patterns of student engagement in contextually different courses (e.g., [UNMAPPED:78]). The predictive power of identifying students at risk can also be unreliable. Jayaprakash, Moody, Laur\u00eda, Regan, and Baron [W1486785378] demonstrated a predictive model that was successful in one setting but variable in four others, confirming the claim by Milliron et al. [W2115838577] that \"there is no global predictive model that works across institutions with any level of accuracy...\" (p. 78). Some instructional variables identified across a program or an institution may not be relevant at course level at all [W2238759989]. In summary, interpreting effect sizes for the evaluation of educational programs and individual learning interventions requires caution. The findings of the present study clearly point to differences in the magnitude of learning improvements under the influence of various LDs. Hattie [W2331604167] suggests focusing on the higher-impact learning interventions compared to others, because that is where the main message becomes obvious. While this is a good starting point, the magnitude of learning improvements might well be a combination of several smaller effects, for example, integrating learning dispositions (which had a small effect on outcomes) with formative assessment [W2743726230].",
+          "citations": [
+            "W2600289216",
+            "W2331604167",
+            "W2238759989",
+            "W2470242385",
+            "W1486785378",
+            "W2115838577",
+            "W2743726230"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "15",
+            "78"
+          ]
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Recommendations for Effective LA-Informed Learning Gain Design",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_5_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.2.1. Collaboration \u2014 Social Learning and Collective Efficacy",
+              "parent_subsection_id": "s_5_2",
+              "text": "Instructional methods prompting peer-to-peer and peer-to-teacher interaction through discussions, collaborative problem solving, and peer assessment had the largest effect on learning gains, confirming previous research (e.g., [W2600289216, W2331604167]). Importantly, the role of the teacher embodied in social interaction is critical for the development of students' self-regulation, which is \"not asocial in nature and origin [and] can be learned from instruction and modelling by teachers and peers\" [80, p. 69]. This was noted in lab-based seating arrangements, where students sitting in groups and closer to the teacher generally did better [W2297178645]. Social presence appears to have a large positive impact on learning performance, for example, through social networks [W2178800800] and guided asynchronous discussion forums [W1504818606]. Moreover, the time learners spend on communication activities was found to be a primary predictor for academic retention across various LDs [W2277550377].",
+              "citations": [
+                "W2600289216",
+                "W2331604167",
+                "W2297178645",
+                "W2178800800",
+                "W1504818606",
+                "W2277550377"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_5_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.2.2. Independent Learners \u2014 Self-Regulation and Real-Life Learning",
+              "parent_subsection_id": "s_5_2",
+              "text": "Embedding real-life, authentic learning tasks, and taking deliberate steps toward developing students' time management, goal setting, and self-efficacy [W2176002632, W2888853498], can effectively promote cognitive and metacognitive skills. In contrast, LMS click data were generally poor indicators of learning outcomes, with negligible or even negative effects (e.g., [W2238759989]) compared to formative assessment tasks [W1994211543, W2743726230]. Fostering students' critical thinking and reasoning skills relies on teacher expertise in close proximity to students. For example, project-based tasks such as coding simulations can effectively develop cognitive as well as practical skills better than regular lectures [W2123536472, W2039958052]. In addition, revealing learning trajectories to students can provide real-time feedback for checking their own understanding. Emotions play a critical role in motivation, self-regulation, and achievement [W3140128848]. Yet, affective learning methods were underrepresented in this review, possibly due to being notoriously difficult to embed, or measure (e.g., [W2187065649, W2322804385, W2743726230, W2566084804]).",
+              "citations": [
+                "W2176002632",
+                "W2888853498",
+                "W2238759989",
+                "W1994211543",
+                "W2743726230",
+                "W2123536472",
+                "W2039958052",
+                "W3140128848",
+                "W2187065649",
+                "W2322804385",
+                "W2566084804"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_5_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.2.3. Personalization \u2014 Tailored Learning and Predictive Analytics",
+              "parent_subsection_id": "s_5_2",
+              "text": "Today's increasing class sizes and student diversity make it harder for teachers to provide meaningful feedback at scale. LA has the potential of scaling student feedback based on indicators of student engagement (e.g., [W1776756068, W1593190983, W2768077796]), time management [W1897126621], persistence (e.g., [W2115838577, UNMAPPED:63]), and self-efficacy (e.g., [W2954475117]) in combination with assessment marks. The findings of this review suggest that learning personalization does not have a large impact on overall course completion or academic performance. Maybe the emphasis needs to shift to a more holistic perspective of learning gains across behavioural and academic dimensions, including student well-being and emotional support. Despite recent advances in personalizing learning using embedded LA tools (e.g., [W2768077796, W2977497729]), we need to gain a better understanding of what nudges mean to the learner. Students, especially first years, generally appreciated nudges [W2566084804, W2768077796], surprised that someone cared about their individual progress and well-being. Nudging also encouraged teachers' reflection on their practice, increasing approachability and awareness of students' needs [UNMAPPED:88]. Meanwhile, there is no clear definition of how nudges align with learning. A nudge may trigger affective learning based on Vermunt's [W2277550377] definition, \"...motivating oneself, attributing learning results to causal factors, attaching subjective appraisals to learning tasks and getting blocking emotions under control\" (p. 26).",
+              "citations": [
+                "W1776756068",
+                "W1593190983",
+                "W2768077796",
+                "W1897126621",
+                "W2115838577",
+                "W2954475117",
+                "W2977497729",
+                "W2566084804",
+                "W2277550377"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "63",
+                "88"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This study has exemplified the complex relationships that exist between LA, LD, and learning outcomes/gains. LA associated with students' academic and behavioural engagement (e.g., [W2166827970, W2769669737, W2743726230]) showed considerable overlap across cognitive, metacognitive, and affective learning domains. In the absence of an overarching definition of learning outcomes among the selected studies, generalization about the most effective LD approach is not possible and corroborates others' findings (e.g., [W2238759989, W2890544186, W2769669737]). Evans et al. [W2892120767] poignantly state that \"learning gain is a messy business\" (p. 37) and advise on taking a pragmatic approach to what is feasible and sustainable in specific contexts, satisfying the aim of the newly developed LALGD model (Figure 3). Affective and emotional learning indicators were rarely measured, possibly due to limited access to such data. Progress in multimodal LA research to understand digital engagement may be possible in the future via machine-readable behavioural and physiological cues [W2590255117].\n\nThe present systematic analysis also revealed that LA research increasingly incorporated qualitative and contextual data, beyond the opportunistic capture of student LMS logs, to gain a more holistic insight into learning. While several instruments and tools exist for the measurement and collection of affective-emotional and metacognitive variables (e.g., [W3140128848]), it is unlikely that these have been adopted more broadly. Therefore, it is not surprising that common measures of cognitive (e.g., scores, grades, formative feedback) and behavioural (e.g., LMS traces on submission, participation) engagement formed the bulk of LA data capture in the selected studies.\n\nAnother finding indicates that LA were primarily used to (1) check on LD; (2) gain actionable insight into students' interactions with content, resources, and supports; and (3) predict outcomes. Not only does LA provide information about LD characteristics and what the student does, it can also prompt redesign based on what the evidence says. While this notion aligns with existing LA-LD models (e.g., [W2341162996, UNMAPPED:6]), the newly conceptualized LALG model (Figure 3) is distinctly different. Its pragmatic approach gives practitioners a high-level overview of pedagogic intent (ways of learning), linked to LA capture in one direction, and designing for learning gain in the other based on empirical evidence.\n\nIn the context of predictive analytics for personalized, tailored interventions, the current study identified a gap in the LA research. Email nudges or infographics directed at students about their engagement had variable to little impact on academic performance (Figure 2). It is intriguing that such personalized feedback did not seem to be enough to move students in the direction of improving overall, as mentioned by several authors (e.g., [UNMAPPED:50]). Also, there was no clear definition of which type of nudge or prompt would be best suited to which intended outcome. In particular, knowledge about how students appraise such information to evoke sustained change in learning behaviours would benefit practice of targeted rather than generic interventions. This is something that would be worthwhile exploring in future research.",
+      "citations": [
+        "W2166827970",
+        "W2769669737",
+        "W2743726230",
+        "W2238759989",
+        "W2890544186",
+        "W2892120767",
+        "W2590255117",
+        "W3140128848",
+        "W2341162996"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "6",
+        "50",
+        "1",
+        "3"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "5. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "LA is positioned at the intersection of theory, LD, and data science [W2592799768]. Consequently, data about learning is intimately connected with the context in which it occurs and strongly influenced by what the teacher does. This notion is supported in most contemporary educational models, including situated learning [UNMAPPED:86], constructive alignment [W1967747674], and constructionist learning environments [W2137083504]. In the context of realizing strategic educational goals, LA promises to play an important role in practice and policy. There is already much evidence for this trend worldwide through nationally funded projects (e.g., [W2977497729, UNMAPPED:83]). Typically, LA in practice is approached either top-down or bottom-up [UNMAPPED:84]. A top-down approach often implements black-box early detection systems (EDSs) specifically to address student retention and progression across the institution. A bottom-up approach focuses on teacher-led inquiry to optimize teaching and learning at course or program level. In the present review, only one study [W2115838577] utilized a proprietary predictive analytics system (Civitas's Illume). Essentially, all others were teacher-led (bottom-up), indicating the crucial role of the practitioner in the evaluation of LD and pedagogy through data-informed decisions.\n\nWith respect to predictive analytics models, disciplinary differences, technology use, and design have consequences for generalizability and need to be carefully evaluated against the usefulness of the models in teaching practice [W2238759989, W2592799768, W2901503724]. More research is needed to be able to navigate the complexity of learning processes and translate the knowledge into local recommendations and/or institutional policy. Process models that make the connections between LD and LA more explicit (e.g., [W2341162996, W2193902461]) are therefore much needed and, importantly, require evaluation for utility with practitioners.\n\nOverall, the findings presented in this review support Evans et al.'s [W2892120767] premise that research-informed learning gain approaches, underpinned by pedagogy and robust methodological perspectives, have the potential to offer actionable insight into the learning processes of all students. The ethical and holistic use of LA as an integral part of LD and delivery (ways of learning) may be a step forward in evoking positive changes to HE by attending to students' and practitioners' agency. The current research contributes to the ongoing development of LA-LD frameworks by providing a practical solution and raising awareness of the effect of data-informed learning and teaching on student success.",
+      "citations": [
+        "W2592799768",
+        "W1967747674",
+        "W2137083504",
+        "W2977497729",
+        "W2115838577",
+        "W2238759989",
+        "W2901503724",
+        "W2341162996",
+        "W2193902461",
+        "W2892120767"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "86",
+        "83",
+        "84"
+      ]
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Declaration of Conflicting Interest",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The author declared no potential conflicts of interest with respect to the research, authorship, and/or publication of this article.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Funding",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The author declared no financial support for the research, authorship, and/or publication of this article.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "I would like to thank my colleagues, Dr. Jenny McDonald and Dr. Steve Leichtweis (both University of Auckland), for their assistance in synthesizing the data in the early stages of the review process, and especially Jenny for her ongoing constructive feedback that contributed to shaping this paper. Further, I would like to acknowledge Jessica McLay for recalculating the effect sizes and Daniel Barnett for preparing the Forest Plot (both University of Auckland Statistical Consulting Centre), and also the anonymous reviewers for their valuable comments, which greatly improved the final version of this article.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "Appendix A: Supplementary Material",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**TABLE S1: Quality check list modelled on Kitchenham and Charters (2007, pp. 25\u201327)**\n\n{{TABLE:tbl_06}}\n\n**TABLE S2: Data extraction form based on Kitchenham and Charters (2007, pp. 30\u201331)**\n\n{{TABLE:tbl_07}}\n\n**TABLE S3: Characteristics and Extracted Effects with Recalculated Cohen's d and Pearson r for 25 Selected Studies Identified in Phase One of Review**\n\n{{TABLE:tbl_08}}\n\n*ON = online delivery; BL = blended learning; F2F = in person delivery*\n*S = small sample (n < 100); M = medium (n = 100\u2013250); L = large (n > 250); Conv = convenience (purposive) sampling; Rand = randomized; Exp = experimental design with a clear control group; adapted from Cheung and Slavin [W2470242385].*\n*Range of p-values as reported by the authors of each respective study: $*p<0.05$. $**p<0.01$. $***p<0.001$*\n*$^{a}$ p-value not reported by authors.*\n*$^{b}$ Cohen's d for any differences in percent mark between courses (calculated based on the reported p-value). Codes: C: cognitive; MC: metacognitive; SC: sociocommunicative; A: affective; NS: not shown in Forest plot*\n*LP: learning performance such as GPA, grade, final exam, scores, final grade, course achievement*\n*CO: course outcome such as pass/fail, persistence (re-enrollment), completion, retention*\n*OP: online presence such as cognitive presence, online behaviour changes, group leadership effectiveness, cognitive processes where no measures were given for learning performance and course outcome*\n\n**TABLE S4: Characteristics and Extracted Effects with Recalculated Cohen's d and Pearson r for 13 Selected Studies Identified in Phase Two of review**\n\n{{TABLE:tbl_09}}\n\n*ON = online delivery; BL = blended learning; F2F = in person delivery*\n*S = small sample (n < 100); M = medium (n = 100\u2013250); L = large (n > 250); Conv = convenience (purposive) sampling; Rand = randomized; Exp = experimental design with a clear control group; adapted from Cheung and Slavin [W2470242385].*\n*Range of p-values as reported by the authors of each respective study: $*p<0.05$. $**p<0.01$. $***p<0.001$*\n\n**Codes:**\n*LP: learning performance such as GPA, grade, final exam, scores, final grade, course achievement*\n*CO: course outcome such as pass/fail, persistence (re-enrollment), completion, retention*\n*OP: online presence such as cognitive presence, online behaviour changes, group leadership effectiveness, cognitive processes where no measures were given for learning performance and course outcome*\n\n**FIGURE S1: Original map of the future of learning proposed by Redecker et al., 2011**\n*(Labour market trends & demands, New skills, Education & Training, New ways of learning, Learner-centred, Personalisation, Social learning, Collaboration, Lifewide learning, Meta-cognitive skills, ICT Trends, Augmented Reality, Data mining, Learning analytics, 3D virtual worlds, Social networks, Games, Mobiles, Technology, Labour Market, Tailormade & targeted, Active & constructive, Motivating & engaging, Peer-learning, Sharing & collaborating, In communities, Anywhere, anytime, Blending virtual & real, Combining sources/providers.)*",
+      "citations": [
+        "W2470242385"
+      ],
+      "tables_in_text": [
+        "tbl_06",
+        "tbl_07",
+        "tbl_08",
+        "tbl_09"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_10",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_10",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_10",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_10",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3111465890_tables.md"
+}

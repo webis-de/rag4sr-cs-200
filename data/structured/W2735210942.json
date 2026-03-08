@@ -1,0 +1,538 @@
+{
+  "id": "W2735210942",
+  "metadata": {
+    "title": "A Systematic Review of Augmented Reality Applications in Maintenance",
+    "n_sections": 5,
+    "n_subsections": 7,
+    "n_subsubsections": 17,
+    "n_tables": 11
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Milgram and Kishino [UNMAPPED:1] define Augmented Reality as a way to \"augment\" the real-world with virtual objects. More specifically Azuma [W2149003305] defined the AR Systems to have the following properties: to combine real and virtual objects in a real environment; run interactively and in real time; to geometrically align virtual objects and real ones in the real world. AR technology has been applied to a wide range of fields: tourism, entertainments, marketing, surgery, logistics, manufacturing, maintenance and others [W2094147479, W1632660834]. Its application in the maintenance field has shown several advantages at an academic level.\n\nBy maintenance is meant all the actions which aim to restore any functionality of a product within its lifecycle. When the product is an industrial production equipment, we usually refer to its maintenance as industrial maintenance. The actions that can be performed to restore products functionalities can be technical, administrative and managerial [W2079275643].\n\nAR studies in maintenance show promising results in enhancing human performance in carrying out technical maintenance tasks, improving the administration of maintenance operations and supporting maintenance managerial decision making.\n\nEven though what mentioned above and AR technology being around for more than 50 years, there are still limited examples of its concrete implementation in industry.\n\nFor this reason, the aim of this paper is to present the state of the art in AR in terms of technology used, applications, and limitations focusing on the maintenance context. In order to do so, the authors carried out a Systematic Literature Review (SLR). SLR refers to a rigorous literature review which ensures the reproducibility and scalability of the study as well as the objectivity of the results [W2148080701]. This approach is particularly relevant for researches currently experiencing a fast development.\n\nThis paper is organized in four sections. Section 1 introduces the project. Section 2 reports on the methodology utilised for this SLR. Section 3 reports on the main results of the SLR providing an overview of the state of the art of AR in maintenance and the main limitations of today's AR technology. Finally section 4 reports conclusions and future works.",
+      "citations": [
+        "W2149003305",
+        "W2094147479",
+        "W1632660834",
+        "W2079275643",
+        "W2148080701"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Step 1 - Planning",
+          "subsubsections": [],
+          "text": "The planning phase is the very initial step to carry out a SLR. As described in Figure 1, it includes: defining the timescale of the project, identifying the databases that will be utilised and selecting the software for managing the references.\n\nThe database utilised for the SLR have been selected based on [W2106956101] and integrated with the resources available for the project:\n- IEEE Xplore (www.ieeeexplore.com)\n- ScienceDirect (www.sciencedirect.com)\n- Scopus (www.scopus.com)\n- Google Scholar (www.scholar.google.co.uk)\n\nMoreover, due to the rapid evolving nature of the topic, a manual search of Grey Documentation has been performed. It includes documentation available on Internet and published by non-academic institutions such as industries, government and communities [W336930913].\n\nThe reference manager software utilised is Mendeley (www.mendeley.com) due to its strong community and support, its integrated PDF viewer and the automatic citation add-in for Microsoft Word.",
+          "citations": [
+            "W2106956101",
+            "W336930913"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Step 2 - Defining the Scope",
+          "subsubsections": [],
+          "text": "Defining the scope actualizes in properly formulate answerable research questions. These have been defined as a result of an iterative process among (i) initial brainstorming, (ii) literature search and the (iii) PICOC (Population, Intervention, Comparison, Outcomes and Context) framework application [W336930913]. As a result of i and ii, different review and key papers on AR have been identified [W2171557287, W2007171144, W2043318959, W2096072376, W2122122381, W2460830467]. Then the PICOC framework has been utilised to define the key concepts of the research [W336930913]. The elements of PICOC are: Population, Intervention, Comparison, Outcomes and Context. For this study, the Population consists of the industrial maintenance task carried out by human operators. The Intervention considered is the utilization of the Augmented Reality technology. The Comparison can be done with Virtual Reality technology for both training and operating environment, traditional training methods and remote maintenance support. The Outcomes of the application of these different methods, can be measured in terms of KPI related with the specific maintenance task. Common key performance indicators are time to complete the operation and the number of errors. The impact would affect the human performance in carrying out a maintenance task hence it is mainly economic and social dimensions. Finally, the Context includes industrial environment and \"consumer environment\" for both training and operating activities.\n\nFinally, the research questions have been defined as:\n- Q1: What is the state of the art of AR application in industrial maintenance for supporting human operators?\n- Q2: What are the potential future developments and implementation of AR in Maintenance?",
+          "citations": [
+            "W336930913"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Step 3 - Searching",
+          "subsubsections": [],
+          "text": "The Searching step consists of browsing separately the databases identified at step 1 and listed in Sec. 2.1 utilising the string: (\"Augmented Reality\") AND (\"Maintenance\"). It has been selected based on the research questions and key concepts stated in Sec. 2.2. Boolean operator \"AND\" is utilised to provide a more detailed first screening. The results of this searching step updated at the 13th of February 2017 is the collection of 723 documents.\n\nSince this phase has been carried out for each database separately, the final number of 723 documents includes duplicates. More details are shown in Table 1.\n\n**TABLE 1.** Outcome of the searching phase. The first column reports the databases utilised. These have been identified in Step 1. The second column reports the \"search fields\" where the search string has been applied. The third column reports the number of documents returned by the databases.\n\n{{TABLE:tbl_01}}\n\nIt is worth mentioning that this step does not involve reading the titles or the abstracts of the documents found.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Step 4 - Assessing",
+          "subsubsections": [],
+          "text": "The Assessing step aims to narrow down the hundreds of documents found in the searching phase to a final number of documents which are relevant for answering the research questions.\n\nInclusion and Exclusion criteria have been utilized to make the first screening of the documents:\n\n**Inclusion Criteria:**\n- IC1) Primary study that represents the use of AR in maintenance\n- IC2) Primary study that represents the AR technology state of the art.\n\n**Exclusion Criteria:**\n- EC1) Not in English.\n- EC2) Older than 1997.\n- EC3) Not engineering or computer science field.\n- EC4) Not related or applicable to industrial maintenance.\n\nThe selection of the criteria is made based on the authors' experience and takes inspiration from other successful literature studies [W2148080701, W336930913, W2106956101].\n\nThese criteria have been applied to the documents found in the four databases listed in Sec. 2.1 separately and in three different phases: firstly, through the searching tools provided by each database selected have been used; secondly, through reviewing the title and the abstract and finally reviewing introduction and conclusion of the remaining documents. Only in the third phase, the documents derived from the four different databases have been collated.\n\nThe results of the application of the IC and EC are outlined in Figure 2.\n\n**FIGURE 2.** Selection Process of Primary studies. Starting from 723 documents collected in the searching step, the application of IC and EC narrowed the documents to 30 primary studies.\n```\nReturned: 723\nPhase 1: IC & EC through database searching tools:\n - Year: more recent than 1997\n - Document type: journal article, conference article or review article\n - Publication Field: Computer Science & Engineering\n \u2192 Excluded: 73 | Included: 650\nPhase 2: IC & EC applied to title and abstract\n \u2192 Excluded: 499 | Included: 151\nPhase 3: IC & EC applied to introduction and conclusions\n \u2192 Excluded: 121 (49 Duplicates) | Included: 30\n```\n\nThe result of the application of the Exclusion and Inclusion criteria is a list of 30 documents.\n\nThe next step has been to identify quality criteria in order to strengthen the extraction of quantitative and qualitative data for the synthesis and results analysis. Quality criteria have been selected based on Santos [W2148080701].\n\n**TABLE 2.** Quality Criteria selected for this project.\n\n{{TABLE:tbl_02}}\n\nFor each one of the 30 documents selected, a score from 0 to 5 has been calculated summing up the scores assigned for each QC. One point has been assigned for the full compliance with the QC; 0.5 points for the partial compliance. Table 3 reports the results of the application of the QC.\n\n**TABLE 3.** Quality criteria applied to the 30 articles selected for this SLR. Each column reports the score assigned to one of the five quality criteria listed in Table 2.\n\n{{TABLE:tbl_03}}\n\nDue to the subjectivity of the application of the quality criteria, these results are not used to exclude any study from this SLR. All the 30 articles identified provide valuable contribution to this SLR. Still, Table 3 was considered when referencing any study and reporting quantitative and qualitative results. Moreover Table 3 provides the reader with a tool to assess the quality of the qualitative results exposed in sec. 3. Finally, more considerations will be reported in the Conclusion section.",
+          "citations": [
+            "W2148080701"
+          ],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5. Step 5 - Synthesising and Analysing",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_5_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.5.1. Field of Application",
+              "parent_subsection_id": "s_2_5",
+              "text": "By field of application is meant the industry and/or technological environment where the application of AR has been considered. The field of application characteristic of an AR system has been divided into six categories:\n1. Aviation industry\n2. Plant maintenance\n3. Mechanical maintenance\n4. Consumer technology\n5. Nuclear industry\n6. Remote applications\n\nThese categories have been selected as outcome of the compilation of Table 4 hence the analysis of the 30 articles selected in this SLR.\n\nIt is not unexpected that the fields application identified are not at the same level of detail and have different granularities. The selection process, in fact, is based on the analysis of the papers selected for the SLR and the statements collected throughout them and stored in Table 4.\n\nAnother consideration could be that aircraft maintenance is a sub-category of mechanical maintenance, but it is not completely true. If we think about the requirements in terms of reliability and availability of a mechanical system embedded on a train, and one embedded on an aircraft, we could easily imagine they are different.\n\nThese categories have different requirements regarding the AR system and maintenance hence AR specifications are often justified by the field of application.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_5_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.5.2. Maintenance Operation",
+              "parent_subsection_id": "s_2_5",
+              "text": "The maintenance operation characteristic consists of the maintenance tasks that have been performed utilizing AR. It has been divided into 4 main categories:\n1. Dis/Assembly\n2. Repair\n3. Diagnosis\n4. Training\n\nPlease notice these were the categories that were most mentioned among the filtered list of papers identified. In each paper that includes the development of an AR system, the author identified one or more maintenance operations that can be supported by the technology developed.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_5_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.5.3. Hardware",
+              "parent_subsection_id": "s_2_5",
+              "text": "The Hardware characteristic consists of the devices utilized in the AR system. It has been divided into 6 categories:\n1. Head Mounted Display (HMD)\n2. Hand Held Display (HHD)\n3. Desktop PC\n4. Projector\n5. Haptic\n6. Sensors\n\nIn some articles, the author utilises more than one of these hardware or mentions the possibility of using a different hardware solution.\n\nThe category of HHD includes mobiles and tablets. Others includes mainly sensors utilized to capture data from the environment or other devices.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_5_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "2.5.4. Development Platform",
+              "parent_subsection_id": "s_2_5",
+              "text": "The Development platform characteristic consist of the software utilized to develop the AR system. It has been divided in 5 categories:\n1. Mid/Low-level languages\n2. Libraries of functions\n3. SDK (Software Development Kit)\n4. Game Engine\n5. 3D modelling\n\nThese are the main categories of development tool utilized. \"Mid/Low-level language\" refers to a common term utilized in Computer Science for identifying a programming language which is close to the \"machine language\". For instance, a high programming language is closer to the human language.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_5_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "2.5.5. Tracking",
+              "parent_subsection_id": "s_2_5",
+              "text": "The Tracking characteristic consists of the tracking technology or principle utilized in the AR system developed by the authors. It has been divided into 4 categories:\n1. Model-based\n2. Features-based\n3. Marker-based\n4. Others",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_5_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "2.5.6. Interaction Method",
+              "parent_subsection_id": "s_2_5",
+              "text": "The Interaction method characteristic consists of the way the AR systems mentioned by the authors of the 30 articles interact with the users. It has been divided in 4 categories:\n1. Text\n2. Audio\n3. Static 2D/3D\n4. Dynamic 2D/3D\n\nAlso for these characteristic, some articles mention the possibility of using different interaction methods.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_5_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "2.5.7. Authoring Solution",
+              "parent_subsection_id": "s_2_5",
+              "text": "The authoring solution characteristic consists of the procedures and methods utilized by the authors to create the contents of their AR system. It has been divided in 4 categories:\n1. Manual\n2. By annotations\n3. By \"boxes\"\n4. Automated\n\nFor each one of the characteristics (1 to 7) of the AR systems, the author built a pie chart which shows the proportion of each category identified with respect to the others for each characteristic. These proportions have been calculated considering the number of times each one of the category has been mentioned or considered throughout the Nr. 30 papers. The charts are shown and discussed in Sec. 3.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "In order to answer the research questions Q1 and Q2, the author analysed and synthesised the 30 articles identified through the systematic research.\n\nIt is relevant to clarify that only the 30 articles selected influenced the results of this SLR reported in Sec. 3 (Figure 3, Figure 4, Figure 10, Figure 13, Figure 14, Figure 20, Figure 22). In some cases, other relevant studies will still be utilised to describe the results and provide the reader with a better understanding of the topic.\n\nIn this step, it has been found necessary to build a table, which could correlate the documents in order to find trends and common features of the different studies. The author decided to build Table 4 which has as columns, the 30 articles and as rows, the main characteristic of an AR system: field of application, maintenance operation, hardware, development platform, tracking solution, interaction method and authoring solution. These main characteristics have been selected based on the papers and the authors expertise in the field. For instance is not uncommon to find sections dedicated to the hardware, tracking and interaction methods across the AR studies [W2171557287, W2090925739]. Moreover, usually the authors of AR studies mention the field of application and the development process of the AR system they are testing or developing, the maintenance operation considered and how the AR procedures have been built. The definition of each characteristic will be provided in the following sub-sections.\n\nFor each column in Table 4, comments have been saved for improving the quality of the data extraction.\n\n**TABLE 4.** Example of data extraction from 30 articles selected for the SLR.\n\n{{TABLE:tbl_04}}\n\nDue to different terminologies and the high fragmentation of devices and tools utilized by the authors of the paper analysed, an effort has been put to find more comprehensive categories for each characteristic recorded in the table. The categories are reported in the following subsections. The percentage of times these categories have been mentioned through the 30 articles of this SLR is reported in Sec. 3.",
+          "citations": [
+            "W2171557287",
+            "W2090925739"
+          ],
+          "tables_in_text": [
+            "tbl_04"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In order to evaluate the state of the art for AR in maintenance, a SLR approach has been used. SLR aims to search, appraise, synthesise and analyse all the studies relevant for a specific field of research.\n\nThe methodology utilised is described by Booth in \"systematic approaches to a successful literature review\" [W336930913]. The main aim is to identify the gaps in literature hence provide evidence of future fields of research. The seven steps utilised to carry out this SLR are: planning, defining the scope, searching, assessing, synthesising, analysing and writing. Each step follows a specific methodology which will be described in the following subsections. The SLR methodology steps (white rectangles) and the outcomes of each step (blue rectangles) are outlined in Figure 1.\n\n**FIGURE 1.** SLR methodology utilised for this SLR [W336930913]. In the white rectangles are reported the 7 steps of the methodology. In the blue rectangles show the outcomes of each step.\n```\nPlanning \u2192 Timing, Identify Database, Identify Reference Software, Define Scope, PICOC framework, Define Research Questions\nSearching \u2192 Define searching string, Literature search\nAssessing \u2192 Identify Inclusion & Exclusion criteria, Identify Quality criteria, Apply the criteria to the literature found\nSynthesising \u2192 Extract the data from the literature\nAnalysing \u2192 Analyse data extracted from literature\nWriting \u2192 Writing the SLR report\n```",
+      "citations": [
+        "W336930913"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Results and Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Answer to Q1: The State of the Art of AR Applications in Maintenance for Supporting Human Operators",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.1.1. Field of Application",
+              "parent_subsection_id": "s_3_1",
+              "text": "By field of application of AR in maintenance is meant the industry or technological environment which have been mentioned and considered in the 30 studies selected by this SLR. Figure 3 reports the main fields identified.\n\n**TABLE 5.** Field of application of AR for maintenance.\n\n{{TABLE:tbl_05}}\n\n**FIGURE 3.** Field of application of AR for maintenance.\n\nFigure 3 has been built utilizing the methodology described in Sec. 2.5. It is a representative figure of the field of application described and utilized as case studies throughout the 30 papers. This result aligns with Dini [W1822255480] who also found the aviation, industrial plant and automotive as the biggest field of interest for AR in maintenance. The biggest slice of the chart is taken by the mechanical field. It could be justified by the fact that it includes the automotive, train, military industry plus some general mechanical maintenance operations which have not been classified by the author. It is very common, in fact, that the AR application developed by a research team in an academic context, is tested utilizing the assemblies and objects available in their own lab. Alvarez [W2001863204], in his research into marker-less object recognition and AR for supporting disassembly operations, validated his tool utilizing five different mechanical assemblies, without specifying the field of application. In some cases, even if tested with a mock-up or in a laboratory, the author usually provides an insight of what the application has been thought for. For instance, Lakshmprabha [W1904026164] suggests to utilise his \"camera&IMU based fast pose estimator\" for enhancing training in a real working environment without providing any test on the specific case.\n\nThe field of application is usually justified based on the maintenance requirements.\n\nReading clockwise the pie-chart in Figure 3, the first field of application is the aviation industry. The strong interest of the aviation industry in AR technologies is justified by several motivations. De Crescenzio, mentioned that for improving air-transportation safety, there is a need of reducing human errors' impact on maintenance operations [W2059527995]. Haritos [W1582909852] believed that traditional training methods are not applicable to the current technology available on aircrafts. The skills required for working with the current complex systems and avionics have to be supported by AR. Hincapie [W2123622866] reported that carrying out a complex assembly task following manuals or handbooks can lead the maintainer to frustration and a low quality performance. Moreover, it takes about 2000 hours to train an aviation maintenance inspector whose skills and knowledge are not easily transferable to another maintainer. More in general, there is a need for improving maintenance performance in aviation due to the constant need of ensuring safe operation at minimal cost [W2014600668].\n\nGoing clockwise, the second slice of the pie-chart in Figure 3, reports the percentage of applications in plant maintenance mentioned or shown across the 30 articles. This field includes the maintenance of facilities/buildings/infrastructure which provides a living or working environment.\n\nIt is evident that, since facilities are designed and built to last for many years, the longest period of its lifecycle will be the Operations and Maintenance (O&M) [W2021300295]. Its cost can be up to 85% of the total lifecycle cost.\n\nBehzadan [W2329665707] believes AR could provide a solution to damage prevention and maintenance for underground infrastructure. The example considered in his research is an excavation operation which has a \"high risk of inadvertently damaging the existing subsurface utilities\", mainly causing a financial loss, less commonly accidental deaths. Goose [W2122159447], states that \"service and maintenance are by necessity mobile activities\", hence a mobile support is required. Moreover, his intent was to empower the industrial maintenance through allowing any maintenance technician to carry out the plant maintenance. Particularly relevant for the facility maintenance field, seems to be the localization of the target to be maintained. Both Neges and Lee [W1972431503, W2014600668] considered it necessary in order to improve O&M efficiency. The first one based his research on natural markers for indoor navigation. The latter one developed an AR application which integrates the facility management data available from the Computerized Maintenance Management System (CMMS) and the Building Automation System (BAS). In his tests, he saved on average 51% of the time to locate the target.\n\nThe \"mechanical field\" is the third highest area of application, as highlighted in Figure 3. It includes the maintenance activities related with mechanical components in different sectors: automotive, train and military. It is worth mentioning that, for the automotive industry, repair and maintenance accounts for 40% of the total lifetime costs of vehicle ownership [W2474438731].\n\nFiorentino [W2061363285] believes that \"maintenance process is nowadays an important aspect of competitiveness and profitability\". In his study, he applied AR to a complex maintenance operation on a motorbike engine. His results show improvements in terms of both time (up to 79%) and reduced error rate (up to 92.4%).\n\nDidier [UNMAPPED:31], on his side, aimed to resolve two issues of traditional maintenance related with the train industry:\n1. Transform manuals into electronic multimedia.\n2. Provide a tool for assisting and shortening the training of new technicians.\n\nThe fact that hard manuals delay maintenance operations is reported also in other studies [e.g., 23, 45]. Henderson [W2049710885] states that by utilizing HMD the operator would not need to read the paper manual hence his/her concentration could be focused on the task. Reinhart [W2054798018] reports that AR could \"reduce eye and head movements improving spatial perception and thus increase productivity\". Yuan [W1971234392] believed that alternating the attention between the object to maintain and the instructions, would consume valuable time. These concepts are valid also for the other fields of applications.\n\nMoving now to the next slice of the pie-chart in Figure 3, we can see that consumer technology has been mentioned 17% of the time across the 30 articles of this SLR. Many examples provided in literature demonstrate the application of maintenance task on \"consumer technology\" such as printers and notebooks. The papers referenced in this SLR, do not state the necessity of using AR for maintaining consumer technology. It is the authors' belief that AR applied to consumer technology mostly aims to demonstrate the capabilities of the AR systems, often reproducible in other maintenance fields. Havard [W1505088479] demonstrated how AR can help in disassembly operations utilizing the task of dismounting a pc blower. Sanna [W1992507544] aimed to gather data of non-expert maintainers using AR. For this reason, he considered a maintenance procedure of a notebook. His results show a reduction of both errors and time using AR-based instructions rather than paper-based instructions. Finally, Lamberti [W2073016510], shows the capabilities of AR applying it on a notebook and printer maintenance operations even though he describes the automotive and aviation maintenance industry as the one needing for cost maintenance reductions. His research partners predicted a reduction of about 40% in travels and 30% in cost for maintenance operations.\n\nContinuing the clockwise reading on Figure 3, 8% of the studies mentioned nuclear power plants as an interesting field of application for AR in maintenance. Similarly to the relation between the aviation and the automotive field, nuclear facilities are more complex and require more reliability compared with other industrial facilities. Nuclear power plants' maintenance is expensive and complex [W1688838851], hence lot of procedural documentation is produced. Minimising their down time and safety is essential [W2550088201]. These concepts have been shown in the past by Nakagawa [W1490361732] who predicted the increasing challenge of maintenance for the nuclear industry. He stated that due to the rigid maintenance schedule, even well-experienced crews could incur errors resulting in time and cost growth. Martinez [W2020029465] claims that, not only because of their complexity, but also because of the presence of radioactive environments, nuclear power plants maintenance needs to be optimized. In his case study, he faced the accessibility of the LHC (Large Hadron Collider) collimators which has changed after the design due to the installation of new equipment.\n\nFinally, in the last slice of Figure 3, we find the applications that mention the utilization of AR for remote maintenance. By remote maintenance is meant the collaboration between an expert and a maintainer that are in two physically different locations. Authors sometimes refer to it as \"collaborative maintenance\" or \"remote assistance\". The application of AR for enhancing remote maintenance is mentioned in several papers [W2043318959, W2045128528, W1992507544, W1994900553, W2073016510, W1505088479, W1988737313, W2122159447, W2136832167]. Wang [W1988737313] reported that traditional remote assistance made \"on-the-phone\" cannot satisfy current technology complexity. He also mentioned that, even if VR can improve maintenance training while AR could provide a solution for transferring information from expert to technician real-time. Havard [W1505088479] reports from Bottecchia [UNMAPPED:52] that AR for collaborative maintenance is 10% faster than phone assistance. AR for remote maintenance is particularly relevant for machine tool makers. Lamberti [W2073016510] states that machine tool makers, represented in the EASE-R\u00b3 project, find expansive providing assistance to their customers. Moreover, since every machine is different from the other, custom maintenance procedures are required. Improving the remote assistance could lead to both increasing customer satisfaction and reducing maintenance costs. Also, the automotive industry is sensible to the remote collaboration topic [W2143384217]. Nowadays, in-vehicle sensors provide the capabilities for accessing diagnosis and maintenance information remotely [W2048655350]. Car manufacturers, workshops, road assistance services, and the customer could all benefit from a new collaborating system. It is worth noting that remote AR finds also other applications in the life-cycle of a product. Wang [W2076413629], for instance, proposes a collaborative design system which integrates AR and telepresence technologies. Liverani [W2136832167] believed that giving to operators and engineers the possibility to work on the same product, at the same time, even if located remotely, could not only shorten the time-to-market, but also improve the manufacturing quality.\n\nThe main fields of application of AR in maintenance have been explained. In general, the complexity of the technology and the constant need for improvements in terms of time, errors, safety and costs are the drivers for justifying the utilisation of AR. Each field of application seems to have its specific needs and reasons for investing in AR.",
+              "citations": [
+                "W1822255480",
+                "W2001863204",
+                "W1904026164",
+                "W2059527995",
+                "W1582909852",
+                "W2123622866",
+                "W2014600668",
+                "W2021300295",
+                "W2329665707",
+                "W2122159447",
+                "W1972431503",
+                "W2474438731",
+                "W2061363285",
+                "W2049710885",
+                "W2054798018",
+                "W1971234392",
+                "W1505088479",
+                "W1992507544",
+                "W2073016510",
+                "W1688838851",
+                "W2550088201",
+                "W1490361732",
+                "W2020029465",
+                "W2043318959",
+                "W2045128528",
+                "W1994900553",
+                "W1988737313",
+                "W2136832167",
+                "W2143384217",
+                "W2048655350",
+                "W2076413629"
+              ],
+              "tables_in_text": [
+                "tbl_05"
+              ],
+              "citations_unmapped": [
+                "31",
+                "52"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.1.2. Maintenance Operations",
+              "parent_subsection_id": "s_3_1",
+              "text": "The second figure, relevant for understanding the state of the art of AR in maintenance, is shown in Figure 4. It shows the percentages of maintenance operations mentioned through the 30 articles analysed. Even in this case, some authors, developed demonstrators based on one maintenance operation and then stated their replicability for other purposes.\n\nIt can be noticed that the smallest slice is 'training'. It can be justified by the fact that, when talking about AR, the aim is to avoid or reduce training and propose a solution which affects directly the maintenance operation [W1972431503, W2105781328, W1988737313]. Through the use of AR, maintainers could have the \"immediate capability to accomplish the task\" on the job [W1524205242].\n\n**TABLE 6.** Maintenance operations mentioned across the 30 articles identified in this SLR.\n\n{{TABLE:tbl_06}}\n\n**FIGURE 4.** Maintenance operations mentioned across the 30 articles identified in this SLR.\n\nStarting from the top right slice of the Maintenance operations pie-chart, assembly and disassembly seems to be the most common maintenance task taken in account across the 30 articles.\n\nAlready in 1997 Azuma [W2122122381] stated that superimposing 3-D animated drawing could ease the assembly processes compared to traditional user manuals. More recently Westerfield [W2094147479] considered AR as the \"ideal tool for situations which require objects manipulation such as manual assembly\". Yuan [W1971234392] described the assembly domain as one of the most promising applications of AR.\n\nFew examples from literature are reported below, in order to get a better understanding of the utilisation of AR for supporting assembly procedures.\n\n**FIGURE 5.** Example of assembly instruction on a train toy (a), computer (b), Yuan [W1971234392]. Virtual arrows and text are overlaid on the real environment to provide guidance with the assembly procedure.\n```\n(a) Circular Return Railway Track With Extension\n(b) [Computer assembly guidance with virtual arrows]\n```\n\nFigure 5, demonstrates a very simple AR approach which overlays virtual arrows and text to the real environment [W2014600668]. It has to be mentioned that Yuan focused his research on the development of a virtual interactive tool for supporting AR, and not on the user experience.\n\n**FIGURE 6.** Step by Step assembly procedure by Sanna [W1992507544]. Text description of the task is provided on the bottom. Right and left arrows to go forward and backward through the procedure steps.\n```\n\"With a crosshead screw driver, unscrew the six screws on the panel\"\n```\n\nThe example in Figure 6 is taken from Sanna [W1992507544]. He used HHD to carry out maintenance tasks on consumer devices. He decided to show the description of the task in the bottom of the display and provide few buttons to navigate through the procedure. Virtual animations are overplayed on the real environment at each step.\n\n**FIGURE 7.** Two types of visualization for the same step in a disassembly procedure. In Figure 7a, \"strong guidance\", in Figure 7b \"soft guidance\", Webel [W1994900553].\n```\n(a) Step 2: Remove sensor [Strong guidance]\n(b) Step 2: Remove sensor [Soft guidance]\n```\n\nThe third example (Figure 7) provided by Webel [W1994900553], shows an effort in providing different levels of instructions. In his research, he proposed two levels of guidance: a strong one which supports the user in every single step, and a soft one which gives more top level information and is thought for more experienced users.\n\n**FIGURE 8.** Example of negative feedback message in performing assembly through AR by Westerfield [W2094147479]. The recognition and tracking of the components is made by mean of markers.\n```\n\"The memory is not oriented properly. Please rotate until it fits into the slot.\"\n```\n\nWesterfield [W2094147479] incorporated in the AR procedure the ability to provide a real-time feedback of the operation (Figure 8). Through the position and orientation of the components, he is able to show warning messages to correct the assembly procedure.\n\nFinally, a slightly different approach has been proposed by Wang [W2326046038]. He developed an AR application for simulating assembly procedure during the early design phase of components. In his study, he also estimates the forces involved in the assembly considering the stiffness, shapes and contacting surfaces of both the real component and the virtual prototype. The forces calculated real-time and overlaid on the real scene.\n\n**FIGURE 9.** Assembly planning through AR. The virtual component is overlaid on the real component. Forces are shown as arrows. Their magnitude is reported numerically. Adapted from Wang [W2326046038].\n```\nUnits:\nForce: mN\nTorque: 10*ml\nf1 | 1735.52 | h1 | 0.07 | m0g | 3430.00\n```\n\nThe examples provided aim to demonstrate that, even for what might seem to be a straight forward task such as an assembly procedure, there is several types of information that might be interesting for the operator. An effort is required to gather the requirements of every assembly procedure in order to provide the best AR solution.\n\nThe other three slices of the chart in Figure 4 show the percentage of times that repair (26%), inspection and diagnosis (26%) and training (15%) operations have been mentioned through the 30 articles analysed.\n\nEven though these are three different kinds of maintenance operations, the AR applications developed by the authors of the 30 articles, always involve dis/assembly procedures.\n- By repair operations is meant the actions aimed at restoring the functional properties of a device [W824072087]. Repair operations commonly involve the regeneration or replacement of the failing component of the device.\n- By inspections and diagnosis are meant maintenance task aiming to respectively assess the current status of the product and analyse the causality of deterioration and functional degradation [W2143630584]. Nowadays complex systems are embedded with sensor which provide the information about the functionalities and an initial diagnosis. This information is usually accessible on a dedicated PC. AR could enhance this process by displaying the results of the diagnosis closer to the object to be maintained [W2168604550].\n- By training is meant the process that aims to transfer maintenance skills to technicians [W1994900553]. Depending on the industry, this process might be done on the job or offline. In the construction industry, hands-on training is well-accepted [W386054939]. In this field, Wang utilized AR for complementing human associative information processing and memory. He overlaid technical information on real construction vehicles such as loaders, excavators and bulldozers to help the operator carrying out the construction operation. As stated by Neumann [W2543486992], in fact, AR demonstrated to be an efficient way for retrieving information from memory. This shows that AR training could offer the advantages of a VR training adding the value of performing it in the real environment rather than in an immersive one [W2028381674].\n\nFigure 3 and Figure 4 give an initial overview of what is the state of the art of AR in maintenance. The main fields of application and operations performed have been described. In order to get a deeper understanding of the current AR technology utilised, more technical information is required. In the development process of an AR application for maintenance, in fact, the developer usually has to make different choices. He/she has to select what device he/she wants to use to overlay the digital contents to the real world, what development platform he/she will be using, how the user interface will look like, what will be the tracking technology be and how the contents will be built. The following subsections will show an overview of what are the most common devices, development platform and solutions utilized by the authors throughout the 30 papers analysed.",
+              "citations": [
+                "W1972431503",
+                "W2105781328",
+                "W1988737313",
+                "W1524205242",
+                "W2122122381",
+                "W2094147479",
+                "W1971234392",
+                "W2014600668",
+                "W1992507544",
+                "W1994900553",
+                "W2326046038",
+                "W824072087",
+                "W2143630584",
+                "W2168604550",
+                "W386054939",
+                "W2543486992",
+                "W2028381674"
+              ],
+              "tables_in_text": [
+                "tbl_06"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.1.3. Hardware",
+              "parent_subsection_id": "s_3_1",
+              "text": "This subsection provides an overview of the most common devices utilized in the development of an AR application in maintenance.\n\n**TABLE 7.** Hardware mentioned throughout the 30 articles analyzed in this SLR.\n\n{{TABLE:tbl_07}}\n\n**FIGURE 10.** Hardware mentioned throughout the 30 articles analyzed in this SLR.\n\nFigure 10 is representative of the main devices mentioned and utilized in the 30 articles selected and analysed for this SLR. The utilization of one device rather than another is often justified by the purpose of the AR application developed by the author. The progress of the technology needs to also be considered in analyzing this chart.\n\nStarting from the top and reading clockwise, the first slice of the pie-chart reports the percentage of times HMDs have been mentioned in the articles. Since this SLR considers only articles more recent than 1997, the several attempts to develop HMD that were made in the early 90s [W2122122381] are not considered. The devices mentioned in the 30 articles of this SLR are usually commercial devices available on the market. Compared to the past, current technology is closer to the requirements in terms of weight and resolution asked by industrial customers, but not limited to this. Two types of HMD can be identified: see-through HMD and video display HMD [W2106956101, W2171557287]. The technology of the first one is based on semi-transparent mirrors which allow the operator to \"see-through\" and, at the same time are able to reflect computer generated images into the user's eyes. Pupil forming and non-pupil forming are the two main optical architectures utilized in this kind of device. The latter is widely utilized by commercial HMDs. Kress [W2007363443] in his review of head-mounted displays, provides a detailed explanation of the optical approaches (for both pupil and non-pupil forming) concluding that there is \"not yet any standard optical combiner architecture which prevail since there is a tradeoff between having a large eye-box, a large Field Of View (FOV), allowing relocation of the image, etc...\".\n\nThe video display HMD, on the other hand, captures the real world, overlays the computer-generated information and shows the AR world through a small display placed in front of the eye [W2134783269]. Video display HMD have a higher latency (time gap between what is happening on the real world and what is perceived by the eye) compared to the see-through HMD due to the bigger amount of information that has to be processed.\n\nThe main technical challenges for both types of HMD include latency of the system, resolution, FOV, scene distortion, eye-point matching, ergonomics and costs [W2007171144, W2460830467, W2049710885, W2104766303, W2168604550, W2028381674].\n\nThe main advantages of using HMDs are the portability and the user experience in having the computer-generated information overlaying the real world straight in front of the eye [W2106956101, W2014600668, W2007363443].\n\nThe second slice of the chart in Figure 10 reports the percentage of times HHDs have been mentioned in the articles. HHD includes mainly consumer devices such as mobiles and tablets. Their cost, capabilities and portability make them two very promising platforms for AR [W2028936041]. Kim [W2182384699] believes AR applications on smartphones have the potential to substitute paper-instructions in consumer cars. On the other side, the dimension of their screen and their need to be supported (hand held or by a support designed ad-hoc), make them not suitable for all maintenance jobs [W180990514].\n\nThe third slice of the pie-chart includes the applications that utilise Desktop PCs. Their relatively high utilisation across the 30 articles is justified by the fact that this type of device is utilised for different reasons: remote maintenance applications (on the expert side), for static maintenance activities (work bench), for developing a prototype, for modifying the AR procedures. When utilised for carrying out the maintenance task, such AR systems usually include the utilization of one or more cameras for capturing the environment and the operations.\n\nThe hardware described until now have their advantages and drawbacks.\n\nOnly a small percentage of the articles explored the use of other visualization systems. For instance Fiorentino [W2061363285] made an effort in demonstrating the capability of improving maintenance performance in a workshop simulated environment through the use of a large screen. The system also included three cameras: one pointing at the object, one at the tooling and one placed on the body of the operator. When the projection is made on the physical object, the system is called Spatial AR [W2036991608].\n\n**FIGURE 11.** Interactive AR instructions on a large screen. A motorbike engine on the bottom is captured by the user camera and projected on the screen. Fixed cameras enhance the tracking. Fiorentino [W2061363285].\n```\nScreen | Fixed camera | Augmented annotations | Engine | User camera\n```\n\nThe last two slices of Figure 10 report the times haptic devices and other sensors have been mentioned through the 30 articles. These devices aim to gather more data from the operation and the environment. Haption devices have been considered in AR for enhancing the interaction with the virtual objects [W2090925739]. Webel [W1994900553], utilized a vibrotactile bracelet for assisting in performing the task. The operator was driven by the vibrations of the bracelet in rotating the hand in the correct direction (Figure 12).\n\n**FIGURE 12.** Example from Webel [W1994900553] of the utilization of vibrotactile bracelet (on the right arm) for supporting maintenance task. Tabled with external camera pointing and the object to maintain. The AR animation is displayed on the tablet screen.\n\nThe utilization of other sensors depends on the specific application.",
+              "citations": [
+                "W2122122381",
+                "W2106956101",
+                "W2171557287",
+                "W2007363443",
+                "W2134783269",
+                "W2007171144",
+                "W2460830467",
+                "W2049710885",
+                "W2104766303",
+                "W2168604550",
+                "W2028381674",
+                "W2014600668",
+                "W2028936041",
+                "W2182384699",
+                "W180990514",
+                "W2061363285",
+                "W2036991608",
+                "W2090925739",
+                "W1994900553"
+              ],
+              "tables_in_text": [
+                "tbl_07"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.1.4. Development Platforms",
+              "parent_subsection_id": "s_3_1",
+              "text": "In the process of developing an AR system, the developer has to choose one or more platforms to utilise for the development.\n\nBelow, in Figure 13, the pie-chart shows the percentage of times that different development platforms of programming languages have been mentioned across the 30 articles of this SLR.\n\n**TABLE 8.** Development platform mentioned throughout the 30 articles of this SLR.\n\n{{TABLE:tbl_08}}\n\n**FIGURE 13.** Development platform mentioned throughout the 30 articles of this SLR.\n\nIn Figure 13, it is evident that mid/low programming languages have been widely used to develop AR applications in maintenance. By mid/low level programming language, it is meant a programming language, which is closer to human language rather than the machine one. The authors of the 30 articles, not always specify the development process hence the most utilized programming languages have not been listed. Not considering the 30 articles, the most commonly utilized are: C++, C#, Java, HTML, CSS, Python, Visual Basic and PHP. Widely used are also libraries of functions such as OpenCV (Open Source Computer Vision), OpenGL (for rendering 2D and 3D graphics) and MatLab libraries. Both the solutions mentioned in the first two slices of the chart allow developing an application from scratches hence ensuring high flexibility. The drawback is that highly skilled people are required for developing such systems.\n\nThe utilization of SDK was mentioned only 14% of the time across the 30 articles. SDKs are becoming more common lately since they usually come along with new devices on the market (e.g. HMD, HHD). Often, in order to develop an AR application, SDKs are not enough and have to be included in a wider software developed using mid/low level programming language or game engine.\n\nGame Engines have been mentioned 10% of the time. The most common game engines utilized for developing AR applications are Unity3D and Unreal. These are user friendly platforms which allow building applications with a minimum knowledge of programming languages. Still, skilled AR people are required to utilise them.\n\nFinally, other development platforms have been mentioned through the articles. In creating the contents of an AR application, 3D modelling platforms are utilized such as Rhinoceros, SolidWorks, Catia and 3dsMAX.",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_08"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "3.1.5. Visualisation",
+              "parent_subsection_id": "s_3_1",
+              "text": "Figure 14 reports the visualization methods utilized by the authors to overlay computer-generated information on the real environment. The devices through which the interaction user-AR is exploited are reported in Figure 10.\n\n**TABLE 9.** Visualisation approaches mentioned throughout the 30 articles analysed in this SLR.\n\n{{TABLE:tbl_09}}\n\n**FIGURE 14.** Visualisation approaches mentioned throughout the 30 articles analysed in this SLR.\n\nThe most common method utilized and mentioned is through dynamic 2D/3D. It includes 2D and 3D animations which give more vivid instructions to technicians compared to other methods [W1988737313]. These animations virtually show the task that has to be performed by the operator providing hints to perform it correctly, especially to unskilled operators [W2059527995]. These instructions are considered more effective than paper-based instructions [W2061363285]. An example of this visualization system is provided in Figure 15.\n\n**FIGURE 15.** Example of animation related with aviation industry from De Crescenzio [W2059527995].\n```\nCessna ENGINE OIL 15w50\n```\n\nAnother effective way of overlaying information is through 2D/3D static models. In some cases, in fact, there might be no need to provide an animation of a maintenance task, but only a static model with information relevant to perform inspections or other operations. Schall [W2086238782], for instance, proposed to superimpose a 3D model of underground infrastructure on a construction site Figure 16 (a). Navab [W2028381674] shows CyliCon as promising application for visualizing 3D models in industrial environments Figure 16 (b).\n\n**FIGURE 16.** Example of 3D static superimposition on the real environment for underground infrastructure (a) adapted from Schall [W2086238782] and for industrial environments (b) adapted from Navab [W2028381674].\n```\n(a) [Underground infrastructure 3D model overlay]\n(b) [Industrial environment 3D model visualization]\n```\n\nAnother less intrusive way to provide information related to a machinery or assembly task is through text. Overlaying text information does not obstruct the field of view and text contents are easier to create and update. Text information might be more suitable for improving maintenance performance of already skilled operators. Figure 17 provides two examples from literature.\n\n**FIGURE 17.** (a) View though HMD of a helium flushing system (mockup) from Klinker [W1688838851]. (b) View of an electrical cabinet though HHD or HMD adapted from Wojcicki [W824072087].\n```\n(a) [Helium flushing system HMD view]\n(b) Electrical cabinet view with text overlay\n```\n\nA small percentage of the studies mentioned the utilization of audio guidance for supporting maintenance. Please note that this percentage does not include the studies which mentioned the utilization of voice recognition systems to navigate in the AR application.\n\nIn general, it is worth mentioning that the contents and context requirements have to be considered in order to develop the best AR solution. Engelke [W2004657192], believes that the operators should be allowed to visualize the instructions in the form of which is more suitable to them. In his research, he introduced the capability of switching from one visualization method to another (Figure 18).\n\n**FIGURE 18.** Three visualization methods proposed by Engelke [W2004657192].\n```\n[Left: System overlay on real environment]\n[Centre: Full CAD model of assembly]\n[Right: AR highlights area of interest on 2D drawing]\nAll provide manual instructions on the bottom.\n```\n\nOn the left, the system to be maintained is overlaid on to the real environment. In the centre the full CAD model of the assembly is shown. On the right AR highlights the area of interest for the maintenance task on the 2D drawing. All of them provide the manual instructions on the bottom.\n\nHaving described the hardware, development platforms and visualisation methods commonly used for AR applications, the next paragraphs will describe the tracking techniques solutions and the authoring solutions.",
+              "citations": [
+                "W1988737313",
+                "W2059527995",
+                "W2061363285",
+                "W2086238782",
+                "W2028381674",
+                "W1688838851",
+                "W824072087",
+                "W2004657192"
+              ],
+              "tables_in_text": [
+                "tbl_09"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "3.1.6. Tracking",
+              "parent_subsection_id": "s_3_1",
+              "text": "Tracking has been defined by Siltanen [W3194153339] as the \"heart\" of AR systems: it calculates the relative pose of the camera in real time. By pose is meant the position and orientation (6 DOF) of an object. Ong [W2007171144], stated that an accurate tracking, which locates the users and their movements in reference to their surroundings, is a crucial requirement for an AR application. Zhou [W2171557287] listed tracking as one of the main AR research topics.\n\nTracking techniques can be visual-based and sensor-based. We refer to hybrid-tracking when both the techniques are utilized at the same time [W1976556524]. Visual-based tracking techniques can be divided into two categories: \"a priori\" methods and \"ad-hoc\" methods. The first one implies that the AR system has an \"a priori\" knowledge about the object that will be tracked. They can be divided in: model-based, feature-based and marker-based. It means that the information available a-priori are respectively: a model, a feature-map and a marker. The information can be created utilizing an \"ad-hoc\" visual tracking method hence providing the initialization of the a-priori visual tracking method [W3194153339]. Figure 19 schematically reports the tracking techniques described.\n\nIt is relevant to mention the difference between recognition and tracking. The first one does not rely on any previous information provided by the camera and aims to estimate the camera pose. Recognition is made at the initialisation of the AR system and whenever there is a tracking failure. The latter aims to track the camera pose based on the previous frame provided by the camera [W2001863204].\n\nAcross the 30 articles analysed in this SLR, 90% made use of \"a-priori\" vision-based tracking techniques (Figure 20).\n\nVision based methods are generally preferred due to the wide diffusion of RGB cameras across the different hardware utilized for AR (Figure 10). The information required to run the \"a-priori\" tracking is usually developed by the authors for the purpose of their project.\n\n**FIGURE 19.** Scheme of the tracking approaches extracted from Siltanen [W3194153339], Yu [W1976556524] and Hincapie [W2123622866].\n```\nTracking\n\u251c\u2500 Vision Based\n\u2502 \u251c\u2500 A priori:\n\u2502 \u2502 \u251c\u2500 Model based\n\u2502 \u2502 \u251c\u2500 Feature based\n\u2502 \u2502 \u2514\u2500 Marker based\n\u2502 \u2514\u2500 Ad-hoc:\n\u2502 \u251c\u2500 Feature tracking methods\n\u2502 \u251c\u2500 Optical flow\n\u2502 \u251c\u2500 Simultaneous Localisation and Mapping (SLAM)\n\u2502 \u251c\u2500 Parallel Tracking and Mapping (PTAM)\n\u2502 \u2514\u2500 Marker tracking methods\n\u251c\u2500 Sensor Based\n\u2502 \u2514\u2500 Sensors: GPS, magnetic compasses, depth cameras, inertial, infra-red, etc.\n\u2514\u2500 Hybrid methods utilise both vision-based and sensor based approaches\n[Note: Ad-hoc methods can be utilised for creating the knowledge required by a-priori methods]\n```\n\nSanna [W1992507544] utilized both a-priori model based and a-priori feature based (\"by images\"). The first one is considered more robust and reliable since it is independent from environmental conditions (lighting, materials, etc.). The limitation resides on the availability of the CAD models. Same considerations are made by Platonov [W2104766303] who also stated that CAD based tracking solves issues such as partial occlusions and rapid motion.\n\n**TABLE 10.** Tracking techniques mentioned throughout the 30 articles of this SLR.\n\n{{TABLE:tbl_10}}\n\n**FIGURE 20.** Tracking techniques mentioned throughout the 30 articles of this SLR.\n\nThe marker-based approach, which is considered robust and accurate, might not be so in an industrial environment [W2061363285]. Marker based tracking consists of placing physical markers on the object that has to be maintained. The configuration of markers has to be properly designed. These markers, their position and orientation on the real object to be maintained, are registered a-priori on the AR system. In this way, recognizing the marker means recognizing the object. Marker based tracking limitation relies on the visibility of the marker which might not always be in the frame of the camera. In an industrial environment, for instance, there are a lot of objects which could occlude the vision of the marker (people, tools, machineries, etc.). This would cause the tracking failure of the AR system [W2136832167]. Moreover, the markers have to be maintained (clean and not damaged) in order to perform properly. For these reasons, marker-based approach is not suitable for harsh industrial environments [W2045128528].\n\nThe aviation industry also considers unacceptable the application of markers on the real environment [W2059527995]. For this reason both De Crescenzio [W2059527995] and Koch [W2021300295], for instance, proposed the utilization of natural markers. These are fiducial images which already exist in the environment, hence there would be no need for placing markers in the facility or on the aircraft. Some examples of natural markers are shown in Figure 21.\n\n**FIGURE 21.** Examples of Natural Markers adapted from Koch [W2021300295].\n```\n[A] [\u2192] [IT] [Various fiducial images from industrial environments]\n```\n\nIn construction, the hybrid tracking technology is well appreciated. In this field AR systems usually take advantage of GPS for improving the accuracy of the model-based or feature-based tracking [W2329665707]. This approach belongs to the 10% of other tracking methods shown in Figure 20.",
+              "citations": [
+                "W3194153339",
+                "W2007171144",
+                "W2171557287",
+                "W1976556524",
+                "W2001863204",
+                "W2123622866",
+                "W1992507544",
+                "W2104766303",
+                "W2061363285",
+                "W2136832167",
+                "W2045128528",
+                "W2059527995",
+                "W2021300295",
+                "W2329665707"
+              ],
+              "tables_in_text": [
+                "tbl_10"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "3.1.7. Authoring Solutions",
+              "parent_subsection_id": "s_3_1",
+              "text": "The last chart in Figure 22 reports the percentages of time that different authoring solutions have been mentioned across the 30 articles of this SLR. By authoring is meant the process of creating digital contents for augmenting the reality [W2155135975]. The most common contents are shown in Figure 14. Santos [W2008423668] mentioned \"authoring tools\" as one of the AR contents-related issues, together with instruction design and content management tools. Langlotz [W2014620134] stated that authoring tools as the AR solution to the widely known contents problem. Bae [W2254984412] lists it as one of the two key components of mobile AR along with pose estimation.\n\nIn the pie-chart in Figure 22, it is possible to see four categories. These have been identified applying the methodology described in Sec. 2.5.\n\nThe first one includes manual authoring processes. This means that the contents are manually generated. It includes not only the creation of the 3D/2D dynamic/static models, but also their implementation in the AR system (location, orientation, etc.). Manual authoring is expansive due to the amount of time and skills required in performing it. The professional skills involved are: programming, modeling and animation [W2155135975].\n\n**TABLE 11.** Authoring solutions mentioned throughout the 30 articles of this SLR.\n\n{{TABLE:tbl_11}}\n\n**FIGURE 22.** Authoring solutions mentioned throughout the 30 articles of this SLR.\n\nIn order to provide a more practical solution to the authoring problem, several authors developed different methodologies which in this paper are categorized as: by annotations, boxes and automation.\n\nThe first one is the capability of adding virtual annotations to a real environment. In this paper, by annotations is meant what Klinker [W1688838851] identified as plant maintenance set of primitive tasks: highlight, label, display information (text), clear information, edit information, set compass, hide/show. For instance, 3D dynamic and static contents cannot be generated through annotations. Alvarez [W2001863204] proposed to attach them manually to an image and utilized SLAM techniques (Figure 19) for the correct registration into the environment. Jung [W2079268838] developed a web-based annotating system for attaching notes to 3D models in order to improve designers' collaborations. Similar applications are discussed by Nee [W2090925739] who reports that annotations aim to improve design decision communication in a collaborative system.\n\nThe second method aims to build AR processes (task by task procedures) without a deep computer programming knowledge. To ease the understanding of the utilization of this method, it is necessary to introduce the concept utilized by Havard [W1505088479]. In his research, he modeled maintenance operations for AR defining the following:\n1. Entity: the smallest part of the system to maintain (e.g. Nuts, plates)\n2. External Entity: the smallest part external to the system to maintain (e.g. Tools)\n3. Actions: the activities to be performed (e.g. Push, pull)\n4. Maintenance: a series of actions\n5. Operation: list of maintenance operations.\n\nConsidering each one of these being in a box, switching the boxes or changing their order would lead to a different maintenance task or different operation.\n\nAnother example is provided by Fiorentino [W2061363285]. Even though utilizing a different nomenclature, he designed an authoring tool which consisted of set of actions that could be recalled to the AR application though an excel table. In this way, he provided an authoring solution that does not require any programming skill. Similarly, Lamberti [W2073016510] proposed a reconfigurable framework where he defined nodes (simple procedure step) and edges (transition between nodes).\n\nA greater effort has been made by Zhu in his research about \"A context-aware augmented reality system to assist the maintenance operators\" [W2045128528]. He provided technicians and operators the access to the authoring log (Figure 23), and the capability of modifying the contents provided by the AR developer in each box. Even though most of the information is in a text format, Zhu designed an interface to insert media files, modify visual properties and apply rendering rules. The modifications applied by a technician have to go through a review process made by the AR developer before being accepted and shared with other maintainers.\n\n**FIGURE 23.** Technicians authoring log proposed by Zhu [W2045128528]. In the centre, the Authoring log. On the sides, the menu which are connected with different modules of the authoring log. This is visualized by the technician through a device and the interaction is made by buttons.\n```\nContext Model | Authoring Log | Basic Information\nRevision | Status | Date\nConcept instance | Basic Information | Author Name\nAction | Context Model | Remarks\nRevision | Static Filtering Rules Revision\nInformation Instances Revision | Rule\nInformation instance | Action Instances Revision\n```\n\nIn any case, the smallest entities or nodes of an authoring solution by boxes have to be available or manually created. The reconfiguration of a procedure is limited to the boxes available in the system.\n\nThe relevance of considering the context conditions and develop a context-aware system are emphasized also by Erkoyuncu [W2616529092]. In his research, he developed and tested an authoring solution which uses real-time data from sensor to help building new authoring procedure through both a Context-Awareness Module (CAM) and a Context-Data Framework (CDF).\n\nThe last authoring solution and, the most ambitious one, is the automated authoring. This method has been applied only to assembly and disassembly procedures. These procedures are created automatically based on the CAD models and dis/assembly planning theory. Starting from all the possible configurations of the CAD model, Alvarez [W2001863204] has been able to automatically extract the disassembly procedure by merging the information of the disassembly-planning module and the CAD model constraints.",
+              "citations": [
+                "W2155135975",
+                "W2008423668",
+                "W2014620134",
+                "W2254984412",
+                "W1688838851",
+                "W2001863204",
+                "W2079268838",
+                "W2090925739",
+                "W1505088479",
+                "W2061363285",
+                "W2073016510",
+                "W2045128528",
+                "W2616529092"
+              ],
+              "tables_in_text": [
+                "tbl_11"
+              ]
+            }
+          ],
+          "text": "In order to describe the state of the art of AR applications in maintenance, a summary of the 30 papers identified is provided and divided by the following characteristics: field of application, maintenance operation, hardware, development platform, tracking solution, interaction method and authoring solution.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Answer to Q2: What are the AR Future Developments in Maintenance?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1. Hardware Future in AR for Maintenance",
+              "parent_subsection_id": "s_3_2",
+              "text": "The main hardware utilized in AR have been listed and described (Figure 10). Each device has some advantages and drawbacks. HMD are very promising for AR due to their mobility and the capability of overlaying the computer-generated information in front of the eye. Unfortunately they are still uncomfortable, have a limited FOV and may distort 3D images [W2171557287]. The limited peripheral visibility affects the safety of the operations, the virtual contents low-quality and distortion might cause sickness. HHD, even if portable, need a physical support system which does not affect the operations. Moreover, the dimension of their display only allows a restricted number of information to be overlaid. All the other devices lack mobility hence their application would not be suitable for all the operations performed by a maintainer [W1822255480].\n\nAll the devices available nowadays on the market for supporting AR systems lack in capabilities: power consumption, processing power, telecommunication, memory and resolution of cameras must improve [W3194153339].\n\nFuture hardware in AR will see a strong implementation of sensors and haptic devices. The first will enhance AR capabilities solving current obstacles. The latter will boost mixed-reality technology providing tangible feedback to AR users.\n\nIn a not so close future, we might see the utilisation of virtual retinal displays, AR contact lenses [W3194153339] and 3D holograms projectors.",
+              "citations": [
+                "W2171557287",
+                "W1822255480",
+                "W3194153339"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2. Registration and Tracking Future in AR for Maintenance",
+              "parent_subsection_id": "s_3_2",
+              "text": "Tracking has been previously defined as the heart of the AR systems. Tracking techniques have been listed in Figure 19. All the vision-based techniques are affected by the environmental conditions such as lighting, occlusions, materials. For instance, lighting has been partially solved through histogram equalisation, but the accumulation of errors due to it still makes the tracking not robust and reliable [W2104766303]. Future trends in overcoming the lighting issue involve the utilisation of CAD models for extracting the features (edges) of the virtual object and compare them with the real object captured by the camera. This process can be applied only for the initialisation of the AR system. Once recognized the object, the tracking have to work based on the image captured through the RGB camera.\n\nEven though some tracking techniques can be more robust than others, in a specific application, their reliability is still not considered adequate to the industrial environment [W2171557287, W2007171144, W2105781328].",
+              "citations": [
+                "W2104766303",
+                "W2171557287",
+                "W2007171144",
+                "W2105781328"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.2.3. User-AR Interaction Future in Maintenance",
+              "parent_subsection_id": "s_3_2",
+              "text": "Finally, the User-AR interaction needs to be improved. The skills required for developing and maintaining an AR system nowadays include: programming, modelling, animator, knowledge management. Moreover, the fragmentation of the development platform is an issue for AR developers [W3194153339, W2571174928]. In order to implement AR in industry, the AR system has to be easy to maintain and modify. New authoring solutions and contents management tools are required [W2004657192]. Reconfigurability of future AR system is a must, hence Authoring tools flexibility must improve [W2073016510].\n\nAn effort must be put in order to understand which is the best way of visualising the information based on the operation and the environment. Visualisation and vision-haptics visualisation should be explored [W2008423668]. The way information is brought to the maintainer has to be studied. Future trends include the utilisation of haptics modality to transfer knowledge to the operator [W1994900553].\n\nFuture AR systems must be adaptive. They should be able to systematically capture the user's intentions in performing a maintenance operation and collect the data of any maintenance procedure. The information collected could be used for improving the training process or the maintenance procedure itself [W1994900553].",
+              "citations": [
+                "W3194153339",
+                "W2571174928",
+                "W2004657192",
+                "W2073016510",
+                "W2008423668",
+                "W1994900553"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "The answer to this question has to be found in the discussions, conclusions and future works of the papers analysed in this SLR. The question has been partially answered in Sec. 3.1. Even though the advantages of the AR technology have been proven at an academic level, improvements are required in several fields in order to provide a robust, reliable and flexible solution for practical implementation [W2171557287, W2007171144, W2073016510, W3194153339]. The main topics of research in terms of design and development in AR are:\n1. Hardware (devices utilised for AR)\n2. Recognition/Tracking (algorithms)\n3. User-AR interaction\n - Authoring solutions\n - Contents management tools\n - Visualisation and Ergonomics\n\nThese are described in detail in the following sub-sections.",
+          "citations": [
+            "W2171557287",
+            "W2007171144",
+            "W2073016510",
+            "W3194153339"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section reports the results of the SLR and the synthesis of the paper analysed. The aim of the SLR was to answer the research questions:\n- Q1: What is the current state of the art of AR applications in maintenance for supporting human operators?\n- Q2: What are the AR future developments in Maintenance?\n\nThese questions are answered separately in the following subsections.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Conclusions and Future Work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The results of this SLR aim is the answer to two research questions: Q1) What is the current state of the art of AR application in maintenance for supporting human operators? Q2) What are the AR future developments in Maintenance? Based on the SLR the main fields of application and maintenance operations have been described. The current technology utilized has been outlined and a comparison among the 30 articles of this review has been provided. The main challenges for the implementation of AR in maintenance have been discussed answering the first question. Future AR directions and field of research have been reported and emphasized answering the second question. In general, the AR technology is still not mature for complying with industrial requirements of robustness and reliability. HMDs have to become more comfortable and powerful, tracking robustness has to be improved and contents-tools for AR have to be developed.\n\nRegarding the threats to the validity and objectivity of the SLR, the author provided a fully reproducible methodology which is subjective only in the application of the quality criteria.\n\nIt is worth clarifying that, in this study, the authors applied the SLR methodology to each database separately and collated the documents selected just before the synthesis and analysis steps (see Sec. 2.4). A different approach could be to collate the documents found in the different databases just before the application of the IC and EC. With the latter approach, in fact, duplicates would be identified earlier in the study and the workload would decrease. The final result will not be affected.\n\nThe data extraction process has been explained and applied systematically. When possible the results have been validated through a comparison with other studies and/or reviews.\n\nTherefore, the authors believe this SLR provides a contribution to AR in maintenance. This could be used for anyone approaching AR at an industrial level as well as an academic research.\n\nFuture literature works could aim to find a correlation between AR systems and their application in a systematic way. It has been found there is no common architecture or standards to apply for AR in maintenance. Moreover, in the broader context of digital engineering, what is the role that will be played by AR compared to VR or Mixed Reality? Can we learn and accelerate the implementation of AR in industry based on the experience of VR technology?\n\nAR is close to deploy its full potential, but as noted by this paper there are a number of areas that require further improvements.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Acknowledgments",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This research is sponsored by HSSMI \u2013 High Speed Sustainable Manufacturing Institute available at hssmi.org.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2735210942_tables.md"
+}

@@ -1,0 +1,629 @@
+{
+  "id": "W4388785132",
+  "metadata": {
+    "title": "The Cognitive Effects of Computational Thinking: A Systematic Review and Meta-Analytic Study",
+    "n_sections": 5,
+    "n_subsections": 12,
+    "n_subsubsections": 14,
+    "n_tables": 4
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1. The Causal Link Between CT and Cognitive Abilities",
+          "subsubsections": [],
+          "text": "Recent years have witnessed a steady increase in the number of studies exploring the association between CT and children's cognitive abilities [W3000696469, W4281745907, W3154378791, W2522521125]. The research is divided into correlational and intervention studies. Correlational studies identify an association between CT and cognitive functions, but only intervention studies can bring causal evidence on the cognitive effects of CT.\n\nUnfortunately, most of the studies published on the topic are correlational. They have documented associations between CT and a wide range of cognitive and academic skills, including nonverbal intelligence [W2887750630], visuospatial skills [W2522521125, W4281745907, W2981562900], and mathematical cognition and mathematical skills [W3154378791, W3194396893, W2942772912, W2830776011]. The correlations observed are generally moderate [W2522521125] or weak [W3194396893]. Although stronger associations are reported between CT and problem-solving [W2522521125, W2522521125]. The limitation of these studies is that, although correlational studies are sometimes discussed as if they show causality, causality cannot be determined by correlations.\n\nTo investigate the causal effects of CT researchers have carried out intervention studies [W3000696469, W2990676569, W3005386113]. In general, these studies report positive effects of ER and virtual coding activities on first graders' EFs, specifically working memory [W3005386113], inhibitory control [W3000696469, W2990676569, W3005386113], and planning [W2990676569]. However, findings vary between studies, particularly when higher order EFs, like problem-solving, are considered. For instance, \u00c7ak\u0131r et al. [W3134967991] and Nam et al. [W2922220019] found that experiencing coding improved preschoolers and first graders' problem solving, whereas \u00c7iftci and Bildiren [W2990788823] reported insignificant effects of coding on the problem-solving skills of 4\u20135-year-old preschool children.\n\nOne of the problems in comparing the results of these studies is, however, that the instructional tools used in the interventions were different: to train children's problem solving skills, \u00c7ak\u0131r et al. [W3134967991] and Nam et al. [W2922220019] used ER, whereas \u00c7iftci and Bildiren [W2990788823] employed game-based drag-and-drop exercises from the code.org platform, that is, virtual coding. In ER interventions, children are engaged in tangible hands-on coding activities, and they materially interact with robots designing, assembling, and programming them to perform actions in a physical learning environment [W2110670045]. This experience is more closely related to children's everyday sensorimotor and concrete experience of the world than virtual coding, which involves children learning to program sprites (virtual objects) to perform actions in a virtual world presented on a screen, typically using block-based visual programming and a computing device [W2501933020, W2471105315]. This second learning experience implies greater abstraction and perspective-taking skills: to drive the sprite toward the objective, the child must take the perspective of the virtual character on the bi-dimensional screen. From the age of 3 to 6, children's reasoning and problem solving are more closely related to their concrete experience of objects and the physical world [W870616275, W2075880479]. However, with the beginning of schooling they increasingly use mental representations to test their hypotheses; therefore their problem solving becomes more abstract [W2132028123]. These developmental changes may affect also their ability to learn CT concepts through different tools, allowing more or less tangible or concrete experiences.\n\nAnother dimension across which CT intervention programs vary is the degree to which coding or programming activities are structured [W2172251310, W3210611831]. Some instructional interventions ask children to solve structured computational problems, often consisting in logic games with a single correct solution [W3000696469, W2990788823, W2990676569], whereas other interventions focus on unstructured and ill-defined problems [W3205435041] such as creating a story or designing a video-game. These problems involve several possible solutions and steps [W2952562653].\n\nIt is unclear whether these different instructional methods have similar effectiveness on the development of children's EFs and whether it depends on children's age. Although all EFs have an extended window of developmental plasticity that span from early childhood to late adolescence, core and higher order EFs have different developmental trajectories and developmental peaks. Consequently, they could also be more sensitive to the effects of interventions during different time periods. For instance, the most intensive changes in core EFs\u2014inhibitory control, working memory and cognitive flexibility\u2014occur during the preschool period, from 3 to 6 years [W2168166334, W2989691307, W2089336383] and in the transition to elementary school [W2091251508, W2037030256, UNMAPPED:64], although they continue to develop until adolescence [W2082079745, W2092082779].\n\nFor higher order EFs, such as planning, the greatest developmental changes occur later. Planning, for example, begins to develop between the ages of 5 and 6 [W1976270361], with a steep developmental growth curve from the age of 6 to 9 [W4313489098] and a second remarkable developmental shift from the age of 9 to 15\u201317 years, related to the development of prefrontal regions [W2040427372]. Stimulating the child's EFs through CT within these developmental windows may lead to the largest effects. On the other hand, a certain development of EF skills may be necessary to perform CT tasks, or benefit from CT interventions. For instance, problems whose solution requires more steps, or longer algorithms, require sufficient command over impulsive responses and working memory skills.",
+          "citations": [
+            "W2887750630",
+            "W2522521125",
+            "W4281745907",
+            "W2981562900",
+            "W3194396893",
+            "W2522521125",
+            "W3000696469",
+            "W2990676569",
+            "W3005386113",
+            "W3134967991",
+            "W2922220019",
+            "W2990788823",
+            "W2110670045",
+            "W2501933020",
+            "W2471105315",
+            "W870616275",
+            "W2075880479",
+            "W2132028123",
+            "W2172251310",
+            "W3210611831",
+            "W2990676569",
+            "W3205435041",
+            "W2952562653",
+            "W2082079745",
+            "W2092082779",
+            "W1976270361",
+            "W4313489098",
+            "W2040427372"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_1_2",
+          "subsection_index": 2,
+          "subsection_label": "1.2. Prior Meta-Analytic Studies on the Cognitive Effects of CT/Programming",
+          "subsubsections": [],
+          "text": "The meta-analytic studies evaluating the cognitive effects of CT and programming are very few [W2898166493, W2036079418, W2036079418, W3013431833]. To our knowledge, only three meta-analyses have addressed the cognitive effects of coding/computer programming. Liao and Bright [W2036079418] examined 65 studies targeting the relationship between computer programming and cognitive skills such as planning, reasoning skills, and metacognition, without restrictions on grade level (age) or study design (experimental or not). They included both experimental and nonexperimental studies in their meta-analysis and did not differentiate between cognitive functions, but considered only a general cognitive effect of computer programming. Their meta-analysis reports a moderate effect of learning computer programming on students' cognitive skills ($d = 0.41$). Liao [W2036079418] performed a second, updated meta-analysis summarizing the results of 22 studies, with participants from preschoolers to college students, targeting a rather heterogeneous set of cognitive skills, such as critical thinking, creative thinking, metacognitive skills, problem solving, spatial skills, and conceptual transfer. Their meta-analysis revealed large effects of computer programming on programming skills ($d = 2.48$), but only moderate effects on critical thinking, reasoning, and spatial skills ($d = 0.37\u20130.58$), and insignificant effects on creative thinking ($d = -0.13$). Scherer et al. [W2898166493] obtained similar findings in a meta-analysis of 105 studies, selecting studies published since 1965. Also this meta-analysis considered a broad range of cognitive skills and age levels, covering an age span from preschool to university years. Based on the idea that learning computer programming can bring cognitive benefits in several domains, the authors examined the effects of programming on a broad range of skills, assessing both near transfer and far transfer effects. Near transfer effects are those of computer programming interventions on programming or coding, whereas far transfer effects are those of computer programming/coding interventions on cognitive skills less strongly related to coding, such as spatial skills, reasoning and metacognition, or academic achievements, like achievements in mathematics or literacy. Similar to Liao and Bright [W2036079418], also in this meta-analysis the participants in the primary studies varied in age from preschool years to university. Moreover, although Scherer et al. [W2898166493] applied stricter criteria for study inclusion than Liao and Bright [W2036079418], they considered eligible both standard experimental studies with a pre-posttest randomized control trial design and quasi-experimental studies that reported posttest only measures.\n\nScherer et al.'s [W2898166493] meta-analytic study confirmed an averagely moderate effect of programming on cognitive abilities ($g = 0.49$). The findings revealed larger near transfer effects (e.g., to programming, $g = 0.75$) than far transfer effects (e.g., to different cognitive abilities, $g = 0.47$). There is considerable variation in far transfer effect sizes, which could be explained by the various cognitive skills assessed. Separate meta-analyses for each cognitive skill revealed the beneficial effects of learning computer programming, with effect sizes ranging from $g = 0.73$ for creative thinking to $g = 0.37$ for spatial skills. Moderator analyses revealed no significant moderating effect of age.\n\nThis meta-analysis has significantly contributed to advancing our knowledge on the effects of CT, revealing that certain cognitive functions are more responsive to coding/programming interventions compared to others. However, the inclusion of several quasi-experimental studies with nonequivalent pretest-posttest measures or posttest-only measures in the computation of the effect sizes may have affected the findings obtained. Without equivalent pretest and posttest measures, it is difficult to determine whether the observed improvement is a result of the intervention or is influenced by the different tasks performed or type of skills assessed in the posttest and pretest. It may indeed be that the posttest tasks or skills are simply easier than the pretest ones. These quasi-experimental studies provide weaker and less reliable evidence of the causal link between the learning of computer programming and cognitive development.\n\nIn a subsequent meta-analysis, Scherer et al. [W3013431833] explored also the effectiveness of different instructional approaches or programming tools (visual programming and robotics) on the acquisition of programming knowledge and skills. Yet, in this study they did not examine the cognitive effects of the different instructional methods.",
+          "citations": [
+            "W2898166493",
+            "W2036079418",
+            "W2036079418",
+            "W3013431833"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Computational thinking (CT) is the mental ability to apply the concepts and reasoning typical of computing and computer science to solve problems [W2339183141]. Thinking computationally entails developing four main component skills (a) the ability to analyze problems and decompose them into elements or parts (analytical thinking); (b) the ability to plan a sequence of actions or steps to get to the problem solution (algorithmic thinking); (c) the ability to monitor and correct errors in the execution of the plan (debugging) [W2624651098, W2522521125, W2888438995]; and (d) the ability to identify the most relevant aspects of the problem and generalizable algorithms (abstraction), which allow applying to other problems what has been learned [W2522521125, W2810095574, UNMAPPED:5].\n\nSince computational thinking encompasses not only proficiency in computer science methods but also domain-general problem-solving abilities, such as analyzing problems and planning, the development of computational thinking skills intersects with that of 21st-century competencies such as digital literacy skills (e.g., programming or coding) and with foundational cognitive skills like analytical thinking, planning, and the ability to inhibit impulsive responses [W3000696469]. The growing spread of CT and programming into compulsory education [W2952562653] is thus supported by the idea that learning to think computationally is important not only for preparing students in the field of computer science [W2339183141, W2997493868, W2046268797] but also, more broadly, for providing them with a general cognitive toolkit to approach and solve everyday problems [W2339183141, W2997493868, W2593947425, W2106915131].\n\nComputer programming and code writing are two means of CT and two instrumental skills through which CT is taught and practiced in schools [W1970953601]. They include the skills to create, modify, and evaluate codes and the knowledge about programming concepts and procedures. In school settings, children are commonly taught CT through educational robotics (ER), or virtual coding activities, which both involve programming and coding by means of technologies, or through unplugged coding without the use of technology. ER consists in developing a program or code string to give instructions to a robot, so that it can perform specific actions or achieve goals in a physical environment [W2593947425, W2106915131, W2990676569, W3005386113, W2999262696]. Unplugged coding consists of tangible, paper and pencil or physical activity, by which children learn the basic concepts and procedures of CT and programming, whereas virtual coding involves the development of a computer program to teach a computer, or a virtual character, to achieve a goal in a virtual environment [W3000696469, W2160851124, W2501933020, W2565944966]. Although in this systematic review and meta-analysis we will refer to programming and coding as two means through which CT is introduced and taught in schools, this does not imply assuming that coding and programming equal computational thinking nor that they always involve it. However, when children in school learn to develop programs for \"instructing\" a computer, another child or a robot to solve a problem, they also learn to solve CT problems themselves, articulate and clarify their thoughts and plans, generate a clear sequence of commands (the code) and test their hypotheses, processes that can stimulate the development of other cognitive and metacognitive skills [W2160851124, UNMAPPED:20].\n\nPast studies have reported positive cognitive effects of these CT activities especially in the domain of children's executive functions (EFs) [W3000696469, W3005386113]. EFs are a complex set of cognitive skills related to goal setting and the performance of goal-directed behaviors, and thus crucial for self-regulation and academic achievement. Although models of EFs may differ in the EF skills they focus on, there is general consensus on the distinction between core EFs (working memory, response inhibition and shifting or cognitive flexibility), and complex or higher-order EF skills, like planning and problem solving [W2183085473].\n\nChildren's command over, or inhibition, of impulsive responses, their working memory (WM) capacities, encompassing their ability to monitor and update temporarily stored information, and their cognitive flexibility which entails switching perspectives, shifting attention between mental sets or tasks, and readily adjusting behavioral responses to different tasks or environments represent core executive functions [W2035599443, W2043358844, W2124517301, W2149612743] from which higher-order executive functions, such as planning, problem-solving, and reasoning develop [W2183085473, W2124517301, W2095684436]. Welsh and Pennington [W2095684436], for instance, focusing on higher order EF skills, describe executive functioning as the ability to maintain an appropriate problem-solving set for achieving a goal, and define it as a complex skill set that encompasses not only planning skills and a mental representation of the task and of the outcome, but also inhibitory control, that is, the capacity to inhibit or defer prepotent responses.\n\nAs higher order EF skills like problem solving involve core EFs, practicing and enhancing these higher order skills through computational thinking (CT) can impact on their core EF components too. In addition, since core EFs also underpin the ability to achieve academic outcomes in reading [W2803587102, W3022838265], writing [W2057217095, W2973167322], and mathematics [W1976009192], improvements in problem solving skills could have transfer effects on academic skills [W2898166493].\n\nAlthough recent experimental studies provide evidence of a causal link between the teaching of CT and the improvement of EF skills in children [W3000696469, W2990676569, W3005386113], there remains uncertainty regarding the consistency, robustness, and generalizability of these effects across different (higher order and core) executive functions. Moreover, it remains unclear whether the different instructional tools employed to teach CT skills, such as educational robotics (ER), virtual coding or unplugged coding, yield different effects. At this early stage of research, there are very few experimental studies that have directly compared the efficacy of these different types of intervention [W3087874839]. Thus, the only way to compare the efficacy of these types of CT programs is through systematic reviews or meta-analyses, which are now urgent because several countries are currently integrating CT into their school curriculum. Discussing evidence coming from experimental studies is important to allow educators and policymakers to make informed instructional decisions.\n\nAttempts to conduct rigorous systematic reviews or meta-analyses on the cognitive effects of CT have been limited. What is even more important is that, to the best of our knowledge, none of the existing systematic reviews or meta-analyses have examined the causal relationship between CT and executive functions. Most of the current systematic reviews and meta-analyses have focused on one hand on studies that did not allow to draw robust inferences on causal effects, on the other hand they focused on a rather large and heterogeneous set of cognitive functions and academic skills [W2898166493, W2036079418, W2036079418]. The present study contributes to filling this literature gap and advancing our understanding of the beneficial effects of CT on executive functions, a set of cognitive skills that are especially crucial for academic performance and adaptive behavior. This investigation can increase our theoretical comprehension of CT, as observing transfer effects between different domains, like CT and EFs, provides insights into the shared cognitive foundations that underpin their connection. Determining the impact of CT interventions on children's EFs has also practical implications. By identifying the executive functions that are most influenced by computational thinking (CT), we can determine the optimal age or grade level for implementing CT programs within the school curriculum. Indeed, different EF skills have different windows of plasticity [W2144712589, W3202170262].",
+      "citations": [
+        "W2339183141",
+        "W2522521125",
+        "W2810095574",
+        "W3000696469",
+        "W2952562653",
+        "W2997493868",
+        "W2046268797",
+        "W2593947425",
+        "W2106915131",
+        "W1970953601",
+        "W2160851124",
+        "W3005386113",
+        "W2183085473",
+        "W2124517301",
+        "W2095684436",
+        "W2095684436",
+        "W2803587102",
+        "W3022838265",
+        "W2057217095",
+        "W2973167322",
+        "W1976009192",
+        "W2898166493",
+        "W2990676569",
+        "W3087874839",
+        "W2036079418",
+        "W2036079418",
+        "W2144712589",
+        "W3202170262"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "5",
+        "20"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. The Systematic Review and Meta-Analytic Study",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Research Questions",
+          "subsubsections": [],
+          "text": "We addressed three research questions:\n\n1) Which EFs are most impacted by the teaching of CT/coding?\n2) Does the cognitive effectiveness of CT vary with children's age?\n3) Which instructional modality (educational robotics/unplugged coding/virtual coding) is the most effective in enhancing EF skills in learners aged 4\u201316 years?\n\nThe first research question (Which EFs are most impacted by the teaching of CT?) was addressed both through a systematic-review and meta-analysis, whereas the second and third research questions (Does the cognitive effectiveness of CT vary with children's age? and Which instructional modality is most effective?) were addressed only by a systematic review of the literature, because the number of studies considered in the meta-analysis was insufficient to statistically test the effects of age and intervention type through moderator analyses.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Method",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.2.1. Literature Search, Screening and Eligibility Criteria",
+              "parent_subsection_id": "s_2_2",
+              "text": "Studies were selected according to the following keywords: (\"executive functions\" OR \"cognitive control\" OR \"cognitive abilities\" OR \"planning\" OR \"inhibition\" OR \"working memory\" OR \"cognitive flexibility\" OR \"shifting\" OR \"problem solving\") AND (\"computational thinking\" OR \"coding\" OR \"programming\" OR \"educational robotics\") using Scopus, ERIC, Web of Science, PsychInfo, Google Scholar, ACM Digital Library, and IEEE Xplore as databases. Both research articles and conference papers were included in the study, provided they were peer reviewed.\n\nTo perform our literature search and identify eligibility criteria we followed the Population, Intervention, Comparison, Outcome (PICO) guidelines [W1966756094]. The following eligibility criteria were applied:\n\n\u25cf **Participants (P):** the study participants had to be children or adolescents, between 4 and 16 years old.\n\u25cf **Interventions (I):** CT and coding interventions could be based on tangible (ER, unplugged coding) or virtual coding (visual programming) instructional activities.\n\u25cf **Comparison (C):** the study had to be an experimental, randomized trial or a cluster randomized trial (CRT), or a matched group trial. Thus, only studies involving equivalent pretests-posttests and an experimental and a control/comparison group randomly assigned to an experimental or control condition, or matched based on specified criteria, were considered eligible.\n\u25cf **Outcomes (O):** dependent measures (outcomes) were executive functions (e.g., WM, response inhibition, shifting, planning or problem-solving). Fluid intelligence, which relies on cognitive flexibility, was also considered, but only for the systematic review because just one study was found for this outcome.\n\nAdditional eligibility criteria were:\n\u2022 only papers written in English were considered.\n\u2022 only peer reviewed publications ranging from 2006 (when Wing provided the first definition of computational thinking) to 2022 were considered.\n\u2022 the studies should report sufficient information about the intervention tested (e.g., structure, kind of activities).\n- to be included in the meta-analysis all studies should specify sample size, participants' age, and provide effect sizes or means and standard deviations of the pretest and posttest performance.\n\nThe PRISMA diagram [W3144543375] in Fig. 1 shows the literature selection process. A total of 479 records were identified based on our literature search. An open-source software for systematic reviews, ASReview, was used for the initial screening of this literature. Two examiners (the first author and a master's student) checked all the abstracts of the records removed by ASReview. After removing duplicates and the records marked as irrelevant by ASRview, the abstracts of all remaining records (n = 218) were independently screened by the same two judges. Based on this further screening, 166 publications were excluded as they did not meet one or more eligibility criteria. There were 52 papers (53 studies, as one paper presented two studies) assessed for eligibility, after the initial screening; 22 (mainly conference papers) were subsequently excluded because they were not peer-reviewed studies, and 12 were excluded due to insufficient information on participants (e.g., age or grade level), interventions or the outcomes assessed (specific measures, effect sizes means or standard deviations). From this selection process, 18 papers (19 studies) were included in the systematic review. Due to the strict eligibility criteria, only 10 publications (corresponding to 11 studies) were included in the meta-analysis. Of the eight studies included in the systematic review and excluded from the meta-analysis, seven were excluded due to lack of statistical data (i.e., means and standard deviations) [W3087874839, W2990788823, W2990676569, W2799689462, UNMAPPED:78, UNMAPPED:79, UNMAPPED:80], and one study was excluded because it was the only one assessing fluid intelligence [W3165747664]. Although meta-analyses normally involve a larger number of studies, meta-analyses on few studies (10 studies or less) are not uncommon, especially in some research areas, like the assessment of new interventions [W2792076277].\n\nDisagreements between the two examiners were solved via discussion with the last author of the study, to reach a consensus. There are various methods for calculating IRR [W2893300601]; we used the percentage of agreement between coders (90% agreement) and the k statistic measure ($\\kappa = 0.85$).",
+              "citations": [
+                "W1966756094",
+                "W3144543375",
+                "W3165747664",
+                "W2792076277",
+                "W2893300601"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.2.2. Studies Coding and Data Extraction",
+              "parent_subsection_id": "s_2_2",
+              "text": "Coding for study descriptors and quality indicators was performed by the first author and, subsequently and independently by the last author. The first author read all 19 studies that met the inclusion criteria and classified the studies by intervention type into one of the three following categories: (1) virtual/plugged coding, (2) unplugged coding, and (3) educational robotics. Instructional activities were further coded as: (a) structured, when children were asked to solve well-defined problems with a clear, given goal and correct solution, e.g., giving instruction to a spite or robot to reach a specific target, or (b) unstructured, when children solved open-ended (or creative) problems with no predefined solution, such as developing a project or designing a new game. There were only two cases of disagreement between the first and last author, which were resolved through discussion.\n\nEach study was coded for thirteen study characteristics, as reported in Table 1: (1) study design (randomized control, matched design), (2) participants' grade level and (3) age group (younger or older), (4) sample size, (5) participants (i.e., with typical development or atypical development), (6) intervention modality (virtual coding, ER, unplugged coding), (7) intervention tool (e.g., code.org, Scratch, LEGO), (8) whether the intervention was structured or unstructured, (9) intervention activities (the specific activities performed during the intervention), (10) type of control group (i.e., passive or active control group), (11) control group activities (e.g., business-as-usual activities or other types of STEM or programming activities), (12) overall intervention length (in minutes), and (13) main outcomes (with effect sizes when available), coded in five categories: problem-solving, planning, working memory, inhibition, and cognitive flexibility. Some studies reported intervention duration in hours, some in minutes, and some in hours per week. Thus, all durations were converted to minutes to have the same unit of measurement across studies.\n\n**TABLE 1**\nDefinitions for study characteristics and quality indicators.\n\n{{TABLE:tbl_01}}",
+              "citations": [
+                "W2339183141",
+                "W2624651098",
+                "W2522521125",
+                "W2888438995",
+                "W2810095574",
+                "W3000696469",
+                "W2952562653",
+                "W2997493868",
+                "W2046268797",
+                "W2593947425",
+                "W2106915131",
+                "W1970953601"
+              ],
+              "tables_in_text": [
+                "tbl_01"
+              ],
+              "citations_unmapped": [
+                "5"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.2.3. Quality Assessment",
+              "parent_subsection_id": "s_2_2",
+              "text": "Study quality was assessed by means of a checklist across seven indicators: (1) quality of the experimental design, (2) presence/absence of an active control group, (3) pretest equivalence or pretest scores controlled in analyses, (4) same pre-posttest measures, (5) reliability of the assessment tool, (6) method clarity, (7) intervention clarity (see Table 1). Each quality indicator was scored as 1 (met) or 0 (not met). If information concerning a specific quality indicator was not provided, it was assumed the indicator was not met, and the study scored 0. A synthesis of the quality assessment is reported in the tables folder of the supplemental material.",
+              "citations": [
+                "W2339183141",
+                "W2624651098",
+                "W2522521125",
+                "W2888438995",
+                "W2810095574",
+                "W3000696469"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "5"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "2.2.4. Meta-Analysis: Data Extraction",
+              "parent_subsection_id": "s_2_2",
+              "text": "Data extraction was performed by the two examiners who also performed the literature screening. Once the final pool of studies was selected, one extracted all data (i.e., sample size, means and standard deviations or effect sizes) for the meta-analysis, and the other checked the data extraction subsequently.\n\nIn case of papers with missing data, we contacted the study authors before excluding them from the meta-analysis. One paper [W2990676569] contained two studies with a different pool of participants. To simplify the data structure, the two experiments were treated as different studies (2019a and 2019b). In the data folder of the supplemental material, the full table summarizing the data and outcomes of all included studies is presented.\n\nTable 2 summarizes all included studies, distinguishing between those included in the systematic review only, and those included both in the systematic review and meta-analysis. In the Results section, we provide detailed descriptions for each study.\n\n**TABLE 2**\nStudies Included in the Systematic review and Meta-analysis (Effect Sizes or Significant Effects are Reported).\n\n{{TABLE:tbl_02}}\n\nNote: Age group = the category by which results are reported; Effect sizes = Significant major effects; S = Structured; U = unstructured; NT = near transfer effects; n.s. = non-significant.\n$^{a}$ Non-equivalent pretest scores were not covaried in the analyses.",
+              "citations": [
+                "W2990676569"
+              ],
+              "tables_in_text": [
+                "tbl_02"
+              ]
+            }
+          ],
+          "text": "The systematic review and meta-analysis were conducted in accordance with the guideline of the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA 2020) [W3144543375].",
+          "citations": [
+            "W3144543375"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Statistical Analysis",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.3.1. Effect Size Computation",
+              "parent_subsection_id": "s_2_3",
+              "text": "We used in the MA the $d_{ppc2}$ effect size measure as Morris [W2154973070] proposed, where the difference between pre-means and post-means for the experimental and control groups is standardized using the pretest standard deviations. The $d_{ppc2}$ has been demonstrated to be the most appropriate measure for this research design. Despite being called d, the effect is computed by default [W2154973070] by applying the Hedges' correction for small samples. For measures where lower values correspond to better performance (e.g., number of errors) we changed the sign of the effect, thus, positive values always mean that the CT is effective. For computing the effect size sampling variance, we imputed the pre\u2013post correlation because this was missing from the majority of included papers. We decided to use a pre\u2013post correlation of 0.7. We also included a sensitivity analysis using different correlation values (0.5, 0.7, and 0.9) in the supplementary materials.\n\nBetween and within studies the same underlying psychological construct could be measured with different instruments. We thus decided to assign the same label to effects referring to the same underlying psychological construct. For example, measures derived from WM, the Backward Corsi Block Tapping subtest [UNMAPPED:89] and Matrix Path [W3114639382] were all coded as WM. Similarly, scores at standardized tests, ad hoc problem solving tasks and self-report scales assessing problem solving were coded as problem solving. In this way, we classified the reported outcomes according to the underlying EF: inhibition, WM, shifting, planning, and problem solving. Thus, multiple effect sizes referred to the same construct were aggregated to obtain a single measure. Aggregating multiple statistically dependent effect sizes requires imputing the correlation between different measures. Following Borenstein et al. [91, pp. 225\u2013233], we used a correlation of 0.5, but with an inverse-variance weighted average [W2139168999]. A sensitivity analysis using different correlation values (0.3, 0.5, and 0.7) is presented in the supplemental material.",
+              "citations": [
+                "W2154973070",
+                "W3114639382",
+                "W2139168999"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "89"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.3.2. Statistical Model",
+              "parent_subsection_id": "s_2_3",
+              "text": "When multiple outcomes are collected from the same pool of participants, a situation of statistical dependency emerges, which, if ignored, brings strongly biased meta-analytic estimations [W2987041415, W2969304932, W2039842580]. The most appropriate approach is to consider the correlation between multiple outcomes using a multivariate meta-analytic (MA) model [W2987041415]. Given the limited number of papers, we decided to use a fixed-effect model as Cai and Fan [W2987041415] suggest. Despite the random-effects model allowing to generalize conclusions at population level, the between-papers variability estimation (i.e., the focus of the random-effects model) can be strongly biased with a limited number of papers [W2059524332, W1784175517]. The multivariate fixed-effect model estimates the average effect size for each outcome and requires considering the correlation between different measures. Again, the included papers did not report this correlation, thus, we imputed a value of 0.5. As before, we conducted a sensitivity analysis using different values (0.3, 0.5, and 0.7), again presented in the supplemental material.\n\nThe MA model was implemented in R [UNMAPPED:98] using the metafor package [W2139168999]. For hypothesis testing, we used the omnibus Wald $\\chi^{2}$ test. For each outcome, we reported the average effect size, standard error, the 95% confidence interval, and the associated Wald z test. Further details about the analytic approach can be found in the supplemental material. All code and data to reproduce the analysis are available online in the Open Science Framework repository.",
+              "citations": [
+                "W2987041415",
+                "W2059524332",
+                "W1784175517",
+                "W2139168999"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "98"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In instructional research, systematic-reviews and meta-analyses provide the best evidence to support instructional practice [W2173113551]. Combining data from several independent studies increases the statistical power of the analysis and the precision of the effect estimates. The reliability of a meta-analysis relies, however, not only on the quantity of studies included but also on the robustness and reliability of their original findings from those studies. For instance, when the aim is to assess instructional effects, including in the meta-analysis studies that lack experimental rigor may represent, as noted earlier, an important limitation. If the research focus is on causality, rigorous hypotheses testing requires controlled experimental studies, consisting of randomized or cluster randomized trials (CRTs; CONSORT guidelines) [W4248033032].\n\nAlthough a substantial number of studies in the field of CT report that learning to code improves CT [W2144049026, W3165747664] and EFs [W3000696469, W3005386113, W3134967991], only some of these are experimental or (cluster) randomized trials [W3000696469, W3005386113, W3165747664]. In contrast to Scherer et al. [W2898166493], in the present systematic review and meta-analysis we thus consider only the experimental trials that effectively controlled for the potential impact of repeated testing and practice effects when evaluating the effectiveness of the intervention.\n\nThis systematic review and meta-analysis also focus on a narrower set of cognitive skills than those considered by Liao [W2036079418] and Scherer et al. [W2898166493]: core and higher order EFs, like response inhibition, WM, cognitive flexibility, planning, and problem solving. Since these skills underpin children's performance across several complex cognitive and academic tasks, determining the effects of CT and programming on these EFs can help explain why the benefits of CT/programming documented by prior meta-analyses are so broad but also vary across tasks. A further goal of the present systematic review and meta-analysis is to compare the effects of using different instructional tools (e.g., ER and virtual coding) in the teaching of CT/programming.\n\nUnlike previous meta-analytic studies that have explored the effects of computational thinking and coding across a wide age range, spanning from preschool to university years [W2898166493, W2036079418], the focus of this systematic review and meta-analysis is on the preschool and school years (a range from 4 to 16 years of age), a time period which represents a critical window for investigating the effects of EF-focused interventions [W2089336383, W2081592900].\n\n**FIGURE 1**\nFlow diagram describing the literature search and the selection of eligible studies (adapted from the PRISMA Statement) [W3144543375].\n\n*Segment 1/2: Identification Records identified through databases searching (n=479) (n=480 studies)* Records screened (n=218) Reports sought for retrieval (n=0) Full-text Reports assessed for eligibility (n=52) (n=53 studies) Reports included in the systematic review (n=18) (n=19 studies) Reports included in the meta-analysis (n=10) (n=11 studies) Records not identified (n=0) No clear sample, i.e., no data available Outcomes associated with the study (n=18) (n=19 studies) Outcomes associated with the study (n=18) (n=19 studies)\nSegment 2/2: Records removed before screening: Duplicate records removed (n = 6) Record marked as ineligible by Asreview (n = 253) Records removed as not relevant **(n = 2) Records (abstracts) excluded (n = 166) Reason: not fit one or more eligibility criteria Reports not retrieved (n = 0) Full-text Reports excluded (n = 34) Reasons: No peer review (n = 22) No clear method, i.e., insufficient reporting of sample, intervention, skills assessed (n = 12) Reports excluded (n = 8) Reasons: Outcomes, i.e., the study was the only one assessing fluid intelligence (n = 1) Lack of statistical data, i.e., M, SD (n= 7)*\n\nNote. * the number of studies does not correspond to the number of reports because one report has two studies; ** the study did not address the target topic of the present systematic review",
+      "citations": [
+        "W2173113551",
+        "W4248033032",
+        "W2144049026",
+        "W3165747664",
+        "W3000696469",
+        "W3005386113",
+        "W3134967991",
+        "W2898166493",
+        "W2036079418",
+        "W2036079418",
+        "W2089336383",
+        "W2081592900",
+        "W3144543375"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Characteristics of Included Studies",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.1.1. Quality of the Studies",
+              "parent_subsection_id": "s_3_1",
+              "text": "A synthesis of the studies' quality is reported in the extended Table Studies characteristics and quality indicators in supplemental material. The overall quality was high. When all seven quality indicators were considered, the studies satisfied on average 78.20% of the quality criteria, with 8 studies meeting 100% of quality indicators.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "The sample comprised 19 studies included in the systematic review, for a total of 1527 participants. Of the primary 19 studies, 11 were also included in the meta-analysis (see Table 2 and Fig. 1). The overall sample size of the MA was of 862 participants (n = 433 in experimental conditions and n = 429 in control conditions).\n\nThe study samples included participants from 4 to 16 years, with a predominance of preschoolers or primary school children (12 studies, 63%). Five studies (26%) involved children from grade 5 to grade 8, and only one study involved older students (10th graders). The sample size of the included studies ranged from 28 to 187, with a majority of studies with samples > 50. Among the studies selected, 12 tested the effects of virtual coding interventions with children from preschool to grade 8, and seven tested the efficacy of tangible coding interventions (ER or unplugged coding activities) with preschoolers and students from grade 1 to grade 10. Only 31% of the interventions consisted of unstructured coding/programming activities (n = 6). They were all addressed to older students (grades 5 to 8) and involved virtual coding. Among the outcome measures, problem solving skills were the most frequently assessed (13 studies, 68%), inhibition skills were assessed in 5 studies, planning was assessed in 3, working memory in 2, cognitive flexibility in 2, and fluid intelligence in one study only.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Results of the Systematic Review",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1. Which EFs Are Most Impacted by the Teaching of CT?",
+              "parent_subsection_id": "s_3_2",
+              "text": "The systematic review revealed that CT interventions are generally effective in boosting children's EFs. Of the 19 studies examined in this systematic review, only four reported non-significant effects of CT interventions [W3087874839, W2990788823, W3165747664, W2799689462].\n\n##### 3.2.1.1. Problem solving\nSixteen out of 19 studies examined the effects of CT programs on children's problem solving, assessed by problem solving tests or ad hoc tasks [W2068454785, UNMAPPED:78, UNMAPPED:80, UNMAPPED:86] or self-report problem solving measures [W3205435041, W2799689462]. Six of these studies tested the effects of game-design or project-development activities, while the remaining 10 studies explored the efficacy of more structured virtual coding or educational robotics programs.\n\n##### 3.2.1.2. Game-design and project-development interventions\nSignificant and positive effects of game-design and project-development interventions were found in studies in which students' problem solving skills were assessed by the Program for International Student Assessment (PISA) of the Organisation for Economic Co-operation and Development [W2068454785, UNMAPPED:86, UNMAPPED:100]. Akcaoglu and Koehler [W2068454785] proposed to 11-14-year-old students a 15-h game-design activities in which students had to design digital games through Kodu Game Lab, a 3D game development environment for visual programming. The authors found a large effect of the intervention program, Cohen's d = 1.05, on participants' problem solving.\n\nSimilar findings are reported by Nam et al. [UNMAPPED:86], despite their intervention program, based on project-development activities, was approximately half the time that of Akcaoglu and Koehler's [W2068454785]: 8-h versus 15-h. The authors engaged 12-year-old students in four weeks project-development activities based on Scratch, an open-source block-based visual programming tool used to create interactive stories and games, finding significant improvements of the participants on PISA problem solving assessment.\n\nProject-development activities based on Scratch result effective also when compared with other experimental trainings (active control groups) and for students with diverse background. Lai and Yang [UNMAPPED:80] assessed the efficacy of visual programming activities based on Scratch on sixth grade students' problem solving and reasoning skills assessed by a problem-solving test. During the intervention, the students received instruction on the basic operations and tools of Scratch, scaffolding in problem solving and subsequently developed their own project. The problem-solving skills of the students in the Scratch-based program improved significantly more than those of an active control group, participating in Adobe Flash learning activities.\n\nBrown et al. [UNMAPPED:78] tested the effects of four 45-min lessons (approximately 4-h program) based on Scratch on fifth and sixth graders' mathematical problem-solving. All students, predominantly African-American, were from disadvantaged backgrounds and low-income families. The Scratch lessons, designed to introduce the students to efficient and inefficient mathematical problem-solving methods, were focused on learning debugging and loops, two key operations in CT and programming. Students' problem-solving strategies were assessed by ad-hoc designed problem-solving exercises, consisting of mathematics problems that could be solved using an efficient (e.g., multiplication or loop) or inefficient (e.g., repeated addition) strategy. The results again showed that the students in the experimental group improved in solving mathematical problems more than the control group, addressed to standard instructional activities.\n\nOther studies have examined the effects of CT programs on students' self-reported problem-solving. Erol and \u00c7\u0131rak [W3205435041] used the Problem-Solving Inventory for Children (PSIC) [UNMAPPED:101] to assess changes in the problem-solving of a group of Turkish sixth graders after a 12-week game-design intervention (24-h) with Scratch. The students addressed to the game-design intervention were first introduced to programming basics (e.g., operations, control structures) and the use of Scratch, and then to semi-structured and free game-design activities. Their problem-solving scores were compared against those of an active control group who were also introduced to programming and asked to develop algorithms that solved problems during Information Technologies and Software classes. The findings revealed a significantly larger improvement in the students' approach to problem-solving for the experimental compared to the active control group ($\\eta^{2}=0.26$).\n\nOnly one study, by Oluk and Saltan [W2799689462], reported unsignificant effects of Scratch-based programs. The authors tested the effects of a 12-h algorithm development Scratch-based instructional program on sixth-grade students' self-reported problem solving. The students in the experimental group (31 participants) learned algorithms with the help of Scratch, whereas the control group (34 participants) received standard curricular instruction on algorithm development. Their approach to problem-solving was assessed by the same problem-solving inventory used by Erol and \u00c7\u0131rak [W3205435041] (the PSIC) [UNMAPPED:101]. Neither of the two groups showed improvement in problem solving scores. It must be noted, however, that differently from Erol and \u00c7\u0131rak's study, the instructional program tested in this study did not focus on game-design or project-design activities, which are comprehensive problem-solving tasks, but targeted only one of the components of problem solving: algorithmic thinking.\n\n##### 3.2.1.3. Other visual programming/educational robotics and unplugged coding interventions\nOther CT interventions based on different visual programming tools, such as code.org or Logo programming, unplugged coding, or educational robotics are more structured than game-design or project-development interventions, and for this reason were primarily addressed to younger children, preschoolers, or first or second graders. These interventions too have been proven effective in stimulating children's problem-solving skills.\n\nFive studies tested the effects on problem solving of structured visual programming (i.e., virtual coding) activities [W3000696469, W2990788823, W2990676569, UNMAPPED:87]. In three studies [W3000696469, W2990676569], involving a total of 297 children, 1st and 2nd graders, Arf\u00e9 et al. found consistent and significant near transfer effects on problem solving of a short, 8-h, structured visual programming intervention based on code.org. Like Scratch, code.org is a visual programming platform in which children write their code by moving programming blocks. This way, they construct sequences of commands that give instructions to a sprite or a character (Angry bird, a bee, a zombie), which executes them. Differently from Scratch, however, the games typically have a predefined structure and aim at a given objective (e.g., getting to a target or performing a specific action). Although structured, in Arf\u00e9 et al.'s studies the intervention was designed to cause children to switch between scenarios, programming functions (e.g., loops, debugging) and types of problems to force children to maintain a problem-solving approach. Children's problem-solving abilities were assessed by asking children to solve new code.org games, similar to those solved during the instructional program. The performance of the children who received the intervention was compared to that of a wait-list group receiving standard STEM instruction. Effect sizes were large, ranging between d = 1.31 to 1.91.\n\nDifferent results were obtained by \u00c7iftci and Bildiren [W2990788823], who used a problem-solving skill scale [UNMAPPED:102] to test the far transfer effects of a structured 8-h virtual coding intervention based on code.org on 28 4- to 5-year-old children's problem-solving abilities. The problem-solving scale aimed to assess the abilities shown by children when facing actual real-life problems. Children were shown pictures representing real life problems, explained by short stories that defined the problem, and were asked to find the best answer to the problem. The study showed no significant improvement of children's problem-solving skills. The intervention improved though their logical, nonverbal, cognitive abilities measured by the Raven Colored Progressive Matrices Test.\n\nOne of the studies examined [UNMAPPED:87], yielded unconclusive findings due to a methodological flaw. The authors assessed fifth graders' creativity and problem-solving skills following a 16-min lessons course based on Logo programming. Logo is a simple programming language by which children learn to program generating commands to control the movements of a turtle, a cursor, thereby creating drawings or geometric forms. In the study, the children in the Logo programming intervention worked in peers to solve geometric games. Their creative skills were assessed by a creative thinking figural test and their problem-solving skills were assessed by a logical word test and figural problem-solving test. The results revealed statistically significant effects of the intervention on children's creativity. At the posttest, children in the Logo program were also better in figural problem solving than the control group, who participated in standard ICT (Information and Computer Technology) curricular activities. However, as the experimental group outperformed the control group in figural problem solving also at the pretest and pretest scores were not covaried in the analyses, it is not possible to determine whether the outcome reflected true intervention effects or individual differences between the groups.\n\nOther studies have examined the effects of educational robotics (ER) activities on children or early adolescents' problem-solving [W3087874839, W3134967991, W2922220019, W2964444324]. La Paglia et al. [W2964444324], involved 30 sixth graders (10\u201312 years old) in an extra-curricular ER laboratory of 10 3-h sessions. The laboratory activities employed a LEGO Mindstorms robot kit. Students participating in the laboratories worked in group to build a robot body and generate a program to assign it an artificial intelligence. The effects of the ER intervention were assessed by a metacognitive questionnaire assessing students' ability to apply metacognitive skills to problem solving. The performance of the experimental group was compared to that of a passive control group of 30 students not participating in any extra-curricular activity. The results revealed that the ER laboratory significantly improved the metacognitive control skills related to problem-solving of the experimental group.\n\nWhen problem-solving abilities are assessed by self-report measures the results are less clear. \u00c7\u0131nar and T\u00fcz\u00fcn [W3087874839] compared the improvement in problem solving of two groups of 10th graders: one participating in ER activities, and the other in object-oriented visual programming (active control group). During the experimental ER intervention, which lasted 12-weeks (approximately 36 h), the students worked in groups using Lego Mindstorms NXT 2.0 to build robots and then manipulated the program to train their programming skills. The comparison, active control, group performed CT activities in a visual programming environment individually or in group. During the practical problem-solving sessions, guideline questions were used to scaffold the problem solving of both groups. Problem solving was assessed through the Problem-Solving Inventory (PSI) developed by Heppner [UNMAPPED:103], which provides a self-assessment of behaviors and approaches associated with successful problem solving. No significant changes were observed in the problem-solving scores of the two groups.\n\nOnly two studies have examined the effects of ER interventions on the problem-solving of preschoolers and first graders [W3134967991, W2922220019]. Nam et al. [W2922220019] tested the effects of a 90 min -8-sessions- card-coded robotic course on 5\u20136-year-old children's mathematical problem solving. Children were divided into two groups: the experimental group participated in the card-coding robotic course, while the comparison group participated in daily school activities and performed problem-solving activities as outlined in the national school curriculum (e.g., board games). A TurtleBot, which is a card-coded robot, was used for the ER intervention. The instructional program consisted of several activities: problem identification, planning with the support of worksheets, coding with cards and observing or evaluating the program outcomes, followed by debugging. Mathematical problem-solving was assessed by an adapted version of the Ward [UNMAPPED:104] problem solving instrument. The results revealed that the children in the ER group improved significantly more in problem-solving than controls: The dimension of the effect was large ($\\eta^{2}=0.17$).\n\nSimilar findings are reported by \u00c7ak\u0131r et al. [W3134967991], who evaluated the effect of a 32-h ER intervention in which LEGO Education WeDo 2.0 was used to enhance the problem-solving skills of preschoolers. Children in the experimental group were asked to first build a robot, and subsequently to write a code for programming the robot through drag-and-drop block-based programming activities. After completing and executing the program they had to verify the accuracy of the instructions given to the robot, reflecting on the functions of the different code blocks, and on the codes used for the activity. Children in the (active) control group were involved in joint book reading activities, reasoned about the stories read, and performed creativity and categorization activities. Children's problem-solving was measured by the Problem Solving Skill Scale (PSSS) [UNMAPPED:105] assessing problem-solving applied to real-life problems. The results showed a significantly greater improvement of problem-solving in the experimental compared to the active control group.\n\nOnly one study [UNMAPPED:79] tested the effects of unplugged coding activities on problem solving. Participants were 34, 14 to 18-year-old, students with mild intellectual disabilities. Demir [UNMAPPED:79] examined the effects of unplugged coding activities on their problem solving. Special education classes, of approximately 4\u20136 students each, were randomly assigned to an experimental or control condition. The experimental intervention required the students to play structured games, based on unplugged activities, such as finding solutions to problems presented in stories or Tower of Hanoi problems. Problem-solving skills were assessed by asking to solve everyday like problems (e.g., washing dishes or making pasta problems). The results showed significant effects of the unplugged coding intervention.\n\n##### 3.2.1.4. Planning and core EFs\nSix studies considered in this systematic review assessed other EF skills, such as core EFs (inhibition, working memory and cognitive flexibility or switching), planning or fluid intelligence. They involved primarily younger children, from preschool to grade 2, and tested the effects of structured visual programming or ER interventions.\n\nIn their studies, Arf\u00e9 and colleagues [W3000696469, W2990676569] examined also the effects of code-org game-based coding program on first and second graders' cognitive inhibition and planning abilities, finding that the 8-h code.org based intervention produced significant and moderate to large effects on the planning and cognitive inhibition skills of first and second graders. Cognitive inhibition and planning skills were assessed through standardized neuropsychological tests. Inhibition skills were assessed by the square and circle NEPSY-II subtests [UNMAPPED:106] and a Numerical Stroop test [UNMAPPED:107]. Planning skills were assessed by the Elithorn maze test [UNMAPPED:108] and the Tower of London, ToL test [W2040427372]. The effect sizes ranged from d = 0.65 for response inhibition to d = 1.27 for planning. These results confirmed that even a relatively short structured virtual coding intervention (8 h of code.org-based activities) can boost children's cognitive inhibition and planning abilities.\n\nVirtual coding interventions seem however less effective in stimulating cognitive flexibility. In a randomized trial, \u00d6zcan et al.'s [W3165747664] compared the effects of a 10-week (20 h) learn-to-code (virtual coding) program to two control instructional conditions: another STEM comparison treatment, based on mathematics, and a reading program control condition. One-hundred and seventy-four fourth graders from socioeconomically disadvantaged backgrounds were equally distributed and randomly assigned to the three conditions. Their fluid intelligence was assessed with the matrix reasoning task from the Wechsler Abbreviated Scale of Intelligence Measurement [UNMAPPED:109] at pre and posttest. The virtual coding program combined structured visual programming activities with Algo Digital and code.org to project-based activities with Scratch. Although computational thinking scores improved significantly only for children in the learn-to-code treatment condition, children's fluid intelligence, a measure of cognitive flexibility [W2080783328], improved equally in all groups, indicating that children's gains were unrelated to the intervention.\n\nThe few studies that have tested the effects of ER programs on children EFs have shown beneficial effects of ER on working memory and response inhibition skills in younger children [W3005386113]. Di Lieto, Pecini, et al. [W3005386113] examined the effects of a structured 20-h ER training on 5 and 6-year-old first graders' inhibition skills, WM, and cognitive flexibility. Cognitive inhibition was assessed by three standardized neuropsychological tests, the NEPSY-II circle and square subtest [UNMAPPED:106], the Little Frogs subtest [UNMAPPED:107], and Pippo Says test, a modified version of Simon-Says test assessing both inhibition and switching, that is cognitive flexibility [W2072720983]. Working memory was assessed by two visuospatial tasks: the Backward Corsi Block Tapping subtest [UNMAPPED:89] and Matrix Path [W3114639382]. Children were randomly assigned to an experimental (ER intervention, n = 96) or a control (wait list, n = 91) group condition, in which children participated in daily school activities and received the ER instructional program later. Children in the experimental group were introduced to programming through engaging coding activities with Bee-Bot, an interactive robot with a bee shape that can be programmed to execute movements using buttons on its back. After a familiarization phase with the Bee Bot, children were invited to solve complex visuospatial planning tasks with the robot to stimulate their working memory and inhibition skills. In the last sessions, task switching and inhibition tasks with Bee Bots were targeted. After the 20-h ER training, the intervention group showed significant improvements in WM and inhibition abilities with moderate effect size: d = 0.63 for visuospatial WM, and from d = 0.43 to d = 0.69 for inhibition skills, which is similar to the dimension of the effect reported for children of same grade level when the intervention involves virtual coding activities [W3000696469, W2990676569]. Insignificant effects were instead found for children's cognitive flexibility [W3005386113].\n\nIn a second study, Di Lieto et al. [W2999262696] tested the efficacy of similar structured ER activities on the visuo-spatial WM and inhibition skills of 42 1st graders with special needs, including language disabilities, attention disabilities and cognitive or motor impairments. Like in the previous study, children were assigned to an experimental or wait list group condition. The 20-h ER program was adapted to meet the motor, cognitive, and social needs of the children. The assessment instruments were the same as in the previous study. Again, the results showed an improvement in response inhibition for the children who received the training. The training effects were instead insignificant for WM.\n\n##### 3.2.1.5. Synthesis of the research findings\nIn summary, the systematic review revealed broad and positive effects of CT interventions on children's problem solving, complex EFs, such as planning, as well as on core EFs, such as cognitive inhibition and working memory skills. Remarkably, these significant effects are found for long interventions, lasting up to 32 h [W3134967991], as well as for short intervention programs of only 4 h [UNMAPPED:78]. Moreover, these effects extend also to children with special needs [W2999262696, UNMAPPED:79] or disadvantaged backgrounds [UNMAPPED:78].\n\nEffect sizes are typically larger for problem solving, both when problem solving skills are assessed by tasks similar to those proposed in the intervention programs (near transfer; effect sizes range from d = 1.31 to d = 1.91), and when they are assessed by different tasks, like PISA assessment tools [84, d = 1.05] or self-report scales [58, $\\eta^{2} = 0.26$]. Notably, the studies are consistent in showing significant effects of CT interventions even in comparison to active control groups, assigned to other STEM or programming activities [W3000696469, W3205435041].\n\nExceptions to these findings are represented by intervention studies focused on single components of CT, such as algorithm development [W2799689462], studies in which intervention effects were assessed by self-reports or problem-solving questionnaires instead of performance on cognitive tests or ad hoc problem solving tasks [W3087874839, W2990788823, W2799689462], or studies assessing cognitive flexibility [W3165747664].\n\nCT programs appear very effective even when EF skills are concerned. The dimension of the instructional effect is large for complex EFs such as planning [7, d = 1.27] and moderate to large for core EF skills. Again, the only exception is represented by shifting or cognitive flexibility. However, evidence is still limited in this latter case, as only two of the studies examined in this systematic review assessed cognitive flexibility.",
+              "citations": [
+                "W3087874839",
+                "W2990788823",
+                "W3165747664",
+                "W2799689462",
+                "W2068454785",
+                "W3205435041",
+                "W3000696469",
+                "W2990676569",
+                "W3134967991",
+                "W2922220019",
+                "W2964444324",
+                "W2040427372",
+                "W2080783328",
+                "W3005386113",
+                "W2072720983",
+                "W3114639382",
+                "W2999262696"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "78",
+                "80",
+                "86",
+                "100",
+                "101",
+                "87",
+                "102",
+                "103",
+                "104",
+                "105",
+                "79",
+                "106",
+                "107",
+                "108",
+                "109",
+                "89"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2. Does the Cognitive Effectiveness of CT Vary with Children's Age?",
+              "parent_subsection_id": "s_3_2",
+              "text": "As shown in Table 2, we divided the studies into two age-categories based on the age of their participants. The first category comprised older children, from grade 4 to grade 10, the second included preschoolers, first and second graders. The distribution of the studies across the two age-categories was balanced. Eleven of the studies considered in this systematic review tested CT programs addressed to older students, in one case [UNMAPPED:79] with mild intellectual disabilities. The remaining eight studies involved children from preschool to grade two. Based on our systematic analysis of the literature, CT interventions resulted equally effective for older and younger children.\n\n##### 3.2.2.1. Older age-group\nThe CT programs appear to be generally effective for participants in the older age-group. Among the eleven studies including older participants, only three did not report significant positive effects of the CT programs. One was the study by Oluk and Saltan [W2799689462], in which, as anticipated, the insignificant effects could be attributed to the narrow nature of the CT intervention that focused on a single component of CT, that is algorithm development. The other two studies reporting non-significant effects, by \u00c7\u0131nar and T\u00fcz\u00fcn [W3087874839] and \u00d6zcan et al. [W3165747664], proposed structured ER and visual programming interventions to 10th and 4th graders respectively.\n\n##### 3.2.2.2. Younger age-group\nAlso for the younger participants, the studies reported significant positive effects of CT programs. The only exception is the study by \u00c7iftci and Bildiren [W2990788823], in which far transfer effects of a structured virtual coding intervention were assessed by a Problem-Solving Skill Scale [UNMAPPED:102]. The assessment tool used in this study could however explain the finding. The scale consisted of picture items representing various types of real-life problems. Children (4- and 5-year-old) had to understand the problem represented and find the best answer to it. The way problems were formulated and understood by the participant could have affected the results.\n\nIn synthesis, CT intervention programs yielded to significant and positive far transfer effects both in the older and younger groups. In the younger children significant transfer effects, from moderate to large were observed both for complex EF skills and core EFs, such as WM and cognitive inhibition skills [W3000696469, W3005386113, W2990676569]. For the older children, only complex EFs like problem solving and fluid intelligence were assessed, but again the effects were significant and effect sizes, when available, were large.",
+              "citations": [
+                "W2799689462",
+                "W3087874839",
+                "W3165747664",
+                "W2990788823",
+                "W3000696469",
+                "W3005386113",
+                "W2990676569"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "79",
+                "102"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.2.3. Which Instructional Modality (Educational Robotics/Unplugged Coding/Virtual Coding) Is Most Effective?",
+              "parent_subsection_id": "s_3_2",
+              "text": "Differences in the effectiveness of CT programs appear to be related to the nature (structured or unstructured, and comprehensive or not) of the intervention more than to its modality (virtual coding, ER, or unplugged coding). Both virtual coding (visual programming) and ER intervention programs resulted effective when they addressed the various components of CT, such as problem analysis, planning, evaluating and debugging. Conversely, CT interventions focused on just one component or on programming skills solely resulted less effective [W2799689462]. CT interventions were also effective both when they were specifically tailored to boost specific EF skills, like in Di Lieto, Pecini, et al. [W3005386113] and when they were more broadly targeting problem solving abilities [W3000696469, W2990676569].\n\nGame design or project development programs, in which students are allowed to develop their own projects, have been found effective in enhancing the problem-solving skills of older participants [W3205435041, W2068454785]. These intervention programs were not addressed to younger children, who typically received more structured interventions, based on tasks with specific and predefined objectives. In these structured programs both visual programming and ER tools have been used, resulting equally effective. For instance, Arf\u00e9 et al. [W3000696469, W2990676569] and Di Lieto, Pecini, et al. [W3005386113], found very similar effects of virtual coding and ER interventions on 5-6 year-old children's response inhibition skills: d = 0.65 and d = 0.71 [W3000696469, W2990676569] and d = 0.69 [W3005386113].\n\nIt must be noted, however, that unstructured game-design or project-development programs and structured visual programming interventions, although proposed to children of different ages, yielded similar effects on students' problem solving or planning outcomes [W2990676569, W2068454785]. Akcaoglu and Koehler [W2068454785] and Arf\u00e9 et al. [W2990676569], for instance, reported similar large effect sizes of project-development and virtual coding interventions on the problem-solving skills of students from 5th to 8th grade and 1st and 2nd graders respectively.\n\nIn synthesis, when comprehensive structured CT interventions, that involve scaffolding and practicing different CT components, are proposed to younger children their transfer effects can be similar to that of problem-solving unstructured programs addressed to older participants. This does not mean, though, that the effects of CT interventions at a given age can be independent from their structured/unstructured nature. We do not have, indeed, evidence in support of this hypothesis. Conversely, the comparison between virtual coding and ER interventions provides evidence of the equivalence of these two CT tools in boosting younger children's problem solving and EF skills.",
+              "citations": [
+                "W2799689462",
+                "W3005386113",
+                "W3000696469",
+                "W2990676569",
+                "W3205435041",
+                "W2068454785"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Table 2 summarizes the characteristics of the selected studies and their main outcomes; effect sizes are also reported if available. As in Scherer et al. [W2898166493], we distinguished between near transfer effects (i.e., transfer between similar/closely related tasks or skills) and far transfer effects (i.e., the transfer between dissimilar tasks, which require different skills or strategies) [UNMAPPED:99]. As shown by Table 2, the majority of the studies assessed far transfer effects. In the following sections, the results are presented with reference to the three research questions of the study.",
+          "citations": [
+            "W2898166493"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "99"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Meta-Analysis Results: Effects of CT/Coding Interventions on Problem Solving, Planning and Core EFs",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.3.1. Publication Bias",
+              "parent_subsection_id": "s_3_3",
+              "text": "Typically, the required number of studies for a publication bias assessment using funnel plot-based analyses is large [W2988302981]. Sterne et al. [W2119605658] suggest however a minimum of 10 studies, which may increase though in presence of heterogeneity. Using selection models [W2012120824] the number of studies should be even higher [W2025809089]. For these reasons we report the publication bias assessment using the Egger regression test [W2157823046] only for the problem solving outcome that is associated with the highest number of effects (N = 9). We assessed the publication bias for the univariate fixed-effects model on problem solving with the chosen correlations' combination for the main meta-analysis model. The Egger regression is a meta-regression model estimating the relationship between sampling standard error and effect sizes. In the presence of publication bias (i.e., asymmetry in the funnel plot) the slope should be significantly different from zero. Furthermore, the intercept is usually interpreted as the estimated effect size with standard error close to zero. We computed the Egger test using the regtest function from the metafor package of R. The relationship between standard errors and effect sizes is not significantly different from zero (z = 0.245, p = 0.807) and the estimated problem solving effect with zero standard error is 0.833 (95% CI = [0.268, 1.397]). Overall, the Egger test suggests the absence of evidence for publication bias for the problem solving outcome.",
+              "citations": [
+                "W2988302981",
+                "W2119605658",
+                "W2012120824",
+                "W2025809089",
+                "W2157823046"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "The meta-analysis allowed to derive quantitative estimates of the cognitive effects of CT/coding interventions across EFs. The omnibus test suggests that at least one outcome differs from zero ($\\chi^{2}=195.693, p<0.001$). Table 3 summarizes the results of the multivariate fixed-effect model. Fig. 2 depicts the multivariate forest plot.\n\nThe results of the meta-analytic study (Fig. 2) show that except for cognitive flexibility (accuracy), all cognitive outcomes improved significantly after children performed coding or programming activities. Problem solving is associated with the highest effect ($d_{ppc2}=0.89$), planning with a moderate effect ($d_{ppc2}=0.36$), and response inhibition and WM, despite being statically significant, associated with lower effect sizes ($d_{ppc2}=0.17$, $d_{ppc2}=0.20$).\n\nAs explained in the previous sections, due to lack of information from published papers and the impossibility to have always access to raw data, we had to impute three correlations measures in order to compute the meta-analytic model. We also assessed the effect of imputing these correlations using a multiverse approach [W2526501380]. The main idea is to present a collection of different analytical possibilities. In the supplemental material, we present the effect of choosing a specific meta-analytic model (fixed vs. random effect and univariate vs. multivariate) varying also the imputed correlations. As an example, Fig. 3 presents the multiverse analysis for problem-solving. The example shows how choosing a certain model and correlations value does not affect conclusions about problem-solving. This strengthens the main meta-analytic result.\n\nModerator analyses to statistically test the influence of age and intervention type were not possible, due to the reduced number of studies for each outcome.\n\n**TABLE 3**\nMultivariate fixed-effect model summary.\n\n{{TABLE:tbl_03}}\n\nOmnibus Test \u03c75 = 195.7 p < 0.001; \u03c1pre-post = 0.7, \u03c1agg = 0.5, \u03c1multi = 0.5.\nNote. Each outcome is summarized with the estimated mean effect ($d_{ppc2}$), the standard error, the 95% confidence interval, the z value, and the p-value.\n\n**FIGURE 2**\nMultivariate Forest Plot\nNote. Each individual effect is represented with the 95% confidence interval. The dotted line represents the null effect. For each outcome, the red diamonds depict the estimated average effect and the 95% confidence interval.\n\n{{TABLE:tbl_04}}\n\n**FIGURE 3**\nMultiverse Analysis for Problem Solving\nNote. The x-axis represents the pre-post ($\\rho_{\\mathrm{pre-post}}$) correlation. On the top, there is the correlation between multiple effect sizes for the same outcome ($\\rho_{\\mathrm{agg}}$) and the correlation between different outcomes ($\\rho_{\\mathrm{multi}}$). The triangle and the bars represent the estimated effect and 95% CI. The red shape is the chosen combination for the meta-analysis. On the right are the different MA models. For the univariate model, we computed a fixed or random effect model ignoring the statistical dependence between outcomes.",
+          "citations": [
+            "W2526501380"
+          ],
+          "tables_in_text": [
+            "tbl_03",
+            "tbl_04"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Which EFs Are Most Influenced by the Teaching of CT?",
+          "subsubsections": [],
+          "text": "The review of the experimental studies showed that CT interventions are generally very effective in boosting children and adolescents' higher order and core EF skills. The largest effects were observed on children's problem solving and complex EFs such as planning, but significant positive effects emerge also for core EFs, like cognitive inhibition and working memory.\n\nThe meta-analysis provided statistical evidence to the qualitative conclusions of the systematic review, comparing the effectiveness of CT interventions across cognitive skills. Its results confirmed that problem-solving and planning were the cognitive skills that CT programs most strongly affected, indicating that children's inhibition and WM skills were influenced too by these interventions, albeit to a lesser extent.\n\nMost studies reported far transfer effects to problem-solving tasks that are different from those trained by the intervention. Our meta-analysis provides thus further support for the transferability of the skills acquired through CT programs to situations that require problem-solving abilities, finding however a larger transfer effect ($d_{ppc2}=0.89$) than in previous meta-analyses [W2898166493], both in comparison with the near and far transfer effects (respectively, $\\bar{g}=.75$ and $\\bar{g}=.47$). Planning is the other EF that reflects most the cognitive effects of CT interventions ($d_{ppc2}=0.36$), and in this case, the effects are similar to those reported for other higher order EFs (i.e., reasoning) in Scherer et al.'s study [W2898166493] ($g=0.37$).\n\nThe impact of CT interventions on children's problem solving skills is large both when children's problem solving skills are assessed by tasks similar to those proposed in the intervention programs, such as coding problems (near transfer) [W2990676569], and by very different tasks, like the problem solving tasks of PISA assessment or self-report scales (far transfer) [W3205435041, W2068454785]. In addition, these effects emerge also in studies with active control groups, that is, when the effects of CT programs are compared to those of STEM or programming activities [W3000696469, W3205435041].\n\nCT programs show also moderate far transfer effects on core EF skills such as cognitive inhibition and working memory, with effect sizes that are consistent across intervention studies employing different CT methods and tools [W3000696469, W3005386113]. These transfer effect appear however weaker ($d_{ppc2}=0.17$ for cognitive inhibition, $d_{ppc2}=0.20$ for working memory) compared to those found for higher order EFs, such as planning and problem solving.\n\nPlanning and problem-solving are higher order EFs that closely relate to the kind of problem-solving activities involved in CT programs. Thus, they may better reflect improvements related to CT. As reported in other reviews and meta-analyses on the effectiveness of EF training programs [W2183085473, W2989691307], although the benefits of EFs training can transfer to untrained skills, the transfer effects appear to be typically narrow, and more pronounced for abilities similar to those trained.\n\nOn the other hand, foundational EFs such as inhibition and working memory may show less stability over time and be more influenced by temporary psychological and physiological states, like fatigue or stress, because they depend more on executive control processes than planning and problem solving. For these latter EF skills the acquisition of effective metacognitive strategies can be more critical [W2964444324]. Other meta-analyses have shown that even when cognitive trainings are specifically focused on core EF skills, like WM and response inhibition, intervention effects can be small or non-significant, especially when far transfer effects are considered [W2910613434, W2107150897]. Inhibitory control in particular seems resistant to EF interventions, showing non-significant effects to EF computer-based trainings [W3110416031], and small effect sizes ($g^{+}=0.18$) even when the training focuses on inhibition skills (near transfer) [W2910613434].",
+          "citations": [
+            "W2898166493",
+            "W2990676569",
+            "W3205435041",
+            "W2068454785",
+            "W3000696469",
+            "W3005386113",
+            "W2183085473",
+            "W2989691307",
+            "W2964444324",
+            "W2910613434",
+            "W2107150897",
+            "W3110416031"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Does the Cognitive Effectiveness of CT Vary with Children's Age?",
+          "subsubsections": [],
+          "text": "CT interventions seem equally effective for older and younger children. Beneficial effects of CT programs on problem solving are consistently reported across studies involving older (4th to 10th graders) or younger (preschoolers-2nd graders) participants who received comprehensive CT interventions targeting various components of CT, regardless of the specific type of intervention (virtual coding or ER) [W3134967991, W3205435041, W2964444324].\n\nOlder students participating in CT programs improved in performing problem-solving tasks [W2068454785, UNMAPPED:80], in self-reported problem-solving [W3205435041], and also developed metacognitive skills involved in problem solving [W2964444324]. For the younger children, significant transfer effects, from moderate to large, were observed both for complex EF skills [W2922220019, W2068454785] and core EFs, such as WM and cognitive inhibition skills [W3000696469, W3005386113, W2990676569], although for the latter effect sizes were small.\n\nGiven that all the studies assessing inhibition and working memory in this systematic review and meta-analysis focused exclusively on younger children, aged 5\u20137, it cannot be excluded that age could account for the limited far transfer effects on these EFs. In our meta-analysis the moderating effects of age could not be tested owing to the small sample size. However, other recent meta-analytic studies that considered the effects of EF training programs on young children's (3 to 6-year-old) [W2989691307] or transfer effects of programming across a larger age-span (from prekindergarten to college students) [W2898166493] suggest that age is not a significant moderator of the effects observed. Despite these meta-analytic findings, age-related effects remain a pedagogically relevant research question that deserves more attention, especially if we consider the different plasticity of core EFs across child development [W2989691307, W4313489098].",
+          "citations": [
+            "W3134967991",
+            "W3205435041",
+            "W2964444324",
+            "W2068454785",
+            "W2922220019",
+            "W3000696469",
+            "W3005386113",
+            "W2990676569",
+            "W2989691307",
+            "W2898166493",
+            "W4313489098"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "80"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Which Instructional Modality (Educational Robotics/Virtual Coding) Is Most Effective in Enhancing Children and Adolescents' EF Skills?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.3.1. Structured Versus Unstructured Interventions",
+              "parent_subsection_id": "s_4_3",
+              "text": "A qualitative comparison between the effectiveness of structured and unstructured CT intervention programs was possible only for the older age group (grades 4 to 10). Game-design or project-development intervention programs, that consist in open-ended problems, seem much effective in enhancing the problem-solving skills and self-reported problem-solving abilities of these older learners [W3205435041, UNMAPPED:86]. Structured interventions, whether alone or combined with unstructured project development, appear to be less effective [W3087874839, W3165747664]. Exceptions are studies in which the intervention addressed students' mathematical problem solving [W2964444324] or was for students with intellectual disabilities [UNMAPPED:79].\n\nYounger children received only structured interventions. For them, structured interventions, based on logic games with a single correct solution, proved effective both in boosting problem solving and EF skills [W3000696469, W3005386113]. Among the structured programs that involved younger children, visual programming and ER tools appear to be equally effective. The specific effects of virtual coding and tangible (ER and unplugged) coding interventions are discussed below.",
+              "citations": [
+                "W3205435041",
+                "W3087874839",
+                "W3165747664",
+                "W2964444324",
+                "W3000696469",
+                "W3005386113"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "86",
+                "79"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.3.2. Virtual Coding",
+              "parent_subsection_id": "s_4_3",
+              "text": "The results of the systematic review show that virtual coding interventions, when appropriately designed, result effective for students in a large age span, from grade 1 to 8. Twelve of the experimental studies examined in this systematic review tested the cognitive effects of virtual coding interventions, and nine of them (75%) reported significant positive effects on problem-solving and other EFs.\n\nCT involves a complex set of cognitive abilities, such as memory, self-regulation, and planning, which are also involved in problem-solving [W2120257947, UNMAPPED:121]. These skills, as well as the development of higher order EF, including problem-solving skills, develop significantly from elementary to middle school [W2082079745, W2081592900, W1685870920, W2023092959], and further on during adolescence [W2105218783, W2026085771, W1973287994]. For younger students, who are still developing foundational EFs [W2141172186, W1970640205, W2002022752], structured virtual coding interventions enhance both problem-solving skills similar to those trained during the intervention (near transfer), and EFs less closely related to coding, such as planning and inhibition skills (far transfer). For late elementary school students and adolescents who have already developed the foundational EF skills (e.g., inhibitory control, working memory) and metacognitive abilities that are necessary to manage complex coding tasks [W1685870920, W2141172186, W2002022752, W1994158758, W2002022752], practicing with ill-defined, or unstructured, virtual coding or programming problems, such as those involved in game-design or creative problem solving activities, results most effective. The finding that unstructured virtual coding activities seem to work better with older students should not be surprising. As Diamond and Ling [W2183085473] have emphasized EFs need to be challenged, not just used, to promote improvement.",
+              "citations": [
+                "W2120257947",
+                "W2082079745",
+                "W2081592900",
+                "W1685870920",
+                "W2023092959",
+                "W2183085473"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "121"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.3.3. Educational Robotics",
+              "parent_subsection_id": "s_4_3",
+              "text": "Based on a concrete sensory-motor experience, ER or unplugged coding activities, are more often addressed to younger children, that is, preschoolers or first graders, or students with cognitive disabilities [W3005386113, W2999262696, W2922220019, UNMAPPED:79]. Out of the 19 studies included in this systematic review, only two experimental studies [W3087874839, W2964444324] specifically examined the effects of ER interventions on late elementary school or middle school students, producing contrasting findings. La Paglia et al. [W2964444324], found positive far transfer effects of ER on fifth graders' problem-solving skills. \u00c7\u0131nar and T\u00fcz\u00fcn [W3087874839] found no significant far transfer effects of ER to tenth graders' self-reported problem-solving.\n\nIn the younger, 5\u20136 year-old children, ER interventions seem to have general positive far transfer effects on EF skills, improving significantly children's problem-solving skills [W3134967991, W2922220019], as well as core EFs (response inhibition and working memory) [W3005386113, W2999262696]. The benefits of ER seem to have reduced for children with special educational needs (children with sensory, motor, or cognitive disabilities, or attention deficit hyperactivity disorder, and/or specific learning disorders) [W2999262696]. For these children, tangible, unplugged coding activities, seem more effective [UNMAPPED:79]. A possible explanation is that although ER can sustain EF through concrete and tangible activities, it requires basic computer skills and memory and cognitive resources that students with intellectual disabilities may lack [W2999262696, UNMAPPED:79].\n\nSince all studies focused on ER interventions also involved structured problem-solving activities, it is also difficult to determine whether their beneficial effects for younger children were due to the tangible (ER) or structured nature of the intervention. In fact, when narrowing our analysis to younger, 5-6 year-old children, structured virtual coding and ER activities seem to have equivalent far transfer effects on core EFs [W3000696469, W3005386113, W2990676569] and higher order EF skills, like problem solving [W2922220019, W2990676569]. These findings seem in contrast with those of Scherer et al. [W3013431833], who report larger effects of instructional programs based on physicality, such as robotics ($\\bar{g}=0.72$) than of virtual coding ($\\bar{g}=0.44$), suggesting that the medium used in the instructional intervention can play a role. Direct comparisons between structured virtual coding and ER interventions are needed to test this hypothesis and could be a goal of future studies.",
+              "citations": [
+                "W3005386113",
+                "W2999262696",
+                "W2922220019",
+                "W3087874839",
+                "W2964444324",
+                "W3134967991",
+                "W3000696469",
+                "W2990676569",
+                "W3013431833"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "79"
+              ]
+            }
+          ],
+          "text": "Based on our systematic review the different effects of CT activities appear not to be strictly related to the method or programming tool used (virtual coding, unplugged coding or ER), but rather to the structured or unstructured nature of the intervention and the age of the participants.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The systematic review and meta-analysis aimed to address three key questions regarding the teaching of computational thinking: 1) which specific EFs are most influenced by it? 2) does the impact of CT programs differ based on children's age? and 3) which instructional modality (educational robotics, unplugged coding, or virtual coding) is most effective in enhancing EF skills in children and adolescents? The first research question was answered both by the systematic review and meta-analysis. The second and third research questions were exclusively tackled through the systematic review of the literature.\n\nUnlike previous meta-analytic studies [W2898166493, W2036079418], we exclusively focused on experimental trials. This approach allowed us to assess the cognitive effectiveness of CT interventions while accounting for potential confounding factors such as repeated testing and practice effects. While this decision improved the quality of our overall conclusions regarding the cognitive effects of CT, it also restricted the number of studies available for conducting a statistical analysis of the moderating effects of age and type of intervention. As a result, the conclusions on age and type of intervention effects are based on a qualitative analysis of the literature.",
+      "citations": [
+        "W2898166493",
+        "W2036079418"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Conclusions",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1. Limitations and Future Directions",
+          "subsubsections": [],
+          "text": "In addition to the limitations inherent in the existing literature, it is important to acknowledge some limitations of the present meta-analysis. The first concerns the lack of complete data from published studies. For computing the appropriate meta-analytic model, we needed several correlation values often omitted in the papers selected. We addressed this problem by employing the multiverse-like sensitivity analysis that clearly shows when a certain imputed correlation has a relevant impact on the meta-analysis model.\n\nA second limitation of this systematic review and meta-analysis is that, by applying rigorous inclusion criteria, we could include a limited number of studies. For instance, as one of the inclusion criteria for this systematic review was the peer-reviewed status of publications, we did not consider grey literature. Consequently, we were not able to robustly assess publication bias or consider important moderators, such as age and type of intervention, in the meta-analysis. With the growing number of experimental studies in the field of CT, future meta-analyses will be able to compare the effectiveness of different types of CT intervention, or how it varies with students' age. Finally, other variables could influence the effectiveness of a coding training and should be considered in future studies; examples are motivational factors like self-efficacy [W2900923163], or gender [W4296583621]. These variables may have an important role in moderating children's response to coding interventions. The spread of experimental research in the area of CT studies, and the interdisciplinary collaboration between computer scientists and psychologists will soon allow to address also these factors.",
+          "citations": [
+            "W2900923163",
+            "W4296583621"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Over the last 20 years, computer scientists, experts in education, and psychologists have explored the cognitive effectiveness of CT-based activities or instructional programs, primarily in the domain of children's EFs [W3000696469, W3005386113, UNMAPPED:78, UNMAPPED:80]. However, there have been very few systematic reviews and meta-analyses that synthesized this literature [W2898166493, W2036079418, W2036079418, W3013431833]. Systematic reviews and meta-analyses constitute complementary and fundamental tools of evidence-based practice, particularly when the focus of interest is on the evaluation of intervention effects, like in this study.\n\nOverall, the systematic review and meta-analysis presented in this paper confirm that CT programs, that most countries are recently integrating in their school curriculum [W1970953601], can be a powerful tool to boost and support the development of EFs, particularly higher order EFs like planning and problem solving, but also core EFs, like response inhibition and WM that underpin and predict early and late academic achievements [W2013424363, W2142300915, W3173366033].\n\nDespite variation in outcomes across EFs, 14 of the 19 studies considered in this systematic review (74%) reported evidence of EF benefits. This is a higher percentage than that reported by Diamond and Ling [W2183085473] for cognitive trainings (from 20% to 60%) and aerobic exercises (43%). While, it is remarkably similar to the effectiveness of other school programs, such as Montessori and Tools of the Mind (75%). As for these programs, an early integration of CT/coding in the school curriculum may be strategic for children's future academic accomplishments.\n\nSchool embedded programs are comparatively more effective than cognitive training interventions targeting EFs [W2183085473]. When the training is part of children's daily school curriculum its activities become meaningful to children, and children may better perceive the importance and utility of the abilities learnt, their social value, and their transferability to other learning situations.\n\nThe finding of a beneficial effect of CT, especially on higher order EFs, is also important for another reason. Although a number of intervention studies have focused on improving EFs [W2052691758, W2893945438, W1999008850], few have demonstrated effects on higher order EFs [W2183085473, W2989691307]. Enhancing these higher-order cognitive skills, also bears on a child's adaptive capacities to the social environment [W2109697620, W2095888274].\n\nOur systematic review found that the effects of CT/coding did not seem to vary by the training method or tool (virtual coding/unplugged/ER). Comparisons between training methods is however limited by the fact that different types of interventions have been typically addressed to different age-groups. The lack of direct comparisons between virtual coding and ER or structured and unstructured intervention conditions stands out as a prominent limitation in the existing literature. Another notable gap lies in the scarcity of studies examining the efficacy of CT activities in enhancing core executive functions (working memory, response inhibition, cognitive flexibility) in older students. CT programs may be particularly suitable to support the development of core EF skills even during late elementary schools and adolescence.",
+      "citations": [
+        "W3000696469",
+        "W3005386113",
+        "W2898166493",
+        "W2036079418",
+        "W2036079418",
+        "W3013431833",
+        "W1970953601",
+        "W2183085473",
+        "W2989691307",
+        "W2109697620",
+        "W2095888274"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "78",
+        "80"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4388785132_tables.md"
+}

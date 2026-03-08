@@ -1,0 +1,362 @@
+{
+  "id": "W3084983573",
+  "metadata": {
+    "title": "Diagnostic Concordance and Discordance in Digital Pathology: A Systematic Review and Meta-Analysis",
+    "n_sections": 6,
+    "n_subsections": 14,
+    "n_subsubsections": 3,
+    "n_tables": 8
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "INTRODUCTION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Digital pathology (DP), frequently referred to as whole slide imaging (WSI), is a rapidly emerging technology [W2967444033]. It has the potential to fundamentally change the way that histopathology is practised by streamlining the workflow [W1992398433], increasing efficiency [W2290195065], improving diagnostic accuracy and facilitating the platform for the implementation of artificial intelligence-based computer-assisted diagnostics [W2900654702]. Inevitably, these advantages will dictate the adoption of this technology which is very likely to gather pace rapidly in the next few years.\n\nCurrently, only a small number of pathology laboratories in the UK and elsewhere are using DP for their routine sign-out purposes [W2784192669]. For more widespread adoption of DP in clinical laboratories, evidence of safety and reliability is needed, ideally in the form of adequately powered multi-site validation studies, demonstrating equivalent performance of DP compared with the existing gold standard of light microscopy (LM) [W1656766859].\n\nA number of validation studies have been published to date, but most are small single-site studies and there is considerable variation in the study designs. Previous systematic narrative reviews have summarised the qualitative evidence on the diagnostic reliability of WSI [W2460896619, W2611168874, W2914038321]. A systematic review of 38 validation studies between 1999 and 2015 reported an overall diagnostic concordance ranging from 63% to 100%, with a weighted mean of 92.4% [W2460896619]. That review recognised the limitation of small sample size (mean number of cases 140) with variable study design and case types. A subsequent study based on the systematic review of the discordant diagnoses reported 335 discordances (4%) among 8069 comparisons of digital and LM diagnoses. A significant proportion of those discordances were concerning the diagnosis of dysplasia (32%) [W2611168874]. Ara\u00fajo et al. conducted a systematic review of studies from 2010 to 2017 reporting intraobserver agreement ranging from 87% to 98.3% (\u03ba coefficient range 0.8\u20130.98) [W2914038321]. That review was again based on a small selected series of 13 studies with a mean sample size of 165. Studies comparing the digital diagnosis with either consensus diagnosis or original diagnosis by a different pathologist were not included in this review.\n\nSince the publication of these reviews, larger validation studies have been performed including studies supporting regulatory approval and development of current recommendations by national organisations, providing more guidance and practical advice on the validation process [W2801876365, UNMAPPED:11].\n\nA meta-analysis to demonstrate the combined accuracy and reliability of DP is still lacking. In the hierarchy of evidence-based healthcare, systematic reviews and meta-analysis using statistical methods to combine the results of individual studies can provide a precise estimate of the effect of size with considerably increased statistical power, placing them at the apex of the evidence pyramid.\n\nThe aim of this systematic review and meta-analysis was to review the quantitative evidence across the validation studies, synthesise statistical data and to summarise the evidence on safety and reliability of DP.",
+      "citations": [
+        "W2967444033",
+        "W1992398433",
+        "W2290195065",
+        "W2900654702",
+        "W2784192669",
+        "W1656766859",
+        "W2460896619",
+        "W2611168874",
+        "W2914038321",
+        "W2801876365"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "11"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "MATERIALS AND METHODS",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "Review Protocol and Registration",
+          "subsubsections": [],
+          "text": "This review was conducted in accordance with the guidelines by the Preferred Reporting Items for Systematic Review and Meta-Analyses (PRISMA) [W4294215472]. The review protocol was registered with the PROSPERO database (registration number CRD42019145977: Centre for Reviews and Dissemination, University of York, England), the international prospective register of systematic reviews.",
+          "citations": [
+            "W4294215472"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "Problem Statement",
+          "subsubsections": [],
+          "text": "To review the existing literature on the diagnostic (primary and secondary) use of DP and its comparison with LM in the context of the validation process.\n- Uncover the strength of the concordance evidence between DP and LM, in order to highlight the usefulness of transition to DP.\n- To analyse recent evidence on safety and reliability of DP by identification of discordant diagnosis on the digital platform.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "Definitions",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Concordance and Discordance",
+              "parent_subsection_id": "s_2_3",
+              "text": "Diagnostic concordance was defined as 'degree of agreement between digital reading and the LM reading for the same sample'. Conversely, any difference or variance between the digital and LM report would reflect discordance. Intra-observer concordance was the preferred method of evaluation, where possible, as per CAP and RCPath guidelines [W2166581609, UNMAPPED:11].",
+              "citations": [
+                "W2166581609"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "11"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Minor and Major Discordance",
+              "parent_subsection_id": "s_2_3",
+              "text": "Minor discordance reflects a difference between two reports which is clinically insignificant and would not affect patient management decisions. However, a major discordance leads to or can lead to a difference in clinical decision for patient management.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Overall Concordance",
+              "parent_subsection_id": "s_2_3",
+              "text": "For this review, the overall clinical concordance was also recorded, which included concordance as well as minor clinically insignificant discordances.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "Search Strategy",
+          "subsubsections": [],
+          "text": "A literature search was conducted by the primary researcher (ASA) through the key electronic databases: PubMed platform (National Center for Biotechnology Information, U.S. National Library of Medicine, Maryland) including Medline (Medline Industries, Illinois, USA), EMBASE (Elsevier, Amsterdam, The Netherlands), Cochrane Library (London, England) and Google Scholar (Google, California) between 2013 and August 2019. To identify any study being currently undertaken, a search of ClinicalTrials.gov (U.S. National Institutes of Health, Maryland) was performed. A detailed search strategy is available as online supplementary content (online supplementary appendix 1).\n\nIn order to identify any more potentially eligible articles not captured through the aforementioned search, a manual search was conducted via forward citation tracking and reference search of the included studies.\n\n**TABLE 1: Inclusion and Exclusion Criteria for Screening of Literature Search Results**\n\n{{TABLE:tbl_01}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "Article Screening and Eligibility Evaluation",
+          "subsubsections": [],
+          "text": "Using Rayyan Qatar Computing Research Institute (QCRI) [W2560438049], all results were screened against a predefined eligibility criterion (Table 1) including full abstract and study title by two independent reviewers (ASA and HM).\n\nStudies were included provided they met the full inclusion criteria: studies comparing DP with LM reporting for diagnostic purposes, predominantly including H&E-stained slides. Studies were excluded if they explored applications of DP other than diagnosis, predominantly involving ancillary studies or other sub-specialist areas.\n\nThe screened results were displayed under one of the following categories: 'included', 'excluded' and 'maybe'. The reasons for exclusion were also recorded.\n\nAny disagreements highlighted by Rayyan QCRI between the two reviewers were resolved by discussion. Articles in the 'maybe' category were further reviewed by a third reviewer (DRJS). Full texts of all potentially eligible articles were retrieved and reviewed in detail for further evaluation.",
+          "citations": [
+            "W2560438049"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_6",
+          "subsection_index": 6,
+          "subsection_label": "Data Extraction",
+          "subsubsections": [],
+          "text": "A comprehensive data extraction protocol was developed based on the Cochrane Effective Practice and Organization of Care template [W1598602811]. In addition to the generic domains adapted from the Cochrane\u2014good practice data collection, domains relevant to this review were added. A tailored data record form was designed in Microsoft Excel (V.16.38).\n\nData extraction was conducted by ASA and supported by other reviewers (DRJS, HM, IMM, KH, NMR). In case of discrepancy between two reviewers, a consensus was reached by discussion. For each included article, the following data items were extracted: study information, participants, interventions, sample, study method, outcome variables and quality assessment (Box 1). Corresponding authors of the included studies were contacted to request any further details, where required.",
+          "citations": [
+            "W1598602811"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_7",
+          "subsection_index": 7,
+          "subsection_label": "Quality Assessment (QUADAS-2\u2014Tailored)",
+          "subsubsections": [],
+          "text": "To assess the quality and risk of bias in individual studies, the Quality Assessment of Diagnostic Accuracy Studies (QUADAS-2) [UNMAPPED:17] tool was used. QUADAS-2 was tailored according to this review's protocol and some of the signalling questions not applicable to the validation studies were excluded. For each of the signalling questions, clear and precise instructions were produced. For each QUADAS domain, the risk of bias was assessed as either 'low' or 'high' based on the answers to the signalling questions. If insufficient information was provided in the study, the risk of bias was assessed as 'unclear'.\n\nThe quality assessment of all included studies was performed by two reviewers. A review specific tailored QUADAS-2 tool is available as online supplementary content (online supplementary appendix 2).",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "17"
+          ]
+        },
+        {
+          "subsection_id": "s_2_8",
+          "subsection_index": 8,
+          "subsection_label": "Statistical Analysis",
+          "subsubsections": [],
+          "text": "For each study, we recorded the number of DP\u2013LM comparisons and the number of comparisons where DP and LM diagnoses agreed (number of agreements). We considered two definitions for agreement (concordance): no difference in clinical management (overall concordance) and complete agreement. In three studies [W2066020421, W2736454065, W2064007378], DP\u2013LM comparison for each case was made by multiple pathologists with the number of agreements reported separately for each pathologist. For those studies, we used the average number of agreements for the pathologists.\n\nWe considered it reasonable to pool data from all studies but accounted for inherent study-specific characteristics by using random-effects meta-analysis. We took the number of agreements in a study to have a binomial distribution, with a logit link used when modelling the probability of agreement. For studies with 100% agreement, 0.5 was added to the agreements and disagreements. The 'meta' [W4399649028] package in R [UNMAPPED:22] statistical program was used to perform the meta-analysis. A forest plot was used to summarise the pooled results as well as percentage agreements and exact Clopper-Pearson 95% CIs for individual studies.",
+          "citations": [
+            "W4399649028"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "22"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "RESULTS",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "PRISMA Flowchart",
+          "subsubsections": [],
+          "text": "**FIGURE 1: Flowchart Following Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) Guidelines**\n\n*Note: Of the 20 articles excluded, 7 assessed agreement between diagnostic variables of a known disease or between broader diagnostic categories, 5 were conference abstracts, 3 included irrelevant outcome measures, 2 stated insufficient about how samples were analysed, 2 were subset of another study and 1 involved cytology cell block preparations.*\n\nThe initial systematic search of the literature yielded 994 records in total. After removing the duplicate results, abstracts of 828 records were screened for eligibility.\n\nEligibility screening identified 45 research studies for full-text review of these articles of which 25 were deemed eligible for inclusion in the review. These studies included a total of 10,410 histology samples with an average sample size of 176. The third reviewer was needed to reach consensus in 8/45 articles. One publication incorporated two distinct study phases with different samples, analysis and results [W1970039523]. The two phases of the same research paper were recorded separately into the total number of included studies. The 25 research papers included in the systematic review were based on the evaluation of total 19,468 LM versus digital comparisons. The quantitative meta-analysis included 24 of these studies.",
+          "citations": [
+            "W1970039523"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "Study Demographics",
+          "subsubsections": [],
+          "text": "Twenty-three studies had been conducted at single centres (92%) and only two (8%) were multi-centre validations. The majority of studies (14; 56%) were from America, 10 (40%) from Europe and 1 (4%) was from Asia. The majority of these studies (56%, n=14) were published from 2015 onward.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "Study Characteristics: Samples, Participants, Training, Washout Time and Equipment",
+          "subsubsections": [],
+          "text": "Sample size (Figure 2) varied from 60 [W2040702313] to 3,017 [W2126470947] cases with an average of 176 cases. The majority (15; 60%) examined 200 samples or less with only 3 studies examining 1,000 or more cases. The largest sample size reported in validation literature was 3,017 to date [W2126470947]. Single specialty samples were selected in 48% (n=12) of the studies, whereas more than one specialty samples were included in 52% (n=13) studies (Figure 3). None of the studies stated the inclusion of cancer screening samples.\n\n**TABLE 2: Sample Size Variations Across 25 Studies**\n\n{{TABLE:tbl_02}}\n\n**FIGURE 2: Sample Size Variations Across 25 Studies**\n\n**FIGURE 3: Distribution of Specialties/Organ Systems Represented Across 25 Studies (n=number of studies with the inclusion of each organ type)**\n\n{{TABLE:tbl_03}}\n\nThe number of pathologists who participated in reporting study samples ranged from 1 to 57 with 15 (60%) studies involving fewer than 5 pathologists. In one study, 57 pathologists participated in reporting study samples (n=200) with 28 of them being residents/fellows [W2120552981]. The remaining 23 studies included experienced consultant pathologists while one study did not document the experience level of the participating pathologists.\n\nThe participating pathologists were provided training for using the WSI system before reporting the study samples in 13 studies (52%). No training was provided in four studies because the participants had previous experience with using DP for reporting, teaching or tumour boards. Eight studies did not state whether training was provided or not.\n\nClinical information was provided to the reporting pathologists with each case in the majority of the studies (80%, n=20). Five studies did not state this.\n\nThe length of washout time between DP and LM reporting was variable in the included studies and ranged from 2 weeks to more than a year (Figure 4). Four studies (16%) did not use any washout time between the two readings due to the live-validation approach.\n\n**TABLE 3: Length of Washout Period Between Light Microscopy and Digital Pathology Readings**\n\n{{TABLE:tbl_04}}\n\n**FIGURE 4: Length of Washout Period Between Light Microscopy and Digital Pathology Readings**\n\nThe whole slide image scanning devices used in the included studies comprised seven different scanner manufacturers, Aperio (Leica biosystems) being the most commonly used (n=14, 56%). Nine studies had performed slide scanning at \u00d740 magnification, eight at \u00d720, six used a combination of \u00d720 and \u00d740, and one study used a combination of \u00d740 and \u00d760 depending on the sample requirement. Viewing monitor resolution was not commented on in 10 studies. The details of the scanning systems and scan magnification are shown in Table 4.\n\n**TABLE 4: Various Scanning Systems and Scanning Magnifications Used in the Included Studies**\n\n{{TABLE:tbl_05}}\n\nOnly five studies performed a prior sample size calculation by statistical methods. The sample size for three studies [W2736454065, W2126470947, W2166907770] was based on non-inferiority tests, but with different non-inferiority margins and percentage agreements between DP and LM. Snead et al. [W2126470947] collected the baseline multi-disciplinary team meeting review data to calculate overall intra-observer and inter-observer concordance on 'LM' and reached a sample size of just over 3,000 cases.\n\nA summary of main characteristics of included studies is available online as online supplementary material (online supplementary appendix 3).",
+          "citations": [
+            "W2040702313",
+            "W2126470947",
+            "W2120552981",
+            "W2736454065",
+            "W2166907770"
+          ],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03",
+            "tbl_04",
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "Diagnostic Concordance and Discordance",
+          "subsubsections": [],
+          "text": "The overall concordance was assessed by measuring complete agreement along with clinically insignificant variations between digital and LM reports. Individual studies percentage agreement across 24 studies included in the meta-analysis ranged from 92.3% to 100%, with the majority (23/24) having percentage agreement above 95% and three studies having 100% agreement (Figure 5). The pooled percentage agreement for overall concordance was 98.3% (95% CI 97.4 to 98.9) across 24 studies. One study [W1497029031] used the kappa coefficient (k=0.81) and did not state the concordance percentage. The pooled percentage agreement for complete concordance was 92% (95% CI 87.2 to 95.1) (Figure 6). The studies were heterogeneous (I\u00b2=90%, p<0.0001).\n\nThe inter-modality (i.e., digital and light microscopy) readings were performed by the same pathologist in 23 (92%) studies. In one study, two-thirds of cases were examined by different pathologists and one-third by the same pathologist [W2126470947]. In one study, the two modalities were examined by different pathologists [W2166907770].\n\nA total of 546 major discordances were reported across 21 studies. Three studies reported only minor differences in results [W2736454065, W2182531927, W2138335410]. One study [W1497029031] reported the kappa coefficient and did not state the discordance percentage.\n\nGastrointestinal tract and gynaecological pathology were two most commonly reported specialties among the discordant cases, followed by skin, breast, genitourinary and renal pathology.",
+          "citations": [
+            "W1497029031",
+            "W2126470947",
+            "W2166907770",
+            "W2736454065",
+            "W2182531927",
+            "W2138335410"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "Categorisation of Diagnostic Discrepancies",
+          "subsubsections": [],
+          "text": "Out of 546 major discordances reported across the 25 studies, details of diagnosis and preferred modality were provided for 158 instances. In order to identify and summarise areas of difficulty in the diagnostic performance of WSI, we categorised all the major discordances into four main groups based on the underlying diagnostic discrepancy. Over half (57%) of the reported discordant diagnoses were related to the assessment of nuclear atypia, grading of dysplasia and malignancy (Group A). These were followed by challenging diagnoses (26% in Group C) and identification of small objects (16% in Group B). Each category was further sub-classified into three to seven sub-classifications to capture the nature of discordance. This categorisation was based on the findings of this review and previously reported reviews [W2611168874, W2914038321].\n\nWithin Group A, a total of 68 discordant instances concerning the grading of epithelial dysplasia and nuclear atypia were recorded. The preferred modality for these instances was recorded as LM diagnosis (48/68), digital diagnosis (11/68) and not clearly stated (9/68). Of those cases, where ground truth was LM, the DP under-called (i.e., lower grade of dysplasia compared with LM) in 30 of 48 (62.5%) and over-called (higher grade of dysplasia) in 18 of 48 (37.5%).\n\nTable 5 shows each category with nature of discordance and organs/sites involved as well as the percentage of all reported major discordances. Figure 7 shows the distribution of four groups of discordances across the specialties involved.\n\n**TABLE 5: Categorisation of Diagnostic Discordances**\n\n{{TABLE:tbl_06}}\n\nThe remaining underlying reasons for disagreement were stated as follows: difficult case requiring consultation, textural quality of amyloid hard to appreciate on a digital display, lack of clinical information and non-availability of ancillary stains.\n\n**FIGURE 5: Forest Plot Representing Percentage Agreement for Overall Concordance Across 24 Studies with the Number of Comparisons, Participating Pathologists and Digital Pathology Training**\n\n**FIGURE 6: Forest Plot Representing Percentage Agreement for Complete Concordance Across 24 Studies**\n\n**TABLE 6: Distribution of Four Groups of Discordances Across the Specialties Involved**\n\n{{TABLE:tbl_07}}\n\n**FIGURE 7: Distribution of Four Groups of Discordances Across the Specialties Involved**",
+          "citations": [
+            "W2611168874",
+            "W2914038321"
+          ],
+          "tables_in_text": [
+            "tbl_06",
+            "tbl_07"
+          ]
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "Risk of Bias and Applicability",
+          "subsubsections": [],
+          "text": "The results of quality assessment for risk of bias and applicability in individual studies are displayed in Table 7. Across the four domains (case selection, index test, reference standard, flow and timing), the percentage of studies with low risk of bias ranged from 75% (20/25) to 92% (23/25), the percentage of studies with a high risk of bias ranged from 8% to 25%. An unclear risk of bias was found in 12% of the studies. Regarding applicability, all studies showed low concern across case selection domain. Applicability concern was classed as high across the index test domain in one study.\n\n**TABLE 7: QUADAS-2\u2014Assessment of Risk of Bias and Applicability Concerns Across 25 Studies**\n\n{{TABLE:tbl_08}}\n\n*Note: QUADAS-2, Quality Assessment of Diagnostic Accuracy Studies.*",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_08"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "DISCUSSION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This is the first meta-analysis of DP studies and largest systematic review to date, based on 25 studies covering 10,412 samples and 19,468 glass versus digital comparisons, including from two recent multi-centre validation studies [W2764221523, W2759004613].\n\nThese studies demonstrated percentage agreement of 98.3% (95% CI 97.4 to 98.9) for overall concordance and 92% (95% CI 87.2 to 95.1) for complete concordance. This high level of agreement across multiple studies provides strong evidence that DP is a viable alternative to LM for routine practice and, given the multiple additional advantages it offers, can be expected to replace the LM as the main tool for diagnostic histopathology. The studies examined samples from multiple different tissue types suggesting the results are fully representative of the breadth of diagnostic material encountered in routine practice. However, it is noticeable that no studies included ophthalmic samples and too few studies examined renal or paediatric samples to enable meaningful conclusions to be drawn. None of the studies stated which samples, if any, were generated by cancer screening programmes, which has been an area of concern in the UK National Health Service cancer screening programmes (Public Health England personal communication). However, the inclusion of breast, gynaecological and gastrointestinal samples in a large proportion of these studies suggests the results should be relevant to these sample types.\n\nThe 546 discordances were analysed to determine the nature of discrepancy and its relevance to patient management. The majority (57%) of clinically significant discordances were related to grading of dysplasia, atypia and malignancy in various tissue types. Grading dysplasia is an important feature which relies largely on subjective assessments, and which is a common source of discrepancy in histopathology [W2007418914, W2062724282, W2792298364]. The high incidence of discrepancies in this area may in part reflect this difficulty but also indicates grading dysplasia is an important area to concentrate on in the transition from LM to DP in order to prevent DP introducing an additional error into this challenging diagnostic area. Within these discrepancies, however, there was no consistent pattern towards over-grading of dysplasia with DP as has been suggested in some small studies [W2595564133].\n\nThe second most common discrepancy (26%) concerned challenging diagnoses such as atypical breast lesions (atypical ductal hyperplasia, flat epithelial atypia, low-grade ductal carcinoma in situ), melanocytic lesions, amyloid and small foci of invasive malignancy. Difficulty in locating small objects like micro-organisms, focal inflammation, granulomata, micrometastasis, mitotic figures and Weddellite calcification were encountered in 16% of the discordant cases. These discrepancies all relate diagnostic areas already known to be contentious and where differences of opinion are to be expected [W2007418914, W2792298364] irrespective of the modality used to examine the slides.\n\nSome of the diagnostic discrepancies are however likely to be related to DP. These include assessment of objects requiring an appreciation of textural quality, such as deposits of amyloid, mucin and Weddellite calcifications. In these instances, the inability to focus through the 'z' plane means the observer using DP is unable to detect the changes in texture normally visible in LM. Second, the recognition of small objects, less than 5 \u00b5m in size, such as bacteria has been identified as area of difficulty on DP. Reproduction of these objects in DP systems is clearly inferior to LM because of a combination of loss of detail in the image acquisition, restrictions in the scanning objective and the reliance of a single focal plane. Finally, any object requiring examination under polarised light cannot be adequately catered for in the DP systems currently available. Awareness and knowledge of these issues is essential if pathologists are to understand the limitations of DP and be able to adapt to its use in their own practice safely.\n\nAcross this meta-analysis, there are potentially important variations in study design including sample selection criteria, equipment used and length of washout time that could influence the results. Where possible, these potential sources of bias have been assessed using the QUADAS-2 tool, which demonstrated a low risk of bias for the majority of studies. As expected with an emerging new technology, this meta-analysis has captured results from studies using differing technologies. Despite improvements in image quality, the more recent equipment can provide there was no difference in discrepancy rates over the course of these studies. This most likely indicates that even the earlier DP studies used equipment capable of delivering a diagnostic tool equivalent to LM.\n\nAlthough this review provides strong and consistent evidence of the equivalent performance of DP in comparison with LM, it also highlights certain areas where the evidence is still weak. First, the majority of the studies provide no evidence base for sample size and no power calculation, which prevent a statistical measurement of inferiority. Second, the intra-observer and inter-observer variability on existing LM platform is unknown, so it is not possible to calculate the number of discrepancies actually related to viewing modality.",
+      "citations": [
+        "W2764221523",
+        "W2759004613",
+        "W2595564133",
+        "W2007418914",
+        "W2792298364"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "TAKE HOME MESSAGES",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "- The results of this meta-analysis provide the strongest evidence to date that DP is a viable alternative to LM for routine practice and, given the multiple additional advantages it offers, can be expected to replace the LM as the main tool for diagnostic histopathology.\n- Evidence-based widespread adoption of DP is a key step to enable workflow delivery in the current pandemic situation.\n- For the first time the areas of diagnostic discrepancies have been synthesised from the available data which is essential in enabling pathologists to understand the limitations of DP and be able to adapt to its use in their own practice safely, and guide industry to develop more solutions.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "CONCLUSION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Although the barriers to wider adoption of DP have been multifactorial, limited evidence of reliability has been a significant contributor. The COVID-19 pandemic acted as a catalyst to change working practice across the health sector [UNMAPPED:37]. The flexibility provided by digitising the workflow is fundamental to these changes, and DP is a key step to enabling this to happen in cellular pathology [W3017072419, W3038687952]. The demand for widespread adoption of DP is growing further as a result.\n\nThe results of this meta-analysis represent significant evidence to indicate the equivalent performance of DP for routine diagnosis. Furthermore, the categorisation of diagnostic discordances highlights a number of potential limitations, where alternative solutions may be needed. The findings also indicate how the enrichment of sample selection in future studies may improve the evidence base further.\n\n---",
+      "citations": [
+        "W3017072419",
+        "W3038687952"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "37"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3084983573_tables.md"
+}

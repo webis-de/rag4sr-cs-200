@@ -1,0 +1,561 @@
+{
+  "id": "W4387904866",
+  "metadata": {
+    "title": "Algorithms used for facial emotion recognition: a systematic review of the literature",
+    "n_sections": 5,
+    "n_subsections": 14,
+    "n_subsubsections": 10,
+    "n_tables": 16
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "People convey emotions through facial expressions by contracting and relaxing their facial muscles [W2791165182]. In other words, facial expression faithfully conveys people's mood, feelings, and state of mind. Joy, sadness, fear, attraction, rejection, and all feelings are transmitted through the expression on our face. On the other hand, for facial emotion recognition, artificial intelligence (AI) has been successfully applied in various cases, combined with computer vision [W4377983075]. Similarly, we have a machine that imitates cognitive functions associated with the human mind, such as learning and problem-solving [UNMAPPED:3]. Additionally, Machine Learning (ML) and Deep Learning (DL), as parts of artificial intelligence (AI), aim to reduce the aspect of human engineering. One of the most common approaches to this is artificial neural networks, which are a mathematical system based on how neurons work in the human brain [UNMAPPED:3].\n\nFacial Emotion Recognition (FER) through the field of Human-Computer Interaction (HCI) is applied in areas such as autopilot systems, education, medical treatment, psychological treatment, surveillance, and psychological analysis in computer vision [W4377983075]. For example, in the learning process, humans have aspects related to negative emotions with cognitive teaching processes, which can result in low academic performance that can affect the learner when it is not synchronized with the activity [W3187345349].\n\nWe currently live in a constantly changing society, and with the desire to develop technology without limits, artificial intelligence is positioned as one of the areas having the greatest impact. Furthermore, selecting the appropriate tools that meet the intended requirements, such as using the Python programming language [W4214690450].\n\nTechnology allows for the identification of the emotional recognition profile in pediatric subjects with Attention Deficit Hyperactivity Disorder (ADHD) using a database of images of children [W4386998744]. The new adaptation method for cross-domain emotion classification uses Convolutional Neural Networks (CNN) to enable emotion classification [W4285502466]. The CoSTGA model [W3006223636] leverages the benefits of merging representations of semantic trend features and multi-head attention. Another method allows designing and identifying facial expressions characterized by the mouth, facial pose, and visual speech using a supervised learning method based on Machine Learning (ML), specifically Support Vector Machine (SVM) based on labels in the upper and lower face regions [W4385839424]. The Efficient-SwishNet model is lightweight, efficient, and effective in developing a facial emotion recognition system that handles variations in lighting, face angle, gender, race, background scenarios, and uses a dataset of people from diverse geographic regions [W4285196891].\n\nThere is an educational theory framework supported by communication processes that allows for the improvement of teaching strategies by implementing facial recognition patterns to capture emotions through artificial vision devices or cameras in the classroom, marked with biometric techniques, where the goal is to analyze and collect information that allows for adjustments in teaching and learning processes [W4311486424].\n\nIn this context, future research is expected to improve the quality of emotion detection by improving the quality of the dataset and the model used [W4312611743]. Machine learning algorithms have played a vital role in facial emotion recognition systems from images. These algorithms are considered the main part of such systems. However, it is necessary to investigate other machine learning algorithms in facial emotion recognition [W4362509711] because deficiencies in identification limit the discrimination of extracted structural features. The goal is to obtain more discriminative structural information from expression images adaptively, without relying on landmarks and without the need for prior knowledge to design a fixed facial structure [W4321236389].\n\nThere are specific limitations regarding datasets (iMiGUE and GroupWalk), so it is proposed to solve specific tasks to optimize the data extracted by emotions on Saturdays during the interview and also techniques related to general perception, both positive and negative. Regarding the GroupWalk dataset, there are limitations related to sample quality and image resolution. Although the variation in camera placement blurs the motion caused by distortions in the videos, when these artifacts are directly written into the image, the accuracy of the models could be affected [W4372286488]. We still lack datasets for other specific tasks in the literature. For example, for scenarios in nature, a security camera viewpoint would be ideal, as it would allow the reuse of this footage for emotion recognition.\n\nTechnology has developed algorithms that allow for facial emotion recognition; however, it is necessary to investigate other machine learning algorithms in facial emotion recognition because there are identification deficiencies that limit the discrimination of extracted structural features. Therefore, the purpose of this article was to analyze the most commonly used algorithms for facial emotion recognition through a systematic literature review, following the PRISMA method.",
+      "citations": [
+        "W2791165182",
+        "W4377983075",
+        "W3187345349",
+        "W4214690450",
+        "W4386998744",
+        "W4285502466",
+        "W3006223636",
+        "W4385839424",
+        "W4285196891",
+        "W4311486424",
+        "W4312611743",
+        "W4362509711",
+        "W4321236389",
+        "W4372286488"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "3"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Theory",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Emotions and Their Characteristics",
+          "subsubsections": [],
+          "text": "Darwin (1899) [UNMAPPED:16] relates emotions to muscular activity and describes how different emotions trigger the action of various muscles, such as the raising of eyebrows and the downturned corners of the mouth in individuals experiencing pain or anxiety. However, it is concluded that these muscular responses were limited to a single muscle. Emotions are a psychologically vital process, underlying human behavior motivation [UNMAPPED:17]. Emotions serve as our internal compass, being psychophysiological reactions to significant internal or external events for the organism and fulfill three main functions: i) Adaptive, it is the primary system for evolution and adaptation to environmental conditions available to humans, preparing the organism for action: fight, flight, caring for offspring, ii) They serve to communicate one's own mood to peers, predict and influence their behavior, iii) Motivational, they facilitate motivated behaviors to achieve a goal [UNMAPPED:17].",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "16",
+            "17",
+            "1899"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Expressions",
+          "subsubsections": [],
+          "text": "Muscular movements of expression are partly related to imaginary objects and partly to imaginary sensory impressions. In this proposition lies the key to understanding all expressive muscular movements [UNMAPPED:16]. Therefore, expressions and gestures can be parameterized to generate a valuation scale and allow for the adjustment of a valence factor, with the purpose of more accurately detecting the meaning of facial expression, be it neutral, pleasant or unpleasant, sad, happy, angry, to name a few, and it can be sensed by some expression recognizer implement through patterns of artificial intelligence for subsequent analysis [W4311486424]. Subsequently, these facial expressions become a key mechanism for conveying and understanding emotions, an inevitable part of human-computer interaction, and a key technology in the field of artificial intelligence [W4321236389]. Furthermore, ELsayed et al. (2023) argue that there are various categories of emotions that can be classified as anger, happiness, fear, surprise, contempt, disgust, and sadness [W4362585034].",
+          "citations": [
+            "W4311486424",
+            "W4321236389",
+            "W4362585034"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "16",
+            "2023"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Gestures",
+          "subsubsections": [],
+          "text": "Darwin (1899) [UNMAPPED:16] mentions that when observing infants, they exhibit many emotions with extraordinary strength, while after life, some of our expressions cease to have the pure source and simply stop flowing. Thus, the author proposes the three Principles that explain most of the expressions and gestures involuntarily used by humans and lower animals under the influence of various emotions and sensations. In conclusion, specific movements of characteristics and gestures are truly expressive of certain states of mind [UNMAPPED:16].",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "16",
+            "1899"
+          ]
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Types of Emotions and Expressions",
+          "subsubsections": [],
+          "text": "The model proposed by Ekman defined the six basic human emotions as happiness, anger, disgust, fear, sadness, and surprise. In the dimensional model, emotion is assessed through continuous numerical scales to determine valence and arousal [W4377983075]. In contrast, Goleman (2021) [UNMAPPED:19] identified seven matching expressions: happiness, sadness, anger, fear, surprise, contempt, and disgust. This implies that there is a relationship between expressions and emotions according to arguments from both authors.\n\n**TABLE 1**\n*Relationship between emotions and expressions*\n\n{{TABLE:tbl_01}}\n\nNext, we proceed to mention the classifications that according to Goleman (2021) mentions it in the types of expressions:\n\n- **Happiness:** it is described as a much more relaxed expression and where the individual is smiling: the expression of the mouth will be lifted, to expose the teeth or it can be closed and you can identify a wrinkle from the nose to the outer lip, lifting the cheeks. The lower eyelid is usually wrinkled or twitching, and in a genuine smile [UNMAPPED:19].\n\n- **Sadness:** Involves in identifying that the inner corners of the individual's eyebrows are raised upward and inward, creating wrinkles, also the lips are pursed, and the jaw is usually tense and pulled upward. Of all the expressions, this is the most difficult to fake [UNMAPPED:19].\n\n- **Anger:** It is expressed by low eyebrows, designed to hood the eyes and are usually close together, creating wrinkles between them and then tense and the eyes are usually looking intensely at the object with much anger, tight lips and intense gaze. It may include square opening of the mouth and lower jaw forced forward [UNMAPPED:19].\n\n- **Fear:** It is determined in being able to notice that the eyebrows that are raised and tucked inward. They are usually straight rather than curved or arched. The eyes will be wide open, although white will only be seen at the top of the iris and not all the way around. The mouth is usually open, but there is tension around the lips, tightening it [UNMAPPED:19].\n\n- **Surprise:** Characterized by raised and rounded eyebrows: the arches will be curved. The skin under the eyebrows is stretched as a result of the elevation of the eyebrows and wrinkles are often seen on the forehead. The eyes are wide open and the whites of the eyes are often visible. The mouth hangs regularly open with the teeth separated [UNMAPPED:19]. This expression is confirmed by Darwin (1899) [UNMAPPED:16], in the astonishment expressed by the wide open eyes and mouth and by the raised eyebrows.\n\n- **Contempt:** Darwin (1899) [UNMAPPED:16] describes contempt as an expression that generates a slight protrusion of the lips up the nose. And Goleman (2021) [UNMAPPED:19], shares the same idea of the expression in the slight upward movement of one side of the mouth in a kind of grimace.\n\n- **Disgust:** Disgust is usually characterized by a lowering of the eyebrows, with a wrinkle between the two. The upper lip has usually been raised, allowing it to rise toward the nostrils to protect them. The cheeks are also raised toward the ears and the nose is usually wrinkled. The upper teeth are likely to be visible when the mouth is opened [UNMAPPED:19].",
+          "citations": [
+            "W4377983075"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "19",
+            "16",
+            "2021",
+            "1899"
+          ]
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5. Emotional Perception",
+          "subsubsections": [],
+          "text": "This consists of the ability to perceive, identify, appraise and express emotions. It would be the most basic level of emotional intelligence: being able to feel in our body the different signals that indicate one emotional state or another [UNMAPPED:20].",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "20"
+          ]
+        },
+        {
+          "subsection_id": "s_2_6",
+          "subsection_index": 6,
+          "subsection_label": "2.6. Facial Emotional Recognition (FER)",
+          "subsubsections": [],
+          "text": "Huang et al. (2023) [W4377983075] state that FER is applied in the field of Human-Computer Interaction (HCI) in areas such as autopilot, education, medical treatment, psychological treatment, surveillance, and psychological analysis in computer vision.",
+          "citations": [
+            "W4377983075"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "2023"
+          ]
+        },
+        {
+          "subsection_id": "s_2_7",
+          "subsection_index": 7,
+          "subsection_label": "2.7. Artificial Intelligence (AI)",
+          "subsubsections": [],
+          "text": "Despite the growing interest in AI in academia, industry, and public institutions, there is no standard definition of what AI entails. Some approaches have described AI in relation to human intelligence or intelligence in general [UNMAPPED:21]. Artificial intelligence has been successfully applied in several fields, one of which is computer vision [W4377983075]. Artificial intelligence (AI) is a branch of computer science, in which a machine mimics the cognitive functions associated with the human mind [UNMAPPED:3].",
+          "citations": [
+            "W4377983075"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "21",
+            "3"
+          ]
+        },
+        {
+          "subsection_id": "s_2_8",
+          "subsection_index": 8,
+          "subsection_label": "2.8. Taxonomy of Artificial Intelligence",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_8_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.8.1. Neural Networks",
+              "parent_subsection_id": "s_2_8",
+              "text": "Neural networks, also known as Artificial Neural Networks (ANN) or Simulated Neural Networks (SNN), are a subset of machine learning and form the backbone of Deep Learning algorithms. Their name and structure are inspired by the human brain and mimic the way biological neurons signal each other.\n\nArtificial Neural Networks (ANNs) are made up of layers of nodes, containing an input layer, one or more hidden layers and an output layer. Each node, or artificial neuron, is connected to another and has an associated weight and threshold. If the output of an individual node is above the specified threshold value, that node is activated and sends data to the next layer in the network. Otherwise, no data is passed to the next layer of the network.\n\nNeural networks rely on training data to learn and improve their accuracy over time. However, once these learning algorithms are fine-tuned, they are powerful computing and artificial intelligence tools, allowing us to classify and cluster data at high speed. Voice recognition or image recognition tasks can take minutes versus hours for manual identification by human experts. One of the best known neural networks is Google's search algorithm.\n\n##### Types of neural networks\n\nThe perceptron is the oldest neural network, created by Frank Rosenblatt in 1958. Forward propagating neural networks or Multilayer Perceptrons (MLP) are the networks we have mainly focused on in this paper. They consist of an input layer, a hidden layer(s) and an output layer. Although these neural networks are also known as MLPs, it is important to note that they are actually made up of sigmoid neurons, not perceptrons, since most real-world problems are nonlinear.\n\nConvolutional Neural Networks (CNNs) are similar to forward propagation networks, but are typically used for image recognition, pattern recognition and/or computer vision. These networks leverage the principles of linear algebra, particularly matrix multiplication, to identify patterns within an image.\n\nRecurrent Neural Networks (RNN) are identified by their feedback loops. These learning algorithms are primarily used with time series data to make predictions about future outcomes, for example, stock market predictions or sales forecasts.\n\n##### Neural Networks Versus Deep Learning\n\nDeep Learning and neural networks tend to be used interchangeably in conversation, which can be confusing. It is worth noting that \"Deep\" in Deep Learning only refers to the depth of layers in a neural network. A neural network that consists of more than three layers (including inputs and output) can be considered a Deep Learning algorithm. A neural network that has only two or three layers is a basic neural network [W4293201769].",
+              "citations": [
+                "W4293201769"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_8_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.8.2. Convolutional Neural Networks (CNN)",
+              "parent_subsection_id": "s_2_8",
+              "text": "CNN extracts image information through the input layer and then uses convolution kernels to perform convolution operations on the image information and add bias values to form a local feature map [W4321236389].\n\nNeural networks are a subset of machine learning and the core of deep learning algorithms. They are composed of layers of nodes, which include an input layer, one or more hidden layers, and an output layer. Each node is connected to another and has an associated weight and threshold. If the output of an individual node is above the specified threshold value, that node becomes active and sends data to the next layer in the network. Otherwise, no data is passed to the next network layer [W4323520043].\n\nConvolutional neural networks are distinguished from other neural networks by their superior performance with image, speech, or audio signal inputs. They consist of three main types of layers:\n\n- Convolutional layer\n- Clustering layer\n- Fully connected layer\n\nThe convolutional layer is the first layer of a convolutional network. While convolutional layers may be followed by other convolutional layers or grouping layers, the final layer is the fully connected layer. With each layer, the CNN increases in complexity, identifying larger and larger parts of the image. The first layers focus on simple features, such as colors and edges. As the image data progresses through the layers, the CNN begins to recognize larger elements or shapes until it finally identifies the expected object [W4323520043].\n\n##### Convolutional layer\n\nThe convolutional layer is the main building block of a CNN, and is where most of the computations are performed. It requires a few components, such as input data, a filter, and a feature map. Suppose the input is a color image composed of a 3D pixel array. The feature detector is a two-dimensional (2D) array of weights representing a portion of the image. Although its size can vary, the size of the filter is usually a 3x3 matrix; this also determines the size of the receptive field [W4323520043].\n\nA Convolutional Neural Network (CNN) has one or more convolutional layers, they are grouping layers and fully connected and are used in image recognition. CNN can be applied to 2D and 3D data arrays, and uses image processing after collecting data that have different formats, i.e., natural, false, grayscale [W4362585034].\n\n##### Layer grouping\n\nLayer clustering, also known as subsampling, allows for dimensionality reduction by reducing the number of input parameters. Similar to the convolutional layer, the grouping operation sweeps the entire input with a filter, but the difference is that this filter has no weight. Instead, the kernel applies an aggregation function to the values within the receptive field and thus fills the output matrix. There are two main types of grouping:\n\n- **Maximum clustering:** as the filter traverses the input, it selects the pixel with the highest value to send to the output matrix. This approach is more commonly used than average clustering.\n\n- **Average clustering:** as the filter moves through the input, it calculates the average value within the receptive field to send to the output matrix.\n\nAlthough a lot of information is lost in the clustering layer, clustering has a number of benefits for the CNN. It helps reduce complexity, improves efficiency and limits the risk of overfitting.\n\n##### Fully connected layer\n\nThe name fully connected layer accurately describes the layer itself. As mentioned above, the pixel values of the input image are not directly connected to the output layer in partially connected layers. However, in the fully connected layer, each node of the output layer is directly connected to a node of the previous layer [W4323520043].",
+              "citations": [
+                "W4321236389",
+                "W4323520043",
+                "W4362585034"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Machine Learning (ML) is an application of AI, based on the idea that we should let machines learn by themselves. What this means is that more data is available for machines to analyze and \"learn\". Going deeper into ML, Deep Learning (DL) is about reducing the human engineering aspect [UNMAPPED:3]. Deep Learning (DL) focuses on making the machine classify information with the same method as the human brain. Learning technique or model applying neural networks that includes layers with higher difficulty [W4377983075, W4291825291, W4291741556]. Gokani (2017) [UNMAPPED:3] describes artificial intelligence along with hierarchical relationship it has with machine learning, on the other hand Samoili et al. (2020) [UNMAPPED:21] propose a taxonomy of domain and subdomain related perception and subdomains with computational vision.\n\n**TABLE 2**\n*Artificial Intelligence Taxonomy*\n\n{{TABLE:tbl_02}}",
+          "citations": [
+            "W4377983075",
+            "W4291825291",
+            "W4291741556"
+          ],
+          "tables_in_text": [
+            "tbl_02"
+          ],
+          "citations_unmapped": [
+            "3",
+            "21",
+            "2017",
+            "2020"
+          ]
+        },
+        {
+          "subsection_id": "s_2_9",
+          "subsection_index": 9,
+          "subsection_label": "2.9. Descriptors",
+          "subsubsections": [],
+          "text": "Descriptors are specific values that are used in digital images in order to characterize the objects present. They serve, for example, to discard unwanted objects or stains, to differentiate the shape of objects [UNMAPPED:26].\n\n##### 2.9.1. Histograms of Orientation Gradients (HOG)\n\nIn images of real scenes it is difficult to use basic descriptors to detect objects or even people. Therefore, more advanced descriptors, such as HOG types, are used [UNMAPPED:26]. The HOG technique is based on the accumulation of gradient directions across the image pixel for a certain region called \"Cell\". In the following histogram construction it considers a dimension that provides a series of feature vectors to be considered as input for the classification process [W4362509711].\n\nIn the model the image is represented by means of the HOGs [UNMAPPED:27].\n\n##### 2.9.2. Haar Cascade\n\nHaar descriptors are among the most efficient descriptors used, due to their low computational cost. They are used by the famous Viola-Jones face detection algorithm [UNMAPPED:26].\n\n##### 2.9.3. Transfer Learning Driven Facial Emotion Recognition for Advanced Driver Assistance System (TLDFER-ADAS)\n\nThe TLDFER-ADAS technique initially performs contrast enhancement procedures to improve image quality [W4308121396].\n\n##### 2.9.4. Local Binary Patterns (LBP)\n\nCreates binary code at each pixel in the neighborhood according to the central pixel value. The feature selection algorithm used is derived from LBP for all available images, LBP extracts features and CNN classifies images into groups according to facial expressions [W4362585034].\n\nIt compares the intensity of pixels with their neighbors to obtain Local Binary Patterns (LBP) [UNMAPPED:27].",
+          "citations": [
+            "W4362509711",
+            "W4308121396",
+            "W4362585034"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "26",
+            "27"
+          ]
+        },
+        {
+          "subsection_id": "s_2_10",
+          "subsection_index": 10,
+          "subsection_label": "2.10. Classifiers",
+          "subsubsections": [],
+          "text": "There are multiple types of classifiers of which the most important and the ones with the lowest computational cost are going to be cited and explained here [UNMAPPED:26].\n\nType of classifiers:\n- SVM\n- K-Neighbors\n- Neural Networks\n- Adaboost\n\n##### Support Vector Machines (SVM)\n\nThe Support Vector Machines algorithm is a linear classifier. It uses maximum margin hyperplanes which are more robust and give less classification errors. This system is efficient in the case of nonlinear data and resistant to overfitting [UNMAPPED:26].\n\n##### K-Neighbors\n\nThis algorithm is based on the distance that exists between the input sample with the different samples that are already classified by classes. Depending on the number of neighbors it will determine the class of the sample. This will correspond to the most dominant class among the K-nearest neighbors [UNMAPPED:26].\n\n##### Neural Networks\n\nThere are different types of neural networks. In this case, the pattern recognition ones have been investigated, since this will be the type of classifier that will be used to classify the different emotions that we have. Artificial neural networks have an established number of neurons, which can vary according to the user's choice and makes the model fit better to what is desired. However, having a greater number of neurons does not mean that the result obtained is better. In our case, we will explain later the number of neurons we spent to perform the different tests and we will see how a higher number of neurons does not mean a better result [UNMAPPED:26].\n\n##### AdaBoost\n\nBoosting classification is used to increase the performance of decision trees. This technique is used because it improves on difficult decisions, i.e. as it goes through the different learning stages, it discards errors and then later focuses on those and has a better hit rate [UNMAPPED:26].\n\nThe Adaboost classifier operates under the cascade classifier architecture. The cascade is organized in stages. For each stage, a set of positive samples and negative samples are prepared, from which a number of weak classifiers are selected that together form a strong classifier. The weak classifiers are chosen from within the representation feature space (Haar, LBP or HOG) [UNMAPPED:27].\n\n##### Softmax\n\nIt is commonly used in image classification tasks to measure the difference between the predicted probability distribution and the probability distribution of the actual labels by cross-entropy [W4362585722].\n\nFast Learning Network (FLN) is a novel proposed dual-parallel forward parallel artificial neural network. The FLN algorithm is based on least-squares methods [W4362509711].",
+          "citations": [
+            "W4362585722",
+            "W4362509711"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "26",
+            "27"
+          ]
+        },
+        {
+          "subsection_id": "s_2_11",
+          "subsection_index": 11,
+          "subsection_label": "2.11. Viola-Jones Algorithm",
+          "subsubsections": [],
+          "text": "Viola-Jones is an algorithm that has been defined as one of the most efficient face detectors currently available, thanks to its low computational cost and high hit rate. This algorithm was created in 2001 by Paul Viola and Michael Jones. It was originally created to detect objects competitively in real time. It is used to detect people, although it can also be trained to detect other types of objects [W4291825291, UNMAPPED:26].",
+          "citations": [
+            "W4291825291"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "26"
+          ]
+        },
+        {
+          "subsection_id": "s_2_12",
+          "subsection_index": 12,
+          "subsection_label": "2.12. MobileNetV3 Model",
+          "subsubsections": [],
+          "text": "It is a lightweight network proposed by the Google team. Unlike other networks, MobileNetV3 adopts depth-separable convolution instead of traditional convolution, resulting in a significant decrease in parameters and a substantial reduction in computational costs [W4362585722].",
+          "citations": [
+            "W4362585722"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_13",
+          "subsection_index": 13,
+          "subsection_label": "2.13. Databases",
+          "subsubsections": [],
+          "text": "After an extensive study of the database to be used, the one that had the most subjects and provided the best conditions was chosen [UNMAPPED:26].\n\n##### 2.13.1. Cohn-Kanade (CK+)\n\nFacial expressions. It contains 593 sequences from 123 subjects, of which 327 sequences, seven basic expressions [W4321236389].\n\n##### 2.13.2. Facial Emotion Recognition (FER)\n\nTraditional FER has first-order feature descriptors based on geometry and appearance, as well as higher-order feature descriptors, such as the covariance matrix [W4321236389].\n\n##### 2.13.3. RAF-DB\n\nIt is provided by the Laboratory of Pattern Recognition and Intelligent Systems (PRIS Lab) of Beijing University of Posts and Telecommunications. The database consists of more than 300,000 facial images extracted from the Internet, which are classified into seven categories: surprise, fear, disgust, anger, sadness, happiness and neutrality [W4377983075].",
+          "citations": [
+            "W4321236389",
+            "W4377983075"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "26"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Methods",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "For the search of information in scientific papers, following the systematic review of the literature, according to the PRISMA method, the most relevant papers were selected to identify the issues related to facial emotion recognition, the degree of accuracy, which data sets are the most used, what kind of emotions exist in both positive and negative ones and what indicators could be added to the new emotions. These issues are part of the research questions, as shown in Table 3.\n\n**TABLE 3**\n*Research questions*\n\n{{TABLE:tbl_03}}\n\nThe information gathering process was carried out through different databases such as: Scopus, Web of Science (WOS), Association for Computing Machinery (ACM) and other papers through manual search. The keywords or search engines that allowed us to access the required information were: \"Emotions\", \"Facial Emotion\", \"Computer Vision\", \"deep learning\", \"machine learning\", \"detection\", \"recognition\", \"identification\", \"classification\", using Boolean AND, OR and NOT indicators in the search process. The search results have been applied to the \"titleabs-key\" field in Scopus and in the \"All Fields\" field in Web of Science (WOS) and also in the \"All\" field in Association for Computing Machinery (ACM).\n\nThe search equation being those shown below:\n\n((\"Emotions\" OR \"Facial Emotion\") AND (\"Computer Vision\" OR \"deep learning\" OR \"machine learning\") AND (\"detection\" OR \"recognition\" OR \"identification\" OR \"classification\") AND NOT (\"Sentiment analysis\" OR \"musical\" OR \"Speech\" OR \"pet\" OR \"dog\")).\n\nInclusion criteria were: i) open access and full-text papers, ii) papers published in indexed journals in the period from January 2022 to June 2023.\n\nThe exclusion criteria were papers that: i) contained gray literature, ii) only the ABSTRACT was accessible, iii) were duplicated, iv) were not in line with the research objective.\n\n**FIGURE 1**\n*Flow chart according to Prisma*\n\n```\n+----------------------------------+\n| Records identified through |\n| database searches |\n| Scopus = 3910 |\n| WoS = 1067 |\n| ACM = 1659 |\n| (n = 6636) |\n+----------------------------------+\n |\n v\n+----------------------------------+\n| Additional records identified |\n| through other sources |\n| (n = 11) |\n+----------------------------------+\n |\n v\n+----------------------------------+\n| Records after eliminating |\n| duplicate citations |\n| (n = 160) |\n+----------------------------------+\n |\n v\n+----------------------------------+\n| Records screened |\n| (n = 992) |\n+----------------------------------+\n |\n v\n+----------------------------------+\n| Records excluded |\n| (n = 5565) |\n+----------------------------------+\n |\n v\n+----------------------------------+\n| Full-text papers evaluated |\n| for eligibility |\n| (n = 38) |\n+----------------------------------+\n |\n v\n+----------------------------------+\n| Full-text papers excluded |\n| (n = 844) |\n+----------------------------------+\n |\n v\n+----------------------------------+\n| Studies included in |\n| qualitative synthesis |\n| (n = 38) |\n+----------------------------------+\n```",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_03"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Results and Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Proposed techniques and algorithm used for facial emotion recognition",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.1.1. Techniques and Taxonomy",
+              "parent_subsection_id": "s_4_1",
+              "text": "The results are shown in Table 4 where 36.84% of the papers use Deep Learning for the development of the techniques and complementation model that they apply in their research projects.\n\n**TABLE 4**\n*Results of the Artificial Intelligence Techniques*\n\n{{TABLE:tbl_04}}\n\nTable 5 shows that the majority using the Deep Learning technique also use the method, model and dataset called MobileNetV3 [W4318615540] and ResNet-18 [W4291741556].\n\n**TABLE 5**\n*Results of the Artificial Intelligence Techniques*\n\n{{TABLE:tbl_05}}",
+              "citations": [
+                "W4318615540",
+                "W4291741556"
+              ],
+              "tables_in_text": [
+                "tbl_04",
+                "tbl_05"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.1.2. Taxonomy",
+              "parent_subsection_id": "s_4_1",
+              "text": "Gokani (2017) [UNMAPPED:3] mentions the concepts of artificial intelligence along with hierarchical relationship it has with machine learning, instead Samoili et al. (2020) [UNMAPPED:21] propose a taxonomy of domain and subdomain related to perception and subdomains of computational vision.\n\n**TABLE 6**\n*Artificial Intelligence Taxonomy Result*\n\n{{TABLE:tbl_06}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_06"
+              ],
+              "citations_unmapped": [
+                "3",
+                "21",
+                "2017",
+                "2020"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.1.3. Most frequently used algorithms for facial emotion recognition",
+              "parent_subsection_id": "s_4_1",
+              "text": "It is determined that the most frequent algorithms by the authors are SVM and SoftMax with a total of 17.65% for each one, the same that they use for their classification in their implementation of the proposed project for the system.\n\n**TABLE 7**\n*Frequency result of the most used Algorithm in facial emotion recognition*\n\n{{TABLE:tbl_07}}\n\n**FIGURE 2**\n*Statistical graph of the most frequent algorithm*\n\n{{TABLE:tbl_08}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_07",
+                "tbl_08"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4.1.4. Descriptors most used in facial emotion recognition",
+              "parent_subsection_id": "s_4_1",
+              "text": "The most frequently used descriptors by the researchers are Histograms of Orientation Gradients (HOG) as shown in Table 8 [W4362509711].\n\n**TABLE 8**\n*Frequency result of the most frequently used descriptors in facial emotion recognition*\n\n{{TABLE:tbl_09}}",
+              "citations": [
+                "W4362509711"
+              ],
+              "tables_in_text": [
+                "tbl_09"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "4.2. Method, model and dataset for using the best degree of pressure in facial emotion recognition",
+              "parent_subsection_id": "s_4_1",
+              "text": "A review of all the papers was applied where it was determined that the best method, model and dataset is [VGG19+ our network] + CK+ with an accuracy degree of 99.20%.\n\n**TABLE 9**\n*Result of Methods and Models with accuracies for facial emotion detection*\n\n{{TABLE:tbl_10}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_10"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "4.3. Data Sets for Facial Emotion Recognition",
+              "parent_subsection_id": "s_4_1",
+              "text": "This time the best dataset is used which is CK+ with a frequency most used by the authors representing 16.67%.\n\n**TABLE 10**\n*Result of the papers focused on the datasets with frequency of usefulness in facial emotions*\n\n{{TABLE:tbl_11}}\n\n**FIGURE 3**\n*Statistical plot of data set related to emotions*\n\n{{TABLE:tbl_12}}\n\n**TABLE 11**\n*Description of the characteristics of the Emotions data set*\n\n{{TABLE:tbl_13}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_11",
+                "tbl_12",
+                "tbl_13"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "4.4. Classification and characteristics of the types of facial emotions",
+              "parent_subsection_id": "s_4_1",
+              "text": "It is described that there are 2 types of basic emotions that share the same characteristic with facial expressions.\n\n**TABLE 12**\n*Results of the papers that determined the number of emotions found*\n\n{{TABLE:tbl_14}}\n\n##### 4.4.1. Identification of the types of emotions being classified\n\nIt is described that there are seven types of emotion classifications.\n\n**TABLE 13**\n*Results of the papers focused on the types of emotion classifications*\n\n{{TABLE:tbl_15}}\n\n##### 4.4.2. How positive and negative emotions are classified\n\nThis advantage can be considered a bias in the recognition of positive emotions since they are in the minority compared to negative emotions in the set of basic emotions (positive: joy and surprise, although the valence of surprise remains controversial; negative: anger, sadness, fear, disgust) [W3193844299, W4312723656, W4362585034, W4376891644, UNMAPPED:33]. However, Marcos et al. (2022) [W3187345349] classifies positive emotions (joy and enthusiasm), with some negative emotions (frustration and worry) and (boredom and concern) [W4221009454, W4295008533, W4376956802, W4368617760].\n\n**TABLE 14**\n*Results of the papers focused on positive and negative emotions*\n\n{{TABLE:tbl_16}}",
+              "citations": [
+                "W3187345349"
+              ],
+              "tables_in_text": [
+                "tbl_14",
+                "tbl_15",
+                "tbl_16"
+              ],
+              "citations_unmapped": [
+                "2022"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_8",
+              "subsubsection_index": 8,
+              "subsubsection_label": "4.5. Proposal of an indicator that relates facial coloration and facial emotion recognition",
+              "parent_subsection_id": "s_4_1",
+              "text": "In one of his contributions to physiology, documented by Sir Charles Bell in 1806 in the first edition of his work and later in the third edition of \"Anatomy and Philosophy of Expression\", a seemingly small but crucial detail is revealed. Bell notes that the muscles around the eyes contract involuntarily during intense respiratory efforts, thus playing a role in protecting these delicate organs from blood pressure. However, Mr. Bain's more profound approach stands out in two of his works, where he considers expression as an intrinsic component of feeling [W4320169061, W4379231153, W4367596453, W4377996940, UNMAPPED:16]. The physiological signaling approach is highlighted in the study by Lozano et al. (2020) [UNMAPPED:47]. Their Artificial Neural Network identifies the dominant dimension of the emotional circumflex model and ensures consistency among the various emotions detected by the different modules of the system. For example, in the case of a user's partial emotions, such as fear (facial detection), aroused (behavioral detection), and nervous (physiological signals), a coherent connection is established in the analysis [W4328122039, W4366826569, W3207785936, UNMAPPED:47].\n\nIn this study, we seek to test the additional hypothesis that facial color is capable of communicating emotion effectively, even without the influence of facial movements. The idea put forward is that a face can convey emotional information to observers by altering blood flow or blood composition in the network of blood vessels closest to the skin surface, as illustrated in Figure 4 [W2791165182].\n\n**FIGURE 4**\n*Image Emotions are the execution of a series of calculations by the nervous system*\n\n[Image description: Emotions are the execution of a series of calculations by the nervous system]\n\nSource: Benitez-Quiroz et al., 2018 [W2791165182]\n\nDarwin (1899) [UNMAPPED:16] highlights an intriguing feature: facial flushing as a response to embarrassment, when skin tone allows it and it is visible. Furthermore, he raises the question of how far this blushing extends into the body.\n\nIt also records that, in relation to facial blushing in Australians, four informants maintain that those with dark skin tones, similar to Africans, rarely show blushing. A fifth informant, however, suggests that intense blushing is only observed in individuals with very dirty skin. Three observers confirm that blushing does occur. Mr. S. Wilson adds that this occurs in situations of strong emotions and when the skin is not excessively dark from prolonged exposure and lack of cleansing. Mr. Liang also reports that embarrassment often causes blushing, which sometimes extends to the neck. He adds that embarrassment also manifests itself in eye movements from side to side. Since Mr. Liang was a teacher in a native school, his observations possibly focused more on children, who tend to blush more than adults.\n\nThe research by Benitez-Quiroz et al. (2018) [W2791165182] presents the possibility of identifying emotions from changes in facial color by modulating blood flow. The study classifies these emotions into four categories: first, images corresponding to expressions of happiness, anger and surprise are provided in pairs. The left image of each pair shows diagnostic facial colors; second, visual examples of emotions such as anger, disgust, happiness and happiness mixed with disgust, sadness and extreme surprise are presented; third and fourth are samples of trials conducted with two-alternative and six-alternative forced choice methods [W4386231659, W4361276417, W4386231651, W4376958280, UNMAPPED:50].\n\n**FIGURE 5**\n*Proposal of a new model to measure the level of embarrassment*\n\n[Image description: New model to measure embarrassment level showing blood flow and mask/fixation points]\n\nSource: Own elaboration\n\n**FIGURE 6**\n*Proposal of a new model to measure the level of shame*\n\n[Image description: Model showing high/low blood flow relationship to shame]\n\nSource: Own elaboration\n\n**FIGURE 7**\n*Proposal of a new model to see the relationship between basic emotions and positive or negative emotions according to the information*\n\n[Image description: Relationship diagram showing information flow from emotions (Happiness, Neutral, Surprise, Sadness, Disgust, Anger, Fear, Contempt) to Positive/Negative emotions with Shame as mediating factor]\n\nSource: Own elaboration",
+              "citations": [
+                "W2791165182"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "47",
+                "16",
+                "2020",
+                "1899",
+                "2018"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In the analysis of the results of the review papers, a total of 38 papers selected between 2022 and 2023 were obtained, focused on the topic of facial emotion recognition.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This research has immersed itself in an in-depth and comprehensive analysis of a diverse set of papers exploring the intricate relationships between artificial intelligence techniques and the challenge of facial emotion recognition. These studies have employed and adapted HOG classifiers and descriptors to address the complex task of interpreting human facial expressions in emotional terms. It is noteworthy that a remarkable 33% of these papers have been developed by outstanding researchers, including Alsemawi et al. (2023) [W4362509711], ELsayed et al. (2023) [W4362585034], and Merch\u00e1n et al. (2014) [UNMAPPED:27].\n\nIn the choice of algorithms, SVM and SoftMax have emerged as the predominant choices, playing a crucial role in achieving optimal levels of accuracy in model training. These algorithms, with their robustness and ability to deal with complex data, have proven to be fundamental pillars in the field of facial emotion recognition.\n\nIt is noteworthy to mention that emotions are effectively analyzed in surveillance, smart homes, computer games, tracking of depressive patients, psychoanalysis [W4386231659]. It is important to track emotional micro-expressions getting peculiarities such as face movements in space-time from videos [W4361276417]. It is highlighted the idea that the use of facial recognition can be focused in three areas such as: robotized machines, marketing and safe citizenship [W3210422346, W4281488040, W4313246924]. In the marketing of services, technology applied to the recognition of emotions and facial features significantly helps physicians, both in the diagnosis of the various types of autism, as well as in the treatment to optimize the quality of life of children and young people suffering from this disability [W4323359397, W4320503002].\n\nThere are models, methods, and sets of databases that allow for maximum accuracy in this task. The synergy between [VGG19 + our network] and the CK+ database has proven to be exceptionally successful, achieving a staggering 99.20% accuracy. This achievement highlights the crucial importance of finding the optimal configuration for optimal performance in facial emotion interpretation.\n\nThere is an interesting trend in the literature: a more accentuated focus on negative emotions such as anger, sadness, fear and disgust, compared to positive emotions such as joy and surprise. However, it is essential to mention that the valence of the emotion surprises still persists as an area of debate and discussion in the scientific community [W3193844299].\n\nFacial emotion recognition provides us with an in-depth and comprehensive overview of the techniques, methods, and emerging trends in this discipline. With the convergence of psychology and technology, this research not only expands our knowledge of how machines can capture and understand human emotions, but also opens new doors to explore how this understanding can be applied in various fields and applications, such as human-computer interaction, mental health, and artificial intelligence. Given that there are many realities, it is advisable to proceed with caution in order to decide moderately [UNMAPPED:47]. The path traced by these studies promises to further unravel the mysteries of facial expressions and their connections with human emotions, generating a profound and lasting impact on the field of science and technology.",
+      "citations": [
+        "W4362509711",
+        "W4362585034",
+        "W4386231659",
+        "W4361276417",
+        "W3193844299"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "27",
+        "47",
+        "2023",
+        "2014"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_8",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_16",
+      "placeholder": "{{TABLE:tbl_16}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4387904866_tables.md"
+}

@@ -1,0 +1,377 @@
+{
+  "id": "W4394598673",
+  "metadata": {
+    "title": "A systematic review of sample size estimation accuracy on power in malaria cluster randomised trials measuring epidemiological outcomes [1\u20133]",
+    "n_sections": 10,
+    "n_subsections": 6,
+    "n_subsubsections": 0,
+    "n_tables": 17
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Cluster randomised trials (CRTs) are the gold standard for measuring the community-wide impacts of malaria control tools [UNMAPPED:4]. CRTs rely on well-defined sample size estimations to detect statistically significant effects of trialled interventions; however these are often predicted poorly by investigators. Here, we review the accuracy of predicted parameters used in sample size calculations for malaria CRTs with epidemiological outcomes [W3152765990, W2153247789, W1989344401].",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "4"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Methods",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We searched for published malaria CRTs using four online databases in March 2022. Eligible trials included those with malaria-specific epidemiological outcomes which randomised at least six geographical clusters to study arms. Predicted and observed sample size parameters were extracted by reviewers for each trial. Pair-wise correlation coefficients were calculated to assess the accuracy of predicted control-arm outcome estimates and desired relative reductions (effect sizes) between arms compared to what was observed. Among trials which retrospectively calculated an estimate of heterogeneity in cluster outcomes, we recalculated study power according to observed trial estimates [W2131614949, W3127690588, W2127410102].",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Results",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Of the 1889 records identified and screened, 108 articles were eligible and comprised of 71 malaria CRTs. Among trials that included sample size calculations (91.5%, 65/71), most estimated cluster heterogeneity using the coefficient of variation (k) (80%, 52/65) which were often predicted without using prior data (67.7%, 44/65). Predicted control-arm epidemiological outcomes correlated weakly with those observed, with 61.2% (19/31) of prevalence estimates overestimated. Among the minority of trials which retrospectively calculated cluster heterogeneity (20%, 13/65), empirical values contrasted with those used in sample size estimations and often compromised study power [W2112655450, W2495331429, W3019215984]. Observed effect sizes were often smaller than had been predicted at the sample size stage (72.9%, 51/70) and were typically higher in the first, compared to the second, year of trials [W2153171068, W2125987157, UNMAPPED:16]. Overall, effect sizes achieved by malaria interventions tested in trials decreased between 1995 and 2021 [W2431469065, W1996218267, W2150034147].",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Study findings reveal sample size parameters in malaria CRTs were often inaccurate and resulted in underpowered studies. Future trials must strive to obtain more representative epidemiological sample size inputs to ensure interventions against malaria are adequately evaluated [W2124594906, W2796879453, W2887987267].\n\n---\n\n**Keywords** \nMalaria; Cluster randomised trial; sample size; heterogeneity; coefficient of variation\n\n---",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Malaria is a parasitic disease that in 2022 was responsible for the deaths of 608,000 individuals worldwide; most of whom were children in Sub-Saharan Africa [UNMAPPED:23]. There are numerous, effective interventions that can be used to combat malaria transmission that are recommended by the World Health Organisation (WHO). To generate evidence for the recommendation of these tools, cluster randomised trials (CRTs) are conducted to demonstrate the community-wide impacts [UNMAPPED:4].\n\nHistorically, CRTs have been instrumental in demonstrating the mass effects of the first insecticide-treated bed nets (ITNs) [W2431469065, W1996218267, W2150034147], mass chemoprevention strategies [W1996218267, W2124594906], and most recently, dual-action, long-lasting insecticide treated nets (LLINs) [W2796879453, W2887987267]. Despite their necessity, CRTs are subject to major constraints. Trialling interventions over large geographical areas is costly, logistically challenging, and at the design stage, requires well-defined estimates of underlying transmission patterns in the study setting [W3152765990]. Consequently, in recent years, some malaria CRTs have reported being underpowered and have presented inconclusive findings [W2495331429, W3019215984, W2153171068, W2125987157, UNMAPPED:35].\n\nInvestigators power CRTs according to sample size estimations which account for cluster-level randomisation, where groups of people, as opposed to individuals, are randomised to receive interventions. This design can result in heterogeneity of outcomes between and within clusters owing to groups of individuals, such as households, schools, and geographical areas, sharing similar biological and socio-economic characteristics which introduces correlation in study outcomes [W2110676524, W2735694213]. Consequently, cluster heterogeneity needs to be incorporated into sample size estimations, along with expected control arm transmission and effect size estimates (relative percentage reductions between arms), to compensate for the lower precision associated with this design. The between- and within-cluster heterogeneity can be measured using the coefficient of variation (k) or intra-cluster correlation coefficient (ICC), respectively, and heavily impacts trial size [W2110676524, W2735694213]. Trialling new interventions in areas with missing or inadequate data results in investigators having to rely on judgement-based estimates for their sample size estimations which may be inaccurate.\n\nNumerous reviews have evaluated sample size estimations in CRTs focused on cancer treatments [W2131614949], school-based interventions [W3127690588], oral health [W2127410102], residential care [W2112655450] and CRTs in general [W1989344401]. These reviews highlighted that despite trials mostly including sample size estimations, not all calculations accounted for cluster heterogeneity (73% [W2131614949], 78% [W3127690588], 71% [W2127410102] and 47% [W2112655450]). Two of these reviews further explored whether trials also included empirical measures of cluster heterogeneity and compared them to prior estimates [W3127690588, W1989344401]. Both reviews highlighted trials rarely provided retrospective estimates of cluster heterogeneity (<40%), and among trials that did, large differences were identified between predicted and observed estimates. This suggests many trialists misclassified the true degree of cluster heterogeneity at the design stage. Finally, one review explored which trials stated their desired effect sizes and compared them to those observed [W1989344401]. They showed that 68% of desired effect sizes were overestimated. Interestingly, none of these reviews compared the outcome measures predicted and observed in the control arms of their included trials. This is crucial as misclassification of predicted effect size, cluster heterogeneity and control-arm outcome measurements all impact study power [W2110676524, W2735694213, W2153247789].\n\nMalaria transmission is driven by numerous environmental and socio-economic factors including rainfall, temperature, vegetation cover, type of housing and provision of malaria interventions [W2418130754, W3093702593, W3010553947, W2888250718]. Consequently, transmission is often spatially and temporally variable across various geographical scales. This presents a challenge for malaria CRTs as heterogeneous transmission in the community may result in spatial/temporal variability in malaria-specific outcomes between geographical clusters. Therefore, estimating the level of malaria transmission in the control arm and the degree of cluster heterogeneity for malaria CRT sample size estimations is difficult in the absence of baseline data.\n\nIn this review, our aim was to investigate the characteristics and quality of sample size estimations in malaria CRTs that used geographical clusters. Specifically, we explored whether study investigators accurately predicted sample size estimation parameters, including control-arm transmission, cluster heterogeneity, and desired effect sizes, according to observed measurements during trials. It is hoped results from this review will improve future study design and help ensure trialists are able to accurately detect impacts of interventions that are vital in the fight against malaria.",
+      "citations": [
+        "W1996218267",
+        "W2124594906",
+        "W2796879453",
+        "W2887987267",
+        "W3152765990",
+        "W2110676524",
+        "W2735694213",
+        "W2131614949",
+        "W3127690588",
+        "W2127410102",
+        "W2112655450",
+        "W1989344401",
+        "W2153247789"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "23",
+        "4"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "Search strategy and selection criteria",
+          "subsubsections": [],
+          "text": "We conducted a systematic review of published malaria CRTs with epidemiological outcomes. In March 2022, we searched the database systems Pubmed, Web of Science, Embase and Cochrane reviews using truncated versions of the terms 'malaria' and 'cluster randomised trial' for trials published in English language. The bibliographies of identified reviews were additionally screened according to title and abstract. Search results were imported into the reference manager Endnote where digitally identified duplicates were removed. Manually identified duplicates were removed by two reviewers (JB & JH). Pre-determined eligibility criteria were used to screen identified articles based on title and abstract (JB & JH) while screening discordance was adjudicated by consensus (TC & JC). Identified studies were eligible for inclusion if they met the following criteria: the study was a CRT wherein at least six geographical clusters were randomised to intervention and control arms; the study measured malaria-specific epidemiological outcomes. Such outcomes include malaria prevalence or incidence according to microscopy, rapid diagnostic tests (RDTs), or molecular methods. Trials that only measured anaemia and all-cause mortality were excluded as these outcomes could be attributed to other conditions. Prior to study initiation, the review was registered in PROSPERO on 9th March 2022 (CRD42022315741).",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "Data extraction",
+          "subsubsections": [],
+          "text": "Two reviewers (JB & JH) independently extracted information from the final list of studies. Extraction discrepancies were resolved by consensus with TC and JC. Data for sample size estimations and empirical outcomes were extracted for all epidemiological outcomes measured at all trial timepoints. For each trial, we extracted data on overall trial design, randomisation method and type of intervention evaluated. For each sample size estimation, we extracted data on all assumptions outlined as well as those used to estimate cluster heterogeneity. To compare sample size assumptions to observed trial outcomes, where data was available, we extracted arm-aggregated malaria prevalence (cases/survey population) and/or incidence data (cases/person-years) by trial year and overall.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "Data analysis",
+          "subsubsections": [],
+          "text": "For each sample size estimation where observed prevalence/incidence data were available, we calculated the relative reduction (effect size) between intervention arms for the duration of each study and stratified by year. The effect size was calculated according to equations A and B where subscript (1) and (2) represent the control and intervention arms, respectively, while (r) and (p) correspond to malaria incidence per person year and malaria prevalence, respectively. In this manner, the effect size represents the % relative reduction between the control and the intervention arm.\n\n$$ \\text{Prevalence effect size} = 1 - p_2/p_1 $$\n\n$$ \\text{Incidence effect size} = 1 - r_2/r_1 $$\n\nFor sample size parameters including control-arm prevalence, incidence and effect size estimates, pair-wise Pearson's correlation coefficients were used to calculate the strength of association between those estimated and observed for trials (Rho, p-value<0.05). To determine whether parameters were accurately estimated by investigators, we calculated the relative percentage difference between estimates and observed outputs. Parameters were classified as overestimated/underestimated if they exceeded a relative percentage difference of 10%. Regarding cluster heterogeneity estimates (k/ICC) provided in trials, we first investigated whether estimates based on pilot or baseline data differed to estimates based on no data. A pair-wise t-test was used to determine whether the mean value difference equalled zero. Among trials that reported cluster heterogeneity using observed trial data, we recalculated study power (%) according to the observed k/ICC and year 1 control arm prevalence/incidence but using the desired effect size quoted in the paper. The remaining sample size parameters used were identical to the original power calculations: desired effect size (%), cluster size, cluster number and significance level (%). Study power for CRTs was calculated according to methods described by Hayes and Moulton [W2110676524]. All analyses were conducted in STATA (v.17, Texas, USA).",
+          "citations": [
+            "W2110676524",
+            "W2110676524"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_7_1",
+          "subsection_index": 1,
+          "subsection_label": "Control arm transmission intensity assumptions",
+          "subsubsections": [],
+          "text": "We explored how accurately epidemiological outcomes were predicted in the control arms of included trials (prevalence N: 31, incidence N: 34). Throughout each of the trials, predicted prevalence and incidence only moderately positively correlated with corresponding observed values (incidence r: 0.49, p-value<0.05, prevalence r: 0.39, p-value<0.05) (Figure 3A & B). Moreover, most predicted prevalence and incidence estimates were overestimated by more than 10% according to observed estimates (prevalence overestimation: 61.1% (19/31); incidence overestimation: 50% (17/34)) (Figure 3C & D). We also assessed whether using prior data was better for predicting subsequent prevalence/incidence. Results revealed no difference between using prior data or not (Figure 3A & B). Lastly, we found predicted prevalence/incidence correlated significantly with those observed in the first year of each trial yet not the second year (Figure 3E & F). These results demonstrate investigators tended to poorly predict control-arm prevalence/incidence, particularly in the second year and that prevalence was often overestimated in malaria CRTs.\n\n**Figure 3: Accuracy of predicted versus observed prevalence and incidence outcomes in malaria CRT control arms.**\n\n*(Correlation plots and matrices summarised textually)*\n\n**A & B:** Correlation between the predicted and overall observed prevalence/incidence stratified by method used to predict estimates: using data (D); using no data (ND); and combined. r: correlation coefficient.\n- Prevalence combined r: 0.39 (p<0.05)\n- Incidence combined r: 0.49 (p<0.05)\n\n**C & D:** The percentage of predicted prevalence/incidence estimates that were underestimated (relative percentage difference <-10%), no difference (relative percentage difference -10% to 10%) or overestimated (relative percentage difference >10%) according to overall observed estimates.\n- Prevalence: Underestimated 25%, No difference 15%, Overestimated 60%\n- Incidence: Underestimated 40%, No difference 10%, Overestimated 50%\n\n**E & F:** Correlation matrix comparing the predicted prevalence/incidence with estimates observed throughout the trial (observed), in year 1 (Observed y1) and in year 2 (Observed y2). *: r p-value<0.05.\n- Prevalence: Predicted vs Observed r=0.33; Predicted vs Observed y1 r=0.42; Predicted vs Observed y2 r=0.26\n- Incidence: Predicted vs Observed r=0.49; Predicted vs Observed y1 r=0.56; Predicted vs Observed y2 r=0.29",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_2",
+          "subsection_index": 2,
+          "subsection_label": "Cluster heterogeneity assumptions",
+          "subsubsections": [],
+          "text": "Among trials that utilised the coefficient of variation (k) to account for cluster heterogeneity of incidence/prevalence in their sample size estimations (Table 2), a range of values were used (mean: 0.37, range: 0.1\u20131.0) (Figure 2K & O). Values of k predicted using prior data were, on average, statistically higher than those predicted with no prior data (no prior data mean k: 0.30; prior data mean k: 0.52, t-test p-value<0.05). This suggests k was likely underestimated in many trials. A small number of trials used the ICC to account for cluster heterogeneity, and they similarly had a large range (mean: 0.12, range: 0.006\u20130.40) (Additional file 3).\n\nAmong the trials that additionally calculated k/ICC at the end of the study using empirical data (20% 13/65), we explored whether predicted cluster heterogeneity estimates were accurate and then used the measured value for k/ICC to recalculate study power (Table 3). Empirical cluster heterogeneity estimates often differed to those used in sample size estimations with the majority underestimating k/ICC (61.5% 8/13). Recalculated power estimates, according to the stated desired effect, observed control arm transmission intensity and k/ICC, were often lower than originally planned for. The observed power for 7/11 trials was below 80%. For 4/11 trials, cluster heterogeneity was overestimated which resulted in them remaining suitably powered to detect their desired effect sizes. We were unable to replicate power calculations for two of the trials that provided retrospective k/ICC estimates [W2549904414, W2766238630]. It should be noted it was not always stated which timepoint/subset of trial data was used to retrospectively calculate k/ICC.\n\n**Table 3: The study power (%) to detect desired effect sizes according to predicted (left) and observed (right) sample size parameters among trials that retrospectively calculated cluster heterogeneity.** (The predicted sample size parameters include the predicted control-arm prevalence/incidence and the k/ICC values stated in the article methods. The observed sample size parameters include the empirical control-arm prevalence/incidence and k/ICC values in the first year of the trials. First year data was utilised to estimate observed study power to account for temporal variations in transmission/cluster heterogeneity. The remaining sample size parameters including clusters per arm, cluster size and significance level were identical between the predicted and observed power calculations. Blue: study power >80%. Red: study power <80%.)\n\n{{TABLE:tbl_16}}",
+          "citations": [
+            "W2549904414",
+            "W2766238630"
+          ],
+          "tables_in_text": [
+            "tbl_16"
+          ]
+        },
+        {
+          "subsection_id": "s_7_3",
+          "subsection_index": 3,
+          "subsection_label": "Effect size assumptions",
+          "subsubsections": [],
+          "text": "Among the 71 included malaria CRTs, a total of 70 desired effect size estimates were accompanied with empirical effect size estimates. We examined whether the desired effect sizes used in sample size estimations corresponded to observed effect sizes in malaria CRTs. We identified no evidence of a correlation between desired and observed effects sizes throughout the trial (r=0.21, p: 0.09) (Figure 4A). We also found that 72.7% (51/70) of desired effect sizes were overestimated by more than a relative 10% difference (Figure 4B). We then explored factors that may have contributed to these findings. Firstly, among trials that were conducted for at least 2 years (N:36), we found a strong positive correlation between year 1 and year 2 observed effect sizes (r=0.49; p:0.003) (Figure 4C). Despite this, effect sizes were more often higher in the first, compared to the second, year of each trial (52.8% 19/36) (Figure 4C). Secondly, after comparing observed effect sizes to trial start date, a negative correlation was seen (r: -0.30, p<0.05), suggesting that effect sizes have been decreasing over time (Figure 4D).\n\n**Figure 4: Accuracy of desired versus observed effect size (ES) estimates in malaria CRTs.**\n\n*(Correlation plots and matrices summarised textually)*\n\n**A:** Correlation between the desired and overall observed effect size by type of intervention. Diagonal dash: line of equality. r=0.21 (p=0.09)\n\n**B:** The percentage of desired effect size estimates that were underestimated (relative percentage difference <-10%), no difference (relative percentage difference -10% to 10%) or overestimated (relative percentage difference >10%) according to overall observed effect size estimates.\n- Underestimated: 22%\n- No difference: 4%\n- Overestimated: 72%\n\n**C:** Correlation of observed effect size estimates by the 1st and 2nd year of the trial by type of intervention. Diagonal dash: line of equality. r=0.49 (p=0.003)\n- Percentage of observed effect size estimates that were larger in year 1: 52%\n- No difference: 14%\n- Larger in year 2: 34%\n\n**D:** Correlation between the overall observed effect size estimates versus the trial starting year by type of intervention. Horizontal dash: cut off line for positive effect size. Above this line epidemiological outcomes were lower in the intervention, compared to the control arms, of trials. r=-0.30 (p<0.05)",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Our literature search yielded 1889 records from database searching and 145 records from the bibliographies of Cochrane reviews (Figure 1). Following the removal of duplicates, a total of 1302 records were screened after which 991 were excluded as they were not concerned with malaria CRTs. The remaining 311 records were assessed for eligibility resulting in 108 published articles being included in this study, which comprised of 71 malaria CRTs (Additional file 1). The review PRISMA 2020 checklist is included in additional file 2.\n\n**Figure 1: Study selection of included epidemiological malaria CRTs**\n\n{{TABLE:tbl_01}}\n\nThe trial-level characteristics of the 71 malaria CRTs are shown in Table 1 and Figure 2A\u2013G. Since 1995, the number of malaria-specific CRTs have increased in frequency and distribution across the world (Figure 2A & B). The 71 identified CRTs were conducted in a total of 78 countries, with study sites in Africa (N:53), Asia (N:21) and South America (N:4). 54.9% (39/71) of the trials evaluated vector control interventions, all measured Plasmodium falciparum outcomes while 26.8% (19/71) also measured Plasmodium vivax outcomes. Most trials adopted a parallel design (85.9%, 61/71) and consisted of two study arms (77.5%, 55/71). Concerning the cluster randomisation procedures, 39.4% (28/71) used simple randomisation to allocate clusters, 23.9% (17/71) implemented stratified randomisation, 22.5% (16/71) employed restricted randomisation, while 12.7% (9/71) randomised clusters within matched pairs. Among trials that randomised clusters through pair-matching or stratification, most restricted allocation based on a single criterion. For those that utilised restricted randomisation, most used between 3\u20134 restriction criteria (Figure 2F). The most common restriction criteria used for randomisation included cluster transmission intensity (prevalence or incidence), cluster size, location, and historical intervention coverage (Figure 2G). Regarding cluster design, 74.6% (53/71) adopted a basic cluster design, 14.1% (10/71) used a 'fried egg' design and 11.3% (8/71) reported ensuring a minimum buffer distance between clusters. Among trials that reported their minimum cluster buffer size, 72.7% (8/11) reported a minimum buffer size <2km while those who stated a minimum cluster separation reported a range between no separation and 3 km.\n\n**Table 1: Overall characteristics of malaria CRTs identified in the systematic review (N:71)**\n\n{{TABLE:tbl_02}}\n\n**Figure 2: Characteristics of malaria CRTs identified in this review**\n\n**A: Distribution of malaria CRTs**\n*(Map image omitted for text-based format)*\n\n**B: Annual frequency of malaria CRTs**\n\n{{TABLE:tbl_03}}\n\n**C: Overall duration of malaria CRTs**\n\n{{TABLE:tbl_04}}\n\n**D: Size of buffers around study clusters**\n\n{{TABLE:tbl_05}}\n\n**E: Minimum separation between study clusters**\n\n{{TABLE:tbl_06}}\n\n**F: Number of restriction criteria used according to the type of trial randomisation**\n\n{{TABLE:tbl_07}}\n\n**G: The most utilised restriction criteria in malaria CRTs** (Population willingness refers to population acceptance of trialled interventions)\n\n{{TABLE:tbl_08}}\n\n**Sample size assumptions used in trials with prevalence as the outcome measure:**\n\n**H: Predicted control-arm prevalence compared to desired effect size** (data points image omitted)\n\n**I: The desired total number of individuals surveyed per cluster**\n\n{{TABLE:tbl_09}}\n\n**J: Required number of clusters per arm**\n\n{{TABLE:tbl_10}}\n\n**K: The predicted coefficient of variation (k) for prevalence stratified by whether values were estimated using prior or baseline data (D) or assumed using no data (ND)** (Vertical dash: mean)\n\n{{TABLE:tbl_11}}\n\n**Sample size assumptions used in trials with incidence as the outcome measure:**\n\n**L: Predicted control-arm incidence per person compared to desired effect size (pa: per annum)** (data points image omitted)\n\n**M: The desired person-years per cluster**\n\n{{TABLE:tbl_12}}\n*(Table truncated for brevity; remaining values all 0)*\n\n**N: Required number of clusters per arm**\n\n{{TABLE:tbl_13}}\n\n**O: The predicted coefficient of variation (k) for incidence stratified by whether values were based on prior or baseline data (D) or assumed using no data (ND)** (Vertical dash: mean)\n\n{{TABLE:tbl_14}}\n\nAmong the included 71 CRTs, a total of 65 formal cluster sample size estimations were conducted that accounted for cluster heterogeneity by including a k, ICC or design effect component. Of these, 34/65 were based on incidence while 31/65 were based on prevalence (Table 2 & Figure 2H\u2013O). The remaining trials either did not account for cluster heterogeneity or lacked any sample size justification. Over 90% of all sample size estimations were calculated to achieve 80% power (59/65) at the 5% significance level (60/65). Concerning the epidemiological outcome measures in the control arm, most investigators predicted incidence using prior data (70.6%, 24/34) while most investigators predicted prevalence without using prior data (54.8%, 17/31). Regarding sample size estimations based on prevalence (N: 31), investigators estimated a range of prevalences in the control arm (mean: 0.21, range: 0.05\u20130.48) and desired effect sizes (mean: 47.1% range: 17.5\u201395%) which tended to be higher in low prevalence settings (Figure 2H). The average required cluster sample size was 104.5 individuals (Median 80; Figure 2I) and average required number of clusters per arm equalled 17.5 (Figure 2J). For sample size estimations based on incidence (N: 34), a range of incidence estimates in the control arm were estimated (range: 0.002\u20132.6 cases per person per annum (pa)). Desired effect sizes (%) were similarly higher in lower incidence settings (mean: 41.1%, range 20\u201393%) (Figure 2L). The average cluster size for incidence was 415 (median: 125) person years (Figure 2M) while the mean number of required clusters per arm was 17.6 (Figure 2N).\n\n**Table 2: Characteristics of sample size estimations used in malaria CRTs stratified by outcome measure: prevalence or incidence.** (There were a total of 65 sample size estimations, 34 based on incidence outcomes while 31 based on prevalence outcomes.)\n\n{{TABLE:tbl_15}}\n\nThe most common cluster heterogeneity measure used in malaria CRT sample size calculations was the coefficient of variation (k) (80% 52/65). 67.7% (44/65) of estimated cluster heterogeneity measures were estimated with no prior data while only 32.3% (21/65) were estimated using baseline or pilot study data. Lastly, only a minority of investigators retrospectively calculated cluster heterogeneity using trial data (20%, 13/65) (Table 2).",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01",
+        "tbl_02",
+        "tbl_03",
+        "tbl_04",
+        "tbl_05",
+        "tbl_06",
+        "tbl_07",
+        "tbl_08",
+        "tbl_09",
+        "tbl_10",
+        "tbl_11",
+        "tbl_12",
+        "tbl_13",
+        "tbl_14",
+        "tbl_15"
+      ]
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Results from this review reveal malaria CRTs, measuring epidemiological outcomes, often rely on poorly defined sample size assumptions which results in compromised study power [W3019215984, W2495331429, W2153171068]. Well powered trials need accurate information on predicted transmission intensity in the control arm, the estimated heterogeneity of outcomes between or within clusters and desired effect size between study arms [W2110676524, W2735694213]. We found that transmission intensity and effect sizes were often over-estimated, with measures of cluster heterogeneity commonly misclassified [W1989344401, UNMAPPED:60]. To ensure future malaria CRTs are adequately powered to detect the impacts of control interventions, efforts need to be made to ensure sample size parameters are more reliably estimated at the trial design stage [W3152765990].\n\nOur finding that most desired effect sizes in malaria CRTs were overestimated corresponds with results from a separate review of 300 non-disease specific CRTs which found 68% of trials experienced lower effect sizes than anticipated [W1989344401]. Authors speculated this over-estimation was likely attributed to trials being powered to detect minimally important differences between study arms and/or ineffective interventions being trialled [W1989344401]. These are common challenges for malaria CRTs too. A 30% effect size was previously documented as the threshold for an intervention to have public health relevance and be cost-effective according to the WHO. These are likely highly ambitious targets for certain interventions [UNMAPPED:4], particularly when being compared to already effective interventions. Moreover, some trialists concluded their interventions were simply inadequate to curb malaria transmission [W2125987157, W2097232649, W2791788746]. It should be noted that malaria CRTs have also suggested other factors, unrelated to study power, that impeded their ability to demonstrate an impact including low coverage/adherence [W2124594906, W3017483481], inappropriate study settings [W2337567730, W1594539266] and poor quality control [W2108728736].\n\nIn this review we further explored patterns in observed effect sizes among malaria CRTs and revealed effect size estimates tended to be higher in the first compared to the second year of trials. This implies the adherence and community-wide impact of certain trialled interventions wane over time. For interventions such as bed nets, recent studies in Tanzania [W3087378802], Nigeria [W3014076237] and Nicaragua [W3130943463] have demonstrated net coverage, usage, physical integrity and insecticidal activity all decreased within a two-year period. Secondly, our results highlight observed effect sizes have, overall, decreased since the 1990s. This is likely a consequence of trialled interventions being increasingly layered over existing, widespread standard-of-care for malaria. Historically, control arms in malaria CRTs consisted of either no or substandard interventions including untreated nets and placebo treatments [W2431469065, W2069254344, UNMAPPED:70]. Recently however, control arms of trials typically include numerous, effective malaria interventions [W3126652927, W2484083059, UNMAPPED:72] and sometimes only differ from intervention arms with regards to regiment [W3211316409, W2921626613]. Together, these factors likely resulted in effect sizes being overstated.\n\nPredicting malaria transmission intensity in the control arms of CRTs is challenging given the disease is so spatially and temporally heterogeneous [W3093702593, W3010553947]. Here, we found no evidence that estimating control-arm transmission intensity using prior data provided a more accurate measure of prevalence or incidence in control arms at the end of trials. Moreover, estimated transmission intensity correlated with transmission more closely in the first, compared to the second, year of the trials. This is likely the consequence of environmental, seasonal, socio-economic, and behavioural changes that impact both human and mosquito populations [W4287914203, W4317435368], and highlights the challenge in forecasting short term malaria transmission patterns [W3132521651, W2589631854, W4321481459, W2910896896, W2136142198].\n\nIn this review only 20% of included malaria CRTs retrospectively calculated cluster heterogeneity using trial data which resembles the previous review of 300 CRTs in general that found only 11% provided empirical cluster heterogeneity estimates [W1989344401]. Moreover, the finding that the majority of observed cluster heterogeneity measures differed to those inputted into sample size equations is concerning as study power is so heavily impacted by between/within cluster correlation [W2110676524]. Future malaria trials should adhere to CONSORT guidelines and provide empirical estimates of cluster heterogeneity to both inform future trials and assist reviewers in determining whether trials are adequately powered to detect their desired impact [W1989344401]. Moreover, given a recent secondary analysis of a malaria CRT in Tanzania demonstrated temporal changes in within-cluster heterogeneity during the intervention period [W4327738676], providing empirical estimates of cluster heterogeneity at various timepoints during trials may further help decipher whether trials were adequately powered throughout the trial period [W2095740662]. As only a few malaria trials provided retrospective estimates of k/ICC, we were unable to investigate whether basing estimates on prior data or not assists in accurately characterising cluster heterogeneity. Moreover, it was not always clear which subset of the data k/ICC measures referred to and investigators may have been prompted to present observed cluster heterogeneity measures if the interventions failed to show impact. Consequently, characterising the true degree of cluster heterogeneity among a representative sample of malaria CRTs to inform future trials remains an imperative area of continued investigation.",
+      "citations": [
+        "W3019215984",
+        "W2495331429",
+        "W2153171068",
+        "W2110676524",
+        "W2735694213",
+        "W1989344401",
+        "W3152765990",
+        "W2125987157",
+        "W2097232649",
+        "W2791788746",
+        "W2124594906",
+        "W3017483481",
+        "W2337567730",
+        "W1594539266",
+        "W2108728736",
+        "W3087378802",
+        "W3014076237",
+        "W3130943463",
+        "W2431469065",
+        "W2069254344",
+        "W3126652927",
+        "W2484083059",
+        "W3211316409",
+        "W2921626613",
+        "W3093702593",
+        "W3010553947",
+        "W4287914203",
+        "W4317435368",
+        "W4327738676",
+        "W2095740662"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "60",
+        "4",
+        "70",
+        "72"
+      ]
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Results from this review demonstrate the accuracy of epidemiological inputs in malaria CRT sample/power size calculations require improvement. By simply reporting empirical cluster heterogeneity measures alongside published results, in line with CONSORT guidelines, future trials may be better informed to estimate suitable sample sizes. Determining trial transmission intensity and heterogeneity in the control arm remains a larger challenge given the sporadic nature of malaria transmission. Without more representative sample size parameters, future CRTs are at risk of being underpowered to detect the impacts of vital, novel control tools against malaria.\n\n---",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "List of abbreviations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "{{TABLE:tbl_17}}\n\n---",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_17"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_16",
+      "placeholder": "{{TABLE:tbl_16}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_17",
+      "placeholder": "{{TABLE:tbl_17}}",
+      "source_section_id": "s_10",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4394598673_tables.md"
+}

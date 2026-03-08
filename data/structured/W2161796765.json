@@ -1,0 +1,656 @@
+{
+  "id": "W2161796765",
+  "metadata": {
+    "title": "On Evaluating Commercial Cloud Services: A Systematic Review",
+    "n_sections": 8,
+    "n_subsections": 20,
+    "n_subsubsections": 4,
+    "n_tables": 16
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "By allowing customers to access computing services without owning computing infrastructures, Cloud Computing has emerged as one of the most promising computing paradigms in industry [W1977367431]. Correspondingly, there are more and more commercial Cloud services supplied by an increasing number of providers available in the market [W2147623910][W2133196732]. Since different and competitive Cloud services may be offered with different terminologies, definitions, and goals [W2147623910], Cloud services evaluation would be crucial and beneficial for both service customers (e.g. cost-benefit analysis) and providers (e.g. direction of improvement) [W2133196732].\n\nHowever, the evaluation of commercial Cloud services is inevitably challenging for two main reasons. Firstly, previous evaluation results may become quickly out of date. Cloud providers may continually upgrade their hardware and software infrastructures, and new commercial Cloud services and technologies may gradually enter the market. For example, at the time of writing, Amazon is still acquiring additional sites for Cloud data center expansion [UNMAPPED:4]; Google is moving its App Engine service from CPU usage model to instance model [UNMAPPED:5]; while IBM just offered a public and commercial Cloud [UNMAPPED:6]. As a result, customers would have to continuously re-design and repeat evaluation for employing commercial Cloud services.\n\nSecondly, the back-ends (e.g. configurations of physical infrastructure) of commercial Cloud services are uncontrollable (often invisible) from the perspective of customers. Unlike consumer-owned computing systems, customers have little knowledge or control over the precise nature of Cloud services even in the \"locked down\" environment [UNMAPPED:7]. Evaluations in the context of public Cloud Computing are then inevitably more challenging than that for systems where the customer is in direct control of all aspects [W2153920436]. In fact, it is natural that the evaluation of uncontrollable systems would be more complex than that of controllable ones.\n\nMeanwhile, the existing Cloud services evaluation research is relatively chaotic. On one hand, the Cloud can be viewed from various perspectives [UNMAPPED:9], which may result in market hype and also skepticism and confusion [W2131646073]. As such, it is hard to point out the range of Cloud Computing and a full scope of metrics to evaluate different commercial Cloud services. On the other hand, there exists a tremendous gap between practice and research about Cloud services evaluation. For example, although the traditional benchmarks have been recognized as being insufficient for evaluating commercial Cloud services [W2028383826], they are still predominantly used in practice for Cloud services evaluation.\n\nTo facilitate relieving the aforementioned research chaos, it is necessary for researchers and practitioners to understand the state-of-the-practice of commercial Cloud services evaluation. For example, the existing evaluation implementations can be viewed as primary evidence for adjusting research directions or summarizing feasible evaluation guidelines. As the main methodology applied for Evidence-Based Software Engineering (EBSE) [W2162411541], the Systematic Literature Review (SLR) has been widely accepted as a standard and rigorous approach to evidence aggregation for investigating specific research questions [W2032860265, W2007193518]. Naturally, we adopted the SLR method to identify, assess and synthesize the relevant primary studies to investigate Cloud services evaluation. In fact, according to the popular aims of implementing a systematic review [W2154535415], the results of this SLR can help identify gaps in current research and also provide a solid background for future research activities in the field of Cloud services evaluation.\n\nThis paper outlines the work involved in conducting this SLR on evaluating commercial Cloud services. Benefitting from this SLR, we confirm the conceptual model of Cloud services evaluation; the state-of-the-practice of the Cloud services evaluation is finally revealed; and several findings are highlighted as suggestions for future Cloud services evaluation work. In addition to the SLR results, the lessons learned from performing this SLR are also reported in the end. By observing the detailed implementation of this SLR, we confirm some suggestions supplied by the previous SLR studies, and also summarize our own experiences that could be helpful in the community of EBSE [W2162411541]. In particular, to distinguish and elaborate some specific findings, three parts (namely evaluation taxonomy [W2140953443], metrics [W2035436728], and factors [W2158114234]) of the outcome derived from this SLR have been reported separately. To avoid duplication, the previously reported results are only briefly summarized (cf. Subsection 5.3, 5.4, and 5.6) in this paper.\n\nThe remainder of this paper is organized as follows. Section 2 supplements the background of this SLR, which introduces a spatial perspective as prerequisite to investigating Cloud services evaluations. Section 3 elaborates the SLR method and procedure employed in this study. Section 4 briefly describes the SLR results, while Section 5 answers the predefined research questions and highlights the findings. Section 6 discusses our own experiences in using the SLR method, while Section 7 shows some limitations with this study. Conclusions and some future work are discussed in Section 8.",
+      "citations": [
+        "W1977367431",
+        "W2147623910",
+        "W2133196732",
+        "W2153920436",
+        "W2131646073",
+        "W2028383826",
+        "W2162411541",
+        "W2032860265",
+        "W2007193518",
+        "W2154535415",
+        "W2140953443",
+        "W2035436728",
+        "W2158114234"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "9"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Related work and a conceptual model of Cloud services evaluation",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Different studies of Cloud services evaluation",
+          "subsubsections": [],
+          "text": "**Service Feature-Emphasized Studies:** Since Cloud services are concrete representations of the Cloud Computing paradigm, the Cloud service features to be evaluated have been discussed mainly over Cloud Computing-related introductions, surveys, or research agendas. For example, the characteristics and relationships of Clouds and related technologies were clarified in [W1977367431, W2007193518, W2131646073], which hinted the features that commercial Cloud services may generally embrace. The authors portrayed the landscape of Cloud Computing with regard to trust and reputation [W2104710565]. Most of the studies [W2114296561, W1977367431, W1993949541, W2131646073] also summarized and compared detailed features of typical Cloud services in the current market. In particular, the Berkeley view of Cloud Computing [W2114296561] emphasized the economics when employing Cloud services.\n\n**Metrics-Emphasized Studies:** When evaluating Cloud services, a set of suitable measurement criteria or metrics must be chosen. As such, every single evaluation study inevitably mentions particular metrics when reporting the evaluation process and/or result. However, we did not find any systematic discussion about metrics for evaluating Cloud services. Considering that the selection of metrics plays an essential role in evaluation implementations [W2569957442], we performed a comprehensive investigation into evaluation metrics in the Cloud Computing domain based on this SLR. The investigation result has been published in [W2035436728]. To the best of our knowledge, this is the only metrics-intensive study of Cloud services evaluation.\n\n**Benchmark-Emphasized Studies:** Although traditional benchmarks have been widely employed for evaluating commercial Cloud services, there are concerns that traditional benchmarks may not be sufficient to meet the idiosyncratic characteristics of Cloud Computing. Correspondingly, the authors theoretically portrayed what an ideal Cloud benchmark should be [W2028383826]. In fact, several new Cloud benchmarks have been developed, for example Yahoo! Cloud Serving Benchmark (YCSB) [W1985229168] and CloudStone [UNMAPPED:7]. In particular, six types of emerging scale-out workloads were collected to construct a benchmark suite, namely CloudSuite [UNMAPPED:26], to represent today's dominant Cloud-based applications, such as Data Serving, MapReduce, Media Streaming, SAT Solver, Web Frontend, and Web Search.\n\n**Experiment-Emphasized Studies:** To reveal the rapidly-changing and customer-uncontrollable nature of commercial Cloud services, evaluations have to be implemented through practical experiments. In detail, an evaluation experiment is composed of experimental environment and experimental manipulation. If only focusing on the Cloud side, experimental environment indicates the involved Cloud resources like amount [W2153920436] or location [W1918699760] of service instances, while experimental manipulation refers to the necessary operations on the Cloud resources together with workloads, for example increasing resource amount [W1522199185] or varying request frequency [W2099334191]. In fact, given the aforementioned motivation, the existing experiment-intensive studies have been identified and used as the review objects in this SLR.",
+          "citations": [
+            "W1977367431",
+            "W2007193518",
+            "W2131646073",
+            "W2104710565",
+            "W2114296561",
+            "W1993949541",
+            "W2569957442",
+            "W2035436728",
+            "W2028383826",
+            "W1985229168",
+            "W2153920436",
+            "W1918699760",
+            "W1522199185",
+            "W2099334191"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "7",
+            "26"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. A conceptual model of the generic process of Cloud services evaluation",
+          "subsubsections": [],
+          "text": "As mentioned previously, Cloud Computing is an emerging computing paradigm [W1977367431]. When it comes to the evaluation of a computing system (commercial Cloud services in this case), one of the most common issues may be the performance evaluation. Therefore, we decided to borrow the existing lessons from performance evaluation of traditional computing systems to investigate the generic process of Cloud services evaluation. In fact, to avoid possible evaluation mistakes, the steps common to all performance evaluation projects have been summarized ranging from Stating Goals to Presenting Results [W159719520]. By adapting these steps to the above-discussed related work, we decomposed an evaluation implementation process into six common steps and built a conceptual model of Cloud services evaluation, as illustrated in **FIGURE 1** and specified below.\n\n(1) First of all, the requirement should be specified to clarify the evaluation purpose, which essentially drives the remaining steps of the evaluation implementation.\n(2) Based on the evaluation requirement, we can identify the relevant Cloud service features to be evaluated.\n(3) To measure the relevant service features, suitable metrics should be determined.\n(4) According to the determined metrics, we can employ corresponding benchmarks that may already exist or have to be developed.\n(5) Before implementing the evaluation experiment, the experimental environment should be constructed. The environment includes not only the Cloud resources to be evaluated but also resources involved in the experiment.\n(6) Given all the aforementioned preparation, the evaluation experiment can be done with human manipulations, which finally satisfies the evaluation requirement.\n\nThe conceptual model then played a background and foundation role in the conduction of this SLR. Note that this generic evaluation model can be viewed as an abstract of evaluating any computing paradigm. For Cloud services evaluation, the step adaptation is further explained and discussed as a potential validity threat of this study in Subsection 7.1.\n\n**FIGURE 1. A conceptual model of the generic process of Cloud services evaluation.**",
+          "citations": [
+            "W1977367431",
+            "W159719520",
+            "W2147623910",
+            "W2133196732"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Evaluation of commercial Cloud services emerged as soon as those services were published [W1562721074, W2008732734]. In fact, Cloud services evaluation has rapidly and increasingly become a world-wide research topic during recent years. As a result, numerous research results have been published, covering various aspects of Cloud services evaluation. Although it is impossible to enumerate all the existing evaluation-related studies, we can roughly distinguish between different studies according to different evaluation aspects on which they mainly focused. Note that, since we are interested in the practices of Cloud services evaluation, Experiment-Intensive Studies are the main review objects in this SLR. Based on the rough differentiation, the general process of Cloud services evaluation can be approximately summarized and profiled using a conceptual model.",
+      "citations": [
+        "W1562721074",
+        "W2008732734"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Review method",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Research questions",
+          "subsubsections": [],
+          "text": "Corresponding to the overall aim of this SLR that is to investigate the procedures and experiences of evaluation of commercial Cloud services, six research questions were determined mainly to address the individual steps of the general evaluation process, as listed in **TABLE 1**.\n\nIn particular, we borrowed the term \"scene\" from the drama domain for the research question RQ6. In the context of drama, a scene is an individual segment of a plot in a story, and usually settled in a single location. By analogy, here we use \"setup scene\" to represent an atomic unit for constructing a complete experiment for evaluating commercial Cloud services. Note that, for the convenience of discussion, we broke the investigation of Service Features-oriented step into two research questions (RQ2 and RQ3), while we used one research question (RQ6) to cover both Experimental Environment and Experimental Manipulation steps of the evaluation process (cf. **TABLE 1**).\n\n**TABLE 1. Research questions**\n\n{{TABLE:tbl_01}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Research scope",
+          "subsubsections": [],
+          "text": "We employed three points in advance to constrain the scope of this research. First, this study focused on the commercial Cloud services only to make our effort closer to industry's needs. Second, this study paid attention to Infrastructure as a Service (IaaS) and Platform as a Service (PaaS) without concerning Software as a Service (SaaS). Since SaaS is not used to further build individual business applications [W2028383826], various SaaS implementations may comprise infinite and exclusive functionalities to be evaluated, which could make this SLR out of control even if adopting extremely strict selection/exclusion criteria. Third, following the past SLR experiences [W2109779682], this study also concentrated on the formal reports in academia rather than the informal evaluation practices in other sources.",
+          "citations": [
+            "W2028383826",
+            "W2109779682"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Roles and responsibilities",
+          "subsubsections": [],
+          "text": "The members involved in this SLR include a PhD student, a two-people supervisory panel, and a two-people expert panel. The PhD student is new to the Cloud Computing domain, and plans to use this SLR to unfold his research topic. His two supervisors have expertise in the two fields of service computing and evidence-based software engineering respectively, while the expert panel has strong background of computer system evaluation and Cloud Computing. In detail, the expert panel was involved in the discussions about review background, research questions, and data extraction schema when developing the SLR protocol; the specific review process was implemented mainly by the PhD student while under close supervision; the supervisors randomly cross-checked the student's work, for example the selected and excluded publications; regular meetings were held by the supervisory panel with the student to discuss and resolve divergences and confusions over paper selection, data extraction, etc.; unsure issues and data analysis were further discussed by the five members all together.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Search strategy and process",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.4.1. Publication time span",
+              "parent_subsection_id": "s_3_4",
+              "text": "As the term \"Cloud Computing\" started to gain popularity in 2006 [W2131646073], we focused on the literature published from the beginning of 2006. And also considering the possible delay of publishing, we restricted the publication time span between January 1st, 2006 and December 31st, 2011.",
+              "citations": [
+                "W2131646073"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.4.2. Search resources",
+              "parent_subsection_id": "s_3_4",
+              "text": "With reference to the existing SLR protocols and reports for referential experiences, as well as the statistics of the literature search engines [W2133933998], we believed that the following five electronic libraries give a broad enough coverage of relevant primary studies:\n* ACM Digital Library (http://dl.acm.org/)\n* Google Scholar (http://scholar.google.com)\n* IEEE Xplore (http://ieeexplore.ieee.org)\n* ScienceDirect (http://www.sciencedirect.com)\n* SpringerLink (http://www.springer.com)",
+              "citations": [
+                "W2133933998"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_4_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.4.3. Proposing search string",
+              "parent_subsection_id": "s_3_4",
+              "text": "We used a three-step approach to proposing search string for this SLR:\n\n(1) Based on the keywords and their synonyms in the research questions, we first extracted potential search terms, such as: \"cloud computing\", \"cloud provider\", \"cloud service\", evaluation, benchmark, metric, etc.\n(2) Then, by rationally modifying and combining these search terms, we constructed a set of candidate search strings.\n(3) At last, following the Quasi-Gold Standard (QGS) based systematic search approach [W2133933998], we performed several pilot manual searches to determine the most suitable search string according to the search performance in terms of sensitivity and precision.\n\nParticularly, the sensitivity and precision of a search string can be calculated as shown in Equation (1) and (2) respectively [W2133933998].\n\n$$ Sensitivity=\\frac{Number of relevant studies retrieved}{Total number of relevant studies}\\% $$\n$$ Precision=\\frac{Number of relevant studies retrieved}{Number of studies retrieved}\\times100\\% $$\n\nIn detail, we selected seven Cloud-related conference proceedings (cf. **TABLE 2**) to test and contrast sensitivity and precision of different candidate search strings. According to the suggestions of search strategy scales [W2133933998], we finally proposed a search string with the Optimum strategy, as shown below:\n\n(\"cloud computing\" OR \"cloud platform\" OR \"cloud provider\" OR \"cloud service\" OR \"cloud offering\") AND (evaluation OR evaluating OR evaluate OR evaluated OR experiment OR benchmark OR metric OR simulation) AND (<Cloud provider's name> OR...)\n\nNote that the (<Cloud provider's name> OR...) denotes the \"OR\"-connected names of the top ten Cloud providers [UNMAPPED:33]. The specific sensitivity and precision of this search string with respect to those seven proceedings are listed in **TABLE 2**. Given such high sensitivity and more than enough precision [W2133933998], although the search string was locally optimized, we have more confidence to expect a globally acceptable search result.\n\n**TABLE 2. Sensitivity and precision of the search string with respect to several conference proceedings.**\n\n{{TABLE:tbl_02}}",
+              "citations": [
+                "W2133933998",
+                "W1977367431",
+                "W2147623910",
+                "W2133196732"
+              ],
+              "tables_in_text": [
+                "tbl_02"
+              ],
+              "citations_unmapped": [
+                "33"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_4_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.4.4. Study identification process",
+              "parent_subsection_id": "s_3_4",
+              "text": "There are three main activities in the study identification process, as listed below: Quickly Scanning based on the automated search, Entirely Reading and Team Meeting for the initially identified studies, and manual Reference Snowballing. The whole process of study identification has been illustrated as a sequence diagram in **FIGURE 2**.\n\n(1) **Quickly Scanning:** Given the pre-determined search strings, we unfolded automated search in the aforementioned electronic libraries respectively. Relevant primary studies were initially selected by scanning titles, keywords and abstracts.\n(2) **Entirely Reading and Team Meeting:** The initially identified publications were decided by further reviewing the full-text, while the unsure ones were discussed in the team meeting.\n(3) **Reference Snowballing:** To further find possibly missed publications, we also supplemented a manual search by snowballing the references [W2487732989] of the selected papers found by the automated search. The new papers identified by reference snowballing were also read thoroughly and/or discussed.\n\n**FIGURE 2. Study identification process in sequence diagram. The numbers in the brackets denote how many publications were identified/selected at different steps.**",
+              "citations": [
+                "W2487732989",
+                "W1977367431",
+                "W2147623910",
+                "W2133196732"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "The rigor of the search process is one of the distinctive characteristics of systematic reviews [W2133933998]. To try to implement an unbiased and strict search, we set a precise publication time span, employed popular literature libraries, alternatively used a set of short search strings, and supplemented a manual search to compensate the automated search for the lack of typical search keywords.",
+          "citations": [
+            "W2133933998"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5. Inclusion and exclusion criteria",
+          "subsubsections": [],
+          "text": "In detail, the inclusion and exclusion criteria can be specified as:\n\n**Inclusion Criteria:**\n(1) Publications that describe practical evaluation of commercial Cloud services.\n(2) Publications that describe evaluation tool/method/framework for Cloud Computing, and include practical evaluation of commercial Cloud services as a demonstration or case study.\n(3) Publications that describe practical evaluation of comparison or collaboration between different computing paradigms involving commercial Cloud services.\n(4) Publications that describe case studies of adapting or deploying the existing applications or systems to public Cloud platforms with evaluations. This scenario can be viewed as using real applications to benchmark commercial Cloud services. Note the difference between this criterion and Exclusion Criterion (3).\n(5) In particular, above inclusion criteria apply only to regular academic publications (Full journal / conference / workshop papers, technical reports, and book chapters).\n\n**Exclusion Criteria:**\n(1) Publications that describe evaluation of non-commercial Cloud services in the private Cloud or open-source Cloud.\n(2) Publications that describe only theoretical (non-practical) discussions, like [W2028383826] (cf. **TABLE C.14**), about evaluation for adopting Cloud Computing.\n(3) Publications that propose new Cloud-based applications or systems, and the aim of the corresponding evaluation is merely to reflect the performance or other features of the proposed application/system. Note the difference between this criterion and Inclusion Criterion (4).\n(4) Publications that are previous versions of the later published work.\n(5) In addition, short/position papers, demo or industry publications are all excluded.",
+          "citations": [
+            "W2028383826",
+            "W1977367431",
+            "W2147623910",
+            "W2133196732"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "4",
+            "5"
+          ]
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6. Quality assessment criteria",
+          "subsubsections": [],
+          "text": "Since a relevant study can be assessed only through its report, and Cloud services evaluation belongs to the field of experimental computer science [W2153920436], here we followed the reporting structure of experimental studies (cf. Table 9 in [W2162739315]) to assess the reporting quality of one publication. In particular, we divided the reporting structural concerns into two categories: the generic Research Reporting quality and the experimental Evaluation Reporting quality.\n* **Research Reporting:** Is the paper or report well organized and presented following a regular research procedure?\n* **Evaluation Reporting:** Is the evaluation implementation work described thoroughly and appropriately?\n\nIn detail, we proposed eight criteria as a checklist to examine different reporting concerns in a relevant study:\n\n**Criteria of Research Reporting Quality:**\n(1) Is the research problem clearly specified?\n(2) Are the research aim(s)/objective(s) clearly identified?\n(3) Is the related work comprehensively reviewed?\n(4) Are findings/results reported?\n\n**Criteria of Evaluation Reporting Quality:**\n(5) Is the period of evaluation work specified?\n(6) Is the evaluation environment clearly described?\n(7) Is the evaluation approach clearly described?\n(8) Is the evaluation result analyzed or discussed?\n\nEach criterion was used to judge one aspect of the quality of a publication, and to assign a quality score for the corresponding aspect of the publication. The quality score can be 1, 0.5, or 0, which represent the quality from excellent to poor as answering Yes, Partial, or No respectively. The overall quality of a publication can then be calculated by summing up all the quality scores received.",
+          "citations": [
+            "W2153920436",
+            "W2162739315",
+            "W1977367431",
+            "W2147623910",
+            "W2133196732"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7. Data extraction and analysis",
+          "subsubsections": [],
+          "text": "According to the research questions we previously identified, this SLR used a data extraction schema to collect relevant data from primary studies, as listed in **TABLE 3**. The schema covers a set of attributes, and each attribute corresponds to a data extraction question. The relationships between the data extraction questions and predefined research questions are also specified.\n\nIn particular, the collected data can be distinguished between the metadata of publications and experimental data of evaluation work. The metadata was mainly used to perform statistical investigation of relevant publications, while the Cloud services evaluation data was analyzed to answer those predefined research questions. Moreover, the data of evaluation time collected by question (14) was used in the quality assessment; the data extraction question (15) about detailed configuration was to snapshot the evaluation experiments for possible replication of review.\n\n**TABLE 3. The data extraction schema.**\n\n{{TABLE:tbl_03}}",
+          "citations": [
+            "W2007193518",
+            "W2154535415"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "According to the guidelines for performing SLR [W2032860265], we made minor adjustments and planned our study into a protocol. Following the protocol, we unfold this SLR within three stages.\n\n**Planning Review:**\n* Justify the necessity of carrying out this SLR.\n* Identify research questions for this SLR.\n* Develop SLR protocol by defining search strategy, selection criteria, quality assessment standard, and data extraction schema for Conducting Review stage.\n\n**Conducting Review:**\n* Exhaustively search relevant primary studies in the literature.\n* Select relevant primary studies and assess their qualities for answering research questions.\n* Extract useful data from the selected primary studies.\n* Arrange and synthesize the initial results of our study into review notes.\n\n**Reporting Review:**\n* Analyze and interpret the initial results together with review notes into interpretation notes.\n* Finalize and polish the previous notes into an SLR report.",
+      "citations": [
+        "W2032860265"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Review results",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "To distinguish the metadata analysis from the evaluation data analysis in this SLR, we first summarize the results of metadata analysis and quality assessment in this section. The findings and answers to those predefined research questions are then discussed in the next section.\n\nFollowing the search sequence (cf. **FIGURE 2**), 82 relevant primary studies in total were identified. In detail, the proposed search string initially brought 1198, 917, 225, 366 and 1281 results from the ACM Digital Library, Google Scholar, IEEE Xplore, ScienceDirect, and SpringerLink respectively, as listed in the column Number of Retrieved Papers of **TABLE 4**.\n\nBy reading titles and abstracts, and quickly scanning publications in the automated search process, we initially gathered 132 papers. After entirely reading these papers, 75 were selected for this SLR. In particular, 17 undecided papers were finally excluded after our discussion in team meetings; two technical reports and four conference papers were excluded due to the duplication of their latter versions. A set of typical excluded papers (cf. Appendix E) were particularly explained to demonstrate the application of predefined exclusion criteria, as shown in Appendix C. Finally, seven more papers were chosen by reference snowballing in the manual search process. The finally selected 82 primary studies have been listed in Appendix D. The distribution of the identified publications from different electronic databases is listed in **TABLE 4**. Note that the four manually-identified papers were further located by using Google Scholar.\n\n**TABLE 4. Distribution of relevant studies over electronic libraries.**\n\n{{TABLE:tbl_04}}\n\nThese 82 primary studies were conducted by 244 authors (co-authors) in total. 40 authors were involved in more than one evaluation works. Interestingly, only four primary studies included co-authors with a direct affiliation with a Cloud services vendor (i.e. Microsoft). On one hand, it may be fairer and more acceptable for third parties' evaluation work to be published. On the other hand, this phenomenon may result from the limitation with our research scope (cf. Subsection 7.2). To visibly illustrate the distribution of authors' affiliations, we mark their locations on a map, as shown in **FIGURE 3**. Note that the amount of authors' affiliations is more than the total number of the selected primary studies, because some evaluation work could be collaborated between different research organizations or universities. The map shows that, although major research efforts were from USA, the topic of evaluation of commercial Cloud services has been world-widely researched.\n\n**FIGURE 3. Study distribution over the (co-)author's affiliations.**\n\nFurthermore, we can make those affiliations be accurate to: (1) the background universities of institutes, departments or schools; and (2) the background organizations of individual research laboratories or centers. In this paper, we only focus on the universities/organizations that have published three or more primary studies, as shown in **FIGURE 4**. We believe these universities/organizations may have more potential to provide further and continual work on evaluation for commercial Cloud services in the future.\n\nThe distribution of publishing time can be illustrated by grouping the primary studies into years, as shown in **FIGURE 5**. It is clear that the research interests in evaluation of commercial Cloud services have been rapidly increased during the past five years.\n\n**TABLE 5. Universities/Organizations with three or more publications.**\n\n{{TABLE:tbl_05}}\n\n**TABLE 6. Study distribution over the publication years.**\n\n{{TABLE:tbl_06}}\n\n**FIGURE 4. Universities/Organizations with three or more publications.**\n\n**FIGURE 5. Study distribution over the publication years.**\n\nIn addition, these 82 studies on evaluation of commercial Cloud services scattered in as many as 57 different venues. Such a number of publishing venues are more dispersive than we expected. Although there was not a dense publication zone, in general, those venues could be categorized into five different types: Book Chapter, Technical Report, Journal, Workshop, and Conference, as shown in **FIGURE 6**. Not surprisingly, the publications of evaluation work were relatively concentrated in the Cloud and Distributed Computing related conferences, such as CCGrid, CloudCom, and IPDPS. Moreover, the emerging and Cloud-dedicated books, technical reports, and workshops were also typical publishing venues for Cloud services evaluation work.\n\nAs for the quality assessment, instead of listing the detailed quality scores in this paper, here we only show the distribution of the studies over their total reporting quality and total working quality respectively, as listed in **TABLE 7**.\n\nAccording to the quality assessment, in particular, we can highlight two limitations of the existing Cloud services evaluation work. Firstly, less than 16% publications specifically recorded the time of evaluation experiments. As mentioned earlier, since commercial Cloud services are rapidly changing, the lack of exposing experimental time would inevitably spoil reusing evaluation results or tracking past data in the future. Secondly, some primary studies did not thoroughly specify the evaluation environments or experimental procedures. As a result, it would be hard for others to replicate the evaluation experiments or learn from the evaluation experiences reported in those studies, especially when their evaluation results became out of date.\n\n**TABLE 7. Study distribution over the publishing venue types.**\n\n{{TABLE:tbl_07}}\n\n**TABLE 8. Distribution of studies over quality.**\n\n{{TABLE:tbl_08}}\n\n**FIGURE 6. Study distribution over the publishing venue types.**",
+      "citations": [
+        "W1977367431",
+        "W2147623910"
+      ],
+      "tables_in_text": [
+        "tbl_04",
+        "tbl_05",
+        "tbl_06",
+        "tbl_07",
+        "tbl_08"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Discussion addressing research questions",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1. RQ 1: What are the purposes of evaluating commercial Cloud services?",
+          "subsubsections": [],
+          "text": "After reviewing the selected publications, we have found mainly four different motivations behind the evaluations of commercial Cloud services, as illustrated in **FIGURE 7**.\n\nThe Cloud Resource Exploration can be viewed as a root motivation. As the name suggests, it is to investigate the available resources like computation capability supplied by commercial Cloud services. For example, the purpose of study [W2164304411] was to purely understand the computation performance of Amazon EC2. The other three research motivations are essentially consistent with the Cloud Resource Exploration, while they have specific intentions of applying Cloud resources, i.e., Scientific/Business Computing in the Cloud is to investigate applying Cloud Computing to Scientific/Business issues, and Comparison between Computing Paradigms is to compare Cloud Computing with other computing paradigms. For example, study [W2135575903] particularly investigated high-performance scientific computing using Amazon Web services; the benchmark Cloudstone [UNMAPPED:7] was proposed to evaluate the capability of Cloud for hosting Web 2.0 applications; the study [W2098533231] performed a contrast between Cloud Computing and Community Computing with respect to cost effectiveness.\n\nAccording to these four evaluation purposes, the reviewed primary studies can be differentiated into four categories, as listed in **TABLE 9**. Note that one primary study may have more than one evaluation purposes, and we judge evaluation purposes of a study through its described application scenarios. For example, although the detailed evaluation contexts could be broad ranging from Cloud provider selection [W2108376207] to application feasibility verification [W1970623666], we may generally recognize their purposes as Scientific Computing in the Cloud if these studies investigated scientific applications in the Cloud. On the other hand, the studies like \"performance evaluation of popular Cloud IaaS providers\" [W2153920436] only have the motivation Cloud Resource Exploration if they did not specify any application scenario.\n\nApart from the evaluation work motivated by Cloud Resource Exploration, we found that there are three times more attention paid to Scientific Computing in the Cloud (40 studies) compared to Business Computing in the Cloud (13 studies). In fact, the studies aiming at Comparison between Computing Paradigms also intended to use Scientific Computing for their discussion and analysis [W2098533231, W2109768544]. Given that Cloud Computing emerged as a business model [W2131646073], public Cloud services are provided mainly to meet the technological and economic requirements from business enterprises, which does not match the characteristics of scientific computing workloads [W2100618668, UNMAPPED:97]. However, the study distribution over purposes (cf. **TABLE 9**) suggests that the commercial Cloud Computing is still regarded as a potential and encouraging paradigm to deal with academic issues. We can find a set of reasons for this:\n* Since the relevant studies were all identified from academia (cf. Section 7), intuitively, Scientific Computing may seem more academic than Business Computing in the Cloud for researchers.\n* Although the public Cloud is deficient for Scientific Computing on the whole due to the relatively poor performance and significant variability [W1522199185, W2135575903, UNMAPPED:97], smaller scale of computations can particularly benefit from the moderate computing capability of the Cloud [W2098533231, W2091647805, W2166469995].\n* The on-demand resource provisioning in the Cloud can satisfy some high-priority or time-sensitive requirements of scientific work when in-house resource capacity is insufficient [W2098533231, W1984483249, W1969486654, UNMAPPED:97].\n* It would be more cost effective to carry out temporary jobs on Cloud platforms to avoid the associated long-term overhead of powering and maintaining local computing systems [W2098533231, UNMAPPED:97].\n* Through appropriate optimizations, the current commercial Cloud can be improved for Scientific Computing [W2159744495, UNMAPPED:97].\n* Once commercial Cloud vendors pay more attention to Scientific Computing, they can make the current Cloud more academia-friendly by slightly changing their existing infrastructures [W2100618668]. Interestingly, the industry has acknowledged the academic requirements and started offering services for solving complex science/engineering problems [W4237372808].\n\n**FIGURE 7. Purposes of Cloud services evaluation.**\n\n**TABLE 9. Distribution of studies over evaluation purpose.**\n\n{{TABLE:tbl_09}}",
+          "citations": [
+            "W2164304411",
+            "W2135575903",
+            "W2098533231",
+            "W2108376207",
+            "W1970623666",
+            "W2153920436",
+            "W2109768544",
+            "W2131646073",
+            "W2100618668",
+            "W1522199185",
+            "W2091647805",
+            "W2166469995",
+            "W1984483249",
+            "W1969486654",
+            "W2159744495",
+            "W4237372808"
+          ],
+          "tables_in_text": [
+            "tbl_09"
+          ],
+          "citations_unmapped": [
+            "7",
+            "97"
+          ]
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2. RQ 2: What commercial Cloud services have been evaluated?",
+          "subsubsections": [],
+          "text": "Evaluations are based on services available from specific Cloud providers. Before discussing the individual Cloud services, we identify the service providers. Nine commercial Cloud providers have been identified in this SLR: Amazon, BlueLock, ElasticHosts, Flexiant, GoGrid, Google, IBM, Microsoft, and Rackspace. Mapping the 82 primary studies to these nine providers, as shown in **FIGURE 8**, we show that the commercial Cloud services attracting most evaluation efforts are provided by Amazon. Note that one primary study may cover more than one Cloud provider. This phenomenon is reasonable because Amazon has been treated as one of the top and key Cloud Computing providers in both industry and academia [W1977367431, W2131646073].\n\nWith different public Cloud providers, we have explored the evaluated Cloud services in the reviewed publications, as listed in Appendix B. Note that the Cloud services are identified according to their commercial definitions instead of functional descriptions. For example, the work [W2030606624] explains Azure Storage Service and Azure Computing Service respectively, whereas we treated them as two different functional resources in the same Windows Azure service. The distribution of reviewed publications over detailed services is illustrated as shown in **FIGURE 9**. Similarly, one primary study may perform evaluation of multiple commercial Cloud services. In particular, five services (namely Amazon EBS, EC2 and S3, Google AppEngine, and Microsoft Windows Azure) were the most frequently evaluated services compared with the others. Therefore, they can be viewed as the representative commercial Cloud services, at least in the context of Cloud services evaluation. Note that bias could be involved in the service identification in this work due to the pre-specified providers in the search string, as explained in Subsection 7.3.\n\nAmong these typical commercial Cloud services, Amazon EBS, EC2 and S3 belong to IaaS, Google AppEngine is PaaS, while Microsoft Windows Azure is recognized as a combination of IaaS and PaaS [W2099334191]. IaaS is the on-demand provisioning of infrastructural computing resources, and the most significant advantage is its flexibility [W2028383826]. PaaS refers to the delivery of a platform-level environment including operating system, software development frameworks, and readily available tools, which limits customers' control while taking complete responsibility of maintaining the environment on behalf of customers [W2028383826]. The study distribution over services (cf. **FIGURE 9**) indicates that IaaS attracts more attention of evaluation work than PaaS. Such a finding is essentially consistent with the previous discussions when answering RQ1. The flexible IaaS may better fit into the diverse Scientific Computing. In fact, niche PaaS and SaaS are designed to provide additional benefits for their targeting applications, while IaaS is more immediately usable for particular and sophisticated applications [W2114703465][UNMAPPED:37]. In other words, given the diversity of requirements in the Cloud market, IaaS and PaaS would serve different types of customers, and they cannot be replaced with each other. This finding can also be confirmed by a recent industry event: the traditional PaaS provider Google just offered a new IaaS \u2013 Compute Engine [W2976586768].\n\n**FIGURE 8. Distribution of primary studies over Cloud providers.**\n\n**TABLE 10. Distribution of primary studies over Cloud providers.**\n\n{{TABLE:tbl_10}}\n\n**FIGURE 9. Distribution of primary studies over Cloud services.**\n\n**TABLE 11. Distribution of primary studies over Cloud services.**\n*(Note: Data derived from Figure 9 description in text, specific table data in input was malformed)*\n\n{{TABLE:tbl_11}}",
+          "citations": [
+            "W1977367431",
+            "W2131646073",
+            "W2030606624",
+            "W2099334191",
+            "W2028383826",
+            "W2114703465",
+            "W2976586768"
+          ],
+          "tables_in_text": [
+            "tbl_10",
+            "tbl_11"
+          ],
+          "citations_unmapped": [
+            "37"
+          ]
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "5.3. RQ 3: What aspects and their properties of commercial Cloud services have been evaluated?",
+          "subsubsections": [],
+          "text": "The aspects of commercial Cloud services can be initially investigated from general surveys and discussions about Cloud Computing. In brief, from the view of Berkeley [W2114296561], Economics of Cloud Computing should be particularly emphasized in deciding whether to adopt Cloud or not. Therefore, we considered Economics as an aspect when evaluating commercial Cloud services. Meanwhile, although we do not agree with all the parameters identified for selecting Cloud Computing/Provider in [W2104710565], we accepted Performance and Security as two significant aspects of a commercial Cloud service. Such an initial investigation of service aspects has been verified by this SLR. Only Performance, Economics, and Security and their properties have been evaluated in the primary studies.\n\nThe detailed properties and the corresponding distribution of primary studies are listed in **TABLE 12**. Note that a primary study usually covers multiple Cloud service aspects and/or properties. In particular, we only take into account the physical properties for the Performance aspect in this paper. The capacities of different physical properties and their sophisticated correlations (cf. **FIGURE 10**) have been specified in our previous work [W2140953443].\n\nOverall, we find that the existing evaluation work overwhelmingly focused on the performance features of commercial Cloud services. Many other theoretical concerns about commercial Cloud Computing, Security in particular, were not well evaluated yet in practice. Given the study distribution over service aspects/properties (cf. **TABLE 12**), several research gaps can be revealed or confirmed:\n* Since memory/cache could closely work with the computation and storage resources in computing jobs, it is hard to exactly distinguish the effect to performance brought by memory/cache, which may be the main reason why few dedicated Cloud memory/cache evaluation studies were found from the literature. In addition to the memory performance, the memory hierarchy could be another interesting issue to be evaluated [UNMAPPED:97].\n* Although one major benefit claimed for Cloud Computing is elasticity, it seems difficult for people to know how elastic a Cloud platform is. In fact, evaluating elasticity of a Cloud service is not trivial [W2126274497], and there is little explicit measurement to quantify the amount of elasticity in a Cloud platform [W2049791239].\n* The security of commercial Cloud services has many dimensions and issues people should be concerned with [W2114296561, W2131646073]. However, not many security evaluations were reflected in the identified primary studies. Similar to the above discussion about elasticity evaluation, the main reason may be that the security is also hard to quantify [UNMAPPED:41]. Therefore, we conclude that the Elasticity and Security evaluation of commercial Cloud services could be a long-term research challenge.\n\n**FIGURE 10. The properties of the Performance aspect (from [W2140953443]).**\n\n**TABLE 12. Distribution of studies over Cloud service aspects/properties.**\n\n{{TABLE:tbl_12}}\n\n**TABLE 13. Distribution of metrics over Cloud service aspects/properties (based on [W2035436728] and updated).**\n\n{{TABLE:tbl_13}}",
+          "citations": [
+            "W2114296561",
+            "W2104710565",
+            "W2140953443",
+            "W2126274497",
+            "W2049791239",
+            "W2131646073",
+            "W2035436728"
+          ],
+          "tables_in_text": [
+            "tbl_12",
+            "tbl_13"
+          ],
+          "citations_unmapped": [
+            "97",
+            "41"
+          ]
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "5.4. RQ 4: What metrics have been used for evaluation of commercial Cloud services?",
+          "subsubsections": [],
+          "text": "Benefiting from the above investigation of aspects and their properties of commercial Cloud services, we can conveniently identify and organize their corresponding evaluation metrics. In fact, more than 500 metrics including duplications have been isolated from the experiments described in the primary studies. After removing the duplications, we categorized and arranged the metrics naturally following the aforementioned Cloud service aspects/properties. Note that we judged duplicate metrics according to their usage contexts instead of names. Some metrics with different names could be essentially duplicate ones, while some metrics with identical name should be distinguished if they are used for different evaluation objectives. For example, the metric Upload/Download Data Throughput has been used for evaluating both Communication [W1984483249] and Storage [W1991662581], and therefore it was arranged under both Cloud service properties.\n\nDue to the limit of space, we do not elaborate all the identified metrics in this paper. In fact, we have summarized the existing evaluation metrics into a catalogue to facilitate the future practice and research in the area of Cloud services evaluation [W2035436728]. Here we only give a quick impression of their usage by displaying the distribution of those metrics, as shown in **TABLE 13**.\n\nGiven the distribution together with the catalogue of Cloud services evaluation metrics, we summarize several findings below:\n* The existing evaluation work has used a large number of metrics to measure various performance features as well as the cost of commercial Cloud services. This confirms the current fashion of cost evaluation: based on performance evaluation, evaluators analyze and estimate the real expense of using Cloud services [W1634741080, W2088445131]. We may name this type of evaluated cost as resource cost. In fact, the cost of Cloud Computing may cover a wide range of theoretical concerns, such as migration cost, operation cost, etc. [W2114296561]. However, those costs depend on specific systems, technologies, human activities, and even environmental factors. Performing generic cost evaluation could then be a tremendous challenge. A promising solution to this challenge is to replace the cost with other steady factors for evaluation. For example, we may estimate the size of Cloud migration projects instead of directly evaluating the migration cost [W1978881840].\n* There is still a lack of effective metrics for evaluating Cloud elasticity. As mentioned previously, it is not easy to explicitly quantify the amount of elasticity of a Cloud service. To address this research gap, as far as we know, the most recent effort is a sophisticated Penalty Model that measures the imperfections in elasticity of Cloud services for a given workload in monetary units [W2049791239].\n* It seems that there is no suitable metric yet to evaluate security features of Cloud services, which also confirms the previous findings in Section 5.3. Since security is hard to quantify [UNMAPPED:41], current security evaluation has been realized mainly by qualitative discussions. A relatively specific suggestion for security evaluation of Cloud services is given in [W1991662581]: the security assessment can start with an evaluation of the involved risks. As such, we can use a pre-identified risk list to discuss the security strategies supplied by Cloud services.",
+          "citations": [
+            "W1984483249",
+            "W1991662581",
+            "W2035436728",
+            "W1634741080",
+            "W2088445131",
+            "W2114296561",
+            "W1978881840",
+            "W2049791239"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "41"
+          ]
+        },
+        {
+          "subsection_id": "s_5_5",
+          "subsection_index": 5,
+          "subsection_label": "5.5. RQ 5: What benchmarks have been used for evaluation of commercial Cloud services?",
+          "subsubsections": [],
+          "text": "This SLR has identified around 90 different benchmarks in the selected studies of Cloud services evaluation. As discussed in the related work (cf. Section 2), there are several emerging and dedicated Cloud benchmarks, such as YCSB [W1985229168], CloudStone [UNMAPPED:7], and CloudSuite [UNMAPPED:26]. Traditional benchmarks have still been overwhelmingly used in the existing practices of Cloud services evaluation, as summarized in **TABLE 14**. Note that, in **TABLE 14**, each benchmark together with a corresponding evaluated service property cites only one relevant study as an instance. In particular, the evaluated Economics and Security properties are not reflected in this table. First, the existing cost evaluation studies were generally based on the corresponding performance evaluation [W1634741080, W2088445131]. Second, the selected studies did not specify any distinct benchmark for evaluating elasticity and security. Through **TABLE 14** we show that, although the traditional benchmarks were recognized as being insufficient for evaluating commercial Cloud services [W2028383826], traditional benchmarks can still satisfy at least partial requirements of Cloud services evaluation.\n\nMoreover, one benchmark may be employed in multiple evaluation practices. The numerous evaluators' experiences can then be used to indicate the applicability of a particular benchmark. Here we define a benchmark's \"Applicability\" as the number of the related studies. Through the applicability of different traditional benchmarks (cf. **TABLE 14**), we list the popular benchmarks as recommendations for Cloud services evaluation, as shown in **TABLE 15**.\n\nIn addition, following the evolution of benchmarking in the computing area [W1601834567], we summarized three types of benchmarks used for evaluating commercial Cloud services: Application Benchmark, Synthetic Benchmark, and Micro-Benchmark.\n* **Application Benchmark** refers to the real-world software systems that are deployed to the Cloud and used as potentially true measures of commercial Cloud services.\n* **Synthetic Benchmark** is not a real application, but a well-designed program using representative operations and workload to simulate a typical set of applications.\n* **Micro-Benchmark** is a relatively simple program that attempts to measure a specific component or a basic feature of Cloud services.\n\nTo give a quick impression of what types of benchmarks were adopted in the current Cloud services evaluation work, we list the distribution of primary studies over employed benchmark types, as shown in **TABLE 16**.\n\nIt can be seen that more than half of the primary studies adopted only one particular type of benchmark to evaluate commercial Cloud services. Given that different types of benchmarks reveal different service natures, it is impossible to use one benchmark to fit all when performing Cloud services evaluation. Thus, a recommendation from this SLR is to employ a suite of mixed types of benchmarks to evaluate Cloud services in the future.\n\n**TABLE 14. The traditional benchmarks used in Cloud services evaluation.**\n\n{{TABLE:tbl_14}}\n\n**TABLE 15. Popular traditional benchmarks for evaluating different Cloud service properties.**\n\n{{TABLE:tbl_15}}\n\n**TABLE 16. Distribution of studies over benchmark types.**\n\n{{TABLE:tbl_16}}",
+          "citations": [
+            "W1985229168",
+            "W1634741080",
+            "W2088445131",
+            "W2028383826",
+            "W1601834567"
+          ],
+          "tables_in_text": [
+            "tbl_14",
+            "tbl_15",
+            "tbl_16"
+          ],
+          "citations_unmapped": [
+            "7",
+            "26"
+          ]
+        },
+        {
+          "subsection_id": "s_5_6",
+          "subsection_index": 6,
+          "subsection_label": "5.6. RQ 6: What experimental setup scenes have been adopted for evaluating commercial Cloud services?",
+          "subsubsections": [],
+          "text": "As mentioned in Section 3.1, we used \"setup scene\" to indicate an atomic unit for constructing complete Cloud services evaluation experiments. Through extracting different data from a primary study for respectively answering the data extraction questions (12) and (13) (cf. Subsection 3.7), we can distinguish between environmental setup scenes and operational setup scenes. The environmental setup scenes indicate static descriptions used to specify required experimental resources, while the operational setup scenes indicate dynamic operations that usually imply repeating an individual experiment job under different circumstances. For the convenience of analysis, the operational setup scenes were further divided into three groups with respect to experimental Time, Location, and Workload. In detail, ten environmental setup scenes and 15 operational setup scenes have been identified, which can be organized as an experimental setup scene tree, as shown in **FIGURE 11**.\n\nWe have developed a taxonomy to clarify and structure these 25 experimental setup scenes in a separate piece of work [W2140953443]. In particular, the rounded rectangle with dashed line (**FIGURE 11**) represents the setup scenes that are either uncontrollable (Different Physical Locations of Cloud Resource) or unemployed yet (Multiple Instance Types). The physical location of a particular Cloud resource indicates its un-virtualized environment. The un-virtualized difference then refers not only to the difference in underlying hardware like different model of real CPU, but also to the difference between VMs sharing or not sharing underlying hardware. As for the setup scene Multiple Instance Types, although it is possible to assign different functional roles to different types of VM instances to finish a single experiment job, we have not found such jobs in the reviewed literature.\n\nOverall, by using the experimental setup scene tree, we can easily locate or enumerate individual environmental and operational setup scenes for Cloud services evaluation studies. As such, the answer to this research question may be employed essentially to facilitate drawing experimental lessons from the existing evaluation reports, and to facilitate the evaluation-related communication among the Cloud Computing community.\n\n**FIGURE 11. Experimental setup scene tree of performance evaluation of commercial Cloud services (from [W2140953443]).**",
+          "citations": [
+            "W2140953443",
+            "W2162411541",
+            "W2032860265"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The discussion in this section is naturally organized following the sequence of answers to the six predefined research questions.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Experiences of applying the SLR method",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This SLR was prepared by a review team and two consultants, implemented primarily by a PhD student under supervision, and discussed and finalized by the whole team. According to our practice of conducting this study, we summarized some experiences to which or against which researchers can refer or debate in future SLR implementations.\n\nFirst of all, a question-oriented SLR is apparently more efficient than an ad hoc review. For a new comer in a particular research area, it is difficult to measure his/her study progress if he/she is doing an ad hoc literature review. On the contrary, benefiting from the SLR, the progress becomes traceable by following a standardized procedure [W2032860265].\n\nHowever, it should be noticed that traditional ad hoc reviews cannot be completely replaced with SLRs. Although supervisors can help introduce the background and/or motivation in advance, it is crucial for the student to comprehend enough relevant domain knowledge before starting an SLR. In terms of our experience with this SLR, an ad hoc review still showed its value in obtaining domain knowledge in a short period, which confirms that it is necessary to \"thoroughly understand the nature and scale of the task at hand before undertaking a SLR\" [W1491657789]. When an SLR is supposed to be implemented by PhD students in an unfamiliar area, we should also estimate and consider the additional time on students' traditional review.\n\nMoreover, our study also confirmed that a pilot review is vital for an SLR [W1975516699]. The pilot review of an SLR can be viewed as a bridge between the SLR and the corresponding ad hoc review. On one hand, the pilot review can reinforce or revise the reviewers' comprehension of domain-specific knowledge. On the other hand, the pilot review can help refine research questions, improve search strategy, and verify data extraction schema by trying to answer research questions. Therefore, we suggest that a pilot review can be done together with constructing the SLR protocol.\n\nAdditionally, for some research topics, the employment of an SLR is worthy of regular use to keep the relevant data or knowledge current to support those topics. According to Zhang and Babar's survey [W2007193518], most of existing SLRs in software engineering area seem one-off studies, such as to outline state-of-the-art or to get knowledge within a particular research region. Whereas, for this study, we plan to use the collected data to fill an experience base to support a Cloud services evaluation methodology. Considering the knowledge in an expert system should be updated regularly, it is necessary to always keep the corresponding experience base up to date. In this case, therefore, we will continually collect relevant primary studies, and periodically update this SLR work.\n\nOverall, in this study, the SLR method has been verified suitable and helpful for a first-year PhD student to accumulate knowledge and identify his research opportunities.",
+      "citations": [
+        "W2032860265",
+        "W1491657789",
+        "W1975516699",
+        "W2007193518"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "7. Threats to validity",
+      "subsections": [
+        {
+          "subsection_id": "s_7_1",
+          "subsection_index": 1,
+          "subsection_label": "7.1. Conceptual model of Cloud services evaluation",
+          "subsubsections": [],
+          "text": "The construction of this SLR and the following investigation into Cloud services evaluation were based on the proposed conceptual model (cf. Section 2). Therefore, any inaccuracy in the conceptual model of Cloud services evaluation may bring flaws in this study. As previously mentioned, we built this conceptual model by adapting a systematic performance evaluation approach [W159719520]. In particular, we deliberately ignored two steps in the general process of evaluation implementation, namely evaluation factor identification and experimental result analysis. The reason for ignoring the former, we found that it was hard to directly extract experimental factors from the primary studies. To the best of our knowledge, although the existing evaluation experiments essentially involved factors, none of the current Cloud evaluation studies specified \"experimental factors\" [UNMAPPED:46] in advance to design evaluation experiments and analyze the experimental results. In fact, we finally investigated potential factors through a secondary analysis of the answer to RQ6 in this SLR [W2158114234]. The reason for ignoring the latter, as mentioned in the Introduction, we conducted this SLR study to investigate the procedures and experiences of Cloud services evaluation rather than the evaluation results. Overall, although we are not aware of any bias introduced by this conceptual model, other researchers with different interest may have different opinions about the intentionally ignored information.",
+          "citations": [
+            "W159719520",
+            "W2158114234"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "46"
+          ]
+        },
+        {
+          "subsection_id": "s_7_2",
+          "subsection_index": 2,
+          "subsection_label": "7.2. Research scope",
+          "subsubsections": [],
+          "text": "The practices of Cloud services evaluation are reported in various sources, such as academic publications, technical websites, blogs, etc. In particular, the academic publications are normally formal reports after rigorous peer reviewing. Considering the generally specific and precise documentation of evaluation implementations in formal publications [W2109779682], we limited this SLR to academic studies only. There is no doubt that informal descriptions of Cloud services evaluation in blogs and technical websites can also provide highly relevant information. However, on the one hand, it is impossible to explore and collect useful data from different study sources all at once. On the other hand, the published evaluation studies can be viewed as typical representatives of the existing ad hoc evaluation practices. By using the SLR method to exhaustively investigate the academic studies, we are still able to rationally show the representative state-of-the-practice of the evaluation of commercial Cloud services. In fact, we proposed to use the result of this SLR to construct a knowledge base first. The knowledge base can be gradually extended and enriched by including the other informal empirical studies of Cloud services evaluation.",
+          "citations": [
+            "W2109779682"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_3",
+          "subsection_index": 3,
+          "subsection_label": "7.3. Completeness",
+          "subsubsections": [],
+          "text": "Given the increasing number of studies in this area, we note that we cannot guarantee to have captured all the relevant studies. The possible reasons could be various ranging from the search engines to the search string. Firstly, we did not look into every possible search resource. To balance between the estimated workload and coverage, five electronic libraries were selected based on the existing SLR experiences (cf. Section 3.4.2). In fact, the statistics suggests that these five literature search engines may give a broad enough coverage of relevant studies [W2133933998]. Secondly, we unfolded automated search through titles, keywords and abstracts instead of full texts. On one hand, using a full text search usually leads to an explosion of search result. On the other hand, the search precision would be reduced quite dramatically by scanning full texts [W2030522107]. Thirdly, due to the known limitations of the search engines [W2118328848], we also noticed and confirmed that the automated search missed important studies. To alleviate this issue, we supplemented a manual search by snowballing the references of the initially selected papers (cf. Section 3.4.4). Fourthly, it is possible that we may have not found the papers using irregular terms to describe Cloud services evaluation. In addition to carefully proposing the search string (cf. Section 3.4.3), similarly, we also resorted to the reference snowballing to further identify the possibly missed publications. Finally, we specified ten Cloud providers in the search string, which may result in bias when identifying the most common services and providers to answer RQ2. However, we had to adopt those search terms as a tradeoff for improving the search string's sensitivity of the \"commercial Cloud service\"-related evaluation studies. Since the top ten Cloud providers were summarized by the third party from the industrial perspective, they can be viewed as weighted popular providers for this study. In fact, other Cloud providers were still able to be identified, such as BlueLock, EasticHosts, and Flexiant (cf. Section 5.2).",
+          "citations": [
+            "W2133933998",
+            "W2030522107",
+            "W2118328848"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_4",
+          "subsection_index": 4,
+          "subsection_label": "7.4. Reviewers reliability",
+          "subsubsections": [],
+          "text": "As mentioned in Section 3.3, the detailed review work was implemented mainly by a PhD student to gain understanding of his research topic. Since the student is a new comer in the Cloud Computing domain, his misunderstanding of Cloud services evaluation may incur biased review process and results. To help ensure that the conduction of this SLR was as unbiased as possible, we adopted a supervisory strategy including three points: first, before planning this SLR, the supervisory panel instructed the PhD student to perform an ad hoc review of background knowledge covering Cloud Computing in general and Cloud services evaluation in particular; second, during planning this SLR, the expert panel was involved in helping develop a review protocol prior to conducting the review; third, every step of the conduction of this SLR was under close supervision including regular meetings, and all the unsure issues were further discussed with the expert panel. As such, we have tried our best to reduce the possible bias of the review conduction. However, when it comes to the data analysis, there might still be the possibility of incomplete findings or conclusions due to our personal interest and opinions.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_5",
+          "subsection_index": 5,
+          "subsection_label": "7.5. Data extraction",
+          "subsubsections": [],
+          "text": "During the process of data extraction from the reviewed studies, we found that not many papers specified sufficient details about the evaluation background, environment, and procedure, which could be partially reflected by the quality assessment. As a result, sometimes we had to infer certain information through some unclear clues, particularly when we tried to find the purpose or the time of particular evaluation experiments. Therefore, there may be some inaccuracies in the inferred data. However, this point can be considered as a limitation of the current primary studies instead of this SLR. Since the empirical research in Cloud services evaluation falls in the experimental computer science [W3090328719], we suggest that researchers may employ structural abstract [W1964386935] and/or guidelines for conducting and reporting experiments or case studies [W2162739315] to regulate their future evaluation work.",
+          "citations": [
+            "W3090328719",
+            "W1964386935",
+            "W2162739315"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Although we tried to conduct this SLR study as rigorously as possible, it may have still suffered from several validity threats, as listed below. The future work should take into account these limitations when interpreting or directly using the findings or conclusions in this report.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "8. Conclusions and future work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Evaluation of commercial Cloud services has gradually become significant as an increasing number of competing Cloud providers emerge in industry [W2147623910][W2133196732]. Given that the Cloud services evaluation is challenging and the existing studies are relatively chaotic, we adopted the SLR method to investigate the existing practices as evidence to outline the scope of Cloud services evaluation. The findings of this SLR lie in three aspects.\n\n(1) The overall data collected in the SLR can lead us to become familiar with the state-of-the-practice of evaluation of commercial Cloud services. In particular, the answers to those six research questions summarized the key details of the current evaluation implementations. Meanwhile, the summarized data, such as metrics, benchmarks, and experimental setup scenes, were arranged as a dictionary-like fashion for evaluators to facilitate future Cloud services evaluation work.\n(2) Some of the findings have identified several research gaps in the area of Cloud services evaluation. First, although Elasticity and Security are significant features of commercial Cloud services, there seems a lack of effective and efficient means of evaluating the elasticity and security of a Cloud service. Our findings also suggest that this could be a long-term research challenge. Second, there is still a gap between practice and research into \"real\" Cloud evaluation benchmarks. On one hand, theoretical discussions considered that traditional benchmarks were insufficient for evaluating commercial Cloud services [W2028383826]. On the other hand, traditional benchmarks have been overwhelmingly used in the existing Cloud evaluation practices. The findings suggest that those traditional benchmarks will remain in the Cloud services evaluation work unless there is a dedicated Cloud benchmark. Third, the result of a quality assessment of the studies shows that the existing primary studies were not always conducted or reported appropriately. Thus, we suggest that future evaluation work should be regulated following particular guidelines [W1964386935, W2162739315].\n(3) Some other findings suggest the trend of applying commercial Cloud services. In general, commercial Cloud Computing has attracted the attention of an increasing number of researchers, which can be confirmed by the world-widely increased research interests in the Cloud services evaluation topic. In addition to satisfying business requirements, commercial Cloud Computing is also regarded as a suitable paradigm to deal with scientific issues. As for specific commercial Cloud services, although the competitive market changes rapidly, Amazon, Google and Microsoft currently supply the most popular Cloud services. Furthermore, PaaS and IaaS essentially supplement each other to satisfy various requirements in the Cloud market.\n\nWe also gained some lessons about conducting SLR from this work. Firstly, our practice has confirmed some previous experiences like the usage of pilot review from other SLR studies [W1491657789, W1975516699]. In particular, future studies should carefully estimate the extra time and effort if considering an ad hoc review as the prerequisite of an SLR conduction. Secondly, our study also revealed new EBSE lesson \u2013 continuous collection of evidence for building knowledge base. In other words, for particular research topics, the employment of SLR could be worthy of a regular use to update the data or knowledge to support the research in those topics. In fact, given the initial understanding of Cloud services evaluation in this case, the current stage of this SLR tends to be a systematic mapping study, while the gradual update will accumulate the evaluation outcomes of more primary studies, and then help gain more knowledge.\n\nOur future work will be unfolded in two directions. Firstly, the extracted data in this SLR will be structured and stored into a database for supporting a Cloud services evaluation methodology. Secondly, benefiting from the result of this SLR as a solid starting point, we will perform deeper study into Cloud service evaluation, such as developing sophisticated evaluation metrics.",
+      "citations": [
+        "W2147623910",
+        "W2133196732",
+        "W2028383826",
+        "W1964386935",
+        "W2162739315",
+        "W1491657789",
+        "W1975516699",
+        "W1977367431"
+      ],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_7",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_16",
+      "placeholder": "{{TABLE:tbl_16}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_5",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2161796765_tables.md"
+}

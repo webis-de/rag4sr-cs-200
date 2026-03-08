@@ -1,0 +1,207 @@
+{
+  "id": "W4402141058",
+  "metadata": {
+    "title": "Clinical Application of Large Language Models for Breast Conditions: A Systematic Review",
+    "n_sections": 7,
+    "n_subsections": 4,
+    "n_subsubsections": 0,
+    "n_tables": 4
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Artificial intelligence (AI) has shown a promising future for enhancing various aspects of healthcare, from diagnosis to treatment planning to patient education [W2908201961]. Large language models (LLMs), a type of AI system that can interpret and generate human language, have gained particular interest for their potential in assisting with clinical tasks which involve unstructured text data [UNMAPPED:2]. LLMs, like ChatGPT, have demonstrated impressive performance on general knowledge and language understanding benchmarks [UNMAPPED:3]. However, their utility and limitations for specific clinical applications remain to be established.\n\nBreast cancer is one of the most common malignancies worldwide with an annual incidence of 2.3 million [UNMAPPED:4]. Breast conditions-related clinical visits make up around three percent of primary health care visits among women [W2102356964]. They range from benign diseases and breast cancer with a wide variety of management. However, due to the overloading number of patients, the waiting time for patients' clinical assessment can be significantly prolonged [UNMAPPED:6]. Moreover, the clinical evaluation for breast related diseases, which involves triple assessment and personalised approach, can be strained due to time restraints and limited resources [UNMAPPED:6].\n\nHence, it is our belief that the management of patients with breast conditions can be an important area where AI like LLMs could potentially aid clinicians and patients. Accurate interpretation of imaging and pathology reports is crucial for breast diagnosis [W2789130209], while personalized management requires complex decision-making based on multiple clinical factors. Effective communication of information to patients is also key for shared decision-making and treatment compliance [UNMAPPED:8]. Prior studies have explored applications of narrow AI systems for breast imaging interpretation and clinical decision support [W2998175747, W2918598741]. However, the use of more flexible and comprehensive LLMs for breast conditions has not been systematically examined.\n\nThe objective of this systematic review is to evaluate the current evidence on the application of LLMs in breast conditions. We further categorise them into diagnosis, management, and patient communication. Specifically, we aim to address three key questions: 1) What is the diagnostic accuracy of LLMs for interpreting breast imaging and pathology reports? 2) How well do LLM management recommendations align with those of multidisciplinary teams? 3) What is the quality and limitations of LLM-generated information for patients on breast health topics? By critically appraising and synthesizing the available studies, we seek to identify promising use cases, current gaps, and future directions for the development and validation of LLMs in breast care.",
+      "citations": [
+        "W2908201961",
+        "W2102356964",
+        "W2789130209",
+        "W2998175747",
+        "W2918598741"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "2",
+        "3",
+        "4",
+        "6",
+        "8"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Materials and Methods",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We conducted a systematic search of PubMed, SCOPUS, and Google Scholar databases for studies published up to December 31, 2023 according to the systematic review using the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines [W4236476849]. The search query included terms related to large language models \"ChatGPT\" OR \"BARD\" OR \"LLAMA\" OR \"Large language model\" OR \"LAMDA\" OR \"GPT\" OR \"GPT\" OR \"natural language model\" OR \"natural language process*\" in combination with \"breast\".\n\nWe included only primary studies that assessed the performance or application of LLMs for any of the following in relation to breast conditions. These studies were then categorised according to the predefined domains, including diagnosis, management recommendations, and communication for patients. Commentaries, editorials, and reviews were excluded. Non-LLM based narrow AI systems were also excluded. Two reviewers independently screened titles and abstracts, followed by full-text review of potentially eligible studies. Disagreements were resolved by consensus or consultation with a third reviewer.",
+      "citations": [
+        "W4236476849"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Theory/Calculation",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "For each included study, we extracted information on the study design, data sources, the LLM studied, comparison method, sample size, and main outcomes. For diagnostic studies, we extracted information regarding the metrics of accuracy, such as sensitivity, specificity, and area under the receiver operating curve (AUC). For management studies, we extracted concordance rates between LLM and human expert recommendations. For patient communication studies, we summarized the quality assessments and any limitations that are identified.\n\nWe synthesized results narratively and in tables, stratified by application area (diagnosis, management, patient communication). Meta-analysis was not proceeded due to the limited data.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Study Characteristics",
+          "subsubsections": [],
+          "text": "The search yielded 173 records, of which 17 studies met inclusion criteria (Figure 1). Eight studies evaluated LLMs for breast diagnosis [W2460390741, W2125476304, W4386932783, W2997088829, W2953808120, W4387095531, W4381480701, W4295778540], three for management [W4387673783, W4384558920, W4378783467], two for prognosis [W3116121758, W3094657717] and four for patient communication [W4362521774, W4385302206, W4375955709, UNMAPPED:26]. Two studies assessed multiple applications [W4385302206, UNMAPPED:26]. The most commonly used LLM was ChatGPT (n=6), followed by custom models based on BERT or GPT architectures. Most studies were conducted in the USA or Europe.",
+          "citations": [
+            "W3116121758",
+            "W3094657717",
+            "W4385302206"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "26"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Diagnostic Accuracy",
+          "subsubsections": [],
+          "text": "Seven studies use developed AI models to diagnose patients with radiological free text reports, ranging between 300 to 79,312 reports from each study. The accuracy of LLMs for classifying breast conditions based on breast imaging reports (mammograms, ultrasound, MRI) and pathology reports (Table 1). Accuracies ranged from 74.3% to 99.6% across modalities, with the highest precision for MRI-based lesion detection (99.6%) and lowest for BI-RADS category assignment on mammogram-ultrasound (74.3%) [W4387095531]. Two studies found that LLM accuracies were comparable to manual interpretation by radiologists [W2125476304, W2997088829].\n\nOnly one study evaluated a publicly-available LLM (ChatGPT) as an aid for radiologists, finding acceptable accuracy (83%) but noting limitations in currency of knowledge and potential for incorrect or fraudulent output [W4381480701]. Other studies used custom-developed LLMs based on transformer architectures and trained on site-specific imaging reports. Common challenges included extraction of granular radiographic features, assignment to proper BI-RADS categories, and integration into clinical workflows.",
+          "citations": [
+            "W4387095531",
+            "W2125476304",
+            "W2997088829",
+            "W4381480701"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Management Recommendations and Prognosis",
+          "subsubsections": [],
+          "text": "Three studies compared management recommendations of LLMs to those of multidisciplinary tumor boards (MDTs) for breast cancer cases, with population sizes ranging from 10 to 20 patients (Table 2). Overall, the concordance ranged from 50% (for cases including benign/precancerous lesions) to 70% (for invasive cancers only) [W4384558920, W4378783467]. Concordance rate was highest for recommendations on radiotherapy (95%), followed by chemotherapy (94.7%), endocrine therapy (75%), genetic testing (70%) [W4387673783]. Discordant recommendations were often due to LLMs not considering patient age, performance status, or specific tumor features. In addition, LLMs sometimes proposed fraudulent decisions, such as recommending extensive genetic testing for patients without positive family history of breast cancer and advising against re-excision for cases with positive surgical resection margins. Over-treatment with chemotherapy and under-treatment with surgery were also observed. The authors noted that LLMs currently have limited suitability as a decision aid for breast cancer management due to medicolegal issues and potential for harm from erroneous recommendations.\n\nFurthermore, two studies demonstrated the application of LLM-based predictive models on real breast cancer patients for prognostic evaluation, which showed an accuracy of 75% to 88% in the prediction of distant breast cancer recurrence [W3116121758, W3094657717].",
+          "citations": [
+            "W4384558920",
+            "W4378783467",
+            "W4387673783",
+            "W3116121758",
+            "W3094657717"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Patient Communication",
+          "subsubsections": [],
+          "text": "Four studies assessed the quality of information produced by LLMs in response to common patient questions about breast health topics (Table 3). All used ChatGPT, either version 3.5 or 4. Number of questions included in each study varies, ranging from 6 to 25, each study recruited 3\u20135 experienced breast surgeons/specialists to comment on the answers generated by LLMs. Across studies, clinician quality ratings of LLM-generated content averaged 4.2 on a 5-point scale, indicating high overall quality. LLMs were noted to provide comprehensive, technically accurate, and well-organized answers, generally outperforming search engines [W4375955709, UNMAPPED:26].\n\nHowever, several important limitations were identified. Across studies, 18\u201330% of references cited by ChatGPT were inaccessible, irrelevant, or fabricated, raising concerns about information reliability [W4362521774, W4385302206, UNMAPPED:26]. ChatGPT sometimes gave outdated information, such as not reflecting the latest FDA regulations on breast implants [W4375955709]. It also tended to provide generic rather than patient-specific recommendations [W4375955709]. Additionally, ChatGPT responses were found to vary based on prompt wordings, occasionally introducing inaccurate or biased content [W4362521774]. Google searches were noted to provide more reliable and up-to-date references, especially for controversial topics, namely breast implant illness [W4385302206, UNMAPPED:26].",
+          "citations": [
+            "W4375955709",
+            "W4362521774",
+            "W4385302206"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "26"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This systematic review shows that LLMs such as ChatGPT have the potential in making clinical diagnosis, formulating individualised management plans, generating prognostic prediction and acting as a patient communication tool for health enquiries. However, significant limitations and potential risks were also identified, highlighting the need for further validation and refinement before clinical deployment.\n\nIn the diagnostic domain, LLMs achieved high accuracy for extracting key findings and assigning BI-RADS categories across mammography, ultrasound, MRI, and pathology reports. The performance was often comparable to expert human reviewers, supporting the potential for LLMs to enhance the efficiency and consistency of report interpretation. However, most studies used custom-developed LLMs trained on site-specific data, thus limiting generalizability. One study that evaluates a general-purpose LLM (ChatGPT), found lower sensitivity when compared to usual care for screening mammograms [W4381480701]. This underscores the importance of training LLMs on large, diverse datasets reflective of real-world practice. Future work should also establish benchmarks and best practices for assessing LLM performance, as metrics varied widely across studies.\n\nFor management, LLMs showed moderate concordance (50\u201370%) with multidisciplinary tumor board decisions for breast cancer cases. Agreement was highest for recommending standard systemic therapies but lower for nuanced surgical and genetic testing decisions. Importantly, LLMs sometimes gave dangerous recommendations, such as advising against re-excision for positive margins or recommending excessive genetic testing [W4387673783]. Over- and undertreatment were also observed relative to guideline-concordant care. These findings caution against using LLMs as autonomous decision-making tools, as they lack the clinical judgment to weigh competing factors and may not reflect the latest evidence. Instead, LLMs may be best positioned as aids to prompt consideration of management options, with final decisions made by human experts. Rigorous testing in prospective studies and refinement on large, curated oncology datasets will be necessary before considering deployment.\n\nIn the realm of patient communication, LLMs like ChatGPT generated coherent, accurate, and actionable answers to common breast health questions. The information was rated highly by clinician reviewers and often outperformed search engine results for comprehensiveness and organization. This supports the potential for LLM-powered chatbots or question-answering systems to enhance patient education and engagement. However, limitations were noted regarding outdated content, fabricated references, and inconsistency across similar prompts. There were also concerns about the inability to personalize recommendations and the potential for perpetuating bias. Careful human curation and oversight will be essential to ensure reliability and transparency of LLM-generated patient materials [W4362521774, UNMAPPED:26].\n\nMore broadly, LLMs pose several challenges that must be addressed before widespread clinical implementation. First of all, the \"black box\" nature of LLMs, where the reasoning behind outputs is opaque to users [W2945976633]. This lack of explainability hinders the ability to audit decisions and identify errors. Techniques to improve LLM interpretability, such as extracting rules or decision trees, are an active area of research [UNMAPPED:30]. Another challenge is the potential for LLMs to perpetuate biases present in training data, such as over- or under-diagnosis in certain demographics [W2981869278]. Careful auditing and debiasing of datasets and models will be required to ensure equitable performance. Data privacy and consent in the use of patient information for model development should also be considered on ethical grounds [W2903777941].\n\nImportantly, LLMs are not static tools; they are evolving technologies undergoing rapid development and refinement. The most recent versions, such as ChatGPT-4, have shown improved performance and safety compared to earlier iterations. Limitations identified in the studies to date may be addressed in future model updates. Additionally, ongoing efforts to build domain-specific LLMs for oncology, such as OncoGPT [UNMAPPED:33], may yield stronger results than general-purpose LLMs. However, the fast pace of development also challenges the ability to rigorously validate models before deployment. Prospective studies with standardized evaluation frameworks and reporting will be crucial to establish the utility and safety of LLMs in real-world clinical settings.\n\nThis review has several strengths and limitations. We performed a comprehensive search across multiple databases to capture the most recent studies on a rapidly evolving technology. However, relevant studies may have been missed due to inconsistent terminology and lack of established MeSH terms for LLMs. The included studies were highly heterogeneous in LLM type, training data, clinical application, and evaluation metrics. Assessment of study quality and risk of bias was also challenging due to the lack of established tools suited for AI-focused studies. Publication bias is likely present, as studies with positive results may be more likely to be published than negative ones.",
+      "citations": [
+        "W4381480701",
+        "W4387673783",
+        "W4362521774",
+        "W2945976633",
+        "W2981869278",
+        "W2903777941"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "26",
+        "30",
+        "33"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In conclusion, large language models demonstrate promising potential for enhancing diagnosis, management, and patient communication for breast conditions. Across 17 studies, LLMs achieved high diagnostic accuracy, moderate management concordance, and generated high-quality patient information. However, significant risks and limitations were identified, such as biased or fraudulent recommendations, lack of transparency, and insufficient validation in prospective settings. Future work should establish standardized evaluation frameworks and reporting guidelines for LLM studies, curate large diverse training datasets reflective of practice, and incorporate human oversight to mitigate potential harms. With responsible development and validation, LLMs may become powerful tools to support clinicians and patients in the future of breast care.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Tables and Figures",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**FIGURE 1:** Systematic review using the PRISMA guideline\n\n```\nRecords identified from:\n PubMed (n = 22)\n Google Scholar (n = 27)\n Scopus (n = 142)\n |\n v\n Records before screening (n = 173)\n |\n v\n Duplicate records removed (n = 18)\n |\n v\n Records screened (n = 173)\n |\n v\n Records excluded (n = 18)\n |\n v\n Reports sought for retrieval (n = 0)\n |\n v\n Reports assessed for eligibility (n = 173)\n |\n v\n Reports excluded:\n Out of scope (n = 149)\n Not primary study (n = 7)\n |\n v\n Studies included in review (n = 17)\n```\n\n**TABLE 1:** Summary table for diagnostic report usage\n\n{{TABLE:tbl_01}}\n\n**TABLE 2:** Summary table on management and prognosis\n\n{{TABLE:tbl_02}}\n\n{{TABLE:tbl_03}}\n*Note: IDC, invasive ductal carcinoma; DCIS, ductal carcinoma-in-situ.*\n\n**TABLE 3:** Summary table on patient communication\n\n{{TABLE:tbl_04}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01",
+        "tbl_02",
+        "tbl_03",
+        "tbl_04"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4402141058_tables.md"
+}

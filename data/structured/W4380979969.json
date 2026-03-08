@@ -1,0 +1,249 @@
+{
+  "id": "W4380979969",
+  "metadata": {
+    "title": "Machine Learning for Text Anomaly Detection: A Systematic Review",
+    "n_sections": 6,
+    "n_subsections": 10,
+    "n_subsubsections": 0,
+    "n_tables": 4
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "I. INTRODUCTION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Anomaly detection (AD) is a classical problem in computer science, with several methods developed for different applications. According to [W2122646361], anomalies \"are patterns in data that do not conform to a well-defined notion of normal behaviour\". When normal behaviour is well-defined, outliers are points that are not following the normal \"behaviour\". Anomaly detection (or outlier detection) is the ability to separate normal observations from abnormal ones in a data stream.\n\nIn this review, we concentrate on textual data. In this context, grammatical errors, inappropriate words, like swearword, or intentionally false statements (fake news), can be considered as anomalies, and detecting them falls in the area of text anomaly detection. Moreover, the textual analysis might be used to detect anomalies in systems generating the text, e.g., in security, the analysis of textual logs can be the mean for intrusion detection.\n\nAD algorithms generally use measures or metrics that evaluate how far an observed sequence is from a normal behaviour model. Several approaches have been developed with different metrics and various normal behaviour model structures. In this study, we will focus on methods leveraging Machine Learning (ML) for evaluating the metrics or for building the normal behaviour models.\n\nSection II describes the steps of the adopted systematic review methodology. Section III presents the study results and gives answers to our research questions. Section IV proposes a method for an automatic classification of papers based on their abstracts. Section V discusses existing reviews that study text anomaly detection and Section VI concludes the paper.\n\n---",
+      "citations": [
+        "W2122646361"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "II. RESEARCH METHODOLOGY",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Research questions",
+          "subsubsections": [],
+          "text": "This step consists in defining research questions. Our goal is to classify the contributions of the research in AD, according to the areas of application, the used mechanisms of feature extraction and text vectorization, and the application of machine learning methods. The research questions are described below:\n\n1) RQ1: What are the main categories of AD types proposed recently for text-based applications?\n2) RQ2: What are the different feature extraction methods used to represent textual data in AD?\n3) RQ3: What are the categories of machine learning methods applied to textual AD?",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Conducting a search strategy",
+          "subsubsections": [],
+          "text": "The second step of the adopted methodology entails collecting papers from digital libraries by selecting carefully keywords related to text AD and the application of machine learning to it.\n\nThe search was done over four scientific paper search engines, namely ACM, IEEE Xplore, Springer, and Science Direct for papers published between 2012 and 2022. We use boolean operators (ORs and ANDs), as well as more specific terms, like intrusion, or outliers, to limit the number of search results. We show in Table I the queries we used for this search. As Springer Library does not allow searching in the papers' abstracts, we limit the search to the title with keywords \"anomaly detection\" and \"text\". ScienceDirect makes possible to search in the title, the abstract, or the keywords specified in the papers, resulting into a better precision. For IEEE and ACM, we search keywords in the abstract and use an extended list of words, with synonyms, like 'outlier', 'intrusion', etc.\n\n**TABLE I: Used research query per digital library.**\n\n{{TABLE:tbl_01}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Screening of papers",
+          "subsubsections": [],
+          "text": "The third step consists of choosing papers that are relevant to answer the research questions listed before. For this purpose, a set of inclusion and exclusion criteria have been defined; we exclude papers that do not include AD keywords even if they use ML methods, papers that are not published in English, and papers that consist of literature review papers and surveys. We only keep papers that apply ML methods to text, and that are published during the considered period.\n\nThis resulted into collecting 2020 papers that are reduced to 108 papers after applying the inclusion and exclusion criteria. The remaining papers mostly concerned text anomaly detection using machine learning methods. Table II shows the number of selected and excluded papers for each digital library.\n\n**TABLE II: Selected papers results.**\n\n{{TABLE:tbl_02}}\n\nWe developed a web scraping software [UNMAPPED:15] in Python to fetch the papers. We gathered a dataset of 2021 samples. Web scraping is a technique for extracting content from websites via a script or a program. However, not all digital libraries' websites allow web scrapping; for example, Springer and IEEE authorize it, but ACM and Science Direct do not.\n\nFor each search result page related to the ACM library, we download the Bibtex text file, containing 10 papers per file; then we concatenate them and apply text processing to structure the data in the form of a data frame, allowing the transformation from the Bibtex format to text structured in a table. For Science Direct, data was collected manually, and fortunately, the search results were quite small, around 30 papers. Once the data were well structured and merged, the next step was to refine our research. We begin to look for keywords in the paper abstract because the paper title does not always contain important information. Our method helped us to save time by reducing the number of papers to process.\n\n---",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_02"
+          ],
+          "citations_unmapped": [
+            "15"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "We perform here a systematic review of the literature on text AD that follows the guidelines proposed by Petersen et al. [W4214443]. The systematic review is divided into five stages, namely defining research questions, conducting a search strategy, screening of papers, using the abstract to extract keywords, and finally extracting data and presenting results. These steps are detailed below. Through this literature review, we aim to provide helpful references to researchers who are willing to use text AD in their studies.",
+      "citations": [
+        "W4214443"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "III. RESULTS",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Publication Trends",
+          "subsubsections": [],
+          "text": "To examine the trend of the text AD field in terms of the publication date, we carry out a statistical analysis to understand the distribution of selected papers regarding the year and the journal. We notice that the number of papers has a growing trend between 2012 and 2021. With peaks in 2016 and 2020 with 13 and 19 papers, respectively. Moreover, the number of papers found in IEEE (62 papers) is greater than the number of papers in other digital libraries.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Types of text-based anomaly detection",
+          "subsubsections": [],
+          "text": "In this section, we address RQ1, which aims to identify types of text-based AD studies. Our study shows that several types of text AD are adopted, in different application domains, such as healthcare, financial, and manufacturing. We identify four main types, namely system intrusion detection, spam detection, anomalous topic document discovery, and event detection. These text-based anomaly detection types are the most studied in recent years between 2012 and 2022. These identified types refer to 25 different application domains, like health surveillance, social media cyberbullying, fraud detection, etc.\n\n**FIGURE 1: Main types of text-based anomaly detection by year.**\n\n{{TABLE:tbl_03}}\n\nWe detail below each identified type of text-based AD.\n\n1) **System intrusion detection**: An intrusion in a system can be considered as an anomaly, it is a computer security breach, an abnormal access to a computer system. It aims to identify intrusions with a low false alarm rate and a high detection rate [UNMAPPED:25]. Monitoring security can be done through log analysis. Log files are text files that contain information about records generated by a computer for different types of tasks. The exploitation of such textual information can be used for the detection of malicious attacks. The spreading of malicious social media messages is considered as an anomaly.\n\n2) **Spam detection**: Spam is an unwanted message usually received by mail or via social networks or web pages. It can have a commercial purpose or be an attempt at intrusion. The most relevant studies include e-mail spam detection, web spam detection, and opinion spam detection.\n\n3) **Anomalous topic document discovery**: Anomalous topic document discovery focuses on detecting atypical patterns (topics) in text documents. It identifies outlier documents whose content is different or dissimilar to inlier sub-topics within a larger document corpus. This type of AD is used on the web and blogs. A subset of unusual web pages on a website or blog pages on a blog deviating from the common themes in the website/blog. Besides, detecting uncommon new posts or comments on social media may help to flag them as emerging, hate comments, or fake news. According to [W3133845550] in judicial-based text-based documents, a court case is to be considered as an anomaly if the judge's decision differs significantly from existing decisions in similar cases.\n\n4) **Event Detection**: Detecting an abnormal event is detecting anomalies in streaming data or online data. The goal of automatic event detection is to deal with large volumes of data and to satisfy real-time processing constraints to recognize what is happening in real time. For instance, messages carrying critical information are detected for the damage assessment task, for disaster management. According to [W3130666089], fake news can be regarded as an anomaly event on social networks. The spread of fake news brings great negative effects on people's daily life and even causes social panic.",
+          "citations": [
+            "W3133845550",
+            "W3130666089"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ],
+          "citations_unmapped": [
+            "25"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Methods of feature extraction for text representation",
+          "subsubsections": [],
+          "text": "Feature extraction for text representation is the process of converting text data into numeric data. It is also called text vectorization or text embedding. In the context of text AD, text vectorization is used to convert text documents into numerical representations that capture the features of the text data, such as words and their frequency. This enables the use of statistical and machine learning methods to identify patterns or anomalies in the data. This step is very important to improve the precision of the proposed models.\n\nIn this section, we address RQ2, which aims to present different feature extraction methods for text representation. We identify 14 different feature extraction methods in the selected papers. In Natural Language Processing (NLP), feature extraction is one of the most important steps. After the initial text cleaning, it is transformed into its features to be used for modeling. Document data are not computable; so they must be transformed into numerical data, namely a vector space model. This transformation task is generally called feature extraction of document data. In our study, we distinguish two types of feature extraction methods, namely frequency-based methods and prediction-based methods.\n\n1) **Frequency-based methods**: are as below:\n\n- **Bag-of-words**: It is one of the most used text vectorization techniques. A bag-of-words (BOW) is a representation of text that describes the occurrence of words within a document. This method is specially used in text classification tasks because it is simple and intuitive. The size of each document's vector is the same after BOW. But, it can create sparsity because of the large vocabulary, and this method does not consider the order of sentences [W3000274722].\n\n- **Bag of n-grams**: A bag-of-n-grams model represents a text document as an unordered collection of its n-grams. It is a probability model of word sequences. It is simple and easy to implement. Moreover, it is able to capture the semantic meaning of the sentence. It can slow down the algorithm when we move from unigram (using one word of the document) to n-gram (using n number of words of the document) because the dimension of vector formation increases [UNMAPPED:3].\n\n- **Term Frequency and Inverse Document Frequency**: It is a statistical measure that evaluates how relevant a word is to a document in a collection of documents. Term Frequency (TF) is the number of times a word appears in each document. It is divided by the total number of words in that document, and the IDF value is normalized using a log because, without it, the IDF value could be high. This technique is widely used but deals with a problem of sparsity in a large dataset, because the large vocabulary leads to dimensionality increases, slowing down the algorithm. Besides, the semantic meaning using TF-IDF is not considered [UNMAPPED:20].\n\n- **Graph representation**: A graph is represented with a square adjacency matrix; with the same documents in rows and columns. Documents represent the nodes of the graph, and a distance, like cosines distance, is computed between each couple of documents in the matrix [W2512767030].\n\n2) **Prediction-based methods**: are as below:\n\n- **Bidirectional Encoder Representations from Transformers (BERT)**: It belongs to the family of transfer learning models, it is a pre-trained model that NLP users can download and use for free. These models can be used to extract high-quality language features from text data and fine-tune these models on a specific task with your own data to produce state-of-the-art predictions. BERT captures the contextual meaning of a sentence, even if there's no keyword or phrase overlap. That means if a given same word appears in two different sentences, BERT will not produce the same word embedding for each same word [UNMAPPED:6].\n\n- **Latent Semantic Analysis (LSA)**: Its basic concept consists in mapping texts represented in a high-dimensional vector space model to lower-dimensional latent semantic space. This mapping is achieved through SVD (singular value decomposition) of items or document matrix [W1695383821].\n\n- **Glove**: It is an unsupervised learning algorithm for obtaining vector representations of words. Training is performed on aggregated global word-word co-occurrence statistics from a corpus, and the resulting representations showcase interesting linear substructures of the word vector space [W2250539671].\n\n- **Word2vec**: It is a deep learning-based technique that converts a given word into a vector as a collection of numbers. Word2vec captures the semantic meaning of a word in a sentence. Words with similar contexts occupy close spatial positions. Word2vec creates a low-dimension dense vector (non-zeros) vector where each word is represented by a vector with a size that we can specify [W4239025696].\n\n- **Doc2vec**: It is also a deep learning-based technique that converts a given sentence into a vector as a collection of numbers, like Word2vec.\n\n- **AutoEncoder**: An AutoEncoder for text vectorization takes inputs from a sequence of text, passes it through a layer with fewer nodes than the input layer, and outputs it to a decoder which tries to reconstruct the exact same input. This approach allows learning vector representations to any unstructured text of any length. After training the AutoEncoder, the encoder model can be used to generate embeddings to any input.\n\n- **Convolutional neural network (CNN)**: It is a neural network classification model used for text feature extraction [W1832693441]. Filters with different lengths are used to convolve the text matrix. The max pooling is employed to operate extractive vectors of every filter. Finally, each filter corresponds to a digit and connects these filters to obtain a vector representing this sentence, on which the final prediction is based.",
+          "citations": [
+            "W3000274722",
+            "W2512767030",
+            "W1695383821",
+            "W2250539671",
+            "W4239025696",
+            "W1832693441"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "3",
+            "20",
+            "6"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "D. Categories of machine learning methods",
+          "subsubsections": [],
+          "text": "In this section, we address the RQ3, which aims to present a classification of used ML methods in included research papers. In our study, we identify three categories of ML methods used in text AD, namely supervised, unsupervised, and semi-supervised. We observe that supervised methods are the most used, followed by unsupervised ones. On the opposite, semi-supervised methods and studies that combine supervised and unsupervised methods are not widely used.\n\nWe detail below each identified category:\n\n1) **Supervised learning for anomaly detection**: Supervised learning is a category in which labeled data are fed as input to ML algorithms. The input and output are already known. For instance, Bobur et al. [W3133845550] present a model for searching anomalies in judicial practice. For searching anomalies, they mix two models, including classification models, such as Logistic regression as well as similarity algorithms, such as Latent Dirichlet Allocation (LDA).\n\nFor their part, the authors of [W2888381175] analyze access logs for detecting anomalous activities, such as intrusion. The proposed approach identifies the suspicious activities and serious anomalies that may be one of the ways for hackers to hack the system. The supervised neural network approach using Naive Bayes Multinomial Text Algorithm gives better anomaly prediction than the unsupervised neural network approach for static logs and achieves maximum prediction accuracy compared to other classifier algorithms since the input attributes (logs) are strings.\n\n2) **Unsupervised learning for anomaly detection**: Unsupervised learning methods are a category of learning methods in which only input data are fed to the model but no corresponding output data. In such cases, ML algorithms find the similarities among different input data and group them based on the similarity. The number of groups (clusters) must be specified in advance. The unsupervised problem in AD is a problem in which a new instance of test data differs in some aspect from the data available during training. These methods do not need large amounts of labeled data to train the model. For instance, detecting fake news as anomalies requires an unbalanced dataset in which the number of abnormal observations is lower than the number of normal observations.\n\nTherefore, some researchers apply unsupervised methods to detect fake news on social networks. In [W3130666089], the authors proposed a method based on text content for unsupervised fake news detection. They make use of auto-encoder as the basic unsupervised learning method and suggested an improved method based on auto-encoder, namely UFNDA, for unsupervised fake news detection.\n\nIn [W2528528009], Eshraqi et al. consider spam as an anomaly problem and identify comprehensive features of spammers and spam tweets. They use a clustering algorithm in short textual messages, namely tweets. They use the DenStream algorithm for clustering, which is an algorithm that is developed based on the DBSCAN density-based clustering algorithm.\n\n3) **Semi-supervised learning for anomaly detection**: Semi-supervised learning is a category of ML methods in which input data are known and only some input data are labeled. The data are partially annotated. Semi-supervised outlier detection methods identify anomalous/rare behavior through data when the normal behavior is only known and defined. Semi-supervised outlier detection methods are usually used when only examples of normal classes can be acquired, unlike anomalous/rare classes [W2625613950].\n\nFor instance, Steyn and de Waal [W2575271759] construct a Multinomial Na\u00efve Bayes classifier and enhance it with an augmented Expectation Maximization (EM) algorithm. Thus, they use large amounts of unlabelled data and show how the EM algorithm can increase the accuracy of the Na\u00efve Bayes classifier. The process is applied to a binary classification environment to detect anomalies in text.\n\n---",
+          "citations": [
+            "W3133845550",
+            "W2888381175",
+            "W3130666089",
+            "W2528528009",
+            "W2625613950",
+            "W2575271759"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The results of each research question are addressed in detail in the following sub-sections. In order to synthesize the information gathered from the selected papers, we used various processes to answer the research questions.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "IV. AUTOMATIC CLUSTERING OF SELECTED PAPERS",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Text clustering",
+          "subsubsections": [],
+          "text": "Text clustering aims to automatically group documents into a fixed number of categories using unsupervised methods. It uses explicit or implicit similarity/dissimilarity measures to determine how similar or dissimilar texts are. It is used in several application domains to discover text clusters based on extracted features (or text representation). A well-liked approach for text representation is the Bag-Of-Words (BOW), where the word occurrences describe the text. The BOW representation is then used to apply various specialized clustering methods, such as K-means or Spherical K-means [UNMAPPED:2], to categorize the text. The BOW representation may produce good clustering outcomes, mainly when the topics of the clusters are very different. However, the text's rich contextual information and sequence information are not recorded by BOW representation. Recent state-of-the-art outcomes on various NLP (Natural Language Processing) tasks, such as question answering and text production, have been attained by complex language models like the famous Bidirectional Encoder Representations from Transformers (BERT) [UNMAPPED:6]. The word representations offered by transformers rely on the context of the given word, in contrast to earlier word embedding techniques that provided one distinct vector for each lexicon word. As a result, they are also known as contextual word embeddings, which are really effective for the text classification task.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "2",
+            "6"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Proposed approach",
+          "subsubsections": [],
+          "text": "In this section, we describe our approach that we developed for the automatic clustering of selected papers. As discussed in the previous section III, the transformers-based approach provides an effective text representation that depends on a context allowing important improvements for the text clustering task. Thus, we use SentenceBert [W2970641574], which is a transformer model to encode sentences. Unlike classical transformers that encode words, SentenceBert provides a vector representation for text fragments. This representation is better than a frequency-based representation or static word embedding in our study since all topics covered by selected papers deal with the area of AD. SentenceBert is able to capture the context of the paper's abstract, which helps us to obtain a better representation. On the other hand, we use the Spherical K-means [UNMAPPED:2] as a clustering algorithm and apply it to the abstract representation of papers using SentenceBert. Noting that in Spherical K-means, we need to specify the number of clusters. Hence, we choose the same number of the most frequent types of text-based AD that we identified to respond to RQ1, namely system intrusion detection, spam detection, anomalous topic document discovery, and event detection. Then, we add an additional cluster to group the rest of the papers. Thus, the number of input clusters is equal to five.",
+          "citations": [
+            "W2970641574"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "2"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Manual clustering vs. automatic clustering",
+          "subsubsections": [],
+          "text": "Figure 2 represents the word cloud of the five obtained clusters, for that we extract the most frequent 100 words in each text cluster to represent the main topic. We can see that:\n\n- Cluster 1 represents the topic of event detection in textual data and mainly in Twitter. We find frequent words, such as event, detection, online, Twitter, etc.\n- Cluster 2 represents the outlier document discovering with words, such as document, outlier, new, paper, etc.\n- Cluster 3 represents the topic of spam and attack detection. We find words, such as spam, attack, anomaly, etc.\n- Cluster 4 represents an open cluster with paper dealing with different kinds of anomaly without any specificity.\n- Cluster 5 represents the topic of SID through several words, such as security, system, log, and message.\n\n**TABLE III: Manual clustering vs. automatic clustering results.**\n\n{{TABLE:tbl_04}}\n\nTable III presents the number of papers classified manually, in each AD type, the number of papers in each cluster obtained with Spherical K-means, and the percentage of well-classified papers. We can notice that the percentage of common papers between the manual and the automatic clustering for some clusters is really close, such as clusters 2 and 3 representing anomalous topic document discovery and spam detection, with percentages of common papers equal to 76% and 83%, respectively. For clusters 1 and 5, the percentage of common papers between the manual and the automatic clustering is lower than the previous clusters, with percentages around 54% and 36%, respectively, which can be explained by the fact that clusters 2 and 3 are about more specific topics than cluster 1 and 5 that are more general topics, such as event detection and SID. Finally, cluster 4 encompasses all the other topics that are not included in the previous clusters. These other topics are those with the lowest percentage, which is explained by the fact that it is the biggest cluster with diverse topics.\n\n---",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_04"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The objective of this section is to provide an automatic unsupervised classification (or clustering) of selected papers and compare the obtained classification with the manual classification presented in sub-section III-C.\n\n**FIGURE 2: Word cloud of the five obtained automatic clusters.**\n\n*Segment 1/2: Cluster 1 | Cluster 2 | Cluster 3*\n*Segment 2/2: Cluster 3 | Cluster 4 | Cluster 5*\n\n*Extracted text: clustering, spammer, problem, show, proposed, preb atio, userproblen..., message, feature, 1, spam, performance, proposed, dataset, security, osn feature, result setwork, document, U, new, 2network, feature, online, behavior, sets, paper: system set, outlier, detection new, work, aph, detection, ranking, event, conter, reviewer-labeling, existing, a, outlier information, collection, 3, cluster detection, task, attack, study, proposed, review8, patent word, T, paper, anomaly detection, IANiA, ut information anomaly, messager, present, textual, performance application clustering, Nt100, ULe tetectian ti an, application, intru, Cluster 2, Cluster 3, Cluster 4*",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "V. RELATED LITERATURE REVIEWS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Anomaly detection has received more attention in the past few years. For instance, Nassif et al. [W3164952570] conducted a systematic literature review dealing with machine learning methods for AD. The study provided an overview of ML methods, vectorization, and evaluation metrics but does not address text data. Several literature reviews have addressed AD in text data but each addressed a specific domain or application. Kokatnoor et al. [W3046654608] provided a comparative study of text mining algorithms for AD in online social networks, but is restricted to a comparative analysis of the performance of four classification algorithms for a Twitter dataset. Finally, Mangathayaru et al. [W2557266189] explored a text mining-based approach for intrusion detection. They discussed the feature reduction methods they adopted to achieve dimensionality reduction in high-dimensional text documents. Moreover, they compared different methods of prototypes implemented in the detection of abusive content by analyzing both images and text.\n\nTo sum up, the existing systematic reviews concerning AD in the text consider only one anomaly detection type, one feature extraction method, or propose a review of ML methods in general. Our work extends the existing reviews by trying to explore all these aspects.\n\n---",
+      "citations": [
+        "W3164952570",
+        "W3046654608",
+        "W2557266189"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "VI. CONCLUSION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Text AD is a common task in various domains. Several works treated AD considering different types of data. In this paper, we presented a systematic review of machine-learning approaches for text AD. Thus, we included 108 papers to address the defined research questions. Thus, we first carried out a statistical analysis of the selected papers. Then, we proposed a classification of the selected papers based on AD types and feature extraction methods for text representation. Moreover, we investigated the machine learning methods used for AD in the text, and we found that the majority of the included papers used supervised ML approaches. Finally, we proposed an approach for the automatic clustering of selected papers using the Spherical K-means algorithm and SentenceBert to represent the paper's abstracts. We discovered 5 clusters that have been compared to the manual classification. We found that the fifth cluster is an open cluster that encompasses all the other topics that are not included in the previous clusters. A potential future work might analyze the open cluster and extract additional underrepresented classes for AD in text.\n\n---",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4380979969_tables.md"
+}

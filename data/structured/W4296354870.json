@@ -1,0 +1,333 @@
+{
+  "id": "W4296354870",
+  "metadata": {
+    "title": "A Systematic Review on Non-Functional Requirements Documentation in Agile Methodology",
+    "n_sections": 6,
+    "n_subsections": 15,
+    "n_subsubsections": 0,
+    "n_tables": 6
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "I. INTRODUCTION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The agile approach of managing software teams is booming in popularity across the software development industry. It has many advantages over traditional approaches such as waterfall model, such as iterative feedback and constantly in a shippable state of product, faster time to market and adaptive to requirements change. However, agile methodology does not put focus in documentation and in this literature review, the lack of documentation in requirements is studied and analysed, specifically in the area of non-functional requirements (NFR).\n\nAgile methodology put emphasis in communication and collaboration among members within and among agile software development (ASD) teams. Requirements are usually briefly communicated as user story, and all parties rely on collaboration to finalize the details of requirements and expectations of the deliverables. The main characteristic of a user story is that it is presented in a format to express the intent of a user of a system to perform a desired task or output. The user story template is rarely used to indicate the non-functional expectations (or quality component) of a software system.\n\nThis poses several drawbacks such as miscommunication, traceability, validation, effort estimation, project costing and so on. Moreover, the constant nature of teams' rotation and headcount turnover means that the details and agreement over NFRs are usually lost over time.\n\nThis literature review will look at the researches that have been carried out to study this issue in the aspect of impacts and challenges due to lack of documentation in NFRs. It will also look into existing practices and proposed ways to overcome this issue.\n\nSection II of this paper elaborates the search process. Section III presents the findings and summary of the literatures reviewed and Section IV discusses the content of the search results and their limitation, as well as the limitations of this literature review.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "II. METHODS",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Research Questions",
+          "subsubsections": [],
+          "text": "The objectives of this systematic literature review are formulated into research questions (RQ) indicated as below:\n\nRQ1. In the context of requirements engineering, what are the gaps that exist when proper requirements documentation practice is replaced with collaboration?\nRQ2. How are the challenges identified in RQ1 impacting ASD teams and their software delivery goals?\nRQ3. What current methods do ASD teams use to overcome the challenges identified in RQ1?\nRQ4. What are the limitations of the current researches?\n\nAll review materials used in this research pertaining to RQ1-RQ4 above are literatures published in the last five years (since 2018). The software development space is a very fast evolving industry. This is to ensure that this review is based on up-to-date industry practices and also to take into consideration the newest tools which are made available to facilitate ASD teams in their requirements engineering practices.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Search Process",
+          "subsubsections": [],
+          "text": "The search process was a manual search of specific conference proceedings and journal papers since 2018. Due to time constraint and limited review capability, this systematic literature review is limited to a preliminary search result from the first few pages from Google Scholar as shown in Table 1. Each journal and conference proceeding was reviewed based on the last five years of publication date, its potential relevance and journals and conferences from well-known publishers like Institute of Electrical and Electronics Engineers (IEEE), Springer and Association of Computing Machinery (ACM) were selected. The following keywords were combined when performing the search to achieve higher search result accuracy: \"non-functional requirements\", \"quality requirements\", \"documentation\", \"agile\" and \"rapid development\". Subsequently, the literature title, abstract and conclusion were analysed to determine its relevance. It would be selected if the research discusses topics of NFR and agile methodologies, the current status quo, existing practices by ASD teams and the challenges and consequences faced by ASD teams today.\n\n**TABLE 1.** Search queries (SQ) on Google Scholar\n\n{{TABLE:tbl_01}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Inclusion and exclusion criteria",
+          "subsubsections": [],
+          "text": "The search results are filtered further based on certain inclusion and exclusion criteria (see Table 2). Inclusion criteria:\n\nI1. Literature is related to requirements engineering.\nI2. The paper discusses NFR from the perspective of documentation and traceability.\nI3. In the context of agile manifesto and methodology.\nI4. The literature describes current practices and challenges with respect to NFR documentation and agile. Exclusion criteria:\n\nE1. Publications that do not discuss about non-functional or quality requirements.\nE2. Requirements engineering not in the context of agile manifesto and methodology.\nE3. Published before year 2018.\nE4. Search results that are not published in IEEE, Springer or ACM.\nE5. Duplicate search results.\nE6. Non-English literatures.\nE7. Exclusive content.\n\n**TABLE 2.** Inclusion and exclusion criteria filter result\n\n{{TABLE:tbl_02}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "D. Quality Assessment",
+          "subsubsections": [],
+          "text": "The literatures obtained after filtering the search results are reviewed in detail and quality is rated based on a set of quality assessment.\n\nQA1. Is the literature relevant to requirements documentation?\nQA2. Does the literature research about requirements documentation in the context of agile methodologies?\nQA3. Does the literature discuss the current practices of NFR documentation in ASD teams?\nQA4. Does the literature assess the challenges of non-functional requirements documentation in ASD teams and proposes solutions to the challenges?\n\nThe quality is then rated with scores Y=1.0, P=0.5 and N=0.0.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "E. Data Collection",
+          "subsubsections": [],
+          "text": "There are several types of research papers related to the topic that are focused by this systematic literature review. The following data and metadata of the selected papers are obtained:\n\n- Full reference of the literature material.\n- Type of research\n- Research domain\n- Authors\n- Summary, research questions and answers of the research\n- Quality evaluation\n- Whether the research is relevant to requirements engineering and specific to requirements documentation in ASD.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_6",
+          "subsection_index": 6,
+          "subsection_label": "F. Data Analysis",
+          "subsubsections": [],
+          "text": "The results are analysed and categorically grouped to answer the research questions:\n\n- The current practices of documenting NFR in agile environments (RQ1).\n- Challenges faced by ASD teams due to lack of documentation during requirements engineering phase (RQ1).\n- The impact and consequences to the overall software delivery goals in the absence of adequate requirements documentation (RQ2).\n- The techniques used by ASD teams to overcome the lack of documentation (RQ3).\n- The limitations of the research paper (RQ4).",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This systematic literature review is conducted using the original guidelines proposed by [W2146773231] as reference. The steps undertaken for this research are as presented in the following sections.",
+      "citations": [
+        "W2146773231"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "III. RESULTS",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Search Results",
+          "subsubsections": [],
+          "text": "A total of twenty literatures were identified from the manual search, all of which focused in requirements documentation. The literatures discuss the nature of documenting non-functional requirements in software development. Table 3 depicts the search results with the publication year and the main topic of content that are used in this review. The breakdown of the search results according to article type is shown in Figure 1.\n\n**TABLE 3.** Search Results\n\n{{TABLE:tbl_03}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Quality Factors",
+          "subsubsections": [],
+          "text": "The contents of literatures are reviewed and the relevance are cross-referenced using the quality assessment defined in section II-D. The quality of literatures obtained from the search results are assessed and evaluated as presented in Table 4 and Figure 2.\n\n**TABLE 5.** Search results by article type\n\n{{TABLE:tbl_04}}\n\n**FIGURE 1.** Search results by article type\n\nThe assessment contains the highest score of 4.0 and the lowest score of 1.5. Two papers (10%) scored the highest score of 4.0, five papers (25%) scored 3.5 and 3.0 respectively, three papers (15%) scored 2.5, two papers (10%) scored 2.0 and three papers (15%) scored 1.5. Since all papers scored a minimum of 1.5 and most papers obtained 3.0 and above, it can be assumed that the selected papers have the overall quality criteria for review.\n\n**TABLE 4.** Quality evaluation of literatures from search results\n\n{{TABLE:tbl_05}}\n\n**TABLE 6.** Quality assessment coverage distribution\n\n{{TABLE:tbl_06}}\n\n**FIGURE 2.** Quality assessment coverage distribution",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_04",
+            "tbl_05",
+            "tbl_06"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section presents the result of the literature search activity that are subsequently used to conduct this systematic literature review.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "IV. DISCUSSION",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "A. What research topics are being addressed?",
+          "subsubsections": [],
+          "text": "All the research papers selected for this literature review are related to the topic of documentation in requirements engineering.\n\nTen [W3156273984, W3135007813, W2804113984, W2519441621, W2907885056, W3082693641, W4205680690, W2897788726, UNMAPPED:10, UNMAPPED:15] out of the twenty selected papers contain discussions on requirements documentation in agile software teams and current practices.\n\nThere are fourteen [W2146773231, W3156273984, W2980274516, W2804113984, W2519441621, W2950331693, W3082693641, W3003705018, W3011989843, W4205680690, W2897788726, W3093973583, UNMAPPED:10, UNMAPPED:15, UNMAPPED:17] out of the twenty selected papers discussed solution to the challenges to some extent.",
+          "citations": [
+            "W3156273984",
+            "W3135007813",
+            "W2804113984",
+            "W2519441621",
+            "W2907885056",
+            "W3082693641",
+            "W4205680690",
+            "W2897788726",
+            "W2146773231",
+            "W2980274516",
+            "W2950331693",
+            "W3003705018",
+            "W3011989843",
+            "W3093973583"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "10",
+            "15",
+            "17"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "B. What are the trends for the research methodology?",
+          "subsubsections": [],
+          "text": "All seven evaluation papers [W3135007813, W3198506760, W2519441621, W2907885056, W3082693641, W3011989843, UNMAPPED:15] utilized qualitative and quantitative evaluation methods to assist in their analysis of respective studies.\n\nThere are four SLR [W3156273984, W2804113984, W3180427476, W3003705018] in the list of selected papers which utilizes a set of selection criteria. The list of selection criteria is built from the research questions that are established, and a quality assessment is carried out to determine if the searched paper is selected.\n\nIn the remaining case study papers, the authors made selection on a few major industry and domain to conduct the research of respective research areas.",
+          "citations": [
+            "W3135007813",
+            "W3198506760",
+            "W2519441621",
+            "W2907885056",
+            "W3082693641",
+            "W3011989843",
+            "W3156273984",
+            "W2804113984",
+            "W3180427476",
+            "W3003705018"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "15"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "C. What are the current practices of documenting NFRs in agile?",
+          "subsubsections": [],
+          "text": "In most software projects, NFRs are communicated by the stakeholders during the early stages of the project. They are usually documented in minutes of meetings (MOMs), formally documented in WIKI systems or translated to user stories [W2897788726] to be delivered by the development teams.\n\nNFRs do contain quality elements of the software system, such as performance, availability and security [W2980274516], among others. These are the attributes that should be present in the system at any given point in time.\n\nIn most cases in agile approaches, these NFRs are seldom revisited as development sprints iterate, until a point where quality dips beyond a tolerable threshold that a bug or defect is reported. ASD teams will then revisit the expectation as a new user story in order to improve the quality back to the expected level. This practice is reactive in nature and it can be costly to remedy.\n\nThere are also new functional requirements that carry specific NFRs, which are delivered during the development sprint [W2519441621]. However, these ad-hoc NFRs are not consistent with the overall quality expectations of a given software system architecture.",
+          "citations": [
+            "W2897788726",
+            "W2980274516",
+            "W2519441621"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "D. What are the challenges of NFRs documentation?",
+          "subsubsections": [],
+          "text": "There are two main challenges in NFRs documentation: validity and management [W3156273984, W2804113984, W2897788726, W3093973583].\n\nAs mentioned in the previous section, NFRs apply to a software system in general and are usually communicated at the start of any given software projects. These NFRs get outdated when new expectations are communicated by the stakeholders. As a result, earlier documents which are not updated may cause conflicts and confusion [W3093973583], when the new user story is not linked and reference correctly to maintain requirements traceability.\n\nWhen NFRs are communicated by stakeholders, they are usually not expressed in measurable technical terms that can be easily understood by the programmer [W3156273984, UNMAPPED:6]. Often, documentations contain vague or unreasonable details that could cause confusion or undeliverable requirement when translated into a user story.\n\nIn agile, requirements are documented on a high level as user story. The details of the requirements are usually communicated by the stakeholders through collaboration [W2980274516]. It takes time and effort to ensure that the requirement details are accurately documented. Therefore, it is common to find that teams do not spend the time to document the expectations accurately [W3011989843, W2897788726], instead time is spent to implement and ensure the shortest time to market instead. Tracing back these requirements can be very challenging especially when team composition turnover is high [W2980274516].",
+          "citations": [
+            "W3156273984",
+            "W2804113984",
+            "W2897788726",
+            "W3093973583",
+            "W2980274516",
+            "W3011989843"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "6"
+          ]
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "E. What are the proposed solutions?",
+          "subsubsections": [],
+          "text": "For resourceful teams in terms of available headcounts and funding, the role of eliciting proper requirements and documentation can be delegated [W3135007813] to personnel that focus to ensure the accuracy and traceability of NFRs in the software project. In big organisations, these roles include technical product owners, business and system analysts and so on. The responsibilities of documenting requirements should not be given to the engineering team because in most cases will not put documentation and requirements as a priority [UNMAPPED:17].\n\nDuring the process of grooming every user story, the impact and risk towards all NFRs shall be analysed and properly linked to the user story itself, so that developers working on the user stories are aware of the non-functional expectations and impacts. Modern software development planning tools [W2804113984, W4205680690, W3093973583] such as TFS and JIRA can be utilized to achieve this outcome.\n\nASD teams can also ensure the NFR documentation is always up to date by keeping customized NFRs to a minimum. NFRs that are common and can be applied to most software systems can utilise common standards and best practices by the software development industry. Doing so can keep the effort of maintaining the documentation low, and software quality can be easily achieved by using existing automation tools [W2897788726] available in the industry, such as penetration testing suite (security), static code analysis tools (code quality), and so on.\n\nLastly, it is crucial that the importance of NFR documentation is given the right amount of priority in every organization. The leadership team should provide ample support to engineering teams to ensure the documentation is always up to date. This will eventually cascade and influence all other functions within the organization to ensure that NFR documentations are reliable and correct.\n\nThe challenges highlighted in the findings in earlier sections are less impactful to other development manifesto such as waterfall approach. However, these limitations should not be a deterrent to practice agile because the agile manifesto offers many other values that are beneficial to the modern software development climate.",
+          "citations": [
+            "W3135007813",
+            "W2804113984",
+            "W4205680690",
+            "W3093973583",
+            "W2897788726"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "17"
+          ]
+        },
+        {
+          "subsection_id": "s_4_6",
+          "subsection_index": 6,
+          "subsection_label": "F. What are the limitations presented in the existing researches?",
+          "subsubsections": [],
+          "text": "At the end of the literature review of all selected papers, there are four papers [W3156273984, W3198506760, W4205680690, UNMAPPED:6] which highlighted limitations in their respective researches.\n\nThere is a lack of adequate research in the topic of documentation of NFR in software teams practicing agile methodologies [W2897788726]. The effects and impacts of NFR documentation has not been given enough attention across the industry.\n\nThere is also a certain degree of occupational bias [W3156273984, W4205680690] in the respective research when evaluating the effectiveness of delivering NFR. The importance of software quality has reduced when teams moved from traditional requirements gathering into agile practices.\n\nResearches of this nature are often too general when stereotyping and classification of ASD teams in general [W3156273984, W4205680690]. Not all organisation culture and software teams can be easily grouped into convenient classes across all researches.\n\nIn surveys conducted for case studies, the responses also pose a risk of inaccuracies when respondents do not provide the true representation of reality [W3135007813].\n\nLastly, the result of some research papers used for reference are also outdated because the software development industry is a very fast-moving pace where practices, techniques and management policies change very frequently to adapt to the needs and demands of software delivery.",
+          "citations": [
+            "W3156273984",
+            "W3198506760",
+            "W4205680690",
+            "W2897788726",
+            "W3135007813"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "6"
+          ]
+        },
+        {
+          "subsection_id": "s_4_7",
+          "subsection_index": 7,
+          "subsection_label": "G. Limitations of this study",
+          "subsubsections": [],
+          "text": "This review only focuses on research findings from the last five years, with time constraint and limited review capability. As such, the contents and materials of literature under study contain the highlights that are of attention in recent years. Therefore, it does not provide a comprehensive overview of the requirements documentation of NFRs.\n\nthat affects software teams in a general perspective since usually, new pressing issues are given most of the attention while old problems, though unsolved are slowly neglected over time.\n\nThe majority of literatures reviewed focuses in the agile process and project management. The scope covering utilisation of technology or tools that can affect the outcome for software teams practicing agile is very minimal. In recent years, there are many new development tools and systems that target agile software development methodologies that could have provided new approaches to resolve the challenges of NFRs. Some examples of these tools are expanded capabilities of containerization and orchestration, new capabilities on cloud service providers, new monitoring and diagnostics tools, and so on.\n\nAs with other SLRs that are used to conduct this review, there are also elements of bias with the assumption that the problems and solutions of requirements documentation in ASD teams can be conveniently resolved by including a few positive changes to the way requirements are delivered, agreed and tracked. These methods are only suitable in the context of huge organisations or specialised software teams, but did not account for software teams in smaller companies or short-term software projects. In that scenario, functional requirements are usually the main focus of project deliverable goals, and quality metrics come in distant second priority.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section discusses and review existing researches to identify the existing practices of documenting NFRs affecting the majority of software teams practicing agile methodology (RQ1). As a result of lack of investments to document NFRs, the challenges and consequences are identified (RQ2) and the available strategies to mitigate this gap (RQ3) will also be discussed. Finally, the discussion will provide a critique on the limitations of this literature review and prior research work.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "V. CONCLUSION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In conclusion, this systematic literature review covers all the research questions that are considered. The importance of documentation for NFR is highlighted, studied and proven to yield positive outcomes.\n\nNFRs elicitation and documentation receives very low priority and importance across most ASD teams. When very few resources are invested in this area, especially in agile environments \u2013 the effects of poor NFRs documentation ripple downwards to many aspects of development practices, processes and quality of deliverables.\n\nThere are many literatures that study the practices and challenges of requirements elicitation and documentation of NFRs in agile, as well as proposing a few ideas that can be adopted by teams in their existing workflow to improve the situation. Further studies can be looked at from the agile manifesto context to discover significant improvement to the manifesto to provide a better solution to requirements documentation.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "ACKNOWLEDGEMENT",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The authors received no funding from any party for the research and publication of this article.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4296354870_tables.md"
+}

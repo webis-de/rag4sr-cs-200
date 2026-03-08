@@ -1,0 +1,254 @@
+{
+  "id": "W4391278194",
+  "metadata": {
+    "title": "Diagnostic performance of deep learning in ultrasound diagnosis of breast cancer: a systematic review",
+    "n_sections": 4,
+    "n_subsections": 10,
+    "n_subsubsections": 0,
+    "n_tables": 3
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Breast cancer is the world's most prevalent cancer and remains the major cause of cancer-associated deaths globally. GLOBCAN estimated that in 2020, there were about 2.3 million women diagnosed with breast cancer and 685,000 breast cancer-associated deaths worldwide [W3128646645]. Early and accurate diagnosis results in better patient outcomes. Breast ultrasound (US) is low-cost, easy-to-operate, radiation-free, portable, and typically helpful for distinguishing between a cystic and a solid breast mass. The effectiveness of the US as a diagnostic tool for palpable breast abnormalities is widely recognized, especially in cases involving dense breast tissues or mammographically occult lesions [W3193648988, W2137040237, W4362591575]. Additionally, the US is considered the preferred imaging method for providing guidance during breast biopsy procedures [W2113909686, W2127001701]. However, the diagnostic efficacy and reproducibility of US examinations are relatively low due to their dependence on the knowledge and experience of the operators [W4323312371, W2166764952].\n\nDeep learning (DL), an innovative artificial intelligence (AI) technology, excels at image-related tasks, including abnormalities detection, segmentation, and classification (Fig. 1). The integration of DL into the US imaging workflow offers numerous benefits, including improved efficiency, reduced errors, and automated quantitative assessments [W2803760365]. Consequently, significant efforts have been made to facilitate the clinical application of DL in medical imaging. For instance, the DL-based ultrasonography system known as S-Detect (Samsung Medison, Seoul, Korea) has gained increasing popularity for breast cancer diagnosis. This system enables automatic segmentation and interpretation of US morphological descriptions, providing a dichotomous classification (possibly benign or possibly malignant) that serves as a reference for radiologists during the final diagnostic process [W3013918504].\n\nSeveral recent reports have suggested that DL-based interpretation of breast US is on par with or even superior to that of a human radiologist [W3102564198, W3201701662, W3080997487, W3097208033, W3154126551]. However, the application of DL in clinical practice remains controversial and results vary across different studies. Current reviews [W3013918504, W4293574920] focused on evaluating the application potentials of commercial products, such as S-Detect. There is a paucity of evidence-based systematic reviews specific to the general diagnostic performance of employing DL models in clinical practice of breast US, in particular comprehensive comparison between DL and human readers. Our work aims to assess current evidence on the diagnostic performance of DL algorithms in the detection and classification of breast lesions in clinical US tests, including (1) whether standalone DL systems outperform radiologists in breast cancer diagnosis and (2) whether assistive DL systems can improve diagnostic performance when used in concert with human radiologists.",
+      "citations": [
+        "W3128646645",
+        "W2113909686",
+        "W2127001701",
+        "W4323312371",
+        "W2166764952",
+        "W2803760365",
+        "W3013918504",
+        "W4293574920",
+        "W3193648988"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "Study selection and study characteristics",
+          "subsubsections": [],
+          "text": "Database searches initially yielded 4017 unique results after removing 1898 duplicates, among which 96 potentially eligible studies were further reviewed through full texts. Overall, as shown in Fig. 2, 16 studies [W2912427564, W3195278084, W2996431286, W2739737978, W3135380477, W2802787564, W3159357811, W4226378927, W2924306747, W3215131149, W4285736228, W2954621885, W3193993946, W4206967425, W2929215516, W4288084450] were ultimately included in this review, according to inclusion criteria. In addition, based on the PICO framework (population, intervention, comparison, outcome), exclusions and the corresponding reasons after full-text review were presented in Supplementary Tables 1 and 2.\n\nThe main characteristics of the included 16 publications, including 14 studies using standalone DL systems and 12 studies using assistive DL systems, were presented in Table 1, Supplementary Tables 3 and 4, and Supplementary Fig. 1. These studies comprised 9238 women in total, of which 3 studies [W4206967425, W2929215516, W4288084450] recruited 901, 582, and 5012 female participants respectively, the remaining 13 studies [W2912427564, W3195278084, W2996431286, W2739737978, W3135380477, W2802787564, W3159357811, W4226378927, W2924306747, W3215131149, W4285736228, W2954621885, W3193993946] included smaller numbers of women (from 40 to 472). Seven studies evaluated data from China [W2996431286, W3135380477, W3159357811, W4285736228, W3193993946, W4206967425, W4288084450], 6 studies enrolled participants from Korea [W2912427564, W3195278084, W2739737978, W4226378927, W2924306747, W2954621885], 2 from Italy [W2802787564, W3215131149], and the remaining 1 study [W2929215516] used public multisite data from which the countries were not reported. Of all studies, 15 were conducted in a diagnostic setting, while the remaining 1 was evaluated in a screening setting [W3195278084]. All included studies employed DL convolutional neural networks, of which 14 were commercial DL systems, including S-Detect [W2912427564, W3195278084, W2996431286, W2739737978, W3135380477, W2802787564, W3159357811, W4226378927, W2924306747, W3215131149, W2954621885, W3193993946, W4206967425] and BU-CAD [W4285736228], and 2 were investigator-derived DL systems [W2929215516, W4288084450]. In addition, there were 6 studies [W2912427564, W3195278084, W4226378927, W2924306747, W3215131149, W4285736228, W2954621885] using retrospective US images to compare the diagnostic accuracy of DL systems and human readers. For prospective test accuracy studies, multiple reader multiple case studies were performed under laboratory conditions [W2996431286, W2739737978, W3135380477, W2802787564, W3159357811, W3193993946, W4206967425, W4288084450], without any randomized controlled trials or cohort studies based on real-world settings. Nine publications [W2912427564, W3195278084, W2996431286, W2739737978, W2802787564, W4285736228, W3193993946, W4206967425, W2929215516] followed the fifth edition of Breast Imaging Reporting and Data System (BI-RADS) to make the final assessment, another 7 articles did not specify which version was used. BIRAD-4a was clearly described as the cutoff value in 13 studies [W2912427564, W3195278084, W2996431286, W2739737978, W3135380477, W2802787564, W4226378927, W2924306747, W4285736228, W2954621885, W3193993946, W2929215516, W4288084450], while 2 studies [W3159357811, W3215131149] using BIRADS-4b as the cutoff value. Another study [W4206967425] evaluated the diagnostic accuracy using BIRAD-4a and BIRADS-4b as cut-off values, respectively. All studies used pathology as the gold standard, among which 7 studies [W2739737978, W2802787564, W4226378927, W2924306747, W4285736228, W2954621885, W2929215516] employed follow-up as a supplement to the reference standard.\n\n**FIGURE 1** Schematic illustration of clinical US examination workflow and the image-related task where DL-based system could have a large impact. a Clinical US workflow comprises image acquisition, image analysis (which may involve DL), report generation, and further procedures based on diagnostic reports. b A DL system comprises multiple layers where feature extraction, selection, and ultimate classification are performed simultaneously during training. US images as input are analyzed and the DL model gives binary classification (benign or malignant). Final assessment is made based on the decision of the DL system alone or in combination with human radiologists.\n\n**FIGURE 2** PRISMA diagram of included and excluded studies at each stage of the review. Sixteen publications were included in the database (PubMed, Embase, Scopus, and Cochrane Library) after removing duplicates, irrelevant studies, and studies that did not meet the inclusion criteria.\n\n**TABLE 1** Characteristics of 14 studies using standalone DL systems and 12 studies using assistive DL systems.\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W2996431286",
+            "W3135380477",
+            "W3159357811",
+            "W4285736228",
+            "W3193993946",
+            "W4206967425",
+            "W4288084450",
+            "W2912427564",
+            "W3195278084",
+            "W2739737978",
+            "W4226378927",
+            "W2924306747",
+            "W2954621885",
+            "W2802787564",
+            "W3215131149",
+            "W2929215516"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "Diagnostic performance comparison",
+          "subsubsections": [],
+          "text": "DL can function either as a standalone system where the algorithms independently generate diagnostic decisions, or as an assistant to radiologists where the final diagnosis is made by radiologists considering the DL outcomes. Consequently, the development of a successful DL product necessitates not only the construction of robust DL algorithms but also the exploration of how the algorithm outputs can enhance radiologists' diagnostic capabilities. It is crucial to investigate the usefulness of DL outputs for radiologists, quantify the benefits of DL in patient care, and determine strategies to optimize these advantages.\n\nIn test accuracy comparison between DL systems and human readers, 4 studies evaluated the diagnostic performance of DL systems as standalone [W2996431286, W2802787564, W3215131149, W2929215516], 2 studies employed assistive DL systems [W2912427564, W3135380477], and another 10 studies assessed the roles of DL systems as both standalone and assistive systems [W3195278084, W2739737978, W3159357811, W4226378927, W2924306747, W4285736228, W2954621885, W3193993946, W4206967425, W4288084450]. Those studies employed human readers at various levels of clinical experiences in breast US and investigated the performance of DL systems compared to experienced and less experienced human readers.",
+          "citations": [
+            "W2996431286",
+            "W2802787564",
+            "W3215131149",
+            "W2929215516",
+            "W2912427564",
+            "W3135380477"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "Standalone DL systems",
+          "subsubsections": [],
+          "text": "In 14 studies using DL as a standalone system, the diagnostic accuracy of DL and human readers was compared (Table 2). In a study [W2739737978] conducted by Cho et al. found DL had lower AUC than human readers. Two studies [W2802787564, W4226378927] showed DL was equivalent to human readers in AUC. In contrast, another study [W4288084450] reported a higher AUC of DL than human readers. More specifically, DL had superior AUC over less experienced human readers while comparable to experienced human readers in three studies [W2996431286, W4226378927, W3193993946]. As for accuracy, DL systems were more accurate than all human readers in two studies [W4226378927, W4288084450]. Wei et al. [W3193993946] reported that DL was more accurate than less experienced human readers while comparable to experienced human readers. In contrast, another study showed DL was equivalent to less experienced human readers while more accurate than experienced human readers. In addition, standalone DL had lower sensitivity than overall human readers in five studies [W2996431286, W2739737978, W4226378927, W4206967425, W4288084450]. Another two studies [W3215131149, W2954621885] found that DL was more sensitive than less experienced human readers but less sensitive than experienced human readers. In four studies [W2996431286, W2739737978, W4226378927, W4288084450], DL exhibited higher specificity than overall human readers. In another study [W3215131149], DL was more specific than less experienced human readers but less specific than experienced human readers. The remaining studies did not report comparable diagnostic measures between DL systems and human readers.",
+          "citations": [
+            "W2739737978",
+            "W2802787564",
+            "W4226378927",
+            "W4288084450",
+            "W2996431286",
+            "W3193993946",
+            "W4206967425",
+            "W3215131149",
+            "W2954621885"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "Assistive DL systems",
+          "subsubsections": [],
+          "text": "In 12 studies that assessed assistive DL systems (Table 2), three studies [W3195278084, W4285736228, W4288084450] reported improved AUC of human readers when combining with DL systems. Another study [W2739737978] showed assistive DL had a comparable AUC to human readers alone. To investigate the assistive effects of DL on human readers with different experiences, two studies [W2912427564, W4226378927] found that assistive DL systems had higher AUC than less experienced human readers but the positive impacts did not work for experienced human readers. In accuracy tests, assistive DL systems were more accurate than human readers in three studies [W2739737978, W4226378927, W4288084450]. However, no studies showed improved overall sensitivity of the combination of DL and human readers compared to human readers alone. One study [W2954621885] reported improved sensitivity of an assistive DL system compared to less experienced human readers but this advantage was not maintained when used by experienced human readers. Improved specificity in overall human readers was reported in seven studies [W3195278084, W2739737978, W3135380477, W4226378927, W4285736228, W2954621885, W4288084450] that used assistive DL systems. Interestingly, in a study [W2912427564] reported by Park and coworkers, the assistive DL technology improved diagnostic specificity among experienced human readers but not among inexperienced readers. While in another study [W2739737978], less experienced human readers were aided in terms of specificity by the assistive DL system.\n\nIn Fig. 3, we estimated the sensitivity and specificity of DL systems and average human readers. We tentatively infer both standalone and assistive DL systems are more specific than average human readers while whether they are more sensitive remains unclear. However, complete $2 \\times 2$ contingency tables were not available in most studies so that we were unable to conduct a thorough diagnostic analysis for all included studies.\n\n**TABLE 2** Test outcomes of standalone and assistive DL systems.\n\n{{TABLE:tbl_02}}\n\n*Acc accuracy, Sen sensitivity, Spe specificity, NS not significant, NA not applicable.*\n*aCategory 4a as the cut-off value.*\n*bCategory 4b as the cut-off value [W3201701662].*\n*cIf both the assessments of longitudinal and transverse sections from the DL model were possibly benign, the final BIRADS category would be downgraded.*\n*dIf any of the assessments from DL were possibly benign, the final BIRADS category would be downgraded [W4293574920].*\n*eSequential reading mode.*\n*fSimultaneous reading mode [W2127001701].*\n*gIf the DL model assessed the lesion as malignant or benign, the final BIRADS classification would be upgraded or downgraded by one level.*\n*hThe BIRADS assessment was flexibly adjusted by human readers after combining DLs outcomes.*",
+          "citations": [
+            "W3195278084",
+            "W4285736228",
+            "W4288084450",
+            "W2739737978",
+            "W2912427564",
+            "W4226378927",
+            "W2954621885",
+            "W3135380477",
+            "W3201701662",
+            "W4293574920",
+            "W2127001701"
+          ],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "Quality assessment",
+          "subsubsections": [],
+          "text": "Based on QUADAS-2 and QUADAS-C tools, we tailored the signal questions in four domains, including patient selection, index tests, reference standard, flow, and timing, to assess the quality and applicability of included studies (Supplementary Table 5). The studies with low, high, or unclear risk of bias and applicability concerns were summarized in Table 3, Figs. 4 and 5. Most studies showed a high risk of bias in the four domains. For example, the average cancer prevalence of included lesions was 39.5%, ranging from 6% to 64.7% (Supplementary Table 4 and Supplementary Fig. 1), which far exceeds the prevalence in screening and diagnostic settings [W3197840494]. This led to a high risk of bias in patient selection. Additionally, most study designs did not represent a complete US testing pathway applicable to clinical practice. For example, DL systems were used for image reading, but not integrated into clinical decisions, such as diagnosis, further tests, or follow-up. In contrast, the choice of patient management (e.g., biopsy, follow-up) to confirm disease status was based on the decision of the human readers rather than standalone or assistive DL systems. Meanwhile, for human readers, the testing pathway was also not applicable to clinical routines where they have access to patient's clinical information as well as prior US images. The reference standards varied among the included 16 studies, of which 4 studies [W2912427564, W2802787564, W2924306747, W2954621885] were at high risk of bias because the follow-up time of women with negative tests was <2 years, which is shorter than the recommended follow-up interval [W3197840494] and therefore may underestimate the rate of missed cancers and overestimate diagnostic accuracy.\n\n**TABLE 3** Risk of bias QUADAS-2 and QUADAS-C for studies using standalone and assistive DL systems.\n\n{{TABLE:tbl_03}}\n\n*P patient selection, I index tests, R reference standard, FT flow and timing.*\n\n**FIGURE 3** Estimated sensitivity and specificity of standalone/assistive DL systems and human readers. a Sensitivities of standalone DL systems and average human readers. b Specificities of standalone DL systems and average human readers. c Sensitivities of assistive DL systems and average human readers. d Specificities of assistive DL systems and average human readers. Error bar represents SD.\n\n**FIGURE 4** Graphic display of QUDAS-2 and QUDAS-C for studies using standalone DL systems. The proportion of studies with low, high, unclear risk of bias and concerns regarding applicability.\n\n**FIGURE 5** Graphic display of QUDAS-2 and QUDAS-C for studies using assistive DL systems. The proportion of studies with low, high, unclear risk of bias and concerns regarding applicability.",
+          "citations": [
+            "W3197840494",
+            "W2912427564",
+            "W2802787564",
+            "W2924306747",
+            "W2954621885"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This review presents a comprehensive overview of diagnostic performance in breast US of DL systems, which serve as standalone roles or aids to human readers. We identified 16 studies that compared the test accuracy measures of a commercial or in-house DL system to that of human readers. Diagnostic test outcomes varied substantially among the included studies. While we cautiously inferred DL systems were more specific than average human readers, which might help decrease the false positives, no consensus of AUC, accuracy, and sensitivity was found either in standalone or assistive DL systems. Importantly, one of the main concerns of DL studies is better imaging sensitivity might come at the cost of increased false positives and vice versa. Critical performance metrics such as AUC, accuracy, sensitivity, specificity, true positive, false positive, false negative, and true negative should be taken into consideration together. However, not all included studies reported these diagnostic measures. Although most of the included studies (14/16) use FDA-approved DL systems, the clinical effects of DL systems as standalone or assistive roles have not been fully revealed yet due to the lack of generalizable reporting or good study design. Therefore, our systematic review disagrees with findings from various publications, some of which have claimed that DL systems (e.g., S-Detect) outperform humans [W3195278084, W2739737978, W4226378927] and have a significant role in assisting human readers in distinguishing between benign and malignant breast masses [W3013918504, W4293574920]. It does not necessarily mean that the DL algorithm in breast US itself is unreliable. It contrarily provides the directions for future improvement for this promising technology.\n\nOur review found high heterogeneity stemming from study designs, methods, targeted populations, diagnostic measures, and human readers' experiences, which hinders the comparability of evidence across included studies. There was a wide variation in the number and pathological type of selected lesions. Thirteen studies evaluated fewer than 500 women while the outcomes of another three studies were based on many more participants. Promising results from small populations may not be applicable to larger populations. In addition, the malignant proportions far exceed the cancer prevalence in the real world, which inevitably overestimates the sensitivity. Importantly, most of the included studies originated in Asia, and mostly at a single site, which may affect the external validity of reported results. Furthermore, compared with Caucasian women, Asian women generally have denser breasts and younger ages of onset of breast cancer. Discrepancies in race and ethnicity make it difficult to extrapolate the positive findings among Asian participants to multi-race and multi-ethnic populations. Hence, multicenter studies from different countries that recruit participants from multiple races and ethnicities are required to achieve higher applicability of these studies. Additionally, the test cutoff values varied among studies with some using BIRADS-4a while some using BIRADS-4b as the threshold for classifying malignancies. In this regard, test bias could have been introduced. These studies also set various definitions of experienced or less experienced human readers, which might lead to contrary conclusions among some studies. Furthermore, the included studies have some variation in reference standards, including pathological confirmation and follow-up time (7\u201335 months). The methods for obtaining pathological results were also inconsistent, including histopathologic results from US-guided biopsy, vacuum-assisted excision, or open surgery. These discrepancies suggest that accuracy evaluations are not comparable among studies. Overall, the current evidence base is not of sufficient quality to support a broad clinical practice recommendation of DL systems in breast US.\n\nFurthermore, compared to other medical imaging modalities, such as MRI, DL-assisted US shows intrinsic limitations, which hinders its clinical applicability. For example, US imaging is dependent on its operators, resulting in high intra- and interobserver variability in image acquisition and interpretation. Moreover, unlike MRI images viewing the whole lesion range, still US images are obtained from parts of targeted organs, which may cause under-representation or over-exaggeration. Additionally, US technology has been evolving fast over the recent decades. Older ultrasonograms are generally of lower resolution and higher noise, while up-to-date images are of higher resolution and lower noise. Thus, DL models that are trained with older images may not be externally valid for images acquired by advanced devices. Methodological considerations are highly demanded for generalized conclusions from DL studies in US technology.\n\nIn this systematic review, we followed an established methodology and stringent inclusion criteria and tailored the quality assessment tools for included studies. Our emphasis on comparisons with the diagnostic performance of humans in clinical practice may explain why our conclusions are more cautious than many of the papers we reviewed herein. Importantly, according to previous studies and the current guidelines, internal validation where training and validation were performed based on the same dataset, such as cross-validation, tends to overestimate accuracy and has limited generalizability because of overfitting [W3197840494]. Hence, at the initial stage of literature identification, only studies using external validation of test sets were included. Therefore, our work can provide a purposeful insight into the role of DL in the US diagnosis of breast cancer. However, this systematic review excluded non-English publications, which might introduce selection bias. In addition, we were unable to calculate comprehensive diagnostic measures due to insufficient data where accuracy, true positive, false positive, true negative, false negative, and statistical difference (or raw data to calculate) were not reported.\n\nTo ensure reproducibility and generalizability of the results of this promising technology, we recommend developing standardized DL research guidelines for further investigations. Aligned study designs, agreed-upon benchmarking data sets, complete performance metrics, standard imaging protocols and reporting formats, consistent cutoff values and reference standards will help decrease the heterogeneity and bias. Furthermore, multicenter studies are highly demanded to determine the diagnostic accuracy of DL products. Prospective, randomized controlled trials that are applicable to clinical testing pathways are significantly important to examine DL's role in a clinical environment. Also, we need to identify the DL products with the best performance in terms of accuracy, efficiency, availability, cost-effectiveness, and safety to improve clinical workflows. DL-based breast US diagnosis is still in its infancy, and considerable efforts are needed to realize its positive impacts on radiologists and patients.",
+      "citations": [
+        "W3195278084",
+        "W2739737978",
+        "W4226378927",
+        "W3013918504",
+        "W4293574920",
+        "W3197840494"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Protocol and registration",
+          "subsubsections": [],
+          "text": "This systematic review was conducted following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses of Diagnostic Test Accuracy (PRISMA-DTA) statement [W3049565965]. Our review protocol was registered on the International Prospective Register of Systematic Reviews (PROSPERO: CRD42022349609).",
+          "citations": [
+            "W3049565965"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Literature search",
+          "subsubsections": [],
+          "text": "Literature searches were conducted by two librarians (H.B. and J.B.) to identify relevant studies published in English from four databases: PubMed, Embase, Scopus, and Cochrane Library. The publication time of studies was set from inception to 18 January 2023. The literature search was performed based on five themes: breast cancer, US, AI, accuracy, and diagnostic. The search keywords and strategies are shown in Supplementary Tables 6 and 7.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "Study selection",
+          "subsubsections": [],
+          "text": "Two reviewers (Q.D. and Z.X.) independently reviewed the titles and abstracts of all retrieved records for further identification according to the inclusion and exclusion criteria. Subsequently, the identified publications were screened by reviewing the full texts for final inclusion. Any discrepancies were resolved through discussion to reach a final consensus.\n\nWe applied rigorous inclusion and exclusion criteria to evaluate the integration of DL into clinical breast cancer diagnosis using the US. We included studies that focused on: (1) evaluating DL algorithms for breast cancer diagnosis using US; (2) assessing the test accuracy of DL algorithms for breast lesion diagnosis using US; and (3) utilizing histologically confirmed and/or follow-up reference standards. We excluded studies that: (1) did not compare the diagnostic performance of DL algorithms to that of human readers; (2) lacked external validation; (3) did not employ DL algorithms (e.g., utilizing traditional AI without binary classification or final decision); (4) solely focused on detecting specific cancer subtypes (e.g., ductal or lobular carcinoma) rather than overall diagnostic accuracy; (5) did not report diagnostic metrics beyond the receiver operating characteristic area under the curve (AUC); (6) involved participants under the age of 18; (7) included participants with implants, lactation, prior known breast cancer, or prior breast treatments such as surgery, radiation therapy, and chemotherapy; (8) enrolled male patients.",
+          "citations": [
+            "W3128646645",
+            "W3193648988",
+            "W2137040237",
+            "W4362591575",
+            "W2113909686",
+            "W2127001701",
+            "W4323312371",
+            "W2166764952"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "Data extraction",
+          "subsubsections": [],
+          "text": "Study characteristics and test accuracy outcomes were independently extracted by two reviewers (Q.D. and Z.X.) from all included studies. Any disagreements were resolved by discussion. Extracted study characteristics included study design, population, US device vendors, dataset characteristics (training/validation/testing set), descriptions of the DL algorithms, descriptions of the human readers, reference standards, and any other pertinent information. Test performance characteristics included accuracy, AUC, sensitivity, and specificity.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "Quality assessment",
+          "subsubsections": [],
+          "text": "Two reviewers (Q.D. and Z.X.) independently assessed the quality of the selected studies using Quality for Assessment of Diagnostic Studies-2 (QUADAS-2) and QUADAS-C tools tailored to our review questions based on a breast US test pathway applicable to clinical settings (Supplementary Table 5). For risk of bias, patient selection, index tests, reference standards, flow, and timing were assessed, respectively. For applicability concerns, patient selection, index test, and reference standards were assessed. Any disagreements were resolved by discussion.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_5",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4391278194_tables.md"
+}

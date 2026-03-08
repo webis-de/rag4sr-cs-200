@@ -1,0 +1,843 @@
+{
+  "id": "W4311183537",
+  "metadata": {
+    "title": "Arabic Natural Language Processing for Qur'anic Research: A Systematic Review",
+    "n_sections": 8,
+    "n_subsections": 34,
+    "n_subsubsections": 0,
+    "n_tables": 15
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1 Arabic Language and Arabic NLP",
+          "subsubsections": [],
+          "text": "Arabic is a Semitic language that first emerged in the first to fourth centuries CE. This is testified by the various Arabic inscriptions found in the region from that era [UNMAPPED:8]. Modern linguists designate Arabic into one of three main classes: Classical, Modern (or MSA, short for Modern Standard Arabic), and Dialectal Arabic. Standard Arabic is a \"prescriptive\" term of the language which the early Arab grammarians considered \"Classical\", while the MSA is a \"descriptive\" term for realizing Standard Arabic by modern-day Arabs. Vocabulary wise we can safely assert that MSA is a superset of Classical and Standard Arabic [W2921538177]. It is a superset in the sense that MSA incorporates the names of modern inventions, e.g., radio, computer, while retaining the sentence structure and the vocabulary of its classical and standard form.\n\n**TABLE 1** The basic Arabic diacritics grouped into three sets\n\n{{TABLE:tbl_01}}\n\nThe nunnation can only be placed at the end of the word. The syllabification mark shaddah only occurs with either short vowel or nunnation.\n\nThe Arabic language alphabet consists of 25 consonants and three long vowels. It is written from right-to-left in a complex cursive script that permits a variable degree of stretching or compressing [W2022665088]. Most of the characters assume up to four forms per letter, which are contextually shaped. Additionally, the orthographic system uses a total of thirteen different diacritical markings to represent short vowels (a, i, u), and these are placed either above or below the character (see **TABLE 1**).\n\nOne of the remarkable features of the Arabic language is its expressiveness. For instance, the single surface word f$^{AsqynAkmwh^{5}}$ which appears in the Qur'an (15:22) ^6^, is equivalent in translation to the complete sentence \"and We have given it to you to drink\". Arabic morphology is highly complex and yet systematic. Arabic words are derived from (mainly) triliteral root consonants. Roots hold the base meaning of words. Various morphological operations apply to roots to create patterns that are further morphed into stems (lemmas). Affixes (prefixes e.g., articles, prepositions, and suffixes, e.g. linked pronouns) are appended to lemmas to form lemmatas [W2921538177].\n\nNLP is a technique to make computers mechanically process and possibly understand the human (natural) language. With over fifty years of research behind NLP, the field has achieved reasonable maturity. This is particularly true for the English language, for all the obvious reasons. Other languages lag with varying degrees. When compared to the English language, Arabic NLP is at least a decade behind. We may attribute this to the rich nature of the Arabic language and its complex grammatical and syntactic structures. Farghaly and Shaalan (2009) detailed some challenges and problems that have to be tackled while performing NLP tasks related to MSA [UNMAPPED:50]. Most of the work on Arabic NLP involves MSA, the most widespread and literary form of Arabic.\n\nSalloum et al. (2018) noted, a lot of information could be gathered through computational text mining in Arabic literature but the effort in this field is below expectations [W2770408498]. This is due to the formidable challenges involved in doing Arabic NLP research. In what follows, we discuss briefly some of the challenges involved in doing Arabic NLP research.\n\n**FIGURE 1** Qur'anic verse showing the orthography used in the Holy Qur'an\n> \u0625\u0650\u0646\u064e\u0651\u0627 \u0623\u064e\u0646\u0652\u0632\u064e\u0644\u064e\u062a\u064e\u0647\u064f \u0641\u064f\u0631\u0650\u0621\u064b \u0625\u0650\u0646\u064e\u0651\u0627 \u0639\u064e\u0631\u064e\u0628\u0650\u064a\u064e\u0651\u0629\u064e \u0644\u064e\u0639\u064e\u0644\u064e\u0643\u064f\u0645\u0652 \u062a\u064e\u0639\u0652\u0642\u0650\u0644\u064f\u0648\u0646\u064e\n\nThere is no capitalization in the Arabic script. This makes it hard to identify proper names and further complicates the process of Named Entity Recognition (NER), a basic NLP task.\n\nThe diacritics adds sense and meaning to a word, and the lack of it creates ambiguity. For example, the undiacritized word \u03c3\u03bd\u03b5\u1fd6\u03c2 could be \"contract\", \"necklace\", \"to make it complex,\" etc. [W2583662888]. However, have the word been properly diacritized there would not have been any confusion. Unfortunately, the writing custom in MSA is devoid of any diacritical marking. It assumes the reader can disambiguate the meaning through context. This is a false premise. Azmi and Almajed (2015) presented a sample sentence that requires world knowledge to disambiguate its true meaning [W2132283323].\n\n\u2013 Habash (2010) described the problem that is faced during the translation from Arabic as its sentence structure is totally different and the translated sentence has then to be structured properly to make some sense [W2147272182].",
+          "citations": [
+            "W2921538177",
+            "W2022665088",
+            "W2770408498",
+            "W2583662888",
+            "W2132283323",
+            "W2147272182"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "8",
+            "50",
+            "2009",
+            "2018",
+            "2015",
+            "2010"
+          ]
+        },
+        {
+          "subsection_id": "s_1_2",
+          "subsection_index": 2,
+          "subsection_label": "1.2 Unique Challenges in Qur'anic Arabic NLP",
+          "subsubsections": [],
+          "text": "When it comes to Qur'an\u2014in addition to the challenges in doing basic Arabic NLP research highlighted previously\u2014a gamut of new challenges arises. For instance, the text of the Qur'an has its own orthography (spelling convention) which differs even from Classical Arabic. **FIGURE 1** shows a verse of the Qur'an. Anyone who has a slight knowledge of Arabic can easily tell the present-day spelling of the second word should be \"\u0623\u0631\u0652\u062f\u064e\u0627\u0644\" in the spelling of the rest of the words in the verse are perfectly normal. In fact, all the natural language's orthography evolves over time. For example \"cw\u0113n\", an Old English word, changed to \"quen\" in Middle English and later became \"queen\" [UNMAPPED:8]. However, when it comes to Qur'an, the Muslim scholars decided to maintain the original spelling used in the second compilation of the Qur'an, which took place during Caliph 'Uthman's reign, a mere 15 years after the Prophet's death [UNMAPPED:8]. So, even though this orthography differs from the present's, the text of the Qur'an and its orthography has remained unadulterated for the last fourteen centuries.\n\nWhile the Qur'an forms the bedrock of Islamic law, many legal details are derived not from the Qur'anic scripture, but rather from the utterances and actions attributed to Prophet Muhammad. These prophetic traditions, or hadiths, are narrations originating from the sayings and conduct of Prophet Muhammad. The detail of many of the Qur'anic pieces of knowledge can only be mined in the hadith literature. This is why Muslims believe the hadith complements the Qur'an. For instance, the detail about the practice of praying is only found in the hadith literature. Unlike Qur'an, the hadith corpus is huge and runs into hundreds of volumes. It has an even larger supporting work, e.g., commentaries, biographic material [W2921538177]. Qur'anic NLP researchers can enrich their Qur'anic NLP research by leveraging the complementary hadith literature and should be cognizant of the fact that ignoring the hadith corpus can lead to erroneous conclusions.\n\n**FIGURE 2** Flowchart of paper selection\n> **Search** | Total retrieved = 1848\n> Scopus = 1817\n> Google Scholar = 36\n> After First Screen | n = 1,808\n> After Second Screen | n = 418\n> After meeting selection criteria | n = 70\n> Articles not related to Qur'an n= 1,390\n> Articles excluded based on Inclusion/Exclusion Criteria n= 346\n\nAlong with all these mentioned challenges, one of the biggest challenges in working with the Qur'an is that it is considered a divine scripture, which demands extra precaution so that its semantics or information retrieved remains intact [W2770408498]. Current NLP efforts are focused on overcoming all these challenges using various techniques. Performing NLP tasks in a language with all these problems is not a straightforward task and requires technical as well as linguistic support.\n\nGiven the challenges and opportunities of the Qur'anic language, a group of scholars wrote a paper titled \"Understanding the Qur'an: a new Grand Challenge for Computer Science and Artificial Intelligence\" [UNMAPPED:26]. The authors pointed out that \"Understanding the Qur'an\" can be considered as a grand AI challenge for various tasks such as reasoning, knowledge representation, and knowledge extraction based on Qur'anic text among other challenges that have to be solved by leveraging the power of the latest NLP techniques.",
+          "citations": [
+            "W2921538177",
+            "W2770408498"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "8",
+            "26"
+          ]
+        },
+        {
+          "subsection_id": "s_1_3",
+          "subsection_index": 3,
+          "subsection_label": "1.3 Inclusion and Exclusion Criteria",
+          "subsubsections": [],
+          "text": "Papers have been selected based on keywords revolving around Qur'anic NLP. The search criteria uses the NLP keywords combination of \"Quran\" or \"Qur'an\" with \"NLP\" or \"Grammar\" or \"ontology\" or \"translation\" or \"search\" or \"classifier\" or \"ml\" or \"knowledge\" or \"topic\" or \"corpus\" or \"question\" or \"authentication\" or \"verification\" or \"crowdsource\". The search has been performed on the Scopus and Google Scholar platforms. The papers included meet the following inclusion criteria: (1) articles related to Qur'anic NLP and techniques related to machine learning and deep learning for Qur'an, and (2) articles related to comparisons of different techniques used for a particular Qur'anic domain.\n\nWe excluded papers that are not related to Qur'anic NLP, and those not written in the English language. In addition, we ignored incomplete works. Our search returned a total of 1846 papers. After screening based on inclusion/exclusion criteria (**FIGURE 2**), 70 papers were eventually selected for our survey.\n\nDuring selection, the focus remained on the works which are closer to the Qur'an instead of Arabic only. NLP experiments usually deal with text-based language processing, however in the survey speech processing based papers for Qur'an have also been considered in the broader spectrum of NLP as it is also the processing of language and may provide useful insights. The papers surveyed can be categorized as shown in **FIGURE 3**.\n\n**TABLE 2** Distribution of papers categorized according to their topic\n\n{{TABLE:tbl_02}}\n\nThe surveyed papers were published in different conferences and journals, though the majority were in journals. There is no specific journal or conference which holds dominance in the publication of these papers. The publications have been done during the period of years 2005 to 2022. **FIGURE 4** below shows the percentage share of the category of publication and the quantities of papers surveyed during different years (**FIGURE 5**).\n\n**TABLE 3** Distribution of selected publications according to their types\n\n{{TABLE:tbl_03}}\n\n**TABLE 4** Distribution of selected publications over years\n\n{{TABLE:tbl_04}}\n\nThe contribution of reviewed Qur'anic NLP research work is shared from across the globe. The heat map in **FIGURE 6** shows the spread of research work across the globe for Qur'anic NLP reviewed in this paper.\n\n**FIGURE 6** Heatmap of Qur'anic NLP-related research contributions reviewed in this paper",
+          "citations": [
+            "W3184144760",
+            "W2543133472"
+          ],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03",
+            "tbl_04"
+          ]
+        },
+        {
+          "subsection_id": "s_1_4",
+          "subsection_index": 4,
+          "subsection_label": "1.4 Related Review Articles",
+          "subsubsections": [],
+          "text": "The work for Qur'anic NLP is not in limelight currently, but still, a lot of efforts have been made over the past two decades to use the linguistic computation for Qur'an. Kammani and Safeena (2014) have reviewed various tools and techniques in this regard [W2042975331]. Beside studying the efforts made in generic Arabic NLP, they have also reviewed the Qur'anic NLP. The review for Qur'anic NLP contributions is ranging from 1997 to 2011. They have discussed the development of Qur'anic corpus, annotations, morphological analysis, semantic searching, use of ontology for Qur'an, grammar tree bank, and translation analysis. However, the review does not provide a variety of work for each category and just discusses one or two tools or techniques. There are other domains such as the use of NLP and speech recognition for Qur'an recitation, question answering tools for Qur'an, knowledge extraction and topic modeling, which have not been highlighted.\n\nZaghouani (2014) presented a survey of freely available corpora for the Arabic language with a limited number of papers related to the Qur'an and the Hadith [W4210491685]. Atwell et al. (2011) presented their own contribution towards Qur'anic NLP [UNMAPPED:27]. The paper is focused on how their work can be useful in the correct interpretation of Islam in the Western world. Qur'an-related NLP contributions described by them include open-source Qur'an corpus, conceptual search tool for Qur'an, grammatical analysis, classification of verses and chapter, ontological work and online tools. The paper does not cover much detail of each contribution.\n\nThough not directly related to Qur'anic research, Azmi et al. (2019) provides a comprehensive survey of NLP-based works on the complementary hadith literature [W2921538177]. We note that the hadith literature, along with Qur'an, is one of the two canonical sources of Islamic knowledge.\n\nOur work is focused on Qur'anic NLP instead of generalized Arabic NLP, as this would help in understanding the current status of Qur'anic NLP and will help researchers to contribute further with the help of already built applications. Techniques adopted for doing the Qur'anic NLP tasks have been discussed. The paper also covers the tools that have been used in various Qur'anic NLP tasks. The comparison of this paper with previous such reviews is shown in **TABLE 5**.\n\n**TABLE 5** Comparison of our work with others\n\n{{TABLE:tbl_05}}",
+          "citations": [
+            "W2042975331",
+            "W4210491685",
+            "W2921538177"
+          ],
+          "tables_in_text": [
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "27",
+            "2014",
+            "2011",
+            "2019"
+          ]
+        },
+        {
+          "subsection_id": "s_1_5",
+          "subsection_index": 5,
+          "subsection_label": "1.5 Contributions of this Paper",
+          "subsubsections": [],
+          "text": "This paper aims to review the Qur'anic NLP research work performed including the techniques and tools used in them. Surveyed work is related to the applications and systems developed for Qur'an based on NLP. The paper will highlight various challenges that have been overcome related to Qur'anic NLP, major contributions, and the areas that still require attention. The main purpose of writing this paper is to consolidate the current status of Qur'anic NLP works and help the researchers to work ahead of that. The papers have been searched based on the following survey objective:\n1. To study and survey the current research work related to Qur'anic NLP.\n2. To study the techniques, tools, and resources being used for Qur'anic NLP.\n3. To find the limitations and pitfalls of Qur'anic NLP works.\n\n**FIGURE 7** Techniques used for Qur'an NLP tasks\n> Quranic NLP Techniques\n> Text preprocessing: Tokenization, Stemming, Stop words removal, Diacritics removal\n> Text Matching: Keyword matching, Synonym/Antonym matching, Concept matching\n> Text Clustering: Latent Dirichlet Allocation (LDA), K-Mean\n> Text Classification: KNN, Decision Tree\n> Speech Processing: Feature extraction: MFCC, Recognition: HMM",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_1_6",
+          "subsection_index": 6,
+          "subsection_label": "1.6 Organization of this Paper",
+          "subsubsections": [],
+          "text": "The rest of the paper is organized in the following way. Qur'anic NLP techniques are described in Sect. 2. A broad survey of Qur'anic NLP-related works is provided in Sect. 3. A discussion on various tools and resources available for Qur'anic NLP research follows in Sect. 4. The various caveats of doing AI-based NLP research for Qur'anic research and potential pitfalls are discussed in Sect. 5. Open issues and future research directions are identified in Sect. 6. Finally, the paper is concluded in Sect. 7.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The Qur'an is the central religious text of Islam, ^1^ where Muslims believe it was revealed in the Arabic language to Prophet Muhammad (peace be upon him) ^2^ over a span of 23 years that ended in 632CE, the year the Prophet passed away. The word Qur'an appears about 70 times in the Qur'an itself, assuming various meanings. It is a verbal noun of the Arabic verb qara'a meaning \"to read\" or \"to recite\", an opinion backed by most of the Muslim authorities on the origin of the name Qur'an and also mentioned in Britannica source [UNMAPPED:91].\n\nAs a book, the Qur'an is in the Arabic language, and it is typically recited in Arabic. This explains why Arabic is the liturgical language of approximately 1.8 billion Muslims, the majority of which are non-Arabs (about 73%). ^3^ Knowing the Arabic language helps them understand the true message of the Qur'an. Qur'an holds a lot of knowledge and information in the form of 114 chapters consisting of 6,236 verses in total. There are 157,935 words in Qur'an and out of these 5,277 are unique. ^4^ These chapters contain teachings regarding daily matters, social dealings, historical events and upcoming events. It is known for being crisp and concise in expression with almost poetic language.\n\nGiven the central significance of the Qur'an over more than 1400 years, thousands of scholars dedicated their lives to producing scholarship studying Qur'anic scripture from different angles producing knowledge that easily fills tens of thousands of printed volumes. However, past efforts were manual in nature. With the advances in computational techniques, especially in the field of natural language processing (NLP), NLP is leveraged for facilitating Qur'anic research and studies. Moreover, it opens up avenues for developing new applications that can help those interested in learning and understanding the Qur'an.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "91"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Qur'anic NLP Techniques",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Text Preprocessing",
+          "subsubsections": [],
+          "text": "Text preprocessing is one of the basic steps that is used in almost all textual NLP tasks. Preprocessing involved in the NLP tasks of the Qur'an mostly begins with tokenization. The given corpus from the Qur'an may consist of multiple chapters, divisions, or verses. One verse is like a sentence. These verses are tokenized into words. In Arabic, a particular word may consist of multiple units, so depending on the requirement, these words can be further segmented into morphological segments. In certain applications, such as question-answering platforms or search systems, Qur'anic words are stemmed to their roots. Like English, Arabic also contains many stop words. Stop word removal is essential in tasks like topic modeling of the Qur'an and finding similar verses. For the help of Non-Arab Muslims, diacritic marks are present on the words of Qur'an. These marks help as a guide for the reciters to avoid mistakes and confusion. However, these marks can increase the complexity while processing the text through the machine. In many tasks, it has been observed, the diacritics are removed from the words in the preprocessing stage. One of the reasons is that if the experiment requires finding a particular word, it might fail as the same word may have different diacritics depending on the usage in the sentence. Although, it is not essential to remove diacritics always and they could be used as features for some experiments too where required.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Text Matching",
+          "subsubsections": [],
+          "text": "Text matching technique has been widely used in search systems developed for Qur'an. Text matching can be used in multiple forms. In some applications, the exact words of the user query are matched with those of verses. In other applications, the query words and the words of verses may be converted to their roots so that they could be matched to any form they have been used in. This technique increases the search window. Advanced forms of text matching, where the matches are not only made based on words, but rather concepts behind those words are matched, can be used in semantic tasks related to the Qur'an. For example, a simple search may only focus on some search words and retrieve the results and they might fail to provide correct intended results. Here, the search window size can be further enhanced using synonyms or antonyms of a particular word. Retrieving concepts from any text cannot be done by simple word matching. Conceptual results can be retrieved using ontology where the matching of words is performed at different hierarchical levels. Although text matching may seem to be a very basic technique, if used properly, it can help in achieving great results.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Clustering",
+          "subsubsections": [],
+          "text": "Clustering is an unsupervised machine learning technique that is used to cluster similar kinds of data. In unsupervised learning, labels are not available. For the Qur'an, similar kinds of verses are grouped for the categorization and knowledge extraction tasks. There are various algorithms for clustering but for topic modeling in particular Latent Dirichlet Allocation (LDA) is the most widely used. LDA calculates the probability of words distributed over a topic and then all words multiple topics to each document [UNMAPPED:11]. Topics discussed in Qur'an can also be listed, by using the clustering technique on the Qur'anic verses. Besides, LDA, K-means algorithm is also applied for the categorization of the Qur'an verses. K-means is a clustering algorithm in which given verses are clustered into a known number of groups, depending on the distance of words in verses from the centroids of each group. K-means algorithm is simpler in implementation as compared to LDA.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "11"
+          ]
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4 Classification",
+          "subsubsections": [],
+          "text": "Contrary to clustering, classification is a supervised machine learning technique that is also used for the topic modeling of the Qur'an and knowledge extraction. In classification, data is already labeled. K-Nearest Neighbours (KNN) is widely used in classification tasks. In KNN, there is a set of verses which already labeled with particular topics. The verses under test are then allocated a topic by finding their similarity with labeled verses using a distance formula. Decision tree is the other classification model. The model is used in the application of knowledge extraction and question answering for Qur'an [W2250877322]. In the decision tree algorithm, training data is classified based on the input features. The testing data is then allotted labels based on the rules developed by the decision tree during training.",
+          "citations": [
+            "W2250877322"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5 Speech Processing",
+          "subsubsections": [],
+          "text": "Speech processing has been used in multiple tasks related to the correct recitation of the Qur'an, as discussed in Qur'anic NLP works section. Speech processing helps in conveying the natural sense of spoken languages. For Qur'an, it is essential to recite with certain rules. In speech recognition, Mel-Frequency Cepstral Coefficient (MFCC) is used for feature extraction of the speech. MFCC is designed to replicate the human auditory system artificially [UNMAPPED:36]. The feature extraction using MFCC is shown in **FIGURE 8**.\n\n**FIGURE 8** Block diagram of MFCC feature extraction from speech\n> Speech -> Frame making of speech -> Fast Fourier Transform (FFT) -> Mel-Scale filter bank -> Log of filtered output -> Discrete Cosine Transform (DCT) -> MFCC\n\nHidden Markov Model (HMM) is used for training and testing of speech data. HMM-based recognizer takes feature vectors created by MFCC as input and then uses Bayesian probability to recognize words from phonemes trained over multiple pronunciations of each word [W2142416747]. HMM is a state machine where each state in a particular time is associated with a specific phoneme and a particular word is obtained by observing this sequence of phonemes [W2074105281].\n\n**FIGURE 9** Categorization of NLP works\n> Quran NLP Works: Grammatical Analysis, Semantic Work, Ontology Based Work, Translations, Search System, Classifier, Topic Extraction, Knowledge Extraction, Speech Processing, Quranic Corpus, Q/A Systems, Interface Systems, Quran Authentication, Crowdsourcing\n\n**TABLE 6** Comparison of treebanks\n\n{{TABLE:tbl_06}}",
+          "citations": [
+            "W2142416747",
+            "W2074105281"
+          ],
+          "tables_in_text": [
+            "tbl_06"
+          ],
+          "citations_unmapped": [
+            "36"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In NLP, different techniques are involved to gain some useful output from the input data. Some techniques are basic and are used in almost all applications while others are task-specific. **FIGURE 7** shows the overview of techniques involved in the Qur'anic NLP tasks and they are further explained in each subsection. In the remainder of this section, these are discussed in more detail.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Qur'anic NLP Works",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Grammatical NLP Analysis",
+          "subsubsections": [],
+          "text": "Arabic grammar can be understood in terms of morphology and syntactical analysis. The syntactic analysis, along with morphology in NLP has to cater to all the rules, such as the use of the correct form of the word, placement of a word in the correct place within a sentence, and relating nouns verbs, and particles properly. For this purpose, various Arabic tree banks have been developed. To study the Qur'anic grammar, Dukes et al. (2010) have developed Qur'anic Arabic Dependency Treebank (QADT) [UNMAPPED:42]. Treebank is a collection of manually annotated text. QADT is part of Qur'anic Arabic Corpus (QAC) [UNMAPPED:39]. Morphological analysis for all the 77,430 words of the Qur'an has been completed with the help of a collaborative approach. However, syntactic relation analysis is yet in progress and has covered 11,000 words so far. **TABLE 6** shows the comparison of other general Arabic treebanks with Qur'an dedicated QADT:\n\nMorphological annotation involves the segmentation of each word into morphemes and assigning part of speech to each of them. The morphological annotation adopted in QADT for the Qur'an is described by Dukes and Habash (2010) [W2085759086]. A three-staged systematic method is adopted for morphological tagging which includes automatic tagging, two-pass manual verification, and online collaborative annotation. Automatic tagging is done by using the existing Buckwalter Arabic Morphological Analyzer (BAMA) aided by a custom tool [UNMAPPED:35]. In manual tagging, one of the annotators verifies the automatic tags and the second one reviews the text after her/him. Finally, the accuracy is further improved by an online collaborative platform. The automatic algorithm provides analysis for 87% words of the Qur'an; the remaining 13% were not catered because of the low vocabulary of BAMA. For 87% words, automatic annotation provided 77% accuracy and 83% recall.\n\nTraditional Arabic has complex functional inflection. For example, a noun can be written in different ways depending on its position against its verb. Also, a single word may consist of multiple morphological units syntactically related to each other. Dukes et al. (2010) have explained the process of syntactic annotation and key guidelines for annotations of Qur'anic verses based on QADT [UNMAPPED:42]. Guidelines are important because Qur'an is a divine scripture. An iterative approach is adopted to annotate the corpus similar to that of morphological annotation. Initially, a rule-based dependency parser having an F-measure of 78% is used. The next step is to perform a manual check of annotation for corrections using existing traditional grammar rules and annotation guidelines. Interested volunteers regularly participate in the online annotation. Annotation guidelines are added and updated based on this online collaborative work. There are multiple guidelines such as sentence structure based on subject, verb, and object, use of empty and hidden nodes for reconstruction, and prepositional phrase attachments. The supervisors have a role to veto any decision as they are more knowledgeable and they see if the annotation done is aligned with Qur'an or not [W2085759086].\n\nA visualization tool can be a great replacement for traditional methods and help Arabic linguists and Qur'anic students understand traditional Arabic grammar more easily. Dukes et al. (2010) report the capability of graphical dependency graphs in QADT to present the syntactical relationship of words with a sentence [UNMAPPED:42]. Each word may consist of multiple segments. To perform this computational analysis, graphs have been developed which connect different words within a sentence or with words in other sentences. This technique allows understanding the relation of different segments, words, and phrases in the Qur'an. Detailed morphological visual analysis of verses is also provided along with a color-coded grammatical analysis of each morpheme. POS tagging and morphological annotations provide high accuracy under random sample testing. **FIGURE 10** shows the visual representations for morphology and syntactic analysis.\n\n**FIGURE 10** Visualization of Dependency graph and Morphological analysis of Qur'an\n> (a) Dependency graph for verse showing syntactical structure (112:2)\n> (112:2:2) I-\u015famadu al-lahu the Eternal, the Absolute. Allah, \u0627\u0644\u0635\u064e\u0651\u0643\u0652\u0645\u0650\u062f\u064f N PN \u062e\u0628\u0631\n> (b) Morphological segmentation for word (23:41:4).\n> (23:41:4) faja' aln\u0101hum and We made them \u0641\u062c\u0639\u0644\u0645\u0647\u0645 PRON PRON V CONJ\n\nBentrcia et al. (2018) have studied the conjunctive phrases in Qur'an based on the 'AND' conjunction and have shared interesting findings [W2788308991]. Three different cases are recorded with 'AND' conjunctive phrases which are; words occurring in specific order only once, words occurring in specific order multiple times, and words occurring in a different order one time or multiple times. The corpus used for the project is the QAC and a combination of the statistical and grammatical methods have been adopted to mine the required conjunctive phrases. There are many cases in which words are combined by 'AND' but in the study, ten patterns that consist of only nouns, pronouns, and adjectives combined by 'AND', are considered. The results and analysis reveal that words occurring in some specific order are based on some logic. For example, 'Isaak' is always mentioned before 'Jacob' because the former was the father of the latter and 'East' is always mentioned before 'West' because in the time frame east comes before the west. The order of the words in conjunctive phrase hold significance based on the context of the verse. Pointwise mutual information is also recorded for the words joint by the 'AND' word which shows that words occurring multiple times together have a higher association.\n\nElAffendi et al. (2021) recently used a neural network based approach to predict the morphological patterns and POS tags for Arabic [UNMAPPED:45]. Galois Power-of-Two (GPOW2) calculates the real-time embeddings for character, word, and sentence in parallel. Each word is represented as a polynomial of power of two. The QAC is used as a dataset that holds rich morphological and syntactic annotations. The model works by computing the contextual embeddings of a word at input stage. GPOW2 representations of these embeddings are fed to the neural network which then tries to predict the tag for the target word. The test accuracy for POS tags prediction is 98.8%, which is impressive when we consider the complexity of Arabic morphology.\n\nIn linguistics, the process of identifying each word's function in an Arabic sentence is known as 'eater' or 'e' (i'aab) in Arabic. This is accomplished by adding the appropriate diacritical mark and an appropriate justification or reasoning-previously known as the end-case analysis-at the end of each word. As a result, syntax parsing is one of the most crucial aspects of Arabic because a weak or incorrect 'i'aab causes a misunderstanding of a sentence's precise meaning. In light of the fact that the Holy Qur'an is written in Arabic, it is crucial that we understand its meaning in its entirety. Mannaa et al. (2022) devised an enhanced context-free grammar (eCFG) that covers all the rules taught in Saudi school's grammar textbooks [W4292622500]. The eCFG eliminates the need for specialized grammar, e.g., link grammar, to resolve complex cases involving dependencies. The authors tested their system on 300 sentences and reported an accuracy of 88.33%. **FIGURE 11** shows a sample i'raab of a verse from the Holy Qur'an.\n\n**FIGURE 11** The full i'raab of Surah 73 verse 20 from the Holy Qur'an. Source: Mannaa et al. (2022)\n\n**TABLE 7** Qur'an grammatical NLP works table\n\n{{TABLE:tbl_07}}\n\n**TABLE 7** summarizes this section.",
+          "citations": [
+            "W2085759086",
+            "W2085759086",
+            "W2788308991",
+            "W4292622500"
+          ],
+          "tables_in_text": [
+            "tbl_07"
+          ],
+          "citations_unmapped": [
+            "42",
+            "39",
+            "35",
+            "45",
+            "2010",
+            "2018",
+            "2021",
+            "2022"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Semantic Technologies",
+          "subsubsections": [],
+          "text": "Sherif and Ngonga (2015) have developed a database that contains semantic datasets in 43 languages for the Qur'an [W2631303910]. Tanzil is a web-based resource of multi-language Qur'anic translations for the dataset and QAC provided the morphological data for each word. The data has been presented in the Resource Description Framework (RDF). Out of 43 languages, only three translations along with the original Arabic dataset comply with the RDF and NLP Interchange Format (NIF). NIF achieves inter-operability between NLP tools, language resources, and annotations. RDF consists of four main classes of Chapter, verse, word, and lexical term which give a hierarchical structure to the whole dataset. The dataset has been linked with multiple online platforms for use. It helps in data retrieval from the Qur'an in multi-languages. Using the SPARQL, the user can also perform morphological queries on data. Other useful applications include information aggregation and finding multiple occurrences of a particular text in the database.\n\nAl-Khalifa et al. (2009) have proposed a web-based framework under the title \"SemQ\" which performs semantic opposition analysis on Qur'an using NLP and semantic web technologies [W2548244130]. In semantic opposition analysis, opposites of a word or phrase are searched based on their characteristics. SemQ takes input in the form of verse and returns it provides an output which is a list of words that are semantically opposite to each other. Ontology based on Greek New Testament and SemQ Tool work together under the framework. After NLP preprocessing, the algorithm starts working by checking if the two words under consideration belong to the same category. If only one property of words differs, they are declared absolute semantic opposite; if more than one property differs then the scale of opposition is calculated. The SemQ team aims to build prototypes in the future for the complete Qur'an and compare the results with traditional approaches.\n\nAfzal and Mukhtar (2019) have tried to address the problem associated with the keyword search system for Qur'an [W2914384366]. Many times, intended results are not achieved as keyword search does not cater to conceptual or semantic analysis for the query. They have presented a semantic and lexical-based search system to overcome the issue. Database with the name of Qur'anic English WordNet (QEWN) is developed. In this database, all the words in the English translation of the Qur'an are populated along with their semantic information. Vocabulary of Qur'anic Search (VQC) stores various concepts included in Qur'an. Concepts of sense and Synset is utilized in QEWN. Sense means a particular meaning of a given word and Synset is the collection of synonyms of that word in a particular sense. Upon search of a particular word, all the semantically related verses are returned. Even if the search word does not exist in translation, the tool searches for the related concepts using synonyms. The tool also performs a unique search of Islamic concepts such as the \"pillars of Islam\" which will return all the verses related to the five pillars of Islam. This semantically rich tool has been able to achieve 88% recall for the words which are directly related to the given word present in translation and 59% for the words that do not appear directly but are searched using different synonyms in a particular sense.\n\nShoaib et al. (2009) have also tried to resolve the problem which is associated with keyword-based search in which either exactly required verses are not retrieved or irrelevant results are returned [W2156448467]. They have also utilized WordNet database to perform a semantic search on Qur'an. Topic search is a two-step process. In the first step, desired meaning of the query word is interpreted while other senses are ruled out. Afterward, the topic is searched using that word or synonyms of that word. These synonyms are categorized as an exact synonym, close or strong synonyms, and weak synonym. The systematic algorithm returns verses in the priority list. The model has been implemented on English translation of Surah Al-Baqarah (Chapter 2) using SQL and VB.Net. The model is also able to achieve great results by retrieving 80% more relevant results as compared to other models. It is also able to minimize the retrieval of irrelevant results.\n\nMalhas and Elsayed (2020) built a Qur'anic test collection, AyaTEC [UNMAPPED:69]. The objective is to provide a benchmark for evaluating potential QA systems, rather than building a QA system. AyaTEC is a verse-based question answering on the Holy Qur'an, which includes 207 questions with their corresponding 1726 answers. The questions cover eleven topics of the Holy Qur'an that matches the need of curious and skeptical users. The latter is a user seeking answers from the Qur'an to questions that may include controversial or undermining questions. The answers to the questions (each represented as a sequence of verses) were exhaustive\u2014i.e., all Qur'anic verses that directly answered the questions were exhaustively extracted and annotated. AyaTEC covered factoid and non-factoid questions.\n\nAlqahtani and Atwell (2015) have reviewed various techniques to perform a semantic search on Qur'an and have proposed their own framework [UNMAPPED:16]. Search techniques fall into two types. One is semantic search in which the concept-based search is applied and the other one is keyword-based search in which direct search is performed using some particular word without catering to the concept. The Qur'anic semantic search methods can be categorized as ontological search (concept-based), synonym-set search (based on synonyms of query word) and cross-language information retrieval (CLIR). In the keyword search, if any of the query words are matched with any word of the verse, the verse is retrieved. Preprocessing on words is performed with the help of morphological analysis. Keyword-based search also utilizes the chatbot technique in which some important words are chosen from the whole query and a search is performed for those words only. However, keyword-based search frameworks are deficient in providing relevant results and many times provide irrelevant verses. On the other hand, semantic search does not cover all the concepts of the Qur'an. Keeping these limitations of both techniques in view, a new semantic framework is proposed called Qur'anic Semantic Search Tool (QSST). When a query is entered, it is preprocessed and results are retrieved separately for both semantic and keyword search. Redundant verses are eliminated and finally, verses with the highest ranking as scored by QSST are returned to the user.\n\nYunus et al. (2010a) have performed a semantic search using CLIR and showed the results visually using a space tree model [W2159804754]. The system supports search in Malay, English or Arabic. Each word in the query is stemmed to its basic form along with its synonyms. This increases the search range and can help in the retrieval of more results. Finally, the results are retrieved and verses IDs are displayed in the form of a tree structure where the system is further integrated into the speech query (Yunus et al. 2010b) [W2541823445].\n\nSome of the modern semantic searching techniques for Qur'an are discussed here. Ensaf and Eyad (2022) have utilized embedding matrix for semantic-based search from Qur'an [UNMAPPED:47]. The method creates an embedding matrix that is trained on Qur'anic and classical Arabic corpora. This creates feature vectors for the verses based on words. When a query is made, a feature vector for the query is also made, and then cosine similarity is used to find the semantically closest results from Qur'an. They achieved a recall of 72%. They have suggested experimenting with Doc2Vec instead of word-based vectors as they might improve results. Menwa et al. (2021) used the technique of Doc2Vec to find similar verses in the Qur'an [W3182591145]. Each verse is vectorized and a similar verse is found by finding the vector in a similar direction. They used cosine similarity to find similar verses. They achieved an accuracy of 76%. The method of Doc2Vec can be used in finding semantic-based searches because this would help in finding the results based on better semantics as each verse would be a vector and the cosine similarity would be providing a degree of similarity between the query question and verse.\n\nMuhamad Fahmi et al. (2020) have used the text summarizing technique based on the text rank method which focuses on the most important words in a document and returns the summary [UNMAPPED:77]. Initially, the semantic search is done for the query, and results are retrieved using word2Vec and cosine similarity. The retrieved documents are then summarized and given as output. These documents are not the actual Qur'an but an encyclopedia of the Qur'an in the Indonesian language. The idea behind this technique is to provide a summary of relevant documents to the user without changing the context. Ali and Maged (2020) also used the word2vec technique and proposed that their methodology can be used in multiple applications [UNMAPPED:13]. They addressed the need to cater search system for Islam-specific knowledge. For this purpose, an embedding of words based on the Qur'an and Hadith was designed. The skip-gram-based model was made as they found it better for domain-specific vectorization. They also tested the model with different Islamic terminologies which were closer in context and the results were satisfactory. The technique adopted seems to be fruitful for the semantic query system as embedding made solely on Islamic resources will be able to answer queries in the right context.\n\nFaiza et al. (2021) have used query expansion technique for semantic Qur'anic searching [UNMAPPED:48]. The ontology of words and meanings is used where when a query is made, each term of the query is further enriched and a set of new queries are formulated. These queries then search for all the possible semantically closest results for the user. A precision of 70% was achieved with this algorithm. Muhammad et al. (2021) proposed a framework for semantic graphs for the Qur'an [W4206901474]. The framework would be able to answer the queries considering the semantics of the query. For this purpose, they proposed a system where word dependency would be used within a verse that would show the relationship between words. Along with it, POS tagging would also be used. A semantic relation consisting of subject-predicate and object would show the purpose or logic behind each verse. Using these word dependencies, POS tags of words and semantic graph rules would be generated that would help in finding better results for the queries. A summary of this section is provided in **TABLE 8**.\n\n**TABLE 8** Semantic work for Qur'an\n\n{{TABLE:tbl_08}}",
+          "citations": [
+            "W2631303910",
+            "W2548244130",
+            "W2914384366",
+            "W2156448467",
+            "W2159804754",
+            "W2541823445",
+            "W3182591145",
+            "W4206901474"
+          ],
+          "tables_in_text": [
+            "tbl_08"
+          ],
+          "citations_unmapped": [
+            "69",
+            "16",
+            "47",
+            "77",
+            "13",
+            "48",
+            "2015",
+            "2009",
+            "2019",
+            "2020",
+            "2022",
+            "2021"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Ontology Based Technologies",
+          "subsubsections": [],
+          "text": "Ontology is a hierarchical dictionary of concepts. Since machines cannot understand the concepts like humans, so we need to provide them with an easy way to understand the concepts. Ontology is also used for Qur'an to explain the various concepts easily. Al-Yahya et al. (2010) have made an effort to contribute to the Arabic computational lexicon using the approach of ontology [UNMAPPED:23]. A lexicon can be defined as the vocabulary of a language where each word is set accompanied by a few other words which define its properties. 59 nouns related to the semantic field of \"Time\" are chosen in the project from the Qur'an. Component analysis of the words belonging to the same semantic field and having similar contexts helps in differentiating them from one another. The team adopted Unified Process for Ontology (UPON) which is a unified software development process-driven methodology for the development of the ontology. Words were classified in a hierarchy having general concepts leading down to more specific ones. There were 18 conceptual classes defined for the time of which eleven were specific to the time field. It can provide synonyms as well as antonyms based on the component analysis. The model was tested for 31 other time words and also words from the human semantic field, given in Qur'an.\n\nFaiza et al. (2021) developed an ontology for Qur'an to find the semantic results for queries [UNMAPPED:48]. The ontology was developed based on the words of the Qur'an along with their meanings. These meanings are also linked to the concepts. The base of the design is that terms of the query would be searched in ontology and the relevant concept would be retrieved to maximize the search results.\n\nIqbal et al. (2013) have pointed out the limitations of already existing Qur'anic ontologies and also developed a new ontology for the 30th Juz (Division) of the Qur'an to address those limitations [W1481601872]. The list of limitations, highlighted by the team while studying previously developed ontologies is described next.\n1. Ontology developed for just one topic, for example, Salah.\n2. Limitation of ontology to answer all the questions related to a topic.\n3. Limited concepts inclusion in the ontology.\n4. Linking different concepts related to verses but not catering to their contextual meanings.\n\nThe ontology developed by Iqbal et al. (2013) is sourced from an authentic Qur'anic corpus. Ontology is capable of providing the contextual meaning of verses based on Hadith and Tafsir. Ontology has been developed by merging different ontology methods. It provides details of surah (chapter) included in the Juz (division). Ontology is developed for English and Malay translation. Two ontology development methods have been adopted in the project, namely, Gruninger and Fox's methodology and METHONTOLOGY methodology [UNMAPPED:51]. The Ontology developed was able to provide the correct answer to the queries. The framework can be adopted in many semantic and online Qur'anic applications owing to its flexible design.\n\nKhan et al. (2013) have proposed an ontological approach to perform a semantic search for the Qur'an [W2328123973]. Ontology for the animal domain has been developed to avoid any conflict regarding divine concepts. Developing animal ontology for 167 animals, described in Qur'an, is also not an easy task as the context has to be specific as per Qur'an. The team has selected the English translation. To improve the results further, the team developed a separate ontology on scientific facts or other related information about animals and then linked it to the original Ontology of the Qur'an. In this way, the actual concept of the Qur'an is not mixed with other data. To perform the Query, SPARQL query language is used. The framework provides great results. It has been proposed to develop Qur'anic WordNet that will further help to perform a better semantic search on Qur'an as the currently available WordNets are generic and do not suffice the requirement of specificity of Qur'anic concepts. To enhance the framework further for the whole Qur'an and other Islamic literature, the team has proposed a simple workflow.\n\nThe query will be passed through Qur'anic WordNet and ontological concepts will be linked to the words. Finally, the answer will be retrieved.\n\nAli and Ahmad (2013) have also used ontological methods to represent the Qur'an under a thematic structure [UNMAPPED:12]. In the Qur'an, the same concept is described in more than one verse and surah. The team has worked to bring all the verses belonging to one theme under one umbrella. To perform the thematic classification, the team has selected Syammil Al-Qur'an Miracle, and only two themes are selected which are Akhlaq (Manners) and Iman (Faith). Classes are defined where each class has a subclass. For example, Iman is the main theme, and belief in Allah is its sub-theme. Each sub-theme can have different divisions, chapters, and verses. Themes are developed from the reference book and also by interviewing expert scholars. The ontology is developed in the Malay language, and validated by seven experts of the Qur'an. The ontology-based thematic applications can be very helpful in understanding concepts of the Qur'an in a better way.\n\nTa'a et al. (2017) also developed theme based ontology named Al-Quran to perform the semantic queries [W2785249538]. Ontology is developed using Prot\u00e9g\u00e9-OWL. The ontology does not cover the whole Qur'an, but only three main classes which are; Allah, Angels, and Unseen. For these classes, sub-themes are developed with the help of Islamic scholars to keep the original meaning intact. The Qur'anic data is saved in a database on which SQL queries can be performed to retrieve results. The graphical user interface (GUI) of ontology allows the user to select the main theme and two subthemes. This helps the user to search for the intended query more easily.\n\nAlqahtani and Atwell (2016) have reviewed the already built Qur'an ontologies along with Qur'anic Search applications and tools [W2464904837]. Applying semantic search to Qur'an is not an easy task. One verse may contain multiple themes or a single theme may exist in multiple verses. Different search tools that have been developed try to address different challenges. Still, there are a few limitations in the proposed semantic search tools, which are described next.\n1. Unavailability of a solution if the terms of the query do not match the concept of ontology.\n2. Limited vocabulary of Arabic WordNet.\n3. Incomplete link development of verses with their concepts.\n\nSimilarly, the authors have performed research on the available Qur'anic ontologies. Most of these ontologies revolve around verses' similarity and relationship, animals, or some specific Qur'an topic. The team has proposed a new search tool called Arabic Qur'anic Semantic Search Tool (AQSST) by combining four different ontologies. The database consists of original Qur'anic text along with eight different English translations. It also contains Tafsir which is an explanation of concepts of verses. NLA performs parsing and semantic tagging to the query words and then a concept-based search is performed using SRM. If the search is unsuccessful, then KSM is applied. Finally, suitable results are retrieved based on the score provided by SR. The tool has tried to overcome the limitations and challenges which are highlighted at the start.\n\nAhmed and Atwell (2016) have investigated the practical applicability of performing a semantic search for abstract concepts of the Qur'an based on different ontologies merged [UNMAPPED:5]. There are different methods to merge the ontologies such as similarity measure, heuristic method, and methods involving semantics and syntax. The three ontology methods applied in this ongoing project are:\n1. Extract abstract concepts with the help of a domain expert.\n2. Semi-automatic extraction of concepts from the original text source.\n3. Reuse the existing partial ontologies.\n\nInitially, three different ontologies are merged. These ontologies are combined based on the Jaccard similarity which measures the similarity between sets of data. The other method adopted is using a PROMPT tool which takes two ontologies as input and then returns one merged ontology [W1970348112]. Both methods provide satisfactory results. The first method gives a correct resolution of results up to 82% while the second provides 85%. The approach in the future is to complete all three methods mentioned at the beginning and create a single ontology that will be sufficient to perform the semantic search on Qur'an.\n\nAlqahtani and Atwell (2016) have discussed the advantages of aligning and merging different ontologies [W2464904837]. Only a few among the various ontologies for Qur'an discuss all the concepts. The three most common ontologies with their features are discussed in **TABLE 9**.\n\n**TABLE 9** Different ontologies and their features\n\n{{TABLE:tbl_09}}\n\nTo merge these ontologies first of all they need to be normalized so that all of them have the same format. After that, the same concepts are aligned based on string matching and semantic matching. There is also a structural approach in which entities are matched based on an ontology graph. The advantage of merging different ontologies into one is that more knowledge is gathered in one place and it can enhance the search results of topics for Qur'an.\n\nThe section is summarized in **TABLE 10**.\n\n**TABLE 10** Works based on Qur'anic ontologies\n\n{{TABLE:tbl_10}}",
+          "citations": [
+            "W1481601872",
+            "W2328123973",
+            "W2785249538",
+            "W2464904837",
+            "W1970348112"
+          ],
+          "tables_in_text": [
+            "tbl_09",
+            "tbl_10"
+          ],
+          "citations_unmapped": [
+            "23",
+            "48",
+            "51",
+            "12",
+            "5",
+            "2010",
+            "2021",
+            "2013",
+            "2017",
+            "2016"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Translations and Qur'anic NLP",
+          "subsubsections": [],
+          "text": "Kammani and Safeena (2013) has discussed the challenges related to Qur'anic translation and then proposed a conceptual method to overcome them [UNMAPPED:66]. Very little effort has been made to translate the Qur'an based on knowledge. Many researchers have pointed out various challenges regarding translation. Morphological and lexical challenges are the most common among all challenges. Many native Arabic speakers feel challenged when identifying the exact meanings of some words or sentences from the Qur'an. However, a knowledge-based translation developed with the help of new technologies can provide exact meanings for such words or sentences. In the current era, a lot of effort is being put in Qur'anic Arabic and modern Arabic computation research work. Three research gaps were found in these works. Firstly, ignorance to the context and chronological order of the Qur'an; secondly, the inability to answer complex questions; and finally, existing work does not offer complete capabilities of search and analysis. To address these gaps a translation system is proposed in which Qur'an and authentic Hadith will be the knowledge base and at the top of it will be an expert engine that will be responsible for the content, context, and chronology of the verses.\n\nPutra et al. (2017) have reviewed concepts related to text mining, searching and question answer (SQA) application, and Indonesian Translation (ITQ) [W2790706112]. The review is conducted in three phases which are planning, conducting, and reporting. Many people search for solutions to their problems from the Qur'an in the Indonesian language. SQA is a search engine developed based on ITQ to provide information to people in the Indonesian language. Discovering Source Answer (DSA) is the component of SQA whose function is to perform sentence detection, POS tagging and text processing, etc. The other component interprets the query and returns the results. The relevant passages are returned for the query and then ranked before finally returning results to the user. There are a few issues associated with text mining related to ITQ. One of the biggest problems is the ambiguity of the word's meaning, as one word may have many meanings, so the correct results may not be returned for a particular query.\n\nHanum et al. (2013) have developed a parser system for the Malay translation of the Qur'an [W2023675076]. The system checks the correctness of the grammar as per standard Malay Grammar rules, using Earley's algorithm. The Malay translation of the Qur'an, selected for the project, has 40,290 words. Each sentence is parsed by initially splitting each sentence or verse into multiple sentences or parts. For each word in the sentence, the grammatical rule is predicted. In the end, a parse tree showing all the rules is developed for all the sentences. The sentence structure of the Malay translation is verified against Standard grammar rules. The standard Malay grammar is evaluated by performing 42 experiments. It was found that many sentences did not follow the standard Malay grammar rules. The new set of rules consists of 115 rules and the original standard Malay grammar has 94 rules.",
+          "citations": [
+            "W2790706112",
+            "W2023675076"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "66",
+            "2013",
+            "2017"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5 Search Systems and Qur'anic NLP",
+          "subsubsections": [],
+          "text": "Hammo et al. (2007) designed a search engine using query expansion techniques and tested if the search results can be improved or not [UNMAPPED:56]. Each verse is tokenized and the words are then stored in three different indexes which are Vowelized-Word Index, Non-vowelized-Word Index, and Root Index in RDBMS. The Vowelized Index holds all the distinct words of the Qur'an without any preprocessing. Hence diacritical marks are present on them. The non-vowelized index is formed by removing diacritics from the words and the root index is finally used to store the root words which are formed by stemming all the words to their base. There is also a Thesaurus in the database which holds the synonyms of Qur'anic words. Three experiments are performed. In the first experiment, the query word was used for search and it was found that the results were not good as the input query may or may not match exactly with the desired word from the Qur'an. In the second experiment, stemming of the query word was done and then it was searched in the root index. Once the word was found in the table, the query expansion was done by finding the related word in vowelized and non-vowelized tables. The experiment showed great improvement in results. In the last experiment, query expansion was done using Thesaurus, which searched the verses for query words based on the synonym approach. This also showed great results. Overall, it was concluded that query expansion is a great way to perform a search on Qur'an.\n\nAl Gharaibeh et al. (2011) have studied the use of formal methods for Qur'anic NLP-based search engines [UNMAPPED:10]. Formal methods are techniques that are used to describe and specify a software tool. These specifications are expressed using Z-notation. The authors first informally describe the schema, then define the syntax of operations to be performed for searching, and finally define axioms that will help in performing operations. There are three types of search techniques included, which are text-based, stem-based, and synonym-based schemas. Schemas are developed for each approach by performing some preprocessing such as stop words and diacritics on the Qur'anic text. In the first approach, the exact query word is matched with the words of the verses. In the stem-based approach, word stemming is performed for query words and words of the verse. In the synonym-based approach, synonyms are used to perform the search. The search engine is developed using Z-notation which has its own syntax. Z/EVES tool is used to develop the schemas and then evaluate the performance of the system developed.\n\nYunus et al. (2010a) have designed a Qur'anic search framework that performs CLIR with the aid of semantic and stemming analysis on the query [W2159804754]. The system takes a query from the user. It is then converted into a target language equivalent query. The system can answer the results in one of the three languages from Arabic, Malay, or English. After the translation, each word of the query is passed through a semantic analysis in which synonyms are provided for each word. A stemmer then converts these words into stems. After this pre-processing, the target verses or documents are retrieved by matching each word from the updated query. It was concluded that the semantic-stemmer-based technique has retrieved far better results as compared to a simple query search. The test was also performed with only a semantic-based search. However, the evaluation showed that recall for the semantic-stemmer-based technique was far better.\n\nAlqahtani and Atwell (2017) have discussed various search techniques and tools for Qur'an [UNMAPPED:18]. Most of these tools have been discussed in this paper. They evaluated these tools against 13 different parameters to see their drawbacks and limitations. The existing search tools can be classified into two main categories which are text-based searching and semantic searching. Both these categories can be further sub-categorized as shown in **FIGURE 12**.\n\n**FIGURE 12** Types of existing search tools for Qur'an\n> Search Technique: Text Based, Ontology Based, Synonym, Semantic based, CLIR, Word Letter Match, Stem, Morphological Root\n\nThe existing tools apply one of these techniques to answer the queries of users. These tools were evaluated at common criteria which encompass search features, the precision of results, database size, query and answer type, response time, and database contents. The evaluation results can be summarized as follows:\n1. Limitation for retrieving all requested information from the Qur'an related to the query.\n2. Many tools allow one word-based query and do not allow search based on concepts, phrases, or topics\n3. The ontology-based search tools do not cover all the concepts. Only a few ontologies are covered and thus they fail to deliver results against all concepts\n4. None of the tools solves the ambiguity problem of retrieved results. By ambiguity we mean that results for words having the same spellings.\n5. The tools do not apply modern NLP techniques such as parsing or spell check.\n6. These tools do not have Name Entity Recognition especially designed for Qur'anic text.\n\nAs discussed in the Ontology-Based Technology section, Khan et al. (2013) proposed a semantic search tool based on an ontological approach [W2328123973]. However, the ontology does not cover the complete concepts of the Qur'an. The proposed ontology covers animals and birds in Qur'an. The ontology was developed after an analysis of each verse of the Qur'an. SPARQL query language was used to perform the search. The query is taken in the form of a natural language question in English. The system converts the question into system specific query format. The questions like \"Which animal is used for riding?\" are answered correctly. It was also recommended to extend the proposed framework further in a proper search tool that can take input through a GUI and performs a search using Qur'anic explanations and Hadith as reference.\n\nAlqahtani and Atwell (2016) proposed a search tool named as Arabic Qur'anic Semantic Search Tool [W2464904837]. The tool is based on an ontology of the Qur'an and utilizes both information retrieval and semantic search approach. The query entered by the user undergoes various NLP checks such as stop word removal, stemming, and POS tagging. Semantic tags and synonyms are provided for each word. The search is first performed using the concepts from the ontology. If no results are retrieved then, the search is performed by word matching technique. Finally, the results are provided with the score for their relevance to the query and then ranked before presenting to the user. The tool also deals with the ambiguity of results for words having the same spelling and provides detailed results with concepts of each word. The tool also addresses the issue of the lack of NER for the Qur'an.\n\nShoaib et al. (2009) developed a semantic search tool to overcome the deficiencies of a simple keyword-based search system [W2156448467]. The framework is developed for Surah Al-Baqarah of the Qur'an (Chapter 2) initially. To perform the semantic search WordNet is utilized, which provides different synonyms and antonyms of words. We know that a single word can impart multiple meanings, so the query word is allocated a single interpretation at the start of the search. The system then searches for the verses that contain the word and followed by the synonym-based search. The retrieved results are returned in a prioritized order with verses retrieved for exact synonym-based search first and the weak synonym-based results last. 80% more relevant results were achieved as compared to a simple query search.\n\nTo overcome the irrelevancy issue and poor retrieval results for keyword-based search and domain-specific ontology in semantic search, Alqahtani and Atwell (2015) designed Qur'anic Semantic Search Tool (QSST) [UNMAPPED:16]. The system aligns existing ontologies to provide better results. Initially, the system performs a concept-based search with the help of ontology, and then it performs a search by word matching technique. This technique achieves the best of both worlds, keyword and semantic search. The results are ranked and redundant verses are eliminated.\n\nPitchay and Ridzuan (2016) have also reviewed the strengths and weaknesses of existing Qur'anic search tools [UNMAPPED:85]. They also designed a new ontology by aligning Qur'an ontology and medical domain-specific ontology. The majority of the ontologies developed for the concept-based search for the Qur'an, as discussed earlier, are domain specific. They do not cover the whole Qur'an. Only a few ontologies cover the whole Qur'an but they do not cover all the concepts and thus fail to retrieve results for the complex query. In this work, an ontology for Qur'an taken from Qur'an ontology.com has been aligned with one of the medical field-specific ontologies. Arabic WordNet is used to perform lexical matching between two ontologies. Finally, the same concepts are matched from one ontology to another using a fuzzy algorithm. The framework has two components, loading, and matching. The former component will make objects for the ontologies and the latter will combine by mapping similar components. The algorithm works by matching some persons from the Qur'an ontology to some human diseases from the medical ontology. The results of the experiment were not great and output accuracy was quite low. The main reason for the failure is that there was inconsistency in the integrated ontologies. The future target is to fix the inconsistency issue and develop an intelligent Qur'anic search system.\n\nThe overall summary of the section is presented in **TABLE 11**.\n\n**TABLE 11** Search systems\n\n{{TABLE:tbl_11}}",
+          "citations": [
+            "W2159804754",
+            "W2328123973",
+            "W2464904837",
+            "W2156448467"
+          ],
+          "tables_in_text": [
+            "tbl_11"
+          ],
+          "citations_unmapped": [
+            "56",
+            "10",
+            "18",
+            "16",
+            "85",
+            "2007",
+            "2011",
+            "2017",
+            "2013",
+            "2016",
+            "2009",
+            "2015"
+          ]
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6 Classifier Systems and Qur'anic NLP",
+          "subsubsections": [],
+          "text": "Al-Kabi et al. (2005) have developed an automatic text categorization (ATC) tool to classify the verses of the Qur'an [W2079180129]. The verses are classified under the various subjects designated by Islamic scholars, such as Faith (Iman), Prayer (Salah), Pilgrimage (Hajj), etc. The tool has been developed using Microsoft Visual Basic. The algorithm is quite simple and easy. Initially desired verse is selected from a surah. Then each verse is normalized into features. For each feature, verses are searched from the corpus that contains that feature or word. With the help of all the verses extracted, the relevant subject of the initial verse is allocated. Allocation of the subject is done by calculating the subject percentage for each feature in the verse. The subject with the highest percentage is then tagged to that particular verse. The prototype has been developed for Surah Al-Fatihah (Quran Chapter 1) and Surah Yaseen (Quran Chapter 36). The accuracy of the results reaches up to 91%. To increase the accuracy further, the corpus is to be increased and once the whole Qur'anic corpus is included in the project, the precision will be quite high.\n\nOntology developed by Ali and Ahmad (2013) is also helpful in the classification of Qur'anic verses on the bases of themes [UNMAPPED:12]. Verses belonging to Manners and Faith theme are classified. Sub-themes are available within these classes. This hierarchical approach helps in the classification of Qur'anic verses at various levels. This thematic classification can be helpful for the study and search of various themes discussed in the Qur'an.\n\nNur and Nurul (2021) have conducted multiple machine learning experiments to find the interrelation between Qur'an and Hadith and the text categorization [UNMAPPED:82]. Classification algorithms like Naive Bayes, KNN, and SVM were trained on datasets consisting of both Qur'an and Hadith. TF-IDF-based features were used for training the models. The experiments concluded that SVM performed better in the classification of the text and finding interrelated topics between Qur'an and Hadith.",
+          "citations": [
+            "W2079180129"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "12",
+            "82",
+            "2005",
+            "2013",
+            "2021"
+          ]
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7 Topic Extraction/Categorization and Qur'anic NLP",
+          "subsubsections": [],
+          "text": "Alhawarat (2015) have applied LDA for the topic modeling [UNMAPPED:11]. It is one of the most popular probabilistic methods used in NLP for topic modeling. LDA method was chosen in the previous studies that outperform K-means clustering in most of the experiments. The experiment was performed on the corpus of Surah Yousaf (Chapter 12) of the Qur'an. The possible list of topics was already defined. The probability of a word belonging to a particular topic is defined with the help of the equation given below:\n$$ P(w_{i})=\\sum_{j=1}^{T}P(w_{i}|x_{i}=j)P(x_{i}=j) $$\nHere $ w_{i} $ is the ith word of a document and, $ x_{i} $ is the $ i^{th} $ topic. The experiment was performed on verses based on original words of surah, their stem, and their roots. However, it was observed that the results with roots were not acceptable. Various experiments were performed with variations of LDA. The results showed that except for a few, most of the topics included a mixture of more than one topic and did not provide correct context. It was concluded that LDA can be a better method for routine NLP topic modeling but for the Qur'an, the model does not work.\n\nHassan et al. (2015) also used machine learning for topic categorization but they adopted a supervised learning technique [UNMAPPED:59]. They performed the text categorization of Malay translation of Qur'anic verses using the KNN algorithm. In the KNN algorithm, the model is trained on data and then test data is allocated a label depending on the similarity with neighbors from training data. For the experiment, vectors of verses were created after preprocessing. The training was done on 800 verses belonging to seven different topics and later test was performed on 200 verses. The recall for seven categories ranged from 0.74 to 0.90. The low recall for the two categories was due to common words involved in both categories. The results were great in the sense that the recall achieved is on the higher side and also that algorithm is quite easy as compared to LDA as discussed earlier. The results can further be improved by increasing the dataset.\n\nAlhammeri et al. (2020) have used the approach of embeddings for the topic modeling of the Qur'an [W3080603935]. For the experiment, instead of using word vectors, document vectors were created based on original verses of the Qur'an. The document vector approach proved to be more useful to retrieve the semantically close verses for a given verse. These vectors were then fed as features for a K-Mean clustering algorithm for the topic modeling. All the verses of the Qur'an were categorized into 14 clusters. The experiment showed that the clusters based on document-level vectors helped in achieving semantically rich topics for Qur'an.\n\nIn contrast to machine learning methods, Yauri et al. (2012) categorized the topics using ontology [UNMAPPED:106]. Ontology is the most widely used method to make computers interpret and understand concepts. Since knowledge and topics are usually centered around a particular concept, this can be a useful method for topic categorization. The framework was developed using the already-built Leeds University ontology that only discussed nouns of the Qur'an. This ontology was further extended in this project and concepts of acts were introduced. Ontology was developed using Prot\u00e9g\u00e9 in which different concepts are linked in a hierarchical fashion where the most general concept is at the top. At the top, there are 15 topics such as living creatures, location, and religion. Under the umbrella of these concepts more specific concepts are defined. Due to this semantically rich categorization, verses belonging to a particular topic can be easily extracted as each verse is marked under some particular concept or topic.",
+          "citations": [
+            "W3080603935"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "11",
+            "59",
+            "106",
+            "2015",
+            "2020",
+            "2012"
+          ]
+        },
+        {
+          "subsection_id": "s_3_8",
+          "subsection_index": 8,
+          "subsection_label": "3.8 Knowledge Extraction and Qur'anic NLP",
+          "subsubsections": [],
+          "text": "Saad et al. (2013) have described a set of rules that can be helpful in the extraction of knowledge from the Qur'an based on an English translation [W2095929244]. They have adopted ontology as a source of knowledge extraction for the Qur'an. This ontology is based on three layers, the meta concept of the Qur'an, the domain ontology layer of Salah, and the last layer that bridges the first and the second layer.\n\nMachine learning methods are widely used in several tasks. Siddiqui et al. (2013) adopted an unsupervised machine learning approach and used LDA to discover the thematic structure of the Qur'an, which will be helpful in knowledge extraction based on some particular theme [W1637483228]. They considered one surah of the Qur'an as a document and discovered the themes in it. The original Arabic Qur'an was used for the experiment. After the initial NLP preprocessing, data was reduced to 24 surahs with 417 terms only out of 114 surahs. The reason for doing this reduction was to remove the less frequent terms that can hamper the results. As described in the previous section, LDA works by allocating topics to different words in a document. The topic with the highest probability is assigned to the document. The experiment results showed that the model correctly classified the Meccan and Medinan Chapters of the Qur'an based on the difference in words. The results are promising and proved that LDA can be applied for topic-based knowledge extraction from the Qur'an.\n\nMohamed et al. (2015) used the supervised machine learning approach of a decision tree classifier to find the answers to questions from the Qur'an [W2250877322]. The model was devised for the original Arabic Qur'an. The system was backed by a Qur'an ontology developed by the integration of two different ontologies. The ontology covered 1200 concepts. The framework converts questions and their possible answers to vectors and then finds the semantic relativity of the answers' vectors to the question vector using a decision tree classifier. A keyword matcher is also used to support the results. These vectors are then classified into direct, related, and irrelevant classes. The training was performed on Fatwa questions taken from a website as these are the usual questions asked by the people. The testing results showed that accuracy reaches up to 74.53%. The results can be further enhanced if only direct or non-relevant answers are chosen, as the relevant class is generic and it can have answers from both categories.\n\nOntology can also be used for knowledge extraction. As we have seen earlier, ontology is a conceptual dictionary that categorizes different concepts under a hierarchy. Yauri et al. (2012) have adopted the Web Ontology Language (OWL) to perform a conceptual search on the verses [UNMAPPED:106]. They reused the ontology developed by Leeds University but introduced more concepts in it related to various acts and worships in Islam. Although it does not cover all the concepts discussed in the Qur'an, more complex queries can be performed with the help of a description logic query system as compared to other ontologies developed. The Manchester OWL syntax is used to perform the query. The system extracts semantically rich answers for the queries as the data is linked in an inheritance-concept system. Although, complex queries can be performed, but the system lacks a user-friendly interface where a query could be entered in a natural language way. However, the team focuses to cover this issue in the future.\n\nThe ontology approach is also adopted by Ta'a et al. (2017) but it is more user-friendly [W2785249538]. Instead of performing some syntax-based queries, a graphical user interface allows the user to select a particular topic or theme and two sub-themes from drop-down menus. After the selection of the themes and sub-themes, a query can be performed by entering a keyword that retrieves the relevant verses based on the pattern matching technique. The results achieved up to 90.4% accuracy and were also authenticated by scholars. The system provides great results, but it also covers only three themes that are related to Allah, Angels, and Unseen. Ahmed and Atwell (2016) worked on improving the number of topics and concepts covered by an ontology for knowledge extraction [UNMAPPED:5]. Their ontology includes the merger of previously existing two ontologies, an ontology extracted from the Qur'an and Tafsir and an ontology extracted from the reviews written by scholars on various verses. The information from these three types of ontologies is merged to form a new broader ontology that covers more concepts and can answer more queries. The system was able to produce up to 82% accuracy. The results were further improved up to 85% by using a PROMPT tool, which helps in merging small and medium-sized ontologies [W1970348112].\n\nBoth Machine Learning based and Ontology based methods can be applied to extract knowledge from the Qur'an. Both these methods are under continuous research and improvement. Various techniques discussed in this subsection for knowledge extraction can be summarized in **TABLE 12**.\n\n**TABLE 12** Knowledge extraction techniques\n\n{{TABLE:tbl_12}}",
+          "citations": [
+            "W2095929244",
+            "W1637483228",
+            "W2250877322",
+            "W2785249538",
+            "W1970348112"
+          ],
+          "tables_in_text": [
+            "tbl_12"
+          ],
+          "citations_unmapped": [
+            "106",
+            "5",
+            "2013",
+            "2015",
+            "2012",
+            "2017",
+            "2016"
+          ]
+        },
+        {
+          "subsection_id": "s_3_9",
+          "subsection_index": 9,
+          "subsection_label": "3.9 Speech Processing and Qur'anic NLP",
+          "subsubsections": [],
+          "text": "All Muslims around the world either Arab or Non-Arab recite the Qur'an. The Qur'an needs to be recited properly according to the rules specified in the science of Tajweed. Moreover, many Muslims memorize the complete Qur'an by heart. Therefore, it is the need of the hour to empower Muslims with state-of-the-art speech-based learning solutions for the recitation of the Qur'an. The foundation of this would be a speaker independent automatic speech recognition system for the complete Qur'an. Much work has been done in this area and some of the important work is explained in this section.\n\nBrierley et al. (2014) have worked on a set of consonants in the Qur'an that provide the prosodic effect of Qalqalah (vibration) [UNMAPPED:34]. Prosody is the pattern of rhythm that how the voice of the speaker rises and falls while speaking. The tool takes the Qur'an as input and using NLP techniques returns the words in the verses which contain Qalqalah consonants. A tool named Semantic Pathway is used to find out the types of words having Qalqalah effect. It was found out that the most frequent Qalqalah words used in Meccan and Medinan surah are different. Another contribution is the development of a pronunciation guide for the Qalqalah words, which will be helpful for the recitation of the Qur'an.\n\nIbrahim et al. (2008) provide a review of techniques used in different steps of speech recognition of Qur'an [UNMAPPED:61]. There are four major stages in speech recognition and these steps are pre-processing, feature extraction, training and testing. Pre-processing is done to improve the readability of audio data. The techniques used in pre-processing are Endpoint Detection, Noise filtering, Smoothing, and Channel Normalization. For features extraction techniques like Linear Predictive Coding, Perceptual Linear Prediction, Mel-Frequency Cepstral Coefficient (MFCC) and Spectrographic Analysis are used. And for Training and Testing purposes Hidden Markov Model (HMM), Artificial Neural Network (ANN) and Vector Quantization (VQ) are used. The authors concluded their research by noting that feature extraction the most suitable method is to use MFCCs, while for training, HMM is most suitable.\n\nAhmed and Abdo (2017) also explained the same techniques as explained by Ibrahim et al. (2008) and also proposed a technique for Qur'anic verses verification [UNMAPPED:4]. The audio recitations from the verified scholars are stored in the database. For testing any new recitation the audio signal is aligned with the Qur'an text after the preprocessing steps and this is the most challenging part. The MFCC feature vectors of this recitation to be tested is compared with the verified recitations and differences in recitation are notified to the reciter.\n\nQayyum et al. (2018) used a deep learning approach to address a less solved area of speech recognition [W2901595714]. They applied Bidirectional Long Short-Term Memory (BLSTM) model to identify the Qur'an reciter. The model takes recitations of various lengths from five different reciters and extracts the MFCC features from them to feed as input to BLSTM. The results achieved are exceptional as accuracy reaches up to 99.89% for identifying the correct reciter for 3 seconds of recitation. These results are far better than other powerful models like SVM which remained below 90%. The model also surpassed the conventional ANN model that could achieve an accuracy of 91.8%.\n\nQur'an is a sacred book and it must be recited with utmost care as by a minor change in the pronunciation the meaning of that word changes. Mohammed et al. (2015) proposed a four-staged method for verification of Qur'an recitation using speech recognition techniques [UNMAPPED:75]. These stages are input preparation, feature extraction by MFCC, audio match and training followed by testing of the model using HMM. The matching stage is significant as it will search the MFCC feature of input recitation in the database of already stored authentic recitations MFCC features. If the features match then recitation will be considered authentic.\n\nJamaliah Ibrahim et al. (2013) investigated the Tajweed checking system using speech recognition to complement the conventional methods of Qur'anic learning with the latest technology [W1977971867]. The authors provide insights into the use of MFCC for feature extraction and HMM method for classification part of speech recognition. The initial system was tested for Surah Al Fatiha (Chapter 1), which results in a recognition rate of 91.95% on verse level and 86.41% phoneme level. These results show that the developed system has the potential to be adopted in the education system to support the traditional methods in Qur'anic learning process.\n\nMuhammad et al. (2012) developed an intelligent system E-Hafiz that helps in recitation and memorization of Qur'an [UNMAPPED:79]. Recitation. The availability of Qur'an experts is not common in non-muslim countries which hinders the process of learning and memorizing Qur'an. To develop E-Hafiz, MFCC feature extraction is adopted. MFCC features of reciter are compared with that of experts. Reciters recite verses from the Qur'an in the presence of an expert who points out the mistakes. Expert rectifications are compared with the mistakes pointed out by E-Hafiz system to measure the accuracy. The accuracy of this system on a group of men, children, and women is 92%, 90%, and 86%, respectively.\n\nAmrani et al. (2016) use simplified phonemes in Automatic Speech Recognition (ASR) for Qur'anic recitation [UNMAPPED:25]. CMUsphinx toolkit in used in the project. Data used is the recitations of the first and last 3 surahs of the Qur'an. The audio data is of almost 40 minutes from male speakers. Different training configurations are tried and the best result was obtained at 32 dimensions of the Gaussian mixtures. It was concluded that by using a simple phoneme list instead of romanized phonemes, which are difficult to generate for the whole Qur'an, it is possible to build an ASR for the complete Qur'an by adding more recitations of the renowned reciters to the database.\n\nAbro et al. (2012) tried to automate the Qur'an memorization process using speech recognition techniques [W2543133472]. For feature extraction, MFCC is used and ANN is used for acoustic modeling and pattern recognition. The data set used has twenty utterances of the last surah of the Qur'an (Chapter 114), recited by a fluent reciter of the Qur'an. A dataset for recitations with errors is generated artificially by removing some words from original recitations. Classification of correct verses with errors is done. Experiments failed to differentiate between the correct recitations and recitations with errors and give false positives. It was concluded that this simple technique is not suitable for automating the Qur'an memorization. And further work is needed to be done.\n\nYekache et al. (2012) discussed the initial steps towards making the Qur'an reader controlled by speech commands [UNMAPPED:107]. In this regard, they gathered speech data for names of all 114 surah of the Qur'an, some reciter's names, and some other commands. They adopted HMMs for acoustic model training and used the CMUSphinx toolkit for developing this system.\n\nTabbal et al. (2006) presented the delimitation of Qur'anic verses using speech recognition techniques [W1519357722]. The amount of Qur'anic recitations available online for free is promising but these do not have verse by verse trimmed. So, there is a need to make an automatic system that trims the recitations of the Qur'an on verse level. The toolkit used in this work is CMU sphinx. The data set is the recitations of Surah Al-Ikhlas (Chapter 112) by professional reciters and by normal reciters who do not follow the tajweed rules strictly. The mean recognition ratio on 5 professional reciters who recited in the Tajweed style is 90% and 8 professional reciters who recited in Tarteel style is 92%. Experimental results on the recitation of normal Arabic speaking 20 males is 90% and 20 females are 85%.\n\nAl-Bakeri and Basuhail (2017) built an ASR for tajweed checking and integrated it into a self-learning environment that must ensure the Qur'an is pronounced correctly as per the tajweed rules [UNMAPPED:9]. For feature extraction, MFCC is used. HMM is used for acoustic model training and Gaussian mixture density is used to calculate the state emission probabilities. Surah Al-Ikhlas and Surah Al-Rahman (Chapter 55) recited by ten reciters is used as input. Two scenarios are followed, one is the use of phonemes and the second is the use of syllables. The use of syllables performs well when the data is small and gives 100% accuracy for Surah Al-Ikhlas. In results of using phoneme accuracy rate of 89.47% is achieved.\n\nPutra et al. (2012) tried to minimize the difficulty in the learning process of the Qur'an using speech recognition and integrated the system with a learning software [UNMAPPED:88]. For speech recognition, MFCC features and Gaussian Mixture Model (GMM) modeling are used. Interactive multimedia software is built in a prototype stage. Accuracy for pronunciation of reciters is 70%, 90% for recitation law, and 60% for a combination of these two. The results show that performance is poor as the dataset used is small.\n\nTabbaa and Soudan (2015) worked on computer-aided training for learning the Qur'an recitation [W2201383606]. HMM-based ASR initially recognizes the recitation phones. Only two classifiers are trained, one for differentiation between emphasized and non-emphasized pronunciation of letter R and the second classifier to discriminate closely related letters. Data set used is the telephone calls on a TV program where a professional reciter recites a page from the Qur'an and then listens to the callers'. The ASR system gives 97.6% word level accuracy. For phone-level classification, four different classification algorithms are tested and the best one is chosen for each scenario. These four algorithms are SVM, Neural Network Multi-layer Perceptron (MLP), Bagging, and Random Committee. To test the performance of the complete system 60 minutes of audio data from 18 female and 14 male reciters are used. The previously mentioned 97.6% accuracy is reduced to 84% if mispronounced phones are considered a word-level error. After integrating the classifier, the accuracy is improved to 91.2% as it reduced the phone level of false positives and false negatives.\n\nSatori et al. (2007) studied some fundamentals of Arabic speech recognition using the CMUSphinx toolkit [W2123648823]. The data set was made in-house by 6 Moroccan male speakers, each of them spoke ten Arabic digits. Each digit is repeated 5 times by each speaker and hence a total of 300 utterances are there in the data. The mean recognition ratio of the testing experiment on the three male-person utterances of these 10 digits is 86.66%, 86.66%, and 83.33% respectively. Hello_Arabic_Digit application is presented so that it would be adopted in the Arabic speech recognition system.\n\nEl Amrani et al. (2016) investigate the use of simplified Arabic phonemes in building a phonetic dictionary for a speech recognition system [UNMAPPED:44]. Normally Romanized phonemes are used in phonetic dictionaries required to train ASR. The audio data used are the recitations of famous reciters of the first and last three surahs of the Qur'an. CMUsphinx toolkit is used and the building of a phonetic dictionary consisting of simplified Arabic phonemes from the Qur'anic text is automated through a computer program. Hence, the transcription file, phonetic dictionary, and list of phones are automatically generated by the developed program. Experiments have been done with different training settings and the lowest word error rate obtained is 50.0% and 55.7% while using 90% and 80% of the audio data in training respectively.\n\nAhsiah et al. (2013) propose a tajweed checking system to support the learning of the Qur'anic recitation [W2028090143]. The proposed system listens to the reciters' recitation and matches it with the recitations of the experts and finds out the differences between them and hence tells the mistakes to the reciter. The proposed system used MFCC for feature extraction and HMM for feature classification.\n\nMohammed et al. (2017) investigate the phoneme duration at Madd, Ghunna and some other letter characters [W2620325601]. These are a few rules from the important Tajweed rules that need to be followed while reciting the Qur'an. To calculate the duration of Madd and Ghunna in recitation data is collected from the recitations of expert reciters. This system is used to point out any mistakes in Madd and Ghunna rules of any person's recitations. 600 words of data are collected by recitations of 10 Reciters. And from the recitations mean duration of each of the Madd and Ghunna is calculated. The subsection is summarized in **TABLE 13**.\n\n**TABLE 13** Speech recognition work for Qur'an\n\n{{TABLE:tbl_13}}",
+          "citations": [
+            "W2901595714",
+            "W1977971867",
+            "W2543133472",
+            "W1519357722",
+            "W2201383606",
+            "W2123648823",
+            "W2028090143",
+            "W2620325601"
+          ],
+          "tables_in_text": [
+            "tbl_13"
+          ],
+          "citations_unmapped": [
+            "34",
+            "61",
+            "4",
+            "75",
+            "79",
+            "25",
+            "107",
+            "9",
+            "88",
+            "44",
+            "2014",
+            "2008",
+            "2017",
+            "2018",
+            "2015",
+            "2013",
+            "2012",
+            "2016",
+            "2006",
+            "2007"
+          ]
+        },
+        {
+          "subsection_id": "s_3_10",
+          "subsection_index": 10,
+          "subsection_label": "3.10 Quranic Corpus and Qur'anic NLP",
+          "subsubsections": [],
+          "text": "Alrabiah et al. (2014) have contributed to classic Arabic NLP by creating a large classical Arabic corpus of more than fifty and a half million words [UNMAPPED:19]. The corpus consists of six domains and the major portion is dominated by religion with 46.73%. They have also performed two empirical studies. Both these studies are dedicated to finding the collocations in classical Arabic. For this purpose, they have performed eight statistical association measures. For the first study, QAC is chosen. This first study is further broken into two phases. In the first phase, mean average precision (MAP) is measured for the association rules by making the least frequent part of the collocation node while in the second part the most frequent part is made the node. For the Qur'anic corpus, collocation extraction with the least frequent word as node gave better results. For choosing the most frequent word as a node, the MAP for all association results drops significantly, because the more frequent part will have more association with other words. There is a great drop in MAP for log-likelihood, although it shows good performance in the first phase. For the second empirical study, association measures were checked on the newly developed large corpus that is KSUCCA. The experiment aimed at investigating whether the association measures change by changing the size of the corpus or not. It was observed that scores for all the measures dropped quite significantly. However, it was observed that MI.log-frequency and log Dice are the most suitable in terms of their MAP for both small and large corpora. The results of the eight association rules and their comparison are shown in **TABLE 14**:\n\n**TABLE 14** Performance of algorithms against corpus\n\n{{TABLE:tbl_14}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_14"
+          ],
+          "citations_unmapped": [
+            "19",
+            "2014"
+          ]
+        },
+        {
+          "subsection_id": "s_3_11",
+          "subsection_index": 11,
+          "subsection_label": "3.11 Q/A Systems and Qur'anic NLP",
+          "subsubsections": [],
+          "text": "Hamed and Ab Aziz (2016) developed a question-answering system using an artificial neural network to classify the verses related to pilgrimage and fasting [UNMAPPED:55]. The dataset used for this tool is the English translation of the second chapter of the Qur'an. The tool consists of three components. The first component is the question analysis module, which performs preprocessing on the user query to clean it and then performs the expansion using WordNet and Islamic terms. The document retrieval module is the second component, which is based on a neural network. Model is trained in this component at 150 verses belonging to three categories of fasting, pilgrimage, and none of these. The final component is the answer selection module. With the help of the first module where the question was converted into a machine-interpretable form, the relevant verses are retrieved using the N-gram matching technique. The relevant verses are ranked where the verse with the most matched words with the question is placed at the top. The model has provided great results. The F-score of verses classification is 90% and the answers retrieved by the tool achieved the F-score of nearly 87%.\n\nAl-Bayan, the question-answer system developed by Mohamed et al. (2015) uses a supervised machine learning approach and keyword matching [W2250877322]. The system provides the answer by a complex system, which makes it sure that the answer returned is semantically related to the question. The system makes a semantic relatedness check by calculating cosine similarity between question and answer vectors. In the second stage, it calculates the keyword matching score. These two scores are used as input to the decision tree that calculates if the answer falls in the direct, related, or irrelevant category. The tool was evaluated on common Fatwa questions and answers.\n\nHamoud and Atwell (2017) have contributed by developing a corpus that consists of questions and answers related to knowledge of the Qur'an [UNMAPPED:57]. The corpus contains 1000 questions and answers in Arabic and 500 in the English language. To make a corpus or dataset related to the Qur'an requires extra care about the authentication of information and knowledge as it is a divine book according to Islamic belief. Four sources were used to develop the corpus. A large set of questions and answers was retrieved from different websites. This data is important as it is closer to the people asking various questions related to Islamic concepts. Some questions are retrieved from the Qur'an itself. The third source is the questions asked by the Muslims by scholars of the Holy Mosque in Makkah and the fourth source is from a survey. All the data collected is merged and unified and is made useful by cleaning it. This huge effort can prove very useful in developing tools and platforms that provide authentic and relevant answers to people efficiently. The corpus has not been made public yet as the work continues to enhance the dataset by creating variants of current questions.\n\nRecently, a Qur'anic Reading Comprehension Dataset (QRCD), which is related to the automatic extractive Question Answering system competition announced for the 5th Workshop on Open-Source Arabic Corpora and Processing Tools (OSACT), 2022 for Language Resources and Evaluation Conference (LREC). Details of the dataset, competition, and evaluation criteria are described in [UNMAPPED:71]. Malhas and Elsayed (2022) extended the earlier work by introducing CLassical-AraBERT, a new AraBERT-based pre-trained model which is further pre-trained on approximately 1B words classical Arabic (CA) dataset [W4295065948]. It is intended to complement MSA resources used in pre-training the initial model. And finally, they leveraged cross-lingual transfer learning from MSA to CA. Moreover, the authors introduced a new metric, pAP (partial average precision). The new metric integrates partial matching in the evaluation over multi-answer and single-answer MSA questions.",
+          "citations": [
+            "W2250877322",
+            "W4295065948"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "55",
+            "57",
+            "71",
+            "2016",
+            "2015",
+            "2017",
+            "2022"
+          ]
+        },
+        {
+          "subsection_id": "s_3_12",
+          "subsection_index": 12,
+          "subsection_label": "3.12 Interface Systems and Qur'anic NLP",
+          "subsubsections": [],
+          "text": "An interface system is used where a user can easily interact and can get the answers to queries without having any knowledge of programming. Interfaces can be online applications that are created for the common man. One such system has been designed by ElSayed (2015) for people who are not database experts [UNMAPPED:46]. The system takes input from users in the form of an Arabic language query. Most of the systems have knowledge stored in their databases in the form of structured data that is returned upon the query. This query has to be in the specific syntax of the database system. The designed system allows the user to input the question in the Arabic language and then converts that question into a specific query and returns the output. The system can be divided into two parts. The first part is NLP-based. After the user inputs his query using a graphical user, there is a lexical analyzer scans the whole sentence and performs a spelling check too. The Arabic query is then converted into its English translation. A parser converts the whole sentence into structured parts to make it easy for the computer to understand. After this translation, the second part comes into play. SQL generator converts the English sentence to a resembling SQL query. Finally, this query is applied to the database and the results are returned to the user. The database consists of Qur'anic chapters, verses, words, and Juz. There are two types of query modes, imperative mode, and question mode. The former starts with an imperative verb and the latter is an interrogative style questioning mode. The system currently retrieves answers to simpler queries like \"Which surah contains the word Allah?\"",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "46",
+            "2015"
+          ]
+        },
+        {
+          "subsection_id": "s_3_13",
+          "subsection_index": 13,
+          "subsection_label": "3.13 Authentication/Verification and Qur'anic NLP",
+          "subsubsections": [],
+          "text": "The Internet is the source of information in the 21st century. There is a large amount of data that is available on the internet today, which keeps increasing exponentially. However, the information contained in this data can be correct as well as incorrect. So, one has to be very careful while browsing and searching such data. Anyone can post anything he wishes and that can be read by anyone. The same is the case with Islamic information. Many people write and discuss Islamic issues online. In these issues, it has been observed that when Qur'anic verses or Hadith are quoted as references, many times the quoted references are either incomplete, incorrect or totally out of context. This leads to complete misinformation. Special care is required when it comes to referring to the Qur'anic verses. As Qur'an is a sacred book, no change is expected for even a single letter in the whole book. Muslims around the world try their best to make sure that there is no mistake while quoting Qur'anic verses online. However, incorrect quotations can arise due to multiple reasons. Sometimes a word or letter may be missed mistakenly while typing or copying and sometimes incomplete verses are quoted because of Islamophobia. For example, it has been observed that, after the war on terrorism began, a Qur'anic verse was quoted out of context by many people, portraying that Qur'an persuades all Muslims to fight non-Muslims in the name of Allah. The half-quoted verse with its full version is shown in **FIGURE 13**. There is a need for authentication tools that can verify the online available Qur'anic quotes to provide the true knowledge of the Qur'an to everyone.\n\n**FIGURE 13** Correct and incorrect quotation of Qur'anic Verse 2:190\n> \u0648\u064e\u0642\u064e\u062a\u0652\u0644\u064f\u0648\u0652 \u0623\u064e\u0641\u0650 \u0633\u064e\u0628\u0650\u064a\u0644\u064e \u0623\u064e\u0644\u0627\u064e\u0647\u064e \u0627\u0644\u0652\u0630\u0650\u064a\u0646\u064e \u064a\u064f\u0642\u064e\u062a\u0652\u0644\u064f\u0648\u064f\u0646\u064e\u0643\u064f\u0645\u0652 \u0648\u064e\u0644\u0627\u064e \u062a\u064e\u0639\u0652\u062a\u064e\u062f\u064f\u0648\u0627\u0652\n> Fight in the path of Allah 'only' against those who wage war against you, but do not exceed the limits\n> Allah does not like transgressors. (2:190) CORRECT\n> \u0648\u0623\u062d\u0645\u062f \u0641\u0646 \u0645\u0643\u064a\u0644 \u0627\u0644\u0645\u062f\n> Fight in the path of Allah INCORRECT (OUT OF CONTEXT)\n\nAlshareef and El Saddik (2012) have designed a tool to verify the authenticity of Qur'anic verses quoted online [W1988925857]. Qur'an is either quoted in different issues being discussed online or there are online platforms that provide utility to read Qur'an online. All these Qur'anic texts must be correct. The authentication checker model consists of two parts, which are Qur'anic quote filter and Verifier. In the filter, the quote to be verified is inserted into the system and then diacritics and symbols are removed from it. After that, the verifier part checks if the quoted verse is in the Qur'an or not. If the word-by-word verse is matched then it is marked as correct. If it is a partial quote or if two verses are quoted without a full stop, they are considered incorrect because both these cases change the meaning. In case, no verse matches exactly, the system checks for the nearest possible verses in Qur'an and returns them. If there is no verse similar to the quoted one, then the input quote is marked as incorrect. The system checks for similar verses and exact matches using SQL query. The tool is very useful in terms of checking the authenticity of verses. The authors have reported that they plan to integrate the tool with the online web so that it can be accessed by Internet users to verify the quotes that they are reading.\n\nAlsmadi and Zarour (2017) have also developed an online tool that can help in checking the authentication of Qur'anic verses available online [UNMAPPED:22]. The tool consists of two parts. The first part is used for information retrieval and the other part is used to check the authentication of the retrieved verses against a standard relevant verse. The information retrieval part consists of a web crawler. Web crawler works by finding the queried text at online websites and then returning the relevant pages. In this tool, a correct verse is given as a query and the crawler then retrieves the top ten pages returned from the Google search engine. These pages include both Islamic and non-Islamic pages. The verses provided by these pages are then checked with the verifier system. The verifier uses a distinct method that is of using a hashing algorithm to verify the retrieved verse. MD5 algorithm was chosen because of its popularity. It was also verified if font size and color affect the code for the same input or not. After all the checks, the MD5 algorithm was applied. The algorithm is great in the sense that it returns a completely different hashing code even on a change of a single character or diacritic. The experiment was performed on one of the websites and many errors were found in different verses.",
+          "citations": [
+            "W1988925857"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "22",
+            "2012",
+            "2017"
+          ]
+        },
+        {
+          "subsection_id": "s_3_14",
+          "subsection_index": 14,
+          "subsection_label": "3.14 Crowdsourcing and Qur'anic NLP",
+          "subsubsections": [],
+          "text": "Crowdsourcing is one of the most popular methods adopted worldwide for NLP tasks. Datasets are built with the help of the public. In this way, a large number of inputs are received and there is variety in data too. This particular method is also adopted for creating NLP datasets, tagging, and annotations tasks. Crowdsourcing helps achieve the goal in a much more efficient way. A similar sort of approach can also be adopted for Qur'anic NLP. The contribution that can be achieved by crowdsourcing can include word tagging, similarity checks, annotations, POS tagging, and many others. However, crowdsourcing for Qur'anic NLP can differ from other NLP tasks because a lot of care is required in this case as Qur'an is a religious book of Islam and any wrong input can lead to false information.\n\nZaghouani and Dukes (2014) have experimented to see if crowdsourcing can be beneficial for Qur'anic NLP or not [UNMAPPED:111]. They used Amazon Mechanical Turk (AMT) to perform annotations for Qur'an [UNMAPPED:24]. There are many crowdsourcing platforms available, but AMT is the most widely used for such tasks. There are many workers on the platform who get paid for the problem they solve. Keeping in view that Arabic is not an easy language, the questions were asked with multiple choices, so that the efficiency may be improved. Two different tasks were chosen, POS tagging and grammatical case endings. For the grammatical case endings, 100 words were chosen from chapter 23, and for POS tagging, 200 words were chosen from the same chapter. Since such tasks are not easy for non-Arabs and even some of the tasks are even difficult for expert Arabic linguists, therefore initially a screening test was also taken and only high performers were allowed to perform the tasks. Out of 137 workers, only 24 could pass the test and among them, 17 workers could perform annotation. This low number of workers doing the annotation shows that Arabic NLP, and especially Qur'anic NLP, is not an easy task. The accuracy for grammatical case ending was 50% and for POS tagging it was 63.9%. The results were benchmarked with QAC. The results proved that crowdsourcing is not a good option for Qur'anic or Arabic NLP. It can be concluded with this experiment that crowdsourcing can not be directly applied in this case and tasks related to Qur'an can only be done with the help of experts.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "111",
+            "24",
+            "2014"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Quranic NLP tasks are reviewed in this section. **FIGURE 9** shows the categorization of tasks.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Qur'anic NLP Tools & Resources",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 QurSim Corpus",
+          "subsubsections": [],
+          "text": "Sharaf and Atwell (2012), is a large Qur'anic corpus with similar and related verses linked together [UNMAPPED:96]. This corpus is useful for NLP tasks such as automatic similarity and relatedness detection in short texts as well as machine translation and paraphrase analysis. The corpus includes more than 7600 pairs of related verses collected from multiple scholarly sources. The dataset was incorporated with query pages online to allow the visualization of a given verse and its network of related verses.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "96",
+            "2012"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 Quranic Proposition Bank",
+          "subsubsections": [],
+          "text": "To address the challenges of Natural Language Understanding, Palmer et al. (2005) created the English Propbank which is a corpus annotated with verbs and their arguments [W2158847908]. This corpus was used in the automatic Semantic role labeling (SRL). Later on, Zaghouani et al. (2012); Palmer et al. (2008) created the first Arabic Propbank which was followed by a Qur'anic Propbank [UNMAPPED:112, UNMAPPED:84]. The Qur'anic Propbank was based on the Qur'anic Arabic Dependency Treebank (QATB) [UNMAPPED:40].\n\nThe Qur'anic Arabic PropBank (QAPB) is a unique resource as it increased the coverage of the Arabic Propbank by adding the Qur'anic Arabic variety and the semantic usage of classical Arabic religious text and poetic literary Arabic. to create their corpus, the authors used an Arabic root meaning tool as a reference tool to identify the multiple possible meaning of the verbs in the Qur'an.",
+          "citations": [
+            "W2158847908"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "112",
+            "84",
+            "40",
+            "2005",
+            "2012",
+            "2008"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3 Annotation Tool",
+          "subsubsections": [],
+          "text": "BAMA is an annotation tool developed in 2004 by the Linguistic Data Consortium, the trustees of the University of Pennsylvania [UNMAPPED:35]. BAMA performs annotation of Arabic text by tagging POS. This tool has been used in the automatic morphological annotation phase of the Qur'an by Dukes and Habash (2010) with few modifications [W2085759086]. BAMA performs the tokenization of the text and the segmentation of words into prefix, stems, and suffix. The tool then analyzes these segments and allots POS. The tool also helps in analyzing noun case endings, verb moods, vowels, and diacritics. BAMA can be helpful in grammatical tasks related to the Qur'an but care must be taken as this tool has been developed for MSA and not for the Qur'an in particular. Many words of the classical Arabic Qur'an are not available in BAMA [W2085759086].\n\nMuhammad (2012) presented a methodology to annotate conceptual co-reference and text Mining the Qur'an [UNMAPPED:78]. The raw Arabic text of the Qur'an was divided into several morphological units using the Qur'anic Arabic Corpus (QAC).\n\nLater on, Information Retrieval (IR) techniques were used to convert and index the Qur'anic terms. In total, approximately 24,000 pronouns were annotated with their references. This list of referents was organized into more than 1,000 ontological concepts. This data set is helpful in particular for NLP tasks such as the automatic co-reference resolution.",
+          "citations": [
+            "W2085759086"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "35",
+            "78",
+            "2010",
+            "2012"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4 Querying Tools",
+          "subsubsections": [],
+          "text": "SPARQL is a query language used to perform queries on RDF (Resource Description Framework) [UNMAPPED:100]. RDF is a database for the semantic web, which is an extension of the world wide web. RDF stores the structured and semi-structured data of websites so that it can be queried for useful purposes. SPARQL is similar to SQL language SPARQL has been used by Sherif and Ngonga (2015) where they have stored Qur'an data in RDF format [W2631303910]. The purpose of storing data in RDF is to make it usable for many online platforms. Khan et al. (2013) have also used SPARQL query language for the semantic search of the Qur'an in the English language [W2328123973]. SQL is a structured query language that is used to perform queries on database [UNMAPPED:62]. Unlike, SPARQL, it is not designed for the semantic web. SQL can be used to retrieve from and store to database. SQL has been used in many search applications developed for the Qur'an. Qur'any Explorer is a comprehensive tool available online that covers the various concepts and themes found in the Qur'an created by Noorhan Abbas and Eric Atwell. ^7^\n\nThe corpus of Qur'any Explorer is linked to an ontology taken from Mushaf Al Tajweed which is considered an expert source. The ontology covers approximately 1200 Qur'anic concepts. Scholars can use the Qur'any ontology browser to find a given concept and display the verses related to the concept selected accurately. Qur'any was implemented by using several technologies such as Google Python AppEngine, the NLTK Python Natural Language ToolKit, XML and AJAX JavaScript, and Yahoo! User Interface Library.",
+          "citations": [
+            "W2631303910",
+            "W2328123973"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "100",
+            "62",
+            "2015",
+            "2013"
+          ]
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "4.5 Tools for Ontology",
+          "subsubsections": [],
+          "text": "Prot\u00e9g\u00e9-OWL is an open source editor for Prot\u00e9g\u00e9 framework, which is used to develop and edit ontology systematically [UNMAPPED:87]. OWL is capable of exploiting features of Prot\u00e9g\u00e9 such as visualization, storage formats and user interface [UNMAPPED:92]. Prot\u00e9g\u00e9-OWL itself is developed in Java. This technology has been utilized by Ta'a et al. (2017) in the development of an ontology for the Qur'an [W2785249538]. Since it is an open-source tool, it can help develop a conceptual search system based on ontology.\n\nNoy and Musen (2003) developed a set of tools for managing multiple ontologies [W1970348112]. IPROMPT tool is one of these tools used for merging two ontologies. The tool provides guidelines to the user in each step to make the correct merger. It also provides suggestions to avoid inconsistencies and errors. The other tool is ANCHORPROMPT, which finds correlations between concepts described in ontologies to be merged. There have been various ontologies developed for the Qur'an but most of them are partial. Ahmed and Atwell (2016) merged the partial ontologies using PROMPT tools and achieved a single consistent ontology with a broader range of concepts [UNMAPPED:5].\n\n**TABLE 15** List of tools used for Qur'anic NLP tasks\n\n{{TABLE:tbl_15}}",
+          "citations": [
+            "W2785249538",
+            "W1970348112"
+          ],
+          "tables_in_text": [
+            "tbl_15"
+          ],
+          "citations_unmapped": [
+            "87",
+            "92",
+            "5",
+            "2017",
+            "2003",
+            "2016"
+          ]
+        },
+        {
+          "subsection_id": "s_4_6",
+          "subsection_index": 6,
+          "subsection_label": "4.6 Speech Recognition Tool",
+          "subsubsections": [],
+          "text": "CMU sphinx is an open-source toolkit developed by Carnegie Mellon University [UNMAPPED:37]. It is a leading speech recognition toolkit adopted in various speech applications. It consists of four components used for speech recognition and training acoustic models. The tool contains HMM inside it for speech recognition. CMU sphinx has been used in many speech recognition applications that have been developed for the Qur'an. Most of these applications are focused on correct Tajweed.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "37"
+          ]
+        },
+        {
+          "subsection_id": "s_4_7",
+          "subsection_index": 7,
+          "subsection_label": "4.7 Crowdsourcing Tool",
+          "subsubsections": [],
+          "text": "AMT is a crowdsourcing platform by Amazon that helps individuals and companies to outsource their work [UNMAPPED:24]. AMT is mostly used for survey tasks in which people are paid for their contributions. This helps in having data collected from different sources in a short period. Crowdsourcing can also be utilized for developing datasets for Qur'an NLP tasks. Zaghouani and Dukes (2014) used AMT to see if it is beneficial to use this crowdsourcing platform for Qur'anic NLP tasks [UNMAPPED:111]. However, the results were not satisfactory as the task was related to the complex domain of grammar that requires expertise. However, AMT can be used in tasks related to Qur'anic NLP that do not require expert skills, e.g., collection of recitations from people, survey related to memorization of the Qur'an, or some other generic Qur'an-related survey.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "24",
+            "111",
+            "2014"
+          ]
+        },
+        {
+          "subsection_id": "s_4_8",
+          "subsection_index": 8,
+          "subsection_label": "4.8 Qur'an Translation Resource",
+          "subsubsections": [],
+          "text": "Tanzil is an open source platform that not only provides Qur'anic Arabic Unicode for various applications but also provides translations in many languages [UNMAPPED:104]. There are multiple translations available in each language provided by different translators. The translation can be downloaded and used in Qur'anic NLP applications. The translations can be downloaded in different formats.\n\nAnother valuable repository dedicated to application developers is the Qur'andatabase.org ^8^ as they can easily download 104 translations of the Qur'an in multiple formats such as plain text, CSV, XML, and MSQL among other formats.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "104"
+          ]
+        },
+        {
+          "subsection_id": "s_4_9",
+          "subsection_index": 9,
+          "subsection_label": "4.9 Qur'an Corpus Resource",
+          "subsubsections": [],
+          "text": "QAC has been discussed as a contribution in this paper but it has also been used as a resource in Bentrcia et al. (2018) and Sherif and Ngonga (2015) [W2788308991, W2631303910]. QAC is a rich corpus that can be especially used in tasks where annotated Qur'anic data is required. QAC provides word-level grammar, syntax, and morphology [UNMAPPED:39]. The corpus is significant as the annotations have been manually verified by volunteers and experts.\n\n**TABLE 15** summarizes the tools used for Qur'anic NLP tasks.\n\nThe timeline for milestones related to Qur'anic NLP are shown in **FIGURE 14**. This timeline is as per the survey conducted in this paper.\n\n**FIGURE 14** Timeline with respect to major milestones based on Qura'nic NLP survey\n> 2002 BAMA Buckwalter Arabic Morphological Analyzer University of Pennsylvania\n> 2005 First statistical Qur'anic verse classification Al-Kabi et al.\n> 2006 Speech Recognition for verse delimitation Tabbal et al.\n> 2007 Tanzil: First multilingual translation source tanzil.net\n> 2009 Interactive Qur'anic Arabic Corpus Dukes et al.\n> 2010 First Qur'an dependency tree Dukes et al.\n> 2010 First verified syntactic & morphology annotation Dukes et al.\n> 2012 Online Qur'an Verification Tool based on exact word match Alshareef et al.\n> 2013 Unsupervised ML for Qur'an topic using LDA Siddique et al.\n> 2015 Supervised ML search based on decision tree Mohamed et al.\n> 2016 First Neural Network Based Q/A System Hamed et al.\n> 2018 First Qur'an reciter Identifier using BLSTM Adnan et al.\n> 2019 Qur'anic English WordNet for semantic search Hammad et al.\n> 2021 POS tagging based on Neural Network ELAffendi et al.",
+          "citations": [
+            "W2788308991",
+            "W2631303910"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "39",
+            "2018",
+            "2015"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we will highlight the tools that have been used in various Qur'anic NLP tasks. There are many tools and platforms that have been utilized. The tools covered here are those that have directly contributed to Qur'anic NLP.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 Caveats and Potential Pitfalls in Qur'anic NLP Research",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The matter of using technology to obtain an understanding of religious texts is a sensitive one. Languages are well-known to be ambiguous and the Arabic language in particular is known for its eloquence, conciseness as well as richness. The same word can often have many different meanings\u2014e.g., the Arabic word \"min\" is said to have at least 15 different meanings ^9^. According to Islamic scholars, the correct understanding of Qur'an can only be obtained by knowing both the context (both grammatically and also chronologically in terms of how and when the verse was revealed). For a long time, Qur'an was not translated to other languages because Arabic is assumed to be essential for understanding the Qur'an\u2014even though now many \"translations of the meanings\" of the Qur'an have been written for pragmatic reasons that dictate the dissemination of the meanings of the Qur'an.\n\nMaking a mistake in misunderstanding the nuances of the Qur'an can have grave consequences. In the Islamic tradition, in-depth knowledge of the Arabic language is one of the keys to understanding Islamic principles and laws. In the Islamic tradition, it is commonly assumed that to attempt a translation (tarjumah) or an elaboration (tafsir) of the Qur'an, one needs to master many sciences including the Arabic grammar (ilm al-nahw), morphology (ilm al-sarf), rhetoric (ilm al-balaghah), the causes of revelation (asbab al-nuzul), etymology (ilm al-ishtiqaq). There are authentic reports of the Prophet of Islam admonishing those people who speak in matters of the Qur'an from their opinion without due diligence and educational pedigree. ^10^\n\nDespite tremendous progress and recent successes, NLP technologies and computer translation still have a long way to go [UNMAPPED:60]. This is particularly the case for low-resource languages such as Arabic. Arabic NLP tools particularly for Qur'anic Research need to have humans-in-the-loop and algorithmic explanations and understanding need to be examined and verified by human scholars. Arabic NLP can however still play a strong role. For example, it can facilitate tasks such as search, and information retrieval and help humans in performing these quickly and at scale.\n\nIn this section, we highlight some caveats of taking an AI-based NLP approach to Qur'anic research:\n1. We should be wary of using the results of these models without involving subject-matter experts, particularly for results that are not aligned with previous scholarly interpretations and results. Any result that goes contrary to the consensus of early scholars should be re-checked and scrapped if it cannot be justified. This is necessary because notwithstanding the great advances in AI-based NLP, and the use of the term \"deep\" in \"deep learning\" and \"deep neural networks\", AI-based NLP solutions do not in general provide any deep human-level understanding and their results remain shallow [UNMAPPED:60]. That means, even in the future if we ever had a functioning explainable AI, results must conform to the authoritative scholarly interpretations. In this regard, we are following an early scholar's golden rule, \"this knowledge constitutes your religion, so be wary of whom you take your religion from\" [UNMAPPED:8]. This is not to diminish the practical utility of AI-based NLP, and the value of the AI-based NLP models would primarily be in their instrumental value in facilitating quicker research by being more scalable.\n2. It is important to develop customized tools and an ecosystem around Qur'anic research. This is because using stock tools from other languages or those tools that have been designed for MSA may not provide reasonable results when applied to Qur'anic applications. This is also needed since mainstream language models trained on unrelated corpora is that they may contain unexpected biases. For instance, Abid et al. (2021) have analyzed the state-of-the-art contextual language model GPT-3 and have shown that it gives persistent bias in tasks such as prompt completion, analogical reasoning, etc. [W3184144760]. These problems can be caused by biases in the data and in general ML-based NLP systems replicate and even amplify the biases in the training data and the presence of these errors requires human oversight for applications deploying these models [UNMAPPED:65]. This also underscores the previously-mentioned point that emphasized the need to have the results provided by the models vetted by experts for accuracy keeping in view the sensitive nature of the task of interpreting religious texts.\n\n**FIGURE 15** The first chapter (Surah al-Fatiha) of the Qur'an (Hafs Reading) in South Asian style (Mushaf in Indo-Pak Nasta'liq Script) compared with the Mushaf in Madani script\n> MUSHAF HAFS WITH INDO-PAK (NASTALIQ SCRIPT)\n> MUSHAF HAFS WITH MADANI SCRIPT",
+      "citations": [
+        "W3184144760"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "60",
+        "8",
+        "65",
+        "2021"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6 Open Issues and Future Research Directions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "As compared to English NLP, Qur'anic NLP is still evolving. The important open issues and directions for future research are highlighted next.\n1. For Qur'anic research, it is often useful to resort to non-Quranic corpus\u2014in particular, the Hadith corpus and other classical Arabic Islamic books\u2014since Qur'anic Arabic, or Classical Arabic, is different from Modern Standard Arabic and linguistic context of rare (gharib) words can be found by consulting the complementary resources. Future Qur'anic NLP research works should consider using these complementary data sources for developing better models and solutions.\n2. A researcher working in Qur'anic NLP should be aware of the nuances of Qur'anic orthography and recitation. Prof. Abdel Haleem tracks the history of Qur'anic orthography in [UNMAPPED:54] and the agreement of Islamic scholars upon al-rasm al-'Uthm\u0101n\u012b (the way of writing the text of the Qur'\u0101n compiled during the time of the Caliph Uthman b. Affan), also referred to as rasm al-mushaf, as the standard written representation of the recited text of the Qur'an. The orthography of the Qur'an differs from the present, and it is hard to pin down to simple rules. For instance, all the 190 occurrences for \"the Heavens\" and \"Heavens\" are spelled and the \u0627\u0644\u0633\u0645\u0648\u062a are respectively, except once it is spelled [UNMAPPED:8].\n3. Very few existing works have considered multimodal NLP models trained on text as well as data from other modalities including audio, and images. It is important to explore what new diverse capabilities can emerge from using multimodal NLP models for Qur'anic research.\n4. A lot of partial ontologies have been developed, which cover different concepts from the Qur'an. There is a need to develop a single consistent ontology based on Qur'an and Hadith that covers all the concepts from the Qur'an. Such an ontology can help in knowledge extraction, question answering, and search systems.\n5. Techniques based on deep learning have not been much utilized for Qur'anic NLP. Deep learning techniques can be useful in tasks where context remembrance is important and for the Qur'an, context is important while extracting knowledge. Recurrent Neural Networks (RNN) in the form of LSTM and BiLSTM, and other transformer-based architectures can be applied in various Qur'anic NLP tasks. There are a few transformer works emerging [UNMAPPED:86, UNMAPPED:105], but much more work remains to be done.\n6. Intelligent search systems are required for Qur'an, which should be able to answer the queries of people including Muslims and non-Muslims. Most of the current semantic and concept-based search systems are designed from the topic perspective and not from a user perspective.\n7. It is also well-known that multiple authenticated readings of the Qur'an have been reported from the Prophet Muhammad [UNMAPPED:8]. Such diversity cannot be ignored in any information retrieval process and accounting for this is yet another open issue and future research direction.\n8. It is important to note that the Qur'anic scripting method used in the Indo-Pak subcontinent slightly differs from the style used in Arab countries even though they agree upon Al-Rasm al-'Uthm\u0101n\u012b (see **FIGURE 15**). The Mushaf in Indo-Pak script relies upon the method of Imam Dani and Imam Ibn Dawud in writing some alphabets and diacritics per the Uthmani script in a way different from their rendering in the Mushaf in Madani script [UNMAPPED:7]. A major issue with many existing systems is that they are not able to recognize Qur'an text properly when expressed in Indo-Pak script. For instance, a Qur'anic verse (1:2) is provided as input to the online Arabic text processing tool \"Farasa\" [UNMAPPED:49] for part of speech tagging, both the verses are tagged completely differently (**FIGURE 16**). This highlights the problems that many Arabic NLP tools face when dealing with the different Qur'anic scripts.\n\n**FIGURE 16** Qur'anic verse (1:2) provided to the Farasa tool (Far) for part of speech tagging resulting in inconsistent results. Poor results are shown for the Qur'an Mushaf with Nasta'liq Script 15. (Legends: S: Start; DET: determiner; NOUN: noun; PREP: preposition; NSUFF: noun suffix; PUNC: punctuation; ABBREV: abbreviation; and E: End.)\n> MUSHAF HAFS WITH INDO-PAK (NASTALIQ SCRIPT) https://quranpedia.net/ar/surah/3/1\n> S DET+NOUN PREP NOUN NOUN DET+NOUN+NSUFF E\n> MUSHAF HAFS WITH MADANI SCRIPT https://quranpedia.net/ar/surah/2/1\n> S NOUN PREP PUNC NOUN PUNC ABBREV PREP NOUN NOUN NOUN PREP PUNC NOUN+NSUFF E",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "54",
+        "8",
+        "86",
+        "105",
+        "7",
+        "49"
+      ]
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "7 Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Qur'anic NLP is an important area of research due to the importance of the Qur'an as the holy book of Muslims, whose global population touches 2 billion people. There has been a lot of recent interest in developing AI-based NLP tools for the Arabic language. However, the research on Qur'anic NLP is less mature compared to Arabic NLP, which is itself compared to a low-resource language for which limited tools and data are available when compared to works focusing on the English language. The challenges related to the Qur'an are quite complex owing to its rich style, its orthography, and most importantly its sacredness. Researchers are trying to overcome the challenges related to all the domains of NLP but more effort is still required. Based on these NLP technologies for Qur'an, many beneficial online applications and systems can be developed that will be helpful for both Muslims and non-Muslims. In this paper, we have provided a comprehensive survey of Qur'anic Arabic focused NLP techniques, tools, and applications. Apart from discussing the various techniques, tools, and applications that researchers have used in past research, we also provide a section on potential pitfalls and caveats and discuss open research issues and highlight promising directions for future work. This is the first comprehensive survey on this important topic and it will be useful as a reference for researchers and practitioners interested in working in this domain.\n\n**Funding** Open Access funding provided by the Qatar National Library. Not applicable.\n**Data availability** Available on request.\n**Code availability** Not applicable.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Declarations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**Conflict of interest** No significant conflicts of interests/competing interests.\n\n**Open Access** This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": "s_1_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": "s_1_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": "s_1_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": "s_1_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": "s_1_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_8",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_9",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_10",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_5",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4311183537_tables.md"
+}

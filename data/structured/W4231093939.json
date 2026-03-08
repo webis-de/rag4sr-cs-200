@@ -1,0 +1,363 @@
+{
+  "id": "W4231093939",
+  "metadata": {
+    "title": "Rates and Predictors of Data and Code Sharing in the Medical and Health Sciences: Protocol for a Systematic Review and Individual Participant Data Meta-Analysis",
+    "n_sections": 8,
+    "n_subsections": 5,
+    "n_subsubsections": 17,
+    "n_tables": 1
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Keywords",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Systematic review, Meta-analysis, Data sharing, Code sharing, Medicine, Health sciences",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Background",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Over the last two decades there has been growing calls on the scientific community to improve the transparency of many elements of the scholarly research lifecycle. One key aspect that is of interest to this movement\u2014often termed the \"open science\" movement\u2014includes improving access to both the raw data underlying published research findings, as well as the syntax from relevant statistical software used to generate them (\"research code\") [W2994890174, W2991479131].\n\nWhile open science principles are being increasingly adopted and promoted by major medical and health research stakeholders, the debate about the advantages, disadvantages, ethics, and legalities of sharing research data alongside published research is far from settled. For example, from one perspective greater availability of research data and code is considered a desirable goal as it allows for independent verification of findings, greater detection of errors, and is associated with increased scholarly impact metrics [W2991479131, W2066415719, W2463568293]. Sharing data also facilitates more efficient and comprehensive aggregation of existing research findings, testing of secondary hypotheses not considered by the original authors, as well as evaluation of the robustness of chosen analytic strategies [W2066415719, W2050118439, W2526501380]. However, in contrast, other research points to many barriers to sharing data, such as: the navigation of participant privacy concerns, proprietary data and licensing terms, a lack of incentives to share, fears among researchers concerning loss of recognition and control over the research outputs (i.e., right to publish) and the misuse or misinterpretation of shared data, as well as the time and resource burdens associated with archiving data in a way that enables reuse [W2133559194, W2097205262, W2784830894, W2076432810, W3084643244].\n\nUltimately, despite contrasting evidence and opinions on the topic, funders of medical and health research continue to institute increasingly progressive policies governing sharing of research data and code. For example, the National Institutes of Health (NIH) and the National Science Foundation (NSF) both require grant applicants to submit comprehensive data management plans [W2784830894], with the NIH also expecting NIH-funded researchers to share data generated from large-scale human or non-human genomic research [UNMAPPED:12]. Similarly, publishers of medical research are also adopting more progressive data and code sharing policies. For example, a recent small survey of medical journal editors in 2019 by the first author observed 15% and 10% have instituted policies requiring public deposition of data and code sharing, respectively [W3101805290]. The same study also noted that 28% of medical journals required authors to include a formalised data availability statement [W3101805290], which is also now stipulated by the International Committee of Medical Journal Editors' (ICMJE) clinical trial data sharing policy for articles reporting the findings of clinical trials [W3011996301].\n\nTo date, numerous studies have investigated how prevalent data and code sharing is. With regard to medicine and health, this research has reported traditionally low, but increasing rates of sharing and use of data availability statements across many fields, including but not limited to: biomedicine [W2031739072, W2901231347, W2228927609, W3097500482], cardiology [W3081320314], oncology [W2998106009], orthopaedics [UNMAPPED:21], otolaryngology [W2980285684], radiology [W3011402391] and COVID-19-related research [W3111025944]. Previous research has also highlighted low sharing of clinical trial data both publicly [W3124092284], as well as in response to reasonable private requests (e.g., for a meta-analysis, secondary analysis, sample size calculation) [W2531377616, W2897489867, UNMAPPED:27]. However, how common sharing of data and code is across all medical and health research, how this has changed over time, as well as how strongly it is influenced by journal and funder policymaking and community expectations\u2014particularly in light of the COVID-19 pandemic [UNMAPPED:29]\u2014remains unclear.\n\nThe aim of this review is therefore to summarise the characteristics and synthesise the findings of this research to provide some insight into how well some of these policies are working at increasing sharing of data and code. It is hoped that the results will be able to provide some insights into how often research data and code are shared publicly and privately, how this has changed over time, and how effective some measures, such as the institution of mandatory data sharing policies and data availability statements have been in motivating researchers to share.",
+      "citations": [
+        "W2994890174",
+        "W2991479131",
+        "W2066415719",
+        "W2050118439",
+        "W2526501380",
+        "W2784830894",
+        "W3101805290",
+        "W3011996301",
+        "W3081320314",
+        "W2998106009",
+        "W2980285684",
+        "W3011402391",
+        "W3111025944",
+        "W3124092284"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "12",
+        "21",
+        "29"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Objectives",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "To summarise the characteristics and synthesise the findings of research that has empirically investigated (i) the prevalence of public sharing of research data and code alongside published articles (including preprints), (ii) the prevalence of private sharing of research data and code in response to reasonable requests, and (iii) factors associated with the sharing of either research output (e.g., the year published, the publisher's policy on sharing, the presence of a data or code availability statement).",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Criteria for considering studies for this review",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Types of studies",
+              "parent_subsection_id": "s_4_1",
+              "text": "This review will include studies that have empirically investigated the prevalence of data or code sharing, or both (termed \"meta-research studies\"), among a sample of scientific articles presenting original research from the medical and health sciences (termed \"primary studies\"). Studies can be published or unpublished articles (e.g., preprints) of any format (e.g., full-text article, conference abstract, research letter).\n\nWe will include meta-research studies regardless of (i) whether they have sampled primary studies in a random or non-random fashion, (ii) how much of a primary study's data has been shared (e.g., partial sharing versus full sharing), (iii) the types of data considered for sharing (e.g., microarray data, genomic data, macromolecular data, imaging data, clinical data) or (iv) whether the availability of data and code has been verified by the authors of the meta-research study. However, we will exclude any meta-research studies that investigated data or code availability (i) as part of a single individual participant data (IPD) meta-analysis, (ii) for a single primary study (i.e., case report) or (iii) via other forms of research dissemination (e.g., clinical trial registry entries, data repository pages).",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Types of data",
+              "parent_subsection_id": "s_4_1",
+              "text": "Three types of data will be of interest to this review\u2014aggregate data (i) reported by included meta-research studies, (ii) derived from available IPD or (iii) provided on request from meta-research study authors.\n\nFor all eligible meta-research studies, reported summary statistics relating to (i) demographic variables of the primary studies, (ii) estimates of the prevalence of data or code sharing (publicly or privately) for the relevant sample of primary articles, and (iii) estimates of the association between data or code sharing (publicly or privately) and demographic variables of interest will be collected. Refer to the Data extraction and management section for further details about the specific variables of interest to the study.\n\nIf meta-research studies use differing definitions to those outlined in this protocol (e.g., consider \"available on request\" declarations as \"shared\"), we will only extract findings compliant with our protocol, or recode variables in line with definitions outlined in this protocol when possible. Similarly, if meta-research studies report relevant outcome measures in aggregate (e.g., report results for a mixture of medical and non-medical disciplines, or across an extended period of publication dates), we will only extract findings conforming to variables of interest outlined in the protocol (e.g., prevalence rates among medical and health research, prevalence rates by eligible year(s) of publication).\n\nFor studies where the above required information has been collected, but is not reported in the published article, publicly available IPD will be used to derive summary statistics of interest, such as: prevalence rates for our primary outcome measures, or risk ratios for our secondary outcome measures (see Types of outcome measures) and proposed subgroup analyses (see Subgroup analysis and investigation of heterogeneity). If IPD are not available publicly, we will request them from corresponding authors, or if authors are unwilling or unable to share IPD, they will be asked to provide the required summary statistics.\n\nIf none of the three types of data can be obtained, results will be included in the qualitative analysis (e.g., tabulated and narratively discussed), and in any relevant forest plots, but not included in the statistical synthesis. However, given the nature of the studies under review (i.e., studies investigating data and code availability among publicly available articles), and following pilot literature searching, it is expected that most of the authors of meta-research studies will have either already publicly shared IPD, or would be receptive and able to do so.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Types of methods",
+              "parent_subsection_id": "s_4_1",
+              "text": "There are three types of data and code sharing that will be examined as part of this review:\n\n1. Public sharing of research data and code according to primary author declarations alone (reported availability).\n2. Public sharing of research data and code as confirmed by independent interrogation of author declarations, and verification of availability (actual availability).\n3. Private sharing of research data and code with an independent petitioner in response to a reasonable request (private availability).\n\n\"Public sharing\" will be broadly construed as the deposition of research data or code into a theoretically publicly accessible location (e.g., a freely accessible data repository, or an article's supplementary material). For primary studies reporting data as \"available on request\", this will not be considered as publicly available. Furthermore, if not explicitly verified by the meta-research study's authors as available, it will be assumed that reported public sharing estimates represent \"reported availability\". It should also be noted that \"sharing\" in the context of this review will be defined as the sharing of data or code required to theoretically verify or reconstruct at least one of the primary study's published findings.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Types of outcome measures",
+              "parent_subsection_id": "s_4_1",
+              "text": "We will include three primary outcome measures for research data and code respectively:\n\n**Research data**\n1. Declared prevalence of publicly available research data (reported availability);\n2. Confirmed prevalence of publicly available research data (actual availability);\n3. Prevalence of data sharing in response to a private request (private availability).\n\n**Research code**\n1. Declared prevalence of publicly available research code (reported availability);\n2. Confirmed prevalence of publicly available research code (actual availability);\n3. Prevalence of code sharing in response to a private request (private availability).\n\nWe will also include five secondary outcome measures:\n1. The prevalence of data availability statements across study reports;\n2. The association between public sharing of research data (reported or actual availability) and the presence of a data availability statement, for example does requiring a data availability statement increase the likelihood of sharing data;\n3. The association between public sharing of research data (reported or actual availability) and the journal's policy on data sharing (any \"mandatory posting\" policy versus other policy);\n4. The association between private sharing of research data and the presence of a data availability statement;\n5. The association between private sharing of research data and the journal's policy on data sharing (\"make available on request\" policy versus other policy).",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Search methods for identification of studies",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Electronic searches",
+              "parent_subsection_id": "s_4_2",
+              "text": "We will search the following bibliographic databases and preprint servers from inception for relevant meta-research studies:\n- Ovid MEDLINE\n- Ovid Embase\n- medRxiv (RRID:SCR_018222)\n- bioRxiv\n- MetaArXiv\n\nThe search was developed by an information specialist (SM) using a sample of 14 papers deemed relevant to the topic. The search strategy was designed in Ovid MEDLINE and initially tested on a subset of the 14 papers and then iteratively refined to ensure that all papers were retrieved by the search. An analysis of the Medical Subject Headings (MeSH) applied to these 14 papers revealed several potentially relevant terms (e.g., Reproducibility of Results, Information Dissemination) but none were considered appropriate to include in the strategy because they lacked precision. The same search was applied to Ovid Embase, allowing for modifications to the search syntax. The Ovid MEDLINE search syntax was then adapted by the first author into Lucene search syntax to search MetaArXiv, and R programming language to search the medRxiv and bioRxiv preprint servers via the medrxivr package [W3091878603]. No restrictions will be placed on any of the searches with regard to language of publication. The search strategies for each database are available on the Open Science Framework (https://osf.io/h75v4/).",
+              "citations": [
+                "W3091878603"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Searching other resources",
+              "parent_subsection_id": "s_4_2",
+              "text": "The team will screen reference lists of relevant studies identified by the search, as well as the bibliographies of all included studies. We will also conduct citation searches of included articles using Clarivate Analytics' Web of Science, as well as browse other preprint servers (PeerJ, Research Square) and online resources (Open Science Framework, as predicted.org and connectedpapers.com) to help identify further published, unpublished and pre-registered studies.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "Data collection and analysis",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Selection of studies",
+              "parent_subsection_id": "s_4_3",
+              "text": "Results from all searches will be imported into Covidence (Covidence systematic review software, Veritas Health Innovation, Melbourne, Australia) and deduplicated. For the results of the preprint server searches, if published versions of preprints are available, they will be sourced and screened for eligibility, if not we will select and screen the preprint. All titles and abstracts identified by the search strategies above will be independently screened against the eligibility criteria by two authors in parallel. Following title and abstract screening, two authors will independently assess full-text articles (where available) for inclusion. We will attempt to translate foreign-language articles flagged as potentially eligible using Google Translate or native speakers known to the team. If unable to translate the document successfully, we will exclude the study. All disagreements on the eligibility of studies at each phase will be resolved via discussion, or a third author if required. We will prepare a flow diagram in accordance with both the PRISMA 2020 statement and PRISMA-IPD extension outlining the flow of identified articles throughout each stage of the review [W2050118439, W3144543375]. The reasons for exclusion of full-text articles will also be documented.",
+              "citations": [
+                "W2050118439",
+                "W3144543375"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Data extraction and management",
+              "parent_subsection_id": "s_4_3",
+              "text": "**Summary statistics derived from meta-research studies**\n\nOnce the list of included articles is determined, two authors will independently extract summary statistics from each included meta-research study using a predefined data extraction form developed for this review. Any differences in coding will be resolved via discussion, or a third author if consensus cannot be reached. The data extraction form will be pilot tested by the data extractors on at least five randomly selected included articles, and if required, modified prior to use.\n\nThe following key variables will be extracted from included articles:\n- Characteristics of the meta-research study, including but not limited to: study title, DOI, journal, publication date, health/medical discipline(s) of interest, the number of primary studies examined (sample size), sampling strategy, protocol availability, data availability and so on;\n- Data on estimates of prevalence as outlined in Types of outcome measures;\n- Data on factors associated with sharing as outlined in Types of outcome measures.\n\nA comprehensive list of the variables to be extracted is available on the Open Science Framework (https://osf.io/h75v4/).\n\n**Summary statistics derived from individual participant data**\n\nDemographic variables and outcome measures of relevance to the study that are not reported by meta-research studies but appear to have been collected by study authors will be investigated further. If the underlying IPD and data dictionary from the meta-research study are publicly available, one author (DGH) will calculate the desired information from the raw data and enter it into a pre-prepared CSV-formatted spreadsheet. If IPD are not available, the corresponding author of the meta-research study will be contacted to request the required information or the raw data. A comprehensive list of the variables that may be extracted from available IPD is available on the Open Science Framework (https://osf.io/h75v4/).",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Assessment of the risk of bias in included studies",
+              "parent_subsection_id": "s_4_3",
+              "text": "The following criteria have been created with guidance from previous Cochrane Methodology Reviews (Table 1) [W2982673585, W2156775924]. Two authors will independently classify each included study, with any differences in coding resolved via discussion, or a third author if consensus cannot be reached. We will contact authors of included studies for additional information when assessments are initially classified as unclear.\n\n**Table 1. Risk of bias criteria.**\n\n{{TABLE:tbl_01}}\n\nGiven the aim to differentiate between studies with higher and lower risk of bias, a study will be deemed as having a low risk of bias if all the above criteria are assessed as low risk of bias, and high risk of bias if any one criterion is assessed as high or unclear risk of bias.",
+              "citations": [
+                "W2982673585",
+                "W2156775924"
+              ],
+              "tables_in_text": [
+                "tbl_01"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Measures of the effect of the methods",
+              "parent_subsection_id": "s_4_3",
+              "text": "For studies that report estimates of the prevalence of data or code sharing, we will report percentages (no. of articles that shared/no. of articles assessed) and 95% confidence intervals (CI) calculated using the Wilson score interval method [W2020018978]. The measures of the prevalence and association between a factor and data sharing will be dependent on the summary statistics used and reported by the authors of the meta-research studies, and the availability of IPD. For studies that have investigated the association between relevant factors and the sharing of research data (refer to Types of outcome measures for more information), we will report risk ratios with 95% confidence intervals. We will standardise our reporting so that risk ratios greater than one will indicate a higher likelihood of data availability. If authors of meta-research studies report odds ratios instead of risk ratios we will convert them to risk ratios using the formula proposed by Grant [W2120307638]. Where studies do not report this information, prevalence rates and risk ratios will be calculated from the raw data if it is available, or requested from the corresponding author.",
+              "citations": [
+                "W2020018978",
+                "W2120307638"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_3_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "Unit of analysis issues",
+              "parent_subsection_id": "s_4_3",
+              "text": "It is possible that there may be some overlap in the primary articles examined across included meta-research studies. Once the list of included studies is finalised, we will check for potential overlap by comparing reported primary article characteristics across meta-research studies (e.g., discipline(s) of interest, publication dates, publication outlets, study designs). The team will assess the degree of overlap and flag studies for which the likelihood of overlap is high, and then will check the IPD of flagged studies for duplicate primary articles by interrogating unique identifiers across datasets from included studies (e.g., DOI, PMID, study title). We will report whether this issue was able to be addressed, and if not, its likelihood of occurring and the likely impact on the findings of the review.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_3_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "Dealing with missing data",
+              "parent_subsection_id": "s_4_3",
+              "text": "For eligible studies where raw data are unavailable and information on study characteristics (e.g., methods for identifying and selecting primary articles) or outcomes (e.g., prevalence of sharing by a subgroup of interest) is missing, corresponding authors will be contacted. If the required information cannot be retrieved, available information will be discussed narratively. We will not impute missing data using statistical techniques. We will instead discuss missing data narratively.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_3_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "Assessment of heterogeneity",
+              "parent_subsection_id": "s_4_3",
+              "text": "We will assess the similarity/dissimilarity of methodological aspects of included studies, particularly with respect to definitions of \"data\", \"code\" and \"sharing\". We will evaluate statistical heterogeneity by inspecting the distribution of effects within forest plots and the magnitude of corresponding I\u00b2 statistics and their 95% confidence intervals [W2126930838]. We will also further evaluate statistical heterogeneity by calculating prediction intervals for our primary outcomes where more than four studies are included [W3111171671]. Prediction intervals estimate the likely range of effect sizes (prevalence rates and risk ratios) that could be expected across similar studies [W1973914781, W2464924628]. Prediction intervals will be calculated in R using the meta package [W2975424845] which implements the formula proposed by Higgins and colleagues [W2108116635] (equation 12).",
+              "citations": [
+                "W2126930838",
+                "W3111171671",
+                "W1973914781",
+                "W2464924628",
+                "W2975424845",
+                "W2108116635"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_3_8",
+              "subsubsection_index": 8,
+              "subsubsection_label": "Assessment of reporting biases",
+              "parent_subsection_id": "s_4_3",
+              "text": "We believe that the likelihood of this review being affected by publication bias is low given studies of interest to the review appear to be mostly exploratory in nature, with a focus on reporting prevalence rates rather than testing specific hypotheses. However, we will assess the risk of publication bias by searching for pre-registered protocols of eligible meta-research studies. We will also assess the risk of selective-reporting bias by comparing what authors of meta-research studies reported, with what they stated in the protocol for the study (see Assessment of the risk of bias in included studies).",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_3_9",
+              "subsubsection_index": 9,
+              "subsubsection_label": "Data synthesis",
+              "parent_subsection_id": "s_4_3",
+              "text": "This review will adopt a \"two stage\" approach to IPD meta-analysis, whereby we will examine meta-research studies in the first stage to extract summary statistics, or retrieve them from available IPD or from corresponding authors. Where data are available and appropriate (e.g., low heterogeneity), in the second stage, results from meta-research studies will then be pooled as per conventional meta-analysis [UNMAPPED:43]. For each of the primary and secondary outcome measures, we will pool prevalence and risk ratio estimates using a random-effects model and will calculate 95% CIs for the summary effect using the method developed by Hartung-Knapp-Sidik-Jonkman [W2032506622]. Prevalence rates will be transformed using the Freeman-Tukey double arcsine transformation and combined using standard inverse variance methods [W2092923243]. When it is not possible to meta-analyse due to clinical and/or statistical heterogeneity we will report prevalence, risk ratios, 95% CIs and p-values in tables.",
+              "citations": [
+                "W2032506622",
+                "W2092923243"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "43"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_10",
+              "subsubsection_index": 10,
+              "subsubsection_label": "Subgroup analysis and investigation of heterogeneity",
+              "parent_subsection_id": "s_4_3",
+              "text": "Where data are available, we will perform subgroup analyses to investigate whether the prevalence of public sharing of data is associated with the following factors:\n- Whether primary studies were defined by the study authors as a clinical trial (any phase) or not;\n- Whether primary studies studied COVID-19 or not;\n- Whether primary studies directly studied, or used any data derived from, human participants or not;\n- Whether primary studies were subject to any mandatory sharing policies by the funders of the study or not;\n- Whether primary studies posted a preprint or not.\n\nFurthermore, in the event that the review includes data from more than 10 studies [W4246445227], we will conduct univariate random-effects meta-regressions to investigate potential sources of variability in the prevalence of 1) data sharing (reported or actual availability) and 2) data availability statements by year of publication of primary studies, with bubble plots used to visualise regressions. If there are fewer than ten studies available to perform meta-regression, we will perform a subgroup analysis looking at differences in prevalence estimates across four time periods (Before 2010, 2010\u20132015, 2015\u20132020, 2020 onwards). These periods were chosen in order to isolate possible impacts of the COVID-19 pandemic (i.e., 2020 onwards) on prevalence rates, as well as investigate findings reporting an increase in uptake of data availability statements between 2014\u20132016 [W2901231347].",
+              "citations": [
+                "W4246445227",
+                "W2901231347"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_3_11",
+              "subsubsection_index": 11,
+              "subsubsection_label": "Sensitivity analysis",
+              "parent_subsection_id": "s_4_3",
+              "text": "The team will perform three to four sensitivity analyses. First, we will conduct a sensitivity analysis to assess the robustness of pooled meta-analytic effect estimates based on the observed risk of bias of included studies. Specifically, we will compare pooled prevalence estimates of all studies eligible for meta-analysis against those rated as at a low risk of bias (refer to Assessment of the risk of bias in included studies for the risk of bias assessment). Second, we will conduct a sensitivity analysis to examine whether estimates from studies not providing IPD differ from those where IPD were available. Third, we will investigate differences in pooled prevalence rates when using logit-transformed proportions and generalized linear mixed models instead of Freeman-Tukey double arcsine transformations and standard inverse variance aggregation methods [W2930850699]. Lastly, the team may also perform sensitivity analyses on any set of two or more studies that include a large number of the same primary articles by removing the smallest affected studies from any relevant meta-analyses.",
+              "citations": [
+                "W2930850699"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This version of the protocol (v1.0) was developed in accordance with the PRISMA-P [W2161374186], PRISMA 2020 [W3144543375] and PRISMA-IPD [W2050118439] statements and was pre-registered on May 28th, 2021 on the Open Science Framework (https://osf.io/7sx8u). Since this review will only collect and analyse data derived from published articles, ethical review and approval was not sought.",
+      "citations": [
+        "W2161374186",
+        "W3144543375",
+        "W2050118439"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "To our knowledge, this review will be the first study to estimate the prevalence of data and code sharing across the medical and health sciences. Our study will also use available IPD to investigate several aspects of data and code sharing that have not yet been well-explored, such as how sharing rates have changed over time, as well as what influence other relevant factors such as data and code availability statements and publishers' and funders' sharing policies have had on motivating medical and health researchers to share their data and code.\n\nOur review has several strengths. First, the study will follow recommended practices in systematic review methodology by pre-registering the methods used to identify, select, and analyse eligible meta-research studies, and will declare any deviations from the protocol in the final publication. Furthermore, the review will systematically search multiple electronic databases for eligible articles, including preprint servers for unpublished work, as well as enlist at least two researchers to perform all article screening and data extraction tasks independently in parallel to minimise the chance of coding errors. The review will also share all data, materials and code generated by the study to allow others to verify or build upon our work.\n\nHowever, there are also some limitations of this study. Given the novelty of the study, as well as appreciating that the establishment of metascience as a unique scholarly field is a relatively recent occurrence, there were few previous reviews, or universally agreed upon keywords and controlled vocabulary (e.g., MeSH and Emtree terms) with which to assist the search strategy development. Consequently, the lack of controlled vocabulary, as well as our limiting of searches to predominantly English-language databases may result in a greater risk of missing literature relevant to the research questions, when compared to other established review areas like reviews of randomised controlled trials where comprehensive guidance and established methodological search filters are available [UNMAPPED:48]. Furthermore, given the likelihood that IPD will not be available for all eligible meta-research studies, it is also possible that systematic biases may be present in the results of analyses reliant on IPD that will not be able to be detected.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "48"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "There is growing momentum among funders, publishers and the greater scientific community to increase the availability of the outputs of medical and health research. This review will provide some insight into how commonly data and code from medical and health research is shared. It will also examine how sharing rates have changed over time, and how influential some policies have been in motivating researchers to share their underlying data and code. It is expected that the findings of this research may be particularly useful to key research policymakers in developing, instituting and assessing policies on data and code sharing.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Data and software availability",
+      "subsections": [
+        {
+          "subsection_id": "s_7_1",
+          "subsection_index": 1,
+          "subsection_label": "Underlying data",
+          "subsubsections": [],
+          "text": "No data are associated with this article. Data, materials and code from the completed review will be made freely available under a CC0 1.0 Universal license on the Open Science Framework (https://osf.io/h75v4/).",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_2",
+          "subsection_index": 2,
+          "subsection_label": "Extended data",
+          "subsubsections": [],
+          "text": "Open Science Framework: A review of data AND code sharing rates in medical and health research.\n\nThis project contains the following extended data:\n- Appendix-1.1_Search-Strategies-MedEmbMeta_v1.0.pdf (The proposed search strategy for MEDLINE, Embase and MetaArXiv)\n- Appendix-1.2 Search-Strategies-MedBioRxiv_v1.0.R (The proposed search strategy for medRxiv and bioRxiv)\n- Appendix-2_Data-Extraction-Fields_v1.0.pdf (The variables that will be extracted from eligible meta-research studies)",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Competing interests",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "DGH is a PhD candidate supported by an Australian Commonwealth Government Research Training Program Scholarship. The Laura and John Arnold Foundation funds the RIAT Support Centre (no grant number), which supports the salaries of ARF and KH. KH's project was supported by the Food and Drug Administration (FDA) of the U.S. Department of Health and Human Services (HHS) as part of a financial assistance award U01FD005946 totalling US$5,000 with 100 per cent funded by FDA/HHS. The contents are those of the author(s) and do not necessarily represent the official views of, nor an endorsement, by FDA/HHS, or the U.S. Government. The authors declare that no grants were involved in supporting this work.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4231093939_tables.md"
+}

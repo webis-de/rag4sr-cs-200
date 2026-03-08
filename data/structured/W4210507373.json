@@ -1,0 +1,496 @@
+{
+  "id": "W4210507373",
+  "metadata": {
+    "title": "A systematic review on trends in using Moodle for teaching and learning",
+    "n_sections": 4,
+    "n_subsections": 3,
+    "n_subsubsections": 15,
+    "n_tables": 12
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Various learning management systems (LMSs) are available to develop, manage, and distribute digital resources for face-to-face and online teaching. An LMS provides interaction between traditional teaching techniques and digital learning resources, and simultaneously offers students personalised e-learning opportunities [W2913512761]. E-learning is an area that has seen considerable growth, particularly since 2020 with the onset of the COVID-19 pandemic, which has limited face-to-face teaching possibilities for many educational institutions globally [W3103082384, W3087094992]. Educational institutions have had to adapt to restrictions imposed on physical interaction, which have precluded most conventional forms of education, assessment, research, and scientific discourse [W3041723160].\n\nThe role of LMSs has gained prominence within the context of STEM (Science, Technology, Engineering, and Mathematics) programs and courses over the last decade through improved access to broadband internet and advancements in online teaching and learning technologies. Many educational institutions have effectively used LMSs and continue to research the effectiveness of using various types of LMSs. Recent studies focusing on STEM education suggest that various LMSs and associated tools increase student engagement, motivation, collaboration [W3128495147, W2999071202, W3068015186, W3013360214], performance, retention, and critical thinking [W2184596698, W3013037469, W2974818925, W2802477412, W3045099471, W3081621592]. In addition, LMSs allow STEM educators to track learning outcomes, predict achievements (for early detection of students at risk), and then use the identified information to adapt and modify teaching practices [W2527707038, W3135659441, W4248314067, W2921496098, W3045099471, UNMAPPED:15]. The future of STEM education can continue to be improved with innovative LMSs and technology-enhanced learning materials [W2887138582], such as online laboratories [W3170183439], online tutorials [W3159804487] and virtual reality applications [W3095718562]. A recent systematic review on research trends in STEM education [W3029268093] indicates that 'learning environments' which include an LMS is one key area that will continue to evolve.\n\nCurrently, 561 LMSs are available worldwide for academic/educational purposes, according to Capterra (2021) an international software review and selection platform [UNMAPPED:26]. The learning platforms that were most widely used and researched during 2015\u20132020 include Edmodo, Moodle, MOOC, and Google Classroom [W3192269743]. Research on comparisons of various LMSs is rare but some comparisons between LMSs such as Moodle, Sakai, SumTotal, Blackboard, Canvas, and ATutor are available in the literature [W2914928123, W3167896751]. According to a recent systematic review on tendencies in the use of LMSs [W3194809174], Moodle is the most popular and preferred open-source LMS. Moodle has a high rate of acceptance in the community and in many institutions and has a wide variety of active courses, available in many languages [W2527707038, UNMAPPED:31]. A recent study that determined the effect of LMSs on students' performance in educational measurement and evaluation recommends that LMSs such as Moodle should be learnt and used by lecturers [W3081621592].\n\nCurrently, the world's leading open-source LMS, Moodle [UNMAPPED:32], is used by various disciplines within academia, including STEM education. A keyword search of \"Moodle\" in publications, categorised by discipline area from 2015 to 2021, indicated that more than 60% of publications containing the keyword \"Moodle\" are in the STEM area. Moodle is a cloud-based LMS and among the top 20 best LMSs based on user experiences in 2018 [UNMAPPED:33]. The number of Moodle users continues to increase from 78 million in 2015 [UNMAPPED:34] to over 294 million in 2021 [UNMAPPED:35]\u2014an increase of over 250%. Although Moodle is becoming increasingly popular, to date, no review has provided information on the use of Moodle across a vast number of disciplines in different educational institutions at different levels of education. This review aims to comprehensively analyse the literature on the adaptation of Moodle as an educational tool over the past 6 years to provide information for three sets of stakeholders\u2014educators, researchers, and software developers. The review addresses two main research questions:\n(1) Where is Moodle used, adapted, and researched?\n(2) How is Moodle used in teaching and learning?",
+      "citations": [
+        "W2913512761",
+        "W3103082384",
+        "W3087094992",
+        "W3041723160",
+        "W2887138582",
+        "W3170183439",
+        "W3159804487",
+        "W3095718562",
+        "W3029268093",
+        "W3192269743",
+        "W2914928123",
+        "W3167896751",
+        "W3194809174",
+        "W2527707038",
+        "W3081621592"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "26",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "2021"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "Bibliometric analysis",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "PRISMA-P process",
+              "parent_subsection_id": "s_2_1",
+              "text": "This study adopted a strict systematic review protocol that followed the 4-step PRISMA-P process [W2161374186]. This process has the following steps: (1) Identification of the relevant literature pertaining to this study, (2) Screening using the criteria determined by the authors, (3) Classification of the screened articles in a methodical manner using codes and themes predetermined by the authors, and (4) Determining the articles for inclusion in this review.\n\n**Identification** Scopus and Web of Science (WOS) were used to perform the literature search due to their comprehensive journal coverage, ease of keyword searching, accessibility within academia, and popularity within multiple disciplines [W2999558594, UNMAPPED:38]. The term \"Moodle\" found articles with a wide range of Moodle topics when used in the search databases, while an initial search of Moodle review articles suggested several keywords, such as \"Moodle quiz\" and \"e-learning\". The Scopus search was limited to the selected years with the option of only \"Article\" or \"Review\" chosen along with using the title, abstract, and keywords to identify \"Moodle\" articles. The WOS search was run with \"Moodle\" and selected all topics in the search parameters. Both database searches were last run on 30 June 2021.\n\n**Screening** In this phase, literature identified from both database searches was screened to exclude articles that were: (1) published before 2015, (2) written in any language other than English, (3) published but had not been through the peer review process (e.g., conference papers, book chapters, letters), and (4) was not relevant to this review. An individual article's relevance was determined by examining the title, abstract, results, and methods. Any articles that did not fulfil these screening criteria were excluded from this study.\n\n**Classification** The articles identified and screened were multidisciplinary; therefore, these articles were then classified. Initially, the classification process allocated codes to the journal articles related to the article's research discipline (see **TABLE 1** for codes)\u2014for example, STEM disciplines encompass subject matter of science, technology, engineering, and maths. If more than one discipline was covered in the article, the multidisciplinary (MD) code was used. The articles were then classified into specific subject matter and education levels, including undergraduate, postgraduate, and multi-level. These codes were based on categories of the International Standards Classification for Education (ISCED, 2012) [W4229658306]. The not-determined (ND) code was used, if needed, for discipline and education level.\n\n**TABLE 1** Codes and descriptions for classification of the journal articles included in the review\n\n{{TABLE:tbl_01}}\n\n**Inclusion** The articles selected for review were limited to Jan 2015\u2013June 2021 and included the word \"Moodle\" in either the title, abstract, or keywords. The 4-step process applied for selecting the articles included in this review is shown in **FIGURE 1**.",
+              "citations": [
+                "W2161374186",
+                "W2999558594",
+                "W4229658306",
+                "W2913512761",
+                "W3103082384",
+                "W3087094992",
+                "W3041723160"
+              ],
+              "tables_in_text": [
+                "tbl_01"
+              ],
+              "citations_unmapped": [
+                "38"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Bibliographic analysis",
+              "parent_subsection_id": "s_2_1",
+              "text": "The Vosviewer software, Version 1.6.15, was applied for bibliometric analysis using the Scopus and WOS database search results. Vosviewer is freely available software that automates term identification and constructs bibliometric maps based on network data [W2999558594, UNMAPPED:38]. The combined downloaded results from Scopus and WOS were used to create a CSV file. The CSV file was updated after the 4-step systematic review protocol process and articles irrelevant to this study were removed from the file. The CSV file was then loaded into Vosviewer to create a co-occurrence map of bibliographic data. The software enables the user to build co-occurrence maps in various areas, such as keywords, journal citation counts, and publication titles [UNMAPPED:40]. Bibliometric analysis was conducted on each article, including the year of publication, keywords, journal publication citations, and the country of publication.",
+              "citations": [
+                "W2999558594"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "38",
+                "40"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Thematic analysis (TA)",
+              "parent_subsection_id": "s_2_1",
+              "text": "Following the classification of the included journal articles, further insights and trends within the articles were established by thematic analysis. This process was consistent with Braun and Clarke (2006) thematic analysis (TA) method which identifies and analyses patterns of meanings (themes) in qualitative data [W1979290264]. This method can be applied within a range of theoretical frameworks and can be used to analyse almost all forms of qualitative data, both small and large data sets, to address different types of research questions [W4232818056]. The TA used in this review involves the generation of codes and themes. The codes capture features of each paper which have potential relevance to the research questions. The themes were constructed from the coding to capture broader patterns.\n\nTo generate the trends identified in the literature, the six-phase Braun and Clarke (2006) method was used as follows:\n(1) Familiarisation with the data: The selected articles were read to become familiar with the topics covered by each article, noting any common concepts covered by each study.\n(2) Coding: Codes were generated for important features relevant to teaching and learning covered by each article (Research Question 2). This coding is not simply a method of data reduction; it is an analytic process.\n(3) Searching for themes: A theme is a coherent and meaningful pattern in the reviewed articles which is relevant to the research questions. The themes were not necessarily in the articles but were constructed. This review constructed eight themes of interest relevant to teaching and learning (Research Question 2).\n(4) Reviewing themes: This step involved reflecting on the themes to tell a story, defining the nature of the theme, and identifying relationships between the themes and different sub-themes within the themes.\n(5) Defining and naming themes: This step involved specifying the 'essence' of each theme and constructing an informative name for each theme.\n(6) Writing up: Writing-up involves creating a coherent and persuasive story about the reviewed papers which includes analysis of current and future research.\n\nThe themes, sub-themes, and definitions of each theme are shown in **TABLE 2**.\n\n**FIGURE 1** Four-step process for this systematic review",
+              "citations": [
+                "W1979290264",
+                "W4232818056",
+                "W2913512761",
+                "W3103082384",
+                "W3087094992",
+                "W3041723160",
+                "W3128495147",
+                "W2999071202"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "2006"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This systematic review focuses on recent research (January 2015\u2013June 2021) in using Moodle within academic institutions. The review took a multidisciplinary approach to encompass all subjects and levels within academia. To align with the first research question, Where is Moodle used, adapted, and researched?, a bibliometric analysis was performed to identify the dissemination of the literature and summarise the bibliometrics of the publications. Then, a thematic analysis was performed to address the second research question, How is Moodle used in teaching and learning?.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Results and discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "Bibliometric analysis",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Journals and citations",
+              "parent_subsection_id": "s_3_1",
+              "text": "Moodle is prevalent in various disciplines, as revealed by 104 journals relevant to this study. Journal titles that published two or more articles are shown in **FIGURE 2**. The journal with the most published Moodle-related articles was International Journal of Emerging Technologies in Learning (10 articles), followed by Computer Application in Engineering Education (8 articles), and then Journal of e-Learning & Knowledge Society, and the Journal of Technology and Science Education (5 articles per journal).\n\n**FIGURE 2** Journal titles that have published more than 2 articles used in this study\n\n{{TABLE:tbl_03}}\n\nScopus was used for the citation count unless the article was only available in WOS; then, the WOS citation count per article was used. The 155 journal articles reviewed in this study have a combined citation count of 608 with the most cited (71 times) being a review article comparing 17 blended courses using Moodle LMS [W2531767846]. Total citation counts of the articles by published year were 95 in 2015, 92 in 2016, 270 in 2017, 83 in 2018, 50 in 2019, and 21 in 2020. Of the top 10 cited articles (listed in **TABLE 3**), five articles were published in 2017, accounting for 198 citations of the total 270 for that year, with the remaining 72 citations across 24 papers. Of the top 10 authors, four are attributed to the top-cited paper [W2531767846]. All the top 10 cited authors have articles in the top 10 cited list (**TABLE 4**).\n\n**TABLE 3** Top 10 cited journal articles\n\n{{TABLE:tbl_04}}\n\n**TABLE 4** Top 10 cited authors\n\n{{TABLE:tbl_05}}",
+              "citations": [
+                "W2531767846"
+              ],
+              "tables_in_text": [
+                "tbl_03",
+                "tbl_04",
+                "tbl_05"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Author-affiliated countries",
+              "parent_subsection_id": "s_3_1",
+              "text": "Vosviewer has the facility to produce a density map of co-occurrences in countries [UNMAPPED:40]. **FIGURE 3** shows the density map of countries publishing more than two articles. Fifty-five countries contributed research to the 155 articles, with 37 countries publishing more than two papers. The higher the count of publications, the brighter the yellow, with Spain contributing 17 articles, the United States of America (USA) 14, Australia 12, the Russian Federation 10, Malaysia 8, Italy 7, and Portugal 5 articles. The software positions the countries with a similar number of articles published close to each other. Therefore, Vosviewer provides the reader with an instantaneous pictorial result of countries publishing Moodle articles.\n\n**FIGURE 3** Density map showing countries contributing to more than 2 publications",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "40"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Popular keywords",
+              "parent_subsection_id": "s_3_1",
+              "text": "The keywords from the 155 articles were analysed in Vosviewer. In total, 926 keywords were used, of which 154 were used three times or more. **TABLE 5** shows the top 10 keywords. The most occurring keyword was Moodle (61), followed by e-learning (31), teaching (26), and education (25), and learning management system (25).\n\nAlong with the ability to extract the top keywords used within the articles, Vosviewer produced cluster graphics of keywords. **FIGURE 4a** shows the cluster graphic of keywords of more than three uses or a higher density with a larger marker on the graphic; hence, the most significant markers are Moodle, e-Learning, and Education. The map also has the feature to zoom in and out, showing more keywords and highlighting the most occurring keywords. **FIGURE 4b** shows the option in Vosviewer to see the links that connect the keywords within the articles (in this instance, Education was highlighted). The keywords associated with Education in the 155 articles (with more than 3 occurrences) can be seen with linked keywords, such as Moodle, Student, and e-Learning. All keywords can be highlighted individually for associations to be seen.\n\n**TABLE 5** Top 10 popular keywords\n\n{{TABLE:tbl_06}}\n\n**FIGURE 4** Vosviewer cluster graphic of keyword results: a Keywords with more than 3 uses, b The links highlighted when the word 'education' is highlighted",
+              "citations": [
+                "W2534570357",
+                "W3029268093"
+              ],
+              "tables_in_text": [
+                "tbl_06"
+              ],
+              "citations_unmapped": [
+                "31",
+                "26"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Discipline and education level of studies",
+              "parent_subsection_id": "s_3_1",
+              "text": "Research into Moodle assessments is being published in many different subject areas, such as science, technology, engineering, and maths (STEM), health sciences (HS), and veterinary medicine (VM). **FIGURE 5** shows the number of publications per full year (UNMAPPED:2015, UNMAPPED:2016, UNMAPPED:2017, UNMAPPED:2018, UNMAPPED:2019, UNMAPPED:2020) and the articles' discipline.\n\nL\u2014languages, A\u2014arts, VM, veterinary medicine, TD\u2014teaching degree, STEM\u2014science, technology, engineering and maths, ND\u2014not determined, MD\u2014multidisciplinary, HS\u2014health sciences, CS\u2014computer science, BS\u2014business studies.\n\nThe number of total publications was lowest in 2015 and 2016 with 18 and 19 publications, respectively. This number increased each year after that: 2017 (n=24), 2018 (n=26), 2019 (n=32), and 2020 (n=36). The two main disciplines throughout this publication period were STEM and HS. The STEM discipline contained various subjects, with most being engineering (civil) and science (i.e., physics and chemistry). HS subjects published include nursing, medical practice, and dentistry. Some articles that did not fit into a particular discipline (ND) covered various subjects, such as security issues identified within e-learning or articles that deal with databases [W2997334796, W2768474130].\n\nOf the 155 articles, 116 articles evaluated Moodle within a university setting, with 112 at undergraduate (UG) level, nine postgraduate (PG), and seven articles examined at both UG and PG courses. School-age students (S) were the focus in six studies, teaching staff (T) in four articles, and S and T in two articles. A total of 31 articles did not determine (ND) the level of education for the study or were not focused on individuals but rather systems [W2890921270, W2240244561].\n\n**FIGURE 5** No of publications by discipline 2015\u20132020\n\n{{TABLE:tbl_07}}",
+              "citations": [
+                "W2997334796",
+                "W2768474130",
+                "W2890921270",
+                "W2240244561"
+              ],
+              "tables_in_text": [
+                "tbl_07"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "Thematic analysis (TA)",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Theme 1: Moodle features",
+              "parent_subsection_id": "s_3_2",
+              "text": "Of the reviewed articles discussing Moodle LMS, 23% discuss Moodle 'Activities'. An activity, a general name for a group of Moodle features, is usually something that a student will engage in and that interacts with other students or the teacher. The activities identified included: Moodle quizzes, forums, workshops, lessons, wikis, and surveys. Of these, Moodle quizzes and workshops were the most prevalent, with 16 and eight articles, respectively (see **FIGURE 8**). Some activities, such as videos, virtual tours, e-portfolios, are external tools easily embedded into the Moodle system.\n\nNone of the articles discussed Moodle activities, such as Choice, Database, Feedback, Glossary, H5P activity, or SCORM (for course content). One study [UNMAPPED:48] recommends Moodle's \"Survey\" tool for anonymous surveys, yet if this tool is used along with Moodle's \"Group\" option, the users can determine who responds to the survey. Therefore, the \"Feedback\" activity is a better anonymous survey tool than the \"Survey\" activity.\n\nExcept for Shkoukani (2019), who analysed features for the 20 most popular LMSs in 2018 [W2914928123], few studies compare Moodle with other LMSs. Only 2% of papers analysed in this study have compared Moodle with other LMSs, and they only compared Moodle with Blackboard or Canvas [W2913512761, W2965058016]. Further analysis between LMSs focusing on features, integration, cost, and security are pivotal for e-learning success.\n\n**FIGURE 8** Number of articles reporting research on each Moodle activity\n\n{{TABLE:tbl_10}}",
+              "citations": [
+                "W2914928123",
+                "W2913512761",
+                "W2965058016"
+              ],
+              "tables_in_text": [
+                "tbl_10"
+              ],
+              "citations_unmapped": [
+                "48",
+                "2019"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Theme 2: curriculum development",
+              "parent_subsection_id": "s_3_2",
+              "text": "In 53% of the reviewed articles, LMS Moodle was used for curriculum development, including implementing learning modules and assessments for blended and online courses. While about half of the articles (45%) explain how this can be used at the course level (e.g., [W2221103899, W2956692494, W2791491946]), 4% of the articles explain how this can be used for framework design (multiple courses to achieve program objectives) (e.g., [W2889659349, W2917598614, UNMAPPED:53]).\n\nEducators bear responsibility for ensuring optimal tools are utilised for the most effective computerised assessment that enables students and teachers to address or avoid assessment-related problems [W2318659967]. However, only 4% of papers analyse the teachers' perspectives of using Moodle [W4236792643, W2794013728, W2984792113, W1743818589, W2534570357, W2318659967]. Badia et al. (2019) conducted a study using 132 teachers across 43 schools indicated further research should be conducted on: Why do only certain Moodle activities positively impact learning outcomes? What can technological designers and teachers do to improve the level of learning outcomes achieved through the use of Moodle activities?\n\nOf the 155 articles reviewed, only eight used educational theoretical frameworks for their research and development (see **TABLE 6**). According to the studies shown in **TABLE 6**, online assessments can be theorised using Classical Test Theory (CTT) and Item Response Theory (IRT). Online content development, particularly adaptive content, can be theorised using Computer Adaptive Testing (CAT), the Technology Acceptance Model (TAM), Merrill's problem-centric framework, and Self-determination theory. The DeLone and McLean Information Systems (IS) theories can be used to measure the effectiveness of advanced online materials and for the implementation of e-learning systems.\n\n**TABLE 6** Education theories used in research and development\n\n{{TABLE:tbl_11}}",
+              "citations": [
+                "W2318659967"
+              ],
+              "tables_in_text": [
+                "tbl_11"
+              ],
+              "citations_unmapped": [
+                "2019"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "Theme 3: learning focus",
+              "parent_subsection_id": "s_3_2",
+              "text": "Adaptive, collaborative, or problem-based content developments were discussed in 20% of the articles, with only 4% considering learning styles and critical thinking.\n\n**Adaptive learning** LMSs provide large data databases and fast access to a systematic analysis of information. Therefore, designing adaptive or self-learning modules and automatic assessments which adapt to the learner's preferences has become much easier. Of the articles reviewed, 8% either demonstrate or improve automated content. The areas addressed within these articles were randomly generated tests, questions with multiple possible answers, automated marking systems and rubrics, provision of positive and motivational automatic summative and formative feedback, auto-adaptive content for learners with diverse backgrounds, interactive content, self-assessed quiz and multimedia books for instructional design [W2948433904, W2956692494, W2417732374, W2151311517, W2243644162].\n\nFurther research has investigated integrating instructional design theories, psychological elements, and learning theories into adaptive learning [W2803555787, W2240244561, UNMAPPED:53]. Tlili et al. (2019) conducted a study that aimed to model the learners' personalities using a learning analytics approach called intelligent Moodle (iMoodle), with results compared to the traditional method of modelling learners' personalities using questionnaires [W2954460532]. A further study investigated automatic detection of learning styles by analysing student learning behaviour by constructing a mathematical model [W2791634397]. Further research has been suggested in the areas of exploring the extent to which automatic feedback encourages positive motivational beliefs and self-esteem among students [W2799505548], improving real-time adaptation learning modules, intelligent non-human tutoring, and using educational data mining techniques to investigate and predict students' attitude to learning.\n\n**Collaborative learning** Collaborative learning was discussed by 12% of the reviewed articles. Of these, a number focused on Moodle's peer assessment tool \"workshop\" and demonstrated how to use \"workshop\" to allow students to mark their fellow students' work and reduce the marking load for teaching staff [W2528092088, W4244810978, UNMAPPED:74]. Peer review and feedback were generally accepted as helping to develop students' meta-cognitive skills relating to critical reflection [W2063873668]. However, qualitative studies show that students and staff have divided opinions regarding the \"workshop\" tool for peer assessment [W2643879342, W2791086057, W2063873668]. While students agree with a limited number of peer assessments, staff experience an increase or no decrease in their marking workload [W2063873668]. However, peer assessments using \"workshop\" are still time-consuming for both the teacher and students and could lose their charm if they are overused [W2063873668]. In studies that have used peer assessments to allow students to grade their peers, some students reported the peer assessment method as \"unfair and \"unprofessional\" [W2643879342, W2791086057, W2063873668]. The \"workshop\" tool in Moodle does not have a built-in measure for peer assessment validity. One study which addressed the concern of students' validity contributing to marking assignments reported that the grades were consistent with what faculty expected based on t tests and reliability estimates [UNMAPPED:74].\n\nThe Moodle activity \"Forum\" can be used to improve problem-based learning via group projects [W2221103899]. \"Forums\" allowed students to maintain much more direct contact when they were not in the class and made it easier for students to meet and work on their projects even though they were in different places [W1570475384, W2593901358]. A further study reported that online learning systems positively influenced students' thinking and innovation skills [W2791491946].\n\n**Learning styles** Of the identified articles, 3% investigated learning styles\u2014namely, Active vs Reflective, Sensitive vs Intuitive, Visual vs Verbal, Sequential vs Global\u2014when implementing e-course content [W2417732374, W2791634397, UNMAPPED:53]. These studies have shown that students' independent work can be guided through interactive technology, and these teaching methods would eliminate students' passivity in the classroom and enhance their cognitive activity. While some studies have proposed automatic detection of learning styles by analysing student's learning behaviour through mathematical models [W2791634397], other studies have developed simpler matrix systems that would allow the teacher to carry out a manual selection of tools for Moodle Learning after considering student's learning styles [W2417732374, W2603555851, W2791634397]. However, identifying students' learning styles to maintain assessment quality needs further investigation [W2603555851].",
+              "citations": [
+                "W2803555787",
+                "W2240244561",
+                "W2954460532",
+                "W2791634397",
+                "W2799505548",
+                "W2063873668",
+                "W2063873668",
+                "W2221103899",
+                "W1570475384",
+                "W2593901358",
+                "W2791491946",
+                "W2417732374",
+                "W2603555851"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "53",
+                "74",
+                "2019"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "Theme 4: assessment",
+              "parent_subsection_id": "s_3_2",
+              "text": "A third (33%) of the reviewed papers focused on assessment including summative and formative assessment, online exams, marking, and feedback [W2493119423, W2898732588, W2271729462, W2907130777]. Moodle can create large data pools of various questions, including multiple-choice, open answer, generative questions, and complex tasks [W2240244561]. Nevertheless, most papers focused on summative assessment based on Moodle quizzes investigating both teachers' and students' opinions when implementing multiple-choice questions [W4236792643, W2575168857, W2771385097, W2555221826, W2965058016, W3001495527]. According to a 5-year study, the 'luck' factor associated with multiple-choice questions is fair [W3001495527]. Studies that have investigated the students' point of view indicate that the students agree that Moodle is easy to use and complements teaching, although most students still prefer classical assessment techniques [W2575168857, W2509700244, W2784060624]. However, one study found no direct relationships between students' preferences and academic performance [W2575168857].\n\nSome studies which focused on the assessment process investigated the usefulness of the online environment for instructors to organise assessments, the usefulness of giving responsibilities to students during assessment (mainly via peer assessments), and using Moodle statistics and analytics to evaluate and improve the quality assessment process [W2575168857, W2967444271, W2884685296].\n\n**Marking and feedback** Four percent of reviewed articles focused on improving and streamlining the marking and feedback processes for both students and teachers. These studies indicate that online marking systems associated with Moodle lower the long-term costs, increase the speed of providing feedback, provide greater flexibility with respect to location and timing and reduce the space required to manage the assessment process [W2409877605, W2758157600, W2812756587]. A study with 57 academics conducted at Monash University, Australia, highlighted Moodle's reliability, and improved impartiality of the assessment process [W2907130777]. The study concluded that this impartiality is generally achieved through the removal of personal, academic judgment, which results in more reliable, consistent marking practices.",
+              "citations": [
+                "W2240244561",
+                "W3001495527",
+                "W2575168857",
+                "W2509700244",
+                "W2784060624",
+                "W2967444271",
+                "W2884685296",
+                "W2907130777"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "Theme 5: ethics",
+              "parent_subsection_id": "s_3_2",
+              "text": "The reviewed articles investigated two strands of ethics: (1) ethics relating to users' data security and privacy, and (2) academic integrity. While 4% of all reviewed articles highlighted security and privacy concerns, 6% of the articles discussed academic integrity issues caused by the increased use of LMSs for assessment purposes. Although personal data protection has legal compliance, such as the policies in the European Union and the Privacy Act 1988 in Australia, several articles discussed the privacy concerns of cloud-based services. The use of cloud-based services has resulted in teaching materials being stolen, and instructors' or administrators' credentials being compromised [W2794624843, W2943964987, W2768474130].\n\nTwo re-occurring academic integrity issues associated with online assessments were highlighted: students plagiarising and students using third parties to complete assignments [W3008718160, W2230026980]. Although instances of these two integrity problems occur in traditional teaching and learning methods, face-to-face invigilated exam environments can help minimise the effect of these issues. One alternative to invigilated exams is online quizzes which have become popular due to their ability to automate marking. However, cheating cannot be controlled unless it is held in an invigilated room. Several studies attempted to address this issue by introducing new software and analytical tools to detect academic misconduct. These tools include: limiting IP range for the users during online exams [W2493119423]; using timestamps and data processing techniques to identify unauthorised users [W2116847436]; using facial verification software [W2230026980] and using plagiarism detection software [W2493119423, W2116847436, W2230026980, W1879275292].",
+              "citations": [
+                "W3008718160",
+                "W2230026980",
+                "W2493119423",
+                "W2116847436",
+                "W1879275292",
+                "W2913512761",
+                "W3103082384"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "Theme 6: technical developments",
+              "parent_subsection_id": "s_3_2",
+              "text": "**Application of Moodle analytics** Online LMSs make it more manageable to gather and analyse students' data. Ten percent of the articles reviewed discussed the in-built statistical tools such as the facility index and discrimination index along with the databases available in LMSs for the use of educational and research purposes [W2759038239, W2967444271, W2944926045]. The articles used data mining and statistical tools to measure and analyse student engagement, student satisfaction, and online courses' performance. Analysing the tools available would be beneficial for monitoring student retention rates [W2944926045], identifying underachieving students [W2606704687], predicting students' trends and attitudes, and accreditation purposes [W2302942711, UNMAPPED:53, UNMAPPED:74]. Data and analytics tools may also be used to automate personality assessments and create intelligent (adaptive) learning platforms [W2954460532].\n\n**Software development and adaptation** This review found that 24% of the articles discussed or evaluated software development and adaptations, including the use of existing software to improve the learning experience within Moodle. Software applications that can be integrated into Moodle include:\n\u2022 Apple's Siri and Google's GRCloud-based speech recognition for language learning [W2794624843].\n\u2022 OpenIRS-UCM [W2409877605], Kahoot, Poll-Everywhere and Zappar [W2900420060] which are tools for interactive polling.\n\nThe ever-increasing number of new software/Add-Ins available for Moodle is indicative of the interest of software developers and researchers to improve the useability of Moodle for online teaching and education. Course developers utilise plug-ins to assist with automatic essay marking, randomising questions, and identifying ineffective questions [W2758157600, W2994304437, W2812756587]. **TABLE 7** lists several software applications that can be integrated into LMSs and, in particular, Moodle.\n\nTo date (June 2021), Moodle has 1753 available plug-ins that can add new functions that improve administration, assessment, collaboration, communication, content and the interface [UNMAPPED:113]. The Moodle statistics for 2019 show that the most popular plug-ins (based on the number of downloads) were communication and content plug-ins, such as Moove, BigBlueBN, Adaptable, H5P, and Eguru [UNMAPPED:113]. The articles in this review covering Jan 2015\u2013June 2021 show that most reported advancements in new software developments for Moodle relate to improving assessment processes. The development advancements include improving the security of the assessment processes [W2493119423, W1879275292], improving the mechanisms to generate quiz questions, and improving feedback and response time [W2240244561, W2210927076]. Security improvements include, but are not limited to, improving user data verification [W3008718160], facial recognition [W2230026980], limiting IP range [W2493119423], and scanning students IDs [W2775619405]. Daniels and Iwago (2017) also reported on integrating Google speech recognition for speech assessments [W2794624843]. Improving students' cognitive, innovative, and collaborative learning skills were a key area of development in some reported studies [W2791491946, W2940398067, W2409877605], along with the improvement of user interface evaluation [W2759038239].\n\nArtificial intelligence tools are an increasing area of research which investigates intellectual mechanisms for managing personalised learning. Gray et al. (2018) reported on the software developments that aid students in their report writing and allow arguments, justification, and conclusions to be formed without any human input [W2811022694]. Software development also encompasses the ability to direct students to relevant content and assessments after automatic analysis of the students' behaviour [W2940398067] and can also evaluate summaries written by students using information available on websites and online repositories [W2803541058]. As software advancements to assist students with their assignments are increasing, so is plagiarism. Plagiarism detection systems are successfully integrated into Moodle with plug-ins, such as Urkund, Turnitin, Plagiarisma, and SafeAssign which can detect textual plagiarism. Source code detection software for programming courses are under development [W1879275292].\n\nDespite advances in software and technology for e-learning and online LMSs, numerous fundamental gaps/drawbacks still exist, with the majority on technical issues [W2493119423, W2318659967, W2582821445], such as server/browser response times, lag time in resolving technical issues, lack of equipment available to students and the possible high cost associated with the initial development of programs [W2954533266, W2302942711, W2318659967, UNMAPPED:121].\n\n**TABLE 7** Software applications to enhance existing LMS\n\n{{TABLE:tbl_12}}",
+              "citations": [
+                "W2759038239",
+                "W2967444271",
+                "W2944926045",
+                "W2606704687",
+                "W2302942711",
+                "W2954460532",
+                "W2794624843",
+                "W2409877605",
+                "W2900420060",
+                "W2758157600",
+                "W2994304437",
+                "W2812756587",
+                "W2493119423",
+                "W1879275292",
+                "W2240244561",
+                "W2210927076",
+                "W3008718160",
+                "W2230026980",
+                "W2775619405",
+                "W2791491946",
+                "W2940398067",
+                "W2811022694",
+                "W2803541058",
+                "W2318659967",
+                "W2582821445",
+                "W2954533266"
+              ],
+              "tables_in_text": [
+                "tbl_12"
+              ],
+              "citations_unmapped": [
+                "53",
+                "74",
+                "113",
+                "121",
+                "2017",
+                "2018"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "Theme 7: research approach and methods",
+              "parent_subsection_id": "s_3_2",
+              "text": "The research approaches used are categorised into quantitative analysis, qualitative analysis, mixed methods, technical and other. Of the 155 articles reviewed, 67 papers used a quantitative (QN) research approach which aimed to quantify a phenomenon relevant to online teaching and learning (see **FIGURE 9**). Forty-eight papers used a qualitative (QL) research approach which involved descriptive data collection, student, teacher, or other stakeholder thoughts and experiences; 28 papers used mixed methods\u2014both qualitative and quantitative approaches; 37 papers discussed technical (T) components of LMS and included new software development and framework design; and, 37 papers were categorised as \"other\", namely, research that did not fall into the above three categories, e.g., applications of existing LMSs and tools, reviewing/comparing existing LMSs or tools.\n\nQualitative research studies in this review evaluated mainly the students' perspective: their preferences, perceptions, satisfaction, and attitudes towards online learning, including the online tools being utilised [W3008241777, W2575168857, W2534570357, W2766675271]. Only two research studies focused exclusively on teacher opinions, perceptions, and experiences in e-assessment, Moodle activities, and their learning impacts [W4236792643, W2794013728]. Four articles reported on both student and teacher perspectives and discussed attitudes towards summative and formative assessments and flexibility in e-learning [W2318659967, W2318659967, W1743818589, UNMAPPED:124]. Jackson (2017) reported that Moodle is a technology that enables creativity among teachers and recommended that management incorporate training programs of LMSs for both teachers and students into their strategic plans [W2318659967].\n\n**FIGURE 9** Venn diagram for QN (quantitative), QL (qualitative), and T (technical) types of research",
+              "citations": [
+                "W3008241777",
+                "W2575168857",
+                "W2534570357",
+                "W2766675271",
+                "W4236792643",
+                "W2794013728",
+                "W2318659967",
+                "W2318659967",
+                "W1743818589"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "124",
+                "2017"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_8",
+              "subsubsection_index": 8,
+              "subsubsection_label": "Theme 8: student success factors",
+              "parent_subsection_id": "s_3_2",
+              "text": "The qualitative, quantitative, and mixed methods research have common indexes used as student success indicators, namely, student performance, engagement, and satisfaction indicators (as described in **TABLE 2**). **FIGURE 7h** shows the articles that discussed student success factors with 14% using student performance, 16% student engagement, and 8% student satisfaction. Student performance and engagement are mainly found in quantitative research, whereas student satisfaction indicators are found in qualitative research. Qualitative research measuring student satisfaction are fewer than quantitative research analysing student performance and engagement.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "The trends demonstrated in the research articles are categorised into eight main themes (see **TABLE 2**). Theme 1 compares various Moodle features explained in the study. Themes 2 to 4 highlight the trends in pedagogy, which include curriculum development, learning, and assessment processes in e-learning. Theme 5 analyses ethical aspects of e-learning, and Theme 6 highlights trends in new software development aiming to improve e-learning, particularly Moodle. Themes 7 and 8 provide an overview of research approaches, methods, and common student success indicators. **FIGURE 6** shows the number of papers that discuss each of the eight themes, although several papers discuss multiple themes. **FIGURE 7** shows the percentage of papers related to each theme and sub-theme.\n\n**FIGURE 6** Frequency of articles describing each theme\n\n{{TABLE:tbl_08}}\n\n**FIGURE 7** Percentage of research papers related to each theme and sub-theme\n\n{{TABLE:tbl_09}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_08",
+            "tbl_09"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The initial database searches identified 538 Moodle-related articles. The literature was then screened for the period Jan 2015\u2013June 2021, journal or review articles only, and articles published in English. This screening reduced the identified articles to 285, 167 from Scopus, and 118 from WOS. These initially screened articles were downloaded from the relevant databases and checked for duplicates. After screening for duplicates, the abstracts from the 211 remaining articles were reviewed, resulting in the elimination of a further 24 articles. The full text of the remaining 187 articles was read, eliminating another 32 articles as they were not directly related to this study. Thus, a total of 155 journal articles were used in this systematic review.\n\n**TABLE 2** Trend analysis\n\n{{TABLE:tbl_02}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_02"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This comprehensive systematic review on Moodle use for online teaching and learning covers a wide range of educational institutions. The review identifies methods used and developments over the last 6 years published in 155 journal articles across 104 journals over 55 countries and 10 disciplines. The findings have been summarised bibliographically and thematically where appropriate, providing vital information to educators, researchers, and software developers. The critical limitation of this review is that only Scopus and Web of Science databases were used for the search, and papers that are not covered by either database are not included in this analysis.\n\nThe bibliographic analysis identified Moodle as a well-established and advanced learning platform for multiple disciplines and particularly used in STEM education. Most of the literature (75%) focus on university settings, with the majority (96%) on undergraduate studies. The bibliographic analysis shows the increasing trend in Moodle educational research and provides information about the top journals, leading authors, keywords, and high citations. The thematic analysis finds that Moodle is a powerful tool used to support learning in various ways. Both educators and students benefit from using the Moodle LMS, although currently at varying degrees. The most prevalent tools being used are Moodle \"quizzes\" and \"workshops\", and external tools that can be easily embedded into the Moodle system are videos, virtual tours, and e-portfolios. Moodle enables the creativity of individual teachers to develop course-specific materials for students. In addition, Moodle saves time due to randomly generated tests, questions with multiple possible answers, automated marking systems and rubrics, and positive and motivational automatic summative and formative feedback. There is strong evidence that Moodle increases student engagement, performance, and satisfaction while enhancing flexibility in their learning environments. Areas showing a rapid growth in research are adaptive content and assessment development, improvements in data security, and user verification. Regardless of recent advancements in online teaching and learning, some studies report numerous fundamental gaps and drawbacks.\n\nThe gaps identified in this review are significant for future research. Some gaps include comparing Moodle with other LMSs and elaborating on the many e-learning tools and associated plug-ins available in the market but not analysed in educational research. Future research could focus on aspects pivotal for e-learning success: features, integration, cost, and security. Further research is needed to outline Moodle e-learning experiences in primary and secondary education settings, with qualitative studies needed, particularly focusing on teachers' perspectives in a tertiary education setting. As only 5% of the studies have considered educational theories, future research needs to strengthen the theoretical underpinning of studies. Existing educational theories could successfully theorise the efficiency of content developments and the effectiveness of online study materials and assignments. Data gathering tools and statistical tools embedded into LMSs along with theoretical frameworks could lead to insightful research. As only 10% of articles discussed ethical aspects, more publications are needed to analyse ethical issues associated with e-learning, particularly focusing on the increasing number of artificial intelligence tools. More research on these aspects will help educators to utilise LMSs for successful online or blended course developments. As this review is based only on published articles, more applications of Moodle might be occurring, particularly in developing countries. Therefore, an area of future study could be a study examining statistics of Moodle usage rather than published papers.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4210507373_tables.md"
+}

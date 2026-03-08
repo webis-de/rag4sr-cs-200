@@ -1,0 +1,263 @@
+{
+  "id": "W4396796876",
+  "metadata": {
+    "title": "A Systematic Review of Chatbots in Inclusive Healthcare: Insights From the Last 5 Years",
+    "n_sections": 6,
+    "n_subsections": 4,
+    "n_subsubsections": 3,
+    "n_tables": 7
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Chatbots or conversational agents (CAs) are applications that interact with users via written or spoken natural language simulating a human-like conversation. They accept input as speech, text, or video; in addition, they may receive input from several different sensors. They process the input and provide relevant advice or feedback in the form of text, speech, or manipulation of a physical or virtual body [W4200588694].\n\nHealthcare chatbots aim at eliminating hospital waiting times, making appointments, and providing user assistance such as consultations or even diagnosis and psychological support [W3200742808, W3022528244]. In this way, these chatbots decrease the medical and organizational burden while cutting costs [W4206636637]. Although it is helpful to use chatbots in healthcare, they are complex to build, and poor design can lead to accuracy problems in the responses or even worse, in the diagnosis.\n\nOther advantages of chatbots are their ability to gather information about the patients and their symptoms, which are then used to correctly respond to the user's queries as accurately as possible and to collect user feedback on their delivered features which can be exploited to improve their user experience in the interaction.\n\nAnother crucial aspect of chatbots is their accessibility, i.e., being accessible, comprehensible, and easy to use by all users, regardless of one's abilities. Unfortunately, for chatbots the aspect of inclusion is still neglected. There is a need for more active research on chatbots to address diverse user needs, since the latter can experience more barriers with chatbots vs webpages [W2962771554]. To support this goal, designers must take into account what type of input or output to accept, how the applications relate to the user (UX), in which language to develop the chatbots, and also whether they can be used by people with disabilities who may rely on assistive technologies (such as a screen reader) or require a tactile response, or even a video output capable of displaying sign language.\n\nSince the first Chatbot, ELIZA, was created in the 1960s [W4200588694], technologies such as artificial intelligence (AI) and natural language processing (NLP) progressed over time, increasing chatbots' \"intelligence\" (in terms of precision and accuracy) and spreading rapidly in all sectors, even reaching persons in their homes (home assistants such as Alexa or Google Home).\n\nIn this systematic review we focus on the eHealth area. We aim to analyze the evolution of chatbots applied in the medical field, exploring their current applications as well as present and future challenges, focusing especially on inclusiveness and how this is included in the design process.\n\nThis paper is divided into six sections. After this introduction, the research questions leading our study are shared, then the applied methodology is described in detail. Next, results are discussed, organized by different categories of the selected papers. Lastly, conclusions and future work close the paper.",
+      "citations": [
+        "W4200588694",
+        "W3200742808",
+        "W3022528244",
+        "W4206636637",
+        "W2962771554"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Research Questions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "As mentioned in the Introduction, this study mainly aims to investigate the evolution of chatbot technology and inclusivity over time, in the eHealth sector. Thus we formulated the two following research questions that lead our analysis:\n\n* **RQ1:** What is the application of chatbots in the health-care sector and how has it evolved over the last 5 years?\n* **RQ2:** How much attention is paid to accessibility when designing an application?\n\nThe first question investigates the progress and use of the chatbot in the medical field while the second one investigates whether and how accessibility is included in the their design process.\n\nThe paper is organized to introduce the methodology for searching and detecting the selected articles (applying filters), presenting a section devoted to discussing the results obtained, and conclusions with suggestions and directions for future work.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Method",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Search Strategy",
+          "subsubsections": [],
+          "text": "An extensive search was carried out in June 2023 on four bibliographic sources: the databases ScienceDirect (www.sciencedirect.com), IEEE Xplore (ieeexplore.ieee.org), ACM Digital Library (dl.acm.org), and Google Scholar (scholar.google.com). Databases such as Pubmed were not considered in this study because we refer to papers focusing on computer science since the interaction and development of chatbots are an essential part of our investigation.\n\nThe search was carried out using these keywords: \"chatbot\", \"hospital\", \"healthcare\", \"accessibility\" and \"conversational agents\". The most common keyword combinations used in the research were: \"chatbot hospital accessibility\", \"chatbot healthcare\", \"conversational agents accessibility\", and \"chatbot accessibility\"; but also using the operators AND and OR as follows:\n\n\"Chatbot\" AND (\"accessibility\" OR \"hospital\" OR \"healthcare\") AND \"Conversational agents\".\n\nThe search yielded a total of 1944 articles retrieved from 4 databases (IEEE Xplore 64, ACM Digital Library 954, ScienceDirect 513, Google Scholar 413).",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Study Selection Criteria",
+          "subsubsections": [],
+          "text": "The first inclusion criterion consisted of terms that appeared in the title and the relevance to the keywords used. To avoid any misperception and effort to translate, the search focused only on articles published in English, while non-English publications were excluded. Concerning the timeline, a period of 5 years was chosen (between 2018 and 2023), an adequate period to observe the evolution of research and related publications in the field.\n\nLastly, only research articles were included in the candidate set, thus excluding review papers and book chapters or books [W3184966646].",
+          "citations": [
+            "W3184966646"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Article Selection",
+          "subsubsections": [],
+          "text": "According to the methodology proposed in [W3202285719], the process of selecting the articles for this study was organized into three parts (as shown in Figure 1): Identification, Screening, and Eligibility. In the identification phase, we used the databases to find articles that matched with the keywords and put them in a candidate set. Next, we proceeded with the screening phase in which by reading the paper title and abstract we filtered out the articles considered not relevant for our study. Finally, we entered the eligibility phase in which we analyzed the selected articles one by one and decided which of them to include in the review.\n\n**FIGURE 1**\nFlow chart representing the article selection process\n\n* **Identification:** Records identified through database searching: IEEE Xplore (64), ACM Digital Library (954), ScienceDirect (513), Google Scholar (413) for a total of 1944 articles.\n* **Screening:** Records after duplicates removed = 765 articles. Records screened = 75 articles. Records excluded = 690 articles.\n* **Eligibility:** Articles assessed for eligibility = 66. Articles excluded with reasons = 45 articles.\n* **Included:** Articles included in the review = 21.\n\nAfter searching the four databases, a total of 1,944 articles were found, and after removing the duplicates 765 candidates remained. After the screening phase only 75 articles were selected, discarding a total of 690 as they were not in English, not full text (abstract, or full paper not accessible from university authentication credentials), not from authoritative sources, or related to other technologies. Ultimately, we performed the eligibility phase. After analyzing 75 articles, only 21 articles were selected, all including details on the chatbot's implementation and the technologies used. This was a basic requirement for our study, which aimed to analyze complete chatbots and discard theory studies, in order to understand the technology's evolution over time.\n\nThe selected articles were analyzed and organized by categories (As per Table 1) and can be found in the source section at the end of the review. A total of 29% of papers were related to Diagnostic Support, followed by Access to Healthcare services and Counseling or Therapy (19%). Another 9% were related to Self-monitoring and 14% to (user) data collections. Lastly, 10% of implemented chatbots were specific for COVID-19 support.\n\nOur study took into consideration four aspects of the analyzed papers: a brief description of the purpose of the applications, the target they refer to, the technology they use, and finally whether they are inclusive or less so.\n\n**TABLE 1**\nDistribution of the selected papers by application type\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W3202285719"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "64",
+            "954",
+            "513",
+            "413"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Papers Characterization",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.4.1. Applications Purposes and Targets",
+              "parent_subsection_id": "s_3_4",
+              "text": "Chatbots in healthcare can be developed for patients or their care providers depending on the application goals/objectives of the chatbot. Main support areas include Diagnostic support, Access to healthcare, Counselling or therapy, Self-monitoring, Data collection, and support on COVID-19.\n\n##### 3.4.1.1. Diagnostic Support\nThese types of applications focus on diagnosing disease. To do this, they make use of different methodologies; some refer to the symptoms [W3167199533]; and others are based on the insertion of monitoring parameters within the application [W3034228090]. Most of these applications are aimed at providing the right diagnoses so that the patients who use them do not go to hospitals, clogging up the emergency rooms. However, a part of these is aimed at a more specific category of users focusing precisely on a single disease [W3139396649] or even cancer [W3168055830, W3203698165].\n\n**FIGURE 2**\nA chart representing the types of applications analyzed in the study\n\n{{TABLE:tbl_02}}\n\n##### 3.4.1.2. Access to Healthcare\nThese applications enable users to access health services remotely in order to schedule appointments [W4316076993], access hospital hours and contact doctors or the reception. Some apps provide information on the facilities and how to reach them [W4283276344], while others allow monitoring patients remotely by entering clinical data into the application, so that doctors can assess the condition of their patients at home [UNMAPPED:15].\n\n##### 3.4.1.3. Counselling or Therapy\nMental health problems are a growing issue, not to be underestimated in today's society. Especially after the arrival of the pandemic, these cases have multiplied dramatically. To help people even in the comfort of their homes, bringing therapy or counselling directly to them, support applications have been created. These apps address this issue in several ways: some use chatbots as a tool, analyzing the stress-reducing effects they can have on the user [W2920269499]; others focus on emotions and how they can be managed and kept in check [W3007384022]; finally, there are applications aimed at helping users manage anxiety or depression [W4229082340] and even at alleviating the symptoms of ADHD [W3139127941].\n\n##### 3.4.1.4. Self-Monitoring\nUntil now we have seen applications that help users access services that they previously could only access outside their homes, while this type of app allows users to self-monitor. One has the main purpose of having patients use a telegram chatbot capable of monitoring blood pressure by entering data [W3136783667]; another application is dedicated to pregnant women and reducing their stress levels through the use of this app [W4283523262].\n\n##### 3.4.1.5. Data Collection\nThe use of chatbots has become increasingly frequent. Continuous improvement in design makes chatbots more reliable and guarantees a wide range of services. Thus, it is essential to receive feedback from users who use the app so that problems can be resolved, and better service guaranteed. These applications focus on just that [W2894140456, W3092841162, W4367623826].\n\n##### 3.4.1.6. COVID-19 Support\nOther kinds of applications have targeted users affected by Covid-19. As previously discussed, the pandemic contributed greatly to the development of chatbots; for months we were unable to leave the house, so the need arose to access services remotely. COVID-19-targeted apps help users book appointments for tests or tests, analyze symptoms to prevent false positives, and even contact their doctors [W3033211403, W4311582092].",
+              "citations": [
+                "W3167199533",
+                "W3034228090",
+                "W3139396649",
+                "W3168055830",
+                "W3203698165",
+                "W4316076993",
+                "W4283276344",
+                "W2920269499",
+                "W3007384022",
+                "W4229082340",
+                "W3139127941",
+                "W3136783667",
+                "W4283523262",
+                "W3033211403",
+                "W4311582092"
+              ],
+              "tables_in_text": [
+                "tbl_02"
+              ],
+              "citations_unmapped": [
+                "15"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.4.2. Technologies",
+              "parent_subsection_id": "s_3_4",
+              "text": "There are various techniques used for chatbots. Rule-based chatbots use pattern-matching algorithms like Artificial Intelligence Markup Language (AIML) [W3033211403] or online platforms to build chatbots [W3167199533, W3168055830, W4316076993, W4283276344, W2920269499, W3139127941, W2894140456, UNMAPPED:15]. AIML is utilized for response generation, structured with subjects containing related categories, and each category consists of a rule with a pattern representing user queries and a corresponding template for the response. For instance, studies have employed the AIML algorithm for response generation.\n\nArtificial neural networks (ANN) are used in retrieval and generative chatbots. These models receive user input, compute vector representations, feed them as features to the neural network, and generate responses. For example, some studies employed convolutional neural network (CNN) models to classify posts in online health communities and long short-term memory (LSTM) models to generate responses for posts. Additionally, others used feed-forward neural networks to recommend similar hospital facilities.\n\nMany studies have utilized various online tools that incorporate natural language processing (NLP) and machine learning techniques. These tools typically include natural language understanding (NLU) components, which aim to comprehend text. NLU involves intent categorization and entity extraction while considering contextual information. After training, chatbots can categorize users' inputs into intents and extract entities.\n\nOther chatbots rely on online platforms or social networks such as Telegram or Facebook [W3034228090, W3203698165, W3136783667, W4283523262, W4367623826]. The remaining ones used a variety of different methodologies like data gathering [W4229082340, W3092841162, W4311582092] or online interfaces like Google API's [W3167933824].",
+              "citations": [
+                "W3033211403",
+                "W3034228090",
+                "W3203698165",
+                "W3136783667",
+                "W4283523262",
+                "W4367623826",
+                "W4229082340",
+                "W3092841162",
+                "W4311582092",
+                "W3167933824"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_4_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.4.3. Inclusivity",
+              "parent_subsection_id": "s_3_4",
+              "text": "Chatbots should be useful tools for anyone, regardless of their abilities. CAs are especially valuable for people with disabilities, guaranteeing them access to healthcare services from their homes or helping to orient themselves in order to reach hospitals. For this reason, it is important that these tools are designed keeping accessibility in mind, to be used by everyone, guaranteeing vocal and visual answers or inputs but also facilitating their navigation in the best possible way. If we look at this study's search keywords we can observe that this often does not happen. If we search the four digital libraries using the keywords \"chatbot AND accessibility\" we receive around two thousand articles; however, if we removed the keyword \"accessibility\" at that point the search would yield at least five times more results, showing that accessibility is not at the heart of chatbot development. As a matter of fact, out of twenty-one applications analyzed, only four are accessible [W3203698165, W4283276344, W3139127941, UNMAPPED:15] and only one is designed specifically for people with disabilities [W4283276344].\n\nFigure 3 shows the percentage of inclusive applications between the selected papers, resulting in only 15%. This denotes the need to further investigate accessibility of chatbots and enhance their efficacy while delivering a more satisfying user experience.\n\n**FIGURE 3**\nPercentage of inclusive applications in the study\n\n{{TABLE:tbl_03}}\n\nExamples of design issues include studies that do not consider the interface design, with a focus on interaction of users with special needs (without checking that they are accessible via screen reader if the interface was web-based, or the app is not navigable via gestures, for example). Another example concerns chatbots based on voice interaction that do not involve short, simple answers and feedback.",
+              "citations": [
+                "W3203698165",
+                "W4283276344",
+                "W3139127941"
+              ],
+              "tables_in_text": [
+                "tbl_03"
+              ],
+              "citations_unmapped": [
+                "15"
+              ]
+            }
+          ],
+          "text": "In the following, we describe in detail the papers considering the four selected parameters (Figure 2).",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section introduces the methodology applied to perform our study, showing the research strategy, the applied criteria, and the algorithm leading the process of selection of the articles, going specifically into the different types of applications examined in the study.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Results",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In the following section we summarize the results of the study, starting with an overview of the articles published by year (Figure 4), and continuing with an analysis of each single item (Table 2). The 21 selected articles were used to conduct a deep analysis in order to answer the aforementioned research questions.\n\nFigure 4 shows the distribution of these papers per year. It can be observed that from 2019 to 2023 the considered topic has received more and more contributions, with great growth in 2021. There were few contributions in 2023 because the research for this paper was conducted in May.\n\n**FIGURE 4**\nArticles selected for the study per year\n\n{{TABLE:tbl_04}}\n\n**TABLE 2**\nSummary of the items analyzed: purpose, target, technologies, inclusivity\n\n{{TABLE:tbl_05}}\n\nTable 2 shows all the articles sorted by year of publication from the oldest to the most recent with a summary of the purpose, applied technology, the target of the application and whether they can be defined as inclusive or not.\n\n**FIGURE 5**\nChatbot technology per years\n\n{{TABLE:tbl_06}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_04",
+        "tbl_05",
+        "tbl_06"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The purpose of this study was to conduct a systematic review of the literature on chatbot applications in the healthcare sector and analyze their benefits, problems, and future potential. Most of the research papers included in the study focused on creating or developing AI chatbots to help people access healthcare services and/or treatment from home and only a few of them aimed to get feedback uptake from these patients.\n\n**RQ1: What is the application of chatbots in the healthcare sector and how has it evolved over the last 5 years?**\n\nAfter analyzing the selected studies, we were able to confirm that chatbots applied to the healthcare sector are formidable tools, constantly evolving, both in terms of the services offered, as we have seen above, and in terms of the technologies used, ranging from the use of NLP to the implementation of increasingly precise machine learning algorithms.\n\nAs shown in Figure 5, over the past five years, the trend is to create chatbots using more and more frameworks and online platforms, such as Telegram, Facebook, etc., instead of using AIML and ad-hoc NLP-based algorithms. This is at the expense of developing accessible and inclusive interfaces due to the limited functionality offered by frameworks and platforms that are readily available online.\n\nHowever, the study also underlined that despite their advanced state, these applications still present problems regarding accuracy and performance.\n\nTable 2 shows the progress of the applications analyzed over time. In the last 5 years, chatbots have become increasingly specialized and targeted. As seen in the Table, the first applications focused on diagnosing diseases or providing different services for all categories of users. Instead, over time the applications have begun to specialize in categories of users helping them with therapy or with specific health problems. In the paper by Walss et al. [W3139396649], the application focused on patients suffering from suppurative Hidradenitis; in the article by Chen et al. [W3168055830], the target was pregnant women; if we continue to scroll down the table we find many more examples showing how the target varies according to each specific health problem.\n\nAs we have seen, most CAs use machine learning algorithms, to be able to better understand user requests and provide the most appropriate response. However, in some of the articles analyzed, users encountered a problem with the standardization of the answers given by the chatbots [UNMAPPED:15], or with the fact that the applications could not respond at all when the question was asked differently from the way it was designed [W3139396649].\n\nThus, further studies are needed to improve the interpretation of natural-speaking language and the accuracy and pertinence of the delivered answer.\n\n**RQ2: How much attention is given to accessibility when designing an application?**\n\nThe primary intent of chatbots should be to guarantee an enjoyable user experience (UX) accessible to all users so that the chatbots can be utilized to their full potential, but instead this study revealed that often this does not happen.\n\nTo begin with, most of the applications analyzed are text-based as their primary method of communication, and only a few accept speech input. This translates into navigation problems for more sensitive categories of users, such as the elderly or people affected by visual disabilities who can benefit more by using a natural language for the interaction. Only four of the analyzed applications can be defined as accessible and only one is specifically designed to help people with disabilities [W4283276344]. Considering that chatbots are becoming increasingly useful tools in our society, and are becoming more targeted, it is essential for future design to be centered around UX. To this aim, co-design with people with disability is the main tool for achieving a satisfactory degree of accessibility and usability.\n\nThe study took into consideration research articles from the last 5 years; however, if we conducted a study reaching further back, we would notice that by inserting the keyword \"accessibility\" not only did the results decrease dramatically by a factor of 5, but also that 70% of articles are dated within the last three years (UNMAPPED:2021, UNMAPPED:2022, UNMAPPED:2023). For example, if we conduct research through ScienceDirect, using the combination \"chatbot accessibility\", we have 651 research articles as a result, 530 of which have been published in the last 3 years. Furthermore, using the single keyword \"chatbot\" we arrive at a total of about 3025 articles, of which 2283 only date back to the last 3 years, showing how both topics are increasing progressively, that the problem of making accessible applications is slowly emerging, and that only a few developers are actually attempting to resolve it (Figure 6).\n\n**FIGURE 6**\nComparison by year of how many articles on science direct consider the theme of accessibility\n\n{{TABLE:tbl_07}}\n\nAnother issue that emerged after reviewing these papers is that some chatbots fail to address the language barrier issue. An example is the article written by Apuzzo and Burresi [W4283276344], in which a team of Italian developers created a chatbot that would allow people with visual impairments to access healthcare services, and to receive support for orientation. It responded with two different types of output: one based on sign language, and one written. The problem reported by the developers was that the text-based output was only offered in English, thus preventing users who do not rely on sign language from fully understanding the answers in the case of non-mastery of the language.\n\nBased on the results of the study, some design suggestions can be proposed:\n\n1. Make the interaction as natural as possible to approach the way users who are unfamiliar with technology interact. Voice interaction, for example, is the way questions are usually asked. This is particularly useful if the interaction has to take place with smartphones, which due to the small screen can make it difficult for everyone to read.\n2. Ensure that the user interface\u2014whether web-based, mobile application or not\u2014is navigable via assistive technologies (e.g. screen reader, magnifier, etc.), keyboard and gestures (touch-screen).\n3. Give more flexibility to the type of questions the user can ask (and thus the chatbot can interpret).\n4. Use simple language with short, frequently used words and short sentences.\n5. Allow customization of the interface to offer a multimodal interaction as close as possible to the user's needs (including the spoken language).",
+      "citations": [
+        "W3139396649",
+        "W3168055830",
+        "W4283276344"
+      ],
+      "tables_in_text": [
+        "tbl_07"
+      ],
+      "citations_unmapped": [
+        "15"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Conclusions and Future Work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this paper, we investigated the progress of CAs in the healthcare sector by considering the recent literature (last 5 years), analyzing the state of the literature and the main features of recently developed applications. Chatbots have shown great potential in revolutionizing hospital management and improving patient experiences. They have evolved to become more sophisticated, intelligent, and capable of addressing a wide range of healthcare needs. The integration of artificial intelligence and machine learning has enabled chatbots to understand and respond to user queries more accurately. However, in their current state several problems remain, the most important being that they are not developed with the idea of accessibility in mind and pay little attention to the user experience. As a result, difficulties including miscommunication between chatbots and users can occur. Moreover, healthcare is a sensitive field that necessitates careful attention to the safety, security, and privacy of data and systems. To prevent these concerns and assure reliability and security, it is crucial to plan the use of chatbots in healthcare carefully, with a major focus on the user experience.\n\nIn conclusion, the paradigm of accessibility-by-design has to be incorporated into the practice of developing chatbots not only in the healthcare sector, but in every sector. In this way it is possible to effectively empower all users, regardless of their abilities and technical skills, and to increase the value of chatbots as effective support systems.\n\nConcerning the future of research in this area, in recent months considerable attention has been focused on ChatGPT. When performing a search in the scholar repository by adding the word 'chatGPT' to our selected five keywords, we retrieved 244 papers dating from 2022 to the present that discuss this topic (245 from 2021). This indicates that considerable attention has been concentrated in this direction in the last year, discussing the potential of this technology. However, as pointed out by Chow et al. [W4362641141] there are some relevant obstacles to making ChatGPT a programming layer when building an accurate medical chatbot. These include accuracy and reliability since it would be necessary to train ChatGPT only on the certified medical information, transparency of the training model, and ethics concerns regarding the treatment of user data.",
+      "citations": [
+        "W4362641141"
+      ],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4396796876_tables.md"
+}

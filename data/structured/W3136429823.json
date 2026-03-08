@@ -1,0 +1,461 @@
+{
+  "id": "W3136429823",
+  "metadata": {
+    "title": "Hands-Free Interaction in Immersive Virtual Reality: A Systematic Review",
+    "n_sections": 5,
+    "n_subsections": 14,
+    "n_subsubsections": 2,
+    "n_tables": 6
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 INTRODUCTION",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1 Background",
+          "subsubsections": [],
+          "text": "VR encompasses three components [W1963648925]: a user, a VE, and an interface that is used to interact with the VE and to immerse the user. VR can immerse users in a VE [UNMAPPED:12] through their senses with the various interfaces between the user and the 3D simulations [W1963648925]. Following the definition provided in [W1551717579], a VR system is immersive when users are completely or almost completely integrated into a VE through devices such as head-mounted displays (HMD) and CAVE Automatic Virtual Environments (CAVE). As such, interaction methods should evolve to support high levels of presence [W2104439084] (for a more comprehensive overview of research on presence in VR please refer to [W2291204326]) and authentic virtual experiences [W2041649634].\n\nHuman-Computer Interaction (HCI) is already widely studied in conventional interaction contexts [UNMAPPED:17]. However, with the addition of another spatial dimension (2D to 3D), and consequently more degrees of freedom, it is required that the most common tasks and methods of interaction are rethought and adapted to VR and its technologies [UNMAPPED:18]. Examples of such tasks include finding the best way to perform basic interaction tasks (selection, insertion, manipulation) or how to perform gesture recognition in 3D environments when the user has an HMD.\n\nIn [UNMAPPED:19], it is argued that VR interaction should be human-centered, and a set of guidelines are provided for the implementation of such interactions, especially how they should be intuitive, follow the principles of interaction, and the importance of the human hands for interaction. The focus on body-centered interaction is also defended in [W1528027857], with authors mentioning the body as the main point of interaction with the VE.\n\nTo design good interactions, a set of principles around the discoverability of the interactions should be followed [UNMAPPED:21], i.e., how to design interactions that correctly communicate to users their intent. The five principles are affordances (how something can be interacted with), signifiers (indicators of the interaction), constraints (restrictions on the interaction), feedback (results of the interaction), and mappings (relationships between the interactions). The interactions with a 3D user interface (UI) can also be classified by their intent in several interaction tasks [W1969783622, W4214889565, UNMAPPED:19]. Table 1 provides a summary of these interaction tasks. Different techniques and devices can be used to perform each of these types of tasks (e.g., selection can be performed by touching an object or by pointing at it). Additionally, multiple devices or techniques can be combined resulting in multimodal interaction, for instance, selecting an object can be done by pointing at the object, and the selection can be confirmed by voice command.\n\nAn increase in functionality is associated with an increased cognitive load [W4294215472], which can occur when the buttons of tangible interfaces (e.g., VR controllers) are used to perform multiple tasks. Thus, this approach or the use of commonly used tracked controllers is not ideal for interaction with the VE in such conditions and hands-free techniques for system manipulation and control can be used. Therefore, it is crucial to study the most appropriate interaction metaphors and their applicability to VR.\n\nTo overcome this limitation, alternative natural user interfaces (NUI) can be used to allow interactions while maintaining the hands of the users free. The concept of NUI comes from the way people interact with each other and with the world [W3043155107], either by gestures, expressions, movements, or communication, physically manipulating the objects around them. NUI in VR are usually associated with naturally grasping and grabbing objects with the hands instead of using handheld devices, and thus more related to the selection and manipulation tasks. However, VR input can be done with more than the users' hands which can be particularly useful for system control and symbolic input tasks.\n\n**TABLE 1**\nTypes of interaction tasks for 3D user interfaces. Adapted from [W1969783622, W4214889565, UNMAPPED:19].\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W1963648925",
+            "W1551717579",
+            "W2104439084",
+            "W2291204326",
+            "W2041649634",
+            "W1528027857",
+            "W1969783622",
+            "W4214889565",
+            "W4294215472",
+            "W3043155107"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "12",
+            "17",
+            "18",
+            "19",
+            "21"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Nowadays, with the modernization of industries using new technologies, virtual reality (VR) became a key tool for the future of training and certification of teams in an expeditious way [W2517209484, W2155711439]. It can promote success and safety in training tasks [W2904462746] in several areas such as medicine and education. Thus, VR is expected to boost higher levels of productivity through technological modernization and innovation, making it a key piece for the future of education and the training of skilled professionals.\n\nMost of the interactions with VR applications are currently performed by using the remote controllers which are sold out-of-the-box with the most sold VR consumer systems [UNMAPPED:4]. These are made possible because of tracking systems [W2581717384] that allow the use of tangible interfaces (like remote controllers [W2615297659] of the VR setup apparatus) in 3D spaces. This means that the common interactions with a VR system become hindered and limited in scenarios where the users' hands are used to directly interact with the virtual environment (VE). For instance, in a high-fidelity training scenario, when trainees are learning to use a tool that they hold in their hands, the common system interaction becomes hindered when there is a need to invoke an agent for help. Also, with collaborative and cooperative VR experiences, when users interact naturally with each other using their hands, an alternative hands-free mechanism is needed to allow for system control. Another example is in tourism applications where the users might be driving a buggy to explore a desert or fly gliding and receive feedback through tangible interfaces, requiring hands-free techniques to navigate through the application menus.\n\nPrevious literature reviews and systematic surveys have discussed interaction in immersive VR. For instance, [UNMAPPED:7] reviewed the literature regarding the available 3D UI menus for object and option selection, providing a taxonomy for this type of menus and classifying them regarding their intention, appearance and structure, placement, invocation and availability, interaction, and combinability. Regarding navigation, [W2797552926] presents a comprehensive review of the methods that allow users to navigate through VEs grouping them by the type of action required to perform the navigation (e.g., walking, steering, selecting). At [W2169657749], an extensive review of the transformation of 3D virtual objects is provided, specifying the techniques used from desktop to VR to transform the objects regarding changing their location, rotation, and scale. Similarly, [W646370922] presents a survey of 3D interaction techniques for object manipulation, viewpoint manipulation and, system control. Regarding the system control tasks, the author denotes that the techniques for this are less explored, as usually, traditional 2D techniques (e.g., 2D menus) are incorporated in 3D VE, possibly making tasks more difficult to perform. This happens because using an HMD prevents users from using traditional input devices (e.g., mouse and keyboard), a problem that can be solved by using virtual lasers to point at the 2D interfaces that are floating in the 3D space.\n\nAlthough the current literature discusses interaction in VR scenarios, the focus of the studies is on generic interaction interfaces for those environments with a big focus on object transformation and navigation. As such, literature lacks a comprehensive literature review that surveys interaction within the immersive VE without using the hands. In fact, during a preliminary search, most studies considered two groups of interaction tasks - system control and navigation. Since in most cases navigation is already a hands-free task by nature, this systematic review focuses on all other interaction tasks except navigation (Table 1). Usually, hand gestures are considered a hands-free interaction method. However, since in our scenario they can be a disruptive event to the hand interaction (e.g., a surgeon will not lose the focus or put down its instruments to perform a hand gesture), hand gestures are not considered hands-free interaction in this systematic review.\n\nThe four main goals of this systematic review are: (1) identify which hands-free interfaces are used to interact with the VE. Secondly, we aim to (2) identify which interactions tasks in immersive VR are usually performed using hands-free methods; Lastly, our goal is also to (3) identify which metrics are currently used to evaluate the hands-free interactions and interfaces, and (4) understand how they perform in the context of those metrics. To answer these questions, we have performed an extensive literature review.\n\nWith such systematic review, this work will provide an overview of the current state-of-the-art, namely the different hands-free interfaces available across the different interaction tasks and how they perform. Moreover, the results can help aid in the design and creation of applications that use hands-free interfaces, by showing the interaction possibilities and implications of the interfaces. The analysis will also provide better insights into existing research opportunities on this topic.",
+      "citations": [
+        "W2517209484",
+        "W2155711439",
+        "W2904462746",
+        "W2581717384",
+        "W2615297659",
+        "W2797552926",
+        "W2169657749",
+        "W646370922"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "4",
+        "7"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 METHODS",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Eligibility Criteria",
+          "subsubsections": [],
+          "text": "Studies that explore the use of hands-free interaction interfaces and methods in an immersive VR context were considered for the systematic review. The inclusion and exclusion criteria for this review are presented in Table 2.\n\nThere is a possible limitation with the search query not returning all the relevant studies. To overcome and mitigate this limitation a second inclusion criterion was added, allowing for relevant studies to be added through a manual search of the most relevant journal, conferences, and most cited works.\n\n**TABLE 2**\nInclusion and exclusion criteria for the studies.\n\n{{TABLE:tbl_02}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Search Strategy",
+          "subsubsections": [],
+          "text": "The literature was identified by conducting an extensive search on three electronic science databases: Web of Science (Clarivate Analytics), Scopus (Elsevier), and ACM Digital Library (ACM). The first search was performed on 14 May 2020. No other databases were used since according to our searches, the three used databases already index the studies from other publishers such as Springer, PubMed, and IEEE.\n\nThe search query consisted of four base components: \"VR\" and its equivalent terms, \"immersive\" and its equivalent terms, \"HCI\" and its equivalent terms, and lastly a set of terms that denote \"hands-free interaction\" as well as some interfaces that we know a priori that can enable hands-free interaction. As such, the query used on the Scopus database was: TITLE-ABS-KEY (\"virtual reality\" OR \"vr\" OR \"virtual environment\") AND TITLE-ABS-KEY (\"immersive\" OR \"cave\" OR \"hmd\" OR \"head mount*\" OR \"headset\") AND TITLE-ABS-KEY (\"human computer interaction\" OR \"HCI\" OR \"human machine interaction\" OR \"HMI\" OR \"man machine interaction\" OR \"MMI\" OR \"computer human interaction\" OR \"CHI\") AND TITLE-ABS-KEY (\"multimodal\" OR \"hand free\" OR \"novel\" OR \"natural user interface\" OR \"NUI\" OR \"natural interface\" OR \"natural interaction\" OR \"voice\" OR \"speech\" OR \"spoke\" OR \"VUI\" OR \"brain computer\" OR \"BCI\" OR \"brain machine\" OR \"BMI\" OR \"neural control\" OR \"NCI\" OR \"mind machine\" OR \"MMI\" OR \"direct neural\" OR \"DNI\" OR \"eye\" OR \"gaze\" OR \"optical\" OR \"myograph\" OR \"myography\" OR \"myographic\" OR \"neuromuscular\" OR \"gesture\" OR \"pose\"). The queries for the other databases were similar while taking into consideration the search characteristics of those databases.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Study Selection",
+          "subsubsections": [],
+          "text": "Considering the studies gathered by the inclusion criteria and search strategy described above, eligibility assessment and data abstraction were performed independently in a conventional unblinded standardized manner by a total of three reviewers. Each study was screened by two reviewers, with studies being randomly distributed between the reviewers. The studies were only rejected when there was a consensus between both reviewers for the rejection, otherwise, the study was eligible for full-text analysis. The full-text analysis was performed by one reviewer.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4 Data Collection Process",
+          "subsubsections": [],
+          "text": "The selected studies for full-text analysis were reviewed, and the data collection process was conducted using piloted forms. To support the goals of this literature review, three types of variables were collected from the studies: interaction properties, the study scope, and evaluation data. For the interaction properties variable, data regarding the type of interface (e.g., head tracking or eye-tracking), the interaction task (e.g., selection, system control, symbolic input), and the devices used for interaction were collected. The goal and main findings of the studies related to the hands-free interaction we collected for the study scope variable. Lastly, related to evaluation data, if an evaluation is provided, we collect the metrics used (e.g., which questionnaires) and, when a comparison of interfaces is provided, the significant results of the interaction interfaces comparison under those metrics. The collected data allows for a qualitative analysis of the selected studies.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5 Quantitative Analysis and Quality Assessment",
+          "subsubsections": [],
+          "text": "Based on the data gathered from the data collection process, a quantitative analysis was performed, characterizing the distribution of studies by the interface, interaction task, and evaluation metrics. To provide a better overview of the most used terms in the titles of the analyzed studies, a word cloud was generated by using the Displayr (https://displayr.com) and Word Art (https://wordart.com) online tools. Moreover, an analysis of scientific production over the years is also provided to better show the evolution of studies over the years.\n\nThe quality of the studies was also assessed in the context of this review. A scoring system was adopted based on the approaches for the quality assessment used by [W2947659936]. The scores were attributed to certain factors that reflect the expressiveness of the studies in the context of the systematic review and ranged from 1 to 3 points for each factor and were summed into an overall quality score that ranged from 3 to 9 points, with 3 points being the lowest quality and 9 the highest quality. The following factors and respective scores were considered:\n\nQA1 \u2013 Focus How relevant is the focus of the study for addressing the questions of this review? Is the hands-free interface the focus of the study? (1 - Somewhat relevant when it has data regarding one of the goals; 2 - Relevant when it has data for two or three of the goals; 3 - Very relevant when it has data for all four goals)\n\nQA2 \u2013 Comparison Within the scope of this systematic review, is the hands-free interface compared to another interface? (1 - No; 2 - Compared to a non-hands-free interface; 3 - Compared to a hands-free interface)\n\nQA3 \u2013 Methodology To what extent can the study methodology and findings be trusted in answering the study question(s)? (1 - Somewhat trusted when the sample is low, or no data reported; 2 - Trusted when there is a sufficient sample and lacking on validated metrics or robust statistical analysis; 3 - Completely trusted when it has a significant sample, results based on adequate metrics and a robust statistical analysis)",
+          "citations": [
+            "W2947659936"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The methodology followed in this survey was based on PRISMA [UNMAPPED:26]. This methodology provides guidelines for the development of systematic reviews and meta-analyses to ensure a transparent and complete reporting of the surveyed topics.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "26"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 RESULTS AND DISCUSSION",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Study Selection",
+          "subsubsections": [],
+          "text": "According to the previously defined search strategy, a total of 1337 records were identified and collected from the queried databases, of which 230 were identified as being duplicate studies and were consequently removed. Additionally, 12 studies were manually added to the record database due to their relevance for this survey, resulting in a record database of 1119 unique records. The title and abstracts of these unique records were screened, and 785 records were removed due to matching the exclusion criteria, resulting in 334 records eligible for full-text analysis. From the full-text analysis, 254 records were removed since they also matched the exclusion criteria, which in return resulted in 80 studies accepted for data extraction. Please refer to Fig. 1 for an overview of the study selection.\n\n**FIGURE 1**\nFlow diagram of study selection.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Quantitative Analysis",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1 Word Cloud",
+              "parent_subsection_id": "s_3_2",
+              "text": "A word cloud from the most used terms in the study titles was generated (Fig. 2). The terms list was carefully reviewed to remove common language words and merge synonym terms (e.g., \"head-mounted\" was merged with \"HMD\" and \"brain\" with \"BCI\"). The terms Virtual Reality (54), Interaction (25), and Immersive (18) overload the word cloud as they reflect the main scope of the studies. If we exclude those terms, the 10 most frequent ones and their respective frequencies are: eye (15), HMD (12), interface (12), voice (10), natural (9), evaluation (9), BCI (7), multimodal (7), tracking (7), and user (7). Considering the surveyed interaction interfaces (Table 4), the most frequent terms represent the most researched interfaces.\n\nInterestingly, the frequency of the term \"voice\" does not manifest the abundance of studies that used that interface (12 of 44 studies). Note that these terms reflect the titles of the studies and, although they should represent their content, such might not be always the case. This might explain the difference in occurrences between the top three terms and the remaining ones, as authors more easily label their studies with those key terms.\n\nMoreover, there is a lack of titles mentioning evaluation or evaluation metrics, which suggests that there are more studies presenting interfaces than studies evaluating those interfaces. This identifies a gap in the literature and in interface implementation since evaluations are key to ensure the viability of the interfaces.\n\n**FIGURE 2**\nWord cloud based on the analyzed paper titles. The word size and color intensity decrease with the frequency.",
+              "citations": [
+                "W2766597391",
+                "W3043155107",
+                "W2291204326",
+                "W646370922",
+                "W2169657749"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "18",
+                "12",
+                "7"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2 Yearly Scientific Production",
+              "parent_subsection_id": "s_3_2",
+              "text": "By looking at the yearly scientific production chart (Fig. 3) and the interfaces that were studied by year (Fig. 4), it is possible to verify that although scarce, the study of hands-free interaction in the scope of this review dates to 1987, with the very few studies that exist until 2002 focused on the voice. This focus continues through time. From 2002 to 2014 the studies correspond to the period where VR, although well defined, was still a novelty and where computers started to have affordable performance.\n\nHowever, from 2014 onward, with major releases of VR devices that allow truly immersive experiences at affordable prices [W2885488700], as well as hardware with better performance at a lower cost, scientific production picked up the pace. Not only are VR devices massified in the consumer market, manufacturers and researchers set to continuously improve the technology and interaction. For example, voice interfaces benefit from the maturity of speech recognition frameworks aided by artificial intelligence and machine learning, while eye-tracking benefits from device maturity which brings costs down, and the seamless integration of eye tracker devices in the HMD. It is since 2015 that there is significant scientific production related to the voice, head, and eye interfaces, as well as experimentation with using the brain, foot, face, and arms as interaction interfaces, a two-year delay between technology availability and the publication of scientific studies.\n\n**FIGURE 3**\nDistribution of studies by publication year.\n\n**FIGURE 4**\nDistribution of interfaces studied by publication year.",
+              "citations": [
+                "W2885488700"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Quality Assessment",
+          "subsubsections": [],
+          "text": "The quality assessment of the 80 selected studies in full-text analysis revealed a mean quality score of 5.71. Fig. 5 shows the histogram of the quality scores and the data quartiles, from which we consider a score of 4 or less as low quality, and a score of 7 or greater as high quality, being the remaining score values considered as medium quality.\n\n**TABLE 3**\nStudies divided by quality group.\n\n{{TABLE:tbl_03}}\n\nTable 3 shows the studies divided by quality group. The number of studies with low quality (22) indicates that there is still a need for improvement of scientific research in this area, namely regarding the used methodologies for evaluation (more on Sect. 3.8).\n\nRegarding the scores for each of the quality factors (Fig. 6), very few studies (9) have a low focus regarding the scope of this review and most of the studies (50) do not provide a comparison of interfaces with only 8 comparing hands-free interfaces, thus demonstrating the pertinence of this systematic review.\n\n**FIGURE 5**\nQuality assessment scores histogram and data quartiles.\n\n**FIGURE 6**\nQuality assessment scores by quality factor.",
+          "citations": [
+            "W1969783622",
+            "W2169657749",
+            "W2806158947"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Interaction Interfaces",
+          "subsubsections": [],
+          "text": "To better systematize the interaction interfaces in the literature, a taxonomy was created based on the interfaces' interaction source, modality, and used hardware. Table 4 shows the studies categorized with this taxonomy. The main sources of interaction found, which account for \u224885% of the studied sources, were the voice, the eye, and the head. Additionally, more novel sources were found, such as, brain, face, body, foot, and arm, which are more recently studied and result from the research in exploring more body capabilities as input.\n\nThere are two main types of voice recognition studied, one where the system only detects simple voice commands (Commands) and one where the system is capable of natural language processing to detect what actions the user wants to perform (Speech). For instance, in [W2907940193] a set of single-word commands (e.g., \"select\", \"open\") was recognized to allow users to interact with a 3D model. On the other hand, in [W2756229335] the system can recognize sentences and detecting a command with parameters while giving the user real-time feedback of the sentence being recognized. Alternatively, the voice can also be used for text input, as in [W2912023328, W2110228188], allowing the users to input text by speaking the words. Lastly, there are a few studies that make use of non-verbal actions to issue commands to the VR systems, detecting when the user \"blows\" to confirm a selection (e.g., [W2948418702]).\n\nThe high number of studies focusing on the voice might be explained by nearly every HMD having an integrated microphone or adding a microphone to a VR setup is easy with a little negative impact on the experience. Moreover, speech recognition services are widely available, such as the ones from Google and Microsoft, that provide seamless integration with the game engines and allow developers to easily enable speech interfaces. These services mitigate the problem of microphones tending to pick more than just the voice of the user (e.g., background noise, other people's voice) which usually results in more errors during the recognition process. Moreover, the use of activation keywords is also common, allowing systems to recognize when the user is issuing a command [UNMAPPED:32].\n\nTracking the eyes can be done with optic sensors, such as infrared (IR) or near IR (NIR) eye trackers (ET) and RGB cameras, or by measuring the electrical activity of the eye (electrooculography (EOG)) or of the brain (electroencephalography (EEG)). By using these methods, it is possible to determine the user's eye gaze (i.e., where the user is looking at in the VE), enabling them to point or aim at virtual elements (e.g., buttons) without moving the head [W2345101311]. However, it is also possible to determine relative eye movements (e.g., the eyes turned to the right) and issue a \"to right\" command [W2950054078], and detect when users blink [W2765364927, W2547097813] or have their eyes closed [W2501363736] to confirm selections or control the VR systems. Additionally, using the eyes for interaction suffers from what is described as the \"Midas Touch\" problem [UNMAPPED:109]. Since people naturally use their eyes to explore the environment that surrounds them, they expect to look at things without that look meaning anything, meaning that if the eyes are also used to interact, there is an overload of the visual channel. Practically, this can be solved by coupling these interfaces with other interaction techniques (e.g., select objects by pointing with eye gaze, but require a voice confirmation).\n\nHead tracking is also highly used, being available in practically all the immersive VR systems that use an HMD or mobile smartphone-based HMD (M-HMD), since these need to track the users' head to allow 360\u00b0 viewing of the VE. Similarly to eye interaction, one can obtain the head gaze (i.e., the direction of the head forward vector), and by overlaying a reticle or point drawn in the middle of the image, users can point at objects with their heads, enabling symbolic input by pointing the head to a keyboard (e.g., [W2074136038]), and most often, to perform selection tasks (e.g., [W2604791017, W2110228188]). Less commonly, it is also possible to detect head gestures by using its relative movements, which can be used to, for instance, instruct the system to reset the current action [W2901616108]. Interaction with head gaze is useful for minimal VR setups since it does not require additional hardware. This makes it an excellent tool for interaction in a multitude of commercial applications and games. For this reason, it is unexpected that the number of studies that use the head for interaction is lower than the use of the voice or the eye, which are relatively more novel interfaces. Possible reasoning for this is, despite being an interaction source that can be used straightforwardly, the HMD also requires head movement to view the VE. This can conflict with additional head movements designed to interact with the world, leading to involuntary interactions (\"Midas Touch\"). It is therefore useful to use an alternative confirmation method (e.g., button [W2762185336]) for selection with the head. Moreover, using head movements for the sole purpose of interacting can be fatiguing for users.\n\nThe use of EEG devices has allowed advancements for interaction in the context of accessibility, allowing the use of the brain as a source of interaction through Brain-Computer Interfaces (BCI). A few studies use this method to allow, mainly, system control tasks and symbolic input. With steady-state visually evoked potentials (SSVEP), it is possible to read a signal response on the brain by providing a visual stimulation at a certain frequency (i.e., elements flashing at a specific rate). This can be used, to determine if the user is focusing its visual attention on a particular key in a virtual keyboard [W2901616108, W2520246403], allowing symbolic input. Besides SSVEP, Event-related potentials (ERP) also account for other types of stimulation, such as the P300 wave which denotes a reaction to a stimulus. In the surveyed literature, the P300 was used as a reaction to a visual stimulus of elements flashing on a matrix, allowing users to control the active tools [W2796009799] or select objects [W2620158185]. A particular study also used the brain by measuring the users' concentration to perform actions on the VR system [W2774680215]. A major challenge of using BCI is the training of such systems which is required for the correct capture and processing of emotions and motor imagery by EEG devices [W95067517]. Emotion recognition is a complex field since emotions are subjective and are generated in different parts of the brain. There is also a limitation on the amount of motor imagery that systems can recognize, and which is directly influenced by the amount of time spent on calibration.\n\nBy using an EEG device, a couple of studies assessed the users' facial expressions and associated them with specific actions on the VR application, for instance, make the character jump when raising the eyebrows [W2950054078]. Alternatively, by using an RGB depth camera sensor (RGB-D), it was possible to detect the mouth state (mouth stretch and expression) and control a character based on those states [W1991187245]. In these cases, it is required to train the users, since performing actions with the face is not a natural form of interaction. Using RGB and RGB-D camera sensors, it is also possible to determine the users' body location in space and use that information to select menu items or objects that are closer to users [W2061640786] or in front of the users [W2766597391]. Two studies used the users' feet to control a platform that acted like a mouse depending on the direction and angle of the feet on the platform, allowing the control of the direction of a virtual pointer [W2158996610, W2613591388]. Lastly, a single study was found where the users were able to perform the selection by eye gazing to an element and confirming the selection contracting the muscles of their arms [W2889410756], which was made possible using an electromyograph (EMG).\n\nFor these novel interfaces, the challenge is to seamlessly integrate them into the VR setups to support immersive experiences. In the case of BCI and the face, they directly compete for the same space on the users' heads, while the former compete for the space used by HMD straps to secure themselves to the heads, the latter competes for the space occupied by the HMD, occluding a part of the face. Using the body position for interactions other than navigation is also a challenge since this technique is mainly used for that purpose.\n\n**TABLE 4**\nTaxonomy of interaction interfaces from the surveyed studies. Interfaces are subdivided by the source of interaction, modality, and hardware.\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W2907940193",
+            "W2756229335",
+            "W2912023328",
+            "W2110228188",
+            "W2948418702",
+            "W2345101311",
+            "W2950054078",
+            "W2765364927",
+            "W2547097813",
+            "W2501363736",
+            "W2074136038",
+            "W2604791017",
+            "W2901616108",
+            "W2762185336",
+            "W2520246403",
+            "W2796009799",
+            "W2620158185",
+            "W2774680215",
+            "W95067517",
+            "W1991187245",
+            "W2061640786",
+            "W2766597391",
+            "W2158996610",
+            "W2613591388",
+            "W2889410756"
+          ],
+          "tables_in_text": [
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "32",
+            "109"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5 Interaction Tasks",
+          "subsubsections": [],
+          "text": "To provide an overview of which tasks are performed in a hands-free manner, Table 5 systematizes and summarizes the studies based on the interaction tasks (Table 1). Although most of the interaction interfaces (apart from voice) involve the use of menus that require the selection of buttons, in this systematic review the studies classified under selection are the ones where selections are performed for the sole purpose of objects being selected and not when selecting buttons with other purposes. Please also note that a few studies [W2753727234, W2106069704, W1979264878, W2946834573] did not specify the interaction tasks being performed, generally stating that the hands-free interfaces were used to interact with the VE. Fig. 7 shows the distribution of interaction sources per interaction task.\n\n**TABLE 5**\nInteraction tasks found on the surveyed studies. Task types based on the Table 1.\n\n{{TABLE:tbl_05}}\n\nBesides navigation, which is out of the scope of this review, selection and system control are the two most performed interaction tasks in a VR application, being this reflected in the number of studies with those tasks. Given the number of tasks that can technically fit under the definition of system control, there is not a particular focus on the literature in a single task, with studies exploring a diversity of system control operations. Despite the diversity of actions and interfaces, for system control tasks, the most used interface is the voice by using speech commands, for instance, to perform actions like zooming on the data [UNMAPPED:32], to change the active game mode [W2791018761], and to navigate through menus [W2066273403, W2122013663]. Regarding other methods, in [W2948418702] the players were able to use the breath to change the base functionality of the game. In [W2953346793] users could issue voice commands to start or stop the music playback. By using the eye states and head movements, in [W2501363736] users were able to perform zoom operations, scroll through data, and reset the VR system.\n\nRegarding the selection tasks, the studies were divided by what kind of the selection process is being performed, i.e., fixating on one object (point), confirming the selection of the fixated object (confirm), or the full selection process (both). As the selection objective is usually the full process (fixating on an object and \"selecting\" it), most of the studies fall under this category. The most used interfaces for performing a complete selection are the head gaze and voice. In head gaze selections (e.g., [W2852424125, W2117685743, W2613591388, W2110228188]) users point a reticle at the object they want to select which activates a timer. After the timer finishes, i.e., after pointing at an object for a certain amount of time (dwell time) the object that is being pointed at will become selected. Using the voice for selection usually comprises a command that both fixates and confirms the selection in one action. For example, in [W1981291707, W2979396280, UNMAPPED:32] it is possible to say the name of the objects to be selected.\n\nFor the pointing task eye and head gaze are used. The confirming process needs to then be made using another method. For instance, in [W1980332576] users needed to point with either the head or eye but needed to press a key to confirm the selection. In [W2762185336], the eyes and head would be used to acquire a target and a controller button was used to shoot the target. In [W2345101311] users could also use their head and eye gaze for pointing at elements on a UI, with this study focusing only on this part of the selection process. The nature of these two interfaces makes them good candidates for this task as it is natural and easy to point at things with the eyes/head. For the confirmation task alone, only the use of the voice was found in the literature with a non-verbal \"blow\" action [W4248238768, W1994877858] used for confirming the selection of an object being targeted with a controller.\n\nWhen performing symbolic input hands-free there are two alternatives studied in the literature. The first most used approach is by using speech recognition in conjunction with a text-to-speech service, which allows users to directly input text by spelling the words (e.g., [W2613918921, W2912023328, W2157289187]). The second is to use a virtual keyboard in the VE and use the selection methods (e.g., eye gaze [W3012497864] and head gaze [W2044820906]) to choose which letters to input. In [W2901616108] a novel approach was used, with a keyboard similar to a T9 keyboard consisting of three main keys that when selected would consecutively show a subset of the previous letters available until only one letter was selected, being the keys selected by a BCI with SSVEP. In [W2520246403] a combination of eye-tracking and BCI SSVEP was used to accurately select the keys.\n\nRegarding other interaction tasks, in [W1986523777] it was possible to interact with a cloud of particles by \"blowing\" at them to manipulate their state, in this case, their displacement values. In [W2556135506] speech was used to modify the colors of objects by head gazing at them and then spelling the intended color. In the context of machine maintenance training [W2907940193], users could use speech to remove or replace machine parts and to open or close the machine views. With a broader focus, in [W2756229335] is also possible to modify colors of objects with speech after pointing at them with a non-hands-free interface as well as manipulating the on/off state of a lamp and creating or destroying new objects in the VE by issuing the respective speech commands. No studies were found that used hands-free interaction for transformation tasks, which is expected since these tasks are better performed with NUI.\n\n**FIGURE 7**\nNumber of studied interaction sources per interaction task.",
+          "citations": [
+            "W2753727234",
+            "W2106069704",
+            "W1979264878",
+            "W2946834573",
+            "W2791018761",
+            "W2066273403",
+            "W2122013663",
+            "W2948418702",
+            "W2953346793",
+            "W2501363736",
+            "W2852424125",
+            "W2117685743",
+            "W2613591388",
+            "W2110228188",
+            "W1981291707",
+            "W2979396280",
+            "W1980332576",
+            "W2762185336",
+            "W2345101311",
+            "W4248238768",
+            "W1994877858",
+            "W2613918921",
+            "W2912023328",
+            "W2157289187",
+            "W3012497864",
+            "W2044820906",
+            "W2901616108",
+            "W2520246403",
+            "W1986523777",
+            "W2556135506",
+            "W2907940193",
+            "W2756229335"
+          ],
+          "tables_in_text": [
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "32"
+          ]
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6 Evaluation Metrics",
+          "subsubsections": [],
+          "text": "Table 6 shows the surveyed studies distributed by the respective metrics used for evaluation (note that some studies evaluate more than one variable, thus being represented more than once). From the 80 studies, 33 (\u224841%) did not provide an evaluation of the interfaces used. This represents a gap on the state-of-the-art as, without the evaluation of interfaces, it is not possible to ensure that the interfaces are adequate for interaction.\n\nUsability metrics were subdivided by their components (i.e., satisfaction, efficiency, and efficacy), with most evaluation studies focusing on these metrics. The satisfaction component is measured with user questionnaires. Most of the studies ask users on their sentiment towards the interfaces being evaluated and their feedback on them (e.g., [W2901616108, W2604791017, W2110228188, W4248238768]) and which interfaces they preferred to use (e.g., [W2852424125, W1987970830]) through custom made questionnaires, some of which (e.g., [W2613918921, W1980332576]) based on ISO 9241 [W2171057921]. A few validated questionnaires for user sentiment and preference were the User Experience Questionnaire [W2152933045] used by [W2110228188], the Positive and Negative Affect Schedule Survey [W1988332051] used by [W2796009799, W2805739902], and the AttrackDiff Questionnaire [UNMAPPED:121] used in [W1986523777]. A few studies (e.g., [W2110228188, W2948418702]) used the System Usability Scale Questionnaire [UNMAPPED:122], while others (e.g., [W2345101311, W2947280770]) evaluated the interfaces cognitive load with the NASA Task Load Index [UNMAPPED:123].\n\nRegarding efficiency, the most used evaluation metric is the time users take to complete tasks using the interfaces (e.g., [W2852424125, W2345101311, W2110228188]) and respective speed [W2604791017, W32654342]. Performance through the number of tasks users can accomplish during a fixed period is also a preferred evaluation metric (e.g., [W2613591388, W32654342]), especially for symbolic input (e.g., [W2912023328]), which is also evaluated using the Information Transfer Rate ([W2901616108, W2520246403]). Somewhat less used is Fitt's Law [UNMAPPED:124] to calculate the performance throughput of selection tasks ([W1980332576, W4248238768, W1994877858]). Some studies also measure the users' reaction times regarding interface operation [W2613918921, W2345101311, W1994877858]. Additionally, for pointing tasks, the movement and pointing times can also be measured [W2762185336, W1980332576], as well as pointer trajectories [W2604791017].\n\nMost studies that measure efficacy, do it by recording the number of errors or successes in performing the interaction tasks (e.g., [W2852424125, W2345101311, W2756229335, W1980332576, W2110228188, W1994877858]). Some also measure it by reporting the accuracy of the interaction interfaces (e.g., [W2556135506, W2901616108, W2520246403, W32654342]). A study with evaluation based on ISO 9241 [W2613918921] recorded the number of times users asked for help during the tasks and, lastly, one study directly measured the precision of the interface [W2106069704].\n\nSome studies evaluate the interfaces by the users' physical state. Subjectively, some studies [W2947280770, W2953346793, UNMAPPED:32] evaluate the simulator sickness of the interfaces using the Simulator Sickness Questionnaire [UNMAPPED:125] while another [W2110228188] uses the Motion Sickness Assessment Questionnaire [UNMAPPED:126]. In [W2548619941], researchers have measured eye fatigue with a questionnaire and eye vergence objectively with the ET data. ET data was also used by [W2345101311] to measure eye movements and the HMD data for head movements. Finally, pupil dilation was also measured in [W2158996610, W2613591388].\n\nRegarding the mental state of users, custom made questionnaires are used to measure the sense of agency [W2793605819], the users' emotional response [W1549257996], the concentration [W2620158185], and the sense of presence [W2756229335, W2948418702, UNMAPPED:32]. The sense of presence is also measured using the Slater-Usoh-Steed Presence Questionnaire [UNMAPPED:127] in [W2110228188], the Presence Questionnaire [UNMAPPED:128] in [W2115286789, W2805739902], and the Measurement, Effects, Conditions Spatial Presence Questionnaire [UNMAPPED:129] in [W2793605819]. Objectively, in [W2774680215] the relaxation time of users was measured with EEG data.\n\nFinally, some studies also evaluated the performance of the interaction systems, where for instance, in [W1991187245] the accuracy in recognizing of mouth states was recorded, and in [W32654342] the time until the system responded to a blink of the eye. Moreover, the recognition rates and system response times were also recorded in the detection of speech [W2556135506] and SSVEP [W2806158947].\n\n**TABLE 6**\nEvaluation metrics found on the surveyed studies.\n\n{{TABLE:tbl_06}}",
+          "citations": [
+            "W2901616108",
+            "W2604791017",
+            "W2110228188",
+            "W4248238768",
+            "W2852424125",
+            "W1987970830",
+            "W2613918921",
+            "W1980332576",
+            "W2171057921",
+            "W2152933045",
+            "W1988332051",
+            "W2796009799",
+            "W2805739902",
+            "W1986523777",
+            "W2948418702",
+            "W2345101311",
+            "W2947280770",
+            "W32654342",
+            "W2613591388",
+            "W2912023328",
+            "W2520246403",
+            "W1994877858",
+            "W2762185336",
+            "W2756229335",
+            "W2556135506",
+            "W2106069704",
+            "W2953346793",
+            "W2548619941",
+            "W2158996610",
+            "W2793605819",
+            "W1549257996",
+            "W2620158185",
+            "W2115286789",
+            "W2774680215",
+            "W1991187245",
+            "W2806158947"
+          ],
+          "tables_in_text": [
+            "tbl_06"
+          ],
+          "citations_unmapped": [
+            "121",
+            "122",
+            "123",
+            "124",
+            "32",
+            "125",
+            "126",
+            "127",
+            "128",
+            "129"
+          ]
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7 Evaluation Results",
+          "subsubsections": [],
+          "text": "Considering the studies where a comparison of interfaces was made (30 of 80), only 8 compared two or more hands-free interfaces, and 22 compared hands-free interfaces to one or more non-hands-free interfaces. From all studies, statistically significant results were found in 25, being these results recorded to understand how the interfaces perform. From the 7 studies that compared hands-free interfaces, and which had significant results, 5 evaluated selection tasks comparing head and eye gaze. On these, head gaze was consistently more efficient in [W2762185336, W2613591388, W1980332576] while eye gaze was more efficient in [W2345101311]. Regarding satisfaction, eye gaze was better for selection in [W2613591388, W2889410756] and head gaze in [W1980332576]. These mixed results found when comparing head and eye gaze for selection, indicate that the best interface is dependent on the study design and on how the interfaces are configured, despite favoring head gaze for efficient selection. From the 13 studies that compared hands-free and non-hands-free interfaces, and which had significant results, 7 evaluated selection tasks. The non-hands-free interfaces (mainly controllers) were consistently better in most usability metrics in [W2947280770, W2110228188, W4248238768]. However, for system control voice was the preferred interface in terms of mental and physical state [W2953346793, W1549257996, W2948418702].\n\nComparing head gaze with speech for selection, symbolic input, and system control, in [W2110228188] speech scored better in all the usability metrics, despite head gazing being considered a more novel interface by users.\n\nIn [W2604791017], when comparing three head gaze selection confirmation techniques (one implemented by researchers, pass through the target and dwell time) against non-hands-free interfaces (controller and hand gestures), the implemented head gaze technique was more efficient than pass, but less than dwell time and the controller. At the same time, head gaze had better efficacy and satisfaction results, while hand gestures were more fatiguing.\n\nFor selection purposes, head gaze had better user satisfaction when compared to a controller [W2852424125], wherein [W2947280770] eye gaze was better in efficiency and satisfaction for the same task, while the controller was more accurate. In [W32654342], head gaze was better in satisfaction, but the controller had better efficacy. In the context of smartphone VR, touching a capacitive button was better at efficiency and user satisfaction than head gazing with dwell time [W3030243659].\n\nComparing non-verbal \"blow\" with a controller and hand gestures, \"blow\" scored better in satisfaction and sense of presence [W2948418702], as well as efficiency and efficacy [W4248238768, W1994877858]. When comparing controller with speech for system control, the speech interface was better in both having less simulator sickness [W2953346793] and engagement [W1549257996], while being worse in the sense of agency [W2793605819].\n\nAdditionally, in [W2756229335], speech was better in satisfaction and sense of presence and the controller was better in efficacy for selection, and at the same time speech was better across metrics for symbolic input. For symbolic input, it was found in [W2912023328], that when comparing speech to a controller or smartphone-based VR interaction, speech was better in efficiency and user satisfaction, and that when comparing eye gaze with a button and a keyboard, the eye gaze was worse in efficiency [W3012497864].",
+          "citations": [
+            "W2762185336",
+            "W2613591388",
+            "W1980332576",
+            "W2345101311",
+            "W2889410756",
+            "W2947280770",
+            "W2110228188",
+            "W4248238768",
+            "W2953346793",
+            "W1549257996",
+            "W2948418702",
+            "W2604791017",
+            "W2852424125",
+            "W32654342",
+            "W3030243659",
+            "W1994877858",
+            "W2793605819",
+            "W2756229335",
+            "W2912023328",
+            "W3012497864"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_8",
+          "subsection_index": 8,
+          "subsection_label": "3.8 Opportunities",
+          "subsubsections": [],
+          "text": "When surveying the literature, it was possible to understand that there are many opportunities for the research of hands-free interaction for immersive VR applications, regarding the interaction interfaces, their use cases, and most importantly their evaluation.\n\nWhen analyzing the characteristics of the interfaces, there are still some limitations for them to be of practical use with VR. For instance, BCI still requires a fair amount of time and effort before being used to allow for calibration of the devices and respective data, so more research should be conducted to either reduce and improve the calibration phase or to make the calibration more appealing and enjoyable to users. For speech interfaces, there is the need to properly isolate the voice of users, improving the recognition rates, and reducing the false positives. Much research is done to improve this aspect, for instance, with the use of activation triggers (e.g., button presses) and noise filters. However, in the context of hands-free VR, much of the studies assume users' have a non-hands-free interface available to act as a trigger, so further research should be done to address the use of hands-free triggers.\n\nContrary to what was expected, and to the best of our knowledge, only one study was found in the scope of this review that made use of a myographic interface. This indicates a gap in the literature as, with such interfaces, it is possible to associate different muscles or force amounts to specific actions in the VE. Additionally, very few studies made use of full-body tracking and body gestures, and while this is expected because of their use for navigation tasks, exploratory research should be conducted on how to bring this interaction method to other tasks (e.g., selection and system control). Moreover, the couple of studies that did use the body as an interface did so through the raw use of RGB/RGB-D camera sensors, requiring developers to implement the whole image processing pipeline. As such, the use of modern motion capture systems should provide better body tracking and enable more interaction possibilities.\n\nBecause of the division of the selection process in pointing and confirming and because of the previously mentioned \"Midas Touch\" problem, the selection tasks would benefit the most from multimodal interaction, in which despite possibly introducing some cognitive load [W4294215472], the pointing part of the process can be performed with one interface and the confirmation is done with another interface. A prime example and opportunity would be to use eye or head gaze to point at items and use speech commands to confirm or act upon the pointed item. However, this multimodal interaction was not found in any of the selected studies.\n\nRegarding the graphical user interfaces (GUI), few studies account for the specificities of hands-free interfaces to activate the buttons and heavily rely on non-hands-free interfaces (e.g., controllers with 6 degrees of freedom tracking) to point and confirm button selections. Further research should be made to ensure those GUI can be properly interacted with in a hands-free manner. Not only that, but also ensure that interacting with GUI hands-free does respect the principles of interaction [UNMAPPED:21] and that GUI adapts to the different sources of interaction, providing users with intuitive and meaningful interactions.\n\nAccessibility wise, in a very small number of studies it was found that hands-free interaction can bring VR experiences to people with specific motor disabilities that may still allow the use of, for example, speech or eye interaction. Hands-free interaction enables those people to properly interact with VR systems and take advantage of them. As such, despite not being the focus of this systematic review, we recognize a gap in the literature, regarding this topic.\n\nRegarding evaluation, as few studies properly compare the hands-free interfaces, the main research opportunity is the creation of a testing framework that could account for the different interaction tasks and interfaces, enabling a formal evaluation and comparison of the interfaces using objective metrics and scientifically validated questionnaires (i.e., there was a formal validation of the psychometric properties of the instrument). Since the focus is also on VR, more studies should include evaluation of common VR metrics (i.e., the sense of presence and simulator sickness). The formal evaluations and proper data report would allow for future meta-analysis and to better conclude which interfaces are better for each task, benefiting researchers and VR developers.\n\nFinally, complementary to this systematic review that provides a broad overview of the hands-free interfaces, a more detailed review should be made for each of the hands-free interaction sources to provide a better in-depth overview of those sources. This would help find details about how the interfaces are implemented to tackle specific problems and find their strengths and disadvantages.",
+          "citations": [
+            "W4294215472"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "21"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 CONCLUSIONS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This systematic review explored the current literature on the use of hands-free interaction techniques for immersive VR for interaction tasks other than navigation. The advantage of such techniques is that they allow users to still perform tasks in VR while the users have their hands available for grasping and directly interact with objects (virtual and tangible).\n\nIt was found that the most studied interaction method is the use of voice, mostly through speech commands and for system control tasks. This can be a result of the availability of microphones in common VR setups, as well as the fact that speech recognition systems are evermore better at detecting the intended commands. Secondly, eye gazing is the next most studied technique, as eye trackers can be seamlessly integrated into HMD and provide accurate eye data, it is natural to use the information of where users are looking mainly for selection purposes. Similarly, head gaze is also a good method for this since HMD inherently provides head rotation data. EEG devices allow the use of brain signals as a method of interaction with VR, particularly through the measurement of reactions to events happening on the VE. However, there is still great potential for researchers to explore new interaction techniques and improve the usability of current interfaces, making them more natural to users.\n\nThe system control and selection tasks are the most studied interaction tasks for performance evaluation as they reflect the most common tasks performed besides the excluded navigation tasks, allowing users to control the systems and navigate through virtual menus. Some studies focused on symbolic input, especially regarding voice interfaces and input through virtual keyboards, however, as more complex applications require users to input text, more studies must be carried for hands-free interfaces to reach the performance of keyboards. The versatility of the voice is verified, with it being used across all interaction tasks. This versatility also positions the voice as one of the best interfaces for hands-free interaction.\n\nSatisfaction, efficiency, and efficacy are the most used evaluation metrics in studies to assess the usability of interfaces, usually through custom questionnaires that gather feedback from users about their preferences and use of the interfaces, with few studies relying on validated questionnaires. For efficiency measurement, interaction times are the most used method for evaluating performance, while accuracy and number of errors are the most used for efficacy. Although few studies consider the sense of presence and simulator sickness, the majority do not, so researchers should include these metrics when evaluating interfaces as they have an impact on the VR experiences.\n\nFinally, there is still the need to address the interaction problems found with current hands-free interfaces, for instance, better integration of the interfaces with the VR setups, and to better adapt the virtual GUI to the properties these interfaces. Moreover, most studies do not compare the hands-free interfaces with other interfaces, and the results from the ones that do so present opposite results for the same interface and task. To allow future interface evaluation analysis, studies should provide comparisons and the respective usage context of the interfaces. This would also allow for better interface use by VR developers.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "ACKNOWLEDGMENTS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This work was done under the project SFRH/BD/147813/2019 entitled Hand-free Interaction Framework for Virtual Reality Applications financed by the FCT - Funda\u00e7\u00e3o para a Ci\u00eancia e a Tecnologia. This work is also financed by the ERDF \u2013 European Regional Development Fund through the Operational Programme for Competitiveness and Internationalisation - COMPETE 2020 Programme and by National Funds through the FCT within project POCI-01-0145-FEDER-028618 entitled PERFECT - Perceptual Equivalence in virtual Reality For authEntiC Training.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": "s_1_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3136429823_tables.md"
+}

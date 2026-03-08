@@ -1,0 +1,678 @@
+{
+  "id": "W4303858845",
+  "metadata": {
+    "title": "Machine learning methods for the study of cybersickness: a systematic review",
+    "n_sections": 6,
+    "n_subsections": 24,
+    "n_subsubsections": 10,
+    "n_tables": 10
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1 Contributions",
+          "subsubsections": [],
+          "text": "In summary, according to the research questions, we contribute the following:\n- An in-depth summary of study design and details for each reviewed study\n- A differentiation between prediction and detection studies\n- Awareness of the consequences of mislabeling cyber-sickness data\n- A highlight of the most informative features for machine learning and classification, with the caution they may not be generalizable or interpretable.\n- Considerations for practical translation of machine learning algorithms to wearable devices for consumer usage, including number and type of sensors for different use cases.\n- Future suggestions for machine learning of physiological data related to cybersickness.\n\nOur justification for choosing these research questions and items of discussion, stems from the need to develop study protocols that properly capture cybersickness data according to specific research goals. The aspects chosen influence the type of data processed and are crucial to the meaning of machine learning outputs. Furthermore, this affects not just the practical translatability of machine learning algorithms, but also the explainability of models that pave the way for the generation of new knowledge about cybersickness. Deliberation on these aspects will not only help to develop better study designs, but also aid in human adaptation to digital environments.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Cybersickness is a type of visually induced motion sickness experienced in virtual environments [W2120345115]. It is well-recognized that the symptoms of nausea, dizziness, fatigue and oculomotor problems have been a barrier to mainstream adoption of VR technology [W2120345115]. The utility of VR includes not just gaming and entertainment [W2148099808], but applications for professional training in healthcare, aerospace, industrial, defence, disaster safety and emergency procedures [W3119979874]. VR can also be used for planning cost-effective architectural designs [W2620971633]. Moreover, there is potential for VR well-being applications in high-stress reduction [W3188653629], exposure therapy to reduce anxiety and trauma [W2982018629, W2969556502] and health-related interventions using VR neuromodulation [W3161657708]. The importance of VR is further highlighted in environments with restricted social interactions such as those imposed by the recent COVID-19 pandemic, allowing people to connect despite physical boundaries [W3206180814]. Clearly, the world is progressing towards an integrated metaverse, which embraces immersive mixed realities [UNMAPPED:10]. It is, therefore, crucial to tackle the issue of cybersickness.\n\nWhile visible physiological signs can be tell tales of an ongoing cybersickness event, it is still a perceptual disorder that is not always apparent until it is communicated [W3172931125]. Machine learning provides a way to log cybersickness events without overreliance on communication from VR users. This information enables timely prevention and treatment. The source of which comes from widely available sensor technology, which allows features to be derived from biometric and physiological data.\n\nMeasures include:\n- Electrical activity in the brain [W2122103093, W2112848066, W2148480428, W34543124, W2101845744, W2069730617, W1967483915, W1964684330, W2901922756, W2946773627, W2968488180, W2995574442, W3147407249, W2945212080, W2902298319, W3040909919]\n- Electrical potentials of eye movement [W2945212080, W2959304440, W2466233356]\n- Heart rate and heart rate variability [W2959304440, W3024264445, W3112408997]\n- Gastric activity [W2945212080, W2466233356]\n- Muscle activity [W3147407249]\n- Respiration rate [W2945212080, W2959304440, W2466233356, W3024264445, W3112408997, W3190129398]\n- Skin conductivity [W2959304440, W2466233356, W3024264445, W3112408997, W3111027453]\n- Eye blinks [W2945212080, W2959304440, W2466233356]\n- Body movements [W2945212080, W2968986781, W2905345408]\n\nRecently, Yildirim [UNMAPPED:36] reviewed four studies that used deep learning of electroencephalogram (EEG) data for the classification of cybersickness. The studies presented promising results, with accuracies in the range of 83.33\u201399.12% [UNMAPPED:36]. The review noted that extra care should be taken to report EEG data transformations, or lack thereof, as part of pre-processing. In addition, it was recommended that studies report clear descriptions for deep learning architectures, such as tensor shape, number and type of layers, activation functions and hyperparameters.\n\nMoving forward, several other aspects in the wider literature require clarification. Across studies, there is a lack of homogeneity with regard to the definitions of detection and prediction. It is important to distinguish between the two to be clear about the extent of a machine learning model's capability. In this review, we define detection as the identification of data related to an ongoing cybersickness event. In contrast, we define prediction as the forecasting of future cybersickness using data prior to the event.\n\nFrom a clinical perspective, the course of action against cybersickness would differ depending on the ability to detect or predict it. A model that detects cybersickness provides an opportunity for timely intervention, whereas a model that predicts potentially allows for early prevention.\n\nA machine learning model's applicability is heavily dependent upon the data fed into it. Therefore, further investigation into the experimental design, method of data selection and data labelling in studies is needed. In addition, subject demographics, immersion environment and participant activity all influence the data obtained and the features extracted; ultimately framing the context of a model's results. An overview of these items across published studies is required, particularly to help future studies have clear goal implementation when designing an experiment or machine learning architecture.\n\nFinally, cybersickness is a result of dynamic spatio-temporal processes in the brain, involving different spatially located areas over time [W2535460900, W3169050426]. Appropriate machine learning (ML) methods can help provide a better understanding of these processes, at both the group and individual level, but this has not been clearly assessed yet in previous studies.\n\nThe goal of this systematic review was to analyse relevant studies pertaining to various physiological and biometric-based machine learning approaches towards the detection and prediction of cybersickness. The review provides a discussion of the experimental methods for data collection, processing and machine learning analysis within different architectures. In addition, suggestions for future exploration are discussed.\n\nThe research questions for this review are as follows:\n1. How have studies been able to detect or predict cybersickness?\n2. What stimulus type, environment and participant activity contributed towards cybersickness induction?\n3. How are the reviewed articles comparable?\n4. Which features are the most important?\n5. What new information about brain activities related to cybersickness have been revealed by the studies?",
+      "citations": [
+        "W2120345115",
+        "W2148099808",
+        "W3119979874",
+        "W2620971633",
+        "W3188653629",
+        "W2982018629",
+        "W2969556502",
+        "W3161657708",
+        "W3206180814",
+        "W3172931125",
+        "W2945212080",
+        "W2959304440",
+        "W2466233356",
+        "W3024264445",
+        "W3112408997",
+        "W3147407249",
+        "W2968986781",
+        "W2905345408",
+        "W2535460900",
+        "W3169050426"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "10",
+        "36"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Database search",
+          "subsubsections": [],
+          "text": "PubMed and IEEE Xplore databases were used to cover the intersection between biomedical and life sciences literature with that of computer science and engineering. Google Scholar was used to manually screen papers from an extensive array of journals and conferences based on their titles and abstracts. The review was written with PRISMA guidelines [W3118615836] for systematic reviews in mind. Eligible publications needed to utilize a stimulus to induce cybersickness through a virtual visual medium, such as either a screen projection, desktop display, VR head-mounted device or simulator environment. Publications also needed to apply machine learning on physiological data or physical measures of body and eye movement for the classification of cybersickness data samples. We define a study to be an instance of machine learning even if it solely uses regression analysis. Studies were excluded if an analysis was applied for knowledge discovery about physiological correlations with cybersickness without any event detection, prediction or estimation of sickness levels. Studies analyzing only non-physiological data such as VR content or subjective questionnaire scores were excluded. Other exclusions were reviews, methodological articles, conference abstracts, and publications, where full-text was not available through our institutions. See Table 1 for the database search and selection criteria.\n\nThis review included all studies from 2001 to 10th November 2021. The search strategy was adapted from PICO criteria (Patient or population, Intervention, Control or Comparison, Outcome and Study; Table 2).",
+          "citations": [
+            "W3118615836"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Search terms",
+          "subsubsections": [],
+          "text": "Cybersickness OR visually induced motion sickness OR simulator sickness AND physiological AND machine learning AND Virtual Reality.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Screening process",
+          "subsubsections": [],
+          "text": "Titles and abstracts of potential studies were assessed independently by three reviewers (AHX Yang, N. Kasabov, YO. Cakmak), according to the Preferred Reporting Items for Systematic Reviews and Meta-Analysis (PRISMA) guidelines [W4294215472]. The studies that met the inclusion and exclusion criteria were discussed and evaluated based on their content relative to the five research questions outlined above. Two reviewers (AHX Yang, YO. Cakmak) evaluated the full-text studies independently, while the third reviewer (N. Kasabov) resolved disagreements.\n\n**Table 1** Database search and selection criteria\n\n{{TABLE:tbl_01}}\n\n**Table 2** Search strategy\n\n{{TABLE:tbl_02}}",
+          "citations": [
+            "W4294215472"
+          ],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4 Data extraction and analysis",
+          "subsubsections": [],
+          "text": "An initial risk of bias (ROB) assessment was run, from a conservative viewpoint. The ROB covered four domains from the PROBAST recommendations each containing their own signalling question items to judge risk of bias [W2907554860]. Responses were formulated as yes (Y) or probably yes (PY) for the absence of bias and no (N), probably no (PN), or no information (NI) to indicate a potential for bias. Overall judgement of risk of bias for publications was defined as high, low, or unclear. Although it is important to note that bias in itself is not necessarily a criticism of the choice of study design, which could be scientifically reasoned, but an assessment of erroneous assumptions that may lead to misleading conclusions based on machine learning results.\n\nAdditional data items were extracted to answer the five research questions outlined above which are specific to the field of cybersickness classification. The data items include subject demographics, immersion type, participant activity, information on different machine learning models, reporting styles, data segment labelling, preprocessing methods, biometric and neurophysiological features relevant to cybersickness and EEG specifications. These data items are listed in Tables 3, 4, 5, 6, 7, 8, and 9, which sort studies by year from earliest to most recent. Two reviewers (AHX Yang, YO. Cakmak) independently extracted and assessed the data from the included studies, while the remaining reviewer (N. Kasabov) cross-referenced, clarified differences in interpretation, and then confirmed a standardized response. Any disagreements reached a consensus and were resolved by the third reviewer (N. Kasabov) after discussion.\n\n**Table 3** Subject demographic including sample size, gender, age range and mean with standard deviation where available\n\n{{TABLE:tbl_03}}\n*Note:* Dashes (\u2212) indicate missing or not available information.\n\n**Table 4** Immersion type including mode of stimulus, VR content, platform usage, and participant activity\n\n{{TABLE:tbl_04}}\n*Note:* DoF = Degrees of Freedom; HMD = Head-Mounted Display.\n\n**Table 5** Biosignal recordings, machine learning algorithms, performance and type of classification system\n\n{{TABLE:tbl_05}}\n*Note:* For simplicity, relevant top accuracies/results are reported. ANN = Artificial Neural Network; GMLC = Gaussian Maximum Likelihood Classifier; KNN = k-Nearest Neighbour; SVM = Support Vector Machine; RBFNN = Radial Basis Function Neural Network; SVR = Support Vector Regression; LR = Linear Regression; PCR = Principal Component Regression; SONFIN = Self-Organizing Neural Fuzzy Inference Network; LDA = Linear Discriminant Analysis; LSTM = Long Short-Term Memory; DNN = Deep Neural Network; CNN = Convolutional Neural Network; MLP = Multilayer Perceptron; DESOM = Deep Embedded Self-Organizing Map; RF = Random Forest; DELM = Deep Ensemble Learning Model; IPV = Physiological Index; INM = Neurological Muscle Strain Index; IMS = Motion Sickness Index; MAE = Mean Absolute Error; NWFE = Non-parametric Weighted Feature Extraction.\n\n**Table 6** Reporting styles and data labelling\n\n{{TABLE:tbl_06}}\n*Note:* SSQ = Simulator Sickness Questionnaire; MSSQ = Motion Sickness Questionnaire.\n\n**Table 7** Preprocessing methods\n\n{{TABLE:tbl_07}}\n*Note:* ICA = Independent Component Analysis; FFT = Fast Fourier Transform; PSD = Power Spectral Density; WPT = Wavelet Packet Transform; DC = Direct Current.\n\n**Table 8** Feature extraction, selection methods, fusion with other biosignals and important features\n\n{{TABLE:tbl_08}}\n*Note:* PCA = Principal Component Analysis; LDA = Linear Discriminant Analysis; NWFE = Non-parametric Weighted Feature Extraction; FFS = Forward Feature Selection; BFS = Backward Feature Selection; PSD = Power Spectral Density; SSQ = Simulator Sickness Questionnaire; LSTM = Long Short-Term Memory; HR = Heart Rate; HRV = Heart Rate Variability; GSR = Galvanic Skin Response; EDA = Electrodermal Activity.\n\n**Table 9** EEG devices, channels and powerband frequencies\n\n{{TABLE:tbl_09}}\n\n**Figure 1** Flowchart for study screening and selection process\n\n```\nIdentification\n Records identified from:\n PubMed (n = 113)\n Google scholar (n = 111)\n IEEE Xplore (n = 222)\n |\n v\n Records screened based on Irrelevant studies (manually\n titles and abstracts screened)\n (n = 446) ---> (n = 406)\n |\n v\n Records retrieved:\n (n = 40)\n |\n v\nScreening\n Full-text studies assessed for\n eligibility based on inclusion and\n exclusion criteria:\n (n = 40)\n |\n v\n Studies excluded (n=14):\n - 2 Review\n - 2 Concept paper\n - 2 Duplicate\n - 3 No machine learning for classification\n - 5 No biometric or physiological signals\n |\n v\nIncluded\n Studies included in systematic\n review\n (n = 26)\n```",
+          "citations": [
+            "W2907554860"
+          ],
+          "tables_in_text": [
+            "tbl_03",
+            "tbl_04",
+            "tbl_05",
+            "tbl_06",
+            "tbl_07",
+            "tbl_08",
+            "tbl_09"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Search and Selection",
+          "subsubsections": [],
+          "text": "The database search identified 446 studies. After manual screening for titles and abstracts, 40 studies remained based on the inclusion/exclusion criteria. 14 studies were further excluded upon assessment of the full text. Among them, there were 2 reviews, 2 concept papers, 2 duplicates, 3 did not use machine learning for classification and 5 did not analyze biometric or physiological signals. The remaining 26 papers were included in this review. Figure 1 presents a flowchart of the study screening and selection process.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Risk of Bias",
+          "subsubsections": [],
+          "text": "All studies had an overall low risk of bias (see Table 10). Of these, one study [W3040909919] had a \"No\" for item 17, because data segments were labelled as cybersick that may have contained control data. Another study [W2995574442] sampled control data that may have been influenced by conditions other than the lack of cybersickness, such as non-VR immersion. One study [W2122103093] had \"No\" for item 14, because only participants who felt nausea were used and \"NI\" for 15 and 19, because it was unclear if there were missing data or if the model accounted for overfitting. Most studies (21/26), had a low participant sample size (item 12). Two studies [W34543124, W2069730617] had a \"No\" for items 3 and 5 as they employed feature selection algorithms that differed among participants. Eleven studies (see Table 10) were either unclear, or did not report exclusion of participants with health disorders (item 2) which could affect the feature variables used in classification of cybersickness and even contribute to already having nausea, although this was not weighted as heavily in the overall ROB assessment.",
+          "citations": [
+            "W3040909919",
+            "W2995574442",
+            "W2122103093",
+            "W34543124",
+            "W2069730617"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Subject demographics",
+          "subsubsections": [],
+          "text": "The sample size of subjects ranges from 6 to 202 throughout the 26 studies. Of the 26 studies, 17 report gender, and 9 do not. Most of the studies consist of predominantly male participants, while one study uses comparatively more females [W3190129398] and a few balance both male and female participants [W2122103093, W2968488180, W3040909919]. With regard to age reporting, 15 out of 26 studies report ages, of which 12 studies either report the age range or mean with standard deviation. For details, refer to Table 3.",
+          "citations": [
+            "W3190129398",
+            "W2122103093",
+            "W2968488180",
+            "W3040909919"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Immersion type and participant activity",
+          "subsubsections": [],
+          "text": "Both vestibular and visual stimuli or visual alone have been used. Visual mediums include 360\u00b0 simulators, LED desktop display monitors, projected screens and head mounted displays (HMDs), refer to Table 4. Moving platforms have been incorporated, including ones that mimic sea waves on a ship [W3147407249] and automatic driving simulators [W2112848066, W2148480428, W34543124, W2101845744, W2069730617, W1967483915, W1964684330], both of which introduce vestibular stimuli in synchronicity with their virtual environments. Studies have made participants play games [W2901922756, W2946773627, W2902298319, W2959304440, W3111027453], undergo virtual navigation [W2122103093, W2995574442, W2945212080, W2968986781], or watch virtual videos [W2968488180, W3040909919, W3024264445, W3112408997, W3190129398, W2905345408, W2989624678, W3115493017]. During these activities, there would doubtless exist some self-induced vestibular stimuli through head movements or balancing while standing. It is unclear in three studies whether a standing or sitting posture was used during either virtual simulator environment immersion or VR HMD usage while watching videos [W2122103093, W2968488180, W2989624678]. Each study's mode of stimulus, VR content, platform usage and type of participant activity are summarized in Table 4.",
+          "citations": [
+            "W3147407249",
+            "W2901922756",
+            "W2946773627",
+            "W2902298319",
+            "W2959304440",
+            "W3111027453",
+            "W2122103093",
+            "W2995574442",
+            "W2945212080",
+            "W2968986781",
+            "W2968488180",
+            "W2989624678"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5 Machine learning models",
+          "subsubsections": [],
+          "text": "Table 5 summarizes the machine learning analysis undertaken by all 26 studies. This includes biosignal recordings, algorithm(s) used, classification types in terms of binary, multiclass, or score estimation, accuracies, and abilities of models to detect or predict cybersickness. Out of all the studies, five have built predictive algorithms, while the rest have detected cybersickness [W3040909919, W3024264445, W3112408997, W3111027453, W3115493017].",
+          "citations": [
+            "W3040909919",
+            "W3024264445",
+            "W3112408997",
+            "W3111027453",
+            "W3115493017"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6 Biosignals recorded",
+          "subsubsections": [],
+          "text": "Studies have utilized electroencephalogram (EEG), electrooculography (EOG), electrocardiogram (ECG), photoplethysmography (PPG), electrogastrogram (EGG), electromyogram (EMG), Respiration signals, galvanic skin response (GSR) also known as electrodermal activity (EDA), eye tracker, postural sway and body sensors at the head and waist. Derived variables include power band analysis of EEG [W2122103093, W2112848066, W2148480428, W34543124, W2101845744, W2069730617, W1967483915, W1964684330, W2901922756, W2946773627, W2968488180, W2995574442, W3147407249, W2945212080, W2902298319, W3040909919], electrical potentials of eye movement from EOG [W2945212080, W2959304440, W2466233356], heart rate and heart rate variability measures from ECG [W2945212080, W2959304440, W2466233356, W3024264445, W3112408997, W3190129398, W3111027453] which can also be calculated from blood volume pulse (BVP) obtained from PPG [W3190129398, W3111027453], gastric activity from EGG [W2945212080, W2466233356], muscle activity from EMG [W3147407249], respiration rate [W2945212080, W2959304440, W2466233356, W3024264445, W3112408997, W3190129398], skin conductivity from GSR [W2959304440, W2466233356, W3024264445, W3112408997, W3111027453], eye blinks [W2945212080, W2959304440], weight shifts [W2945212080, W2968986781] and center of pressure for postural sway [W2905345408], and head and waist movements from body sensors [W2945212080, W2905345408].",
+          "citations": [
+            "W2945212080",
+            "W2959304440",
+            "W2466233356",
+            "W3190129398",
+            "W3111027453",
+            "W3147407249",
+            "W2968986781",
+            "W2905345408"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7 Neural networks",
+          "subsubsections": [],
+          "text": "Nam et al. [W2122103093] is the earliest known publication in the field of automatic detection of cybersickness. The study used a 2-layer feed-forward artificial neural network to partially detect nausea timings. Other studies used deep neural networks (DNN) [W2968488180], including multilayer perceptron (MLP) [W2905345408], radial basis function neural network (RBFNN) [W2148480428, W2101845744], convolutional neural network (CNN) [W2989624678], recurrent neural network-long short term memory (RNN-LSTM) [W3040909919], as well as self-organizing neural fuzzy inference network (SONFIN) [W1964684330], and deep embedded self-organizing map (DESOM) with a CNN auto encoder and decoder from EEGnet [W3115493017].\n\nDNNs are neural networks with two or more fully connected hidden layers, usually stacked linearly in groups. MLP and RBFNN are DNNs that differ in how their outputs are determined. MLP networks work globally and their outputs are decided by all neurons. In contrast, RBFNNs are local approximation networks whose outputs are determined by hidden units in local receptive fields. CNNs are also a type of DNN. They learn patterns in the data through filtering in convolutional layers, then pass data through pooling layers to compress the size of representation, allowing for parameters to be computed faster. CNNs are optimized for image data. RNNs are another type of DNN. They learn representations in an iterative manner, using outputs of a layer as recurrent inputs to the same or other layers. LSTMs are a subset of RNNs, that allow for the learning and reconstruction of signals, and allow for the prediction of future signals based on previous timesteps of data [W3040909919, W3024264445, W3112408997, W2989624678]. SONFIN and DESOM are examples of self-organizing neural networks, that work based on weights between nodes.",
+          "citations": [
+            "W2122103093",
+            "W2968488180",
+            "W2905345408",
+            "W2148480428",
+            "W2101845744",
+            "W2989624678",
+            "W3040909919",
+            "W1964684330",
+            "W3115493017",
+            "W3024264445",
+            "W3112408997"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_8",
+          "subsection_index": 8,
+          "subsection_label": "3.8 Other ML tools",
+          "subsubsections": [],
+          "text": "There are a variety of other non-neural network machine learning tools employed in the reviewed studies. These include: maximum gaussian likelihood estimator [W2112848066]; a simple tool that uses a gaussian distribution, where maximum probability of a label occurs if the data points are closer to their mean value, support vector machines (SVM) which try and find the best hyperplane between data sets that belong to different classes [W2112848066, W2069730617, W1967483915], its variations with kernel functions of polynomial SVM [W2995574442], SVM-radial basis function (RBF) [W2901922756, W2995574442], support vector regression (SVR) [W2101845744, W1964684330], linear regression (LR) which assumes a linear relationship between input and output variables [W34543124, W2101845744, W1964684330, W3111027453], linear discriminant analysis (LDA) which finds linear combinations of features that can separate classes [W2901922756, W2945212080], principle component regression (PCR) [W34543124] based on principle component analysis, na\u00efve bayes based on probability theorem [W2946773627], k-nearest neighbours (kNN) [W2112848066, W2901922756, W2946773627, W2995574442, W2945212080, W2959304440, W3190129398, W2905345408, W3115493017] which labels new data according to the majority of nearby pre-labelled data, decision trees that employ a flowchart-like structure for decision making [W2945212080, W2902298319], including random forest [W3147407249, W2905345408] and bagged decision tree which reduces the variance of a decision tree [W2945212080], gradient boosting trees to minimize errors [W3147407249], and CN2 rule induction that extracts rules from features in a data set [W2902298319]. Studies that have used these machine learning tools have detected but not predicted future cybersickness states.",
+          "citations": [
+            "W2112848066",
+            "W2069730617",
+            "W1967483915",
+            "W2995574442",
+            "W2901922756",
+            "W2101845744",
+            "W1964684330",
+            "W34543124",
+            "W3111027453",
+            "W2945212080",
+            "W2946773627",
+            "W2959304440",
+            "W3190129398",
+            "W2905345408",
+            "W3115493017",
+            "W2902298319",
+            "W3147407249"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_9",
+          "subsection_index": 9,
+          "subsection_label": "3.9 Classification types",
+          "subsubsections": [],
+          "text": "Some studies use a mix of binary and multiclass classification. Binary classification refers to the labelling of two different classes in a machine learning task, whereas multiclass classification refers to multiple labels, which in this review concerns levels of cybersickness severity. Other studies use machine learning to estimate simulator sickness questionnaire (SSQ) scores, which is another form of multiclassification.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_10",
+          "subsection_index": 10,
+          "subsection_label": "3.10 Data selection",
+          "subsubsections": [],
+          "text": "A summary of reporting styles, cybersickness and non-cybersickness data labelling is summarized in Table 6.\n\nMultiple methods for choosing data segments related to cybersickness have been used. These include a report on the first instance of cybersickness perception [W2122103093, W3115493017]. Commonly, entire video segments or VR immersion sessions were used if they had been labelled as cybersickness [W2901922756, W2968488180, W3040909919, W2959304440, W2466233356, W3024264445, W3112408997, W3190129398]. Specific timeframes were also picked. This is so that either cybersickness is highest or most likely at the selected data segment [W1967483915, W2946773627, W2902298319] to capture cybersickness intervals [W2995574442, W2945212080, W2905345408], or to predict future states using past data sectioned in various temporal window sizes [W3111027453].\n\nThe method of labelling data segments as 'non-cybersickness' varied among studies. Some studies choose to label 'non-cybersickness' as the beginning data segment while wearing an HMD, with a static image and no camera movement in the VR environment [W2905345408, W3115493017]. Others have opted to use data segments recorded before VR immersion or gameplay [W2901922756, W2946773627, W2995574442, W2902298319, W3112408997, W3190129398]. Studies have also chosen to select data that does not meet different cutoffs using SSQs scores or rating scales [W2945212080, W2959304440, W3024264445, W3111027453, W2989624678]. Alternatively, chosen data samples were those with no report of cybersickness during VR immersion [W3040909919, W3190129398], or data segments not corresponding to the cybersickness label [W2122103093]. In studies, where motion sickness levels were estimated, the 'non-cybersickness' labels and time segments were participant defined via a self-operated joystick scale, keeping note that the earliest timepoint of recording in these studies already included a moving video [W2112848066, W2148480428, W34543124, W2101845744, W2069730617, W1967483915, W1964684330]. Several studies included in this review do not label data specifically as 'non-cybersickness'. These consist of two studies that attempt to estimate SSQ scores [W2466233356, W2968986781], while one tries to classify EEG, heart rate and EMG signals into specific binary indexes related to motion sickness [W3147407249]. Thus, the classification of 'non-cybersickness' data refers to participants in many different environments across studies, in terms of pre and during immersion states as well as exposure to movement and non-movement of visual scenes.",
+          "citations": [
+            "W2122103093",
+            "W3115493017",
+            "W1967483915",
+            "W2946773627",
+            "W2902298319",
+            "W2995574442",
+            "W2945212080",
+            "W2905345408",
+            "W3111027453",
+            "W2901922756",
+            "W3112408997",
+            "W3190129398",
+            "W2959304440",
+            "W3024264445",
+            "W2989624678",
+            "W3040909919",
+            "W2466233356",
+            "W2968986781",
+            "W3147407249"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_11",
+          "subsection_index": 11,
+          "subsection_label": "3.11 Preprocessing",
+          "subsubsections": [],
+          "text": "Preprocessing refers to the manipulation of raw data so that specific variables can be generated for further processing. During preprocessing, methods are used to reduce redundancy and extract meaningful data. Methods include down sampling to reduce the amount of data, filters to remove artifacts and select only a portion of data, manual artifact correction, computational artifact correction, such as z-scores and independent component analysis (ICA), weighting data based on signal quality, data transformation using variations of Fast Fourier Transform (FFT), and optimization of fixed windowed time segments. This is summarized in Table 7.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_12",
+          "subsection_index": 12,
+          "subsection_label": "3.12 Features extraction, selection and fusion",
+          "subsubsections": [],
+          "text": "Feature extraction and selection is a method to get a subset of relevant features/variables from the data, to be fed as an input into a machine learning tool. The idea is to reduce complexity and feed algorithms with the most relevant data. Studies have focused on spatial locations of EEG channels, as well as temporal, frequency and amplitude variables from recorded biosignals. Methods used range from manual selection to statistical computations, genetic algorithms, and convolutional networks. Most notably, three studies focus on selecting as few EEG channels as possible, showing that one to three channels can be used for cybersickness detection [W2901922756, W2902298319, W3040909919]. In addition to obtaining features, feature fusion allows data from multiple biometric and physiological signals to be combined for classification. Out of 26 studies, 13 studies have fused features from multiple signals. Feature extraction and selection techniques and details of studies that have applied feature fusion are displayed in Table 8.",
+          "citations": [
+            "W2901922756",
+            "W2902298319",
+            "W3040909919"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_13",
+          "subsection_index": 13,
+          "subsection_label": "3.13 Important features for classification",
+          "subsubsections": [],
+          "text": "Important features (Table 8) were included according to the following criteria: correlation to cybersickness scores or by optimal classification accuracies, appearance in multiple machine learning models [W2945212080], and if eight or fewer channels are involved and named [W2122103093, W34543124, W2995574442]. In cases, where the authors have not explicitly pointed out or done an analysis to rank the importance of features, all the features used in the classification are included in the list for transparency of information and comparison to other studies [W2122103093, W2112848066, W2101845744, W3040909919, W3190129398]. For a full compilation of EEG devices, channels and power band frequencies used in the reviewed studies, refer to Table 9. Frequency ranges for each power band are reported in Table 9 because of the inconsistencies between studies, especially in regard to differentiation of the beta and gamma bands.\n\nAcross reviewed studies, the overall importance of broad band EEG frequency signals is revealed; with a focus on alpha (8\u201312 Hz), beta (13\u201320 Hz) and gamma bands (21\u201330 Hz) in channels relating to cortical regions in occipital areas (O1, O2, Oz) [W2122103093, W34543124, W2069730617, W1967483915, W1964684330, W2901922756, W2995574442, W2945212080, W2902298319], parietal areas (P3, P4, Pz) [W2122103093, W34543124, W2069730617, W1967483915, W2945212080, W2989624678] and left and right frontal areas [W34543124, W2901922756, W2995574442, W2945212080].\n\nPostural sway [W3147407249, W2968986781, W2905345408], head and body movement [W2945212080, W2905345408] and blink rate [W2945212080, W2959304440, W2466233356] have shown to be useful features for cybersickness classification. Among others, heart rate has consistently been an important feature across studies [W3147407249, W2945212080, W2959304440, W3024264445, W3112408997, W3190129398, W3111027453]. A heart rate variability (HRV) indicator, pNN50, which is the percentage of N\u2013N intervals within 50 ms, has also been a high contributor to results obtained in both binary and multiclassification tasks [W3111027453]. Alongside ECG derived variables, respiration rate has been identified as an important feature for cybersickness classification and estimation [W2945212080, W2959304440, W3190129398]. Electrodermal activity also known as galvanic skin response has shown promise as an important feature in four studies [W2959304440, W3024264445, W3112408997, W3111027453], but did not make a statistically significant correlation with SSQ scores in another [W2466233356].",
+          "citations": [
+            "W2945212080",
+            "W2122103093",
+            "W34543124",
+            "W2995574442",
+            "W2112848066",
+            "W2101845744",
+            "W3040909919",
+            "W3190129398",
+            "W2069730617",
+            "W1967483915",
+            "W2989624678",
+            "W2901922756",
+            "W3147407249",
+            "W2968986781",
+            "W2905345408",
+            "W2959304440",
+            "W2466233356",
+            "W3111027453",
+            "W3024264445",
+            "W3112408997"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Subject demographics",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.1.1 The subject demographics are biased towards males, with a lack of age range reporting",
+              "parent_subsection_id": "s_4_1",
+              "text": "There is evidence that females tend to be more susceptible to visually-induced motion sickness than males [UNMAPPED:45]. Both vestibular and visual motion sickness incidence in females tends to be higher than in males, but with no difference in the severity of symptoms [W2058503762, W2029525331, W825723494, UNMAPPED:47]. Emerging evidence suggests that interpupillary distance non-fit, while wearing HMDs is one driving factor for this gender discrepancy [W3003509399]. A meta-analysis of factors associated with cybersickness suggested that age may be a contributor to likelihood of sickness [W3014138823]. As much as possible, the gender demographic and age range should be reported as a means of identifying possible influences towards study results. Studies may want to balance or separate analyses of females and males. An argument could be made, however, that female and male analysis should be done together so that a machine learning model can be subject to a wide population and subject demographic.",
+              "citations": [
+                "W3003509399",
+                "W3014138823"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "45"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 Prediction versus detection",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.2.1 Studies have presented evidence for the detection of cybersickness and further cybersickness events, but predictive capabilities for novel, first-instance cybersickness events are in question",
+              "parent_subsection_id": "s_4_2",
+              "text": "It is not necessarily the machine learning algorithm used that determines the model's ability to detect or predict cybersickness but the choice of data segments. Data segments in prediction studies have been chosen before the onset of cybersickness, allowing machine learning models to be trained on data prior to the future event. Training on prior data is inbuilt for studies using LSTMs, allowing researchers to specify timesteps of certain lengths as training for signal reconstruction of relative future timepoints [W2885195348]. However, studies do not specify the timing of cybersickness occurrence in each data sample, meaning that crossing a certain timepoint, the model could be trained on data already related to cybersickness to detect future cybersickness events. This leads to the question: are the models truly predictors, detectors, or a combination of both? If indeed they are a combination, these models could be defined as a detection-based prediction model, in which current cybersick data can be used to predict future cybersick data. With the exception of Islam et al. [W3112408997], the literature lacks models only trained on clear non-cybersickness segments that are used to detect future cybersick events. Furthermore, literature so far has focused on detecting cybersickness events using data segments related to VR immersion, but few have tried to predict future cybersick events using pre-VR immersion baselines [W3112408997]. To the best of our knowledge, there is a lack of machine learning studies focused on predicting susceptibility or future cybersick events in VR using the normal resting physiological state of an individual.",
+              "citations": [
+                "W2885195348",
+                "W3112408997"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3 Labelling",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.3.1 Labelling cybersick data in long windows could increase false positives and negatives",
+              "parent_subsection_id": "s_4_3",
+              "text": "A drawback to labelling entire video segments or VR immersion sessions based on a post SSQ or on a first instance reporting basis is the lack of temporal precision. Large portions of data could in truth represent the wrong label, increasing rates of false positives and false negatives during classification. Where possible, a solution would be to have data segments that are in relatively small temporal windows, ideally near the time of reporting and to avoid large temporal windows in the order of minutes.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.3.2 Non-cybersick data should be labelled under the same experimental conditions as cybersick data",
+              "parent_subsection_id": "s_4_3",
+              "text": "If 'non-cybersickness' data is not under the same conditions as 'cybersick' labelled data, the risk increases that a machine learning algorithm learns the difference between conditions influenced by a different environment, rather than the perception of cybersickness itself.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4 The reviewed studies are difficult to compare",
+          "subsubsections": [],
+          "text": "Stimulus type, environment and participant activity differ greatly across studies. Different stimuli inputs, as well as virtual environments and scene content, and standing and sitting conditions make studies difficult to compare. With regard to comparing EEG studies, vestibular stimuli and visual stimuli used to induce motion sickness activates a vast array of different cortical areas in the brain [W2535460900, W2594095825, W2265221240, W2092263697, W2066915099, W2093702602, W2014887283, W4295217319, W1989010592, W2019467485, W2170838552]. Previous research has also found that certain movements of visual scenes inside VR can alter HRV [W3161657708, W2744896953]. Constant clockwise rotation of the visual environment has been found to inhibit cardiac parasympathetic activity [W3161657708]. Root mean square of successive differences of R-R intervals (RMSSD) and standard deviation of R-R intervals (SDRR), measures of parasympathetic activity, were also found to be decreased in forward visual movement compared to backward visual movement during VR immersion in a rollercoaster ride [W2744896953]. In addition, vestibular stimuli is known to increase cardiac sympathetic activity [W1960308913], meaning that different activity levels could potentially alter HRV variables and associated feature importance. Thus, on top of feature extraction and selection methods, extra care needs to be taken when deciding which features to choose for a new study.",
+          "citations": [
+            "W3161657708",
+            "W2744896953",
+            "W1960308913"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "4.5 Features",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_5_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.5.1 Parietal, occipital and frontal cortical areas in the alpha, beta and gamma band are highly related to cybersickness in machine learning studies",
+              "parent_subsection_id": "s_4_5",
+              "text": "Gamma band signal importance for classification is in line with recent findings, showing increased gamma power with increased cybersickness severity [W2806405673]. In the application of frequency filters to reduce artifacts and noise, one should be careful not to filter out valuable information that could exist past chosen frequency boundaries.\n\nIt is also important to keep in mind that evidence for parietal and occipital feature importance in cybersickness stem mainly from two studies that either have considerably more vestibular stimuli through moving platforms or use desktop LED displays rather than VR HMDs [W2995574442, W2945212080], and are thus different in environment and stimulation type. More research is needed as a cross reference to determine if these features are common regardless of environment or stimulation type.\n\nNevertheless, the involvement of multiple brain regions suggests that interactions and connections exist across different spatial locations. In an fMRI study by Toschi et al. [W2535460900], reduced connectivity was found in nausea states compared to baseline, between the right and left primary visual cortex (V1), as well as increased connectivity between the right middle temporal visual area (MT+/V5) and anterior insular, and between the left MT+/V5 and the middle cingulate cortex. Thus, deeper brain structures could be involved that may not necessarily be revealed in the above machine learning EEG studies.",
+              "citations": [
+                "W2806405673",
+                "W2995574442",
+                "W2945212080",
+                "W2535460900"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_5_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.5.2 None of the machine learning methods used so far have clearly revealed the complex, dynamic, spatio-temporal processes in the brain related to cybersickness",
+              "parent_subsection_id": "s_4_5",
+              "text": "Studies have relied on statistical comparisons between sets of cybersickness and normal/control data, to find important frequency-based power spectra in isolated channels, or spatial clusters over large brain regions. Beyond this, communication between spatial locations, functional networks, and temporally relevant information still needs to be explored. More complex machine learning algorithms have not been employed for knowledge extraction. This important task requires new machine learning methods on its own.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_5_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.5.3 Heart rate, heart rate variability, postural sway, head and body movement, blink rate, breathing rate and EDA are informative features",
+              "parent_subsection_id": "s_4_5",
+              "text": "Important features of increased heart rate have been found to be correlated with increasing cybersickness severity [W2806405673]. Heart rate variability measures other than pNN50, like changes in the average duration of N\u2013N intervals (AVGNN), and changes in the standard deviation of N\u2013N intervals (STDNN) have been correlated with SSQ scores [W2938188482]. Head and body movement could potentially exacerbate sensory mismatches while in VR and is part of the generally accepted sensory mismatch theory [UNMAPPED:67]. The contribution of increased postural sway to detect cybersickness is rooted in the postural instability theory for motion sickness [W2054749727], although a study has shown a weak link between postural instability and cybersickness [W2474982721]. Eye movements have also been hypothesized to generate motion sickness [W2404887049]. Blink rate seems likely a symptom of oculomotor disturbances, which is a subcategory for simulator sickness [W1994877858]. Breathing rate appears to be an important feature under experimental conditions [W2945212080, W2959304440, W2466233356, W3190129398]. Furthermore, controlled diaphragmatic breathing has also been studied to manage cybersickness through modulation of the parasympathetic nervous system [W2095113230].",
+              "citations": [
+                "W2806405673",
+                "W2938188482",
+                "W2054749727",
+                "W2474982721",
+                "W2404887049",
+                "W1994877858",
+                "W2945212080",
+                "W2959304440",
+                "W2466233356",
+                "W3190129398",
+                "W2095113230"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "67"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_5_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4.5.4 The fewer channels, the better",
+              "parent_subsection_id": "s_4_5",
+              "text": "The number of channels is important for simplicity and ergonomic reasons. The fewer the channels, the less bulky an automated cybersickness detection or prediction system device needs to be. Using 64 channels [W3147407249, W2945212080] is unwieldy outside of lab conditions in an operational or consumer setting. It also requires good signal quality from most, if not all channels. Therefore, it is suggested that studies investigate channel reduction methods while still preserving accuracy.",
+              "citations": [
+                "W3147407249",
+                "W2945212080"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_5_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "4.5.5 Features discovered from extraction and selection, or those that contribute the most to optimal classification accuracies, may not be generalizable or interpretable",
+              "parent_subsection_id": "s_4_5",
+              "text": "While studies have drawn attention to many features, it is important to note that the most correlated features may not be the most frequently chosen by feature extraction/selection tools [W2148480428]. The generalizability of features to different experimental settings still needs to be assessed. This will help build a robust model of physiological activity during cybersickness events. Features related to cybersickness can also be statistically tested and compared to their importance in machine learning models. This can be a helpful indicator of their correlation versus importance. Finally, features obtained for novel, first-instance future cybersickness event prediction are predictive features. They may not necessarily be the same features occurring during cybersickness. Thus, caution is warranted as the same features listed in this review may not be generalizable to a study attempting to predict cybersickness from pre-immersion baselines.",
+              "citations": [
+                "W2148480428"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_5_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "4.5.6 Some forms of signal acquisition are more practical than others",
+              "parent_subsection_id": "s_4_5",
+              "text": "VR content has been explored as a data source for cybersickness classification as well [W2989624678, W2791342729]. Current interventions include narrowing the field of view or slightly changing the visual scene to attenuate cybersickness symptoms [W3095375900]. While virtual environment contents provide useful data in retrospect, they cannot be the medium for intervention in all situations. Such would be the case for high-stakes training simulations or even immersive real-time operations that require large fields of view and a high degree of realism. Unfortunately, even with live streaming, the predictive nature of virtual content would be limited without availability beforehand. VR content is a stimulus and cannot be used to directly assess individual cybersickness. Biometric and physiological signals, on the other hand, can measure human states and responses to both the environment and clinical treatment [W2769021531, W2971265221]. Moreover, wearable devices are portable and can still be used while engaging with VR in a non-sedentary manner. This level of practicality and freedom is currently not possible with other forms of data capture such as with the brain (magnetoencephalography [W2982026297], functional magnetic resonance imaging [W2072522618]). Still, not all signals from wearable devices are as practical as each other. EEG, EOG, ECG, PPG, EGG and eye tracker could be used in combination for cybersickness detection and prediction in a practical consumer or operational setting. Respiration signals, GSR, postural sway and body movement, in contrast, could be difficult to implement. In high activity settings, these signals may become riddled with artifact and noise (from heavy erratic breathing, profuse sweating, and large amounts of movement), reducing the practicality of these signals.",
+              "citations": [
+                "W2989624678",
+                "W2791342729",
+                "W3095375900",
+                "W2769021531",
+                "W2971265221",
+                "W2982026297",
+                "W2072522618"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_6",
+          "subsection_index": 6,
+          "subsection_label": "4.6 Future suggestions",
+          "subsubsections": [],
+          "text": "Along with reporting of subject demographics, proper labelling of data and investigations of channel reduction methods to reduce the number of sensors needed to capture this data, there are several other future suggestions. The future of machine learning on cybersickness involves not just the alteration of visual displays for human ergonomic comfort, but the understanding of physiological states and subsequent mitigation of potentially harmful perceptual responses. Given the interactive nature of immersive technology, devices that capture data related to physiological states have to be wearable and not bulky or restraining while engaging in virtual reality. The field of cybersickness also requires more understanding, both on the mechanisms of how it originates and on the biomarkers through which this event can be either predicted or detected. One potential avenue of machine learning exploration could be to pair cybersickness along with other correlated or anticorrelated psychological aspects, such as vection [W2604793339] and presence [W2912830318], respectively.\n\nFuture studies could collect data from eyetrackers embedded in VR devices to track both gaze and fixation and fuse this with other already known biosignals [W4200389544]. Further on, building algorithms designed to process multiple signals in combination and independently would be especially useful in operational environments. If one source of data is cut off, another could take its place. This would maintain robust data streams for the monitorization of physiological states.\n\nThe next step in machine learning would be to generate new information every time new sample data is added (incremental, online learning) and to better model and explain related spatio-temporal brain processes. One way to do this would be to use a 3D evolving spiking neural network architecture [W2019598563, UNMAPPED:82]. Considered the 3rd generation of artificial neural networks (ANN), spiking neural networks use spike information representation to account for changes in brain data and to learn spatio-temporal patterns from the data, which patterns can then be interpreted to understand the dynamics of the brain under certain conditions. This is in contrast to the 2nd generation ANNs, some of them reviewed above, which are not biologically plausible and do not reflect how neurons in the brain actually work in time and space under different conditions. ANNs are more computationally and energy intensive and less efficient in the interpretation of results. Perhaps, the biggest pitfall of deep neural network (DNN)-type algorithms is that they are 'black boxes' with many hidden layers, meaning that data interpretation is limited [W3048928143]. A dynamic evolving spiking neural network is based on the concept of an evolving connectionist system [UNMAPPED:82]. It is a modular system that evolves both structure and functionality from incoming data, in a way that is continuous, self-organized, online adaptive and interactive [UNMAPPED:84]. This makes it possible to learn spatio-temporal brain data (STBD), and the actual machine learning architecture as an interpretable model of the brain. This is useful, because unlike DNNs, it allows researchers to then act on the modelling results in a meaningful way. Architectures like NeuCube are robust to noise and create an approximate map of structural and functional cortical areas of interest using EEG data [W2019598563]. The data can be used to interpret brain activity during cybersickness experiments. Open and explainable AI systems built on brain-inspired spiking neural networks would further pave the way for integrated cybersickness prevention and alleviation techniques through better neurophysiological data modelling, biomarker discovery and deeper understanding of personalised cybersickness processes. From an industry perspective, this information will help producers of VR content understand their consumer more, and help lift barriers to non-contact training simulations in professional fields, gaming and the building of interactive digital economies. Finally, training for resistance to cybersickness based on both objective physiological data and subjective feedback will pave the way for human adaptation to an era of ever-increasing virtual environments.",
+          "citations": [
+            "W2604793339",
+            "W2912830318",
+            "W4200389544",
+            "W2019598563",
+            "W3048928143"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "82",
+            "84"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Overall, the type of population, and an assessment of algorithm utility remains ambiguous and wanting. The wide differences in study protocols, data labelling and processing make it difficult to compare the reviewed studies. Although scarce, the available studies have highlighted that it is possible to track cybersickness using a variety of biosignals. The robustness of these signals to noise in practical settings, however, requires careful consideration. Looking forward, the discovery of new information about cybersickness requires machine learning tools that are open and explainable. These aspects are discussed below.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This review of machine learning approaches in cybersickness studies demonstrated that a wide range of biometric and neuro-physiological signals for cybersickness identification have been analysed and discovered through the use of machine learning. Multiple machine learning architectures, modes of stimulus, VR content, environment, and participant activity have been used in studies for the automatic detection of cybersickness and prediction of further cybersick events based on these biomarkers. The predictive capabilities of current machine learning models for novel, first-instance cybersickness events, however, are still in question. Common important features have been highlighted that may be used as an input for future machine learning research in the field of cybersickness. Future research is pointed towards the collection of quality data, and the use of brain-inspired spiking neural network models [UNMAPPED:82] to achieve better accuracy and understanding of complex spatio-temporal brain processes related to cybersickness.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "82"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Appendix",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "**Table 10** Risk of bias (ROB) assessment for 26 development and validation studies judged based on the 20 signaling question items from PROBAST [W2907554860]\n\n{{TABLE:tbl_10}}\n\nPROBAST 20 signalling question items: Selection of participants and data sources used.\n1. Were appropriate data sources used?\n2. Were all inclusion/exclusions appropriate?\nDefinition and measurement of features used for classification.\n3. Were predictors defined and assessed in a similar way for all participants?\n4. Were predictor assessments made without knowledge of outcome data?\n5. Are all predictors available at the time the model is intended to be used?\nHow and when the outcome of cybersickness was defined and determined.\n6. Was the outcome determined appropriately?\n7. Was a pre-specified or standard outcome definition used?\n8. Were predictors excluded from the outcome definition?\n9. Was the outcome defined and determined in a similar way for all participants?\n10. Was the outcome determined without knowledge of predictor information?\n11. Was the time interval between predictor assessment and outcome determined appropriate?\nStatistical methods to develop and validate the model\n12. Were there a reasonable number of participants with the outcome?\n13. Were continuous and categorical predictors handled appropriately?\n14. Were all enrolled participants included in the analysis?\n15. Were participants with missing data handled appropriately?\n16. Was selection of predictors based on univariable analysis avoided?\n17. Were complexities in the data accounted for appropriately?\n18. Were relevant model performance measures evaluated appropriately?\n19. Were model overfitting and optimism in model performance accounted for?\n20. Do predictors and their assigned weights reported in the final model correspond to the rest of the analysis?",
+      "citations": [
+        "W2907554860"
+      ],
+      "tables_in_text": [
+        "tbl_10"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4303858845_tables.md"
+}

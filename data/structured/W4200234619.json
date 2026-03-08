@@ -1,0 +1,582 @@
+{
+  "id": "W4200234619",
+  "metadata": {
+    "title": "A Call to Action: A Systematic Review of Ethical and Regulatory Issues in Using Process Data in Educational Assessment",
+    "n_sections": 14,
+    "n_subsections": 25,
+    "n_subsubsections": 0,
+    "n_tables": 10
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Alongside the increased and more varied approaches to digital assessment in recent years, there has been an increased interest in exploring the digital traces left by learners as they engage in computer-based learning [W1967371720]. Techniques originating in data mining and machine learning can provide more detailed information about student learning, and how this can be improved [W2755136371], representing an attempt to enhance the utility of assessments by adding value to interpretations of student responses. With this increasing interest in use of process data, the focus on ethical use of personal data and data protection has also increased. However, there is a lack of knowledge on how ethical and legal issues are dealt with in relation to process data in educational assessment. Hence, the present study addresses this gap through a systematic review of the extent to which studies recognise and address ethical and legal concerns in contexts where process data are used in educational assessment research in K-12 education (this term includes Kindergarten to Grade 12, that is, primary and lower- and upper secondary school in many educational systems). Specifically, the study aims to answer the following research questions.\n\n1. To what extent are ethical, privacy and regulatory considerations reflected in recent research that draws on process data in K-12 assessment?\n2. To what extent are ethical, privacy and regulatory considerations reflected in recent research that draws on process data in educational assessment more broadly?\n3. What elements associated with ethics, privacy and regulations are evident in recent research drawing on process data in educational assessment?\n\nThe study is timely in the context of the introduction of the General Data Processing Regulation (GDPR) on 25 May 2018 by the European Union (see https://gdpr-info.eu/). Binding on all member states, the GDPR aims to harmonise data privacy laws across the European Union, setting out rights for individuals whose personal data is collected and processed by organisations. The regulations also place increased obligations on organisations that collect personal data and provide for significant sanctions where non-compliance with regulations and/or data breaches occur. Penalties for non-compliance are designed to be \"effective, proportionate and dissuasive\" (GDPR, Article 83) and include fines of up to \u20ac20 million or up to 4% of the total worldwide annual turnover of a company or organisation, whichever is higher. GDPR-related fines imposed to date illustrate both the range of penalties and non-compliance situations that create challenges for organisations. For example, in January 2019, France's National Data Protection Commission (CNIL) levied a fine of \u20ac50 million on Google for not having a valid legal basis to process the personal data of users of its services (https://www.cnil.fr/en/cnils-restricted-committee-imposes-financial-penalty-50-million-euros-against-google-llc). In August 2019 a secondary school system in Sweden was fined \u20ac18,630 for using facial recognition via a camera to monitor the attendance of students, in breach of the GDPR. In December 2020 the Irish Data Protection Authority fined University College Dublin \u20ac70,000 for insufficient data security on its college email system (https://www.dataprotection.ie/sites/default/files/uploads/2021-02/Inquiry%20University%20College%20Dublin_0.pdf) while in January 2021 the Belgian Data Protection Authority fined a school \u20ac1000 for conducting a survey using a virtual learning environment without obtaining the consent of the students' parents (https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-36-2021.pdf). The above examples indicate the legal implications of the GDPR for any agencies or individuals processing personal data and the need to comply with relevant regulations.\n\nThe data for the present study relate to the 10-year period immediately preceding the introduction of GDPR. The study intends to capture research practice in relation to ethics, privacy and regulations existing at the time in the context of the use of process data. The findings will provide a useful point of comparison with other studies that may focus on similar issues in the period after enactment of the GDPR.\n\nIn the following section, we provide the background for this study illustrating developments within the field of educational assessment, and its relation to the use of process data. In a subsequent section describing our theoretical framework, we elaborate on the fairness and validity aspects of educational assessment, and their connection to privacy and ethics. We introduce some existing privacy and ethics frameworks, and following a brief review, we present the framework used in this study. Subsequently, the methods and results are presented. Finally, the main findings are discussed and their implications are outlined. The limitations of this study and suggestions for future research are presented before the concluding section.",
+      "citations": [
+        "W1967371720",
+        "W2755136371"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Background",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "Digital Assessment and Process Data",
+          "subsubsections": [],
+          "text": "When students interact with computer-based assessments, software can capture all activity and store this in digital log files. Such traces include the time taken by examinees to engage with each item, time spent per item, number of times the examinee views an item, answer-changing, movement through items, pathways taken through a test/problem in addition to a comprehensive clickstream of examinee activity throughout the test. Log files capture each action an examinee takes, thus establishing a sequential map of engagement with a task to completion. Such patterns have been used, for example, to capture and model students' latent thought processes and actions in an unobtrusive manner in close to real time [W2920618933] and to model students' application of vary-one-thing-at-a-time (VOTAT) strategies in complex problem solving on PISA items [W1774520063, W2305660949]. Analysis of these traces can be used to understand better what the examinee was trying to do when completing a problem-solving task, enabling researchers to look more closely at the cognitive processes underpinning test performance. Moreover, we note that such data could gather information beyond the task completion (for example, non-responses or other construct-irrelevant factors) that can also be of interest of researchers and practitioners in the field.\n\nThere is evidence of increased interest in data mining and other analytic techniques to analyse process data captured automatically as examinees complete tasks. Such techniques have captured the imagination of educational researchers, even if on-the-ground illustrations lag somewhat behind. Within the broader field of Learning Analytics (LA) we note the development of professional organisations centred around such approaches (The Society for Learning Analytics Research\u2014SoLAR), specific journals (for example, the Journal of Learning Analytics) and special issues within journals (Education, Technology, Research and Development Vol. 64 (5); Frontiers in Psychology\u2014https://www.frontiersin.org/research-topics/7035/process-data-in-educational-and-psychological-measurement). The field has also witnessed the development of specialised conferences such as the International Conference on Learning Analytics and Knowledge (LAK) and a conference hosted in May 2019 by Educational Testing Service (ETS) Princeton and the Educational Research Centre (ERC) in Ireland which explored the opportunities and challenges associated with the use of process data in international large-scale assessments. Further, international large-scale assessment initiatives, such as the IEA (International Association for the Evaluation of Educational Achievement) have conducted workshops to explore further the practices, possibilities and challenges associated with the use of process data in large-scale educational assessment (Beyond results workshop, 2020).",
+          "citations": [
+            "W2920618933",
+            "W1774520063",
+            "W2305660949"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "Process Data and Related Concepts",
+          "subsubsections": [],
+          "text": "This study considers the ethics, privacy and regulatory implications of using computational techniques to derive additional information and interpretations from student responses to digital assessments. There is overlap between a number of related concepts, such as Learning analytics (LA), Big data, Log files, and Process data. LA, for instance, involves a process of gathering, analysing and reporting information about learners with the aim to optimise their learning experiences and likelihood of success [W2114398548]. LA is typically understood in the context of online learning and digital data [W2086235321] and aims to bring benefit to learners and teachers on the basis of the analysis of patterns of interaction of learners with digital platforms, where data are captured automatically as part of the process. Many of the techniques underpinning LA and used in the analysis of process data contained in log files draw from Educational Data Mining (EDM). This is the process of exploring data from computational educational settings and discovering meaningful patterns, where the patterns are sometimes unexpected or surprising [W2338048237, W2099499149]. As a further operationalisation of such data mining approaches, LA can be used in two basic ways. One use draws on big data analytics to highlight patterns at institutional level (for example, school, college) and make predictions. Such application is increasingly prominent in higher education where data captured from virtual learning environments (VLE) such as Blackboard and Moodle, academic records and library systems are used to detect overall patterns in student data across a cohort [W2517433751]. Another use, more aligned with the focus of the present study, is to provide individually tailored feedback to learners for the purpose of supporting learning and teaching [W2588925426, UNMAPPED:11]. A brief description of EDM, LA and related concepts is provided in Table 1, showing that EDM and LA overlap in the sense that whereas EDM is the technical process of uncovering patterns hidden in the data, LA involves the use of these patterns to optimise learning [W3005118046]. The descriptions in Table 1 draw on the work of various authors and present the concepts in an easily accessible form.\n\nBenefits attributed to the use of process data include improvement of teaching and learning [W2088512750], providing advice, recommendations and support to students [W2297384991, UNMAPPED:16], identifying students at risk of failing [W2529553635, W2519664435], curriculum improvement [UNMAPPED:19] and providing personalised pathways enabling more targeted interventions [UNMAPPED:20]. Such research illustrates the extent to which process data are already used in education generally, but especially in higher education. This study seeks to explore implications of the increasing use of log files that, in many cases, are automatically generated when students take digital assessments especially during primary and second-level education. The use of process data in assessment is underpinned by two developments recently: the increase in digital assessment and the subsequent availability of complex log files containing rich information about how students engage with tasks and systems [W2588883810]. This combination allows for the generation of process data that enable test developers and researchers to go beyond the student response data (number of items answered correctly, quality of response) to analyse and interpret other granulated data captured in the digital log files, such as records of the actions that students take. In effect, process data are a by-product of digital assessment, analogous to the data exhaust from students' learning behaviour identified by Kay et al., [22, p. 9], cited in Cormack [8, p. 91] and Hoel & Chen, [23, p. 289]. Increasingly, this exhaust is being captured passively in virtual learning environments such as Blackboard and Moodle. The present study extends such application into the specific area of digital assessments. Within this space of digital assessment and process data, the present study explores a specific under-investigated related challenge, namely ethical and privacy issues associated with the use of examinee data for purposes that may not have been adequately explained to the students. Set against a backdrop of accelerating advances in computational processing, public concern about the privacy of online data and recent EU data regulations (GDPR), this study audits relevant practices in analysis of process data and highlights the extent to which issues of privacy, consent, individuals' rights and ethics have been reflected in research using process data drawn from student assessments.\n\n**Table 1 Process Data and Related Concepts**\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W2114398548",
+            "W2086235321",
+            "W2338048237",
+            "W2099499149",
+            "W2517433751",
+            "W2588925426",
+            "W3005118046",
+            "W2088512750",
+            "W2297384991",
+            "W2529553635",
+            "W2519664435",
+            "W2588883810"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "11",
+            "16",
+            "19",
+            "20"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Theoretical Framework",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "Fairness and Validity in Educational Assessment",
+          "subsubsections": [],
+          "text": "Public trust in assessment is derived in part from professional standards, principles, regulations and practices built up over time that cultivate confidence amongst stakeholders [UNMAPPED:33], especially important where future life opportunities for students are determined by assessment scores and decisions taken as a result [W2982343482, UNMAPPED:35]. Building such trust frequently revolves around three foundational concepts in assessment \u2013 validity, reliability and fairness. Reliability, though relevant, is outside the scope of this study. Proper validation of inferences drawn from assessment scores is required to justify further action based on those inferences [UNMAPPED:36] who notes that \"it is the claims and decisions based on the test results that are validated\" (p. 59\u201360) and there is general agreement around specific types of validity evidence [W2751963037]. Test developers and users need to attend to fairness also. Maintaining public confidence requires that the processes and uses of assessment are seen to be fair, especially where high-stakes assessments are employed. Camilli [UNMAPPED:38] highlights the interrelationship between validity, fairness and ethics, arguing that it is not possible to have valid interpretations of test scores if the process by which the scores were generated was not fair. He notes also that the evaluation of fairness in testing is not restricted to statistical consideration of Differential Item Functioning but that it involves legal and ethical reasoning as well.\n\nThe operationalisation of validity and fairness in educational assessment is guided by a range of professional assessment standards. Some of these were developed largely with US contexts in mind [UNMAPPED:39, UNMAPPED:40] whereas others are more international in orientation [W3195679228, UNMAPPED:42]. Some common features can be identified across different standards. These include requirements in relation to specifying the construct(s) the test is intended to measure, how scores can be used, and providing validity evidence to support the intended use of the assessments. However, another common feature of existing assessment standards is the absence of guidance regarding how process data should be interpreted and used. Whereas issues of validity, fairness and ethics are included, specific application to process data is, at best, inferred and often entirely absent as the standards preceded widespread application of process data. This suggests that the use of process data in assessment lacks the explicit professional 'framing' and warrant that is provided for more conventional scores from assessment through various sets of standards.\n\nThe next section of the paper outlines efforts to develop appropriate ethical standards applicable to LA more broadly. The extent to which users of process data derived from students' responses to digital assessment address and meet the criteria in these standards becomes a central focus of the remainder of the paper.",
+          "citations": [
+            "W2982343482",
+            "W2751963037",
+            "W3195679228"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "33",
+            "35",
+            "36",
+            "38",
+            "39",
+            "40",
+            "42"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "Privacy and Ethics Frameworks in the Context of Process Data",
+          "subsubsections": [],
+          "text": "Our study explores how ethical and privacy issues are addressed in relation to process data in the context of K-12 assessment. To structure the analysis we sought to identify an established framework that could be applied in the coding and analysis of studies related to educational assessment. However, frameworks that address ethical and privacy issues related to process data and assessment are limited. Some studies focus on the benefits and challenges of LA, acknowledging privacy and legal issues in assessment [W2907085403, W2436493763], yet they do not provide a common code of reference, guidelines or framework that address the ethical and/or privacy concerns in assessment particularly. Other studies have reflected on the ethical and privacy issues in the field of LA and process data use more generally [UNMAPPED:22] and some authors have proposed generic frameworks and/or guidelines to deal with such issues. These include design guidelines proposed by Pardo and Siemens [W2149282659], Cormack's [W2338048237] data protection framework for LA, a framework to guide higher education institutions in relation to ethical issues in LA [W2087750029], and Drachsler and Greller's [W2336314092] checklist to facilitate implementation of LA.\n\nThese frameworks tend to take an institutional approach, focusing mainly on higher education [W2337624055]. Hence, for the purpose of this study, we sought to identify ethics and privacy frameworks in the field of LA. Five frameworks were identified\u2014Cormack [W2338048237]; Slade and Prinsloo [W2087750029]; Sclater [W2341691066]; Steiner et al. [W2336067074]; and Draschler & Greller [W2336314092]\u2014which provide a selection of guidelines, indicators and/or categories. Of these, three frameworks seemed most promising in relation to the objectives of the study, namely Sclater [W2341691066], Steiner et al. [W2336067074], and Draschler & Greller [W2336314092].\n\nThe three frameworks are developed for different purposes. Steiner et al. [W2336067074] developed their privacy and data protection framework for a specific project which takes a design approach. Its primary purpose is to help institutions deal with ethical and privacy issues when designing projects which make use of LA. The checklist developed by Drachsler and Greller [W2336314092] aims to support researchers through each stage of the conceptualisation, development and use of LA. Sclater [W2341691066] proposes a code of practice for LA that covers the main issues institutions need to address in order to progress ethically and legally, a code that draws on extensive research and consultation activities [W2341691066, UNMAPPED:50]. Our analysis of the three frameworks showed that Sclater's code is most extensive and applicable, covering a broad range of vital aspects. However, we adapted the code to incorporate two additional themes drawn from Drachsler and Greller's [W2336314092] checklist, namely: Technical aspects (indicating that if the analytics change during the course of the study updated consent is needed from participants) and External partners (focusing on how to assure privacy when involving external partners in the analysis and use of data).\n\nOur theoretical frame for exploring the ethical and regulatory use of process data in K-12 assessment research incorporates a modified version of Sclater's [W2341691066] code of practice, summarised in Table 2. The modified code of practice consists of eight categories which are structured within two over-arching dimensions: Ethics, and Regulations and Privacy. The eight categories are: Responsibility, Access, Stewardship of data, Privacy, Transparency and consent, Validity, Enabling positive interventions and Minimizing adverse impacts. Descriptions of each category are provided in Table 2.\n\nA comparison of the adapted Code of Practice presented in Table 2 with provisions in the European Union's GDPR illustrate many points of convergence and a few areas of divergence. Six lawful reasons for processing data are identified in the GDPR (Article 6). One such reason occurs where consent is provided by the individual for processing of data for one or more specific purposes, a reason compatible with the Transparency and Consent category in Table 2. The GDPR is underpinned by core principles, outlined in Article 5, that place binding requirements applicable to businesses, organisations and agencies across all 27 countries of European Union and the 3 additional countries in the European Economic Area. These principles require organisations and businesses to:\n\n- Process an individual's personal data lawfully and fairly, providing transparency about its specific purpose;\n- Collect data for a legitimate, limited purpose;\n- Collect from an individual no more data than is necessary for the purpose for which it will be used;\n- Ensure that data are accurate and up to date and erase inaccurate data;\n- Store the data for no longer than is necessary for the intended purpose;\n- Keep data confidential and secure from loss or unauthorised processing.\n\nThese principles are reflected in the modified code of practice for LA presented in Table 2. For example, the first category \u2013 Responsibility \u2013 assumes the proper and legal use of data and associated processing (GDPR Article 5.a) whereas the category relating to Transparency and Consent also addresses provisions in Article 5.a. Similarly, whereas Article 5.c of the GDPR notes that data should be adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed ('data minimisation'), the Stewardship of Data category in Table 2 notes that only the minimum data required for analytics purposes should be collected.\n\n**Table 2 Code of Practice for Learning Analytics, Adapted from Sclater [W2341691066] and Draschler & Greller [W2336314092]**\n\n{{TABLE:tbl_02}}\n*Note:* Italicised text indicates elements incorporated from Draschler & Greller [W2336314092]\n\nSome points of divergence are evident. For example, whereas GDPR Article 5.d requires that data should be \"accurate\", it is somewhat less clear on the requirement for the accuracy and validity of the processing of such data. The Validity category used in our analysis allows for consideration of the accuracy of algorithms used in LA. Perhaps because of the general nature of the GDPR in comparison with the more focused role of the Sclater framework vis-\u00e0-vis LA, it is perhaps not surprising that 2 categories, covered by the Sclater code of practice, seem less evident overall in the GDPR. These categories are Enabling positive interventions and Minising adverse impacts. However, GDPR Article 35 sounds a cautionary note around data processing using 'new technologies' that might lead to higher risk to individuals' rights and consequently requires that a data protection impact assessment be undertaken in some instances. Such assessments aim to gauge the possible impact of processing operations on the protection of personal data and it appears that this offers additional crossover with the Sclater categories.\n\nChapter III of the GDPR focuses on the rights of individuals. Rights include: obtaining details about how data is processed (Article 12); obtaining copies of their personal data (Article 15.3); the right to withdraw consent for processing of their data (Article 13.2.c); the right to have incorrect data corrected (Article 16) and the right to have their data erased (Article 17\u2014the 'right to be forgotten'). In the main these rights are analogous to similar elements in the modified code of practice for LA presented in Table 2. One additional right in the GDPR not clearly covered in the Sclater code for LA is the 'right to data portability' contained in GDPR Article 20. This gives the individual the right to have their data transferred in a structured format from one organisation to another.\n\nOverall, we conclude that there is considerable, though not complete overlap between GDPR and the categories used in the present study to evaluate the extent to which the studies selected addressed issues of ethics, privacy and regulation in relation to process data.",
+          "citations": [
+            "W2907085403",
+            "W2436493763",
+            "W2149282659",
+            "W2338048237",
+            "W2087750029",
+            "W2336314092",
+            "W2337624055",
+            "W2341691066",
+            "W2336067074"
+          ],
+          "tables_in_text": [
+            "tbl_02"
+          ],
+          "citations_unmapped": [
+            "22",
+            "50"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "The Present Study",
+          "subsubsections": [],
+          "text": "The previous sections have outlined our theoretical framework against a backdrop of (i) increased use of process data in assessment, (ii) evolving data protection regulations and (iii) the fundamental importance of fairness and validity in assessment. This study analyses how ethical and regulatory issues associated with the use of process data in K-12 assessment have been reported in previous literature. Specifically, the study addresses the following three research questions:\n\n1. To what extent are ethical, privacy and regulatory considerations reflected in recent research that draws on process data in K-12 assessment?\n2. To what extent are ethical, privacy and regulatory considerations reflected in recent research that draws on process data in educational assessment more broadly?\n3. What elements associated with ethics, privacy and regulations are evident in recent research drawing on process data in educational assessment?",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In framing our investigation of the implications of process data use in assessment we explore the concepts of fairness and validity in assessment, their links with ethics and privacy and how these concepts are expressed in established standards and guidelines for educational and psychological assessment. We also introduce the Sclater [W2341691066] code of practice as the framework employed in this systematic review.",
+      "citations": [
+        "W2341691066"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Method",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "Literature Search",
+          "subsubsections": [],
+          "text": "We developed a search protocol as suggested by Gough et al. [UNMAPPED:52] including four primary search words\u2014Governance, Assessment, Analytics and Education. Synonyms and alternative terms and expressions widely used in the literature for each search word were identified and resulted in the search terms presented in Table 3.\n\n**Table 3 Search Terms Used in the Study**\n\n{{TABLE:tbl_03}}\n\nThis search was applied to three databases: ERIC, Web of Science and ProQuest. We used the Boolean expression AND between the key words, and OR between the synonymous words. Further, we hand searched six journals. Two journals were in the field of assessment, two in the field of data mining and learning analytics and two in the field of technology in education studies (see Figure 1). Issues from years 2010 to 2018 inclusive in each journal were screened for relevant studies. We also performed searches in the Proceedings of the Learning Analytics and Knowledge Conference, and the special issue: Relationship of Ethics in Design and Learning Analytics in the journal Education Technology Research Development (Issue 5, October 2016). The search process was conducted between March and July 2018. The primary search yielded 1435 hits. Seventy four duplicates were removed using Identify Duplicate feature in Endnote X9, leaving 1361 cases for title and abstract screening. See Figure 1 for an overview of the search process.\n\n**FIGURE 1 Flow Chart Describing the Selection Process**\n\n{{TABLE:tbl_04}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03",
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "52"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "Eligibility Criteria and Screening",
+          "subsubsections": [],
+          "text": "Eligibility criteria were pre-defined as part of creating the protocol for this systematic review, and applied to the primary screening of the abstracts and titles. The studies were included if they met the following criteria:\n\n1. Published in English\n2. Published as a Conference proceeding, Report, Book or Paper in a refereed journal\n3. Contains specific reference to or implies a context located in K-12 educational settings\n4. Contains specific reference to or implies research based on: (i) an achievement/attainment/curriculum test or assessment administered to students or (ii) use of student achievement/attainment/test results or outcomes\n5. Contains specific reference to use of learning analytics, data analytics, log-files, process data and/or other types of user-generated data as part of the study\n6. Contains specific reference to ethical and/or regulatory issues.\n\nThe studies were excluded if they focused more specifically on general use of library or course-management learning analytics, without evidence that there may be some relevance to student assessment within the full study. The screening process of the titles and abstracts revealed another 12 pairs of duplicates. In total 1349 studies were screened from which 66 studies were included for the full paper review (see Figure 1).",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "Second-Order Eligibility Criteria",
+          "subsubsections": [],
+          "text": "The initial screening following the eligibility criteria revealed a somewhat unexpected finding: only three of the studies met the key inclusion criteria, namely, dealt with ethical and/or regulatory issues associated with the use of process data in K-12 assessment. Hence, we reduced the focus on including studies related to assessment in K-12, and widened our primary inclusion conditions applying a second order of eligibility criteria. Studies were thus included if they:\n\n1. Are located in the context of education (e.g., K-12, higher education or training)\n2. Contain specific reference to use of learning analytics, data analytics, log-files, process data and/or other types of user-generated data\n3. Have some mention of assessment\n4. Have some mention of ethical and/or regulatory issues\n\nThe screening of the 66 full-text publications applying the second-order inclusion criteria, yielded 22 studies for further full-text screening.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "Coding and Data Extraction",
+          "subsubsections": [],
+          "text": "For the full-text screening of the studies a coding scheme was developed to extract the most relevant information with regard to the research questions posed in this study. Among others, we coded publication year, type of publication (e.g., research paper, report, book), country, educational level, and the context of the study. Furthermore, we coded each study using nominal scales in relation to the methodological design of the study, the extent to which assessment was a focus of, or in any way mentioned as part of the study, and the extent to which ethics/privacy was incorporated into the study. Coding for these three aspects of studies is presented in Table 4.\n\n**Table 4 Coding Used to Categorise Studies**\n\n{{TABLE:tbl_05}}\n\nA further coding employing the eight categories in the Sclater [W2341691066] framework was conducted (see Table 2). For each category an ordinal score scale was used to assign values based on the information reported in the paper.\n\n0. No information\n1. Passing reference\n2. Brief discussion\n3. Applied/detailed discussion.\n\nTwo researchers coded each study independently. The coding converged largely and in cases of disagreement, both researchers went through the coding together and discussed until consensus was reached.",
+          "citations": [
+            "W2341691066"
+          ],
+          "tables_in_text": [
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "Analysis",
+          "subsubsections": [],
+          "text": "To address the research questions, both qualitative and quantitative approaches were used. Qualitative description was used to report the extent to which studies met various inclusion criteria and how the sample of studies was sub-divided into groups depending on the extent to which they addressed issues of assessment, ethics and regulations.\n\nQuantitative coding approaches were employed to enumerate the extent to which evidence was available in each study in relation to each category provided by Sclater [W2341691066]. Within each study, codes/values were assigned to individual Sclater categories using a 4-point ordinal scale, 0\u20133. This then facilitated numeric summation and averaging to provide descriptive statistics. Given the relatively small sample size (22 eligible studies) and the fact that an ordinal scale was used for each category, medians and ranges were used to provide estimates of central tendency and spread, in keeping with the advice of Muijs [W1481769595].\n\nDescriptive statistics were, therefore, calculated in relation to each of the eight Sclater categories for the full set of data (22 studies) and for sub-groups of the data. Overall descriptive statistics were also calculated in relation to each study individually, averaged across the eight categories. Due to the limited number of studies included in this systematic review it was not possible to perform more advanced numeric analysis. Nonetheless, our categorisation and findings point towards interesting and important results.",
+          "citations": [
+            "W2341691066",
+            "W1481769595"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "We applied the systematic review methodology, and followed guidelines for conducting systematic reviews proposed by Boland et al. [UNMAPPED:51] and Gough et al. [UNMAPPED:52] which include the following steps: predefining research questions, developing search strategy, defining eligibility criteria, screening of studies according to inclusion/exclusion criteria, data extraction, appraisal of studies, and synthesis. The application of these steps to our study are described in the following sections.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "51",
+        "52"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "RQ1. Extent to Which Ethical, Privacy and Regulatory Considerations Are Reflected in Research Drawing on Process Data in K-12 Assessment",
+          "subsubsections": [],
+          "text": "From an initial pool of 1349 studies, only three studies met the criteria relevant to the first research question. It is noteworthy that so few eligible studies were identified in the context of K-12 education. An overview of the three studies is provided in the first three entries in Table 5. These studies, published in 2016 and 2017, incorporated assessment indirectly. The studies by Angeli et al. [W2619120069] and Rodriguez-Triana et al. [W2337624055] are empirical while Zeide's [W2670772560] study is theoretical. Also, as shown in Table 5, the ethics and privacy considerations were reflected differently in the three studies.\n\nThe data mining study by Angeli et al. [W2619120069] included an investigation of technology integration in a secondary school in Australia, though the emphasis on ethics and privacy was minor overall. In another empirical study conducted in Spain, Rodriguez-Triana et al. [W2337624055], recognising that most investigations of LA and ethics focused on university settings, set out to evaluate the suitability of their own virtual learning environment (VLE) to primary education. The VLE was applied to the work of one primary teacher introducing digital blogging to his first graders and using process data as part of formative assessment. They embedded the ethics and privacy issues in the design of the study. In the final clear-cut K-12 study, Zeide [W2670772560] reviewed how big data-driven instruction, including analysis of large-scale assessment outcomes, alters the structure of schools' pedagogical decision-making. Amongst several ethical issues raised, her review highlighted the risk associated with the outsourcing of student data to technology companies who provide VLEs to schools, commercial companies who also recognise the value of such data outside the school environment. In this study, the ethics and privacy issues were discussed as part of the results generated by the study.",
+          "citations": [
+            "W2619120069",
+            "W2337624055",
+            "W2670772560"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "RQ2. Extent to Which Ethical, Privacy and Regulatory Considerations Are Reflected in Research Drawing on Process Data in Educational Assessment More Broadly",
+          "subsubsections": [],
+          "text": "Given the scarcity of studies focusing on K-12 assessment in our search, we widened the inclusion criteria to include post-secondary education and training. Twenty-two studies met the final criteria for inclusion answering the second question.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "Overview of Data",
+          "subsubsections": [],
+          "text": "A diverse set of studies is represented in the sample. Details of the studies are outlined in Table 5. The studies were set in a range of international locations with evidence of more empirical work outside the US and the UK, for example in Germany, the Netherlands and Australia. Most studies derive from university settings with only three focusing significantly on K-12, illustrating the need, as outlined earlier, to broaden the inclusion criteria. This is not to say that studies involving process data are not undertaken in relation to K-12, rather that the required overlap between process data and issues related to ethics and privacy was not detected at that level. There was a relatively even divide between empirical and theoretical studies, with the number of theoretical studies perhaps suggesting the nascent nature of the still-developing field of learning analytics. One inclusion variable of interest focused on ethics/privacy issues in the context of process data from student assessments, and the results indicated a relative lack of studies meeting these criteria. Six studies were classified as having a significant assessment focus whereas in 12 studies, evidence of assessment application was more indirect, typically, for example only mention of the role of process data in assessment. In four cases, the link with assessment was quite weak/general but the studies were included as the discussion had some relevance to assessment.\n\nAnother interesting feature of the sample of studies obtained is the manner in which issues of ethics and privacy were incorporated, with ten studies designed with the specific intent, in part, of exploring such matters. Only four of the ten were empirical, highlighting again the relative lack of empirical studies that framed ethics as a central feature in the investigation. In another ten studies, ethical/privacy issues emerged in the results as a consequence of the investigations, not necessarily having been anticipated or looked for. In a further two studies, general issues around ethics and privacy, frequently drawing on the literature, were noted in passing by the authors.\n\nThe picture overall represents a mix of empirical and theoretical studies drawn from different continents and countries, significantly focused on university level, with a varied emphasis on assessment, and issues of ethics and/or privacy.\n\n**Table 5 Overview of the Studies Included in the Systematic Review (N=22)**\n\n{{TABLE:tbl_06}}\n*Note:* Country/Region: Where the authors of a study reported specific countries or a region in which the study was conducted or to which the analysis and findings primarily applied, this is noted. Otherwise, the study is identified as 'not specified.' Education level: K-12; University/Higher Education; Training/Adult; Multiple/Not specified. Design: Empirical; Theoretical/Literature review. Assessment: General = Study focuses on education generally, but noted potential use of process data in relation to student performance/assessment; Indirect = Indirect treatment of assessment; Focused = Study focused on assessment. Ethics/privacy: Acknowledged = Only acknowledged the issue of ethics/privacy in the study; Results = Issues of ethics/privacy are presented as part of the results of the study; Embedded = ethics/privacy is embedded in the design of the study.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_06"
+          ]
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "RQ3. Elements Associated with Ethics, Privacy and Regulations Evident in Research Drawing on Process Data in Educational Assessment",
+          "subsubsections": [],
+          "text": "To answer our third research question one aspect of the analysis focused on the eight categories found in Sclater's code of practice for learning analytics [W2341691066]. Codes (on an ordinal scale 0\u20133) were applied to each study in relation to the extent to which there is evidence within the study for each of the categories included by Sclater (see Table 2 for an overview of the categories). Applying coding to the full cohort of studies provided quantification of the extent to which each study addressed key ethical and regulatory issues. Table 6 provides an overview of the coding applied to the studies, with averages.\n\nResults show that ethics-related issues feature minimally overall across the 22 studies. Only passing reference is made in relation to most categories. Where more attention is paid, it was in relation to Privacy, Transparency and Consent, Enabling interventions and Minimising adverse impact of the use of process data, as indicated in slightly higher median values. There is little evidence in the studies of identifying who is responsible for ensuring ethical use of process data and for the overall management of the data in an ethical manner. Nine of the studies indicate very little attention paid overall to the categories identified by Sclater, with median values of 0 to 0.5. Only the studies by Cormack [W2338048237] and by Rodrigues-Triana et al. [W2337624055] indicate significant engagement with these issues in most of the categories and even in these two studies, some gaps were evident.\n\n**Table 6 Extent to Which Evidence of Sclater's Categories Are Found in the Sample of Studies**\n\n{{TABLE:tbl_07}}\n*Note:* Ordinal scale used in coding: 0 = No information; 1 = Passing reference; 2 = Brief discussion; 3 = Applied/detailed discussion.",
+          "citations": [
+            "W2341691066",
+            "W2338048237",
+            "W2337624055"
+          ],
+          "tables_in_text": [
+            "tbl_07"
+          ]
+        },
+        {
+          "subsection_id": "s_5_5",
+          "subsection_index": 5,
+          "subsection_label": "Differences in Emphasis on Ethics & Regulation Across Types of Studies in the Sample",
+          "subsubsections": [],
+          "text": "We analysed the data also for different subgroups in the sample of studies to ascertain the extent to which studies with different foci in terms of design and emphasis on assessment addressed those issues. Tables 7, 8 and 9 highlight summary statistics for different subgroups in the sample of studies showing the median and range of ratings on the Sclater categories for different groups of studies. Group categorisation includes: (i) study design, (ii) focus on assessment and (iii) focus on ethics/privacy.\n\nThe data in Table 7 indicate higher averages overall for theoretical studies, reflecting not only greater emphasis on categories that are addressed in both type of study designs, but also the inclusion of a broader range of ethics dimensions, for example issues of Responsibility, Validity, Enabling interventions and Minimising adverse impact. Overall, there was negligible attention to issues of the overall Stewardship of data in either type. The dominance of Transparency & consent and of Privacy (medians of 1.0) is evident in the empirical studies. Privacy was the dominant category in the theoretical studies, as reflected in the median value of 2.0. In general, the empirical studies display lower medians.\n\n**Table 7 Summary Statistics on Sclater Ratings: By Study Design**\n\n{{TABLE:tbl_08}}\n\nA further analysis explored any differences in outcomes associated with the emphasis on assessment evident in the study. Studies were categorised according to the extent to which assessment was prominent in the design and scope. The median and range of ratings under each category are presented in Table 8.\n\nSome interesting patterns are evident in these data. In keeping with the findings from the full set of studies, Privacy was the dominant category in two of the groups (General and Indirect), where studies were grouped in relation to the emphasis on assessment. In the third group, consisting of six studies that focused significantly on assessment, both Privacy and Transparency & consent were equally prominent in terms of median values. Attention to issues of Enabling interventions and Minimising adverse impact was less obvious in the assessment studies than in the more general studies or where assessment was addressed more indirectly.\n\n**Table 8 Summary Statistics on Sclater Ratings: By Emphasis on Assessment**\n\n{{TABLE:tbl_09}}\n*Note:* General = Study focused on education generally, but noted potential use of process data in relation to student performance/assessment; Indirect = Indirect treatment of assessment; Focused = Study focused on Assessment.\n\nThe final analysis investigated differences in outcomes associated with the extent to which issues of ethics/privacy were central to the aim of the study. Table 9 presents the median and range of ratings for each ethics dimension for three sub-groups of the studies.\n\nThe data suggest that greater attention to ethical issues was found in the studies where ethics were included in the focus of the investigation. Differences are small but reasonably consistent across the four ethics dimensions: Responsibility, Transparency and consent, Privacy and Validity. Medians for Enabling interventions and Minimising adverse impact were highest in the studies where ethical issues emerged as part of the results rather than being actively built into the design. As seen earlier, issues of granting students' access to the analytics associated with their own data or how data is administered within the study/organisation did not feature prominently in any studies, whether ethics was the focus or not.\n\n**Table 9 Summary Statistics on Sclater Ratings: By Emphasis on Ethics/Privacy**\n\n{{TABLE:tbl_10}}\n*Note:* Acknowledged = Study only acknowledged issue of ethics/privacy; In Results = Ethics/privacy emerged as part of the results; In Design = Ethics/privacy embedded in design of the study.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_08",
+            "tbl_09",
+            "tbl_10"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This study sought to explore the extent to which issues of ethics, privacy and regulation are reflected in studies that investigate the use of logfile data in educational assessment contexts. The review identified a small number of studies that met the full inclusion and exclusion criteria and these studies were analysed in relation to the research questions. This section addresses the research questions in turn and presents the results.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Discussion and Implications",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "Process Data, Ethics and Regulations in Studies in K-12 Assessment (RQ1)",
+          "subsubsections": [],
+          "text": "This research revealed a dearth of studies focusing on process data use in assessment that also incorporates consideration of ethics and privacy. Given the acknowledged importance of addressing ethical issues in research, including the need to secure ethical approval, this is revealing. In wider society, concerns abound about privacy, in relation to citizens' data. People are more aware than ever about appropriate and inappropriate use of data, and the process data captured from student assessments can reflect significant attributes and capabilities of individual learners. However, it appears that the assessment and research community has directed more attention towards techniques and methods for analysing such complex data rather than on the ethics related to it.\n\nWe could find only three studies where there was a significant and clearly articulated focus on assessment in K-12 education, a finding in line with previous research which showed that the ethical and regulatory issues related to use of process data has mostly been dealt with in higher education studies [W2337624055]. This is significant given the scale of the K-12 sector in terms of population and research opportunities in assessment and given that the use of LA in K-12 education has gained great attention and popularity [UNMAPPED:66]. Many national assessment agencies, testing companies and educational content developers operate within K-12 environments and, increasingly, a myriad of digital assessments are deployed.\n\nThe relative absence of attention to ethical issues in assessment-related process data studies in K-12 is noteworthy also in terms of two foundation elements of assessment \u2013 validity and fairness. As outlined earlier, these features are key both to test development and to maintaining public trust in assessment. The findings of this study call into question the warrant used by test developers and providers to use process data with this population, a theme we will return to below.",
+          "citations": [
+            "W2337624055"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "66"
+          ]
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "Process Data, Ethics and Regulations in Studies in Educational Assessment Generally (RQ2)",
+          "subsubsections": [],
+          "text": "The scarcity of studies focusing on ethics and privacy in K-12 assessment prompted widening of the inclusion criteria, to include post-secondary education, yielding a relatively larger set of 22 studies. Only 5 of the 22 studies could be identified having a significant assessment and ethics/privacy focus in the context of process data. This is surprising given the increased focus on use of process data in assessment. Our review suggests that attention to ethics and privacy in research on assessment involving process data lags behind, or is dealt with in more elusive and subtle ways compared to studies focusing on the techniques for exploiting and analysing process data.\n\nAnother interesting finding is the extent to which issues of ethics and privacy were incorporated in studies that focused significantly on assessment. These issues were embedded in the design of the studies in only two cases\u2014investigations that were designed with the explicit intention of addressing such matters in part. This is not really surprising given how few studies in our data focused on assessment. However, even with a broadening of the search to explore educational studies in general that had some assessment focus, only 10 of the 22 cases embedded consideration of ethics/privacy in the study design.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "Elements Associated with Ethics and Regulations in the Studies Reviewed (RQ3)",
+          "subsubsections": [],
+          "text": "A modified version of the code of practice for LA proposed by Sclater [W2341691066] was used to identify elements of ethics, privacy and regulations within the sample of studies. Overall, relatively little evidence was found, with the exception of privacy where data protection issues were most prominent. This is not surprising given the pressure on test developers and researchers to act within any legal/regulatory protocols applicable within their systems. There was what we characterise as minimal 'passing reference' to some other elements, including informed consent in relation to collection and use of student data, enabling and managing positive interventions on the basis of information derived from process data and minimising any adverse impact on learners as a result of such use. Issues around determining who within an organisation/project takes responsibility for legal and ethical use of LA, students' right to access and amend their own information, and proper administration of the data did not really feature in the findings from the studies reviewed. There was slightly more evidence of awareness of the need to validate the quality, accuracy and robustness of data, analyses and interpretations associated with process data and LA. What any overview masks, however, is the reality that a significant number of the 22 assessment-related studies that should have featured ethical issues did not. Our analysis indicated that whereas they might have focused on one or two elements somewhat, 7 of the 22 studies paid almost no attention to the elements identified by Sclater [W2341691066] as a set. These studies recorded median values of zero, averaged across the 8 categories, as indicated in the final column of Table 6.\n\nWhere ethical issues were discussed, they tended to be explored in greater breadth and depth in theoretical rather than empirical studies, perhaps reflecting the emerging nature of the field of LA and process data in assessment. Empirical studies focused more on technical matters of data capture and analysis and, where ethics was mentioned, on issues of data protection and participant consent. Some studies focused in detail on assessment whereas others dealt with assessment issues indirectly or more generally. The more the specific focus was on assessment in the studies, the less likely it was that a broad range of ethical issues was incorporated, beyond privacy/data protection and participant consent. In relation to consent, the extent to which participants understood the use to which their responses would be put is unclear. Where studies incorporated ethical issues into the design, this was reflected in somewhat more consideration of a range of related issues in the study. These included issues around who takes responsibility for legal/ethical use of LA, ensuring informed consent of participants, privacy/data protection and validating the processing and interpretations associated with process data.",
+          "citations": [
+            "W2341691066"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_4",
+          "subsection_index": 4,
+          "subsection_label": "Validity and Fairness in the Use of Process Data in Assessment",
+          "subsubsections": [],
+          "text": "Quality and confidence in assessments is built on three pillars: validity, reliability and fairness. This is reflected in the literature [W419007064, UNMAPPED:38, UNMAPPED:67, UNMAPPED:68, UNMAPPED:69, UNMAPPED:70, UNMAPPED:72], in professional regulations and codes of conduct [UNMAPPED:39, UNMAPPED:40] and many standard operating procedures and manuals associated with tests and assessments. There is overlap between validity, reliability, fairness and the aims of the present study. Issues of reliability, though important, are outside the scope of this study. This is not to minimise its importance. For example, we know that students react differently in how they approach tests depending on the perceived importance of the task [W2010947735]. Thus, if students are not aware that all their responses, for example clickstream patterns and time spent on items, are being monitored, they may respond differently than if they were aware, with implications for reliability. Validity and fairness, however, are central to the present study and merit attention both in terms of how they are reflected in the findings and also in the code of practice used to analyse the data.\n\nEvaluating validity and fairness in tests is frequently codified in sets of regulations and guidelines set by test companies, national agencies and professional associations. Some guidelines have attained particular prominence, informing assessment practice internationally. What is noteworthy in the context of the current study is the relative lack of attention to developments in the use of process data, both from a methodological and ethical/regulatory point of view. Many of the technical developments in the area of log files, process data and LA supersede the publication of the assessment standards which do not provide adequate advice about how such data can be used appropriately.",
+          "citations": [
+            "W2010947735"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "39",
+            "40"
+          ]
+        },
+        {
+          "subsection_id": "s_6_5",
+          "subsection_index": 5,
+          "subsection_label": "Validity",
+          "subsubsections": [],
+          "text": "Yet validity is central to establishing the warrant for use of data derived from assessments. Failure to recognise and address what Kane [UNMAPPED:36] terms the interpretative argument and the validity argument serves to undermine users' confidence in the use of tests. It is no less important with process data than with conventional scores to specify the interpretative argument, \"the network of inferences and assumptions leading from the observed performance to the conclusions and decisions based on the performance\" [36, p. 23]. Without the subsequent evaluation and validation of that interpretative argument it is difficult to know to what extent the interpretations based on data analytics are reasonable.\n\nValidity issues in relation to process data can be inferred from some of the requirements in various assessment standards outlined earlier in the theoretical framework. However, whereas the requirements in relation to validating inferences about test scores reflect reasonable levels of probity and due process in assessment, they do so mainly in relation to validating inferences from conventional assessments. Existing standards do not anticipate the widespread availability of log files and subsequent use of process data in digital assessment. This 'validity' question is a fundamental challenge to the use of process data and the question of validity possibly requires attention separate to its treatment as part of ethics as discussed in this paper. Sclater's code of practice for LA positions validity as one of eight categories, most of which centre on ethics, privacy, data protection and regulation. The code is designed to \"help institutions deal with ethical objections and legal uncertainties and to facilitate the further development of the field of learning analytics\" [32, p. 39]. There is risk, we believe, that the overarching imperative of validity and its importance in establishing the quality of process data, their interpretations and subsequent use, may be diluted if validity is perceived as only 'one of a number' of areas related to ethics. It is more. Validity is \"the most fundamental consideration in developing tests and evaluating tests\" [39, p. 11]. It is thus of considerable concern that issues of validity received relatively little attention in the 22 studies reviewed in this investigation.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "36"
+          ]
+        },
+        {
+          "subsection_id": "s_6_6",
+          "subsection_index": 6,
+          "subsection_label": "Fairness",
+          "subsubsections": [],
+          "text": "Many interpretations of fairness focus on whether the assessment is the same for different populations such as across gender, race and socioeconomic status. Two principles are frequently invoked: (i) the assessment should not be biased and (ii) all candidates should have access to the assessment in a form suited to them [W1498856895]. Of these two principles the issue of bias is closest to the current investigation. Bias and fairness are frequently addressed using statistical modelling, with fairness often evaluated using Differential Item Functioning (DIF), evident when examinees of approximately equal knowledge and skill but from different groups perform on test items in ways that are systematically different. In this case, the DIF is present not because of differences in ability across different groups of examinees but because of some characteristic in the items themselves, unrelated to the construct of interest [W2795598039]. DIF-based statistical treatment of fairness does not capture fully the issue of fairness raised in the literature on LA. There, the issue is more at the individual level, especially where issues of enabling and minimising risk are involved. LA and the use of process data are designed to help explain test outcomes, offering the promise of instructional and learning adaptations to enhance performance. Our study reflects more Camilli's [UNMAPPED:38] interpretation of fairness as encompassing legal, ethical, political, philosophical and economic dimensions. A number of the elements in Sclater's code of practice for LA touch on fairness, including, validity, enabling positive interventions and minimising adverse impacts. Our data suggest modest attention to these issues in the studies reviewed. In relation to validity, 11 of the 22 studies have medians equal to or less than 1, on a 4 point scale 0\u20133. Corresponding figures for Enabling interventions and Minimising adverse impact are 14 and 18 studies respectively. Five of the studies recorded medians of 0 for both enabling interventions and minimising adverse impact. These figures do not suggest that broad issues of fairness in relation to the use of process data feature highly in the studies.",
+          "citations": [
+            "W1498856895",
+            "W2795598039"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "38"
+          ]
+        },
+        {
+          "subsection_id": "s_6_7",
+          "subsection_index": 7,
+          "subsection_label": "Existing Standards for Educational Assessment and for Ethics in Learning Analytics",
+          "subsubsections": [],
+          "text": "This paper has framed the discussion of ethics and regulations in process data studies in the context of existing codes of practice, notably that by Sclater [W2341691066], aimed at learning analytics. It is instructive to consider how those codes align with existing professional guidelines governing the development and use of educational assessment. Assessment guidelines presented earlier in the paper highlighted possible areas of overlap with Sclater's eight dimensions. However, many of the links are implied rather than direct. In most instances details in assessment standards focus on traditional score types such as raw scores and derived score representations such as profiles and descriptors. None specifically highlight or anticipate the type of process data available from modern digital assessments. Our sample of studies focused on the use of these process data and such use is anticipated in few if any of the main existing assessment standards. Thus, whereas matters of ethical and fair use of tests, examinee rights, data protection, clarity around score meaning and validity permeate existing standards, they do so in a different context, where process data were not available. Giving greater prominence in assessment standards to the affordances and use of process data would help sensitise test developers and users to the need to engage more effectively with ethical principles related to the use of such data.\n\nSclater's code of practice for LA is a good place to start in framing standards for the ethical use of process data in educational assessment. Amendments are needed, however. For example, Sclater's code is intended to guide institutions such as schools and colleges so that their use of student data and associated learning analytics is ethical and legal. Educational assessment as a discipline and practice goes beyond institutional responsibilities. There are a myriad of contexts and uses for assessments and ethical use involves test developers, those who implement them, those who take them and those who use them, including teachers, administrators, employers, policymakers, and researchers [UNMAPPED:38]. Therefore, standards for the ethical use of process data derived from educational assessments need to accommodate the needs and responsibilities of a broad stakeholder group. There may also be value in separating validity concerns from the ethical use of process data in assessment. This is not to downplay the obvious centrality of validity [W419007064, UNMAPPED:77] but rather to reinforce how important it is to evaluate interpretations of student responses derived from log file and process data in the same way that such practice is implemented in relation to traditional score interpretations. Experience with LA across a number of fields has suggested that the potential use of process data in educational assessment may be no less important or influential than use made of inferences from traditional scores. In the end, use is made of students' responses and this use needs to be validated.",
+          "citations": [
+            "W2341691066",
+            "W419007064"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "38",
+            "77"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In the following, the results of this systematic review are discussed, and implications are considered.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Limitations and Future Directions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We offer the above analysis while acknowledging some limitations with the present study. First, the study is set against a backdrop of intense interest about privacy regulations within the EU and the period of data collection and analysis stops just as GDPR was introduced in 2018, therefore providing a glimpse of practice in the absence of specific regulatory oversight. The situation might be different now, and therefore we suggest an update of this review in future to detect whether the GDPR regulations prompted a renewed interest in the topics addressed in this study. Second, care must be taken in relation to the relatively small number of studies identified, and moreover, the few studies in each category of the Sclater framework. However, given the size of the original electronic dataset overall, the findings are significant, and we suggest that replication with a larger pool of studies may be helpful to further discuss issues of ethics and privacy in relation to process data. Also, it might be helpful to include more detailed search words drawn directly from the adapted Sclater code of practice (Table 2). Embedding terms such as validity in the search string (Table 3) might detect more studies. Therefore, we encourage future research to include additional search terms that focus more specifically on areas within ethical and regulatory issues in use of process data in assessment.\n\nFinally, our search resulted in studies covering some parts of the world more than others, which may reflect the related inclusion criterion of studies in English. While this criterion was adopted to provide all studies in the field equal chances to be included, there might be reports or research in other languages. We therefore encourage future research to broaden the inclusion criteria by including studies in several languages.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This systematic review explored the extent to which ethical and regulatory norms informed the use of process data in studies incorporating assessment of students. Set in the context of a burgeoning harvesting of granular process data in digital assessments, the study contrasted the attention paid to technical refinement of procedures with the incorporation of ethical safeguards for participants in the process. The affordances of learning analytics are well articulated in the literature [W2086235321, W3018063079, W2782124960]. Our review draws us to a number of important conclusions. The focus on technology, on the how of process data, is well ahead of any focus on the ethics of why and how it is being used and thus the likely impact on participants. Emphasis is greater on digital assessment, on software development and on how process data can be captured and analysed to add value to conventional 'scores'. Process data is still an emerging and exploratory field in educational assessment and existing standards and guidelines for test use have yet to catch up. Our study indicates that there is a need to develop a specific code of ethics to govern the use of process- and logfile data in assessment. Such standards need to inform a perception amongst some test-developers and researchers that privacy and data protection are interchangeable with ethics. Our review suggests that some test developers and researchers may feel that by addressing privacy and data protection, ethical requirements are met. Ethics is a much broader concept. It may be that the focus on data protection and privacy is driven more by a need to comply with legal requirements than a consideration of ethics per se. Professionals involved in educational assessment can usefully amend existing ethical guidelines to inform practice. In this, they can draw from ethics frameworks developed for broader application in the context of LA. However, such frameworks will need to be modified to take into account the context and purpose of educational assessment or purposes of assessment research and practice. The code of practice developed by Sclater [W2341691066] was the best match we could find but it requires adaptation to operationalise it for use in the context of educational assessment. We suggest research to draw together the elements for such a bespoke framework. We also identify the need for more empirical studies that focus on the twin issues of process data in assessment and ethical implications of using these data. Whereas we found a few, there are not many.",
+      "citations": [
+        "W2086235321",
+        "W3018063079",
+        "W2782124960",
+        "W2341691066"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This research was supported in part by a grant from the Research Council of Norway (NFR-FINNUT Grant 283520 \"TEACH21st\"). The authors acknowledge the support of the Research Council of Norway.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "Authors' Contributions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The authors, DM and FS, contributed equally to the research. The authors worked jointly on all phases of this project. Both authors read and approved the final manuscript.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_11",
+      "section_index": 11,
+      "section_label": "Funding",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This research was support in part by a grant from the Research Council of Norway (NFR-FINNUT Grant 283520) \"TEACH21st\". The Council had no role in the design or implementation of the study or in the interpretation or reporting of results. The Funders had no involvement in or influence on the conceptualisation, design or reporting of the research.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_12",
+      "section_index": 12,
+      "section_label": "Availability of Data and Materials",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This study is based on a systematic literature review. Methods employed are outlined in the paper. The research papers, chapters and reports that comprise the data are publicly available and listed in the references. As this research is based on a systematic literature review, the data are the published literature consulted. The reference list contains the literature used in the research.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_13",
+      "section_index": 13,
+      "section_label": "Declarations",
+      "subsections": [
+        {
+          "subsection_id": "s_13_1",
+          "subsection_index": 1,
+          "subsection_label": "Ethics Approval and Consent to Participate",
+          "subsubsections": [],
+          "text": "This research was based on a desk-based systematic literature review and no ethics approval was required and no human subjects were involved in the research.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_13_2",
+          "subsection_index": 2,
+          "subsection_label": "Consent for Publication",
+          "subsubsections": [],
+          "text": "The authors, DM and FZ, provide consent for publication of this paper in the journal.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_13_3",
+          "subsection_index": 3,
+          "subsection_label": "Competing Interests",
+          "subsubsections": [],
+          "text": "The authors have no known competing interests to disclose.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_14",
+      "section_index": 14,
+      "section_label": "Author Details",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "1 School of Education, Trinity College Dublin, Dublin 2, Ireland.\n2 Department of Education and Quality in Learning, Unit for Digitalisation and Education (USN eDU), University of South-Eastern Norway, 3045 Drammen, Norway.\n\nReceived: 29 January 2021 Accepted: 28 September 2021\nPublished online: 08 December 2021",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_5",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4200234619_tables.md"
+}

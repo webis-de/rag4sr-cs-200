@@ -1,0 +1,204 @@
+{
+  "id": "W3135571688",
+  "metadata": {
+    "title": "Machine Learning Methods for Toxic Comment Classification: A Systematic Review",
+    "n_sections": 4,
+    "n_subsections": 9,
+    "n_subsubsections": 0,
+    "n_tables": 6
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Toxic comments are defined as comments that are rude, disrespectful, or that tend to force users to leave the discussion. If these toxic comment can be automatically identified, we could have safer discussions on various social networks, news portals, or online forums. Manual moderation of comments is costly, ineffective, and sometimes infeasible. Automatic or semi-automatic detection of toxic comment is done by using different machine learning methods, mostly different deep neural networks architectures.\n\nRecently, there is a significant number of research papers on the toxic comment classification problem, but, to date, there has not been a systematic literature review of this research theme, making it difficult to assess the maturity, trends and research gaps. In this work, our main aim was to overcome this by systematically listing, comparing and classifying the existing research on toxic comment classification to find promising research directions. The results of this systematic literature review are beneficial for researchers and natural language processing practitioners.\n\nThis work is organized as follows: Section 2 describes in detail the research methodology used for our systematic literature review. The next section lists the results and provides a discussion about obtained results of the systematic review. Our conclusions and future research ideas are provided in the final section.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Research Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Planning",
+          "subsubsections": [],
+          "text": "Planning starts with the identification of the needs for a specific systematic review. We have explained the needs for a systematic review on machine learning methods for toxic comment classification in Introduction section. Next, we have defined the following main research questions:\n\nRQ1: When did the research on toxic comment classification become active in the research community?\n\nRQ2: How is toxic comment classification research reported and what is the maturity level of the research in this field?\n\nRQ3: Which data sets are used to classify toxic comments?\n\nRQ4: Which machine learning methods are used to classify toxic comments?\n\nRQ5: What are main evaluation metrics used to classify toxic comments?\n\nBased on the objectives and research questions of this study, we have defined the review protocol. We have decided to include the following electronic databases: ACM Digital Library, IEEE Xplore, Scopus, and Web of Science Core Collection. These sources are chosen because they represent comprehensive literature in the machine learning field. We also included arXiv, because some highly-cited machine learning papers from researchers of commercial organizations is sometimes published only at this open-access archive service. The search string was simply defined as \"toxic comment classification\". We defined the following inclusion criteria (IC):\n\n- IC1 - The main objective of the paper must discuss or investigate an issue related to toxic comment classification.\n- IC2 - The work must be a research (scientific) paper.\n- IC3 - The paper must be written in English.\n- IC4 - The study should be published as a conference or a journal paper or a book chapter or an arXiv document.\n\nWe excluded papers based on the following exclusion criteria (EC):\n\n- EC1 - Studies that are not related to the research questions.\n- EC2 - Studies in which claims are non-justified or studies that had ad hoc statements instead of evidence-based statements.\n- EC4 - Papers reported only by abstracts or slides.\n- EC5 - Duplicate studies.\n- EC6 - Demonstrations, preliminary studies, position papers, technical reports, posters and proof-of-concept papers were excluded.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Conducting",
+          "subsubsections": [],
+          "text": "Conducting is the second step of the systematic review procedure. We have performed the search operation on the mentioned five electronic sources using search string \"toxic comment classification\" on 3th July 2020. We have used a reference management system Zotero where we added full texts of the articles to easy our systematic literature review. Our first search resulted in 202 extracted papers. After performing inclusion/exclusion criteria on titles and abstracts, 63 papers remained. After excluding the unrelated and duplicate works, 40 papers remained. The final selection was done by reading the whole text of the papers, and after this phase, we have selected 31 primary studies for our systematic review (Table 1).\n\n**TABLE 1: The list of selected primary studies**\n\n{{TABLE:tbl_01}}\n\n**TABLE 2: Selected primary studies per year**\n\n{{TABLE:tbl_02}}\n\nIn the end, we extracted data from the 31 selected primary studies and did a synthesis taking into consideration the stated research questions. The results of our systematic literature review on toxic comment classification are shown in the next sections.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "This study has been carried out using the systematic literature review (SLR) methodology described in [UNMAPPED:16]. First, we have defined the SLR protocol. Then, we performed the study selection and the data extraction process whose outcome is the final list of papers. The main steps of the SLR protocol are listed and elaborated in the next subsections.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "16"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Results and Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Temporal Overview of Studies",
+          "subsubsections": [],
+          "text": "The earliest relevant works on toxic comment classification were published in 2018 and their number significantly increased in 2019 (see Table 2). There is a decrease in the number of studies in 2020, but this is due to the date when we performed the SLR search (3th July 2020, data are actually only for first halve of 2020).",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Types of Publications",
+          "subsubsections": [],
+          "text": "The number of studies per publication type is demonstrated in Table 3. Most of the primary studies are conference papers (twenty), followed by arXiv papers (seven), three journal papers, and one book chapter.\n\n**TABLE 3: Papers per publication type**\n\n{{TABLE:tbl_03}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Used Data Set",
+          "subsubsections": [],
+          "text": "Most of the primary studies have used one or two data sets with labelled toxic comments for a supervised machine learning. The most used data set is Jigsaw's data set hosted on Kaggle for Toxic Comment Classification Challenge competition [UNMAPPED:14]. It is used on twenty-two selected primary studies. This data set was later updated in Jigsaw Unintended Bias in Toxicity Classification Kaggle's competition. The mentioned data set contains a large number of Wikipedia comments which have been labelled by human raters for toxic behaviour. The types of toxicity are: toxic, severe toxic, obscene, threat, insult, and identity hate. Other used data sets are specific to a certain primary studies. Some of these other data sets are created by third parties: Twitter dataset by Davidson, Instagram dataset collected by Hosseinmardi et al., Semeval2018-Task 1 with almost 7000 tweets, The Twitter Hate Speech dataset, dataset of tweets made by members of the U.S. House of Representatives, Wikipedia Detox corpus, and live in-game chat conversations from a video game. The rest of datasets used in primary studies where created by authors of these studies: reviews taken from Udemy, synthetic training data by using Facebook comments that were posted in response to popular news articles, extensive collection of more than 104 million Reddit comments, a dataset taking comments from Facebook pages posts, 9.4K manually labelled entertainment news comments for identifying Korean toxic speech, comments in Hindi and English both scraped from Facebook and Twitter, and custom prepared data in Arabic language from Facebook, Twitter, Instagram, and WhatsApp.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "14"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Used Machine Learning Methods",
+          "subsubsections": [],
+          "text": "Most of the selected primary studies have used more than one machine learning method to classify toxic comments from datasets mentioned in the previous subsection of this work. Table 4 shows in how many primary studies a specific machine learning method was used. The most used and effective methods are different deep neural networks, but often simpler and faster methods such as a logistic regression were used for baseline approaches.\n\n**TABLE 4: Machine learning methods used in primary studies**\n\n{{TABLE:tbl_04}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_04"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5 Evaluation Metrics",
+          "subsubsections": [],
+          "text": "To evaluate results of using different machine learning methods to tackle problem of toxic comment classification, authors of primary studies use one or more evaluation metrics. Most used evaluation metrics are F1 score, accuracy, and area under the ROC curve (AUC ROC). All evaluation metrics used in selected primary studies are listed in Table 5.\n\n**TABLE 5: Used evaluation metrics**\n\n{{TABLE:tbl_05}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6 Classes of Toxicity",
+          "subsubsections": [],
+          "text": "Twenty-three of the primary studies have used six classes of toxicity defined in Jigsaw's data set hosted on Kaggle for Toxic Comment Classification Challenge competition [UNMAPPED:14]: toxic, severe toxic, obscene, threat, insult, and identity hate. Three papers used two classes (toxic or non-toxic). All used classes of toxicity are listed in Table 6.\n\n**TABLE 6: Classes of toxicity identified in primary studies**\n\n{{TABLE:tbl_06}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_06"
+          ],
+          "citations_unmapped": [
+            "14"
+          ]
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7 Language of Toxic Comments",
+          "subsubsections": [],
+          "text": "Only one paper (S14) analyse the toxic comment for two languages (in this case Hindi and English). Toxic comments in English are used the most (28 primary studies). The rest of studies dealt with Bangla (Bengali), Korean, and Arabic language.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Conclusions and Future Research Ideas",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Toxic comment classification is a complex research problem tackled by several machine learning methods. That is illustrated by many recent works in literature. After conducting a systematic review literature protocol proposed by Kitchenham and Charters [UNMAPPED:16], we have selected and analysed 31 primary studies. Our main conclusions are presented as answers to research questions as follows:\n\nRQ1: When did the research on toxic comment classification become active in the research community? \u2013 The research on toxic comment classification becomes active recently, from 2018. It is due to release of Jigsaw's data set [UNMAPPED:14] that is mostly used in current related papers. From this year the number of paper is growing and this is an indicator that this research topic is actually and trendy.\n\nRQ2: How is toxic comment classification research reported and what is the maturity level of the research in this field? \u2013 The most of the work are conference papers, so toxic comment classification is still a novel research topic.\n\nRQ3: Which data sets are used to classify toxic comments? - The most used data set is the Jigsaw's data set hosted on Kaggle for Toxic Comment Classification Challenge competition [UNMAPPED:14]. Other data sets are mostly created from comments on popular social networks.\n\nRQ4: Which machine learning methods are used to classify toxic comments? - The most used and effective methods are different architectures of deep neural networks, but often simpler and faster methods such as a logistic regression were used for baseline approaches.\n\nRQ5: What are main evaluation metrics used to classify toxic comments? \u2013 Main evaluation metrics used to classify toxic comments are: F1 score, accuracy, and area under the ROC curve (AUC ROC).\n\nThe toxic comment classification research topic is a very active and challenging theme. Different transformers have recently shown a superior performance in many natural language processing tasks, so we recommend use of transformers for toxic comment classification in future works. Our systematic literature review identified three uses of BERT, but other transformers were not used yet (e.g. Hugging Face Transformers such as GPT-2, RoBERTa, XLM, DistilBert, XLNet... with pre-trained models in Tensor Flow 2.0 and PyTorch). Next, multilingual toxic comment classification is yet unsolved problem. In 2020, Jigsaw released multilingual toxic comment classification data set (https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification/data) that will be a basis for future work on this topic. The dataset is released under CC0, with the underlying comment text being governed by Wikipedia's CC-SA-3.0.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "16",
+        "14"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3135571688_tables.md"
+}

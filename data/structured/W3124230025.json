@@ -1,0 +1,520 @@
+{
+  "id": "W3124230025",
+  "metadata": {
+    "title": "Bayesian Model Averaging: A Systematic Review and Conceptual Classification",
+    "n_sections": 5,
+    "n_subsections": 15,
+    "n_subsubsections": 8,
+    "n_tables": 9
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. INTRODUCTION",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1 Background",
+          "subsubsections": [],
+          "text": "Let each model in consideration be denoted by $M_{l}, l = 1, \\ldots, K$ representing a set of probability distributions encompassing the likelihood function $L(\\mathbf{Y}|\\theta_{l}, M_{l})$ of the observed data Y in terms of model specific parameters $\\theta_{l}$ and a set of prior probability densities for said parameters, denoted in general terms by $\\pi(\\theta_{l}|M_{l})$ on which we omit eventual prior hyperparameters for the sake of clarity. Notice that both the likelihood and priors are conditional on a particular model.\n\nGiven a model, one then obtains the posterior distribution using Bayes' theorem, resulting in\n\n$$\n\\pi(\\theta_{l}|\\boldsymbol{Y},M_{l})=\\frac{L(\\boldsymbol{Y}|\\theta_{l},M_{l})\\pi(\\theta_{l}|M_{l})}{\\int L(\\boldsymbol{Y}|\\theta_{l},M_{l})\\pi(\\theta_{l}|M_{l})d\\theta_{l}}\n$$\n\nwhere the integral in the denominator is calculated over the support set for each prior distribution and represents the marginal distribution of the dataset over all parameter values specified in model $M_{l}$.\n\nThis quantity is essential for BMA applications as we will show momentarily and is called the model's marginal likelihood or model evidence and is denoted by\n\n$$\n\\pi(\\boldsymbol{Y}|M_{l})=\\int L(\\boldsymbol{Y}|\\theta_{l},M_{l})\\pi(\\theta_{l}|M_{l})d\\theta_{l} \\tag{2}\n$$\n\nBayesian model averaging then adds a layer to this hierarchical modeling present in Bayesian inference by assuming a prior distribution over the set of all considered models describing the prior uncertainty over each model's capability to accurately describe the data. If there is a probability mass function over all the models with values $\\pi(M_{l})$ for $l = 1, \\ldots, K$, then Bayes' theorem can be used to derive posterior model probabilities given the observed data by\n\n$$\n\\pi(M_{l}|\\boldsymbol{Y})=\\frac{\\pi(\\boldsymbol{Y}|M_{l})\\pi(M_{l})}{\\sum_{m=1}^{K}\\pi(\\boldsymbol{Y}|M_{m})\\pi(M_{m})}, \\tag{3}\n$$\n\nresulting in a straightforward posterior model probability, representing the backing of each considered model by the observed data.\n\nThere is also a link between these posterior model probabilities and the use of Bayes Factors. Given two models l and m, the Bayes factor of model l against model m is given by\n\n$$\nBF_{lm}=\\frac{\\pi(M_{l}|\\mathbf{Y})}{\\pi(M_{m}|\\mathbf{Y})}, \\tag{4}\n$$\n\nthus quantifying the relative strength of the evidence in favor of model l against that of model m. Given a baseline model, which we arbitrarily fix as model 1, it is clear that equation (3) can be written in terms of Bayes Factors by simply dividing by the baseline model's evidence, resulting in\n\n$$\n\\pi(M_{l}|\\mathbf{Y})=\\frac{BF_{l1}\\pi(M_{l})}{\\sum_{m=1}^{K}BF_{m1}\\pi(M_{m})}, \\tag{5}\n$$\n\nwhich means that one can estimate the posterior model probabilities by using estimates for Bayes Factors and vice versa.\n\nThese model probabilities can mainly be used for two purposes. First, the posterior probabilities (3) can be used as a straightforward model selection criteria, with the most likely model being selected. Second, consider a quantity of interest $\\Delta$ present in all models, such as a covariate or future observation, it follows that its marginal posterior distribution across all models is given by\n\n$$\n\\pi(\\Delta|\\mathbf{Y})=\\sum_{l=1}^{K}\\pi(\\Delta|\\mathbf{Y},M_{l})\\pi(M_{l}|\\mathbf{Y}), \\tag{6}\n$$\n\nwhich is an average of all posterior distributions weighted by each posterior model probability. Therefore, BMA allows for a direct combination of models to obtain combined parameter estimates or predictions [W4246279504]. This practice leads to predictions with lower risk under a logarithmic scoring rule [W2111051773] than using a single model.\n\nHowever, the implementation and application of BMA is not without difficulties. A prior distribution over the considered models must be specified, which is non trivial in most applications. Additionally, calculating each model evidence (equation 2) is non-trivial. Except in simple settings like in some generalized linear models with conjugate distributions, the evidence does not present a closed form and must be approximated, which presents plenty of challenges and is an active research field [W1941028167].\n\nDespite these difficulties, BMA was extensively applied in the last 20 years, mostly in combining multiple models for predictive purposes and selecting models, particularly covariate sets in regression models or network structure in Bayesian Network models. The latter application induces another pitfall in the form of large model spaces. For instance, consider a regression model with p covariates. The number of possible models without any interaction coefficients is $2^{p}$, which represents a large number of models even for moderate values of p. This difficulty can be mostly addressed by prior filtering of all possible models or through stochastic search algorithms over the model space.",
+          "citations": [
+            "W4246279504",
+            "W2111051773",
+            "W1941028167"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_1_2",
+          "subsection_index": 2,
+          "subsection_label": "1.2 Objectives of this review",
+          "subsubsections": [],
+          "text": "As mentioned before, the idea of selecting and combining models based on their posterior probabilities is not new, but a series of advances made in the 1990s made the implementation and application of these ideas a reality. Following [UNMAPPED:1], most model selection and marginal probabilities were only obtainable for the linear model under very specific parameter priors. However, the seminal work by [W2074282020] paved the way for a multitude of applications by providing a straightforward approximation for the evidence in generalized linear models.\n\nThere were also advances in the implementation of BMA in large model spaces, from a preliminary filtering based on posterior probability ratios called Occam's Window [W2111051773] to a stochastic search algorithm inspired in the Reversible Jump Markov Chain Monte Carlo [W2106706098] with trans-dimensional jumps based on posterior model probabilities (the $MC^{3}$ algorithm [W2330192890]).\n\nWe also noticed that following the landmark reviews of [UNMAPPED:8] and [W2129531883], there were no comprehensive reviews of the developments and applications of BMA in the last 15 years, which does not account for the developments in Bayesian inference brought by the Markov Chain Monte Carlo revolution in the late 1990s and 2000s. With this paper, we aim to cover this undocumented period, specifically we have the following goals:\n\n- To provide a conceptual classification scheme (CCS) to review and classify key components of the BMA literature\n- To summarize research findings and identify research trends\n- To obtain useful guidance for researchers interested in applying BMA to complex models",
+          "citations": [
+            "W2074282020",
+            "W2111051773",
+            "W2106706098",
+            "W2330192890",
+            "W2129531883"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1",
+            "8"
+          ]
+        },
+        {
+          "subsection_id": "s_1_3",
+          "subsection_index": 3,
+          "subsection_label": "1.3 Outline",
+          "subsubsections": [],
+          "text": "The remainder of this paper is structured as follows. In Section 2, we outline the literature search procedure and criteria employed to select the relevant BMA literature. The content of each selected article is then classified according to its main features using the Conceptual Classification Scheme described in Section 3, obtaining the patterns we describe and discuss in Section 4. We conclude in Section 5 with some guidance on the directions of the BMA literature.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "It is very common in practice that multiple models provide adequate descriptions of the distributions generating the observed data. It is standard statistical practice that, in such situations, a better model must be selected according to some criteria, like model fit to the observed dataset, predictive capabilities or likelihood penalizations such as information criteria. After selection is performed, all inference is made and conclusions drawn assuming the selected model as the true model.\n\nHowever, there are downsides to this approach. The selection of one particular model may lead to overconfident inferences and riskier decision making as it ignores the existent model uncertainty in favor of very particular distributions and assumptions on the model of choice. Therefore, modeling this source of uncertainty to appropriately select or combine multiple models is very desirable.\n\nUsing Bayesian inference to this purpose has been suggested as a framework capable of achieving these goals [UNMAPPED:1]. Bayesian Model Averaging (BMA) is an extension of the usual Bayesian inference methods in which one does not only model parameter uncertainty through the prior distribution, but also model uncertainty obtaining posterior parameter and model posteriors using Bayes' theorem and therefore allowing for direct model selection, combined estimation and prediction.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. SURVEY METHODOLOGY",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Literature search procedure",
+          "subsubsections": [],
+          "text": "Aiming to perform a comprehensive search in the BMA literature, we combined four databases: Elsevier's Scopus and ScienceDirect (available at http://www.scopus.com and http://www.sciencedirect.com/ respectively), Thompson Reuters's Web of Science (available at http://apps.webofknowledge.com) and the American Mathematical Society's MathSciNet database (available at http://www.ams.org/mathscinet/index.html).\n\nWe performed queries of the \"Bayesian Model Averaging\" term restricted to the 1996\u20132014 period on the publications' title, abstract and keywords for queries in Scopus and ScienceDirect, topic (encompassing title, abstract, keywords and proprietary \"keywords plus\") in Web of Science and \"Anywhere\" in MathSciNet, as it presented fewer search options. The time period was chosen to cover most of the published literature not covered by previous works while still including seminal works.\n\nTwo exclusion criteria were employed over search results to select articles for further revision, namely:\n\n1. Search results written in English, published in peer-reviewed journals as an article (which excludes conference proceedings, theses, dissertations, books, etc.) and available online.\n2. Articles explicitly employing BMA, therefore excluding articles only listing BMA in keywords, alluding to BMA as a model combination procedure or applying BMA without further explanation or reference to the specific methodology employed.\n\nArticles that did not comply with at least one of the criteria were excluded from the review. The articles were then selected according to the procedure illustrated in Figure 1. Using the aforementioned queries, 841 articles were found in Scopus, 731 in Web of Science, 167 in ScienceDirect and 80 in MathSciNet. After the removal of duplicates and application of the first exclusion criterion, 703 articles were listed for further investigation and carefully revised, leading to the exclusion of 116 articles based on the second exclusion criterion, leaving 587 articles for classification.\n\n**FIGURE 1**\nLiterature search procedure and number of selected articles\n\n{{TABLE:tbl_01}}\n\n| Exclusion of duplicated articles and based on the first exclusion criterion |\n|:---------------------------------------------------------------------------:|\n| 1,116 |\n\n| Retrieved for further review |\n|:----------------------------:|\n| 703 |\n\n| Exclusion of articles based on the second exclusion criterion |\n|:-------------------------------------------------------------:|\n| 116 |\n\n| Articles selected |\n|:-----------------:|\n| 587 |\n\n{{TABLE:tbl_02}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Structure of the dataset",
+          "subsubsections": [],
+          "text": "The final dataset consisting of 587 eligible articles were then classified according to four main categories:\n\n1. Publication year\n2. Names of all authors\n3. Journal title\n4. Responses to the eight items of the Conceptual Classification Scheme (CCS)",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "To better understand how BMA was applied, we chose to perform a content analysis of the published literature. The purpose of a content analysis is to systematically evaluate all forms of a recorded communication, identifying and classifying key contributions to a field and clarifying trends, practice and indicate research possibilities. To achieve this objective, we formulated a systematic review following the guidelines in [W4294215472] specifying objective criteria for defining the relevant literature to revise and appropriate ways to report our findings.",
+      "citations": [
+        "W4294215472"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. A CONCEPTUAL SCHEME FOR BMA",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Usage",
+          "subsubsections": [],
+          "text": "Being a framework for model selection and combination, BMA can be used to solve a wide range of problems. As such, we first classified each eligible article with respect to usage. Our content search resulted in five main categories of BMA usage.\n\nThe derivation of posterior model probabilities makes BMA a very straightforward model choice method. Said probabilities are easily interpretable under the Bayesian paradigm and the model space can be as wide as necessary and it requires no bookkeeping over the number of parameters or kind of penalty as required by the information criteria methods applied in the statistical literature. We therefore singled out articles that employ BMA as a model choice method.\n\nUsing the posterior model probabilities as weights, one can produce estimates averaged over all considered models (equation (6)), that can have a lower overall risk and take model uncertainty into consideration. There are two main kinds of estimates. When $\\Delta$ in equation (6) represents a parameter that is common to all considered models, one can obtain an averaged model estimate. On the other hand, when $\\Delta$ represents a future observation or yet to be collected data point, equation (6) can be used to derive an average prediction. Albeit similar, both applications have distinct uses so we classified articles on its use of BMA to obtain joint estimation and prediction, respectively.\n\nAs we previously mentioned, BMA is not as direct to apply. As such, there is a considerable technical literature in theoretical aspects and extensions of BMA. There is also retrospective studies in which BMA or any one of the applications mentioned above are revised in a specific area (model selection methods in economics, for instance) so we classified these articles as conceptual discussions and review articles respectively.",
+          "citations": [
+            "W2106706098"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Field of application",
+          "subsubsections": [],
+          "text": "Given the wide array of possible uses, we also classified every selected article according to its field of application. We employed a vague classification of BMA applications for two reasons. First, as stated in Section 1.2, we aim to summarize and point research trends, not perform a detailed taxonomy of BMA usage. Second, as BMA (and Bayesian methods in general) find more penetration into applied research, we lack the expertise to discriminate between subfields. Restricting the present work to a more general view, we defined four fields of application.\n\nAn immediate field of application for BMA is the Statistics literature, which is in turn heavily borrowed from and borrows upon the Machine Learning literature. Therefore, we classified papers more concerned with statistical modeling, theoretical developments and machine learning applications into a single category. After some pioneering works in the statistical literature, BMA found its way into the Biological and Life Sciences, comprising of the studies in the fields of Medicine, Epidemiology, Biological sciences such as Ecology and others. The seminal revision work by [W1967239989] introduced BMA to the field of Economics and later on to other Humanities such as Political and Social sciences. After a few years, some works started to appear in the fields of Engineering and Physical sciences such as Meteorology and Physics.",
+          "citations": [
+            "W1967239989"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Model priors",
+          "subsubsections": [],
+          "text": "Much of the study in Bayesian methods is concerned with the elicitation of prior distributions, representing the uncertainty in place before any data is observed. Eliciting an appropriate prior is a non-trivial task in any Bayesian setting, and such difficulties are compounded in model averaging since a probability measure for the model space is not obvious in principle, which is probably reflected in the reluctance by many authors to explicitly state their priors. Throughout our review, we encountered four main categories.\n\nOne can simply assume prior ignorance about which model is correct through a vague prior (i.e., $\\pi(M_{l}) \\propto 1, l = 1, 2, \\ldots, K$), that assumes no model is more likely a priori than any other and let the observed data carry all the information. This is not always desirable and sometimes it is possible to perform some elicitation based on expert opinions or specific characteristics of a particular problem, resulting in elicited priors.\n\nIn the case of elicited, conjugate or simply convenient priors, sometimes a particular choice spreads through the literature, resulting in subsequent authors that use such priors verbatim, which we classified into a single category of a literature prior. Finally, as mentioned previously a number of authors bypass the problem entirely by neither explicitly stating their model priors nor providing references to clarify their assumptions yet still use BMA in some sense. We classified these cases as \"not available\" (NA).",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Evidence estimation",
+          "subsubsections": [],
+          "text": "The estimation of the marginal likelihood (equation (2)), also known as the model evidence, is non-trivial in any general setting since it usually involves complicated multidimensional integrands with sometimes complex support sets that can make the integration unfeasible. As such, many solutions have been proposed, which we classified into five categories.\n\nThe integral can be approximated by Monte Carlo methods or extensions such as Importance Sampling. Namely, given an importance probability density $w(\\theta)$ defined over the same integration domain of equation (2), the evidence can be approximated by taking R random samples $\\theta_{1}, \\ldots, \\theta_{R}$ from the probability distribution determined by $w(\\theta)$ and computing the weighted average\n\n$$\n\\widehat{\\pi(\\mathbf{Y}|M_{l})}=\\frac{1}{R}\\sum_{r=1}^{R}\\frac{L(\\mathbf{Y}|\\theta_{r},M_{l})\\pi(\\theta_{r}|M_{l})}{w(\\theta_{r})} \\tag{7}\n$$\n\nwhich is guaranteed to converge to the evidence by the Strong Law of Large Numbers. Clearly, the ordinary Monte Carlo approximation can be performed by using the parameter prior as an importance density. Further extensions of this idea exist in the form of Bridge sampling [W2013164703] and other forms of integration. Relying on the same Monte Carlo framework, we classified these methods into one category.\n\nStill in the spirit of Monte Carlo methods but very distinct in practice, one could also sample from a Markov Chain, using Markov Chain Monte Carlo (MCMC) methods to approximate the evidence. Let $\\theta_{l}^{(1)},\\ldots,\\theta_{l}^{(R)}$ be R posterior samples obtained from a MCMC chain and $w(\\theta)$ an importance density as defined previously, then one can use the \"Importance Sampling\" estimator [W1922851081]\n\n$$\n\\widehat{\\pi(\\mathbf{Y}|M_{l})}=\\left\\{\\frac{1}{R}\\sum_{r=1}^{R}\\frac{w(\\boldsymbol{\\theta}_{l}^{(r)})}{L(\\mathbf{Y}|\\boldsymbol{\\theta}_{l}^{(r)},M_{l})\\pi(\\boldsymbol{\\theta}_{l}^{(r)}|M_{l})}\\right\\}^{-1}, \\tag{8}\n$$\n\nwhich is, in turn, a generalization of the harmonic mean estimator of [W1638753340] that uses the prior as an importance density. The estimator is shown to converge to the evidence as the sample size increases, but an importance function must be finely tuned to avoid estimators with unbounded variance.\n\nAnother flavor of MCMC posterior probability estimator comes through the use of trans-dimensional Markov Chain methods like the Reversible Jump MCMC [W2106706098] or stochastic searches through the model space like variable selection through stochastic search (SSVS, [W2007069447, UNMAPPED:18]) employed in regression models.\n\nIn these methods, multiple models are sampled either through a Gibbs Sampler or a Metropolis jump on the same MCMC chain. Consider the output of a MCMC procedure of R posterior samples and let $\\gamma_{r}$ be a variable indicating which model the chain is visiting at step $r, \\gamma_{r} \\in \\{1, \\ldots, K\\}$. The model posterior is estimated commonly by the sample mean\n\n$$\n\\widehat{\\pi(\\mathbf{Y}|M_{l})}=\\frac{1}{R}\\sum_{r=1}^{R}I\\left(\\gamma_{r}=l\\right) \\tag{9}\n$$\n\nwhere $I(\\cdot)$ is the indicator function or by some Rao-Blackwellized estimator when available [UNMAPPED:19]. When using MCMC samples, the quality of the approximation is not guaranteed and there are more sophisticated results ensuring its good behavior (see [UNMAPPED:20] for a complete treatment). In this paper, we classified all MCMC based methods into a single category.\n\nAlso of particular interest is the ratio of densities method popularized by [W2015749074], in which one exploits the fact that equation (1) is valid for every parameter value, whereas the normalizing constant stays the same. [W2015749074] then suggests picking one particular parameter point $\\theta^{*}$ and estimate the evidence as\n\n$$\n\\widehat{\\pi(\\mathbf{Y}|M_{l})}=\\frac{L(\\mathbf{Y}|\\boldsymbol{\\theta}_{l}^{*},M_{l})\\pi(\\boldsymbol{\\theta}_{l}^{*}|M_{l})}{\\pi(\\boldsymbol{\\theta}_{l}^{*}|\\mathbf{Y},M_{l})}, \\tag{10}\n$$\n\nfor $l = 1, \\ldots, K$ and the parameter value $\\theta^{*}$ is chosen as to minimize estimation error.\n\nBesides stochastic approximations, analytical approximations based on asymptotic results can be employed as shown in the seminal works by [W4211177544] and [W2074282020]. Based on a Taylor expansion around the posterior mode and imposing some regularity conditions, one can approximate the evidence through the Laplace approximation. Namely, if $\\tilde{\\theta}_{l}$ is the posterior mode for model l, then\n\n$$\n\\pi(\\boldsymbol{Y}|M_{l})\\approx(2\\pi)^{\\frac{p_{l}}{2}}\\sqrt{|\\Psi_{l}|}L(\\boldsymbol{Y}|\\tilde{\\theta}_{l},M_{l})\\pi(\\tilde{\\theta}_{l}|M_{l}), \\tag{11}\n$$\n\nwhere $p_{l}$ is the number of parameters in model l and $\\Psi_{l}$ is minus the inverse Hessian matrix of the log-posterior given by $\\log\\left(L(\\mathbf{Y}|\\tilde{\\theta}_{l}, M_{l})\\pi(\\tilde{\\theta}_{l}|M_{l})\\right)$ for the model. Under regularity conditions, the approximation is $O(n^{-1})$. Let $\\hat{\\theta}_{l}$ denote the maximum likelihood estimator for model l, then the Bayes Factor between two models l and m can be reasonably approximated by the Bayesian information criterion (BIC), given by\n\n$$\n2\\log B_{lm}\\approx2\\left(\\log\\left(L(\\mathbf{Y}|\\hat{\\theta}_{l},M_{l})\\right)-\\log\\left(L(\\mathbf{Y}|\\hat{\\theta}_{m},M_{m})\\right)\\right)-(p_{l}-p_{m})\\log N \\tag{12}\n$$\n\nwhen both models are used to fit the same dataset of sample size N. The BIC provides a good approximation for many generalized linear models and enjoys widespread use, even with the larger approximation error of $O(1)$. Both methods are very similar in spirit, and as such, were put into the same classification.\n\nFinally, many authors were able to compute the evidence in closed form, either by the shape of their models and distributional assumptions (as in the linear model) or through the use of convenient parameter prior distributions. Since we were more interested in the approximation of complex evidences in general settings, we classified these cases as non-applicable (NA).",
+          "citations": [
+            "W2013164703",
+            "W1922851081",
+            "W1638753340",
+            "W2106706098",
+            "W2007069447",
+            "W2015749074",
+            "W4211177544",
+            "W2074282020",
+            "W4246279504"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "18",
+            "19",
+            "20",
+            "1"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5 Dimensionality",
+          "subsubsections": [],
+          "text": "It is very common in model selection settings to encounter extremely wide model spaces in which the exhaustive fit of all models is unfeasible. We illustrate the problem with one of the most popular applications of model choice, variable selection in regression models. Let Y represent an observation and X represent a $p \\times 1$ vector of covariates which we aim to investigate the degree of association to Y through the linear model\n\n$$\nY=\\beta\\mathbf{X}+e, \\tag{13}\n$$\n\nwhere $\\beta$ is a $1 \\times p$ parameter vector of fixed effects and e is a random residual effect. It follows that finding the subset of covariates (most) associated with Y induces a model selection problem.\n\nHowever, not considering any interaction terms, the number of possible subsets (and therefore models) is $2^{p}$, which grows geometrically with the number of covariates resulting in very large model spaces even for a moderate number of covariates precluding an exhaustive investigation of all models. The BMA literature answered to this problem through two main approaches: dimensionality reductions of the model space and stochastic searches through MCMC.\n\nOne of the first dimensionality reduction techniques was the Leaps and Bounds algorithm [W4205337121]. The algorithm aims to select the best performing regression models based on the residual sum of squares, with the model with smaller sum being selected as more fit to the data. Exploiting relationships in the linear model and the Branch and Bound optimization algorithm, the most parsimonious models can be obtained without an exhaustive search. In much of the literature, a preliminary search through the Leaps and Bounds algorithm is performed to subject only the most promising models to BMA.\n\nAnother popular criterion is the Occam's Window [W2111051773]. This criterion argues that only models with a relatively high posterior probability must be considered. As such, it reduces the model set comprised by the K models to the reduced set\n\n$$\nA=\\left\\{M_{k}:\\frac{\\max_{l}P(M_{l}|\\boldsymbol{\\mathbf{Y}})}{P(M_{k}|\\boldsymbol{\\mathbf{Y}})}\\leq c\\right\\}, \\tag{14}\n$$\n\nwhere c is a tuning parameter chosen by the user. The Occam's window excludes all models whose model probability is smaller than the most likely model by a factor of c, usually set to 20 to emulate the popular 0.05 cutoff employed when filtering models based on p-values. Note that, albeit straightforward to set up, the application of Occam's Window relies on the easy calculation or approximation of the model posterior probabilities, which in turn relies on the model evidence. In our review, we classified all aforementioned preliminary filtering methods together.\n\nInstead of reducing the model space beforehand, other approaches take the entire model space head on and perform some kind of search, mostly through MCMC techniques. In these cases, not only the dimensionality problem is dealt with, but there is also a straightforward manner to estimate the posterior model probabilities through the proportion of times a model is visited throughout the search.\n\nOne of the first proposals for these searches in regression models was proposed by [W2007069447] called Stochastic Search Variable Selection (SSVS). The SSVS utilizes a set of auxiliary random variables $\\gamma_{l}, l=1,\\ldots,p$ such that\n\n$$\n\\gamma_{l}=\\left\\{\\begin{array}{l}{1,\\mathrm{~if~variable~}l\\mathrm{~belongs~in~the~model}}\\\\ {0,\\mathrm{~otherwise}}\\end{array}\\right.. \\tag{15}\n$$\n\nAlong with all other parameters, a prior distribution is assigned to these variables and therefore a posterior distribution is obtained through MCMC procedures. The stochastic search is performed by the updating of the indicator variables, each configuration representing a distinct model. SSVS just expands over an already implemented MCMC algorithm, making it a widely used and flexible methodology.\n\nA more general approach was proposed by [W2106706098] in the Reversible Jump MCMC (RJMCMC) algorithm, which just like in the current BMA setting, inserts all models into a larger space in which a Markov Chain is constructed. Model search is then performed using two components: a proposal probability density for a model l given the current model $M_{m}$ and an invertible differentiable mapping between the two spaces defined by the models. The chain then moves through models by means of a Metropolis-Hastings step. The construction of the acceptance probability required for the MH step is not straightforward and we shall omit it for the sake of clarity. The interested reader is directed to [W2106706098] for a complete treatment.\n\nThere is, however, a more straightforward and relatively general model search procedure in the literature: the Markov Chain Monte Carlo Model Composition (MC3, [W2330192890]) in which one applies the same idea of a Metropolis-Hastings step for model jumps from RJMCMC but in a simplified fashion. Let $M_{l}$ and $M_{m}$ be two models, MC3 performs a model change from model $M_{l}$ to model $M_{m}$ with acceptance probability\n\n$$\n\\alpha(m,l)=\\min\\left\\{1,\\frac{P(M_{m}|\\boldsymbol{Y})}{P(M_{l}|\\boldsymbol{Y})}\\right\\}. \\tag{16}\n$$\n\nGiven that marginal probabilities are available, the implementation of MC3 is straightforward. For the purposes of our categorization scheme, we considered all methods employing MCMC based searches similar and therefore were classified into a single category.\n\nThroughout our literature review, we also encountered applications in which dimensionality was not an issue. In these cases, all models were fit to the data and BMA performed posteriorly. As these articles obviously did not propose any way to mitigate dimensionality problems, we classified these articles as \"not applicable\" (NA).",
+          "citations": [
+            "W4205337121",
+            "W2111051773",
+            "W2007069447",
+            "W2106706098",
+            "W2330192890"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6 Markov Chain Monte Carlo methods",
+          "subsubsections": [],
+          "text": "It is impossible to ignore the revolution in Bayesian Inference sparked by the dissemination of MCMC methods and software. MCMC made it possible to perform inference with very complex likelihood and prior structures and obtain estimates of key posterior quantities based on straightforward outputs and grounded on solid theory, making it the default approach for many applied problems.\n\nSuch popularity comes in part from the popularization of out-of-the-box MCMC software containing robust MCMC implementations to a wide range of problems like the widely used \"Bayesian inference Using the Gibbs Sampler\" software (BUGS, [UNMAPPED:24]) and the \"Just Another Gibbs Sampler\" (JAGS, [UNMAPPED:25]). These software, commonly integrated with the R Statistical Software, made MCMC methods and Bayesian inference available to a broad audience. We aimed to track this spread of MCMC methods through the BMA literature by classifying each article on its usage of MCMC methods.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "24",
+            "25"
+          ]
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7 Simulation studies",
+          "subsubsections": [],
+          "text": "We classified articles on the practice of generating simulations from the proposed models or the use of artificial datasets. Simulation studies can be employed to investigate characteristics of the averaging process and desired properties like predictive power in the best case scenario, emulate physical systems to better understand and generate predictions from diverse models for averaging. As such, we classified articles with respect to the presence of simulation studies.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_8",
+          "subsection_index": 8,
+          "subsection_label": "3.8 Data-driven validation",
+          "subsubsections": [],
+          "text": "After BMA was applied, we also investigated how the process was validated using real data. The most traditional data-driven validation procedure consists of simply splitting the dataset into at least two disjoint sets, fitting the model to the data on the former and validating the fitted model on the latter. This kind of cross validation is very commonly used and articles practicing this kind of validation were put into a single category.\n\nAnother category was made for more sophisticated kinds of cross validation like K-fold cross validation. In this procedure, the dataset is split into K disjoint subsets and, for each subset, the model is fit over the combined remainder K-1 subsets. The chosen subset is then used as a validation set and the process is repeated in turn for the next subset. After going through all subsets, the validation measures employed (goodness-of-fit, predictive power, etc.) are somehow combined for an overall conclusion. Being significantly more complex than simple data splitting, we classified articles using K-fold cross validation or special cases like the popular leave-one-out cross validation into the same category.\n\nBeing a Bayesian procedure in nature, it is not unexpected that applications of BMA might use Bayesian goodness-of-fit measures like Posterior Predictive Checks [W2168934042]. For the predictive check, one chooses a test statistic over the observed dataset and compares it with replicated data generated using the posterior distribution and a model is said to present good fit if, averaged over the posterior, the test statistic is not too extreme when compared to its value calculated over the observations. One usually generates the replicated data using posterior samples obtained from MCMC methods so that required averages are straightforward from the estimation procedure. This procedure is clearly distinct from the previous validation procedures mentioned and, therefore, categorized separately.",
+          "citations": [
+            "W2168934042"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Besides the systematic review of the literature, we also aimed to employ a content analysis of our finding, aiming to provide further insight into the applications of BMA, identify research trends and elucidate possible research directions and opportunities. To achieve this objective, we immersed ourselves in the selected dataset to better define characteristics in which current research that can be used to better understand the literature. This conventional content analysis [W2142225512] allows us to better understand the literature without preconceived notions.\n\nWe codified these formulated characteristics into a conceptual classification scheme inspired in the scheme developed in [W2051745706], but adapted to characteristics relevant to the Bayesian Model Averaging literature. We then elaborated a Conceptual Classification Scheme (CCS) to classify the literature and refined the defined categories as we revised all articles. An article's classification according to the CCS is useful to a researcher interested in the field, as it gives key characteristics on the methodology and formulation, leading to more efficient queries into the developments and applications of BMA. In the present work, we elaborated a CCS with 8 items which, along with the possible responses can be found in Table 1 and thoroughly described below.",
+      "citations": [
+        "W2142225512",
+        "W2051745706"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. RESULTS AND DISCUSSION",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Descriptive statistics for the BMA literature",
+          "subsubsections": [],
+          "text": "We segmented our dataset with respect to publication year to investigate the growth of the literature in terms of the number of published articles throughout the considered period. Since peer-reviewed articles can take a significant time from submission to publication, we smoothed the temporal trends using a 3 year moving average. The results can be observed in Figure 2.\n\n**FIGURE 2**\nNumber of published articles by year of publication and 3-year moving average\n\n{{TABLE:tbl_03}}\n\nOne can interpret the growth shown in figure 2 in three stages. First, in the 1996\u20132000 time period, there were a relatively small number of publications, not due to the lack of theoretical results, but rather for the absence of a systematic exposition to BMA and accessible computational tools. Then, with the publication of the revisions by [UNMAPPED:8], [W2129531883] and [W1967239989] and some computational tools implementing the results by [W2074282020], [W2083927895], [W2111051773] and [W2330192890] led to a popularization of BMA resulting in a growth in publications in the 2000\u20132005 time period. Then, after 2005, there was a veritable increase in the number of publications, probably due to the widespread use of the aforementioned computational tools, more easily accessible computer power and the increasing availability of ready-to-use MCMC software.\n\nWe then divided the database according to the journal title, to identify fields with a more widespread application of BMA. There was no single periodical responsible for most of the literature and it is clear that its applications have spread through diverse fields. The 100 titles with the higher counts of publications are listed in Table 2.\n\nThere are some clusters representing some patterns in the diffusion and application of BMA. As it is expected from a statistical methodology, there were many articles published in Statistics and Machine Learning periodicals, adding up to 21 periodicals in the top 100. There is also a widespread application of BMA in the Economics literature, with 21 titles in the top 100 and a few periodicals in Meteorology and Climatology, following the seminal predictive framework proposed by [W2158840489].\n\n**TABLE 2**\nNumber of publications on the 100 periodicals with most BMA articles\n\n{{TABLE:tbl_04}}\n\nWe also classified each article with respect to the authors and co-authors and listed the top 10 most productive authors in Table 3 to infer the most massive contributions to the literature. There were no authors overwhelmingly present in the literature given its size, but one can single out the contributions of Adrian Raftery from the University of Washington. Raftery authored or co-authored 34 articles in our dataset, more than three times the second most productive author and contributed to the theoretical underpinnings of BMA [W4211177544, W2074282020] and to its applications, for instance in genetics [W2158418996], engineering [W1972631921], economics [W3124139837] and proposed an ensemble prediction method in meteorology and climatology [W2158840489] that enjoys widespread use.\n\nFollowing, there are Tilmann Gneiting who mainly contributed to ensemble methods in Meteorology, Merlise Clyde, who applied BMA mostly in the context of variable selection for regression models using Stochastic Search Variable Selection, Q. J. Wang with contributions in Meteorology, Theo S. Eicher and Gary Koop, who applied BMA to Economics, David Madigan, who was part of the seminal BMA works in the late 1990s, Xuesong Zhang with contributions in Hydrology, Edward L. Boone who used BMA in Ecology and Jesus Crespo-Cuaresma in Economics.\n\n**TABLE 3**\nTop 10 authors in the BMA literature in number of publications\n\n{{TABLE:tbl_05}}",
+          "citations": [
+            "W2129531883",
+            "W1967239989",
+            "W2074282020",
+            "W2083927895",
+            "W2111051773",
+            "W2330192890",
+            "W2158840489",
+            "W4211177544",
+            "W2158418996",
+            "W1972631921",
+            "W3124139837"
+          ],
+          "tables_in_text": [
+            "tbl_03",
+            "tbl_04",
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "8"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 Conceptual classification scheme",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.2.1 Usage",
+              "parent_subsection_id": "s_4_2",
+              "text": "The most common usage of BMA in the revised literature was model choice, with 231 works totaling almost 40% of all articles and the overwhelming majority of the revised articles deal with model choice through variable selection in regression models. Overall, we could spot three overarching themes in model choice throughout the literature with eventual variations.\n\nFirstly, there is the application of the background introduced by Adrian Raftery and collaborators in the first half of the 1990s. These works perform dimensionality reduction of the model space through Occam's Window or Leaps and Bounds and approximate the model evidence using BIC like [W2083927895], in which variable selection and model averaging is performed for a Cox regression model. This set of techniques enjoys great popularity to this date due in part to its implementation in the BMA R package [UNMAPPED:32]. Secondly, there are many works concerned with model selection in the linear model, specially in economical applications. Either all $2^{p}$ possible models are considered or there is a stochastic search using MC3 and model evidences are derived explicitly from a conjugate prior [W2135728169]. Finally, there is a model choice using stochastic search through MCMC methods, like Reversible Jump MCMC over spaces with different numbers of covariates [W1999337518] and Stochastic Search Variable Selection [W2138936157].\n\nAfter model choice, the most popular usage was the combination of multiple models for prediction, which was performed in 161 articles (around 28% of the dataset). While combining each model's prediction is straightforward in principle, we identified at least three different trends.\n\nFirst, there is the straightforward application of BMA by fitting all models to the data, calculating model evidences, generating a prediction from each model's predictive distribution culminating in a combined prediction. This practice leads to lower risk predictions under a logarithmic loss [W2111051773] and is relatively widespread in the literature, with applications in Ecology [W2024780423] and Genetics [W2068743483]. Secondly, there is a compromise between variable selection and prediction through an application of BMA to select the models or covariates with highest posterior model probability and the selected model is then used to derive predictions. This procedure employs the machinery developed for variable selection in favor of prediction, like SSVS [W1985696200] or RJMCMC [W1992768368]. Finally, there is an alternative use of BMA ideas proposed in [W2158840489] for meteorological applications that differs somewhat from usual applications and that we will briefly discuss below.\n\nThe authors consider the problem of combining forecasts from K models, $f_{1},\\ldots,f_{K}$ into one combined prediction. For each forecast there is a probability density function for the quantity one wished to forecast y denoted by $g_{l}(y|f_{l})$ for $l=1,\\ldots,K$. [W2158840489] then proposes to construct a combined density function using the weighted average\n\n$$\ng(y|f_{1},\\cdots,f_{K})=\\sum_{l=1}^{K}w_{l}g_{l}(y|f_{l}), \\tag{17}\n$$\n\nin which $\\sum_{l=1}^{K}w_{l}=1$, and the weights are interpreted in an analogous fashion to the posterior model probabilities in usual BMA. Assuming then each density as normal, the authors estimate the weights using the EM Algorithm. This method has spread widely in the specialized literature, and albeit no strong theoretical optimality seems to exist, it enjoys adequate performance in Meteorological and Climatological applications.\n\nBayesian model averaging is used for combined estimation in 111 articles (around 19%) throughout our revision. Albeit similar in purpose to combined prediction, we classified a work as a combined estimation article if its purpose was to estimate a common parameter to all models, but not a future observation. Combined estimators were employed to estimate a variety of quantities that might be appropriately modeled by plenty of models, such as population size [W2061265416], toxicity in clinical trials [W2000705046], breeding values in genetics [W2119372134] and the probability of an economic recession [W1990645305].\n\nConceptual discussions and methodological articles amounted for 65 data points (around 11% of the dataset). This category presents a clear heterogeneity, as it comprises theoretical and conceptual advances in many directions. Articles in this category are, however, very similar with respect to their purpose to introduce an application of BMA to an existing problem or extend BMA to overcome limitations in some settings.\n\nThe former articles refer to seminal theoretical works like [W2074282020], that introduced the BIC approximation to the Bayes factor and paved the way for many subsequent works. There were also pioneer works discussing the introduction of BMA to applied fields, like the methodology discussed in [W2152933101] for variable selection in economical applications. Its use of Zellner's g-prior [W3214323364] for the regression coefficients (allowing for explicit model evidences) and MC3 composition for model space search were quickly adopted by many authors in very diverse economical studies. The introduction of BMA to the problem of selecting network structures in Bayesian Networks [W2144731007] also had a great impact in the Machine Learning literature, spawning a wealth of approximations for the ideal Bayesian averaged network. Finally, there were also novel developments in BMA that made it usable within a field. For instance, the variational Bayes approximation for the evidence proposed in [W2113257799] sparked plenty of BMA applications to neurological datasets. On the other hand, the latter articles deal with extensions of BMA to different Bayesian applications, like the BMA under sequential updating discussed in [W1972631921].\n\nThe last category we employed to classify articles on usage pertains to review articles on BMA or the applications of model averaging to specific fields or models. There are 18 such articles in our dataset, amounting to less than 3% of the total. Some of the revision articles sparked the application of BMA in general like the seminal works by [UNMAPPED:8] and [W2129531883], whereas more specific revisions exposed the methodology in other fields like Economics [W1967239989], Genetics [W2002539744] and Physics [UNMAPPED:49]. There are also revisions on model selection [W2085890860] and model uncertainty [W4250518393] in which BMA figures as a technique.",
+              "citations": [
+                "W2083927895",
+                "W2135728169",
+                "W1999337518",
+                "W2138936157",
+                "W2111051773",
+                "W2024780423",
+                "W2068743483",
+                "W1985696200",
+                "W1992768368",
+                "W2158840489",
+                "W2061265416",
+                "W2000705046",
+                "W2119372134",
+                "W1990645305",
+                "W2074282020",
+                "W2152933101",
+                "W3214323364",
+                "W2144731007",
+                "W2113257799",
+                "W1972631921",
+                "W2129531883",
+                "W1967239989",
+                "W2002539744",
+                "W2085890860",
+                "W4250518393"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "32",
+                "8",
+                "49"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.2.2 Field of application",
+              "parent_subsection_id": "s_4_2",
+              "text": "As stated in Section 3.2, we classified the dataset into four main categories to give a broad idea of the application of BMA in different fields. We divided our dataset into four categories regarding applications in the Biological and Life Sciences, Humanities and Economics, Physical Sciences and Engineering and Statistics and Machine Learning, respectively in order to infer if there was an increased penetration of BMA in either field.\n\nThe field with most articles was Life Sciences and Medicine, with 201 works corresponding to 34.24% of all reviewed publications. Within these publications, there are some trends of note. In the medical sciences, BMA was used mostly for model choice purposes, as in variable selection of factors associated with false positives in diagnostic kits [W1979855020], weight loss [W2020029375], leukemia progression [W2162021660], structure in Bayesian networks for patient-specific models [W2123211207] and the combined estimation as in [W2000705046]. BMA was also used extensively in Ecology, with applications to landscape ecology and geographical information systems [W2003899612], prediction of species distribution [W2041590094], capture-recapture models [W2016230748] and evolution [UNMAPPED:59].\n\nThe massive number of genetic variables obtained from biomarkers like microarrays and Single Nucleotide Polymorphisms (SNPs) that relate with observed characteristics through complex interactions fostered a rich Bayesian model selection literature in Genetics. BMA was employed to combine and select genetic information from metabolic pathways [W1984573490], quantitative trait loci [W1989163295], candidate SNPs for lung cancer risk [W2132069848] and a revision of Bayesian model selection models was performed in [W2002539744]. There is also the seminal work by [W1928998639] that introduced a class of SSVS-like estimation procedure in quantitative genetics that gained much traction in the Animal and Plant sciences literature, concerned with the prediction of genetic merit for selection [W2126946018, W2141255466]. There also seems to be an increase of model averaging in neuroscience using the methods introduced by [W1998151455].\n\nThe Humanities and Economy field had 149 articles (25.38% of the dataset), with the overwhelming majority being in economical applications. The earliest application to economics in our dataset is the revision of Bayesian modeling by [W1967239989]. The most adopted framework for model selection using BMA was introduced in [W2152933101], describing conjugate priors and a model search procedure that enjoys a broad application to many economical questions to this date, although there were also articles applying the framework introduced by Adrian Raftery and collaborators through the R package this group developed like done in [W1976371973] and applications of SSVS [W2046163352]. Forecasting using BMA in economical settings was discussed in [UNMAPPED:69] and was adopted by many subsequent articles. There were also some occasional applications to Political Science mostly on variable selection as in trade interdependence in conflict [W2148568480] and some forecasting, like the study of the 2000 American presidential election in [W1993482458].\n\nThe application of BMA in the Physical Sciences and Engineering amounted to 146 articles, about 24.82% of the total. Most of this field was made of applications to forecasting problems in Meteorology and Climatology stemming from the seminal work of [W2158840489] in the field, using the ideas of BMA into an ensemble forecast with posterior model probabilities estimated using the EM algorithm. There were also some works in Physics, like the study of dark matter in [W1986066713] and the revision of BMA methods in astrophysics in [UNMAPPED:49].\n\nFinally, there were 92 articles in the Statistics and Machine Learning field. There are some methodological articles, like [W2074282020] on the BIC approximation and revisions on BMA like the highly influential [UNMAPPED:8] and [W2129531883] and model uncertainty [W2085890860, W4250518393]. There were also some developments in model choice to more statistically sophisticated models like Generalized Linear Models (GLMs, [W1974356961]), transformations [W2067230193] and Generalized Auto-Regressive Conditional Heteroskedasticity (GARCH) models [W2009605255]. In the Machine Learning literature, BMA was mostly used along with Bayesian Networks [W2144731007], with theoretical developments allowing for the direct estimation of the averaged network without the necessity of the usual estimation procedure of estimating and combining all posteriors [W2112953696, W2022577571].\n\nSince our revision spans through very diverse fields with very different questions, we investigated how these research questions were reflected in usage throughout the fields. A graphical summary can be observed in Figure 3. Combined prediction is more common in the Physical Sciences field, which is mostly explained by the abundance of prediction articles using the ensemble method by [W2158840489]. Economics research questions seemed to focus more on the search for influential factors and determinants, leading to model and variable selection. Since economics dominated the Humanities and Economics field, one can observe a large number of model choice papers. Model selection was also very present in the Life Sciences and Medicine field, with more than half the revised articles. There is, however, an interest in combined estimation that is larger than other fields. Finally, most of the Statistics and Machine Learning literature revised concerns methodological advancements and discussions.\n\n**FIGURE 3**\nUsage of BMA by field of application\n\n{{TABLE:tbl_06}}",
+              "citations": [
+                "W1979855020",
+                "W2020029375",
+                "W2162021660",
+                "W2123211207",
+                "W2000705046",
+                "W2003899612",
+                "W2041590094",
+                "W2016230748",
+                "W1984573490",
+                "W1989163295",
+                "W2132069848",
+                "W2002539744",
+                "W1928998639",
+                "W2126946018",
+                "W2141255466",
+                "W1998151455",
+                "W1967239989",
+                "W2152933101",
+                "W1976371973",
+                "W2046163352",
+                "W2148568480",
+                "W1993482458",
+                "W2158840489",
+                "W1986066713",
+                "W2074282020",
+                "W2129531883",
+                "W2085890860",
+                "W4250518393",
+                "W1974356961",
+                "W2067230193",
+                "W2009605255",
+                "W2144731007",
+                "W2112953696",
+                "W2022577571"
+              ],
+              "tables_in_text": [
+                "tbl_06"
+              ],
+              "citations_unmapped": [
+                "59",
+                "69",
+                "49",
+                "8"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.2.3 Model priors",
+              "parent_subsection_id": "s_4_2",
+              "text": "Prior elicitation is a current and open research subject in Bayesian inference as a whole, with distinct currents advocating completely subjectivist researcher-driven prior distributions to completely agnostic and data-driven priors and many types of compromise in between. As discussed in Section 1.1, this problem is compounded in BMA settings, as the space of the conceivable models is a more abstract parametric space, thus harder to measure in terms of a probability measure.\n\nThe most common answer to this uncertainty is to assume a uniform distribution over the model space through a vague prior. Such practice is, by far the most common and is adopted by more than 50% of the revised articles, in 297 publications. Given a finite number of K models, the authors simply assume $\\pi(M_{l})=\\frac{1}{K}$ for $l=1,\\ldots,K$ or an equivalent formulation like assuming a Bernoulli prior with prior inclusion probability equal to $\\frac{1}{2}$ in SSVS. In the case of an infinite number of models like in mixture problems, some authors adopt the alternative proposed in [W2038885294] of fixing a maximum number of classes and assuming a uniform distribution over the restricted model space.\n\nSome authors circumvent the problem by adopting more traditional prior distributions verbatim from the literature. This practice was present in 98 articles, around 16.6% of all publications and there seems to be a few trends. Some of this adoption is caused by convenient conceptual frameworks\u2014many authors in the economics literature simply adopted the prior, evidence estimation and model search proposed by [W2152933101] verbatim. With the diffusion of BMA software first by personal request to Adrian Raftery's group where the S-Plus codes could be obtained by sending an email titled \"send BMA from S\" to the authors and then by the use of the bma R package, less attention was paid to the priors as many authors simply used whatever was default in these implementations.\n\nWe also observed 63 articles that tackled the problem and derived model priors for posterior BMA. Some noteworthy examples in the literature include [W2150473224] that elicited model priors by the expected behavior of the cell cultures under study, the analytical considerations of the Bayesian networks of interest in [W2144731007], the combination of multiple stakeholders in [W2013776138] and the proposal of cross-model correlations to elicit model priors in [W1960471525].\n\nThe remainder 130 articles amount to those that did not specify or apply any model priors. Albeit odd by Bayesian standards, these articles still apply BMA, but priors are not specified. The most common reason in our dataset is the applications of the ensemble forecast method introduced in [W2158840489], that just estimates a \"posterior\" weight using the EM algorithm with no mention of priors. There is also the adoption of default options in software packages for BMA for which we tracked down the default settings when possible, but that was not always possible.",
+              "citations": [
+                "W2038885294",
+                "W2152933101",
+                "W2150473224",
+                "W2144731007",
+                "W2013776138",
+                "W1960471525",
+                "W2158840489"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4.2.4 Evidence estimation",
+              "parent_subsection_id": "s_4_2",
+              "text": "The estimation of the marginal likelihood leading to the posterior model probability presents a considerable difficulty to be overcome in the applications of model averaging. As datasets get more complex, thus requiring more complex models, we aimed to investigate how the BMA literature deals with the problem of estimating the model evidence.\n\nThe integral in equation (2) is not available in closed form for most likelihoods besides in the (generalized) linear regression model with conjugate priors. These models are however, very popular and its widespread adoption explains most of the 232 articles we classified as \"not applicable\" (NA) in our CCS.\n\nWith respect to approximations, most revised articles approximated the evidence by analytical means, as done in 190 articles. Although inferior to the Laplace approximation in theory [W4211177544, W2074282020] and simulations [W2077065148], most articles use the BIC approximation, as its value is given by most software available for parameter estimation in generalized linear models, making for a straightforward application of BMA. Its immediate availability from the maximum likelihood estimates, combined with some theory and available software for a wide class of GLMs justify its popularity. Its popularity also makes it the most widely misused approximation. We encountered \"approximations\" based on other information criteria as a way to improve over the BIC, frequently using the Akaike Information Criterion (AIC), the Deviance Information Criterion (DIC) and other more ad hoc information criteria.\n\nMarkov Chain Monte Carlo methods were used to estimate the evidence in 113 articles. The vast majority of these works use RJMCMC or SSVS methods, and as such, the posterior model probabilities are estimated by the sample average of an indicator variable for each model. There were, however, plenty of articles that employed the Importance Sampling approach by [W1922851081] and the much criticized harmonic mean estimator [W1638753340], as they are simpler to implement in complex models than the trans-dimensional proposals and transformation required for RJMCMC. Still in spirit with MCMC but using a different technique, 17 articles used the ratio of densities [W2015749074] approach.\n\nWe also encountered 36 articles in which the evidence was estimated through the use of Monte Carlo integration techniques (using independent samples, in contrast with the dependent Markov Chain samples used in MCMC), but there was no unifying trend over the practice. Most authors used importance methods, like Sampling-Importance-Resampling (SIR), in which a size n sample is taken from the prior distributions and used to construct importance weights using the likelihood. Posterior samples are then obtained from resampling m < n values with replacement using the constructed weights. With these samples, posterior inference and evidence estimation are direct even for complex models, like the stochastic differential equation model used in [W1529812027].",
+              "citations": [
+                "W4211177544",
+                "W2074282020",
+                "W2077065148",
+                "W1922851081",
+                "W1638753340",
+                "W2015749074",
+                "W1529812027",
+                "W4246279504"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "4.2.5 Dimensionality",
+              "parent_subsection_id": "s_4_2",
+              "text": "As datasets get more massive and models more complex to aggregate different sources of information, it is common that large model spaces emerge. For instance, in the Genomics literature, the development of high throughput marker chips generated millions of Single Nucleotide Polymorphism (SNP) variables one desires to associate with a response variable inducing a dimensionality problem. As mentioned in Section 3.5, we investigated two approaches: previous filtering and stochastic search through Markov Chains.\n\nBetween these two approaches, stochastic search was the most prevalent one, with 144 articles. Among these papers, there are three main trends. With the abundance of BMA in regression models, plenty of the literature was concerned with variable selection, which led to the widespread application of dedicated methods like SSVS that allow for a direct measure of association strength through the marginal posterior inclusion probabilities. A typical example of SSVS can be encountered in [W2051108059] applied to the search for risk factors related to the use of cell phones while driving. The Markov Chain Monte Carlo Model Composition (MC3, [W2330192890]) was also widely applied in variable selection settings, mainly in the economics literature following the seminal work by [W2135728169]. MC3 in turn is very similar in spirit to the Reversible Jump MCMC methods, which were mostly employed in our revision to choose between complex models instead of variable selection, like done in [W2133320142].\n\nSome authors chose to perform a prior dimensionality reduction in the model space and then apply the model averaging, as done in 103 articles in our dataset, most of them on variable selection for regression models. Among these prior reductions, the most popular was the Occam's Window criterion [W2111051773], probably due to its implementation in the bma R package. In some works, some applied the Leaps and Bounds algorithm [W4205337121] prior to the Occam's Window to select highly likely variable subsets without the need of an exhaustive calculation.\n\nHowever, there were cases where authors performed exhaustive calculations for all possible models and many cases where the number of models under consideration were small, leading to the 341 articles marked as \"not applicable\" (NA) in our dataset.",
+              "citations": [
+                "W2051108059",
+                "W2330192890",
+                "W2135728169",
+                "W2133320142",
+                "W2111051773",
+                "W4205337121"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "4.2.6 Markov Chain Monte Carlo methods",
+              "parent_subsection_id": "s_4_2",
+              "text": "We investigated the application of MCMC methods throughout our dataset. For this particular classification, we excluded 24 works that either presented purely revisions or conceptual discussions and did not apply any estimation methodology and articles in which BMA was applied but poorly described to the point we could not tell whether MCMC methods were used anywhere. The remainder 563 articles were classified to their usage of MCMC or lack thereof. In our dataset, 261 articles applied MCMC methods, whereas 302 did not.\n\nThe temporal pattern of MCMC usage, separated by publication year can be found in Figure 4. Although we suspected that MCMC would become more popular after the popularization of freely available software, it seems like MCMC methods were not as prevalent in the literature as expected and its usage did not increase much even with more available software and cheaper computational power. MCMC was applied in approximately half the articles published in any given year with the exception of the early years of the 2000s.\n\n**FIGURE 4**\nMarkov Chain Monte Carlo methods usage in the dataset\n\n{{TABLE:tbl_07}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_07"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "4.2.7 Simulation studies",
+              "parent_subsection_id": "s_4_2",
+              "text": "Our dataset was also classified with respect to the presence of simulation studies. Overall, 19 articles were not clear on their usage of simulations, and were therefore excluded from this classification. Of the remaining articles, the majority composed of 375 articles did not perform any form of simulations, whereas 193 did some sort of simulation study.\n\nA more detailed classification by year of publication can be encountered in Figure 5. As in the MCMC classification, the increased computational power did not seem to have an effect on the realization of simulation studies. One can also observe that simulations seem to be unpopular overall, never accounting for more than half the published papers in any given year.\n\n**FIGURE 5**\nProportion of simulation studies\n\n{{TABLE:tbl_08}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_08"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_8",
+              "subsubsection_index": 8,
+              "subsubsection_label": "4.2.8 Data-driven validation",
+              "parent_subsection_id": "s_4_2",
+              "text": "We classified the literature on the use of data-driven validation of the results obtained by model averaging. The majority of articles (358 papers) did not perform any validation whatsoever. Among the articles that performed some kind of data-based validation, the overwhelming majority of 179 articles used cross-validation by splitting the dataset into two disjoint subsets, fitting the desired models to one of the subsets and validating their performance on the other. The slightly more sophisticated K-fold cross-validation was only applied in 17 articles.\n\nCuriously, even though BMA is a Bayesian technique, there was only a single application of posterior predictive checks [W2003899612], a data-driven Bayesian goodness-of-fit criterion based on the posterior distribution deriving conclusions rooted in the Bayesian paradigm.",
+              "citations": [
+                "W2003899612"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "We present below some brief descriptive statistics and discussion on the classification patterns generated using the Conceptual Classification Scheme (CCS) to the dataset, with some notes to trends and guidance to specific applications of BMA. It is not useful to list the hundreds of revised articles, so we aim to provide illustrative works for each aspect of our revision as the interested reader can follow through its references and citations for his own purposes. Furthermore, the dataset of all responses to the CCS can be obtained upon request from the corresponding author and full citations of the revised articles can be found as a Supplement to this article.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "We first performed some descriptive statistics to investigate the growth and some trends in the BMA literature and then investigated the patterns in the light of our proposed CCS.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. CONCLUDING REMARKS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This work performed a methodical literature review of Bayesian Model Averaging studies in the 1996\u20132014 time period. After a thorough search, we employed a conventional content analysis, and proposed a novel conceptual classification scheme that we applied to the literature, revising and classifying 587 articles from a large variety of publications spanning a wide range of applications.\n\nAlthough much was discussed in the formulation of the proposed classification scheme and its results when applied to the selected literature, some limitations to the present work still exist. First, our search was limited to peer-reviewed articles published in digitally available periodicals. As such, many developments in BMA possibly published in conference proceedings, dissertations or theses and books might have been overlooked. Secondly, said periodicals were restricted to the titles listed on the four databases mentioned in Section 2.1 and, albeit an effort was made to be as inclusive with the literature as possible, non-listed titles were not included except when cited in selected articles and passed the exclusion criteria. Finally, the search was initiated through specific queries on these databases, and as such, relevant articles might have been overlooked when we restricted terms.\n\nLimitations aside, this revision can provide relevant insights into the current BMA literature and some indications of future developments. With no aspiration to be exhaustive, we point out a few. Namely, we have five observations:\n\n1. The methodology provides for a very flexible account of model uncertainty which can in principle be applied to any problem, but not much was done in model choice using BMA aside from variable selection in regression models, with the exception of BMA in Bayesian Networks present in the Machine Learning literature of the early 2000s.\n2. Not much was done in methodological developments in the statistical literature aside from the seminal works in the late 1990s, limiting its application mostly to (generalized) linear regression models in spite of more complex models being proposed in the same time period. For instance, the problem of evidence estimation is still either circumvented by using convenient likelihoods and conjugate priors or solved through the BIC approximation, which, being reliant on plenty of regularity conditions, might not be adequate for more complex models. Much of the developments in MCMC after the textbook algorithms (i.e., straightforward applications of the Gibbs Sampler and Metropolis-Hastings algorithms) were also mostly absent from our dataset.\n3. There was no significant discussion on computational costs of BMA. There are distinct computational problems derived from dealing with very large datasets, very large and complex model spaces and in the fit of complex models that were not approached in the revised literature.\n4. The vague prior is still the most used model prior and, albeit convenient, it might not be the best choice for all problems. Not much was done in prior elicitation or the reference priors for BMA.\n5. Neither simulation studies nor validation methods were popular in the literature. This presents a very serious issue, as BMA usually deals with many models drawing from sometimes very distinct assumptions and therefore reaching distinct conclusions. Using BMA without any validation might lead to an overconfidence in the conclusions, the very problem model averaging is proposed to mitigate.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": null,
+      "source_subsection_id": null,
+      "table_scope": "appendix"
+    }
+  ],
+  "tables_file": "W3124230025_tables.md"
+}

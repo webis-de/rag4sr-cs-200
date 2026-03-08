@@ -1,0 +1,717 @@
+{
+  "id": "W4387950524",
+  "metadata": {
+    "title": "Unraveling the Design Space of Immersive Analytics: A Systematic Review",
+    "n_sections": 10,
+    "n_subsections": 13,
+    "n_subsubsections": 17,
+    "n_tables": 1
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Immersive Analytics (IA) is the rapidly growing sub-domain at the intersection of information visualization, human-computer interaction, and extended reality (XR). The focus of IA is to leverage emerging display technologies, such as virtual and augmented reality (VR, AR), to enhance data analysis and visualization using their unique affordances for 3D visual encoding, spatial interaction, collaboration, and multi-sensory presentation. These affordances grant IA the potential to enhance visualization workflows and tasks beyond what is possible with a 2D display.\n\nTo reach this potential, researchers have proposed several opportunities [W2897276711] and grand challenges [W3124353981] for IA that set it apart from traditional techniques. These opportunities include situated analytics, embodied data exploration, collaboration, spatial immersion, multi-sensory presentation, and engagement. Each opportunity involves leveraging different aspects of VR and AR display technology, spatial presentation and interaction, and three-dimensional (3D) and two-dimensional (2D) data visualization. As a result, each opportunity has its own techniques, designs, challenges, and open research questions despite all existing within the same sub-domain. This has made it difficult to encapsulate IA with any one taxonomy or framework and has increased the challenge of translating research contributions across these six opportunities.\n\nBeyond these six opportunities, IA represents a vast design space and presents researchers with many design decisions to research and evaluate. Some of these are shared with traditional data visualization, i.e., data and visualization types. Still, others are wholly unique to IA, i.e., immersive technology, virtual environments, user perspectives, scale, and spatial position. Exploring all these facets of IA design can quickly become overwhelming, especially when considering the interdependence across dimensions and between decisions. Different combinations of these design choices can sum to vastly different designs and user experiences, as demonstrated in Figure 1.\n\nConsequently, the vastness of IA's design space is its biggest strength and one of its biggest challenges. Its complexity raises the barrier of entry for researchers new to IA. The interdependence of design choices makes it difficult to plan the design of new IA systems, and the lack of IA-specific methodological support and standards makes it hard to disseminate and cross-evaluate IA design.\n\nTo address the need for a useful and comprehensive roadmap for exploring the design space of IA, we conducted a systematic review and analysis of IA systems and interactive visualizations. To this end, we surveyed 73 instances of IA literature across several journals and conferences. We categorized them across five multifaceted dimensions of IA visualization design: **Theory and Contribution**, **Immersive Technology**, **Data**, **Spatial Presentation**, and **Visual Presentation**. By coding these categories, we created an observational taxonomy of the IA design space, which can be used to compare and analyze works within the dimensions of the space. Furthermore, we analyzed the co-occurrence of codes across dimensions and categories to unravel the trends and interdependence of design decisions. We also documented the typical IA design and interaction paradigms used in the literature and identified under-explored areas within each of the six IA opportunities for future study. Finally, we intend for this work to act as a living document that can be updated and extended by any IA researcher, allowing it to adapt to the rapidly evolving research of IA. To achieve this goal, we disseminate this paper, the literature survey, the data we compiled, and an interactive website published as open source according to FAIR principles [W2302501749]. This study contributes a systematic review of contemporary IA systems and interactive visualizations, an observational taxonomy of IA Design Dimension, and a discussion of the modern trends within and across design dimensions and future potential research directions.",
+      "citations": [
+        "W2897276711",
+        "W3124353981",
+        "W2302501749"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Related Work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Several related surveys on the topic of immersive analytics (IA) have focused their review on particular aspects of IA design or interaction. Besan\u00e7on et al. [W3105602061] conducted a comprehensive survey of spatial interfaces for 3D visualization, introducing a taxonomy of interaction techniques organized by primary input source and supported visualization tasks. They identify challenges and opportunities for further research in 3D visualization, including controlling 3D visualization widgets, exploring 3D interaction techniques for dissemination, and developing new evaluation measures. Bressa et al. [W3194707655] contribute to the emerging concept of situated visualization, which refers to the concept of placing visualization in situ with objects or locations in the real world. Embedded visualization takes this concept further by tightly integrating visualizations directly with real-world referents [UNMAPPED:51]. They provide a literature survey analyzing 44 papers, offering an overview of the research area, its definitions, applications, technologies used, and types of data and visualizations. The authors also introduce five perspectives on situatedness, providing a foundation for a more coherent understanding of situated visualization and a roadmap for future research in immersive analytics.\n\nKraus et al. [W4200049315] address the growing interest in presenting immersive data visualization. The term immersive visualization is often used to encompass the use of immersive devices, most often those that provide affordances for stereoscopic vision and spatial multi-sensory presentation, to display data visualizations [UNMAPPED:51]. They discuss central aspects such as 3D visualization, immersive space embedding, combination with spatial data, suitable interaction paradigms, and evaluation of use cases. They provide a characterization framework to compare and categorize published works and offer a survey of publications, contributing to a better understanding of advancements and potential future directions in immersive analytics research. Finally, Siang et al. [W4206118019] examine the use of virtual reality (VR) technology in immersive analytics (IA), surveying 18 papers for visualization type and task.\n\nOne recent study has sought to review IA broadly. Fonnet et al. [W2963034576] present a survey of IA from the early 1990s to 2018, examining the use of rendering technologies, data, sensory mapping, and interaction means in IA systems and their evaluations. They identify key conclusions from their analysis: the under-exploitation of multi-sensory aspects in IA, insufficient utilization of 3D UI and VR community knowledge regarding immersive interaction, the need for the IA community to converge towards best practices, and a focus on developing real-life IA systems. This comprehensive survey serves as a valuable resource for understanding the historical development of IA and offers insights into potential future directions for the field.\n\nThese past surveys are all helpful resources for researchers to learn the state of the art across many applications of IA. Furthermore, each of these surveys has played a role in identifying possible future research directions for IA. Yet, these surveys do not cover many aspects unique to IA as a research discipline, often because they are based on taxonomies and typologies created for traditional 2D visualization. The design framework that Marriott et al. [W2896550038] proposed extends Brehmer and Munzner's \"What-Why-How\" data visualization framework to suit IA better. The authors extended the framework in three ways, first by adding contextual information through the \"Where\" and \"Who\" questions to address different interaction and display capabilities, physical environments, user characteristics, and collaboration types. Next, they extend the \"How\" component to consider all sensory channels, collaboration support, avatar representation, visualization facet and position, and representation fidelity. Finally, they extended the data components of the original framework to account for different types of computation and sources. Reviewing IA works broadly across traditional and IA-specific design dimensions will provide a more holistic representation of their vast design space, which we sought to accomplish in this review.",
+      "citations": [
+        "W3105602061",
+        "W3194707655",
+        "W4200049315",
+        "W4206118019",
+        "W2963034576",
+        "W2896550038"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "51"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Survey Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Paper Collection",
+          "subsubsections": [],
+          "text": "We surveyed several of the top venues with topics related to data visualization, human-computer interaction, or immersive technology: IEEE TVCG, VIS, ISMAR, ICVRV, ACM CHI, UIST, and VRST. We searched for keywords matching \"virtual reality\", \"VR\", \"augmented reality\", \"AR\", and the concurrence of the search terms \"data visualization\" or \"immersive analytics\". To maintain the reproducibility of our methods, we limited our search to these libraries and venues and did not search citation networks, general search engines, or otherwise include papers. Please see Section 10 for our exact queries and search results.\n\nEligible papers for our review were published 2013\u20132022 and exhibit approaches, devices, and techniques related to IA for data visualization. Our start date coincides with a shift in trends for immersive technology and IA towards head-mounted displays that began in the early 2010s, accelerated by the democratization of immersive technology by new devices such as the Oculus DK1. The IA survey by Fonnet and Pri\u00e9 [W2963034576] indicated this shift was followed by a correlated uptick in research artifacts. We chose this period to focus this systematic review observational taxonomy and analysis on contemporary IA methods, designs, and trends.\n\nResearch articles were reviewed before their material and metadata were collected to ensure it relates in some way to immersive technology. Papers rejected at this stage include those containing 3D graphics but not using IA devices or techniques [UNMAPPED:75] and those utilizing immersive devices but not for data visualization [W3206059500]. Next, we reviewed each collected paper more closely to ensure it relates to the subject of IA and describes the design of an IA visualization or system. Papers rejected at this stage were most commonly not presenting a clear application of data visualization [W3214999510], or did not contain enough detail to be accurately categorized [W2015136762]. A list of papers rejected at this stage can be found in the supplemental material (see Section 10). In total, we collected 143 papers from our queries. After screening, our review resulted in a corpus of 73 papers. We acknowledge our search methods do not comprehensively capture all relevant examples of IA research. However, we argue the artifacts collected sufficiently represent the last decade of IA.",
+          "citations": [
+            "W2963034576",
+            "W3206059500",
+            "W3214999510",
+            "W2015136762"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "75"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Categorization",
+          "subsubsections": [],
+          "text": "IA represents an immense design space that is difficult to encapsulate in any one taxonomy. Our goal was to capture the unique aspects of immersive analytics design alongside aspects shared by traditional visualization. We coded papers according to Marriott's IA design framework [W2896550038], but modified categories closely related to implementation details (e.g., world knowledge) and expanded categories needing multiple aspects to encapsulate (e.g., facet and position). An overview of coded categories can be seen in Table 1.\n\nCategorization was conducted in three phases: breadth, validation, and consolidation. During the breadth phase, at least two researchers reviewed each paper. They broadly coded each category using the information they could gather from the publication's text and any available supplemental material. To ensure we could account for the large breadth of possible visualizations, techniques, devices, interactions, and other designs found in IA literature, we covered all the papers and categories without adhering to a strict typology or taxonomy.\n\nDuring the validation phase, researchers were responsible for validating the information coded for a set of related categories. This phase aimed to have researchers read papers in-depth for particular categories, allowing them to validate and adjust the observations coded during the breadth phase. This helped ensure that our categorizations represented each work accurately to the best of our abilities.\n\nOur final categorization phase, consolidation, was performed by at least two researchers consolidating codes in each category that could be grouped. For example, codes for types of maps, i.e., choropleth, flow map, and point map, were generalized to \"2D Map\" and \"3D Map\". This phase ensured uniformity of codes across papers, reduced singleton codes, and enabled us to analyze cluster and trend data more accurately.\n\n**TABLE 1: Overview of coded categories within each design dimension**\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W2896550038"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Dissemination and Extension",
+          "subsubsections": [],
+          "text": "We believe the dissemination and extensibility of a review are just as important as the manuscript. As a result, we deliver our results according to FAIR principles and in an interactive, explorable, and extensible manner. Our data is hosted openly at osf.io/5ewaj and an interactive spreadsheet. We also created an interactive web page, iadesign.space, allowing users to explore, visualize, and extend the survey results. The web page was created using the Indy Survey Tool [W4389988861] and is hosted and managed as an open-source GitHub repository.\n\nNew papers can be added to the review, and changes proposed to previously-reviewed papers. The survey website includes a form to guide users through adding new papers to the database. Users can search for codes from each category and add new codes as necessary. After completing the form, the data is exported in JSON. Users can then open a pull request using GitHub actions following the instruction found in the README. The repository maintainers will review the pull request to ensure the JSON is valid and the categorization is consistent. The comment section can be used for questions, discussion, and to agree upon any changes. Once a pull request is merged, the website will automatically update to reflect the new data. Contributors who have added at least one paper to the survey will be allowed to join the repository as maintainers during the pull request review, hopefully democratizing the dissemination of this information. Please see Section 10 for details.",
+          "citations": [
+            "W4389988861"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "We conducted a systematic review and analysis of IA systems and interactive visualizations. To achieve this, we surveyed relevant papers from the research areas' top journals and conferences, categorized and coded these papers for multivariate aspects of IA design, constructed an observation-driven taxonomy, analyzed these works for trends and gaps, and disseminated the survey through an interactive website and open access storage and FAIR repository principles [W2302501749].",
+      "citations": [
+        "W2302501749"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Five Dimensions of Immersive Analytics Design",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Theory and Contribution",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.1.1. IA Opportunity",
+              "parent_subsection_id": "s_4_1",
+              "text": "IA academic literature has proposed six opportunities [UNMAPPED:51] that uniquely stand to benefit from IA approaches over traditional non-immersive visualization. Each of these opportunities seeks to leverage a different aspect of IA devices, interactions, levels of immersion, and visualization towards a more specific goal. We categorized which of the six opportunities each work primarily explored: Spatial Immersion [W3123112062], Situated Analytics [UNMAPPED:16], Embodied Exploration [W3023339987], Engagement [W3194707655], Collaboration [W3216004612], and Multi-Sensory Presentation [W3206059500].\n\nSpatial Immersion [W3123112062], leveraging additional spatial dimensions, was the most frequently recorded opportunity. Works observed can roughly be separated into two groups. The first is IA systems that seek to leverage the 3D virtual space to display several 2D and 3D visualizations [W3093510635, W4312762293]. The second are IA systems and visualizations that leverage the affordance for a third spatial dimension for additional visualization encoding channels [W2978716154, W3123112062].\n\nSituated Analytics [UNMAPPED:16], displaying visualizations in direct reference to its source, was the second most frequently observed opportunity. Situated analytics has been a long-standing research thrust within IA and is also one of the key affordances of augmented reality (AR) devices. We observed several examples of works exploring these affordances to display visualizations outdoors [W3117140615, W2137099044], with real-time data [W2942935098, W3162512224], and to supplement 2D information [W3023339987, W3162294411].\n\nEmbodied Exploration [W3023339987], utilizing spatial and natural interactions to manipulate and explore data visualizations, was the third most frequent example recorded. Papers coded with this opportunity demonstrated a large design space of embodied exploration interactions possible in IA systems and visualizations. Many works used tangible objects to manipulate virtual analogs [W3032581065, W4225016353]. Others explored how visualizations can change as users move them around the virtual space [W2766823279, W3037783384]. Finally, these works also commonly explored how natural gesture controls and hand-tracking can be used to interact with and explore the presented data visualizations [W4312752252, W2767053272].\n\nEngagement [W3194707655], Collaboration [W3216004612], and Multi-Sensory Presentation [W3206059500] were observed in fewer than 10 surveyed papers. Despite this, the work in these codes further helps demonstrate the breadth of the IA design space. Works focused on engagement explored creative ways of using 3D visualizations or realism to show data in more visceral ways [W2909086064, W2798630247, W3082457272]. Collaborative work often explored how users could share and collaborate with the same virtual space or how users could collaborate across different virtual spaces [W3082667172, W2999955602, UNMAPPED:9]. Finally, work exploring multi-sensory presentation used custom devices to display data to users' sense of touch or smell [W3216004612, W2888011329].",
+              "citations": [
+                "W3123112062",
+                "W3023339987",
+                "W3194707655",
+                "W3216004612",
+                "W3206059500",
+                "W3093510635",
+                "W4312762293",
+                "W2978716154",
+                "W3117140615",
+                "W2137099044",
+                "W2942935098",
+                "W3162512224",
+                "W3162294411",
+                "W3032581065",
+                "W4225016353",
+                "W2766823279",
+                "W3037783384",
+                "W4312752252",
+                "W2767053272",
+                "W2909086064",
+                "W2798630247",
+                "W3082457272",
+                "W3082667172",
+                "W2999955602",
+                "W2888011329"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "51",
+                "16",
+                "9"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.1.2. Paper Type",
+              "parent_subsection_id": "s_4_1",
+              "text": "Within the six opportunities detailed in the previous section, each of the works surveyed also had a primary contribution the authors were presenting. These contributions ranged from comparative user studies to specific domain applications and fully implemented systems. The type of contribution the authors presented most certainly affects the design decisions of the presented IA visualization and system. For example, a comparative user study might feature a simpler visualization and interaction design to control variables necessary for a fair comparison. We categorize each paper according to its primary contribution to account for and analyze this factor. We coded papers based on the official paper types recognized by VGTC, including System [W2063359332], Evaluation [W2063359332], Technique [W2978716154], Design Study [W3194707655]. Theory or framework paper types were not considered as they often did not meet the eligibility criteria for our survey.\n\nSystem [W2063359332] was the most common paper type we observed, with examples spanning many applications and approaches. These papers were often one of two things: general-purpose visualization and authoring tools or applications [W2766823279, W4312581061] for a specific purpose or domain [W2605065007, W2137099044]. The lack of domain collaborators and formal user evaluation components separates many of these works from being coded as design studies.\n\nEvaluation [W4294068671] focused IA papers were also commonly observed and can roughly be separated into two groups. The first group is user studies to understand how users perform and use IA systems and visualizations [W3162512224, W3037783384]. The second is comparative studies comparing IA systems, techniques, or visualizations to each other or comparing them to non-immersive visualization [W2751503718, W2973158165].\n\nTechnique [UNMAPPED:16] papers most often presented novel examples of IA visualization design or a combination of designs that can be broadly applied to many potential applications. These papers presented the most diverse creative examples of IA design, often demonstrating novel encodings, interactions, and approaches. Papers featuring multi-sensory presentations, tangible interfaces, interactive live-data sets, and more all can be found under this code [W2063359332, W2941406686, W4288079498].\n\nDesign Study [W3194707655] was the least observed paper type in our survey. These papers focused on applying IA to real-world problems and designing visualizations systems and visualizations using design study methodologies. Despite their small number, these works offer valuable insights into what elements of IA can improve domain-specific data visualization applications while providing domain-specific knowledge for future research [W2767053272]. Furthermore, examples presenting user studies further provide insights into the end-user perspective on IA [W3215205444].",
+              "citations": [
+                "W2063359332",
+                "W2978716154",
+                "W3194707655",
+                "W2766823279",
+                "W4312581061",
+                "W2605065007",
+                "W2137099044",
+                "W4294068671",
+                "W3162512224",
+                "W3037783384",
+                "W2751503718",
+                "W2973158165",
+                "W2941406686",
+                "W4288079498",
+                "W2767053272",
+                "W3215205444"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "16"
+              ]
+            }
+          ],
+          "text": "The first dimension is Theory and Contribution, a design dimension specific to IA as an academic practice. As we are surveying academic examples of IA systems and visualizations, we must consider what motivations these works have beyond their application, implementation, design, and use. Many theoretical frameworks and contribution types can be represented in IA literature. We selected two categories to represent this: IA opportunity and paper type.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Immersive Technology",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.2.1. Presentation",
+              "parent_subsection_id": "s_4_2",
+              "text": "Presentation refers to the display medium in which the visualization was presented to the user. These codes are intended to be abstract and to separate the particular devices used from their display technology and modality. This category encapsulates the display technology with Augmented Reality (AR) [W3162294411], Virtual Reality (VR) [W4200049315], Tablet [W3023339987], Desktop [W3216004612], Large Interactive Displays (LID) [W3105602061], and Phone [W2086583674]. It also covers device modality with codes such as a head-mounted display (HMD) [W2767053272], Handheld [W2909086064], and Tabletop [W3206059500].\n\nAR [W3162294411] and VR [W4200049315] was observed in roughly equal amounts and most commonly took the form of HMD [W2767053272] [W2751503718, W3093510635]. Tablet [W3023339987] and Phone [W2086583674] displays were used as the primary display medium in several papers coded as Handheld [W2909086064] [W3023339987, W3211672902, W4288079498]. These mobile devices also appeared several times in conjunction with AR HMDs as secondary displays and input devices [W3123112062, W3162294411]. Finally, we observed examples of non-visual display technology, such as Haptic Displays [W2751503718] and Scent [W2605065007] [W3216004612, W2888011329].",
+              "citations": [
+                "W3162294411",
+                "W4200049315",
+                "W3023339987",
+                "W3216004612",
+                "W3105602061",
+                "W2086583674",
+                "W2767053272",
+                "W2909086064",
+                "W3206059500",
+                "W2751503718",
+                "W3093510635",
+                "W3211672902",
+                "W4288079498",
+                "W3123112062",
+                "W2605065007",
+                "W2888011329"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.2.2. Input",
+              "parent_subsection_id": "s_4_2",
+              "text": "Input accounts for the device and modality used to interact with the visualization system. Similarly to the presentation category, we abstracted these codes away from the exact devices being used; for example, instead of coding for \"Vive Controller\" we coded \"Commercial Controller\". The codes in this category are Commercial Controller [W2897276711], Gesture Control [W3215962905], Mobile Device [UNMAPPED:16], Mouse and Keyboard [W3032581065], Custom Controller [W3023339987], Gaze [W3216004612], Voice [W2584242478], and Body Tracking [W2584242478].\n\nCommercial Controller [W2897276711] codes were given to papers that used the controllers that came standard with their device, typically a VR HMD [W2766823279]. Gesture Control [W3215962905], most often in the form of hand tracking, was the next most common device input method and is a standard feature of many AR HMDs and newer VR HMDs [W2767053272]. More traditional devices such as Mobile Device [UNMAPPED:16], Mouse and Keyboard [W3032581065] were also commonly observed serving as both display and input devices alongside both handheld and HMD AR devices [W3123112062]. Finally, a handful of papers explored more unique control schemes such as Custom Controller [W3023339987] taking the form of physical objects or data physicalization [W3032581065], or Voice [W2584242478] and Body Tracking [W2584242478] to enable input during real-time data visualization tasks [W3215624331, W2999813279].",
+              "citations": [
+                "W2897276711",
+                "W3215962905",
+                "W3032581065",
+                "W3023339987",
+                "W3216004612",
+                "W2584242478",
+                "W2766823279",
+                "W2767053272",
+                "W3123112062",
+                "W3215624331",
+                "W2999813279"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "16"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.2.3. Device",
+              "parent_subsection_id": "s_4_2",
+              "text": "Finally, we categorized the precise devices used in the presented paper. Devices within the same presentation style can still have different capabilities and features, leading to different design possibilities. To account for this, we recorded the devices and models used in each study when that information was available. Common devices we observed in this category include the Microsoft Hololens [W2963034576] and HTC Vive [W4389988861].\n\nAll other devices were observed in less than five papers. We expect to see the diversity of devices used increase in the coming years as the number of immersive device options in the commercial market increases. These newer devices, such as the Meta Quest 2, will impact the design space of IA as they will enable more researchers to leverage technology such as hand tracking and mixed-reality pass-through.",
+              "citations": [
+                "W2963034576",
+                "W4389988861"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "The second dimension is Immersive Technology which encompasses the display and input modalities used in IA work. Just as visualization and interaction design change significantly across non-immersive desktop and mobile devices, the variety and disparity between IA display technologies also influence the design of IA systems and visualizations. For example, augmented reality (AR) applications can be implemented with AR head-mounted displays (HMDs), virtual reality (VR) devices, mobile devices, and even desktops. Each technology enables or affords a different style of IA visualization techniques and interactions. To capture this dimension in the papers surveyed, we grouped this dimension into three categories: presentation, input, and devices.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Data",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.3.1. Dataset Types",
+              "parent_subsection_id": "s_4_3",
+              "text": "Dataset types are the forms of data used in the surveyed IA systems and visualizations. Codes in this category closely match what has been proposed in past taxonomies focused primarily on non-immersive data visualization. As a result, we used the taxonomy presented by Munzner [W884650706] except for generalizing geospatial data into simply spatial data. This was done to account for data such as trajectories whose data is still spatial but not strictly geographic. The codes and counts of this category are as follows: Tabular [W2999955602], Spatial [W3123112062], Volumetric [W3216004612], Network [W3105602061], and Field [W2086583674].",
+              "citations": [
+                "W884650706",
+                "W2999955602",
+                "W3123112062",
+                "W3216004612",
+                "W3105602061",
+                "W2086583674"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.3.2. Dataset Generation",
+              "parent_subsection_id": "s_4_3",
+              "text": "Dataset generation is the source properties of the data source and how the application consumes it. For example, if the data is streaming from a live data source and whether any computation is being conducted on the source data to visualize it. The codes for these categories are largely unchanged from what was proposed by Marriott [W2896550038] and include Static [W2968814658], Dynamic [UNMAPPED:16], Pre-computed [W4366547397], and Live-computed [W2963034576].\n\nThe majority of surveyed papers used Static [W2968814658] and Pre-computed [W4366547397] data. This is expected as many papers are testing concepts and implementing proof-of-concept style applications that do not need a persistent data source. However, we did observe several papers experimenting with Dynamic [UNMAPPED:16] data sources with visualizations often requiring Live-computed [W2963034576] data [W3117140615, W3092127788, W4288079498]. Additionally, we observed examples of data being created in an Interactive [W3032581065] fashion allowing users to interact with the system to change or add data being visualized [W2909086064, W3016163547].",
+              "citations": [
+                "W2896550038",
+                "W2968814658",
+                "W4366547397",
+                "W2963034576",
+                "W3117140615",
+                "W3092127788",
+                "W4288079498",
+                "W3032581065",
+                "W2909086064",
+                "W3016163547"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "16"
+              ]
+            }
+          ],
+          "text": "Data comes in many forms and can be consumed by visualization systems differently. These factors will all contribute to the visualization types IA research will use and how they design them. We accounted for this with two categories: dataset types and generation.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Spatial Presentation",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.4.1. Environment",
+              "parent_subsection_id": "s_4_4",
+              "text": "The environment category is the physical space and condition in which the system or visualization is used. Many devices used in IA, such as large interactive displays, require specific physical setups with a large physical space to function, while other devices are more flexible in where they can be used. However, it is common for studies to consider a specific environment where the system or visualization will be used. We have abstracted these environments to include codes such as: Room-scale [W2968814658], Seated [UNMAPPED:16], Table [W4389988861], Object [W2766823279], Wall [W3216004612], and Outdoors [W2086583674].\n\nRoom-scale [W2968814658] was the most commonly observed code by a large margin. This code includes papers presenting their virtual space to users standing in an obstruction-free indoor space in the real world. This environment is common for applications that utilize fully virtual presentation as it allows users to use their full range of motion in an interactive virtual environment without worrying about running into physical obstacles [W2605065007, W3093510635]. Alternatively, mixed reality examples may still opt for a room-scale environment to ensure that visual elements overlaid in the physical space are not obstructed [W4312762293].\n\nAlternatively, IA researchers and designers may intentionally want visual elements to interact with the physical space. We observed several examples of IA visualization and system that ask users to adopt a Seated [UNMAPPED:16] [W4312581061, UNMAPPED:53] position that would allow them to interact with immersive visualization constrained to a smaller virtual space with a limited range of motion. Additionally, visualizations may be constrained to specific parts of the physical environment such as being overlaid onto an Object [W2766823279] relevant to the data [W3153272110, W2620936178], or on a Table [W4389988861] or Wall [W3216004612] to aid physical metaphors of visual elements [W2767053272, W2967985754, W2942428211].",
+              "citations": [
+                "W2968814658",
+                "W4389988861",
+                "W2766823279",
+                "W3216004612",
+                "W2086583674",
+                "W2605065007",
+                "W3093510635",
+                "W4312762293",
+                "W4312581061",
+                "W3153272110",
+                "W2620936178",
+                "W2767053272",
+                "W2967985754",
+                "W2942428211"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "16",
+                "53"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.4.2. Space",
+              "parent_subsection_id": "s_4_4",
+              "text": "The space category denotes whether the virtual environment was constructed with constraints or was intentionally presented infinitely. Constraining the environment limits the area where users will interact with the IA system and visualization, while an infinite canvas allows visual elements to scale infinitely and the user's position to change freely. Both of these situations have design implications that IA researchers should consider. We coded these as Finite [W2943401592], Situated [W4312762293], Infinite [UNMAPPED:16].\n\nFinite [W2943401592] virtual space constraints users and visual elements within a particular area. This can be done explicitly either through the virtual space design [W3082667172] or by physical space limitations of mixed or augmented space [W4312762293]. It can also be presented implicitly, where the virtual environment might expand infinitely, but users and visualizations are not intended to use that space [W2978716154].\n\nSituated [W4312762293] space constraints users and visualizations within the area of certain physical objects. We observed examples of situated space that expected users to hold the object or otherwise focus their movement, focus, and interactions around the space in the object existed. The primary distinction of this code is that the virtual space in these examples is not intended to extend beyond the space of these physical objects [W2943401592, W3163358346].\n\nInfinite [UNMAPPED:16] space does not constrain users or visual elements within an area. These examples intentionally make use of the infinite canvas afforded by fully-virtual environments. We observed infinite space being used in primarily two ways. The first was to allow users spatially layout visualizations practically anywhere in the virtual space [W3093510635]. The second was to allow users to explore data presented at large scales or support procedural generated visual elements [W2968814658].",
+              "citations": [
+                "W2943401592",
+                "W4312762293",
+                "W3082667172",
+                "W2978716154",
+                "W3163358346",
+                "W3093510635",
+                "W2968814658"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "16"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.4.3. Perspective",
+              "parent_subsection_id": "s_4_4",
+              "text": "Beyond the construction of the virtual space, the users' perspective of the virtual space is also important to consider. We consider two frames of reference for users to see the virtual space: the users' perspective concerning their bodies, Egocentric [W3117140615], and concerning objects in the environment, Exocentric [W2942935098]. Broadly speaking, egocentric views place users in the center of the virtual space and ask users to move the space around them [W2968814658], while exocentric views ask users to move within the virtual space and around visual elements [UNMAPPED:9].",
+              "citations": [
+                "W3117140615",
+                "W2942935098",
+                "W2968814658"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "9"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4.4.4. Collaboration",
+              "parent_subsection_id": "s_4_4",
+              "text": "Finally, if collaboration is a part of the IA system or visualization, it is important to consider how collaborators will share the virtual space. IA collaboration can have users sharing the same virtual space while occupying different physical spaces. At the same time, the design might call for separate virtual spaces, each tailored with visualizations tailored to a particular user task. Furthermore, users may use disparate devices requiring separate views and visualization designs. We categorized examples of IA collaboration based on where the collaboration took place, i.e., Co-located [UNMAPPED:9] or Distributed [W2086583674], and if collaboration was happening across the reality-virtuality continuum, i.e., Cross-virtuality [W3206059500].\n\nOf the examples of IA collaboration, we observed most of them occurred over Co-located physical space sharing the same virtual or mixed-environment [W3082667172, W2999955602, W2967985754]. Often there was a practical reason for sharing physical space, such as secondary devices and displays being shared during collaboration. In some cases, while the collaboration was co-located, the nature of fully virtual environments makes it comparable to distributed collaboration. Examples presenting collaboration over Distributed [W2086583674] physical space either explored this idea [W3161794862] or explored how distributed collaboration in AR virtual space can be done with different physical environments [W2999955602]. Furthermore, these examples often also explored how distributed collaborating users could have different roles or utilize Cross-virtuality [W3206059500] with different devices [W2047247579, W4312868234].",
+              "citations": [
+                "W2086583674",
+                "W3206059500",
+                "W3082667172",
+                "W2999955602",
+                "W2967985754",
+                "W3161794862",
+                "W2999955602",
+                "W2047247579",
+                "W4312868234"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "9"
+              ]
+            }
+          ],
+          "text": "Immersive views are presented in virtual or mixed space containing an infinite canvas, virtual room, or other augmented views. We describe spatial presentation in terms of how this space is presented to the user. The spatial presentation of IA systems and visualizations will dictate the context and location of where visualizations will be seen and how they will be interacted with. There are many aspects of spatial presentation for researchers to consider. We encompassed these aspects within four categories: environment, space, embodiment, and collaboration.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "4.5. Visual Presentation",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_5_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.5.1. Abstract or Natural",
+              "parent_subsection_id": "s_4_5",
+              "text": "Previous literature has distinguished between abstract data visualization and visualizations with natural spatial mapping [W4200049315]. We present this category as a high-level method for differentiating between different styles of IA work. Data with a Natural [W4200049315] spatial mapping has a real-world analog to use as a metaphor for encoding, e.g., a volumetric rending of a brain [W2942935098]. However, these visualizations are often specific to the exact data being visualized. Conversely, Abstract [W2798432622] data and visualizations often do not have a natural analog. As a result, abstract visualization is often broadly applicable to many kinds of data [W2766823279].",
+              "citations": [
+                "W4200049315",
+                "W2942935098",
+                "W2798432622",
+                "W2766823279"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_5_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.5.2. Visualization",
+              "parent_subsection_id": "s_4_5",
+              "text": "IA works include a large variety of visualization types and designs. We aimed to categorize the examples of visualizations broadly we saw to maintain a high-level overview of visualization types used in the surveyed papers. Additionally, we differentiated between 2D visualizations and 3D visualizations. We found many traditional 2D visualizations and several themes of 3D visualizations.\n\nWe observed the common variety of 2D abstract visualizations with the most common types being: 2D Line Chart [W3215962905], 2D Bar Chart [W2978716154], and 2D Scatter Plot [W3032581065], 2D Map [UNMAPPED:9] [W4312762293, W4312581061, W3083351516]. Many of these types 2D charts also appeared as their 3D counterparts, with the most common including 3D Scatter Plot [W2766823279] and 3D Bar Chart [W3105602061] [W3093510635, UNMAPPED:9, UNMAPPED:16]. However, there were a few examples of abstract visualizations we only observed with 3D style encodings, including charts using Glyphs [W3194707655] [W2584242478, W3016163547], 3D Parallel Coordinates [W2086583674] [W3123112062], and 3D Node Link [W2086583674] [W2518340594, W2799120477] visualizations.\n\nFurthermore, we observed several 3D visualizations encoding data with a natural mapping. Most common of these visualization types were Volume [W3032581065] [W2063359332, W2922564862] visualizations most frequently used for scientific or biomedical Anatomical [W3194707655] [W2942935098] representations. 3D Trajectories [W2909086064] [W2137099044] was the next most common natural spatial mapping visualization type. These visualizations were often, but not exclusively, complemented by 3D Maps [W3216004612] and 3D Globes [W3206059500] [W2968814658, W2888655950].",
+              "citations": [
+                "W3215962905",
+                "W2978716154",
+                "W3032581065",
+                "W4312762293",
+                "W4312581061",
+                "W3083351516",
+                "W2766823279",
+                "W3105602061",
+                "W3093510635",
+                "W3194707655",
+                "W2584242478",
+                "W3016163547",
+                "W2086583674",
+                "W3123112062",
+                "W2518340594",
+                "W2799120477",
+                "W2063359332",
+                "W2922564862",
+                "W2942935098",
+                "W2909086064",
+                "W2137099044",
+                "W3216004612",
+                "W3206059500",
+                "W2968814658",
+                "W2888655950"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "9",
+                "16"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_5_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.5.3. Position",
+              "parent_subsection_id": "s_4_5",
+              "text": "IA systems and visualizations commonly have a practically infinite canvas for visualization views. This contrasts with non-immersive 2D displays, where visualizations are generally placed where they fit on the same screen. As a result, IA researchers and designers have many options as to where and how they can place visualizations in the virtual space. The position category aims to capture all the approaches we observed in our survey. We found that visualizations were either constrained to a specific place, i.e., fixed to a Point [W3162294411], Object [W2963034576], or Body [W3216004612] or unconstrained in the virtual space, Unfixed [W2798630247].\n\nMost visualizations we observed were fixed in position relative to something in the virtual space. Visualization fixed to a Point [W3162294411] were the most common amongst these. These visualizations were either pre-placed in the virtual environment by the designer [W3211672902] or placed by users into predefined positions [W3001260385]. Furthermore, these examples did not commonly allow users to change their position after they were placed. Visualization fixed to either a real or virtual Object [W2620936178, W4225016353] was also common. These visualizations were common for situated visualizations but were also seen in fully virtual environments where physical metaphors, such as a virtual table, were used [W2978716154]. Users were not commonly able to change the exact position of these visualizations, but their position would update relative to the object instead. Finally, objects fixed to the Body [W3216004612] had their positions set and updated relative to a user's head, body, or limbs [W2942935098]. This position was most commonly used for reference visualizations following users moving around the virtual or real space [W3215962905]. Unfixed [W2798630247] visualizations were also commonly observed and were defined by the users' ability to change their position within the virtual space freely. This position was popular amongst works exploring spatial immersion by allowing users to explore multiple visualizations distributed throughout the virtual space [W3082667172]. Another scenario we observed unfixed positioning was for IA systems and visualizations where changing the visualizations' position was the primary method for changing the users' perspective [W4294068671].",
+              "citations": [
+                "W3162294411",
+                "W2963034576",
+                "W3216004612",
+                "W2798630247",
+                "W3211672902",
+                "W3001260385",
+                "W2620936178",
+                "W4225016353",
+                "W2978716154",
+                "W2942935098",
+                "W3215962905",
+                "W3082667172",
+                "W4294068671"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_5_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4.5.4. Scale",
+              "parent_subsection_id": "s_4_5",
+              "text": "In addition to position, the scale of visualizations will impact the design decisions and user experience of the IA system or visualization. While it is possible to define scale on visualizations of real objects relative to the real size, it is impossible to do the same with abstract visualization. To be consistent within the two categories, scale is defined relative to the average size of a human being and not relative to the original size of the represented item. We narrowed this category down into three abstract scale definitions: Small [W2063359332], Medium [W4312581061], and Large [W3123112062].\n\nSmall [W2063359332] scale is defined as visual elements that would reasonably fit into one or two hands. We observed several visualizations presented with a small scale to allow users to naturally \"hold\" and manipulate visualizations up close [W2751503718, W4225016353]. Designers also used this scale to match the scale of visual elements with the size of real-world referents [W2942935098].\n\nMedium [W4312581061] scale is defined as visual elements that exceed no more than the height of an average human being. This was the most commonly observed scale amongst the visualizations presented by papers in our survey. Medium scale balances readability at different distances and the ability to see all parts of a visualization from a single perspective [W3093510635]. At this scale, it was common for users to be expected to move around the virtual environment to view different perspectives of the visualization rather than translating and rotating it [W3123112062, UNMAPPED:16].\n\nLarge [W3123112062] scale includes everything larger than an average human. These views would require a user's or the view's position to change to experience the entirety of a visualization. IA systems and visualizations often used a large scale when representing data with a natural spatial mapping to a 1:1 scale, i.e., a trajectory or geographic location [W2086583674, W3165444947, W2137099044]. A large scale can also immerse the user in the data. This could be done for engagement or to help visualize large and dense datasets [W2967861759, W2973158165, W2798432622].",
+              "citations": [
+                "W2063359332",
+                "W4312581061",
+                "W3123112062",
+                "W2751503718",
+                "W4225016353",
+                "W2942935098",
+                "W3093510635",
+                "W2086583674",
+                "W3165444947",
+                "W2137099044",
+                "W2967861759",
+                "W2973158165",
+                "W2798432622"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "16"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_5_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "4.5.5. Manipulation",
+              "parent_subsection_id": "s_4_5",
+              "text": "IA systems and visualizations are rarely static, implementing multiple methods of manipulating visualization views. We categorized how users were able to manipulate visualizations to gain insight into IA dynamic visualization designs. Codes in this category can be divided between manipulations that affect the local visualization state, e.g., Select [W2942935098], Change [W2798630247], Filter [W3124353981], Slice [W3194707655], Zoom [W2766823279], Pan [W2086583674], and those that manipulate the global facet and position of visualization, e.g., Arrange [W4200049315], Translate [W3093510635], Rotate [W3215962905], and Scale [W2909086064].\n\nThe most common and often the simplest manipulation we observed is Select [W2942935098]. This code includes examples of detail on demand, highlight, and linking. Other common manipulations of the local visualization state include the ability to Change [W4312752252] the encoding channels used [W3123112062], Filter [W3124353981] to a subset of the data [W3032581065], and Slice [W3194707655] to view a cross-section of the visualization [W3211672902]. Additionally, we observed manipulations that allowed users to navigate the visualization, Zoom [W2766823279] and Pan [W2086583674], without changing the global position within the virtual space [W2978716154].\n\nIA systems often provide users with methods of changing the global facet and position of visualizations or placing new visualization within the virtual space. Arrange [W4200049315] codes papers that allowed users to create and place visualization in the virtual environment on demand [W4312581061]. Translate [W3093510635] manipulations change a visualization's global position allowing users to spatial organize many visualizations [W3082667172] or change their viewing perspective in combination with Rotate [W3215962905] manipulations [W2766823279]. While less common, some examples of IA systems and visualizations allowed users to change the Scale [W2909086064] of visualizations, commonly used to transition from overview perspectives to detail-oriented ones or to organize multiple visualizations within a view [W2968814658, UNMAPPED:9].",
+              "citations": [
+                "W2942935098",
+                "W2798630247",
+                "W3124353981",
+                "W3194707655",
+                "W2766823279",
+                "W2086583674",
+                "W4200049315",
+                "W3093510635",
+                "W3215962905",
+                "W2909086064",
+                "W4312752252",
+                "W3123112062",
+                "W3032581065",
+                "W3211672902",
+                "W2978716154",
+                "W4312581061",
+                "W3082667172",
+                "W2968814658"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "9"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_5_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "4.5.6. Interaction",
+              "parent_subsection_id": "s_4_5",
+              "text": "Finally, we recorded the interactions that were used to perform the manipulations. We observed various interactions that often varied based on the display and input devices utilized. These codes can roughly be split into embodied interactions, i.e., Move [W2943401592], Grab [W4300148139], Gesture [W3023339987], Rotate [W3194707655], and input interactions, i.e., Touch [W2798630247], Raycast [W2963034576], Pinch [W2766823279], Click [W3023339987], and Gaze [W3216004612].\n\nEmbodied interactions use multiple body parts for sustained and coordinated movement to leverage natural human movement. The most common type of embodied interaction had users Move [W2943401592] their arms or other parts of their body. This interaction was often used to manipulate the facet and position of visual elements or complete other manipulations that required six degrees of freedom (6DoF) [W4313022487, W3215624331]. At smaller scales of movement, Gesture [W3023339987] interactions involved using hand and finger movements, sometimes used to change facet and position, but also commonly used to affect the local visualization state as well [W2751503718, W4300148139]. These were also paired with other embodied interactions, i.e., Grab [W4300148139] and Rotate [W3194707655] for compound manipulations [W2766823279].\n\nInput interactions are typically binary actions used to toggle different states of manipulations. Touch [W2798630247] [W3093510635, W3123112062] interactions were the most common of these, allowing users to interact with UI and visualization elements by tapping on a touch display or mid-air with 6DoF controllers and hand-tracking. The remainder of these interactions was largely input device dependent with 6DoF controllers using Raycast [W2963034576] point a click [W2999955602], hand-tracking using Pinch [W2766823279] motions [W2767053272], Click [W3023339987] with mouse and keyboard [W4312581061], and Gaze [W3216004612] [W2942987564].",
+              "citations": [
+                "W2943401592",
+                "W4300148139",
+                "W3023339987",
+                "W3194707655",
+                "W2798630247",
+                "W2963034576",
+                "W2766823279",
+                "W3216004612",
+                "W4313022487",
+                "W3215624331",
+                "W2751503718",
+                "W3093510635",
+                "W3123112062",
+                "W2999955602",
+                "W2767053272",
+                "W4312581061",
+                "W2942987564"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Visual presentation encapsulates how views are positioned, scaled, orientated, and manipulated. These parameters influence what the user will see and how they will analyze and interact with the view. We considered several aspects that designers need to consider about the style and type of visualizations they will use, their positions in the virtual space, their scale, and how they can interact with the visualizations.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The design of immersive analytics (IA) systems and visualizations requires many aspects to be considered. Building from existing literature [W2896550038], we aimed to broadly categorize as many of these aspects as possible within the scope of a single review. We categorized reviewed literature concerning what visualization designs they included, what devices they used, how reality-virtuality was presented, the researcher's goals or considerations, and more. Each category interacts with the others, representing different design decisions, IA research thrusts, and general trends within IA. To enable efficient cross-examination of these categories, we grouped categories included in our review into five high-level dimensions of IA design: **Theory & Contribution**, **Technology**, **Data**, **Spatial Presentation**, and **Visual Presentation**. In this section, we describe each of these dimensions, detail how each dimension's categories affect IA design, and highlight the key trends and findings of the codes within each category.",
+      "citations": [
+        "W2896550038"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Cross-Dimension Co-Occurrences",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1. Across Opportunities",
+          "subsubsections": [],
+          "text": "Observing the co-occurrences of codes across the six opportunities of IA and the other design dimensions reveals design trends within these works (Figure 1). Within its dimension, **Academic Theory and Contribution**, works exploring spatial immersion trended towards evaluation and systems contributions, whereas situated analytics skewed heavily towards systems. One possible reason is that Situated analytics represents a more established research direction with many prior and related works to motivate and justify new work. In contrast, spatial immersion is a broader research direction with many speculative benefits that researchers have been exploring and validating.\n\nAcross **Spatial Presentation**, room-scale was the most common environment from spatial immersion, while other opportunities explored environment constraints more proportionally. This can likely be traced back to immersive technology as spatial immersion is often used in fully virtual environments with virtual reality head-mounted displays requiring use in obstruction-free areas. Conversely, other opportunities utilized a more diverse combination of devices, including those supporting augmented or mixed reality views, enabling design around the environment. The opportunities also explored perspective proportionally, except for collaboration which almost exclusively used an exocentric perspective. Works exploring collaboration often focused on sharing a single virtual environment and instances of visual elements, lending themselves to exocentric perspectives.\n\nAnalyzing **Visual Presentation**, spatial immersion, embodied interaction, engagement, and multi-sensory presentation co-occurred most often with 3D Abstract data visualizations, while situated analytics appeared most often with abstract 2D visualizations. The most unique and novel breadth of visualization were observed in works exploring engagement and embodied interaction. Conversely, the visualizations we observed across the other opportunities were largely standard visualization covered by existing visualization typologies. Additionally, these works utilized the most unfixed and unconstrained visualization positions, whereas the other opportunities opted for fixed-constrained positioning.\n\n**FIGURE 1: The co-occurrence of codes, appearing in 7 or more surveyed papers, both within and across **Visual Presentation**, **Spatial Presentation**, and **Immersive Technology**. The overlap within and across these categories accounts for much of the diversity of the IA design space. For example, Satriadi et al. [W4225016353] use tangible globes to display and control AR visualizations, leading to small-scale visual presentation. Cordeil et al. [W2518340594] present a collaborative system using medium-scale 3D networks, contributing to the use of an exocentric perspective.**",
+          "citations": [
+            "W4225016353",
+            "W2518340594"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2. Spatial and Visual Presentation",
+          "subsubsections": [],
+          "text": "**Spatial Presentation** and **Visual Presentation** are important and interconnected design dimensions for IA systems and visualizations. Observing the co-occurrences across these dimensions gives us insights into the interdependent spatial, and visual design aspects researchers must choose when designing IA systems and visualizations (Figure 1). This relationship can be seen in the choice of environment and the co-occurring visual and interactive designs. Room-scale environments were more likely to co-occur with 3D visualization, especially when 3D and 2D visualizations were used together and those with a large scale.\n\nRegarding interactions and manipulations, room-scale environments co-occur most frequently with manipulations related to facet and position and interactions requiring compound movements (Move) or for interacting with elements across long distances (Raycast). In contrast, IA systems and visualizations using an object in their environment and situated space utilized small visualizations and up-close interactions such as touch and gestures more often. The other more constrained environments used more proportionally medium scale, small scale, interactions, and manipulations styles.\n\nInfinite space was commonly utilized when presenting either a large 3D visualization or multiple medium 2D and 3D visualizations. These instances also co-occurred with navigation as a manipulation, requiring users to move through the virtual environment to change the visualization state. Finite space was most used to present a single medium 3D visualization as the main visual element. Situated space was commonly used to present a single medium 3D visualization, multiple small 2D visualizations, or a combination of these visual presentations. Additionally, we observed a trend across the visualizations used with situated space. Small visualizations are often abstract, but medium and especially large scale were used for natural spatial mapping visualizations.\n\nFinally, examining the choice of perspective, egocentric perspectives were most commonly used when viewing a single medium or large 3D visualization, sometimes accompanied by a small reference visualization. Examples of IA systems using multiple 2D and 3D visualizations with varying scales more often opted for exocentric perspectives. Furthermore, exocentric perspectives were more likely to have visualizations fixed in the virtual space, while egocentric ones used unfixed visualizations so users could move them around to alter their viewing angles.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "5.3. Immersive Technology Influence",
+          "subsubsections": [],
+          "text": "The choice of **Spatial Presentation** and **Visual Presentation** also influence what **Immersive Technology** is utilized and vice versa, as shown by the co-occurrences across these categories (Figure 1). Consistent with trends in related categories, AR HMDs, and Handhelds were far more common with environments using physical surroundings such as tables, objects, and walls, whereas VR HMDs largely stuck with room-scale environments. Furthermore, egocentric perspectives were favored by AR presentation, especially when handheld, whereas VR devices co-occurred with both perspectives equally. In line with expectations, AR presentations utilized situated or finite space most often, with no observed examples of infinite space, likely due to the physical environment creating occlusion issues at larger scales.\n\nRegarding scale, AR presentation was mostly used with small to medium visualizations and rarely with large visualizations. VR presentation shows the reverse of this trend, appearing with small visualization less often than medium or large. The difference between AR and VR presentations can also be seen in visualization types and styles. VR presentation co-occurred most often with 3D Abstract visualizations, whereas AR Presentation occurred more often with 3D natural spatial mapping visualizations or 2D Abstract Visualizations. 3D abstract visualizations were much less commonly observed with AR than VR presentation.\n\nFinally, interactions and manipulations were largely influenced by the capabilities of devices. For example, the AR HMD accounts for most of the inputs requiring hand-tracking, as those capabilities come standard on the AR devices we observed in this review. Hand-tracking was not a standard feature on many VR HMD devices we observed, although hand-tracking is quickly becoming the norm on newly released devices. Furthermore, works using VR devices tended to stick with the commercial controllers provided with that device, whereas works using AR devices presented more examples of custom or multiple input controller setups.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The categorization and coding of the presented immersive analytics (IA) design dimensions reveal the considerations, approaches, techniques, and methods researchers use while designing and implementing IA systems and visualizations. In this section, we will analyze the co-occurrence of codes across dimensions to identify and discuss design trends, their implications, and future research opportunities.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "6.1. How to Use This Review",
+          "subsubsections": [],
+          "text": "Our review provides numerous potential use cases, including education, planning and exploration, and dissemination. In this section, we provide recommendations for approaching each use.\n\n**Education:** IA research may not be the most approachable sub-domain of information visualization. As a nascent research area, IA lacks well-established methodological support compared to traditional data visualization. Furthermore, IA is a diverse and rapidly evolving topic alongside the immersive devices that enables it. This review can help introduce IA to new audiences by guiding them through the key aspect of IA use cases, existing works, and designs.\n\nFor this purpose, we recommend first focusing on the **Theory and Contribution** dimension of IA. This dimension provides a high-level overview of IA use cases and how previous work has sought to study and explore them. To start, identify which opportunities are most interesting or relevant for the use case in mind. Then broadly explore the papers collected in this survey using the specific examples cited in **Theory and Contribution** or viewing all the collected papers provided in our supplemental material and website. After identifying papers of interest, examine their coded categories to learn about the design decisions authors of these papers made before further reading them to understand why. These steps will introduce readers to topic areas within IA and guide their literature review by framing each work around the design decisions that were made \u2014 hopefully leading readers to papers of interest and insights more efficiently.\n\n**Planning:** For readers already familiar with IA, our review is useful for future research planning. Our review demonstrates how many design dimensions IA work can contain and how they are often interdependent on each other. Similarly to the framework proposed by Marriott et al. [W2896550038], the structure of our review dimensions, categories, and codes can be used to plan the design considerations researchers need to make and help them explore existing examples of IA systems and visualizations using similar approaches.\n\nWe recommend starting by first identifying which **Theory and Contribution** category codes best match the research objective or idea. Then, consider different ways of **Visual Presentation**, asking questions about the style (2D or 3D, Abstract or Natural), facet and position (number of visualizations, scale, position), and finally, if visualizations need to be dynamic (manipulation and interaction). Next, cross-reference these decisions with **Spatial Presentation** by referencing the co-occurrence matrix in Figure 1 or interactively on our website. Examine how past work has presented space to users, and if necessary explore new combinations of visual and spatial presentation. Finally, explore what immersive technology has previously been used to display the types of **Theory and Contributions**, **Visual Presentation**, and **Spatial Presentation**. This will provide context into the types of display and input capabilities necessary to construct the desired IA system or visualization.\n\n**Dissemination:** Detailing and justifying the design of IA systems and visualizations is challenging. We experienced this firsthand while reviewing the papers included in this survey, as explicit mention of several crucial aspects of IA design could often be excluded requiring inference from the text, figures, or supplemental material. Furthermore, IA has not established a commonly accepted ontology for describing its unique design aspects or even a common language to define them. We believe that it is out of scope for our review to attempt to resolve this fully, as it should be done among a larger community of researchers. However, we hope our framework of dimensions, categories, and codes inspired by many previous works in traditional and immersive data visualization can get us closer to that goal. We recommend that authors consider reporting the design of their IA systems and visualizations by addressing the five broad design dimensions we presented, the relevant categories within those dimensions, and, when possible, using codes similar to the ones in this report. Table 1 can guide authors on what and how to report IA design decisions and justifications. Moreover, authors and readers can contribute to this survey by following the steps detailed in Section 3.3 and Section 10.",
+          "citations": [
+            "W2896550038"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "6.2. The Six Opportunities Revisited",
+          "subsubsections": [],
+          "text": "Reviewing and analyzing surveyed papers has provided insights into possible future directions to explore novel areas of the IA design space. We will detail these possible areas for each IA opportunity.\n\n**Spatial Immersion:** Among surveyed papers, we noticed a lack of highly novel visualization types. The majority of visualizations we observed could be classified using traditional typologies. This leads us to question if existing IA research is making the most of the additional encoding channels provided by spatial immersion. We believe that a possible reason is the lack of design studies, a trend consistent across all IA opportunities. Design studies are an important research contribution that often leads to novel visualizations or combinations of visualizations tailored to solving real-world tasks. This is also related to IA grand challenge of understanding user scenarios and evaluation [W3124353981], which has been a rising area of interest. We recommend that IA researchers work more closely with domain experts or communities of IA technology users to explore and validate how we can best leverage spatial immersion.\n\n**Situated Analytics:** When imaging the future of situated analytics applications, it is hard not to imagine scenes out of science fiction [UNMAPPED:90]. Translating fact from fiction, these applications require dynamic data sources with real-time computation to make this possible. However, these Data codes were rare, even among observed examples of situated analytics. We recommend authors explore how to bring real-time computation and dynamically generated visualizations into everyday life using AR presentation. While still in its early days, one possible approach is to use generative language models [W4382457877] to turn users' speech into in-situ visualizations on the fly. The IA grand challenge of spatially situated data visualization [W3124353981] relates to this topic building from existing work [W4297965161].\n\n**Embodied Exploration:** Observing interactions and manipulations used for Visual Presentation, we noticed a set of interactions used to change visualization facet and position. Recent works have sought to explore and leverage this section of the design space, but many possibilities still remain unexplored. These interactions are used for more than just moving visualizations around the virtual space. They allow users to change their viewing perspective, make other interactions easier to perform, and even change the visualization. We recommend further exploring interactions and manipulations for facets and positions that can lead to standard modes of interactions for IA visualizations. One possible example involves changing a visualization scale and position when grabbed to make it easier to translate and rotate and then return it to its original state for easier viewing. This concept is encapsulated by the IA grand challenge of interacting with IA systems [W3124353981] and has become more of a focus among recent research [W4366547397].\n\n**Collaboration:** Foundational IA works have stressed the importance and potential of collaboration. That said, we still documented only a few examples of collaboration, especially across multiple types of devices. Given this, it is no surprise that collaboration is among the grand challenges of IA [W3124353981]. Recent work has begun to explore this area further [W4366550332, W4367662749], and we recommend that IA researchers continue to build on this work and explore the design space of cross-platform IA collaboration. We encourage future research into how IA systems and visualizations can be simultaneously represented across multiple kinds of **Immersive Technology**, **Spatial Presentation**, and **Visual Presentation**. This work will also be relevant for tackling the IA grand challenge of integrating current collaboration practices.\n\n**Engagement:** Visualizations have a long history of being used to create engaging presentations. IA has the potential to take this further by allowing presenters to fully immerse users into data-laden virtual environments. We observed two examples of this opportunity being used for this purpose [W4300148139, W3082457272]. We recommend future research explore the idea of immersive data presentations further. This area can be approached from two angles: how presenters can author immersive visualization presentations and how they can be presented to audiences.\n\n**Multi-Sensory Presentation:** Finally, multi-sensory presentation was the least observed IA opportunity, matching what was found in past surveys [W2963034576]. This gap in the literature is also acknowledged in the IA grand challenge of Interacting with IA systems [W3124353981]. Specifically, the topics of exploiting human senses and enabling multi-sensory feedback. One potential reason for this is a practical one: these studies utilized non-standard devices to allow for mid-air haptics or scents, creating a high barrier of entry. We recommend researchers focus on more practical applications of multi-sensory presentation and treat haptics and sound as more standard encoding channels. This can include lower-fidelity haptics available on commercial controllers and experiments with sonification in more applications [W2941406686]. Furthermore, the simultaneous use of multiple devices is an application of multi-sensory presentation. These systems require users to sense and interact across multiple technologies and are a powerful combination [W4312762293, W3123112062]. Furthermore, we encourage researchers to consider how multi-sensory presentation can contribute to the accessibility of IA visualization and systems.",
+          "citations": [
+            "W3124353981",
+            "W4382457877",
+            "W4297965161",
+            "W4366547397",
+            "W4366550332",
+            "W4367662749",
+            "W4300148139",
+            "W3082457272",
+            "W2963034576",
+            "W2941406686",
+            "W4312762293",
+            "W3123112062"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "90"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Having detailed each dimension individually and examined relationships across dimensions, we present the discussion of the following points. First, we provide suggestions for using this review, the information presented in this document, and the resources available in the supplemental material. We then discuss potential avenues for each of the six opportunities of IA. Next, we discuss the need for future research regarding facet and position in IA systems and visualizations. Finally, we discuss the emerging trends in immersive technology and their potential influence on IA research.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "7. Limitations and Future Work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Arguably, the greatest limitation of any systematic review is missing relevant papers, and our review is no different. We aimed to ensure our search terms were broad enough to capture as many papers as possible. However, for systematic repeatability, we limited our paper search to only what could be found in our search terms through our targeted venues' ACM and IEEE digital libraries. This excluded relevant work published in non-HCI-focused domain-specific journals, contributing to the relatively few examples of design studies captured. Furthermore, our keyword search terms included VR- and AR-related terms but not other types of immersive technologies, such as large interactive displays, contributing to a bias in our survey towards HMDs. Finally, our choice to focus on modern trends beginning in 2013 excluded many examples of work from the decade before the establishment of immersive analytics as we know it today. As such, we do not claim to have collected all relevant examples of IA systems and visualizations; nevertheless, we believe that our corpus was large enough to reach meaningful conclusions. These limitations can be addressed in the future as we allow for the extension of our survey data presented on our website by members of the IA community.\n\nFurthermore, our goal was to achieve a high-level overview of important IA design dimensions. As a result, it was out of scope to categorize certain aspects, such as visualization tasks, and to go in-depth into included aspects, such as visualization types and encodings. This can be addressed by future work, as our survey materials are open and available on both our survey website and supplemental materials (Section 10).",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "8. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The vast and rapidly evolving design space of immersive analytics (IA) comprises several dimensions that dictate the form and function of IA systems and visualizations. Factors such as research contributions, devices, data, space, graphical elements, and interaction must all be considered by researchers and designers when creating immersive visualizations. While previous literature has set out to survey different aspects of IA and establish theoretical support, comparing design decisions broadly across IA literature has been difficult. We present our systematic review of IA systems and visualizations that analyzed 73 examples from the literature across five key dimensions of IA design. Through the results of this review, we provide an observation taxonomy of the IA design space and an analysis of trends within and across dimensions demonstrating the interdependence of design choices. Furthermore, we openly provide all our data and materials for the future extensibility and analysis of new works and design dimensions. We hope this review can serve as a resource for researchers to learn about past IA work, plan future novel research, and disseminate their design choices systematically.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "9. Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This paper was prepared for informational purposes by researchers at Northeastern University and the Global Technology Applied Research Center of J.P. Morgan Chase & Co. This paper is not a product of the Research Department of J.P. Morgan Chase & Co. or its affiliates. Neither J.P. Morgan Chase & Co. nor any of its affiliates make any explicit or implied representation or warranty and none of them accept any liability in connection with this paper, including without limitation, the completeness, accuracy, reliability of the information contained herein and the potential legal, compliance, tax or accounting effects thereof. This document is not intended as investment research or investment advice, or as a recommendation, offer or solicitation for the purchase or sale of any security, financial instrument, financial product or service, or to be used in any way for evaluating the merits of participating in any transaction.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "10. Supplemental Materials",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "All relevant survey data, including coded categories and associated metadata for each paper and a list of rejected papers, is provided in our supplemental material as CSVs and on our interactive Airtable spreadsheet. These materials and further details can be found at osf.io/5ewaj. Furthermore, our survey data can be explored, visualized, and extended on our survey website: iadesign.space and repository hosted open source on GitHub: github.com/VisDunneRight/IADesign.Space.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4387950524_tables.md"
+}

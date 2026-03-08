@@ -1,0 +1,648 @@
+{
+  "id": "W4200314654",
+  "metadata": {
+    "title": "A Systematic Review of User Acceptance in Industrial Augmented Reality",
+    "n_sections": 8,
+    "n_subsections": 11,
+    "n_subsubsections": 16,
+    "n_tables": 8
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In his 1997 survey on AR, Azuma [W2122122381] published one of the most common definitions of AR, which does not limit itself to the use of specific AR hardware classes, such as data glasses. According to Azuma [W2122122381], the following three characteristics define an AR system: the combination of reality with virtual content, the interaction with virtual objects in real-time, and the three-dimensional representation. Following Azuma's definition, Fite-Georgel [W4255413943] defines industrial AR as the use of AR technology to support an industrial process. In this context, photo-based overlays have proven useful and are therefore intentionally included in this definition.\n\nCompared to the paper-based provision of information in the work environment, AR can reduce employees' cognitive load by providing context-sensitive virtual information [W3047733167]. In the industrial work context, AR can contribute to technical facts' communication by the location-accurate overlay of real objects with virtual information and instructions. Industrial AR systems support assembly tasks' execution and the context-sensitive provision of information in the work process. Besides, AR provides data visualization and interaction with this data in the function of a human-machine interface. Typical industrial applications include indoor navigation and support for maintenance, quality control, or materials management [W2791480559]. User support through AR systems includes planning, design, ergonomic assessment, provision of operational support, or training [W2800214149].\n\nAcross all use cases, industrial AR systems' support of work processes involves the possibility for employee training in the work environment. Examples of AR use in employee training include providing step-by-step instructions on a specific piece of equipment or machine, providing instructions depending on the employee's level of knowledge, or passing knowledge from experienced employees to less experienced employees by integrating this knowledge into AR solutions [W2791480559]. With the qualification and support of employees in the work process, the use of gamification offers an opportunity to increase employee motivation. However, in the context of AR systems, no standards have yet emerged for the use and design of game elements. Further research into user acceptance of the systems used and their design for the work environment is highly relevant here [W3133817510].\n\nThe number of AR applications for the industrial application context has increased significantly in recent years. The increasing number of AR solutions is counterbalanced because the developed AR solutions are still not widely used in industrial practice [W2735210942]. This is due to the complex requirements for industrial AR solutions, which, depending on the use case, can be assigned to the following areas: users, technology, work environment, guidelines, and laws, or economic factors [W3047733167, W2943040138]. From the user's perspective, acceptance of AR systems, in particular, is crucial for successful adoption [W2992509920]. According to Dey et al. [W2802609531], increasing usability and user experience leads to higher user acceptance of AR systems. Furthermore, in an industrial context, ergonomic factors of the AR hardware used [W2992509920], the perceived efficiency of the AR solution compared to the current work process [W2468789795], the design of the user interfaces [W2765371122] or the cognitive load of the users during system use [W2992509920] were found to have an impact on user acceptance. However, user acceptance has not yet been comprehensively studied in the context of industrial AR systems [W2992509920].\n\nThis paper aims to present the current status of user acceptance aspects in industrial AR applications. Based on the reviewed studies, the authors examine challenges associated with the investigation of user acceptance, the assignment to the phases of the development process, the industrial application fields, and the methods used. Conducting a systematic literature review ensures the repeatability of this study. The methodology for the systematic literature review described by Booth et al. [W336930913] was used to conduct the review. Palmarini et al. [W2735210942] and Egger and Masood [W2992509920] already applied this methodology for their reviews in the field of industrial AR systems, which ensures the rigorous scientific approach of this review. The review addresses developers who deal with industrial AR systems and scientists who deal with the investigation of user acceptance in different fields of application. With this review, the authors aim to give the readers an insight into the consideration of user acceptance in the context of industrial AR systems. Furthermore, the authors want to work out for the scientific target group how future user studies on the acceptance of these systems can be designed and which areas have not been investigated so far.\n\nThe remainder of the paper organizes as follows. Section 2 elaborates on user acceptance aspects in previous reviews in industrial AR systems and defines the concept of user acceptance and related methods. The following section presents the underlying methodology in detail and highlights the individual steps of the review. In Section 4, the authors present the current state of the art and subsequently derive future opportunities for integrating aspects of user acceptance into an industrial AR application's development process. The paper concludes with a summary and an outlook on future research directions.",
+      "citations": [
+        "W2122122381",
+        "W4255413943",
+        "W3047733167",
+        "W2791480559",
+        "W2800214149",
+        "W3133817510",
+        "W2735210942",
+        "W2943040138",
+        "W2992509920",
+        "W2802609531",
+        "W2468789795",
+        "W2765371122",
+        "W336930913"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Background",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Augmented Reality",
+          "subsubsections": [],
+          "text": "In this section, the authors present the consideration of user acceptance aspects in widely cited and recent review papers in the context of industrial AR and elaborate on the research gap for this review.\n\nNee et al. [W2090925739] conducted a comprehensive review of AR applications in product design and manufacturing. The authors analyze AR hardware and software, various AR solutions in a manufacturing context, and their technical implementation. Human factors and interaction issues in this context are examined, in addition to the related technical challenges to AR systems. Nee et al. [W2090925739] identify the development of user-friendly human-machine interfaces as a focus for future research in this area. In their view, user acceptance also plays an important role, closely related to the user interface [W2090925739].\n\nDey et al. [W2802609531] conducted a comprehensive review of usability studies from 2005 to 2014, which deals with the conducted user studies of industrial AR applications. In addition to gathering performance-related metrics, these user studies focus on workload. The authors state that improvements in user experience and usability positively influence user acceptance of AR solutions. A formal user study on usability or user experience was conducted in less than 10% of all papers examined [W2802609531].\n\nIn their paper, Fraga-Lamas et al. [W2791480559] analyze the concept of industrial AR and its applications. The authors mainly address the field of shipbuilding. Among the essential aspects for the successful development of an industrial AR application, the authors consider user perception in terms of ergonomic and aesthetic factors of the application and the user interface design in an intuitive and user-friendly way [W2791480559].\n\nIn their review on the use of AR solutions in the industrial application context, Bottani and Vignali [W2810638738] identified the main application fields, described the technical implementations, and highlighted the possible uses of AR technology. They identified several studies on user acceptance, including Rapaccini et al. [W1582037079], of a collaborative AR solution for service technicians using the Technology Acceptance Model. The authors state that in addition to the well-investigated application areas of assembly, maintenance, product design, and training/learning, the future potential lies in the closer investigation of the areas of safety, ergonomics, and remote collaboration [W2810638738].\n\nIn their review, Boboc et al. [W3037197243] examine the application of AR, the characteristics of existing systems, and the benefits and challenges of AR use in the automotive industry. The authors note that ergonomics, human-technology interaction, human factors, user acceptance, and ethical issues increasingly play a role but do not provide more detail in their study [W3037197243].\n\nEgger and Masood [W2992509920] analyze the state of research, current challenges, and future research directions for AR systems in manufacturing in their systematic review. Among the future research topics in industrial AR, the authors include the computing power of mobile AR systems, ergonomic aspects of AR hardware, and increasing the flexibility and robustness of software solutions. Furthermore, Egger and Masood [W2992509920] identify user involvement to increase acceptance, organizational integration in terms of processes and hierarchies, and the corporate environment to adopt and implement new technologies as future research topics. The authors note that user acceptance of AR in an industrial context has not been extensively studied [W2992509920].\n\nFrom the reviews presented, it can be deduced that user acceptance initially played a subordinate role in developing industrial AR systems due to a large number of new technical challenges. With the increasing technological maturity of industrial AR solutions, several studies aim for user-centered development. None of the existing reviews has a focus on examining user acceptance. In parallel with the development of technical prototypes of AR-based systems in the industrial work context, the possibilities for increasing employee motivation and the associated increase in engagement are being investigated. In this context, a significant improvement can be achieved by integrating gamification approaches. The research in this field is closely related to the investigation of user acceptance of the game elements used. Up to now, there has been no standardized procedure for the integration and design of gamification in the context of industrial applications, especially with regard to manual work activities [W3088900573]. In order to increase user acceptance of AR-based applications, insights can be gained from the use of game environments that can possibly be transferred to the design of industrial AR systems [W2724720734]. However, to date, user acceptance and its integration into the development and evaluation of industrial AR solutions have not been comprehensively investigated.",
+          "citations": [
+            "W2090925739",
+            "W2802609531",
+            "W2791480559",
+            "W2810638738",
+            "W1582037079",
+            "W3037197243",
+            "W2992509920",
+            "W3088900573",
+            "W2724720734"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 User Acceptance",
+          "subsubsections": [],
+          "text": "The introduction of new technologies and their productive use in the work context closely links to employees' acceptance and use of these solutions [W2100379340]. Along with the analysis of why employees accept new technologies comes the possibility to improve the design, evaluation, and prediction of user behavior of information systems [W2796276470]. Numerous studies on individual acceptance of new information technologies have produced many models and approaches with individual acceptance by intention or use of the system, success in adoption within the organization, or task technology fit, among others, as dependent variables to determine user acceptance [W2100379340].\n\nDue to its widespread use, numerous studies, and adaptations to different industrial use cases, Davis' Technology Acceptance Model [W1791587663] is considered one of the dominant models for studying user acceptance [W2038539934, W2796276470]. This model emerges from the Theory of Reasoned Action [UNMAPPED:24] and the Theory of Planned Behavior [W1517229207]. Over the past decades, Davis' model has been modified and extended, as in TAM Extension [W2034338878], TAM 2 [W2168569455], TAM 3 [W2112042732]. Moreover, the basic constructs of TAM have been integrated into other models, such as the Unified Theory of Acceptance and Use of Technology (UTAUT) [W2100379340], UTAUT 2 [W3125976894], Extended IS Success Model [W2076658628]. The core constructs of Davis' TAM model are \"perceived usefulness\" and \"perceived ease of use,\" which describe the degree of perceived improvement in the performance of the work task and the degree to which the user assumes that the system will be used without effort [W1791587663]. Since the introduction of the model, the primary constructs have not changed; new factors have been identified that impact the technology acceptance in the particular application area [W2038539934].\n\n**FIGURE 1** | Systematic literature review based on the methodology of Booth et al. [W336930913].\n\n{{TABLE:tbl_01}}",
+          "citations": [
+            "W2100379340",
+            "W2796276470",
+            "W1791587663",
+            "W2038539934",
+            "W1517229207",
+            "W2034338878",
+            "W2168569455",
+            "W2112042732",
+            "W3125976894",
+            "W2076658628",
+            "W336930913"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "24"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Planning",
+          "subsubsections": [],
+          "text": "The planning phase includes defining a time frame for conducting the review, identifying the databases, and selecting and using the software for analysis and literature management. Furthermore, we used the planning phase, following the methodology of Booth et al. [W336930913], for an initial literature search identifying previous review papers and their relation to user acceptance.\n\nBooth et al. [W336930913] present a procedure for the systematic search of the literature according to the following five steps: 1) initial search of the literature: scoping search, 2) conduct search, 3) bibliography search, 4) verification, and 5) documentation. An initial literature search is proposed in the first phase of this methodology to get an impression of the topic and the scientific literature published on it. The results of this search are presented in Section 2.1. In addition, this search considered other reviews from the topic area of AR that were included based on the methodology used for the review [W2735210942] or the current findings on a continuously evolving technology [W3047733167]. We considered the findings of key papers of industrial AR systems for the structure of this review, e.g., regarding the selection of databases and the timespan of the papers reviewed. Furthermore, we were able to derive key search terms from the existing reviews. We present the further steps of the systematic search in the context of this review in Section 3.3.\n\nThe search and analysis of scientific articles spanned December 2020\u2013February 2021, with the seventh phase of \"writing\" completed in March 2021. We selected five Databases for the search of the scientific articles. These databases were selected based on the current reviews from Gattullo et al. [W3047733167] and Boboc et al. [W3037197243]. The selection of the databases is further based on the technological reference of these databases:\n\n- Scopus (www.scopus.com)\n- Web of Science (www.webofknowledge.com)\n- ACM Digital library (https://dl.acm.org/)\n- IEEE Xplore Digital library (www.ieeeexplore.ieee.org)\n- Science Direct (www.sciencedirect.com)\n\nWe used Citavi 6 to manage the scientific sources and MS Excel additionally to analyze the sources further. Furthermore, we used MS Word and the Citavi-plugin to insert the sources.",
+          "citations": [
+            "W336930913",
+            "W2735210942",
+            "W3047733167",
+            "W3037197243"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Defining the Scope",
+          "subsubsections": [],
+          "text": "For a systematic literature review, defining the scope and the associated formulation of research questions represents the basis of a systematic approach [W336930913]. In this review, the formal basis for formulating the research questions is the PICOC framework [UNMAPPED:31].\n\nThe elements of the PICOC related to this review are as follows:\n\n- Population: peer-reviewed publications on AR applications in industrial environments containing an investigation of user acceptance/technology acceptance aspects\n- Intervention: collect evidence on the role of user acceptance in the conception, development, and evaluation of industrial AR; identify aspects of AR-based systems that require user acceptance\n- Comparison: this does not apply because no alternative technologies or concepts are investigated\n- Outcomes: state of the art of user acceptance studies and relevant aspects of user acceptance in industrial AR, approaches for a comprehensive investigation of user acceptance in the context of industrial AR\n- Context: usage of AR in industrial environments\n\nFrom this, we derive the following research questions for this review:\n\n- Q1: What is the state of the art of industrial AR systems in the context of investigating user acceptance?\n- Q2: What are the relevant aspects of user acceptance in the context of industrial AR systems?\n- Q3: How can user acceptance be included in future studies of industrial AR?",
+          "citations": [
+            "W336930913"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "31"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Searching",
+          "subsubsections": [],
+          "text": "We defined the search terms based on previous reviews of industrial AR to ensure the most comprehensive integration of all relevant contributions in this review. This corresponds to the methodological literature search according to Booth et al. [W336930913] as described in Section 3.1.\n\nThe execution of the search addresses the second step of the systematic literature search according to the selected methodology. In this step, we searched all previously selected databases according to the defined search criteria. The restriction of the search to the search fields \"title,\" \"abstract,\" and \"keywords\" follows existing reviews in the field of industrial AR [W2735210942, W2992509920]. We assume that by following this procedure, we have found a representative sample of papers. Through the continuous documentation of the search and analysis results, we determined that many publications were assigned to other application fields or represented duplicates (see also the detailed representation of the literature assessment in Figure 2). The search was not modified and performed in the same way for all databases. We searched the metadata for the IEEE Xplore database because this database does not allow searching by title, abstract, and keywords. In the third step of the systematic search, we searched the bibliographies of the included papers for other relevant papers. This procedure did not immediately identify any other relevant papers but confirmed the relevance of papers already identified in the search. Based on these results, we decided in the validation step that no adjustment of the search strategies was necessary since many relevant papers are already included in the search from the authors' point of view. The authors validated the search strategy and the identified literature by discussing the search strings and results with an expert in the field of technology acceptance of industrial applications. By performing a full-text search or considering other databases, the search results can be extended. This review limits the search to \"title,\" \"abstract,\" and \"keywords.\"\n\nAfter defining the search string, we performed a separate search in all databases mentioned in step 1. The search string for this review is composed as follows:\n\n**Part 1 - Reference to the technology**\n\n\"Augmented Reality\" OR \"Mixed Reality.\"\n\nVarious authors have already used this combination of search terms to search for articles on AR prototypes [W3047733167].\n\n**Part 2: Reference to industrial applications**\n\n(\"Manufact* OR \"Production\" OR \"Industr* OR \"industrial application* OR \"logistic*\") OR (\"maintenance\" OR \"training\" OR \"quality\" OR \"shopfloor\" OR \"warehouse\" OR \"assembly\")\n\nThis part of the search string was adopted from Egger and Masood [W2992509920], who derived their search from the search strings of previous review papers on industrial AR [W2090925739, W2028936041].\n\n**Part 3: Reference to user evaluation**\n\n\"user evaluation*\" OR \"user study*\" OR \"feedback\" OR \"experiment*\" OR \"pilot study\" OR (\"participant\" AND \"study\") OR (\"participant\" AND \"experiment\") OR (\"subject\" AND \"study\") OR (\"subject\" AND \"experiment\").\n\nWe adapted this part of the search string from Dey et al. [W2802609531], which relied on the earlier review by D\u00fcnser et al. [W2071086633] to identify user studies in AR.\n\n**Part 4: Reference to user acceptance**\n\n\"technology acceptance\" OR \"user acceptance\" OR \"usefulness\" OR \"ease of use\" OR \"enjoyment.\"\n\nWe added this part of the search string based on Davis [W1791587663] and Maranguni\u0107 and Grani\u0107 [W2038539934] to reference user acceptance.\n\nThe search of each database returned the following results for this search string (see Table 1). A total of 223 papers were identified. The search was limited to journal articles, conference papers, and reviews.\n\n**TABLE 1** | Search results of search string 1.\n\n{{TABLE:tbl_02}}\n\nThe length of this search string did not allow searches in the IEEE Xplore and Science Direct databases. Therefore, we decided to perform another search with a simplified search string, searching in all databases. For this search, we simplified the existing search string as follows:\n\n(\"augmented reality\" OR \"mixed reality\") AND (\"industrial\" OR \"industry\") AND (\"technology acceptance\" OR \"user acceptance\" OR \"usefulness\" OR \"ease of use\" OR \"enjoyment\").\n\nWith this search string, a total of 281 titles could be found (see Table 2). We considered both search results in the subsequent steps of the assessment. The removal of duplicates was conducted in the assessment of titles and abstracts. Accordingly, we completed the entire search process with a total number of 504 titles. The search in the databases for both search strings we performed on December 8th, 2020.\n\n**TABLE 2** | Search results of search string 2.\n\n{{TABLE:tbl_03}}\n\n**FIGURE 2** | Assessment of the identified literature.\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W336930913",
+            "W2735210942",
+            "W2992509920",
+            "W3047733167",
+            "W2090925739",
+            "W2028936041",
+            "W2802609531",
+            "W2071086633",
+            "W1791587663",
+            "W2038539934"
+          ],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03",
+            "tbl_04"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Assessing",
+          "subsubsections": [],
+          "text": "To evaluate the relevance of the sources identified by the search in the bibliographic databases for answering the research questions, we established inclusion and exclusion criteria. These criteria were part of the search settings when narrowing down the search in the databases and are subsequently applied by the authors first to the papers' titles and abstracts and second to the papers' introductions and conclusions. The criteria were developed following the reviews of Palmarini et al. [W2735210942] and Egger and Masood [W2992509920] and adapted as follows:\n\n**Inclusion Criteria**\n\n- Primary study that represents the use of AR in an industrial context\n- Primary study including aspects of user or technology acceptance\n\n**Exclusion Criteria**\n\n- Not in the English language\n- Older than 2011. This limitation is related to previous reviews in the field of industrial AR by Nee et al. [W2090925739] and Egger and Masood [W2992509920]. These reviews address user acceptance aspects as presented in Section 2.1. Furthermore, the selected timespan addresses the technological advancements in the field of AR. Mainly related to technological leaps of AR hardware in recent years, e.g., handhelds and head-mounted displays\n- Does not fall into the document types of article, conference paper, or review\n- Not related to an industrial use case\n\nBy searching the five bibliographic databases, a total of 504 papers were identified. We evaluated these papers for relevance to this review based on the title and abstract in the next step. For this purpose, we used the inclusion and exclusion criteria defined previously. In this step, we excluded only papers from the further evaluation that undoubtedly did not meet one of the criteria, such as the restriction to an industrial application. Numerous contributions were attributable, e.g., to medical applications and thus had no industrial application context.\n\nIn this step, to reduce further effort, duplicates were identified and sorted out according to the presented procedure in Figure 2. We then reviewed the introduction and conclusion of the remaining 109 papers to the criteria and identified 33 papers for further analysis. In carrying out this evaluation, the authors achieved a detailed assessment by analyzing further parts of the paper to fulfill the criteria after reviewing the introduction and conclusion, if applicable. We analyzed the papers to a level of detail that allowed an explicit inclusion or exclusion for further analysis, always starting with the introduction and conclusion. Despite all care taken in the assessment process, the authors are aware of the subjectivity of the evaluation. Nevertheless, we believe that our systematic approach based on the defined criteria has enabled a comprehensible evaluation of the papers up to this point.\n\nFor further assessment, we evaluated the identified 33 papers according to the following quality criteria, which are based on the quality criteria from Palmarini et al. [W2735210942]:\n\n- Document is clear\n- Methodology is well exposed and detailed\n- Results are provided\n- Relevance to research question 1: state of the art industrial AR systems in the context of user acceptance\n- Relevance to research question 2: relevant aspects of industrial AR systems in terms of acceptance\n- Relevance to research question 3: inclusion of user acceptance in future studies\n\nPapers were scored 1 for completely meeting a criterion, 0.5 for partially meeting a criterion, and 0 for not meeting a criterion. For the evaluation, all 33 contributions were read and then evaluated. None of the contributions was excluded from further analysis on the basis of this subjective evaluation. The resulting evaluation of the papers was used as an orientation for the subsequent analysis, particularly with regard to the relevance of the papers to answer the research questions.",
+          "citations": [
+            "W2735210942",
+            "W2992509920",
+            "W2090925739"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5 Synthesizing and Analyzing",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_5_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.5.1 AR-Based Data Analysis",
+              "parent_subsection_id": "s_3_5",
+              "text": "In this section, we present the items on technological issues concerning the AR implementation that we were able to identify for each of the selected categories during the analysis. In the context of this paper, the industrial application field and the technical characteristics of the AR system concerning the user are particularly relevant. The components of an AR system include a sensor system, a tracking system, a computing unit, a visualization technology, and a user interface [W2234485030, W2921205582]. Regarding the definition of Azuma [W2122122381], for the perspective correct alignment of the virtual objects to reality, the position of the users to the natural environment has to be determined first. Subsequently, this position must be continuously updated with the user's movement. The sensor system and the tracking system serve for this [W4206434639]. The computing unit processes the resulting data. This paper primarily addresses the interaction of the AR system with the user and the associated user acceptance of the AR system in the industrial application context. Therefore, the field of application and the components of the AR system that are in direct user contact are analyzed. These are the respective visualization technologies and the interaction methods. The interaction methods are dependent on the AR hardware used. Depending on the hardware selection as two- or three-dimensional interaction becomes possible. The requirements of the industrial use case, such as mobility, freedom of movement, or infrastructure, have a significant influence on the design of the AR system [W2613345949]. For these reasons, the characteristics of an AR system that apply to the user play an essential role in designing user-friendly AR systems. The content analysis follows in the results and discussion section.\n\n**Field of Application**\n\nThe following fields of application were identified in the contributions:\n\n- Maintenance\n- Training\n- Assembly\n- Order picking\n- Other\n\nWe have assigned the contributions to one of the above areas according to their respective content focus. Some contributions consider different or several use cases. These will be discussed in more detail in the following analysis.\n\n**Visualization Technology**\n\nWe have divided the visualization technologies into the following categories:\n\n- Handheld\n- Head-Mounted Display (HMD)\n- Spatial AR\n- Screen\n\nThe handheld category includes all end devices from the class of smartphones or tablets. HMDs include data glasses by various manufacturers, regardless of whether the virtual content is displayed binocularly or monocularly. Spatial AR addresses projection-based systems that are used mainly at assembly workstations. Some of the contributions utilize more than one technology in the context of the conducted studies; other contributions, especially the review papers, cannot be assigned to any of the technologies.\n\n**Interaction method**\n\nIn the context of augmented reality, the interaction between humans and technology is strongly dependent on the hardware used. The different hardware classes offer certain interaction methods, such as hand gesture-based control, which is strongly linked to the use of HMDs. The following interaction methods could be identified in the 33 contributions:\n\n- Object-based\n- Gesture-based\n- Voice-based\n- Touch-based\n- Projection-based\n\nThe total number of interaction methods does not correspond to the number of contributions since many of the hardware types used provide different interaction methods, or the studies considered use more than one visualization technology. As in the case of visualization technologies, some papers do not present an AR solution and are therefore not addressed in this category.",
+              "citations": [
+                "W2234485030",
+                "W2921205582",
+                "W2122122381",
+                "W4206434639",
+                "W2613345949"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_5_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.5.2 User Acceptance-Based Data Extraction",
+              "parent_subsection_id": "s_3_5",
+              "text": "In the context of user acceptance, we first classified the objectives of the identified studies in terms of user acceptance. In this step, we were able to assign the contributions to the following categories:\n\n- Consideration of user acceptance in the context of user studies\n- Integration of user acceptance factors in the evaluation\n- Adaptation of existing models and theories for predicting or evaluating user acceptance\n\nUser studies were conducted in 28 of the 33 identified contributions. For these contributions, we recorded the methods used to conduct the user study, the methods and theories applied from the field of user acceptance, the variables studied in relation to user acceptance, other factors considered in these studies, and the number of study participants. The results of this analysis are presented and discussed in detail in the following section.\n\nTo conclude the analysis, we examined the contributions regarding the phase of the study in relation to the PLC. This provides an assessment of the technological maturity of the solutions under consideration throughout the development process. In this context, the evaluation of a prototype is widely used. However, the methods also allow evaluation in the early stages of the development process [UNMAPPED:38]. To address this question in our context, we have assigned the 28 contributions conducting user studies to the phases of the PLC according to Stark [W4246474451]:\n\n- Ideation: Generation of ideas in the minds of the developers\n- Definition: Creation of a detailed description of the product\n- Realization: At the end of this phase, the product exists in its final form\n- Use: The customer uses the product\n- Disposal: The product is no longer used and is sent for recycling\n\nThe assignment of the contributions to the phases of the PLC is conducted in the following section. We discuss the results regarding the research questions.",
+              "citations": [
+                "W4246474451"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "38"
+              ]
+            }
+          ],
+          "text": "To answer the research questions, we synthesized and analyzed the 33 remaining contributions in the next step. The development of usable AR systems is dependent on technical functionalities. Nonetheless, considering user requirements in the development is crucial for acceptance [W2992509920]. The technical characteristics of industrial AR solutions are therefore a prerequisite for the acceptance of industrial assistance systems. For this purpose, we elaborated the technical characteristics of the contributions in the following categories. Specifically, we consider the field of application, the visualization technology, and the interaction method.\n\nIn addition, we extracted data related to user acceptance from the contributions. These are the aim of the study and the relation to user acceptance. Further data comprises the number of study participants, the phase of the study regarding the product lifecycle (PLC), the applied methods and models in this context, the results of the studies, and the resulting challenges and limitations.",
+          "citations": [
+            "W2992509920"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This review follows the methodology of Booth et al. [W336930913] that they present in their book on \"systematic approaches to a successful literature review.\" This methodology was also applied in the reviews of Palmarini et al. [W2735210942], Egger and Masood [W2992509920], and Gattullo et al. [W3047733167] from the field of industrial AR. Therefore, we selected Booth et al. [W336930913] as a methodological basis, as many reviews on industrial AR have been conducted without a fundamental methodology. The seven steps of the methodology - Planning, Defining the Scope, Searching, Assessing, Synthesizing, Analyzing, and Writing - ensure this review's reproducibility and are illustrated in Figure 1 in the context of this review.",
+      "citations": [
+        "W336930913",
+        "W2735210942",
+        "W2992509920",
+        "W3047733167"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Results and Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Field of Application and Study Design",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.1.1 Maintenance",
+              "parent_subsection_id": "s_4_1",
+              "text": "Out of the 33 papers reviewed, we assigned eight papers to the maintenance application domain. Maintenance activities include maintenance of cranes in heavy industry [W2531719466], maintenance in automotive production on engines and other components [W2800214149], or maintenance of printing machines in mobile service operations [W1582037079]. The studies in the field of maintenance are evenly distributed in terms of study design, with half of the AR systems tested in the field under realistic conditions.",
+              "citations": [
+                "W2531719466",
+                "W2800214149",
+                "W1582037079"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.1.2 Training",
+              "parent_subsection_id": "s_4_1",
+              "text": "In the training application field, we identified eight contributions. We assigned three of these eight contributions to assembly processes training [W2541220018, W2670575095, W2953472983]. Two of the contributions present AR-based systems for training building evacuation [W2990639944, W2976341962]. Two contributions investigate systems for training maintenance processes [W2892270157, W2991720677]. Beckmann et al. [W2936368369] describe different activities in learning on-site in the heating, ventilation, and air conditioning industry. The user studies in this area were mostly conducted in the laboratory on prototype AR systems. The study by Scott et al. [W2991720677] uses a survey to investigate technology readiness and AR and VR technology acceptance. In these studies, the address user training, no game elements are directly addressed, or the use of gamification is specifically mentioned.",
+              "citations": [
+                "W2990639944",
+                "W2976341962",
+                "W2892270157",
+                "W2991720677",
+                "W2936368369"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.1.3 Assembly",
+              "parent_subsection_id": "s_4_1",
+              "text": "The five contributions assigned to assembly deal with assembly assistance in the work process [W2286155249, W2984042658, W2949393039, W3158684294, W3039580023]. In terms of content, these contributions extend to examining different forms of interaction [W2286155249] or AR-based instructions versus other forms of information preparation [W3158684294]. Four user studies took place in the lab, and two of the applications were tested in a real-world work environment.",
+              "citations": [
+                "W2286155249",
+                "W3158684294"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4.1.4 Order Picking",
+              "parent_subsection_id": "s_4_1",
+              "text": "In the area of order picking, we identified two contributions. The paper by Minow et al. [UNMAPPED:55] compares two types of employee support in the picking process in a virtual environment. The contribution by Murauer [W2885281612] uses an employee survey to investigate the acceptance for the introduction of innovations on the shop floor.",
+              "citations": [
+                "W2885281612"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "55"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "4.1.5 Other",
+              "parent_subsection_id": "s_4_1",
+              "text": "In the category other, we have summarized all other application areas. These include indoor navigation in hazardous areas [W3040946599], the construction sector, and the associated digitization of construction sites [W2893962421, W3009899245], or the support of electronics manufacturing with AR smart glasses [W2809911785]. Contributions to which no user study could be assigned include review papers that address the use of industrial AR systems in different application fields. The review by Belletier et al. [W2986016753] addresses cognitive, social, and organizational psychology in the context of wearable cognitive systems. Boboc et al. [W3037197243] address the state of the art of AR research in the automotive industry. The review by Bottani and Vignali [W2810638738] addresses recent AR studies with a focus on manufacturing. These reviews were analyzed in terms of contributions to user acceptance.",
+              "citations": [
+                "W3040946599",
+                "W2893962421",
+                "W3009899245",
+                "W2809911785",
+                "W2986016753",
+                "W3037197243",
+                "W2810638738"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "In Table 3, we assigned the papers to the fields of application described in Section 3.5.1. The study design represents the conducted user studies. Here, we could identify surveys, laboratory studies, field studies, or combined laboratory and field studies. No user studies were conducted in the four identified review papers. The paper by Quandt et al. [W2811068961], which we have assigned to the field of maintenance, does not include a user study either. The paper examines industrial AR systems' requirements based on the literature and two case studies. Supplementary Table S1 shows the exact assignment of the analyzed papers to the fields of applications, the type of publication, and the information on the study design.\n\n**TABLE 3** | Categorization and study design of the identified contributions.\n\n{{TABLE:tbl_05}}",
+          "citations": [
+            "W2811068961"
+          ],
+          "tables_in_text": [
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 Technical Characteristics",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.2.1 Visualization Technology",
+              "parent_subsection_id": "s_4_2",
+              "text": "For the area of visualization technology, we identified eleven contributions with AR solutions on a handheld device, i.e., tablet or smartphone. Another 14 industrial AR systems were tested on a head-mounted display. The three spatial AR systems were implemented on a projector, while two of the applications were developed for a screen. A total of 30 AR devices were used in 24 identified user studies. Some of the studies were comparative, using different AR hardware types to support a work task [W2531719466, W2953472983, W2892270157, W2949393039, W3033971641]. Some studies did not use AR hardware because they were conducted early in the product development process. We discuss these in more detail in Section 4.4.",
+              "citations": [
+                "W2531719466",
+                "W2953472983",
+                "W2892270157",
+                "W2949393039",
+                "W3033971641"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.2.2 Interaction Method",
+              "parent_subsection_id": "s_4_2",
+              "text": "The interaction method is closely related to the AR hardware used, as shown earlier in Section 3.5.1. Different interaction methods can be used for each hardware type, so the number of 31 interaction forms does not correspond to the number of contributions studied. Seven of the eight identified contributions that use gesture-based control (see Figure 3) can be attributed to the use of AR data glasses [W2531719466, W2670575095, W2892270157, W2984042658, W3039580023, W3047389482, W2990295915]. Of the eleven papers that use touch interaction, four are attributed to the use of a smartphone [W2531719466, W2976341962, W3158684294, UNMAPPED:65] and five to the use of a tablet [W2800214149, W2990639944, W2976341962, W2286155249, W2896431518, UNMAPPED:67]. Stigall and Sharma [W2976341962] used both a smartphone and a tablet. Another form of interaction includes direct interaction with virtual objects, which was described in five papers [W2811068961, W2949393039, W3158684294, W2990295915, UNMAPPED:55].\n\n**FIGURE 3** | Analysis results of the contributions regarding visualization technology, interaction method.\n\n**Visualization Technology**\n\n{{TABLE:tbl_06}}\n\n**Interaction Method**\n\n{{TABLE:tbl_07}}",
+              "citations": [
+                "W2531719466",
+                "W2670575095",
+                "W2892270157",
+                "W2984042658",
+                "W3039580023",
+                "W3047389482",
+                "W2990295915",
+                "W2976341962",
+                "W3158684294",
+                "W2800214149",
+                "W2990639944",
+                "W2286155249",
+                "W2896431518",
+                "W2811068961",
+                "W2949393039"
+              ],
+              "tables_in_text": [
+                "tbl_06",
+                "tbl_07"
+              ],
+              "citations_unmapped": [
+                "65",
+                "67",
+                "55"
+              ]
+            }
+          ],
+          "text": "We introduced the items identified in each case in Section 3.5.1. The assignment of the technical characteristics to the individual papers is presented in the Supplementary Table S1.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3 Aims of the Studies and Relation to User Acceptance",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.3.1 Consideration of User Acceptance Aspects in User Studies",
+              "parent_subsection_id": "s_4_3",
+              "text": "In 19 of the 33 contributions, we examined aspects of user acceptance in user studies. A distinction must be made between user studies that focus on measuring performance metrics and studies in which the models are applied to investigate user acceptance. In the following, we discuss these differences based on the factors examined. A detailed analysis of the methods used and variables examined in these studies can be found in Supplementary Table S2. Of these 19 studies, the authors used questionnaires in all user studies to obtain users' opinions about the AR solutions tested. The studies by Alves et al. [W2949393039], Arntz et al. [W3040946599], and Serras et al. [W3033971641] examined the perceived Ease of Use. Alves et al. [W2949393039] focus on investigating performance measures in their user studies, e.g., workload, time for completion. Besides, the authors refer to the investigation of Ease of Use, which is not methodically investigated. Arntz et al. [W3040946599] primarily investigate flow, immersion, and usability. Ease of Use is part of the applied questionnaire on the AR Applications Attitude Scale (ARAAS). Serras et al. [W3033971641] focus on usability in their user study. The examination of Ease of Use is part of the applied usability study. In these studies, the focus is not on investigating user acceptance. User acceptance is a partial aspect of user studies primarily designed for performance but is not investigated with corresponding methods.\n\nThe studies by Aromaa et al. [W2531719466, UNMAPPED:65, UNMAPPED:67], Bosch et al. [W2984042658], Minow et al. [UNMAPPED:55], Stigall and Sharma [W2976341962], and Terhoeven et al. [W2809911785] refer to Davis' [W1791587663] TAM model for designing user questionnaires. In these studies, the factors perceived Usefulness and Ease of Use are examined. Bosch et al. [W2984042658] does not examine either factor despite referencing the TAM model. The study by Aromaa et al. [W2531719466] only examines the Ease of Use.\n\nCatal et al. [W2990639944] cite the TAM and TAM 2 models as references for their study and examine the factors perceived Usefulness and Ease of Use. Daling et al. [W2953472983] refer to TAM 3 and include media self-efficacy and perceived enjoyment in their study in addition to the two previously mentioned factors. Lee et al. [W3047389482] refer to TAM and UTAUT and investigate user satisfaction and behavioral intention in addition to the two previously mentioned factors of TAM. Loch et al. [W2541220018] incorporate items from TAM 3 into their user questionnaire. These include perceived Ease of Use, perceived external control, and perceived enjoyment. Min et al. [W3158684294] integrate items from UTAUT into their questionnaire. In this study, the factors performance expectancy, effort expectancy, attitude toward using, and behavioral intention to use are addressed.\n\nIn the studies by Helin et al. [W2892270157], Masood and Egger [W2984042658], and Park et al. [W2990295915], user acceptance is mentioned as a factor to be investigated. These studies do not include any of the standard models in their study and do not systematically examine the factors associated with user acceptance. Most of the studies mentioned in this category examine other factors in their user studies, such as task completion time [W2541220018, W2990639944, W2286155249, W2984042658, W2949393039, W3158684294, W3047389482, W2990295915], perceived usability [W2531719466, W2892270157, W2984042658, W3158684294, W3040946599, W2809911785, W3033971641, W2990295915, W2896431518, UNMAPPED:55], or perceived workload [W2541220018, W2953472983, W2984042658, W2949393039, W3158684294, W2990295915].",
+              "citations": [
+                "W2949393039",
+                "W3040946599",
+                "W3033971641",
+                "W2531719466",
+                "W2984042658",
+                "W2976341962",
+                "W2809911785",
+                "W1791587663",
+                "W2990639944",
+                "W2953472983",
+                "W3047389482",
+                "W2541220018",
+                "W3158684294",
+                "W2892270157",
+                "W2990295915",
+                "W2896431518"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "65",
+                "67",
+                "55"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.3.2 Integration of User Acceptance Factors in AR System Design, Development, and Evaluation",
+              "parent_subsection_id": "s_4_3",
+              "text": "We assigned eight papers to our second category that deal with integrating user acceptance factors in the design, development, and evaluation of AR systems. These studies investigate user acceptance factors in this context but do not include them in a user study. Beckmann et al. [W2936368369] present an evaluation concept for on-site learning using AR and VR technologies. In this concept, the authors have integrated elements of TAM, which should be considered in the evaluation of such applications, besides usability, VR sickness, or presence.\n\nThe review by Belletier et al. [W2986016753] investigates person-job fit in the context of wearable cognitive systems and proposes both the Job Characteristics Model and the TAM for investigation. By considering the factors of perceived Usefulness and perceived Ease of Use, the authors expect to improve user acceptance in developing and studying cognitive assistance systems in an industrial work environment.\n\nIn their review, Boboc et al. [W3037197243] considered the state of research of AR-based systems in the automotive industry. The authors have mentioned some contributions regarding user acceptance, such as Jetter et al. [W2800214149] or Egger and Masood [W2992509920]. Besides these contributions, which we also included in this review, the authors found that user acceptance does not significantly impact the reviewed studies.\n\nBottani and Vignali [W2810638738] focus on AR studies in industry, especially in manufacturing. In their review, they note that only 18 of 67 technical papers contain a user study. For the papers with a user acceptance study, Bottani and Vignali [W2810638738] elaborated that Ease of Use is mainly addressed regarding user acceptance and often studied together with performance measures, such as the time saved compared to other solutions or reducing the error rate.\n\nEdirisinghe [W2893962421] reviews the smart construction site of the future. The author addresses the importance of user acceptance as a critical factor. However, very few studies are identified that already address technology's evaluation from the social or human perspective. Therefore, the author calls for a more intensive involvement of users in defining requirements and the development of technical assistance systems in the future.\n\nIn their paper, Masood and Egger [W2921205582] examined the determining factors for the success of industrial AR systems. In their study, the authors surveyed 84 participants using the technology, organization, and environment model to examine the adoption and implementation of innovations in the context of AR. The study results show the importance of including organizational factors in predicting the adoption of new technologies, besides a functional technical implementation. In their qualitative analysis of the study results, Masood and Egger [W2921205582] identify user acceptance, visibility of information, efficiency improvement, ergonomics, and usability as the most crucial success factors of industrial AR systems.\n\nIn the contribution of Quandt et al. [W2811068961], general requirements for the development of industrial AR systems are identified and evaluated and extended based on two use cases. The authors suggest the consideration of user acceptance factors in future studies.\n\nThe paper by Werrlich et al. [W2670575095] performs a demand analysis for AR-based training of engine assembly and maintenance in the automotive industry. The authors raise requirements for increasing the acceptance of such training assistance systems.",
+              "citations": [
+                "W2936368369",
+                "W2986016753",
+                "W3037197243",
+                "W2800214149",
+                "W2992509920",
+                "W2810638738",
+                "W2893962421",
+                "W2921205582",
+                "W2811068961",
+                "W2670575095"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.3.3 Adaption of User Acceptance Models and Theories for Industrial AR Systems",
+              "parent_subsection_id": "s_4_3",
+              "text": "In six papers, which we assigned to our third category, we could find aspects of adaptation of existing models and theories for predicting or evaluating user acceptance in the context of industrial AR systems. Due to the direct reference of models and theories of user acceptance to industrial AR systems, we relate these approaches to the respective technical characteristics of these studies.\n\nElshafey et al. [W3009899245] investigate in their paper the acceptance and adoption of AR in the context of Building Information Modelling. In a user survey based on the constructs of TAM 3, the authors identify the relevant factors of the model in relation to their use case. Their result presents the following constructs as relevant as a result of factor analysis: perceived Ease of Use, perceived Usefulness, perceived enjoyment, image, computer anxiety, job relevance, voluntariness, behavioral intention, result demonstrability, and perception of external control. This use case is not based on a concrete technical implementation of an AR system. Therefore, no connection to visualization technology and the associated interaction concepts can be made in this case.\n\nIn Jetter et al. [W2800214149], the authors first identified KPIs for AR use in automotive maintenance. KPIs are related to TAM, and the authors identify the relevant constructs of user acceptance for this study in a questionnaire-based study. By testing the adapted model on a market-ready AR solution to support maintenance processes, the authors were able to verify the relationships between the selected TAM constructs for the chosen application context. In this case, the technical implementation of the AR system took place on a handheld (tablet) with a touch-based interaction.\n\nThe contribution of Murauer [W2885281612] aims at increasing the acceptance of innovations in order picking by involving employees on the shop floor. For this purpose, the authors address the Diffusion of Innovation theory and interview fourteen employees regarding their requirements for AR-based systems. The results of this study show that user involvement in the adoption of new technologies has been low, and the inclusion of user requirements should be sought at an early stage of development to increase adoption. In this paper, the acceptance study refers to the use of an HMD. The study takes place before implementing an assistance system. Therefore, there is no reference to interaction forms.\n\nRapaccini et al. [W1582037079] investigate the acceptance of a mobile collaborative AR system for field services maintenance based on a field study. For this purpose, the authors conducted a user survey among 65 service technicians based on the field study results with a system prototype related to TAM. The authors were able to find that behavioral intentions to use AR in field services were mostly affected by the perception of Usefulness, and only indirectly impacted by the perceived Ease of Use. According to the authors, extending the TAM-based study to include task-technology fit aspects may further increase predictive accuracy for technology use. In this paper, the AR system was implemented on an HMD. Users cannot interact with the system; the HMD is used as a pure display device in this case. The control is done remotely via a desktop computer.\n\nScott et al. [W2991720677] conduct a management-level survey of 15 companies to determine the technology readiness and acceptance of AR and VR technologies to support maintenance training. This survey bases on the constructs of the UTAUT. The developed model aims to determine the contextual and organizational factors for unlocking the potential of visualization technologies for small and medium enterprises. This study did not include a technical implementation of an AR system. Therefore, no insights can be gained concerning the technical characteristics.\n\nIn their paper, Wild et al. [UNMAPPED:68] use experts to develop an adapted model of technology acceptance for wearables and AR in the aviation and space sector. For this purpose, 15 experts first weight constructs from various user acceptance models, such as UTAUT 2 or TAM 3. From the large number of factors considered, the authors select 20 constructs from the results of this expert survey for a user questionnaire that includes the current trends for this area and contains constructs such as interoperability, learnability, and privacy as well as hedonic quality, among others. The study by Wild et al. [UNMAPPED:68] does not include a technical implementation of an AR system. Therefore, no insights can be gained for the use of visualization technology and interaction method.",
+              "citations": [
+                "W3009899245",
+                "W2800214149",
+                "W2885281612",
+                "W1582037079",
+                "W2991720677"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "68"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_3_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4.3.4 Summary of Interim Results in Relation to Research Questions 1 and 2",
+              "parent_subsection_id": "s_4_3",
+              "text": "From the results presented, we have answered the first two research questions of this paper. The first question deals with the state of research regarding the investigation of user acceptance in the context of industrial AR systems. For this question, we were able to present how application contexts address user acceptance so far and what kind of studies have been conducted (see Section 4.1). Furthermore, we described the technical characteristics of these solutions in Section 4.2 that show the technical implementation of the investigated industrial AR systems. Finally, in this section, we were able to elaborate that most studies integrate aspects of user acceptance into user studies that include the collection of performance metrics, usability, or workload, among others. A smaller number of papers deal with the adaptation of technology acceptance models to introducing AR-based systems in different industrial application fields. Depending on the use case, studies address different factors of user acceptance. In four of the six identified papers, the studies on user acceptance were conducted independently of implementing an AR system. In three of the studies, the acceptance study refers to a specific visualization technology, and only one of the AR systems allows interaction by users. The identified link to the use of gamification (see Section 2.1) and the potential increase in user engagement and accentuation were not addressed in the papers studied.\n\nThe second research question addresses relevant aspects related to the study of user acceptance in the context of industrial AR systems. Numerous identified papers invoke Davis's TAM and the two central constructs of this model, \"perceived Usefulness\" and \"perceived Ease of Use.\" These studies predominantly include questionnaires that elaborate on these constructs on user studies of AR prototypes. Some studies investigate the adaptation from the models and theories of user acceptance to industrial AR systems implementation and include additional constructs in the investigations. These model adaptations have been very few and limited to specific industrial use cases so far.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "We divided the 33 contributions into the three categories mentioned in Section 3.5.2 concerning user acceptance. These categories distinguish the consideration of user acceptance aspects in the context of user studies, the integration of user acceptance constructs in the evaluation of the systems, and the adaptation of existing user acceptance models and theories.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4 User Acceptance in the Context of the Product Lifecycle",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.4.1 Papers Assigned to the Realization Phase",
+              "parent_subsection_id": "s_4_4",
+              "text": "From Table 4, we can observe a strong focus on the \"realization\" phase. All papers assigned to this phase deal with user testing of AR prototypes in laboratory or field tests. The studies investigate user acceptance factors in questionnaires to users, usually completed after the user tests. The results of comparative user studies establish user preference for the tested AR solution over other assistance technologies [W2541220018, W3047389482] or different AR implementation variants [W2949393039, W3040946599]. Other studies find positive user acceptance [W2531719466, W2990639944], good Ease of Use [W1582037079, W2953472983, W3033971641, UNMAPPED:65] of the tested solution. Some studies do not present substantial findings on user acceptance but announce further research in this direction [W2670575095, W3158684294, W2990295915, UNMAPPED:55]. Rapaccini et al. [W1582037079] found in their study that the behavioral intention to use the AR system in field service depends more on the perceived Usefulness than on the Ease of Use. Regarding user acceptance factors, Loch et al. [W2541220018] concluded that there is a significant effect of Ease of Use on user intention and a strong effect of perceived enjoyment on use intention.\n\nIn addition to the studies' results related to user acceptance, the studies identified challenges and limitations. Several studies identify the lack of ergonomics of the hardware used, especially in the context of smart glasses [W1582037079, W2953472983, W2984042658]. Furthermore, the studies mention physical discomfort [W2984042658, W3047389482] or the limited field of view as limitations in the hardware context [W2984042658, W2949393039]. Aromaa et al. [UNMAPPED:65] express the following additional concerns by users about the introduction of AR-based systems in an industrial work environment: attitude toward new technology, lack of knowledge to use the system, lack of added value, language barriers, robustness in harsh environments, system complexity, location accuracy, system integration, and connectivity. Some authors state the transferability and generality of the study results as a limitation. Alves et al. [W2949393039] find that the task's complexity in their study does not correspond to that of an actual task in the industrial environment. Other authors point out that further studies need to be conducted in a real working environment [W2541220018, W3040946599], or their study considered only one specific use case [W2800214149]. Therefore, some authors suggest increasing the studies' validity by integrating further models [W2800214149, W1582037079].",
+              "citations": [
+                "W2541220018",
+                "W3047389482",
+                "W2949393039",
+                "W3040946599",
+                "W2531719466",
+                "W2990639944",
+                "W1582037079",
+                "W2953472983",
+                "W3033971641",
+                "W2670575095",
+                "W3158684294",
+                "W2990295915",
+                "W2984042658",
+                "W2800214149"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "65",
+                "55"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.4.2 Papers Assigned to the Definition Phase",
+              "parent_subsection_id": "s_4_4",
+              "text": "We assigned eight studies to the \"definition\" phase of the PLC. Of these eight studies, five focus on the requirements for industrial AR systems in the respective application context [W2811068961, W2670575095, W2991720677, W2885281612, W2809911785]. The results of these studies highlight the importance of including user requirements and user participation in the development process for user acceptance of industrial AR systems. Terhoeven et al. [W2809911785] identified age effects associated with a lower expectation of older employees' perceived usefulness. The other three papers assigned to this phase adapt models and theories of user acceptance to a specific use case to assess AR technology's acceptance and adoption in this domain.\n\nWild et al. [UNMAPPED:68] examine items from the UTAUT, TAM3, UTAUT2, and TPB models for the use of wearable technology and AR in aviation, medicine, and space. The result is a questionnaire with the 20 most relevant items for this field. This study bases on the assumption that models of technology acceptance need to be adapted to current trends. The results of this study can be summarized as follows: the authors added constructs on interoperability, learnability, and privacy to the questionnaire; hedonic quality and performance gains are important for users; there is a demand for usability testing on issues concerning increase in productivity, precision, and live feedback; the users show a lack of concern for privacy issues.\n\nMasood and Egger [W2921205582] use the TOE (technology, organization, and environment model) to investigate the determining factors influencing industrial AR systems' implementation success. User acceptance, visibility of information, efficiency improvement, ergonomics, and user interface usability are the most crucial factors identified in their qualitative analysis. The authors see the technical implementation as the basis for the AR systems' success, but the organizational aspects and the users must not be neglected.\n\nElshafey et al. [W3009899245] adapt the TAM 3 for the application field construction and derive the following results. They find that perceived Usefulness is rated higher than Ease of Use regarding the intention to use the system and that perceived enjoyment directly affects Ease of Use. Further results show that job relevance has a direct influence on perceived Usefulness, and voluntariness has a direct influence on Ease of Use and Usefulness. This study's limitation lies in the limited scope and sample size of the study, which makes results not generally applicable.",
+              "citations": [
+                "W2811068961",
+                "W2670575095",
+                "W2991720677",
+                "W2885281612",
+                "W2809911785",
+                "W2921205582",
+                "W3009899245"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "68"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_4_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.4.3 Summary of Interim Results in Relation to Research Question 3",
+              "parent_subsection_id": "s_4_4",
+              "text": "From Table 4, we can infer that most of the identified studies refer only to one phase of the PLC. Only individual studies have a focus that spans multiple phases of the PLC. Rapaccini et al. [W1582037079] test a prototype of an AR system in a field study. From the field study analysis, the authors conducted a broad user study based on the TAM. Jetter et al. [W2800214149] investigate the relationship of KPIs for the maintenance in automotive production with user acceptance constructs. On this basis, the authors conduct a TAM-based user study. Overall, we can conclude that many of the studies do not continue. Most of the studies were published in the last 3 years due to the chosen period under consideration. However, we could also not identify continuing studies for older studies, as announced in many papers. In our view, this effect is related to the short innovation cycles of AR hardware. Of the 20 studies assigned to the realization phase, one study [W2892270157] was conducted in 2018, and six studies [W2953472983, W2984042658, W3040946599, W3033971641, W3047389482, W2990295915] were conducted in 2020 using Microsoft HoloLens. Due to the second version of these AR smartglasses, we do not expect these studies to continue. Despite the predominant high acceptance of the tested AR systems by users, there is no widespread adoption of AR technology in the industrial application fields. We assume that this is related to the lack of acceptance of the solutions in the companies and the lack of maturity of the available AR hardware so far.\n\nBased on the results presented in this section, we can answer the third research question: How can user acceptance be included in future studies of industrial AR systems? The numerous studies in different industrial application fields with prototypes of AR-based systems show that user acceptance is increasingly seen as an essential factor for AR systems' success. In these studies, the TAM application is predominant so far, other models are also mentioned, and individual factors are integrated into user questionnaires. The studies collect their findings on user acceptance factors besides other quantitative and qualitative data, such as task completion times or user experience factors. Some studies have looked at specific use cases and adapted models of user acceptance according to the requirements of these fields of application. Due to the chosen focus, these do not show general validity so far. Overall, we can state that the research community recognized the fundamental need to investigate user acceptance in the context of industrial AR systems. The selection of relevant factors is closely related to the corresponding use case. A generally applicable procedure does not yet exist.",
+              "citations": [
+                "W1582037079",
+                "W2800214149",
+                "W2892270157"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "In Table 4, we have assigned the studies to the phases of the PLC according to Stark [W4246474451]. Besides, we have sorted the papers according to the year of publication. In total, we were able to assign 29 of the 33 papers. The individual assignment of the analyzed papers to the PLC phases is presented in Supplementary Table S1. We excluded the review papers from this analysis.\n\n**TABLE 4** | Phase of the product lifecycle and year of the contributions.\n\n{{TABLE:tbl_08}}",
+          "citations": [
+            "W4246474451"
+          ],
+          "tables_in_text": [
+            "tbl_08"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we present the results and answer the research questions. The section begins with a categorization of the contributions as well as the user studies conducted. The studies' objectives follow the presentation of the technical characteristics of the studied contributions in terms of investigating user acceptance. From these results, we can answer the first research question. Section 4.3 analyzes the methods used to conduct user studies and the factors studied concerning user acceptance. These results allow us to answer the second research question. Finally, we present the user studies in the context of the PLC. In conjunction with the results and limitations of the studies, we can answer the third research question.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 Conclusion and Outlook",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this systematic review on user acceptance in the context of industrial AR systems, we identified contributions to the areas of the state of research, the state of integration of specific factors of user acceptance, and the future integration of user acceptance in the development and evaluation of industrial AR systems. This paper presents the addressed application fields and the study design of the 33 contributions. We assigned most contributions to the application fields of maintenance, training, and assembly and found that the study design mainly includes laboratory studies of system prototypes. Most of the field studies in a realistic work environment occur in the area of maintenance; some field studies occur in the assembly area. All other domains refrain from field studies of their AR systems. The user tests under laboratory conditions, which mainly occur with non-specialist personnel, confirm the results of other reviews, which also found few user tests of industrial AR systems under realistic conditions [W2802609531].\n\nThe systems' technical characteristics show an almost even split between handhelds and HMDs in terms of the hardware used. Especially for assembly workstations, projection-based solutions are implemented. The interaction is closely related to the selected hardware. Some studies investigate different AR design options, e.g., Arntz [W3040946599], compared with other technical implementations compared, e.g., Minow [UNMAPPED:55]. Only two of the considered studies investigate an interaction concept. However, in these contributions, the user acceptance's systematic recording is not in focus [W2286155249, W3033971641]. In the studies presented, which apply the models and theories of user acceptance to a concrete use case (Section 4.3), we found that only two of these six studies are directly related to an implemented AR system. Therefore, we see a need in the future to link these use-case-related studies to the design of an AR system. This way, insights into accepting different visualization technologies and interaction methods in concrete industrial use cases can be gained.\n\nIn 19 of the 33 investigated contributions, user acceptance is included in user studies that survey different factors, e.g., user experience, workload. In eight of the 33 contributions, the consideration of user acceptance took place in a larger context. These contributions address the general inclusion of user acceptance factors in the context of different industrial use cases. In this context, the authors note that user acceptance has not been considered in many studies to date and suggest integrating it into future studies. In six of the 33 studies, the authors adopt models and theories of technology acceptance to specific use cases. These studies build on the TAM, TAM3, Diffusion of Innovation, UTAUT, and UTAUT 2 models. The results of these studies are limited in terms of general transferability since there is a direct reference to a specific use case in each case.\n\nWe can make factual statements about the factors taken into account, particularly the questionnaire-based evaluation studies conducted. The authors predominantly integrate TAM constructs, perceived Ease of Use, and Usefulness into their studies. The adapted models address further factors, e.g., enjoyment, behavioral intention. The investigation of these factors' general effectiveness on user acceptance for industrial AR systems in a broader application context has yet to be conducted.\n\nFrom the assignment of the investigated contributions to the PLC phases, we gained the insight that only a few studies can be assigned to more than one phase of the PLC. Furthermore, studies generally do not continue after a user study has been conducted to test a prototype, regardless of positive user feedback. We suspect that this is mainly related to the short innovation cycles of AR hardware.\n\nThe systematic performance of the review ensures reproducibility. This review follows the approach developed by Booth et al. [W336930913] that has been applied by other reviews in the AR field [W2735210942, W2992509920] that were named in Section 3.1 as the foundation for this review. Consideration of previous reviews in the topic area during the planning phase of this review (see Section 3.1) resulted in the limitations of the review to the five selected databases and the selected period of reviewed papers. With the use of a systematic approach and the care taken in the search and evaluation of the identified articles, the authors assume that they have found a representative sample of literature. Potential limitations of the literature search and assessment are described in Section 3. The authors intentionally limited the time span of the review to a period starting in 2011 due to the rapid technological advancements in the field of AR. Due to the focus on industrial use cases, we selected appropriate databases for the search. By including other databases, such as Google Scholar (https://scholar.google.com/) or Ebsco (https://www.ebscohost.com/), and expanding the time span, the findings of this review can be extended. Another approach to extend the review results is to expand the search to the entire text body.\n\nIn addition, during the research, we observed that a large number of reviews have emerged in the topic area of industrial AR since 2018, as there are a large number of research studies on the topic, which are related to the current AR hardware, especially HMDs. Assuming continued high momentum of new AR hardware, many more relevant results will emerge in the following years.\n\nTo further investigate user acceptance, the studies must be continued, and further insights gained. Studies in the natural application field with real end-users can provide further insights into user acceptance of AR systems in the industrial work context. In this context, the further development of AR hardware also plays a role. So far, the ergonomics of the hardware, especially the HMD, is not yet ideal. From our perspective, further research is needed that investigates the combination of factors that allow a holistic evaluation of the use of industrial AR systems in a reasonable effort to conduct the study. The interaction between humans and technology plays an important role. In this context, user acceptance has been studied only very sporadically so far. We see a focus on future research in this area in order to be able to exploit the potential of AR technology in industrial use.\n\nIn the future, existing studies can be used as a starting point for conducting studies to investigate user acceptance in the context of industrial AR systems. The studies presented in this review take exciting approaches that can be applied to the respective industrial use cases. Jetter et al. [W2800214149] combine the recording and analysis of performance measures, e.g., task execution times and workload, with TAM constructs. The authors combine user studies on systems performance in the industrial work context with studies on user acceptance. Other authors, e.g., Elshafey et al. [W3009899245] and Rapaccini et al. [W1582037079], have investigated the relevance of aspects of user acceptance for a specific industrial use case and conducted user studies on technology acceptance in their application domain. Scott et al. [W2991720677] and Wild et al. [UNMAPPED:68] use the approach of having the constructs of different models of user acceptance first evaluated by experts on the management level for relevance to the particular use case and then applied in a corresponding study. The findings of these existing studies should be integrated. User studies could capture and analyze the relevant performance measures and user acceptance factors relevant for the specific use case. Another research direction is the transfer of the findings of existing studies to other industrial use cases. Based on the analyzed body of literature, the authors conclude that no standardized procedure has yet emerged for investigating user acceptance factors for industrial AR systems but that the approaches presented here provide a reasonable basis for further studies.\n\nIn addition, we see the need to transfer the approaches for the design and use of AR technology from other application areas, where AR is already successfully used, to the industrial use of AR. Games, in particular, can serve as a template, as they already reach many users and offer insight into which aspects play a decisive role in user acceptance of such applications. For example, S\u00f6bke et al. [W2724720734] were able to find out from the example of the AR game Ingress that the adaptation of the game to the user's abilities or the possibilities for social interaction plays a vital role for the user acceptance. Especially concerning the intuitive design and the ease of interaction between humans and the AR system, we want to gain insights into the design of industrial assistance systems, e.g., from the study of Harborth and Pape [UNMAPPED:69] on user acceptance of Pok\u00e9mon Go. In this context, incorporating gamification elements is also promising, as they can increase user acceptance of AR applications, as described in Section 2.1. This review could show that the integration of gamification elements in the context of industrial AR applications has received little or no attention so far. This gap should be closed by developing industrial AR systems including gamification elements and by studying the effects on user acceptance.",
+      "citations": [
+        "W2802609531",
+        "W3040946599",
+        "W2286155249",
+        "W3033971641",
+        "W336930913",
+        "W2735210942",
+        "W2992509920",
+        "W2800214149",
+        "W3009899245",
+        "W1582037079",
+        "W2991720677",
+        "W2724720734"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "55",
+        "68",
+        "69"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Author Contributions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Conceptualization, MQ and MF; methodology, MQ; formal analysis, MQ; investigation, MQ; resources, MQ; data curation, MQ; writing-original draft preparation, MQ; writing-review and editing, MF and MQ; visualization, MQ; supervision, MF.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Acknowledgments",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The authors would like to thank the German Federal Ministry of Economic Affairs and Energy (BMWi) for their support within the project \"compARe \u2013 Optimization of the maintenance of wind turbines by using image processing methods on mobile augmented reality devices\" (grant number 03EE3034A). Further thanks are directed to the central research funding of the University of Bremen, which made it possible for Mr. Moritz Quandt to spend a research period at the KTH Royal Institute of Technology in S\u00f6dert\u00e4lje, Sweden, through the BremenIDEA program. This stay at the department for Sustainable Production Development contributed significantly to the realization of this paper.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Supplementary Material",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The Supplementary Material for this article can be found online at: https://www.frontiersin.org/articles/10.3389/feduc.2021.700760/full#supplementary-material",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_4",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4200314654_tables.md"
+}

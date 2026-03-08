@@ -1,0 +1,623 @@
+{
+  "id": "W3110304695",
+  "metadata": {
+    "title": "A Systematic Review of Personalized Collaborative Systems",
+    "n_sections": 8,
+    "n_subsections": 13,
+    "n_subsubsections": 17,
+    "n_tables": 9
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1. Collaborative Systems",
+          "subsubsections": [],
+          "text": "Humans as social beings are inherently used to working together in groups. The urge to work together with others is deeply anchored in our nature and dates back at least until the prehistoric times when early hunters and gatherers saw advantages in doing these activities together to increase effectiveness, efficiency, and have safeguarding against failure. To arrive at a more precise definition of what the phrase \"working together\" means, we suggest the definition of London [UNMAPPED:1] who holds that collaboration is working together synergistically, and therefore, differs from other forms of group work, such as coordination or cooperation. Denning and Yaholkovsky [W2050923892] agree insofar, as they also see coordination (\"regulating interactions so that a system of people and objects fulfills its goals\") and cooperation (\"playing in the same game with others according to a set of behavior rules\") as weaker forms of working together, compared to collaboration, which they generally describe as the \"highest, synergistic form of working together\" and detail as \"creating solutions or strategies through the synergistic interactions of a group of people.\"\n\nOne of the most traditional and maybe the most popular model to facilitate the description of collaboration processes is Johansen's popular time-space matrix [W1598048033]. The matrix allows for a categorization of collaboration or related groupware along the two dimensions time (\"same time\" or synchronous vs. \"different time\" or asynchronous) and space (\"same place\" or co-located vs. \"different place\" or remote). For instance, a call on a video conferencing system or a brainstorming session on a shared web-based whiteboard would be classified as synchronous remote interaction, whereas a traditional bulletin board enables asynchronous remote interaction. Examples for synchronous and co-located interactions are interactive sessions on a tabletop computer or a large vertical shared display. A note left on a whiteboard to be read by another person at a later point in time is an example for asynchronous, co-located interaction.\n\nWhile hunter and gatherer societies were almost exclusively restricted to synchronous, co-located collaboration (maybe apart from leaving asynchronous messages on cave walls) and even more recent settings, such as collaboration around interactive tabletops [W2123110920, W2116255352] were traditionally easy to classify as either synchronous or asynchronous and remote or co-located, today's flexible work environments involve settings which are best described as highly dynamic and flexible in nature, often switching forth and back between remote and co-located or synchronous and asynchronous work (often even in parallel). At the same time, recent advancements in technology have led to better support of these settings. As a consequence, this would mean that all four quadrants of the matrix might play a role in one single collaborative setting and a clear distinction is not possible anymore. Very recently, a mixed form of all these different characteristics was described as hybrid collaboration by Neumayr et al. [UNMAPPED:6]. Nevertheless, the distinction between remote and co-located and synchronous and asynchronous remains an important tool for describing the nature of collaboration [UNMAPPED:7]. The distinction, mainly between remote and co-located, is further used to classify papers retrieved throughout the review described in this article.\n\nIn the context of this article, we define collaborative systems, as such interactive systems that provide support in one form or another for collaborative use, that is, they allow and actively support the synergistical group work processes of a number of either co-located and/or remote individuals, including hybrid collaboration.",
+          "citations": [
+            "W2050923892",
+            "W1598048033",
+            "W2123110920",
+            "W2116255352"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "subsection_id": "s_1_2",
+          "subsection_index": 2,
+          "subsection_label": "1.2. Adaptation and Personalization",
+          "subsubsections": [],
+          "text": "According to Oppermann and Rasher [UNMAPPED:8], there is a wide spectrum of adaptation in interactive systems spanning from mere user-initiated adaptability to fully system-driven adaptivity. Personalization has the aim of supporting individual users according to their special needs and prerequisites and can in principle be achieved through all stages of this spectrum, from merely configurable systems without system initiative to pure adaptivity without any possible user interference. For instance, Oppermann and Rasher [UNMAPPED:8] mention automated selection of explanation granularity based on a user model in the learning system context as an example for \"system-initiated adaptivity (no user control).\" Audio adjustment and selection among various alternatives of control objects, which provide the same functionality, are listed as features of \"user-initiated adaptability (no system initiation).\" While adaptability might often have the disadvantage of a high effort that is necessary to achieve personalization, the upside is that the user is in full control. On the other hand, adaptivity needs only few cognitive resources from users with the danger of them not feeling in control of what is happening. Within the spectrum of adaptation (which Oppermann and Rasher [UNMAPPED:8] use to refer to both adaptivity and adaptability), there is a broad range of possible gradations, such as \"System-initiated adaptivity with pre-information to the user about the changes\" close to the system-initiated adaptivity extreme or \"User-desired adaptability supported by tools (and performed by the system)\" close to the user-initiated adaptability extreme. Somewhat in the middle of the spectrum, Oppermann and Rasher [UNMAPPED:8] see \"User selection of adaptation from system suggested features.\"\n\nAs described in Augustin and Neumayr [W3169328021], the study of personalization in recent decades has mainly focused on the personalization of content (e.g., recommendation of items), navigation (e.g., recommendation of personalized paths through an item collection), and presentation (e.g., adaptation of input element size or selection of colors) to an individual's needs and preferences in different domains.\n\nPopular domains are e-commerce [W1570159982, W2277199892], e-learning [W1572673819, W1494875187], music [W2228467293, UNMAPPED:14], or movie recommendation [UNMAPPED:16, UNMAPPED:17].\n\nIn the domain of e-commerce, personalization is most commonly established through recommendation of products based on a user's past interaction with the system or a user's reported preferences. In the domain of e-learning, personalization involves recommendation of learning content based on previous knowledge and past performance. In the music and movie domain, personalization is most often seen in form of personalized recommendations of movies or other video items, songs, or artists based on past interaction (e.g., viewing or listening behavior).\n\nFurther research on personalization for the individual has been done under the notion of personalized HCI [UNMAPPED:18], for instance, in the concrete form of adaptive user interfaces [UNMAPPED:19, UNMAPPED:20, UNMAPPED:21] or personalization of input or output processes [W3169328021, W2158130108, UNMAPPED:23]. For instance, personalized HCI might include personalized arrangement of input elements on a user interface, the personalization of output modalities, or automated selection or recommendation of input devices, often considering a user's motor or cognitive impairments.",
+          "citations": [
+            "W3169328021",
+            "W1570159982",
+            "W2277199892",
+            "W1572673819",
+            "W1494875187",
+            "W2228467293",
+            "W2158130108"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "8",
+            "14",
+            "16",
+            "17",
+            "18",
+            "23"
+          ]
+        },
+        {
+          "subsection_id": "s_1_3",
+          "subsection_index": 3,
+          "subsection_label": "1.3. Personalization for Collaboration and the Need for a Systematic Review",
+          "subsubsections": [],
+          "text": "All the diverse endeavors in the different domains are aimed at improving the use of the more general term interactive systems. In addition, they are united in their efforts to support an individual user as optimally as possible. Personalization has traditionally and commonly been inherently understood as individualization, that is, emphasizing aspects like modeling individual users' characteristics as profoundly as possible or tailoring content, system or user interface components to these characteristics as accurately as possible (see Section 1.2).\n\nOne aspect that, however, seems to be comparably understudied lies in personalized support of individual users as part of a group or of the group as a whole. There is profound ground work for such efforts stemming from different domains, such as CSCW, psychology, or sociology. For instance, there are multiple studies on team composition and its potential effect on group work success. For example, Horwitz and Horwitz [W2100320021] suggest teams with substantial skill diversity, Lykourentzou et al. [UNMAPPED:25] propose team compositions based on balanced personality types, and Kim et al. [UNMAPPED:26] present research on the effects of gender balancing in teams. G\u00f3mez-Zar\u00e1 et al. [UNMAPPED:27] further suggest using a combination of several factors, such as \"warmth skills\" (e.g., creativity, leadership experience, and social skills), bonding, and bridging capital to arrive at good team constellations.\n\nYet, in our observation, only few of these findings have been taken up as a basis for automated (i.e., primarily system-driven) personalization for collaborative work (or groups in general). A second observation that motivated us to systematically review research on PCS was that related work seemed to be spread across several domains (and might thus be harder to gain an overview for researchers).\n\nTherefore, in this article, we provide an SR of relevant literature in the ACM Digital Library (DL) in order to study personalization in and for collaborative systems. In this review, we do not exclude any parts of the adaptivity\u2013adaptability spectrum, but lean more toward the adaptivity side because in collaborative systems the burden of a high cognitive load is often further increased through the social interactions that come along their usage, rendering additional configuration efforts unmanageable.\n\nIn the context of this article, we define PCS as follows: \"Personalized Collaborative Systems are systems that provide any kind of explicit or implicit personalized support for the individuals in a group or a group as a whole, to aid group processes.\" Thus, systems or approaches that provide only individual support (but without a group context or collaboration aspect) as well as systems that offer collaboration tools but do not provide any kind of personalization are not PCS according to our definition.",
+          "citations": [
+            "W2100320021"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "25",
+            "26",
+            "27"
+          ]
+        },
+        {
+          "subsection_id": "s_1_4",
+          "subsection_index": 4,
+          "subsection_label": "1.4. Structure of the Article",
+          "subsubsections": [],
+          "text": "This article is structured as follows. Section 2 describes in detail our approach to the systematic literature review comprising the planning of the review and the actual execution. Section 3 presents our main findings concerning a thematic overview, scientometrics, paper types, domains, research directions, the foundations of adaptation and personalization, and study types of the publications. In Section 4, we discuss a taxonomy of personalized collaborative systems that gives an overview over the types of adaptation/personalization as well as collaboration support or tools for each of the publications, while Section 5 concludes the article.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Personalized Collaborative Systems (PCS) are a relatively young research field at the intersection between human\u2013computer interaction (HCI), computer-supported cooperative work (CSCW), psychology, and sociology but also more technically oriented fields, such as User Modeling, Recommender Systems, Machine Learning, and Data Mining. This disciplinary breadth makes PCS highly interesting for several application and research domains, on the one hand, but harder to capture in its entirety, on the other hand. To the best of our knowledge, there is no systematic review (SR) on PCS yet, neither is there a common understanding or definition of PCS across the various communities.\n\nIn this article, we aim at (i) providing a concise overview of PCS, (ii) establishing common ground and a shared understanding based on the intersection of work in different domains, and (iii) suggesting a general definition of PCS. In order to achieve these goals, we conducted a systematic literature review (see Section 2).\n\nThe following sections describe in further detail the most closely related fields behind PCS. A PCS inherently involves personalization as well as collaboration aspects. We thus provide relevant definitions related to these fields to be referred to throughout this article.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Systematic Review Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Planning the Review",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.1.1. Research Questions",
+              "parent_subsection_id": "s_2_1",
+              "text": "Our general research goal (provides a systematic overview of existing work on PCS) can be detailed through the following concrete sub-questions to be answered by the SR:\n\n- RQ1: Is there research that can be categorized as PCS according to our definition (see Section 1.3)?\n- RQ2: What domains are relevant for PCS and what domains make use of PCS?\n- RQ3: In what way (e.g., empirical study, system, or tool description) is work on PCS presented?\n- RQ4: Since when (approximately) is research on PCS reported and how did it chronologically evolve?\n- RQ5: Can a historical shift in terms of \"human-centeredness\" (e.g., related to controllability) in work on PCS be observed?\n- RQ6: How can work on PCS be thematically clustered?",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.1.2. Queried Data Sources",
+              "parent_subsection_id": "s_2_1",
+              "text": "The ACM DL\\(^1\\) is a comprehensive database covering the publication years 1936 until today and was chosen a priori because it contains the most relevant conference proceedings and journals for the field of HCI (which broadly spans over the majority of all potentially relevant domains). Although ACM DL's scope is vast with more than 2.8 million publications in its database, it was a deliberate decision to not use an even broader database, such as Google Scholar, for the initial search, because of the danger to retrieve a much higher percentage and unmanageable amount of non-relevant publications without any further filters (e.g., concerning the publication years) and also such that are of inferior quality or not published under peer-review procedures. Also, we are aware that the selection of results retrieved from the ACM DL is most probably neither complete nor fully exhaustive. It was our aim to provide a wide-angle overview, not necessarily to uncover every existing relevant work. We believe that the ACM DL most probably provides the most diverse and broadest-possible overview, compared to other popular data sources, such as the IEEE Xplore (which in principle is also vast). Our confidence in this stems from the fact that, on the one hand, the computing community (in which work on \"systems\" is usually rooted) in its various facets (e.g., HCI, Artificial Intelligence, Algorithms & Computing Theory, Information Retrieval, or Logic and Computation, just to name a few of many ACM Special Interest Groups) focuses strongly on ACM-sponsored or -supported conferences or ACM journals for publishing their most important and advanced research findings. On the other hand, the ACM DL contains more journals and conference proceedings from domains that are considered interdisciplinary (e.g., with a focus on human-centered design and development) than comparable data sources like IEEE Xplore. Examples for the premier venues in related domains are the ACM Conference on Human Factors in Computing Systems (CHI), the ACM Conference on Recommender Systems (RecSys), the Conference on User Modeling, Adaptation and Personalization (UMAP), or the ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW). Due to their immense impact, the named conference venues are often even preferred to thematically relevant journals by many researchers. As this prioritization of conference proceedings even over journal articles was often not understood by researchers of other fields, most of these conference venues have recently switched to a journal publication method instead of or in addition to conference proceedings. These facts, combined with explicitly stating in this article that we limited our SR on the ACM DL, are in accordance with the typical benefits [mainly (ii) and (iii)] of SRs as mentioned before. Also, all other SRs in our major field of research we are aware of either use the ACM DL as one of few major data sources [W2763172566] or exclusively utilize it [UNMAPPED:32]. Nevertheless, we initially considered using IEEE Xplore as well and we ran an a priori query identical to the one that was used on the ACM DL to get an overview of the characteristics and quality of the results. We quickly scanned almost thousand of the returned ~3,000 results, and our findings there suggested an extremely high number of false positives (>95%, comparable to the expected false positive rate on Google Scholar). Also, our impression was that the potentially relevant fields were strongly limited (almost exclusively to the domain of education), whereas the initial results on the ACM DL suggested a much broader view which aligned better with our research goals (including uncovering domains in which research on PCS has been performed, see Section 2.1.1).",
+              "citations": [
+                "W2763172566"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "32"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.1.3. Inclusion and Exclusion Criteria",
+              "parent_subsection_id": "s_2_1",
+              "text": "Before the actual search, we established the following inclusion and exclusion criteria. The inclusion criteria can be summarized as follows and are reflected in our laborious process of search query creation as described in Section 2.2.1.\n\n- IC1: The publication contains research about a collaborative system as defined in Section 1.1.\n- IC2: The publication describes a personalization approach or some other kind of adaptation as defined in Section 1.2.\n\nPlease note that our definition of PCS provided in Section 1.3 is a bit more exclusive in nature as it considers only systems that, besides satisfying IC1 and IC2, use their personalized support to aid group processes. We deliberately chose not to add this as third inclusion criterion in order not to miss borderline cases. Instead, we considered all borderline cases returned by our query that satisfied IC1 and IC2 as potentially relevant and individually checked them based on their respective full text.\n\nIt is further important to note that only papers fulfilling both of our inclusion criteria were selected for the SR. Concerning the exclusion criteria, which are described below, we excluded publications if at least a single one of them applied.\n\n- EC1: The publication is not relevant, because it is dealing with other topics (i.e., semantically false positives).\n - EC1a: No collaboration or collaborative system was studied or discussed in the publication (e.g., the result came up because of \"collaborative filtering,\" although the paper is not dealing with collaboration between humans).\n - EC1b: The publication does not include any kind of system initiative; it is, therefore, situated at the far-right end of Oppermann and Rasher [UNMAPPED:8] spectrum of adaptation. Please note that there are publications in our final dataset, where no finalized or prototype system capable of system-initiated adaptation or personalization is present, but these papers concretely discuss future directions for system-initiated measures, hence, making them relevant to our research questions, such as the included publication by Sigitov et al. [W2827017532].\n- EC2: The publication language is neither English nor German.\n- EC3: The publication is not a full paper, which we defined as having at least six pages in length and not identified as Demonstration, Poster, Extended Abstract, Workshop invitation, etc.\u2014such papers were also returned in our search, although we used the refinement \"Research Article\" in the ACM DL.",
+              "citations": [
+                "W2827017532"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "8"
+              ]
+            }
+          ],
+          "text": "In this section, we present our main research goals and questions as well as a discussion of our choice of the literature database and the inclusion and exclusion criteria used to arrive at the final corpus of publications.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Conducting the Review",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.2.1. Search Query",
+              "parent_subsection_id": "s_2_2",
+              "text": "To obtain an overview of the relevant literature in the ACM DL without losing research due to keyword mismatches, we used an inclusive approach at first by specifying our search query to account for every conceivable combination of common synonyms or similar concepts of the two areas of interest: collaboration and personalization. However, to avoid such papers that only deal with the aspects marginally (e.g., only mention them somewhere in the full text), we decided to search for the terms in the abstracts. Due to the limited documentation connected to the ACM DL, we could only conclude from the results that in addition to the abstract, the name of the publication medium (e.g., the conference name) and the keywords were also searched. Apart from the refinement that the results should be a Research Article (in order to avoid such papers that are explicitly stored as, e.g., Panel, Poster, or Short Paper), we searched the ACM Full-Text Collection without any further filters. Consequently, no time ranges were excluded.\n\nOur search query, which was derived from the research questions introduced in Section 2.1.1, therefore, consisted of two sets of keywords. The first set (applying to IC1) included possible aspects of collaboration (such as \"collaborative system,\" \"CSCW,\" \"CSCL,\" or \"groupware\") in different variants (such as \"Computer-Supported Cooperative Work\" or \"Computer-Supported Collaborative Work\"). The second set (applying to IC2) included possible aspects of personalization (such as \"personalized\" or \"adaptivity\") in different variants. The two sets were connected with a logical AND operator, while the elements within the two sets were connected with logical OR operators. This led to search results that contained at least one element of each of the two sets.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.2.2. Query Results",
+              "parent_subsection_id": "s_2_2",
+              "text": "Running our query on December 12, 2019 on the ACM DL yielded a corpus of 345 results (one duplicate leading to 344 results) containing 34 articles from journals and 310 from conference proceedings. The original corpus comprised the years 1997 through 2019. One researcher then went through this result set and judged the papers according to EC1\u2013EC3 by reading the abstracts and having a look at the full texts in case the abstract's judgment was ambiguous. This run resulted in a set of 46 papers (13.4%) judged as potentially relevant. After the resulting relevant papers were tagged and read more thoroughly, they were discussed by two researchers that led to the exclusion of ten papers due to EC1 (nine papers) and EC3 (one paper that was wrongly not excluded by the researcher during the initial judgments). Therefore, the final pass yielded a set of 36 relevant papers, which accounts for 10.47% of the original corpus (owing to the inclusive approach taken at first). While we selected two of the original 34 journal articles (5.88%) as relevant ones, 34 of the 310 conference papers (10.97%) were regarded as relevant. Interestingly, all of the 37 most recent publications from the year 2019 (including six journal articles) had to be excluded.\n\nFor an overview of the inclusion and exclusion process, see **FIGURE 1**.\n\nOne illustrative example of a conference paper that came up in the result set but was excluded due to EC1 is the CSCW conference paper by Egelman et al. [UNMAPPED:34] and was accompanied by many similar exclusions. The paper was part of the original result set because the word \"personalization\" is inside the abstract (IC2) and the conference name is CSCW (IC1) (as mentioned above, the ACM DL also searches the publication name). However, the paper neither focuses directly on collaborative behavior between humans, nor does it understand personalization as we do. Instead, it mentions that family members wish for privacy and personalization for specific tasks on a shared home computer and understands personalization as customizing parts of the shared computer's software, such as customizing the individual desktop or bookmarks as opposed to using a shared desktop or bookmarks [34, p. 674].\n\nOne illustrative example of a journal article that came up in the initial results but was excluded is from the CSCW issue of the journal Proceedings of the ACM on Human-Computer Interaction in November 2019 by Norris et al. [UNMAPPED:35]. In their article, they discuss the temporal coordination in collaborations of geographically dispersed teams, and by doing so, fulfilling IC1. However, no personalization or adaptivity is described, therefore, not fulfilling IC2. The article was returned in the initial set, because the keyword \"adaptive\" is part of the abstract in the sentence \"Moreover, the adaptive practices of these broadly dispersed groups are still not well-understood\" and can be regarded as a false positive that was consequently excluded.\n\nFurthermore, it was surprising to see that only two papers from a conference venue, we initially regarded as highly relevant, namely RecSys, were part of the corpus and even those had to be excluded. The first one is Ng and Pera [W2893247906] that\u2014although potentially relevant\u2014fell victim to our short paper exclusion criterion EC3 because it is only five pages in length (four pages plus references). The other one is Harper et al. [W2007528787], which however deals with no collaborative system, and therefore, does not fulfill inclusion criterion IC1. The paper came up in the results because \"collaborative filtering\" is one of the meta-data keywords, triggering our search query together with \"personalization,\" which is contained in the abstract. In conclusion, we would like to emphasize that only because a paper describes a recommender system (e.g., using collaborative filtering), this does not automatically make it a PCS, if no groups or individuals working in groups are supported.\n\n**FIGURE 1** | PRISMA diagram according to Moher et al. [W4294215472].\n\n{{TABLE:tbl_01}}",
+              "citations": [
+                "W2893247906",
+                "W2007528787",
+                "W4294215472"
+              ],
+              "tables_in_text": [
+                "tbl_01"
+              ],
+              "citations_unmapped": [
+                "34",
+                "35"
+              ]
+            }
+          ],
+          "text": "In this section, we describe the details concerning our search query creation and detail on the results that were retrieved from the ACM DL.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "There is an exceptionally long history of SRs in the field of medicine that dates back to the eighteenth century according to Bartholomew [W2006498503]. More recently, there have been efforts to transfer this methodology to other domains, for example, the social sciences, or business and economics with an early attempt by Tranfield et al. [UNMAPPED:29], and finally to software engineering through Kitchenham and Brereton [W2124493593]. The main benefits of SRs are frequently identified as: (i) reduction of experimenter bias, that is, avoid preferences for certain papers or against other papers, (ii) increased repeatability/consistency of results, that is, different researchers should get the same results for the same research questions (or at least differences should be reproducible due to the detailed reporting), and (iii) auditability, that is, detailed reporting by following the methodology should make it easier to assess the credibility of the results [W2124493593]. The approach mentioned in this article is inspired mainly by the works of Tranfield et al. [UNMAPPED:29] and Kitchenham and Brereton [W2124493593], and further enriched through recent practical applications by Nunes and Jannach [W2763172566] and Brudy et al. [UNMAPPED:32]. The reason for this is the lack of one definitive guide to SR applicable to the field of HCI that stems from its interdisciplinary nature, connecting aspects of social sciences, psychology, software engineering, ergonomics, and further neighboring domains.\n\nA common approach is to segment the SR procedure into several stages, such as (i) planning the review, (ii) conducting the review, and (iii) reporting and dissemination. The following sections detail on our approach of planning and conducting the review, while the remainder of the article is implicitly concerned with our reporting and dissemination.",
+      "citations": [
+        "W2006498503",
+        "W2124493593",
+        "W2763172566"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "29",
+        "32"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Thematic Overview",
+          "subsubsections": [],
+          "text": "Combining the contents of the retrieved abstracts and using the frequency of a term as a measure of its size yields the word cloud (see **FIGURE 2**). Although the words in the cloud are dependent on the search query we ran, it is interesting to see which terms are further connected to these areas and which terms thematically unfold as common denominators by the combination of the abstracts. For this reason, no stop words were removed to paint a faithful picture of the words and phrases contained in the abstracts.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Scientometrics, Publication Date, and Venue",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1. Venue",
+              "parent_subsection_id": "s_3_2",
+              "text": "Most of the papers are full papers in conference proceedings (34 out of 36), the remaining two are journal publications [ACM Transactions on Multimedia Computing, Communications, and Applications (TOMM) [39] and ACM Transactions on Applied Perception (TAP) [W2201009554]]. The conferences show a large variety with only 13 papers from recurring conference venues: four papers at CHI, three at UMAP, two at CSCW, two at the ACM International Conference on Information and Knowledge Management (CIKM), and two at the ACM SIGCHI Symposium on Engineering Interactive Computing Systems (EICS). All other papers are single-shot conference venues. This maybe hints at a fragmentation and that this topic of personalized collaborative systems is not strictly rooted in a certain community but discussed here and there and everywhere. Further, it was also interesting to see that thematically highly relevant conference venues, such as RecSys, CSCW, UMAP, or CHI did not yield a higher number of relevant papers.",
+              "citations": [
+                "W2484372584",
+                "W2201009554"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2. Publication Date",
+              "parent_subsection_id": "s_3_2",
+              "text": "We can see that although we did not limit the publication date, the papers in our final corpus have all been published between 2007 and 2018, that is, all highly relevant work (according to our definition as reflected by our search query) on PCS seems to have taken place during the past decade (13 years, to be more precise). This hints at the conclusion that personalization in the area of collaborative systems is a relatively young research field.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.2.3. Scope",
+              "parent_subsection_id": "s_3_2",
+              "text": "As we can further see in **FIGURE 3**, there is only a rather small number of directly related papers per year (between 1 and 5), and there is even 1 year between 2007 and 2019 without a related publication (2010). The number of papers per year has not significantly changed since 2007 (the year of the first directly related publication). This seems to indicate that in addition to the research field being relatively young (see previous observation), it is still rather a niche field and has not received growing attention throughout the past years.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "2010"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.2.4. Impact",
+              "parent_subsection_id": "s_3_2",
+              "text": "It is still surprising that only a few papers have more than 20 citations. The paper by Teevan et al. [W2097489103] is the most cited (82 in ACM DL and 145 in Google Scholar) by a large margin. There are five papers with zero citations on ACM and with only one or zero citations on Google Scholar. Please note that the citations on the ACM DL and Google Scholar cannot be added up, as most citations of the ACM DL will be part of the number in Google Scholar. Interestingly, the UMAP papers while published at a well resonating conference venue are notoriously undercited with zero citations at ACM DL and combined two citations at Google Scholar. This further contributes to the impression that this field is a niche field still (see previous observation).\n\n**FIGURE 3** | Citations and conferences/journals (TAP and TOMM) for each paper. Citations were retrieved from ACM Digital Library (DL) and Google Scholar on May 7, 2020.\n\n{{TABLE:tbl_02}}",
+              "citations": [
+                "W2097489103"
+              ],
+              "tables_in_text": [
+                "tbl_02"
+              ]
+            }
+          ],
+          "text": "In **FIGURE 3**, we visualize the publications' current impact by depicting their citations (retrieved on May 7, 2020) in the ACM DL as well as Google Scholar. Further, we distinguish between journal publications and publications in conference proceedings and report on the publication date. In the following, we discuss our observations related to venue, publication date, scope, and impact of the publications in our final corpus.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Paper Types",
+          "subsubsections": [],
+          "text": "This section describes the types of publications that were part of our final corpus. We classified them according to their main contributions in the categories described below. The categories were selected based on the classification used by Nunes and Jannach [W2763172566] in combination with the description of results by Brudy et al. [UNMAPPED:32]. Please note that most of the publications apply to more than one category (e.g., a novel tool is proposed and evaluated, leading to the categorization as tool and evaluation). In the following, we describe the categories used:\n\n- Ground Work: The paper contains ground work for or contributes to lay the foundation for future efforts in personalized collaborative systems, for example, Hashavit et al. [W2857352146], who presented a foundation for personalization in group chat through implicit user modeling (UM).\n- Evaluation: The paper contains empirical or analytical evaluation of a system, tool, technique, or interaction/collaboration behavior in the area of personalization and collaboration.\n- System: The paper proposes or describes a (novel) system in the area of personalization and collaboration with a focus on its technical implementation (e.g., including system architecture, system components and communication between them, details related to programming language, design patterns, or even code snippets).\n- Technique: The paper proposes or describes a (novel) technique that can contribute to enhancing personalized collaborative systems. Here, the focus is not on a certain specific tool or system (e.g., screen sharing across different device types could be studied as technique without emphasis to the concrete tool, system, or implementation behind).\n- Tool: The paper proposes or describes a (novel) tool with a focus on its functionality (here it is more important what kind of service the tool provides for the user, how it is used and interacted with and what problems in collaboration it can help to tackle rather than how it is technically implemented).\n\nWe then analyzed and classified the papers in our final corpus according to this categorization. **FIGURE 4** provides an overview of the results. The figure presents the total number of papers per year, which is represented by the height of the bars as a whole and gives an impression of how these papers are distributed among the different types. For example, in the year 2007, there was one paper (y-axis) that was associated with three different types (represented by the different colors).\n\nAs can be seen from **FIGURE 4**, the types of the publications per year are relatively widespread over the categories we introduced. There is no obviously dominant paper type, although a slight tendency toward a focus on the Evaluation category can be observed. This assumption is confirmed by a more in-depth analysis of the publication contents that reveals a noticeable transition from rather technically focused to more human-centered work. For instance, a large part of the early publications classified as Evaluation papers contain algorithmic evaluations (e.g., performance tests), whereas the majority of the later publications have a clear focus on the human (e.g., user experience and user-system or user-user interaction). This ties in well with more global trend toward human-centered design (comprising also human-centered evaluation).\n\n**FIGURE 4** | An overview of the different paper types per year. The full bars depict the number of papers per year. Different colors of the segments within the bars give an impression about the paper types within the papers. Please note that several categories may apply to a single paper, for instance, the single paper in 2007 is associated with three categories.\n\n{{TABLE:tbl_03}}",
+          "citations": [
+            "W2763172566",
+            "W2857352146"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ],
+          "citations_unmapped": [
+            "32"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Domains",
+          "subsubsections": [],
+          "text": "This section gives an overview of the different domains that were covered in the papers (see **TABLE 1**) and together with Section 3.5 is thought to give a basic understanding of the papers' topical foci. The majority of papers (22 out of 36) discuss approaches on a general level, therefore making knowledge transfer easier to specific application domains. The elaborated subdomains, for instance, include collaborative task solving or task management, personalized search, collaborative writing, or privacy management. In addition to the rather general findings in these papers, there are a number of papers (14 in total) that are more closely bound to certain domains, such as healthcare, education, business, or museum experience.\n\n**TABLE 1** | Overview of the papers' domains.\n\n{{TABLE:tbl_04}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_04"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5. Research Directions",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_5_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.5.1. Recommendation",
+              "parent_subsection_id": "s_3_5",
+              "text": "We regarded four of the papers as work on recommender systems. Liu et al. [W2809435178] describe a framework for context-aware academic collaborator recommendation based on topics and authorship of previous literature in order to solve the CACR (context-aware academic collaborator recommendation) problem. They tested a recommendation algorithm on a large-scale academic dataset with more than 3 million academic literatures and 300,000 researchers. In a machine learning approach, they used 80% of the dataset as training data and 20% for the evaluation, which showed that their algorithm was capable of outperforming several baseline methods for the prediction and suggestion of collaboration partners. In summary, this work is relevant because it contains an approach to personalization, which supports collaboration (through recommendation of people to work with).\n\nBlichmann and Meissner [W2760845182] propose a system that is powered by an algorithm that calculates a recommendation list of different widgets for increasing workspace awareness (concerning, e.g., who is available, or on which projects the remote collaboration partners are currently working) for remote collaboration based on users' preferences and the current usage context. In a pilot user study described in Blichmann et al. [UNMAPPED:74] (please note that this additional paper was not selected by our query due to missing personalization or adaptation keywords in the abstract), the workspace awareness widgets were well-received by the participants. The paper of Blichmann and Meissner [W2760845182] is relevant according to our definition of PCS because it offers an automated, system-driven way to support workspace awareness (which again contributes to enhanced collaboration).\n\nYan et al. [W2484372584] propose a novel way of video recommendation integrating information from Twitter to avoid typical problems, such as Cold Start. They do not directly discuss a collaborative system as defined in Section 1.1, but after discussing the relevance we decided for inclusion in our final corpus mainly because it provides important ground work for using Social Media data (itself being an outcome of collaborative activity) to potentially jump start future recommender systems in the domain of PCS.\n\nLi et al. [W1995882951] suggest a system that sorts lists of activities in activity-centered groupware for remote collaboration based on their predicted priority. The authors' aim is to decrease the problem of activity overload in activity-centric collaboration environments. They evaluated their approach using log data and compared the activities opened by users to the activity's predicted priority. Their model works significantly better than the currently employed ranking system. This paper is relevant because it presents a system-driven way to personalize the selection of displayed activities in groupware. The approach thus establishes automated support for collaboration.\n\nIn essence, the papers in this section show that recommender systems can contribute to PCS in multiple ways, such as recommending potentially fitting collaboration partners [W2809435178] by providing in situ suggestions for improving awareness based on collaborative interaction in groups [W2760845182], by showing that usage data can be utilized as base data [W2484372584], or by suggesting task activities in group work [W1995882951].",
+              "citations": [
+                "W2809435178",
+                "W2760845182",
+                "W2484372584",
+                "W1995882951"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "74"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_5_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.5.2. User Modeling",
+              "parent_subsection_id": "s_3_5",
+              "text": "Three of the papers in our final corpus focus on the topic of UM. Hashavit et al. [W2857352146] aim at the reduction of the load of conversational content \"in enterprise group chat collaboration tools, such as Slack\" by predicting individual users' participation in conversations and present an analysis of their UM components. More precisely, they created user models from Slack channels, modeled discussion topics of interests, modeled social relationships, and assessed user model quality by its ability to predict content of interest to a user. They showed that their user model was able to predict users' participation in conversations. All of these advances are important for future PCS, as they bear the potential to decrease the complexity of collaborative UIs through personalization.\n\nSigitov et al. [W2827017532] investigate collaboration processes of dyads and focus on the transitions between collaboration states (i.e., an action of user X followed by a reaction of user Y) and interferences. The authors categorize these transitions based on changes in proximity, verbal communication, visual attention, visual interface, and gestures. The findings can be considered a basis for design of intelligent user interfaces and development of group behavior models, which can then facilitate personalization for groups.\n\nCaporusso [W1972207022] presents novel UM approaches for adaptive learning applications where perceptual, cognitive, and attitudinal characteristics of the users are taken into consideration and are applied through users' own decisions or a self-assessment test. Regarding Oppermann and Rasher [UNMAPPED:8]'s spectrum of adaptation, the former (own decisions) can be seen more on the side of user-initiated \"adaptability,\" the latter (self-assessment test) is more on the system-driven side (\"adaptivity\"). Concerning the performance of the learners, the version dependent on users' decisions (i.e., adaptability) outperformed both the adaptivity and baseline non-adaptive versions according to their study. Their findings further show that a well-applied adaptation based on a sound user model can increase learners' performance and might in addition generalize to other domains. The paper presents measures for adaptations in learning applications that follow the Advanced Distributed Learning (ADL) paradigm, that is said to \"facilitate collaborative efforts by students to investigate phenomena and solve problems\" [W2046468478]. This paper was a borderline case due to limited collaboration context (regarding inclusion criterion IC1). We decided to include it because the author explicitly identifies his endeavors as a \"personality-aware framework for ADL,\" thus, contributing groundwork for adaptations in future collaborative learning scenarios.\n\nThe papers in the UM section hint that both single users as well as groups as a whole in collaborative settings can be supported by personalization. However, although we identified other papers also employing a user model (mostly more marginally), these three papers are in our understanding the only ones in our corpus that particularly focus on UM in PCS. This leads us to the conclusion that more effort should be put into UM for collaboration support in the future.",
+              "citations": [
+                "W2857352146",
+                "W2827017532",
+                "W1972207022",
+                "W2046468478"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "8"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_5_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.5.3. Personalizing Experiences",
+              "parent_subsection_id": "s_3_5",
+              "text": "The personalization of experiences is in the center of three of our papers. Fosh et al. [W2096260942] describe an approach to facilitate personalized and collaborative interpretation of museum exhibits in co-located settings. The approach is aimed at tackling all three challenges faced by designers of mobile museum guides: delivering deep personalization (see our inclusion criterion IC2), enabling a coherent social visit and fostering rich interpretation (for both see our inclusion criterion IC1). The approach includes inviting visitors to design an interpretation tailored for a friend that the group then experiences together. On a side note, it is difficult to categorize such an approach in Oppermann and Rasher [UNMAPPED:8]'s spectrum of adaptation because technically the approach can be regarded as user-initiated adaptability, although from the receiving partner's point of view there is no personalization effort required, therefore, rendering it more similar to (system-driven) adaptivity. The paper further describes a trial at a contemporary art gallery and concludes that the experiences were well-received and led to rich interpretations of the exhibits, however, frequently some effort was required to maintain the social relationship between the pairs.\n\nRoberts et al. [UNMAPPED:61] describe part of the CoCensus project, which leverages embodied interaction to allow museum visitors to collaboratively explore the U.S. census on an interactive data map in a co-located setting. Specifically, the paper reflects on the UI design strategies to encourage visitors to collaboratively and interactively interpret large data sets in a museum. The personalization here lies mainly in the creation of a customized profile that leads to the selection of a personalized slice of the census data. It can be regarded as user-driven adaptability. The authors describe the exploration of different methods to promote engagement with the data through perspective taking and to encourage collective reasoning about the data.\n\nvan Dijk et al. [UNMAPPED:53] present the results of a study with a personalized electronic quest through a museum aimed at children between ages 10 and 12. Half of the participants used a multi-touch table at the beginning of the museum visit to personalize their quest (three to four children interacted simultaneously and chose topics of interest from the exhibition). This choice was used to generate their quest. The study investigates whether personalization of the quest affects both enjoyment and collaboration. The authors were not able to identify statistically significant differences between the conditions personalization/no personalization but their work can be regarded as ground work for future endeavors in PCS for enriching the perceptions of experiences.\n\nOverall, the papers in this section describe efforts toward the usage of PCS in personalizing experiences and exclusively cover museum settings. Apart from other leisure activities, such as restaurant visits or vacations, it is conceivable that PCS can play an important role in serious settings to shape experiences also, for example, in the work place.",
+              "citations": [
+                "W2096260942"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "8",
+                "61",
+                "53"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_5_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.5.4. Adapting Interaction",
+              "parent_subsection_id": "s_3_5",
+              "text": "Four of the papers deal with the adaptation of interaction itself. Tokuda et al. [UNMAPPED:66] present a novel UI in the form of an adaptive fog display. The authors state that the technique can help use the screen with similar visibility for collaboration or with different visibility for personalized content and considered different 2D and 3D manipulation tasks for pairs or single users. The screen can be adjusted for the individual Zone of Comfort (i.e., the distance in which it is easy to focus one's field of view) and even if two users stand in front of the fog screen, the screens shape can be changed so that both see a good image or each one sees an individual good image (considering the Zone of Comfort). This adjustment is by now done only after user initiative but is an interesting way of adapting collaborative interaction that could in the future be fueled by adaptivity.\n\nOctavia and Coninx [W2030551208] report on their experiences with adapting the interaction difficulty to the capabilities of the participants in a therapy game within and between game sessions. During collaborative rehab training, the problem is that repeating the same exercises over and over\u2014which is favorable from a medical point of view\u2014leads to a feeling of dullness that can be overcome through social interaction. The need for personalization is grounded in the fact that collaborators have different abilities that makes it frustrating for the ones and too easy for the others. The authors propose automated (system initiated) adaptivity to solve this issue. The results are promising and show that with automatic adaptation of interaction difficulty, patients showed better progress of performance, perceived their quality of interaction to be better, and enjoyed the training sessions.\n\nSchuwerk et al. [W2201009554] describe the scenario of shared haptic virtual environments (e.g., two remote collaborators push a 3D virtual piece of wood on a surface with friction by using joysticks applying force at two different points) and describe and analyze the problem of communication delay (concerning the communication of digital signals). For example, if someone notices that nothing happens with the 3D virtual object when they push the joystick (due to communication delay), they instinctively push harder. Therefore, the authors propose a system-driven adaptive force feedback system to compensate for the delays. They implemented the game Jenga for their evaluation (including activities, such as cooperative pushing, pushing and pressing, and pushing from opposite sides). They used both simulated users and real users to measure the effects of communication delay. Interaction was measured and simple verbal feedback was given. They were able to show that their approach is effective in compensating for adapting for collaborative manipulation tasks to changing contextual influences.\n\nvon Zadow et al. [UNMAPPED:59] discuss personalized interaction on wall-mounted displays via a personal UI in the form of a sleeve display, thereby solving the problem that personalized interaction is difficult to achieve on multi-user displays (e.g., due to a lack of readily available tracking technology as a prerequisite to identify individual users). The approach ties in with collaborative use of wall-size displays; although there is no specific collaboration support described here (this is not the focus of this paper), the approach is inherently involved in collaborative settings. The work described can also be seen as a foundation for collaboration support because what is discussed here related to personalized interaction is inherently important for collaborative interaction in the context of PCS (e.g., around questions of privacy and disclosure of personal information on shared displays).\n\nThe four papers in this category present different approaches to adaptation of interaction processes and can be regarded as subsets of personalized HCI (see Section 1.2), which explicitly involve collaborative aspects.",
+              "citations": [
+                "W2030551208",
+                "W2201009554"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "66",
+                "59"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_5_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "3.5.5. Adapting UIs",
+              "parent_subsection_id": "s_3_5",
+              "text": "The largest share of the final papers falls into the category that is concerned with adapting UIs. Piumsomboon et al. [UNMAPPED:71] explore in their paper how adaptive avatars can improve mixed reality (MR) remote collaboration. It presents the adaptive avatar Mini-Me for enhancing MR remote collaboration between a local AR user and a remote VR user. The avatar represents the VR user's gaze direction and body gestures. The paper further describes a user study with two collaborative scenarios: an asymmetric condition where a remote expert in VR assists a local worker in AR, and a symmetric collaboration in urban planning. They showed that using their adaptive Mini-Me avatar led to\u2014among other results\u2014decreases in task completion time and task difficulty, as well as increases in social presence and preference ratings.\n\nFraser et al. [UNMAPPED:69] propose a system that supports co-located groups of people in assembly tasks (such as IKEA furniture) by giving personalized work instructions and subdividing the tasks based on workers' skills, dependencies between tasks, and available tools. An external dashboard display is used for a task overview. Their aim is to bring the known benefits of task management systems and interactive instructions to the scenario of co-located group construction and assembly. A between-subjects user study was conducted to find out how well the system performs as opposed to a paper-based instruction (as the control condition). The results show that the initial time for coordinating was reduced by the introduction of the system that was additionally rated positive overall, but interestingly the participants using the introduced system rated themselves less aware of what the others were doing as compared to the control condition. The authors attributed this to the fact that the participants rarely looked at the task overview (showing what the others are currently doing) because they were satisfied with and had trust in the tasks assigned to them by the system.\n\nKremer-Davidson et al. [UNMAPPED:68] describe a system called Personal Social Dashboard (PSD) that was implemented and deployed at an enterprise in order to provide feedback to employees about their usage of an enterprise social network. Some scores are calculated, for example, Activity, Network (i.e., the connectedness of an employee), Reaction to employee's content, or Eminence (i.e., interaction of others with the employee). The motivation is that when users are not successfully using an enterprise social network, they become frustrated. This can be prevented by giving feedback that can guide one toward probable causes of the lack of success. PSD is envisioned as such a feedback tool. The main goal of the paper is to study if the tool is successful in raising users' social engagement and effectiveness, which the authors found evidence for. We consider this paper as relevant because the individual employees' (as part of their group of colleagues) collaborative usage of the enterprise social network is intended to be improved.\n\nNezhad et al. [UNMAPPED:67] state that the most important interface for the web is the browser and that more recently, most apps work with a notification mechanism rendering it unnecessary for users to check each app for new content. However, this is again a burden on the users concerning information overload\u2014a situation that should have actually been solved through the introduction of notifications in the first place. Therefore, they propose an automated, personalizable way of filtering the notifications based on a user's predicted interest in the notifications. The interest is inferred in an enterprise context by the number of \"actionable statements,\" meaning words telling the user to do something (such as \"send me the presentation tomorrow\"). This is detected with natural language processing. The mechanism is conceived for productivity applications in this paper (such as e-mail, chat, messaging, social collaboration tools, and so on). The overarching goal is to decrease information overload caused by notifications. This is envisioned to be guaranteed in a first step through intelligent identification of pieces of content, which are of interest to a user (e.g., an enterprise worker) across conversation channels on collaboration tools (e.g., emails, chat, messaging, and enterprise social collaboration tools). In a next step, the goal is to automatically filter conversations (and therefore notifications) that the user receives, thereby offering an intelligent and cognitive user interface with reduced information load. In an evaluation they could show that their algorithm is better in accuracy and comparable in other dimensions in comparison to an alternative algorithm. This paper is relevant because it provides an adaptive mechanism that contributes to improved collaboration through personalized notifications that help employees, for example, to react faster and more effectively to their colleagues' messages.\n\nSchaub et al. [UNMAPPED:60] show how to provide context-adaptive privacy in an UI at the example of an ambient (i.e., wall-mounted) calendar reacting to people moving into its vicinity. Their system supports detection of registered users as well as unknown persons. Ambient awareness displays in the form of calendars aim at reducing the problems of users either having to explicitly check their individual calendars or deal with event reminders (both interrupting their primary activity). Privacy is essential here because, for example, ambient calendar displays should not show private events if this is currently not appropriate. Thus, the system detects present persons in the proximity of the display and dynamically adapts the displayed events to the privacy preferences of individual users. The paper also reports on a qualitative study with seven displays and ten users. Some selected findings state that most participants found the presence detection system and privacy adaptation to be reliable in most situations (with one exception where a participant remained standing in the doorway that caused IR sensors to trigger incorrect in and out events). Passive interactions (such as glancing at screens) were preferred over active scheduling at the display. Furthermore, the system was well-integrated into the participants' environment and participants generally felt in control of their privacy. However, participants also voiced concerns over centralized collection and aggregation of information. Most participants primarily used the calendar display as an ambient display of information (regularly glanced at the display to gain an overview of their schedule) and automated adaptations according to privacy preferences worked mostly as expected. Summing up, Schaub et al. [UNMAPPED:60] present an interesting example of a PCS with system-driven adaptivity applied to the privacy dimension.\n\nHerranz et al. [W1969450777] present a survey that lays the foundations for future personalization and adaptation of messages between volunteers in emergency management. The authors aim at finding out to what extent social technologies (e.g., blogs, forums, Facebook, instant messaging, or email) could support volunteers in their work of emergency management as a means of remote collaboration. They present some design challenges, among them the personalization and adaptation of messages. There, they argue that making the messages adaptable to the particular needs of emergency situations (maybe on an individual level) would lead to be more effective in the emergency management domain. According to their survey results, most volunteers use social technologies daily and have medium-high expertise. The participants saw two main use cases for social technology: supporting communication within the community and coordination efforts. Some others are knowledge management, or building collaborative relationships. Sending and receiving information about emergencies to and from authorities is in principal seen as positive. The paper is relevant to PCS because the survey contains ground work for categories based on which future messages in emergency management, as a remote collaborative activity, can be personalized.\n\nIoannis et al. [UNMAPPED:56] provide work for adaptive CSCL and suggest showing extra guidance to encourage novice learners. More precisely, the paper discusses the addition of the adaptation pattern \"Lack of confidence\" to an existing web-based CSCL tool that was authored for teachers to create structured collaborative activities. The idea behind this is to support and encourage novice learners in larger groups in order to be more confident to participate, considering the context of the group (e.g., other learners' domain knowledge). This is only one example of four adaptation patterns added to the CSCL tool (the other being \"Advance the Advanced,\" \"Group of Novices,\" and \"Assign Moderator\"). The main motivation is to support teachers with flexible tools in order to design collaborative learning tasks. The aim of the paper is to describe the case of adding the adaptation pattern to the CSCL tool and therefore inviting others to do the same by adding other adaptation patterns according to their needs.\n\nKane et al. [UNMAPPED:55] adapt the UI of a personal device to show a context-aware list of relevant words to people with aphasia. The augmented and alternative communication system helps people with aphasia to recall words by providing a context-adaptive word list, that is, it is tailored to the current location and conversation partner. The paper describes the design and development phase (which included collaboration with five adults with aphasia) and presents guidelines for developing and evaluating context-aware technology for people with aphasia. The paper is relevant because conversational situations can be seen as co-located collaboration while users receive personalized support.\n\nFeld and M\u00fcller [UNMAPPED:51] suggest an ontology describing the automotive context with a user model (containing preferences, interactions and a presentation model) and a context model (containing\u2014among others\u2014devices, trip information, or the external physical context). More concretely, the presentation model is thought to provide the basis for adaptations, such as informational or warning messages, or different display regions of the screen that are conceivable to consider individual passengers' backgrounds or locations. The authors want to contribute to a comprehensive, open platform for knowledge management in the automotive domain. While the models can be regarded as a basis for future adaptations, the exchange of messages (e.g., between cars or between traffic authorities and cars) can be seen as a form of remote collaboration. Finally, a joint car ride with several passengers can be regarded as a co-located collaborative setting, even more so in a possible self-driving future. By combining these two aspects, also hybrid collaboration settings can be imagined.\n\nFujita et al. [UNMAPPED:50] designed, built, and evaluated a prototype system that uses ambient displays to improve communication and improve the mood, for example, through topic suggestions. Their room-shaped system enhances the communication of a group of people in a co-located setting by showing information based on sensor data measuring the current state of the participants (e.g., utterances, head positions, and hand gestures). The information is shown on the wall, the floor (both publicly available), and on personalized displays on a smartphone. The information can be, for example, visualization of participant activity or shared interests. For example, if a person sees the visualization of a person with low activity or common interests (projected on the floor with an appropriate color coding), they can approach them and talk to them to improve their mood. The overarching aim of the installation, therefore, is to enhance communication and improve the mood. Although the envisioned personal devices were not part of the evaluations, the system is a prime example of a PCS that adapts to the group as a whole by taking into account the different interests of the individuals and adapting the ambient displays on floors and walls to that.\n\nRinck and Hinze [UNMAPPED:49] conceptualized, designed, and evaluated a paper-based prototype for personalized views of documents in a personal workspace in co-located co-authoring of documents. They discuss the importance of different views and show an example scenario of a scientific collaboration to co-author a paper with collaborators having different roles, goals, and according views. The aim is to find out the attitudes of the participants concerning personalized views of documents (that generalize to \"information objects\"). For example, they found out that users' collaboration efforts would be lessened if they would be relieved of the burden of creating their views themselves, which indicates the need for new methods and concepts of detecting and claiming authorship of text fragments or documents.\n\nStreibel and Alnemr [W2020832608] suggest a procedure of first discovering a trend and then estimating the reputation of the information, thus creating a reputation network. By using this network, one will be able to have a personalized version of the news based on the current trends and one's trusted network. The aim of their paper is to propose a personalized news network based on a trend estimation algorithm in combination with a context-aware reputation estimation algorithm. The collaborative aspect here lies in the contents of a user's social media channels' timelines, such as Twitter or Facebook that can be regarded as the outcome of past remote collaboration.\n\nHawkey [W2078422548] presents ground work for alleviating privacy concerns in co-located settings, such as web browsing around a personal computer. It also takes into account the user's current social context, for example visual privacy can be a concern if traces of prior activities (e.g., the browsing history) are displayed that are inappropriate for the current social viewing context. The approach is based on a conceptual model of incidental information privacy in web browsers. The goal of this research is to build a predictive model of incidental information privacy that could be used by a privacy management system to adapt which traces of previous activity appear in a web browser to suit the current social context during periods of co-located collaboration. The results of an online survey show that the predictive models presented in the paper have potential to be used in an adaptive privacy management system to provide the basis for filtering traces of browsing activity. This then can potentially help to support co-located collaboration by reducing privacy concerns.\n\nPlease note that three of the papers in this category could potentially be also categorized as recommender systems. The paper by Kane et al. [UNMAPPED:55] could also be regarded as a recommender system in a broad sense, but we decided against categorizing it as such because the authors themselves do not regard it as a recommender system and additionally the system lacks the typical architecture and algorithms of recommender systems. Likewise, Fujita et al. [UNMAPPED:50] describe topic suggestions that also bear resemblance to recommender systems but are not reported as such and lack typical characteristics of a recommender systems' definition. Streibel and Alnemr [W2020832608]'s personalized breaking news network could also be seen as a recommender system in principle but in addition to our own characterization it is not identified as such by the authors.",
+              "citations": [
+                "W1969450777",
+                "W2020832608",
+                "W2078422548"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "71",
+                "69",
+                "68",
+                "67",
+                "60",
+                "56",
+                "55",
+                "51",
+                "50",
+                "49"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_5_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "3.5.6. Web Search",
+              "parent_subsection_id": "s_3_5",
+              "text": "Four of the papers fall under the category of web search. Han et al. [W2326414617] suggest using contextual information, such as own and partner's search history as well as explicit collaboration (e.g., chatting) to enrich collaborative information retrieval during collaborations on the same search task. The authors also present a user study with 54 participants that shows that the approach is more effective compared to those that only consider individuals' own search histories.\n\nNagpal et al. [UNMAPPED:54] propose using chat data of social networks to augment search indices for personalized web search based on users' unique background and interests. Their proposed system lets users mine their own social chatter (e.g., email messages and Twitter feeds) and extract people, pages, and sites of potential interest, which can then be used to personalize their web search results. The paper also presents a user study to evaluate the approach. The authors show that their approach using four types of search indices (i.e., a user's personal email, their Twitter feed, the topmost tweets in Twitter globally, and pages that contain the names of the user's friends) to augment the results of a regular web search can lead to effective web search personalization based on collaboration and conversation data. We consider this as relevant because the potentially constant stream of collaboration and conversation data can be used to enrich the collaboration itself.\n\nAnastasiu et al. [UNMAPPED:52] present a framework and prototype for a clustering approach of search results based on (collaborative) user preferences edited in a shared Wiki interface. The authors motivate their work through the superiority of clusters in search result presentation over simple lists, where a lot of irrelevant singular items have to be filtered out by users. They aimed to improve the correctness and efficiency of their clustering approach and in a user test evaluated the time users needed to find a target result. According to their study, for the user effort, the clustering conditions were by far superior to the ranked list, and personalized clustering was best among them.\n\nTeevan et al. [W2097489103] suggest improving personalized web search based on group information. They aim to personalize web search based on a user's group characteristics and coined this process \"groupize\" instead of \"personalize.\" Furthermore, they suggest combining information about group members and identified two important factors in this regard: the longevity of the group and how explicitly it was formed. The hypothesis is that groupization leads to significant improvement in the results' ranking at least in group-relevant queries, for example, during collaborative search activities in work groups. Their analysis of two different datasets containing user profile information and users' explicit relevance judgments of search results shows that groupization performs particularly well for group-related queries and task-based groups.\n\nConcerning the papers in this section, collaborative interaction can play an important role at several stages of activities in personalized web search. It can be useful before the actual activity, mainly delivering data for personalization as in Teevan et al. [W2097489103], Nagpal et al. [UNMAPPED:54], and Han et al. [W2326414617]; it can be applied during a joint collaborative web search as again in Han et al. [W2326414617], or finally afterwards as in Anastasiu et al. [UNMAPPED:52], where preferences are edited in a shared Wiki interface both to help with search result organization and feed back to search engine utility. Overall, the five papers in this category show how aspects of both collaborative systems and personalization contribute to PCS in web search.",
+              "citations": [
+                "W2326414617",
+                "W2097489103"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "54",
+                "52"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_5_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "3.5.7. Architectures and Frameworks",
+              "parent_subsection_id": "s_3_5",
+              "text": "Three of the papers deal with architectures or frameworks. Bouassida Rodriguez et al. [W2012462852] describe a highly abstract and generic architecture for the future development of collaborative ubiquitous systems and consider adaptations based mainly on context changes.\n\nWolfe et al. [UNMAPPED:45] suggest a notation for the description and a tool for the development of adaptive groupware systems, aiming at making the development of such systems easier. Their approach consists of letting users themselves model the applications (user-centered), abstracting low-level details (e.g., data protocols and networking protocols), and giving high-level support for run-time adaptations. We consider this a very promising and relevant approach, given that the authors' stated aim is to decrease development efforts in the domain of PCS (under the notion of \"adaptive groupware systems\"). To gather more information about how this approach was received (and maybe implemented), we retrieved two additional publications by the same author(s) that were not part of our corpus. One is a book chapter giving more detailed information and considering an application area of collaborative augmented reality [W1510788339], and the other one which is also the most recent publication is the dissertation by Wolfe [UNMAPPED:77]. However, both are already dated now and no more recent accounts of the work or other publications by Wolfe are available.\n\nSancho et al. [W2079573165] describe an architecture (as work in progress) for the development of adaptive collaborative applications in ubiquitous computing environments. The paper proposes an ontology model containing generic collaboration knowledge as well as domain-specific knowledge, in order to enable architecture adaptation and to support spontaneous and implicit sessions inside groups of humans and devices. The aim is to define the adaptability of ubiquitous system architectures and to define adaptation models. The events that trigger adaptation actions are described as changes in the external context (e.g., user preferences, user presence and position, changes in the priority of communications) and execution context (e.g., battery level, CPU load, or available memory of a device). The authors conclude by suggesting a layered semantic-driven architecture providing implicit session management and component deployment for collaborative systems.\n\nIf we view the three papers in this category in the temporal context (time span in which we found relevant papers, 2007\u20132018), we see that the efforts for architectures and frameworks for adaptive collaborative applications took place rather early (2008 and 2009). It is interesting to see that this important research direction was not pursued with the same rigor since then, at least according to our final corpus of papers.",
+              "citations": [
+                "W2012462852",
+                "W1510788339",
+                "W2079573165"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "45",
+                "77"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_5_8",
+              "subsubsection_index": 8,
+              "subsubsection_label": "3.5.8. Miscellaneous",
+              "parent_subsection_id": "s_3_5",
+              "text": "The remaining two papers deal with topics that do not directly fit into one of the categories above but nevertheless deal with very important issues. Evans et al. [UNMAPPED:65] discuss the automatic detection of the quality of collaboration at the example of tabletop interaction patterns. The reliable detection of problems or breakdowns bears great potential for adapting the UI to alleviate such situations on-the-fly, or give information for later analyses of collaborative behavior. Together with the identification of users on a tabletop, which is in the focus of Clayphan et al. [UNMAPPED:58], such efforts could lead to a personalization of collaborative experiences on many UI types currently not able to identify users out-of-the-box (i.e., who is the originator of interaction X), among them virtually every of today's touch screen interfaces.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "65",
+                "58"
+              ]
+            }
+          ],
+          "text": "This section describes a categorization of the papers according to their most dominant research directions and provides an overview of the papers in the respective categories. Please note that the categorization is based on the authors' impression about what the major research direction was and represents just one of probably several possible solutions, which is also discussed at several occasions in the following.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6. Foundations of Adaptation and Personalization",
+          "subsubsections": [],
+          "text": "In this section, we analyze the basis for personalization, answering the general \"To What?\" question raised by Brusilovsky [W4256740247] and revisited by Knutov et al. [W2128211639]. We hereby refer to and describe the kind of data the systems derive their adaptations from or build their personalization upon. For instance, this can be elaborated by answering more concrete questions like What were the decision criteria for the different algorithms? or What were the adaptations based on (e.g., based on past or current interaction with a system)? Fink and Kobsa [W1602867477] suggest three different categories of data that can be used for adaptations: user data, usage data, and environmental data (please note that in the original text on p. 217 \"environmental data\" are depicted as a subcategory of usage data, possibly only a mistake in the presentation, although it is later applied as a separate category in their review characterizations, for example, \"Learn Sesame relies on applications for collecting implicit and explicit user, usage, and environmental data\" on p. 232). This categorization is later also used by Knutov et al. [W2128211639] who state that user data \"points the way toward the adaptation goal,\" describe usage data as \"data about the user interaction that still could be used to influence the adaptation process,\" and environment data as \"all aspects of the user's environment that are not related to the UM or usage process or behavior.\"\n\nWe provide an overview of data categories (user data, usage data, and environment data) that form the basis for personalization in the papers of our final corpus in **TABLE 2**. Please note that several approaches rely on more than one category of data. In summary, 12 papers describe approaches that rely on usage data, 12 collect and process user data, and six use environment data. A relatively high number of 13 papers further do not use any of these data categories (yet). For three of these papers, this is due to the early stage of the presented work (using one or several of the mentioned data categories is envisioned for future applications of the described approaches). The remaining ten papers that do not rely on any usage, user or environment data either (i) describe human-driven personalization [W2096260942, UNMAPPED:61], (ii) do not yet provide adaptations but plan this for the future (or provide an infrastructure for doing so, without mentioning which kind of data the approach should later rely on) [UNMAPPED:59, UNMAPPED:49], or (iii) describe architectures or implementations of components that might be used in adaptive collaborative systems but have no relations with collecting and processing user, usage or environment data [W2079573165, UNMAPPED:58].\n\n**TABLE 2** | Overview of the \"To What?\" question, telling us what the systems adapt or personalize to.\n\n{{TABLE:tbl_05}}",
+          "citations": [
+            "W4256740247",
+            "W2128211639",
+            "W1602867477",
+            "W2096260942",
+            "W2079573165"
+          ],
+          "tables_in_text": [
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "61",
+            "59",
+            "49",
+            "58"
+          ]
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7. Study Types",
+          "subsubsections": [],
+          "text": "Reflecting the different paper types in our final corpus (i.e., Evaluation, System, Technique, Tool, and Ground Work, see Section 3.3) the majority of the papers contains some type of empirical or analytical evaluation of a system, technique, or tool or describes fieldwork for the establishment of ground work.\n\nOnly five papers do not involve such information, mostly having done no empirical work or describing a user study in another paper outside the scope of this SR.\n\nConcerning the different study types that were covered in the papers, we strongly relied on the authors' self-reports. For example, if the concrete method was a combination between usability test and interviews, we used the more general terms user study, experiment, or field experiment as it was reported in such a paper. Our aim was to make this simplification for a greater comparability of the studies and to answer the question if users were involved or if the analysis was based on an existing dataset.\n\nIn the case that users were involved (and it was not exclusively an online survey as in Herranz et al. [W1969450777]), we also categorized if this was mainly done in a lab setting or in the field. Here, we see a rather balanced picture with 14 lab studies and ten conducted in the field.\n\nNext, we assessed if an evaluation setting was a controlled one or was rather naturalistic, according to the well-known tradeoff between internal and external validity. Please find an illustrative overview of this tradeoff we identified in our papers in **FIGURE 5**. The tradeoff says in a nutshell, the more factors one controls, the higher the internal validity of an experiment (giving one the ability \"to draw confident conclusions about cause and effects\" [W2530063673]), but the less natural people as participants will behave in such situations leading to decreased external validity (meaning to what extent the experiment gives evidence about the \"world outside\"). Two researchers rated the study designs on a 7-point Likert scale (with 0.5 steps as minimum interval) within the two end-point options controlled (1) and naturalistic (7). In such cases where ratings differed, they discussed their assessment until a consensus was reached. Overall, all types of evaluations in this regard can be found among the papers, from strictly controlled ones, such as Wolfe et al. [UNMAPPED:45] who presumably evaluated one pair of users with strict tasks (i.e., person A manipulating 20 given pieces of virtual furniture on a tabletop computer, while person B viewing the changes on a PC) and measured the performance of the architecture, up to the naturalistic deployment of a tabletop computer in a classroom with flexible software that could be used alongside other activities and materials as described by Evans et al. [UNMAPPED:65], which we regarded as most naturalistic in this context.\n\nFinally, we coded if the study was more of a qualitative (QL) or quantitative (QN) nature, or if it was a mixed methods (MM) approach, incorporating both aspects. We see a dominance of QN approaches with 18 studies involving QN approaches, while only three studies focused on a QL approach. However, some of the studies with a MM (10 in total) approach prioritized QL.\n\nFor an overview of the different study types, see **TABLE 3**.\n\n**FIGURE 5** | Overview of the tradeoff between internal and external validity resulting from controlled (1) vs. naturalistic (7) study designs.\n\n{{TABLE:tbl_06}}\n\n**TABLE 3** | Overview of study types.\n\n{{TABLE:tbl_07}}",
+          "citations": [
+            "W1969450777",
+            "W2530063673"
+          ],
+          "tables_in_text": [
+            "tbl_06",
+            "tbl_07"
+          ],
+          "citations_unmapped": [
+            "45",
+            "65",
+            "1",
+            "7"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we summarize our insights and findings obtained through the systematic analysis of the 36 papers that remained in our final data set (see Section 2.2.2).\n\n**FIGURE 2** | Word cloud (generated by wortwolken.com) depicting the words most frequently used in the papers' abstracts.\n\n[Word cloud image - text extracted: displays, adaptation, con, training, candateaaringe, user, learnin, collaboration, contentframework, Lpeople, or, 15, study, e, users, support, applications, search, adaptiv, ySocIa, onte, display, intormation, collaborative, personalized, share, presents, ahalysis, present, individual, provide]",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Taxonomy of Personalized Collaborative Systems",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The two main aspects of this SR are collaborative systems, on the one hand, and personalization, on the other hand. In this section, we present a taxonomy (see **FIGURE 6**) describing the main points concerning both fields (collaborative systems and personalization) for each paper in our final corpus. We aim at giving a concise overview and brief summary of the papers that were discussed in more detail in Section 3.5 and presented throughout this article concerning these two main aspects.\n\nOn the top level, the taxonomy distinguishes between collaboration scenarios of (i) co-located and (ii) remote collaboration according to a prominent way of framing the nature of collaboration [W1598048033], see Section 1.1). Apart from typically being studied separately, this differentiation of being co-located or remote has a great influence on the collaborators' interaction behavior, cognitive, and psychological factors (e.g., group dynamics) as well as on the tools and devices they usually employ, further leading to potentially different personalization and adaptation mechanisms. The decision for investigating the nature of the collaboration scenario not only in regard to co-located vs. remote but also in regard to the more recent form of hybrid collaboration (in the right-hand side segment of the taxonomy devoted to Remote & Hybrid Collaboration) was a deliberate one, because hybrid collaboration is very prevalent according to Neumayr et al. [UNMAPPED:6] and has some special features to it that make a closer look worthwhile. However, none of the selected publications states explicitly that hybrid collaboration was studied, which might be owing to the fact that the concept was first described in 2018. Also, no mentions of partially distributed teams engaging in the collaborations were found. Interestingly, some of the papers present frameworks or ontologies [W2079573165] that would implicitly allow for the creation of systems that support hybrid collaboration. Because it is too farfetched to interpret a \"hybrid collaboration fitness\" for all papers, we abstained from doing so, although we initially hoped for some insights in this regard.\n\nBelow this top level, the taxonomy has a flat hierarchy treating all items equitably. Alongside the author(s) and year of publication, one can find information about (i) the types of adaptation or personalization discussed, and (ii) the collaboration support mechanisms presented or collaboration tools used in the papers. The papers are sorted chronologically descending regarding the publication years (i.e., most recent is on the top) and alphabetically ascending regarding the first author's last name within the years.\n\nOverall, 15 papers belong to the co-located section of the taxonomy and 21 papers to the remote (and potentially hybrid) section, showing that both collaboration scenarios have a substantial standing in the area of personalized collaborative systems.\n\n**FIGURE 6** | The taxonomy of personalized collaborative systems.\n\n**Collaboration Scenarios: Co-located**\n\n{{TABLE:tbl_08}}\n\n**Collaboration Scenarios: Remote & Hybrid**\n\n{{TABLE:tbl_09}}",
+      "citations": [
+        "W1598048033",
+        "W2079573165"
+      ],
+      "tables_in_text": [
+        "tbl_08",
+        "tbl_09"
+      ],
+      "citations_unmapped": [
+        "6"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Discussion and Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this article, we presented and discussed a systematic literature review on work related to PCS in the ACM DL. A priori, we, besides providing an overview of existing work on PCS, expected to be able to answer our concrete sub-questions as listed in Section 2.1.1: (i) find out whether research on PCS according to our definition exists at all (see RQ1), (ii) identify domains relevant for PCS (see RQ2), (iii) identify ways in which work on PCS is presented (see RQ3), (iv) describe the chronological evolution of research on PCS (see RQ4), (v) find out whether there is a historical shift in human-centeredness (see RQ5), and (vi) identify a way to cluster PCS thematically (see RQ6). Further, we wanted to analyze the scope and reach of related approaches as well as the nature of publications and reported studies.\n\nWe were able to answer all these questions, mainly as discussed in Sections 3.2 (scope and reach, and chronological evolvement), 3.3 (type and nature of publications, and shift toward human-centered work), 3.4 and 3.5 (domains and research directions, and thematic clusters), and 3.7 (study types). In addition, we discussed the data the selected PCS approaches rely on (see Section 3.6) and introduced a taxonomy classifying the selected publications along the space-axis of the popular time space matrix [W1598048033] and identifying relevant collaboration- and personalization-related details (see Section 4).\n\nIn the following, we discuss potential impact and limitations of our SR presented in this article.\n\nOur systematic search in the ACM DL yielded 36 relevant results related to PCS. This seems to be a relatively low number that might potentially be attributed to the search query used. However, it was an intentional decision to, on the one hand, include the search terms most descriptive for PCS (and their synonyms) according to our definition but, on the other hand, be sufficiently restrictive to avoid an disproportionate high number of \"false positives,\" that is, papers that would have been returned by the search, although not relevant for our research questions. We experimented with different variants of the query before we actually conducted the review and ended up with several thousands of search results most of which were not relevant according to a random sample drawn from the result set. Even with the comparatively more restrictive query we adopted in the end, we still retrieved a result set containing almost 90% false positives. Thus, we can draw the conclusion that the 36 papers that ended up in our final corpus of papers are actually representative for the state of the art on PCS, although we acknowledge that we might not have captured all single relevant results. This is however in line with our research questions as re-listed above. Our final set of results allowed us to answer these questions.\n\nThe comparatively low number of results in the ACM DL together with other observations related to the a priori aims mentioned above suggests that PCS constitute a relatively young research field (the first relevant paper we retrieved is from 2007, although the query returned a number of results from the years of 1997\u20132006, which were classified as not relevant according to our criteria). The selected papers in our final corpus are relatively widespread over different conferences (and only two journals) of which only 13 papers are from recurring venues (among them CHI with four papers, UMAP with three, and CSCW with two papers). We initially expected a much higher number of relevant results from specifically the three conferences just mentioned, but also major HCI journals, such as ACM Transactions on Computer-Human Interaction (TOCHI). This suggests that PCS are not firmly rooted in a certain research community (yet) but rather are a field generally interesting to different disciplines and communities. The impact of the selected papers however seems to be limited\u2014only a few papers in our corpus have more than 20 citations in the ACM DL or on Google Scholar, five even have zero citations (until now). The work around PCS does not seem to be particularly active as we identified only a few relevant papers per year (between 0 and 5).\n\nConsidering our decision to query exclusively the ACM DL that might constitute or be considered a potential limitation related to the scope of our findings, we first suggest that the ACM DL is arguably the broadest available data source among the libraries including only refereed publications, not necessarily in terms of quantity but in terms of quality in combination with scope (i.e., the covered spectrum of relevant domains). Second, we expect that while there might exist further work on PCS, which is not covered by our SR, our general findings related to relevant domains, types of publication, activity around research on PCS, and the historical evolvement should be relatively consistent across different data sources (e.g., the IEEE Xplore or Springerlink). We also performed (non-exhaustive) exemplary queries to different other data sources a priori (during our data source selection process) and a posteriori (i.e., after our SR), which suggest this observation. For instance, we scanned all 699 results returned by an identical query on the IEEE Xplore from before 2007 (i.e., the publication year of the first relevant publication identified by our SR) and found only about 10 of them to be potentially relevant (none of them was very obviously relevant, and at least six were definitely not relevant after a closer look at the abstracts). The remaining four, potentially relevant papers were all from the mid-2000s (i.e., an identical time span compared to our ACM DL results), and from domains also included in our review.\n\nAnother potential limitation could lie in the applied search strategy based on keywords connected with logical operators. This is however a common practice for SRs in our domain [W2763172566, UNMAPPED:32], and also recommended by the popular guidelines of Kitchenham and Charters [UNMAPPED:82]. Yet, it is possible that work not containing any of our keywords but semantically similar ones has not been found by the applied query. This potential limitation should, however, not have a major effect on any of the answers to the research questions posed in Section 2.1.1.\n\nIn summary, the described observations and findings lead us to the conclusion that the field around PCS is probably still under-researched and might thus bare much untapped potential. For instance, we consider its capability to connect rather technically oriented research (e.g., on recommendation algorithms, machine learning, or UM) to strongly human-centered research (e.g., on HCI, human\u2013human, or human\u2013machine collaboration or even sociology or psychology) particularly promising, especially in light of the global trend toward human-centered design and development, human-centered computing, and human-in-the-loop approaches crisscross across different fields of application. Besides the overview on existing work it provides, we also consider this review a starting point for new research because it may not only help to identify research gaps in certain domains of interest but also reveal additional target domains or application fields.",
+      "citations": [
+        "W1598048033",
+        "W2763172566"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "32",
+        "82"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Data Availability Statement",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The original contributions presented in the study are included in the article/supplementary material, further inquiries can be directed to the corresponding author/s.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Author Contributions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "TN: first pass of data analysis, 50% of paper review, 60% of writing, and 50% of revision for this version. MA: 50% of paper review, 40% of writing, and 50% of revision for this version. All authors contributed to the article and approved the submitted version.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Funding",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The research reported in this article was conducted within CoPI (Collaborative Personalized Interaction), an internal project funded by the University of Applied Sciences Upper Austria. The project did not receive any further funding by external funding agencies.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_7",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_7",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3110304695_tables.md"
+}

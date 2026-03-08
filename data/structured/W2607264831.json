@@ -1,0 +1,353 @@
+{
+  "id": "W2607264831",
+  "metadata": {
+    "title": "Requirements Processing for Building Design: A Systematic Review",
+    "n_sections": 5,
+    "n_subsections": 13,
+    "n_subsubsections": 0,
+    "n_tables": 3
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "It is widely believed that the requirements processing is both critical to the successful delivery of construction projects and problematical in its effectiveness [W1985535243]. Problems in buildings can often be traced back to the requirements processing in the design phases. This difficulty is recurrent due to the complex and iterative nature, and to the great number of stakeholders involved in this type of project [W2125018452, W1534822390, W2142783186]. Requirements are functionalities that a product or service has to incorporate to meet demands or to achieve the objectives of the parties involved in a project [UNMAPPED:42], and whose management and fulfillment are essential to the project success. The goal of managing requirements is to ensure that the benefits envisaged at the start of the project are realized at the completion and all the way through the life of the facility [W2142783186].\n\nThe major body of knowledge about requirements come from the Software Engineering (SE) researches, mainly based in two sub-areas. The first, Requirements Engineering (RE), explores the stages through which the requirements perform during the project: (i) elicitation, (ii) analysis and prioritization, (iii) specification, and (iv) validation [W1604476777, W2083232328]. The second, Requirements Management (RM), includes requirements documentation, storage, communication, tracking and traceability in such a way to allow an easy and reliable requirements change management [W1604476777, W2083232328]. Although SE has many differences from Architecture, Engineering, Construction and Facilities Management (AEC/FM) area, its generic and consolidated concepts can bring important conceptual contributions.\n\nIn this research, we will call this whole process as requirements processing, as RE and RM are not usually dissociated in AEC/FM studies. Requirements processing is mainly explored under other terms, especially as \"briefing\" [W2028052514, W2125018452, W2015918071, W1994587699, W2091995356, W1534822390, W2053935953, W2088496476, W2080416239, W2006389585, W2011471634, W1983962624, W2008724692, W2103818055, W2060916576, W2025754444, W2020932944, W1538398333]. For most of the authors who use the term \"briefing\", this is assumed as a process of identification, articulation, definition and registration of design requirements that takes place in the initial stages of the project, such as the planning and preliminary studies [W2015393082, W2153997919]. However, some authors state that briefing occurs dynamically throughout design, construction and through-life of a facility [W1994587699, W2091995356, W1983962624, W2142783186], a position which is more similar to the SE view.\n\nAs long as good requirements processing practices help stakeholders to form adequate relations and make valuable decisions for a project [W2002543275], some researchers have also used value management techniques for considering requirements in construction projects [W2080416239, W2006389585, W2015393082, W1988027511]. These techniques enable the project team to identify the best values and derive suitable solutions to fulfill the client's requirements [W1971486507, W2067286122, W2080416239, W2015393082, W1988027511].\n\nDespite all of these approaches, providing important and complementary contributions to studies on requirements processing for building design, the previous literature analysis, indicated some problems, such as: different understandings regarding the coverage of requirements processing activities and its relationship with the design process; different definitions for key concepts; few papers in international scientific journals with a broad and consistent theoretical review. Until now, the lack of common understanding among researchers on this theme seems to affect the research development in terms of standardization, dissemination of solid concepts and of the proposition of reliable solutions. Thus, as a necessary step back, this paper presents a systematic review which research question is: what are the main academic contributions involving requirements processing concepts and practices for the building design in the last fifteen years?\n\nThe goals are: (a) to identify and analyze the main problems, guidelines, tools and methods proposed in the literature and (b) to indicate the main gaps that remained. Furthermore, we bring some theoretical contributions. As a delimitation, even understanding that the requirements processing follows the whole project life cycle, this study focuses on the design phase.\n\nThis systematic review is a first step within a larger research [UNMAPPED:43] that aims to propose practical improvements to the requirements processing for building design in alignment with the skills of the practitioners. The main contribution of this specific paper is the synthesis of the literature content, and the identification of potential routes for theoretical and practical advances.",
+      "citations": [
+        "W1985535243",
+        "W2125018452",
+        "W1534822390",
+        "W2142783186",
+        "W1604476777",
+        "W2083232328",
+        "W2028052514",
+        "W2015918071",
+        "W1994587699",
+        "W2091995356",
+        "W2053935953",
+        "W2088496476",
+        "W2080416239",
+        "W2006389585",
+        "W2011471634",
+        "W1983962624",
+        "W2008724692",
+        "W2103818055",
+        "W2060916576",
+        "W2025754444",
+        "W2020932944",
+        "W1538398333",
+        "W2015393082",
+        "W2153997919",
+        "W2002543275",
+        "W1988027511",
+        "W1971486507",
+        "W2067286122"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "42",
+        "43"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Research Method",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Question Formalization",
+          "subsubsections": [],
+          "text": "The research question must be clear and aligned with the objective of the systematic review. Based on the arguments presented in the introduction, the research question is: what are the main academic contributions involving requirements processing concepts and practices for building design in the last fifteen years? The period was delimited by the time in which the research on the topic was intense and because it included the current research, without excluding studies with major theoretical contributions.\n\nThe nature of the researches was not previously determined, as to whether they were theoretical or applied, since the contributions of both types would be relevant. Likewise, no types of practices of greater interest were delimited, since they were all to be considered. \"Practices\" were taken to be the set of mechanisms, procedures, tools, methods, and related actions which can be used to implement RE/RM.\n\nBased on the question and the literature that was previously known by researchers, the keywords and their correlated terms were identified. The research argument was established based on the keywords. In test runs, a great number of software engineering papers was observed in the results, since in this field there are many studies on the requirements and architecture of software. Therefore this area was excluded already in the argument through the Boolean operator NOT.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Database Selection",
+          "subsubsections": [],
+          "text": "The second part of protocol aims to define the scientific databases. The bases chosen were Science Direct, Emerald, Taylor & Francis, ASCE Library and ISI Web of Knowledge. These electronic databases were chosen due to their relevance to the research topic and scope, and according to the criteria (i, ii, iii) shown in **FIGURE 1**.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Paper Selection and Information Extraction",
+          "subsubsections": [],
+          "text": "At first, criteria were established to refine the searches in the databases (i, ii, iii and iv), as shown in **FIGURE 1**. Next, the papers were examined according to criteria (v) and (vi) \u2013 firstly, through the titles and keywords, and, secondly, through the abstracts. In case of duplicated publications (criterion vii), the most complete was considered. Based on the final papers, 12 secondary references were included according to criteria (viii) and (ix). of the **FIGURE 1** and 48 references remained. In addition, to complete the review, we brought some contributions from SE literature.\n\nFor content analysis, the important objective information of each reference was extracted through information forms and organized in a spreadsheet. The labels used were: the database; reference; title; publication year; paper origin country; project life cycle stage; theoretical or applied study; objective; results; the principal emphasis of the study; RM activities studied; RE stages studied.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Discussion Procedures",
+          "subsubsections": [],
+          "text": "In order to find the AEC literature contributions to the theme, the discussion was based on the analysis of the relationship between the findings of the information extraction with RE steps and RM activities (from SE literature) through matrices. In addition, AEC requirements processing problems were compared to the solutions (guidelines, tools and methods) to identify lack of connections. Finally, we indicate main gaps and recommendations for future research.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "A systematic review was developed to make a broad and consistent contribution to this research field. This type of research method uses literature as an input viewing to collect all the evidence that can be classified within pre-determined eligibility criteria, in order to answer a specific research question [W1598602811]. By supplying a reliable synthesis based on this evidence, the systematic review's premise is that science is cumulative and that the knowledge generated makes decision-making easier [W1598602811]. In this research a systematic review protocol was followed [UNMAPPED:6] because it presents an appropriate and clear structure. The stages developed and their results are shown in **FIGURE 1**.",
+      "citations": [
+        "W1598602811"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "6"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Information Extraction and Analysis",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Overview",
+          "subsubsections": [],
+          "text": "From the references, we found an average of 3.13 papers published per year, without significant peaks. In the period from 2007 to 2014 the proportion of papers with an applied approach, beyond theoretical perceptions, increased from 48% to 72.7%, which we see as a research evolution. Moreover, instead of importing practices from the manufacture area, the most current references often focuses on the identification of critical factors in the briefing process, and also in the correlation of building design with value management concepts [W2080416239, W2006389585, W2020932944, W2153997919]. This change in the approach increases the understanding of the intrinsic problems of construction and the benefits to be generated by the use of more specific and appropriate practices.\n\nThe most cited authors in the references of this review were Barrett & Stanley [W4214497347] - 16 citations; Kamara et al. [W560437947] - 10 citations; Kelly & Duerk [W2053799443] - 8 citations; Othman et al. [W2091995356] - 6 citations; Kamara & Anumba [W128545650] - 6 citations; and Kamara & Anumba [W1966279914] - 5 citations. They include important theoretical studies, followed sometimes by case studies or by propositions of tools. That is why many recent authors still go back to them as references for recent proposals. Concerning the keywords, the most cited in the references is \"value management\" (484 times), followed by \"requirements engineering\" (90 times), \"briefing\" (72 times) and \"requirements management\" (42 times). The count of keywords was made based on the articles; thesis and books were not included because they are much more extensive than articles and could overbalance the result according to their subjects.\n\nIn order to contribute to the understanding of the scenario and to advance the analysis of content, the references were arranged according to their focus into four correlated groups (**FIGURE 2**). The proportion of studies per group is shown in the **TABLE 1**.\n\nThe main contributions of each group are discussed in the next section. It is noted that although the papers were grouped according to their focus, possible contributions to the other three groups were considered and cited when relevant.\n\nAdditionally, in order to analyze which part of requirements processing each paper addresses and contributes, we considered that requirements are intermittently developed through four stages during a project: (i) elicitation, (ii) analysis and prioritization, (iii) specification, and (iv) validation [W1604476777, W2083232328]. We found the stages (i), (ii) and (iii) introduced in the oldest studies of this review [W2125018452, W560437947, W1966279914]. Although the approach to them was not so clearly defined and combined by most subsequent authors and a few studies deepened in the fourth stage when dealing with design reviews and feedback (e.g. [W1972377062]). The following description of each stage was achieved by means of content analysis.\n\nThe activities of the first stage are based on the collection and organization of information for the project, identification of the stakeholders and their demands, and subsequent transformation of wishes and needs into requirements [W2049103957, W2028052514, W1604476777, W1985535243, W2083232328]. Elicitation activities are presented in 89.6% of the papers and there is a notable focus on performing these activities in the initial phases of the design process.\n\nIn the second stage, analysis and prioritization, the requirements must be examined, combined, and the importance of each of them must be evaluated [W1604476777, W1985535243, W2083232328]. This RM stage was mentioned in 66.7% of publications. Conflicts among requirements often occur on this stage [W1604476777], especially in projects with numerous stakeholders, which is typical of building projects [W1534822390, W1985535243]. Therefore it is essential to have a good basis for decision-making in order to solve such conflicts without impairing the project [W2054624274].\n\nIn the third stage, specification, the requirements must be transformed into neutral design solutions [W2125018452]. Activities related to the requirement specifications are explored in 50% of the papers. Again assertive decision-making on the solutions is essential to be worked on [W2054624274].\n\nFinally, in the fourth stage, validation, the design solutions should be evaluated by verifications and feedbacks [W2042820653, W1972377062]. Some alternatives of good practices will be presented next in this paper, but only 12.5% of studies discuss this stage.\n\nConcerning the RM activities, although there are studies geared to the requirements' documentation, communication, tracking, traceability and change management (e.g. [W2142783186]), most of the researches poorly considered all of them. Usually they are associated with the construction of the brief, not considering the whole design process and even less the whole project life cycle. Requirements are open to changes and the RM activities should enable such changes to be evaluated and implemented [W2142783186]. We have found lack of guidelines on how they could be continuously performed without losing the track of the requirements.",
+          "citations": [
+            "W2080416239",
+            "W2006389585",
+            "W2020932944",
+            "W2153997919",
+            "W4214497347",
+            "W560437947",
+            "W2053799443",
+            "W2091995356",
+            "W128545650",
+            "W1966279914",
+            "W1604476777",
+            "W2083232328",
+            "W2125018452",
+            "W1972377062",
+            "W2049103957",
+            "W2028052514",
+            "W1985535243",
+            "W1534822390",
+            "W2054624274",
+            "W2042820653",
+            "W2142783186"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Problems and Critical Factors",
+          "subsubsections": [],
+          "text": "Among the problems to perform requirements processing activities, the most cited are the difficulties in accommodating the requirements of all involved, and the lack of open, effective and formal communication. Concerning the first one, it is basically due to the high number of stakeholders [W2142783186] and the poor definition of the project's objectives and priorities [W2028052514, W1534822390]. Concerning the second one, the lack of channels and common language are recurrent problems that hinder the communication between stakeholders [W2142783186] and it causes many avoidable losses in time, budget and value generation [W2006389585, W1538398333, W1972377062, W2142783186]. The open communication was the most important factor according to a survey with specialists that indicated thirty-seven critical factors for the success of the briefing process [W2156142441].\n\nThe generation of unclear information is another critical factor that can promote a very negative impact on requirements management and value generation [W2006389585]. Information clearness is a quality to be permanently sought, from the definition of the objectives of the organization and project, throughout the identification stakeholders, requirements and actions to be taken to manage them [W2153997919]. Through a survey based on case studies, researchers concluded that indeed, often the documents that record the demands (briefs) are not based on clear evidence, do not formalize the clients' demands adequately and do not prescribe measurable targets [W2025754444].\n\nAs to the later aspect, some authors identified the lack of inclusion of end users throughout the design development [W2054624274, W1983962624]. So, it becomes difficult to evaluate to what extent the design solutions serve their needs and wishes [W1983962624]. Analyzing the criteria used by clients, designers and consultants in project decisions, marked differences were noted in the perception of their importance [W2054624274]. Some authors state that there is a tendency to change the focus of the clients' needs to the designers' preferences, as the design is being developed [W2049103957, W2015918071]. Consequently, changes during the design process are often mistreated [W2008724692]. Moreover, even when the clients are included, sometimes they do not know how to express their wishes and collaborate with the design development [W2028052514, W1980816009]. The project team has to guide inexperienced clients, because late or wrong requirements might bring many losses [W4214497347].\n\nIn this sense, there are authors who indicate that human failures due to lack of knowledge, experience and training are base-problems in requirements processing [W2028052514, W2042820653]. In parallel, there is a need of frameworks, and specific and applied methods/tools to support the requirements processing activities, which are still too manual, decentralized, non-systematic, and paper-intensive [W2142783186].",
+          "citations": [
+            "W2142783186",
+            "W2028052514",
+            "W1534822390",
+            "W2006389585",
+            "W1538398333",
+            "W1972377062",
+            "W2156142441",
+            "W2153997919",
+            "W2025754444",
+            "W2054624274",
+            "W1983962624",
+            "W2049103957",
+            "W2015918071",
+            "W2008724692",
+            "W1980816009",
+            "W4214497347",
+            "W2042820653"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Guidelines",
+          "subsubsections": [],
+          "text": "Most of the guidelines identified are prescriptive and are associated to the well-known problems in the design process, such as difficulties in generating value [W2049103957, W2034566166, W1971486507, W2091995356, W1985535243, W2080416239, W1602114925, W2011471634, W2008724692, W2066852804, W2020932944] and in communication [W2088496476, W2076485265, W2076170954, W2140236679, W2060916576, W2042820653].\n\nValue management is a fertile field for research on requirements, since its main objective is to develop solutions that will generate value when responding to the clients' requirements [W1971486507, W2067286122, W2080416239, W2015393082, W1988027511]. Shen et al. [W1985535243], for example, propose shaping a structure to process the clients' requirements by expressing them in the format of functional terms and in their organization according to a how-why logic. Other researchers in the field found variables that have impact on value generation via the requirements [W2080416239]. When developing and validating a theoretical structure based on these variables, it was concluded that the most significant of them was \"Client representation\" [W2006389585]. This means that it is necessary to ensure adequate representation of the clients involved in the project, in order to allow identifying the needs completely and preventing distortion of the demands [W2006389585].\n\nIt is acknowledged that decisions made during the initial phases of design are critical to value generation, and these definitions must be consistent enough to guide project development [W2088496476, W2054624274]. However, the identification of requirements should not stop in these phases, it must evolve as the project develops [W1983962624, W2142783186]. Limiting the uptake of requirements to the initial stages makes the formal processing unfeasible and prevents interaction among the stakeholders [W2091995356]. Case studies have shown that the opinions and changes provided by the clients may lead to improved results [W2091995356]. These findings reinforce that requirements processing is a continuous and dynamic process.\n\nIn order to improve the RM process, it is necessary a formal, centralized and integrated structure to register and distribute information produced by those parties [W2142783186]. These authors propose an integrated model to guide the execution of RM activities, based on the continuous requirement identification, a requirement web-based repository and a requirement change management system. In this sense, the use of web-based collaborative environments was recognized in studies about work plans [W2140236679] and extranet network systems [W2060916576]. These structures complement the informal registration and face-to-face meetings, and can improve efficiency in communication and trust in the work of those involved and. Concerning the conditions for face-to-face communication and interaction between the parties involved, some authors propose sequences of workshops during the project [W2011471634]. It is necessary, however, to watch out for the promotion of discussions, debates and conflicts that are really constructive [W1971486507, W2008724692].\n\nA RE approach was also used for the development of a Computer Integrated Construction (CIC) system [W2076485265] through which collaborative working can be undertaken. The focus is on integrating requirements' information over the project life cycle, but the authors themselves say that, although many CIC systems have been developed, they usually do not go beyond the limits of technology transfer [W2076485265]. In general, it can be seen that even in the most recent research, few authors in this group use IT resources [W2076485265, W2140236679, W2060916576, W2042820653].\n\nAs a complement, some authors seek inspiration in other industries. Kamara et al. [W2125018452, W2034566166] present a model to analyze and specify requirements of clients, strongly based on QFD and practices of concurrent engineering. The model proposes to clarify the process of defining project requirements and solutions, and to make traceability activities easier. Based on case studies and surveys, authors propose a sequence of activities within three stages (definition, analysis and translation of requirements) with the respective tools for each stage. The methodology is well structured, but due to the quantity of data, there are doubts as to whether it would really be useful without the support of IT.\n\nFinally, as already presented in the previous section, one of the main causes of failure is the lack of experience of professionals to deal with requirements processing. The design team must understand the requirements processing benefits and be prepared before performing it. Some guidelines found as possible solutions to this problem were to invest in training and designating specialists to coordinate the requirements processing activities [W2028052514, W2042820653]. There are also indications that these skills should be introduced in professional education already at the undergraduate level [W2028052514]. However, it is warned that excessive emphasis on rational decision-making can limit creativity, which is important for any design process [W2028052514].",
+          "citations": [
+            "W2049103957",
+            "W2034566166",
+            "W1971486507",
+            "W2091995356",
+            "W1985535243",
+            "W2080416239",
+            "W1602114925",
+            "W2011471634",
+            "W2008724692",
+            "W2066852804",
+            "W2020932944",
+            "W2088496476",
+            "W2076485265",
+            "W2076170954",
+            "W2140236679",
+            "W2060916576",
+            "W2042820653",
+            "W2067286122",
+            "W2015393082",
+            "W1988027511",
+            "W2006389585",
+            "W2054624274",
+            "W1983962624",
+            "W2142783186",
+            "W2125018452",
+            "W2028052514"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Tools and Techniques",
+          "subsubsections": [],
+          "text": "Since there are four main stages to RE and each of them requires specific tools and techniques, the most organized way to present them was by grouping according to those stages.\n\nAs to elicitation, the best practices are still well-known interviews and questionnaires [W2125018452, W2015918071], workshops and brainstorming [W1534822390]. Software, such as ClientPro [W2015918071] and CoBrlTE [W1534822390], make it easier to record the data, which is essential for the next stages of RE and support the RM activities, but they were not broadly disseminated. Some other practices like, using photographs of buildings as a reference, or a non-reference, was also a simple proposal for the elicitation and analysis of requirements [W1980816009].\n\nTo develop the analysis and prioritization activities, we found some basic techniques such as the construction of decision trees [W560437947]. Functional Performance Specification (FPS) and Function Analysis System Technique (FAST) [W1985535243, W2071759739] are complementary techniques for analysis (through the how-why logic) and prioritization (through a flexibility scale) of requirements. These techniques evolved to a system called Case-Based Reasoning (CBR) [W2015393082], which is a tool that makes it easier to apply FPS and FAST via IT solutions. Also, based on these techniques and tools, a method called User Pre-Occupancy Evaluation Method (UPOEM) was developed [W1972377062] and it will be presented in the next section. QFD is also used for analysis and prioritization, applied both alone [W2125018452] and associated with the software ClientPro [W1966279914]. QFD is acknowledged as a tool that is consolidated in the manufacturing industry and, in fact, it allows organizing and prioritizing the requirements, which is very useful for traceability and decision-making. However, using it requires exhaustive work with data when applied to projects with many requirements, therefore the practice has not been very successful [W2015918071].\n\nAs to the specification, once again QFD was used to develop activities with or without the support of software [W2125018452, W1966279914]. CBR is also strongly dedicated to specification [W2015393082], helping to identify functionalities and respective project solutions.\n\nFew proposals were found for validation. This stage encounters significant obstacles in the field of construction, because often there are no prototypes for testing, other than physical or electronic models. The requirements and their project solutions can be verified, for instance, by physical or electronic models [W1972377062]. From this standpoint, Building Information Modeling (BIM) technology reveals as a potential tool. Software that use it, besides having various functionalities that are useful for the designers and are not within the scope of this research study, allow the permanent visualization of the model in 3D, which enables a quick verification of the design solutions whenever necessary. Drawings and sketches also can be used to check to what extent the requirements are being met [W2085213344], but they are not very dynamic, and are limited as regard changes and the verification of incompatibilities among the subprojects.\n\nRegarding RM, in general, software are the tools that supply the greatest contributions in practice [W1966279914, W560437947, W1534822390, W1972377062, W2142783186]. Mechanisms such as spreadsheets and matrices can also be useful and effective [W1966279914, W1534822390], but registration and handling of data are more expeditious, flexible and reliable when supported by IT. The collaborative virtual environments [W2140236679] also provide contributions, as they allow recording and sharing of information. Establishing robust mechanisms supported by reliable and dynamic technology is a very important initiative to improve the requirements processing results [W2142783186].\n\nDuring the analysis of literature, it was remarkable that most of the techniques and tools are aimed at analysis and prioritization of the requirements [W2015918071, W128545650, W1966279914, W2085213344, W2071759739, W2015393082]. On the other hand, the stage with the least support is validation. It was also found that flexible tools depend on IT, because they can make the requirements processing less exhaustive. However, most of the software found in the literature are of academic provenance, and are not widely disseminated on the market [W1966279914, W1534822390, W1972377062], which is an obstacle for practitioners. Only 50% of the papers focusing on tools have presented results based on real situations, the others were based on simulations.",
+          "citations": [
+            "W2125018452",
+            "W2015918071",
+            "W1534822390",
+            "W1980816009",
+            "W560437947",
+            "W1985535243",
+            "W2071759739",
+            "W2015393082",
+            "W1972377062",
+            "W1966279914",
+            "W2085213344",
+            "W2142783186",
+            "W2140236679",
+            "W128545650"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5. Methods",
+          "subsubsections": [],
+          "text": "Only two methods were found in the literature review. The Visual Value Clarification method [W1980816009] uses photography as a tool to express and understand the clients' needs in the initial phases of studies on the project. It is a method focused on the identification and specification of requirements, but it does not contribute much to RE/RM in a structured manner, because it is an empirical method and limited to the initial phases of the design.\n\nBased on the FPS and FAST techniques, UPOEM was developed using the BIM technology [W1972377062]. Through UPOEM modeling can be used from the beginning to the end of the project to analyze, specify and validate requirements. The method is implemented using a software that allows storing the project information, whether it is requirements, project solutions, notes, etc., which also makes it easier to trace information. Its main limitation is that it does not prescribe procedures or indicate tools to prioritize requirements.",
+          "citations": [
+            "W1980816009",
+            "W1972377062"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The focus of this section is to present the most important concepts and practices found in the references obtained through the information forms. After an overview, the following sub-sections provide an outline of selected studies divided into four groups.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. The Identification of Gaps and Recommendations",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Lack of Consensus on Requirements Processing Key Concepts, Scope and Coverage",
+          "subsubsections": [],
+          "text": "Since the keywords and related terms were established to compose the research argument, it was found that a broader set of words should be researched to include all possible contributions involving this topic. In general, the lack of consensus in the definition of requirements processing key-concepts, scope and coverage is an obstacle that makes it difficult for researchers and practitioners gathering information together about problems and the best practices in order to compare them and develop new contributions. Still, this conceptual and terminological variation does not seem to be associated with an evolution over time, but with certain lines of thought.\n\nThe understanding of what was covered by the term \"client\", for example, varied considerably. Most of the papers refer to a client as someone who is funding the project [W2125018452, W2042820653, W1983962624, W2020932944, W1972377062], and they may be the end user or the sponsor. Yu et al. [W2080416239], state that it is difficult to find the path to satisfy the diversity of interests due to the differences between \"user-clients\" and \"paying-clients\", but that it is the most important aspect is to capture everyone's requirements, since all must be considered clients [W2080416239]. Clients may also be considered all those who are interested, collaborate or expect to obtain some benefit from the project [W2015918071, W2011471634], and this complete group of interested people is also called stakeholders by some authors [W1980816009, W1983962624]. This is an example of term to be better defined.\n\nTo solve the problem about the lack of consensus about key concepts, the main definitions were grouped in **TABLE 3**. After comparing and analyzing them, we propose a definition that better fit in the building design concept. The justification and the base-references are also presented.\n\nConcerning the scope and coverage of requirements processing, we begin by stating that the phases of the design process are regularly defined in studied AEC researches. However, there is a lack of clearness about how continuous requirements processing (RE steps and RM activities) is performed during those design phases. The authors studied how different attitudes regarding the scope and coverage of requirements processing. Besides overlapping objectives and expected benefits there are also variations regarding the understanding of when it begins, when it ends, and its interfaces with the design phases. Even in research using the word \"briefing\" to approach the requirements processing (93%) there is no consensus regarding what this process is.\n\nMost of the authors who use the term briefing, call it a process that occurs in the initial stages of the project [W2125018452, W2006389585, W1538398333, W2153997919]. Some of them acknowledge that changes in the project process are inevitable and that the brief should be flexible enough to guide the changes in requirements [W2006389585, W2153997919]. But they do not really consider that new requirements come out not only due to changes in scope or needs, but as a natural result of the project evolution and of the deployment of general requirements for the most specific ones [W2091995356].\n\nAccording to this reasoning, there is another group of researchers who say that \"briefing\" is a continuous process and that it should accompany the project throughout its life cycle [W1994587699, W2091995356, W1983962624], as **TABLE 3** shows. They say that a brief is not an hermetic object but a decisive and interactive document in which the clients' requirements must be recorded, in order to slowly incorporate them into the project [W2088496476]. **FIGURE 3** shows a simplified illustration of these two views.\n\nThe point is that even the research studies that acknowledge that the briefing should be continuous present practices turned to the initial phase of the project. Thus, it appears to be consistent to accept that the briefing is historically an initial design stage of identification of demands and if the set of requirements evolves throughout the project (become more specific, are eliminated, appear, are altered), i.e., if it changes, RE and RM are the continuous and cyclic processes during the whole project life cycle (preparation, briefing, design, construction, facility management) that should make the requirements up to date. Making a closer approach to the SE concepts might be a way to better clarify how the requirements develop throughout the design process, and how they feed the next project phases. The scheme in the **FIGURE 4** illustrates this view.\n\nFollowing this logic, each cycle can be a milestone and an opportunity to evaluate the progress of the project in the light of the fulfillment of the requirements. It should be also recognized that, despite the fact that the RE stages always aim at the same objective, there may be variations as to the type of tools to be used in each design phase, since each one has different characteristics (i.e. number of people involved and the level of specificity of the requirements). In addition, accepting that the requirement processing is continuous, the information registration, storage, tracking and traceability make all sense, and the study of RE and RM tools applied to each phase of the project becomes a broad opportunity for future research.",
+          "citations": [
+            "W2125018452",
+            "W2042820653",
+            "W1983962624",
+            "W2020932944",
+            "W1972377062",
+            "W2080416239",
+            "W2015918071",
+            "W2011471634",
+            "W1980816009",
+            "W2006389585",
+            "W1538398333",
+            "W2153997919",
+            "W2091995356",
+            "W1994587699",
+            "W2088496476"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Some Disconnection Between Problems and Solutions",
+          "subsubsections": [],
+          "text": "The first impression of **TABLE 2** is the balance between the number of approaches related to RE and RM. Concerning the RE, we found tools to all the steps and the first question raised is how much are they useful in each cycle of **FIGURE 4**. The studies usually cover the first design stages and do not develop to the next ones. There are also perceptions about two important moments for the value generation: requirements elicitation and validation. There are many problems and guidelines directly linked to requirements elicitation and the tools for this step are basic techniques \u2013 what is also found in SE researches. Thus, we can say that elicitation depends more on good inquiring and registering than complex tools, i.e., it depends on people's ability and attitude. Concerning validation, this step has mainly indirect relationships, what suggests that little attention has been dedicated to this very important step.\n\nConcerning RM, the most problematic activities according to the references are communication and change management. As to communication, there are also many guidelines and tools. However, change management needs more support of guidelines and tools, and, once it depends on documentation, storage and traceability, the study of the problems on these correlated RM activities must increase.\n\nTherefore, it was noted by making comparisons between the groups of **TABLE 2** that, despite the efforts on proposing alternatives for improvement of requirements processing, we have found some disconnection between the critical problems and the proposed solutions. As a recommendation, these critical aspects should be recognized and evaluated as part of the whole process, so they could indicate the way for more efficient solutions.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Lack of Availability of Applied Methods and IT Tools",
+          "subsubsections": [],
+          "text": "Many of the problems listed from the literature review can be solved through the listed guidelines and tools of **TABLE 2**. As examples, we can mention the problems of formalization (1.6) and clearness (1.8), which are some of the broadest ones, and the problems that affect communication. It was perceived, despite that we found some models (e.g., [W2142783186]) and many tools (**TABLE 2**), so far there is no methods that face the complexity and amplitude of requirements processing, connecting it to the design process and elucidating which phases, tools and activities are correlated. With adequate models and methods, the objectives and importance of the requirements processing might be better understood and it would be possible to create an environment favorable to the introduction of better practices.\n\nWe also found little IT support. BIM are recognized as relevant technologies, which associated to specific support, would facilitate work with data, professionals' communication and requirements validation, as previously mentioned. Besides, most of the IT tools were developed and tested in academic environments, and did not reach the market, which leads to doubts about their applicability, efficacy and compatibility with the practitioners' skills. This is an indication that IT solutions should be brought closer to real users, as these methods should include people education.",
+          "citations": [
+            "W2142783186"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Designers' Lack of Knowledge and Experience",
+          "subsubsections": [],
+          "text": "Although the clear need for applied methods and tools to effectively overcome the requirements processing problems, one of our clearest findings is that the requirements processing problems are closely related to the need for experience and training of the design team. To demonstrate this perception, we can state that in a timeless manner, the difficulties in implementing open and effective communication were named as an important problem to be overcome in RM. Some solutions were reported, such as using collaborative virtual environments, promoting workshops and meetings, among others, but they will only work if people involved understand and commit themselves to these actions. The lack of clarity in generating and formalizing information that shows the whys and wherefores of decision making and allow traceability, lack of precision in defining the client requirements, lack of an evaluation of design solutions are other problems which depend on people, not only tools.\n\nIT solutions can greatly help, for example, in the prioritization and validation activities (RE), and tracking and traceability (RM), but, again, they depend on proper collection and information entry by the design team. Barrett et al. [W2028052514], more than a decade ago, reported this possible failure on training professionals for this type of activity. Thus, it is concluded that, even if more reliable, dynamic and inclusive tools are developed, RE and RM will only work when people are prepared to develop them, and when such practices and tools are compatible with their skills and attitudes. The verification of the perceived valued and the motivation of practitioners on the use of new RE/RM tools, in detriment to tacit practices, is an investigation that can bring insights for future research.",
+          "citations": [
+            "W2028052514"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The first gap (section 4.1) is a theoretical problem noticed during the references studying. The others are based on the analysis of the relationship between the requirements processing findings for building design with RE steps and RM activities, presented in **TABLE 2**, which is a result of the researcher's analysis. The direct relation was marked when problems, guidelines, tools and techniques, and methods found in the literature had direct impact on the RE or RM activities, compromising their execution and results. This comparison has clarified the usefulness of propositions. The relationship between the problems and solutions (guidelines, tools and methods) were also analyzed to identify gaps between them.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This systematic review aimed at summarizing the concepts and practices for the requirements processing in the building design, discussed in the last fifteen years, and at indicating the main gaps that remained. As delimitation, even understanding that the processing of requirements follows the entire project life cycle, this study is focused on the design phase. It was found that, even its importance and main limitations have been known for decades, important gaps remained to be explored in a future work. We found (i) lack of consensus on requirements processing key concepts, scope and coverage, (ii) some disconnection between problems and solutions, (iii) lack of availability of structured and applied methods and IT tools, (iv) designers' lack of knowledge and experience with requirements processing. In order to contribute the first problem (i), the main definitions of key concepts were grouped, analyzed and an ultimate definition was proposed by the authors in order to contribute as a basis for future research on this theme. A scheme of the main project and requirements processing stages is also illustrated in **FIGURE 4**.\n\nThe gaps found may show good theoretical and practical opportunities for research about the development of building projects, especially if the studies come together with the practical application, besides the academic simulation, which is a common characteristic of the studies that have been performed until now. The gaps led to some recommendations for future research: (i) validate the proposed definitions for the key concepts; (ii) develop the scheme of **FIGURE 4** by studying RE and RM practices applied to each project phase; (iii) focusing more effort on the alignment of solutions to the root of the problems; (iv) developing requirements processing methods and IT tools aligned to the practitioners skills; (v) investigating the perceived valued and the motivation of practitioners on the use of new RE/RM tools in detriment to the tacit practices.\n\n---\n\n**TABLE 1. Distribution of research studies per group.**\n\n{{TABLE:tbl_01}}\n\n**TABLE 2. Summary table of problems, guidelines, tools and techniques, and methods for the requirements processing in building design and their relationship with RE and RM.**\n\n*Note: \u25cf = direct relationship; \u25cb = indirect relationship*\n\n{{TABLE:tbl_02}}\n\n**TABLE 3. Definition of key concepts.**\n\n{{TABLE:tbl_03}}\n\n---",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01",
+        "tbl_02",
+        "tbl_03"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2607264831_tables.md"
+}

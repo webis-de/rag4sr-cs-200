@@ -1,0 +1,675 @@
+{
+  "id": "W4362571114",
+  "metadata": {
+    "title": "Text-based Sarcasm Detection on Social Networks: A Systematic Review",
+    "n_sections": 8,
+    "n_subsections": 11,
+    "n_subsubsections": 24,
+    "n_tables": 14
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "I. INTRODUCTION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Over the last few years, natural language processing (NLP) has been one of the most active areas of artificial intelligence (AI) research. Researchers in this area have made considerable effort to enable machines to mimic the human ability for language, and the results have often been ground-breaking. For example, sentiment analysis, also known as opinion mining, is an NLP task that involves identifying the subjectivity and sentiments present in opinions [W66373487]. Social networks, such as Twitter and Facebook, are gaining increasing popularity and have millions of active users. In particular, Twitter is one of the most popular social networks that attracts millions of users [UNMAPPED:2]. In addition, text is considered as the most commonly used form of communication, with social network posts varying from short-text data, such as tweets, to long-text posts such as debates.\n\nSarcasm can be defined as saying or writing the opposite of what is intended. As a result, sarcasm generates ambiguous and non-straightforward data. For instance, \"I love to go to the dentist!\" is an obvious example of the use of sarcasm for expressing negative feelings. Overall, it is occasionally hard to efficiently recognize sarcasm due to the contradiction between the implicit and explicit meaning [W1966599906]. Moreover, textual sarcasm is challenging due to the lack of tone and facial expressions, and this makes it hard for even human beings to detect sarcasm [W2472594302]. Therefore, textual sarcasm is a vague task that needs to be studied carefully. A well-designed NLP model for text-based sarcasm detection is, thus, crucial.\n\nOver the past years, a few reviews about sarcasm detection in social networks have been published, but most of them focused mainly on the implementation phase, for example, [W2598852632, W2892302794, W3089581145]. However, some of the previous research did not cover all the approaches used for sarcasm detection. For example, the authors in [W2598852632] reviewed and analyzed machine learning-based sarcasm detection studies and found that support vector machine (SVM) is the most frequently utilized classification algorithm for sarcasm detection. However, there are many other techniques in use that need to be studied. The researchers in [W3089581145] reviewed the rule-based, statistical-based, and deep learning (DL) approaches for sarcasm detection but did not consider other popular approaches such as transformers, while the researchers in [W2892302794] only presented a technical review of sarcasm detection algorithms and reported the mostly frequently used algorithms for sarcasm identification.\n\nBased on the gaps in the literature discussed above, the main aim of this article is to conduct a systematic literature review (SLR) that focuses on identifying and analyzing text-based sarcasm detection articles on social networks based on their development approaches, evaluation metrics, and datasets. Moreover, this article presents an overview of the main sarcasm detection challenges and future possible improvements. To achieve these objectives, the following four research questions will be answered:\n- RQ1: What are the main approaches used for the development of automatic sarcasm detection models?\n- RQ2: What are the most commonly used metrics to evaluate the performance of sarcasm detection models?\n- RQ3: What datasets are most commonly used for detecting sarcasm on social networks?\n- RQ4: What are the main challenges in sarcasm detection?\n\nThe remainder of this article is organized as follows. Section II provides the problem statement, and Section III describes the methodology used in this SLR. The approaches, metrics, and datasets of the reviewed articles are provided in Sections IV, V, and VI, respectively. Section VII discusses the findings, research problems, and future research directions. Finally, the conclusion is provided in Section VIII.",
+      "citations": [
+        "W66373487",
+        "W1966599906",
+        "W2472594302",
+        "W2598852632",
+        "W3089581145",
+        "W2892302794"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "2"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "II. PROBLEM STATEMENT",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Over the past decade, the increase in the number of social network users has caused researchers to deeply investigate and analyze data on social networks. Sarcasm detection is one of the most challenging tasks and is a hot topic in the NLP field. Non-straightforward sarcastic data may reflect positive or negative sentiments or both polarities. In fact, it is difficult to detect sarcasm because sarcastic text is often obscure and ambiguous. In other words, there is little agreement on the actual intention behind indirect sarcastic sentences even by humans, and this makes it even harder to accomplish such tasks with AI technology. Most of the text-based sarcasm cannot be interpreted literally since the actual purpose of the sarcastic text might be the opposite of the apparent meaning of the text. Moreover, the lack of body language and voice tone in text-based sarcasm make it difficult to understand sarcasm in text. Another challenge to sarcasm detection is that the context of sarcasm is strongly dependent on cultures, personalities, and languages.\n\nSarcasm detection is important for tracking people's opinion and satisfaction in relation to products. Therefore, sarcasm detection is an essential task for decision making by businesses. Social networks, by nature, are rich in sarcastic texts, and this further increases the need for extensive analysis and study. However, applying basic sentiment techniques such as rule-based techniques, with sarcastic text is not sufficient. Therefore, there is a strong need for a well-designed model specifically oriented towards sarcasm detection tasks. The availability of recent review in sarcasm detection field would pave the way for a new novel solution. Therefore, it is crucial to conduct a review that covers the most recent techniques as well as the state-of-the-art techniques.\n\nRecently, several works have been published on sarcasm detection with machine-learning (ML), DL, and transformer techniques. However, a limited number of the reviews so far have conducted in-depth investigations into sarcasm detection. Therefore, the present SLR comprehensively covers recent articles on text-based sarcasm detection in social networks that were published between 2019 and 2022. In addition, the reviews published so far, that is [W3089581145, W3028751324, W4295884227, W4285104833, W4292687057] have several limitations. For instance, the study in [W3028751324] used a different database and selection criteria compared to this study, and the studies in [W4295884227] and [W4285104833] differ with regard to their research questions. Further, the challenges involved in the development of an effective model for sarcasm detection are not highlighted in [W4292687057]. The researchers in [W3089581145] did not provide sufficiently detailed characteristics and findings regarding the recent sarcasm datasets and metrics. To sum up, this SLR was conducted with the aim of filling in the highlighted gaps in the previous reviews, as described above. With this survey, our aim is to identify and analyze text-based sarcasm detection articles on social networks based on their development approaches, evaluation metrics, and datasets.",
+      "citations": [
+        "W3028751324",
+        "W4295884227",
+        "W4285104833",
+        "W4292687057",
+        "W3089581145"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "III. SURVEY METHODOLOGY",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Planning",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "1) Goals and research questions",
+              "parent_subsection_id": "s_3_1",
+              "text": "The primary purpose of this SLR is to identify and analyze articles on the state of the art of sarcasm detection tools based on their development approaches, evaluation metrics, most commonly used datasets, and the major challenges to sarcasm detection identified. To achieve these objectives, the following research questions are investigated:\n- RQ1: What are the main approaches used for automatic sarcasm detection models?\n- RQ2: What are the commonly used metrics to evaluate the performance of sarcasm detection models?\n- RQ3: What datasets are most commonly used for detecting sarcasm on social networks?\n- RQ4: What are the main challenges in sarcasm detection?",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2) Databases identification and search procedure",
+              "parent_subsection_id": "s_3_1",
+              "text": "Four scientific databases, namely, IEEE, Springer, ScienceDirect, and ACM, were used to search and identify relevant research articles. The search was conducted using nine keywords based on specific selection criteria, which will be described in Section 3. The keywords were selected based on those mentioned in [W3028751324, W4295884227, W2990612494]. Table I presents the number of selected articles based on the keywords and database names.",
+              "citations": [
+                "W3028751324",
+                "W4295884227",
+                "W2990612494"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3) Inclusion and exclusion criteria",
+              "parent_subsection_id": "s_3_1",
+              "text": "The inclusion and exclusion criteria for selecting the most relevant articles were based on the objectives of this SLR. The inclusion criteria were as follows:\na) Articles published in the English language\nb) Articles published from 2019 to 2022\nc) Full journal articles\nd) Articles published in the field of computer science\n\n**TABLE I. NUMBER OF SELECTED ARTICLES BASED ON THE KEYWORDS FOR EACH OF THE FOUR DATABASES**\n\n{{TABLE:tbl_01}}\n\nA large number of articles met the inclusion criteria, and these were filtered using the following three exclusion criteria:\n- Titles and abstracts that were irrelevant to sarcasm detection.\n- Duplication.\n- Inability of the articles to address the research questions.\n\nAs the number of articles retrieved was too large to process manually, it is assumed that the retrieved articles in a database search engine are arranged in accordance with the keywords. According to the first exclusion criterion, articles with titles and abstracts that were not related to sarcasm detection were excluded. Next, duplicate articles that appear in more than one of the databases were excluded. The last criterion relates to whether the articles could address the research questions and involves quality assessment of the candidate articles, as discussed in the following subsection.",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_01"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4) Article selection",
+              "parent_subsection_id": "s_3_1",
+              "text": "The initial search in the databases returned about 2726 articles. Table I details the number of articles returned for each possible keyword query in all four databases. In general, the maximum number of articles (1574) was retrieved from ScienceDirect database; this is probably due to differences in the content of the databases, interests, and domains. Moreover, the highest number of articles was retrieved with the query \"Sarcasm AND Detection AND Machine learning\".\n\nFor screening the retrieved articles, the inclusion and exclusion criteria described in the previous subsection are applied. Based on these criteria, 2634 irrelevant articles were excluded, and 92 relevant articles were considered. Following this, 47 duplicated articles were further excluded, and the remaining 45 articles were considered for deeper investigation. Finally, 15 articles that did not address the research questions were excluded, and this left us with 30 articles. Fig. 1 illustrates the article selection process.\n\n**FIGURE 1. Flowchart depicting the article selection process.**\n![Flowchart: Total articles = 2726; Exclude Irrelevant = 2634; Relevant articles = 92; Duplicate = 47; Distinct articles = 45; Not addressing research questions = 15; Selected articles = 30. Databases: IEEE, Springer, ScienceDirect, ACM.]",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "1574"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "5) Quality assessment",
+              "parent_subsection_id": "s_3_1",
+              "text": "This section describes quality assessment of the articles based on the method described in [W2549738163]. The articles were assessed using the following 10 questions, and articles for which the response was \"yes\" for at least seven questions were selected.\n- Are the article objectives clearly defined?\n- Does the article provide a brief description of the previous sarcasm detection approaches?\n- Are the evaluation metrics explained clearly?\n- Is the article structure designed appropriately?\n- Are the data collection processes explained in detail?\n- Are the approach, formulation, and analysis described adequately?\n- Does the article list the used dataset?\n- Is the article understandable and well-written?\n- Does the article utilize a well-designed methodology?\n- Does the article present and interpret the results clearly?",
+              "citations": [
+                "W2549738163"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This SLR uses the Kitchenham guidelines for reviewing articles on sarcasm detection [UNMAPPED:12]. According to these guidelines, the three stages of a review are planning, conducting, and reporting the review. The following subsections provide the details of these three stages. First, Section A presents the planning stage, including the goals and research questions, database identification and search procedure, and inclusion and exclusion criteria. Second, article selection and quality assessment. Third, from Section IV to Section VI the third stage is reported.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "12"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "IV. SARCASM DETECTION APPROACHES AND TECHNIQUES",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Rule-based Approach",
+          "subsubsections": [],
+          "text": "This approach comprises a set of predefined human-made rules that act as indicators of sarcasm. Different researchers have proposed different approaches for making the rules such as parsing and matching. For example, some authors used hashtags as a key indicator of sarcasm. That is, they assumed that if tweets contain specific hashtags and do not fit in with the rest of the tweets, then that statement is sarcasm [UNMAPPED:15]. Another author combined two rule-based approaches: the first one is used for developing and recognizing the parse tree, and the other approach captures hyperboles features by using interjection and intensifiers together [W2232443784]. A third rule-based approach is \"simile,\" which involves comparing two things directly. One of the studies that utilized this approach for sarcasm detection was described in [W1842080548].",
+          "citations": [
+            "W2232443784",
+            "W1842080548"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "15"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Lexicon-based Approach",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "1) Corpus-based approaches",
+              "parent_subsection_id": "s_4_2",
+              "text": "The corpus-based approach starts with a pre-defined list of polar words with their orientation; their syntactic and co-occurrence pattern is then investigated to obtain other polar words and their corresponding orientation to obtain a bigger \"corpus\". This approach was first proposed in [W2199803028]: a list of adjectives (polar words) with their orientation were pre-defined, and new adjectives and orientations were added using linguistic constraints and rules. For example, in the sentence \"the question is simple and easy,\" there is a connective word \"AND\" which indicates that both adjectives have the same orientation; in contrast, the connective word \"OR\" indicates that the adjectives have opposite orientations. This approach is known as \"sentiment consistency\".\n\nThere are two approaches to determining the orientation of polar words, namely, the statistical approach and the semantic approach [W3163841364]. The statistical approach relies on the notion that words with similar orientation are likely to appear together frequently. Hence, the new unknown word can be assigned a certain orientation based on its frequency and co-occurrence with other words for which the orientation is known [W2168625136]. Some studies on the statistical approach have been published, such as [W2781533038] and [W1966503997]. The semantic approach, on the other hand, exploits the sentiment dictionary to discover synonyms and antonyms in order to construct a lexicon that can be used to assign the same orientation to words that are semantically similar [W2905466209]. Some studies have utilized the semantic approach to build the lexicon, such as [W2137424107] and [W68132019]. In addition, a hybrid method can be used to take advantage of both approaches, as described in the work of Zhang [W1969240017].",
+              "citations": [
+                "W2199803028",
+                "W3163841364",
+                "W2168625136",
+                "W2781533038",
+                "W1966503997",
+                "W2905466209",
+                "W2137424107",
+                "W68132019",
+                "W1969240017"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_4_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2) Dictionary-based approaches",
+              "parent_subsection_id": "s_4_2",
+              "text": "The dictionary-based approach is roughly based on the idea that synonymous words have the same orientation, and antonyms have the opposite orientation. Therefore, an initial well-known dictionary, such as Thesauri, is constructed with a pre-defined lists of polar words and their orientation. Then, this dictionary is expanded manually based on synonyms and antonyms of the existing words by adding new words and their orientation iteratively until no more words can be added [W2279759548]. Finally, manual evaluation and correction can be performed to ensure the validity of the dictionary. This is known as the bootstrapping technique. A popular recently developed dictionary is SentiWordNet 3.0, which uses the automatic annotation of Synsets of WordNet 3 [W193524605]. In addition, Park and Kim in [W2488998207] proposed a rule-based method to label the words in advertisements based on three online dictionaries.",
+              "citations": [
+                "W2279759548",
+                "W193524605",
+                "W2488998207"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Lexicon-based approaches rely on a predefined collection of words, referred to as a lexicon, with each of the words assigned to a particular polarity category indicating its nature, namely, positive, natural, negative, which are represented by the numerical values -1, 0, and +1, respectively. The lexicon can be weighted or unweighted, such that the words which induce higher positivity or negativity are given a higher probability [W66373487]. In this sarcasm detection process, a bags-of-lexicon which comprises a positive sentiment, a negative sentiment, a positive context, and a negative context is created. A text is divided into tokens of a single word, and the score of each token is obtained using the lexicon. The overall score of the text is determined by adding the individual scores and calculating the average, which is used to determine the sentiment of the text [W3163841364]. Sarcasm is detected when a positive context comprises a negative sentiment or a negative context comprises a positive sentiment [W2232443784]. An advantage of the lexicon-based approach is that it is suitable at both the sentence and feature level. Moreover, it can be considered as an unsupervised approach because it does not include a training process. However, a major limitation is that it is domain dependent, as the same word would have different meanings according to its context. For example, the word \"small\" in the statement \"this camera is extremely small\" could imply a positive sentiment, whereas the use of \"small\" in \"the TV screen is too small\" implies a negative sentiment. This could be overcome by constructing a domain-specific lexicon or adapting the current lexicons [W4210827551]. In addition, lexicon-based approaches can be divided into the corpus-based approach and the dictionary-based approach.",
+          "citations": [
+            "W66373487",
+            "W3163841364",
+            "W2232443784",
+            "W4210827551"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Traditional ML-based Approaches",
+          "subsubsections": [],
+          "text": "Since the earlier years, many studies on text sarcasm detection utilized supervised ML classifiers. Based on the surveyed studies, SVM is one of the most popular classifiers, as evident in [W3000333714, W4207027346, W3217466601].\n\nIn 2020, researchers in [W3000333714] proposed a sarcasm type detection approach that utilized the multi-rule based ensemble feature selection model. The main aim of this study was to determine the level of hurt that is expressed in sarcasm. Four classes of sarcasm type were determined, including rude, raging, polite, and deadpan. This study used ensemble learning to identify the optimal feature set among all the features and to classify a tweet as sarcastic or not. Following this, the type of sarcasm was determined by using a rule-based approach. This experiment was conducted by using tweets obtained through the Twitter Application Programming Interface (API) Tweepy and Twython. A study conducted in 2021 [W3217466601] developed three kinds of ensemble classification algorithms for detecting sarcasm with the Principal Component Analysis (PCA) algorithm. The ensemble classification algorithm is a combination of SVM, KNN, decision tree, logistic regression, and Multi-layer Perceptron (MLP). The three models were tested on five datasets of different sizes from the Twitter streaming API.\n\nAnother related study [W3163856144] used different ML techniques, such as SVM and logistic regression, for classification. The main contribution was combining the features extracted from a Convolutional Neural Network (CNN) architecture with contextual handcrafted features to obtain the most optimal features. The experiments were conducted on a Twitter dataset created by the researchers and shared publicly [UNMAPPED:35]. One of the studies that utilized the supervised ML classifier approach with BERT and GloVe embeddings for sarcasm identification [UNMAPPED:36] also used a Twitter dataset for evaluation. A related study [W4207027346] investigated tweets with a negative mood and hyperboles to detect sarcasm. Several ML algorithms, such as SVM, random forest (RF), and RF with bagging, were utilized to analyze five hyperbole features, namely, interjection, intensifier, capital letter, punctuation mark, and elongated word. This study was conducted on tweets collected using the Twitter streaming API [W3160409726].\n\nIn 2022, the researchers in [W4206927895] proposed an intelligent ML-based sarcasm detection and classification (IMLB-SDC) technique in which an SVM classifier is used for sarcasm identification on social networks. The proposed model consists of different stages, namely, preprocessing, feature engineering, feature selection and classification, and parameter tuning.",
+          "citations": [
+            "W3000333714",
+            "W3217466601",
+            "W3163856144",
+            "W4207027346",
+            "W3160409726",
+            "W4206927895"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "35",
+            "36"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "D. DL-based Approaches",
+          "subsubsections": [],
+          "text": "DL is gaining more attention in the sarcasm detection process, since it can be used to obtain better results from unstructured data. It has the ability to learn from a given text in order to either extract automated features or perform sarcasm classification. Based on our investigations, most sarcasm detection articles combine several DL techniques in a model. The most frequently used DL approaches are CNN, artificial neural network, and long short-term memory (LSTM). These are described below.\n\nCNN is a version of the feed forward neural network with multiple hidden layers. It first emerged in computer vision applications, and since then, it has been widely used recently in NLP applications. The network comprises an input layer, hidden layers that consist of many convolution layers, pooling layers, normalization layers, a fully connected layer, and an output layer. The generic workflow of CNN in sarcasm detection is as follows: The convolution layer extracts the features from the input text (word embedding); the pooling layer reduces the size of the feature by removing the noise and un-needed details; the output of the previous layer is plugged to the normalization layer to normalize the input for the current layer in order to aid convergence; finally, a fully connected network is created and used for classification [W3163841364]. However, these steps are not identical for all studies. According to our investigations, most studies combined CNN with other DL algorithms such as recurrent neural network (RNN).\n\nRNN is designed for sequence data and has the ability to remember the needed information. Therefore, it has been widely applied in sentiment analysis and sarcasm detection. The output of such networks depends on all previous computations. In other words, to predict the class of a specific word, the model may use the class of previous words and their relations. However, one of the most serious problems with this technique is gradient vanishing. To tackle this problem, Hochreiter and Schmidhuber [W2064675550] introduced LSTM and utilized it for sarcasm classification. Later, a new bidirectional version of LSTM (Bi-LSTM) was introduced. Bi-LSTM has the ability to learn from the relationships between the polar words and classify them without relying on an external lexicon. Such an approach has been found to produce better results in many studies. Another important feature is the attention layer [W2945662754], which gives the model the ability to focus on words that contribute more to sarcasm classification.\n\nIn [W2945662754], the researchers developed an attention-based Bi-LSTM model based on features learned by external pre-defined sentiment lexica, thus eliminating the need for the traditional feature vector and increasing the ability of the model to detect incongruity in sarcastic sentences. The researchers in [W2915002815] designed a hybrid system that coupled a soft attention-based Bi-LSTM with a CNN. The attention layer generates a feature vector according to which higher weights are assigned to words that are closely related to the sentence semantics. Consequently, this feature vector with pragmatic features is input in the CNN to generate the final classification. The study aimed to improve the performance in terms of accuracy, recall precision and F-measure. Another study [W2998135150] developed an attention-based Bi-LSTM model for sarcasm classification. In this model, the multi-head attention layer consists of five heads. The multiple heads allow the attention layer to move among several disjointed information spaces that reflect different representations. They used SVM for handcrafted feature extraction to be used as input for the proposed model. Another work in [W2998825278] utilized an attention-based Bi-LSTM for sarcasm classification. For better word embedding, a question answering network was designed based on five different layers, each of which provides different representations. In [W3015642072], an improved attention-based multilevel LSTM model was developed to exploit sentiment semantics in sarcasm detection. The semantic is extracted using the first-level attention-based LSTM network. Then, the sentiment semantic features obtained from the first level are used as the input for the second level. In the second level, the polarity between the sentiment semantic features and all the words in the sentence is captured to detect sarcasm by combining the LSTM and CNN networks. Later, a more complex framework was proposed in [W3124465193], in which the researchers proposed a Self-Deprecating Sarcasm (SDS) framework that incorporates GloVe embedding, CNN to extract features, bidirectional gated recurrent unit (BiGRU) to extract context information that would be useful for SDS classification, and two attention layers to assign higher weights to SDS-identified sarcastic words.\n\nAnother effective sarcasm identification system was engineered in [W3118913631] using the Bi-LSTM framework based on two main phases. In the first phase, weighted word embedding was combined with the trigram model for better word representation. In the second phase, the first phase output was inserted into a Bi-LSTM network. A novel approach was suggested in [W3122631664], in which sarcasm detection involved the sentiment of the reply to the sarcasm and the user's expression habit. In this approach, a dual-channel CNN was utilized for sarcasm detection and sentiment analysis of the reply. Moreover, attention-based LSTM was exploited to identify the user's expression habit. In a subsequent study [UNMAPPED:48], the researchers proposed a multi-head self-attention-based GRU model to detect sarcasm while considering automatic, lexical, contextual, and handcrafted features. Feature embedding was performed by a pretrained model and was enhanced using the multi-head self-attention layers to identify keywords that contribute more to classification. In [W3156289279], the researchers proposed a novel multi-task system for joint sarcasm and sentiment analysis. The local features are obtained using BiGRU, and the global features are obtained by attention-based CNN. In [W4281870343], the researchers proposed a novel feature selection approach with deep belief for detection of cyberbullying on social networks. Additionally, the Salp Swarm Algorithm was exploited to tune the network parameter for better classification accuracy. In a subsequent study [W3148700153], an attention-based LSTM sarcasm detection model was proposed to combine both hand-crafted features that are usually extracted from classical ML algorithm, such as verbs, nouns, and adjectives, with automatic features that are extracted by DL approaches. That is, the attention layer is utilized to assign weights to the words according to their level of contribution to sarcasm detection. Moreover, 16 different textual classical features are extracted and combined with the automatic features generated from the attention layer. The main contribution in this study was the proposed feature engineering approach.\n\nTo capture the variation in the performance of different classification techniques, the researchers in [W3158586872] applied five different ML algorithms, namely, Na\u00efve Bayes, KNN, Repeated Incremental Pruning to Produce Error Reduction (RIPPER), C4.5 Decision Tree, and SVM. Moreover, a CNN network was implemented. Additionally, different preprocessing methods were applied with the classifier to obtain the best results. In fact, a pre-trained model can be used for data preprocessing, as described in the approach in [W4221128816]. The BERT model is used for data preprocessing by converting the text into distinct tokens, and the tokens are further processed by four CNN layers. The output of this process is plugged into the LSTM layer for classification. In [W4285104833], the researchers proposed a system that combines the classical ML approach to extract different text patterns with sarcasm detection using the LSTM classifier. The basic pre-processing steps are performed on the original text before the classification. Further, in [W4286685490], the researchers proposed a new attention-based BiGRU for detecting sarcasm in which hyperparameter tuning is performed using an artificial flora algorithm and embedding is performed by the GloVe model.\n\nVery few works have utilized an ensemble of ML and DL approaches. One such study [W3151555354] proposed the use of a DL model in combination with an ML classifier to extract the target of sarcasm from the text. The researchers started by using an ensemble of classifiers consisting of RF, SVM, and logistic regression to classify sarcastic sentences and determine whether they contain a target. On the other hand, an LSTM is used to extract the target using aspect-based sentiment analysis.",
+          "citations": [
+            "W3163841364",
+            "W2064675550",
+            "W2945662754",
+            "W2915002815",
+            "W2998135150",
+            "W2998825278",
+            "W3015642072",
+            "W3124465193",
+            "W3118913631",
+            "W3122631664",
+            "W3156289279",
+            "W4281870343",
+            "W3148700153",
+            "W3158586872",
+            "W4221128816",
+            "W4285104833",
+            "W4286685490",
+            "W3151555354"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "48"
+          ]
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "E. Transformer-based Approaches",
+          "subsubsections": [],
+          "text": "The sequence-to-sequence (seq2seq) model is used for many purposes, one of which is language translation, for example, translating Chinese into English [UNMAPPED:56]. One of the main disadvantages of the Seq2Seq model is that it cannot be applied to long sentences or perform parallelization. The main solution for this limitation was proposed in December 2017 in an article titled \"Attention Is All You Need,\" which described a model called the \"original transformer model\" that laid the basis for transformer-based approaches [UNMAPPED:57]. In the field of NLP, a transformer can be described as a novel architecture that can solve Seq2Seq tasks while handling long-range dependencies. In addition, transformer models are trained on large-scale corpora to learn universal language representations, so the need to train a new model from scratch is eliminated [UNMAPPED:58].\n\nMost recent studies are based on transformer models that exhibited strong performance in sarcasm detection [W3045527537, W3111125993]. These architecture models are frequently based on transformer models such as Bidirectional Encoder Representations from Transformers (BERT) and OpenAI Generative Pre-Training-3 Model (GPT-3) [UNMAPPED:61, UNMAPPED:62]. Recently, many researchers have been focusing on transformer models: for example, in 2021, the authors in [W3138407803] developed a context-based feature technique to detect sarcasm based on the DL model, BERT model, and conventional ML model. Two Twitter benchmark datasets, one provided by Riloff and one by Ghosh and Veale, were utilized [W2250710744, W2512532697]; in addition, the Internet Argument Corpus (IAC-v2) benchmark was also applied. A related study [W3111125993] proposed an enhancement to BERT in order to improve its ability to handle the volume, velocity, and veracity of data.\n\nSimilarly, in 2022, the researchers in [W4220922805] introduced an enhancement to the BERT model by fine-tuning it to related intermediate tasks before applying it to the target task. The authors in [W3207632983] applied the pre-trained COMET model to generate relevant commonsense knowledge. The experiment was conducted on three datasets, including Ghosh and Pt\u00e1cek from Twitter and SARC-Pol from Reddit [W2512532697, W2607623312, UNMAPPED:35]. The researchers in [W3045527537] proposed a model called Contextual Response Augmentation (CRA) which uses BERT, BiLSTM, and NetXtVLAD. The dataset consisted of Twitter and Reddit posts. To evaluate the proposed model, the IAC-V12 and AC-V23 datasets [W2174055001] and two datasets collected by Riloff et al. [W2250710744] and Pt\u00e1\u010dek et al. [UNMAPPED:35] were used. Furthermore, two datasets from Reddit [W2607623312] were utilized.\n\nAnother study in [UNMAPPED:70] developed an RCNN-RoBERTa model to tackle figurative language in social networks. This model consists of a pre-trained RoBERTa model combined with a recurrent CNN. The Semantic Evaluation Workshop Task 3 (SemEval-2018) dataset was used to measure the performance of the proposed model. Another researcher [W3198995987] proposed an encoder model called LMTweets, which is an ensemble of multiple types of techniques. Five classical classifiers, six DL algorithms, and transformer models were utilized for classification in this model. The experiments were conducted on three datasets, namely, Twitter SemEval-2018-Task, Self-Annotated Reddit Corpus (SARC), and Riloff Sarcastic Dataset [W2250710744, W2607623312, W2787414878].",
+          "citations": [
+            "W3045527537",
+            "W3111125993",
+            "W3138407803",
+            "W2250710744",
+            "W2512532697",
+            "W4220922805",
+            "W3207632983",
+            "W2607623312",
+            "W2174055001",
+            "W3198995987",
+            "W2787414878"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "56",
+            "57",
+            "58",
+            "61",
+            "62",
+            "35",
+            "70"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "There are many studies on NLP methods for sarcasm detection. Recent articles in the field of text-based sarcasm detection on different social networking platforms and online media is surveyed and discussed in this section, but it is not meant to be exhaustive. Sarcasm detection approaches can be categorized based on the classification technique into rule-based, lexicon-based, traditional ML-based, DL-based, and transformer-based approaches. Fig. 2 presents the general structure of sarcasm detection approaches along with their common techniques in the selected articles.\n\nThe related works are categorized into five subsections based on the approaches they have explored: Section A focuses on the rule-based approach; Section B, the lexicon-based approach; Section C, traditional ML-based approaches; Section D, DL-based approaches; Section E, the transformer-based approaches. Table II presents a detailed comparison of these works. Overall, traditional ML, DL, and transformer-based approaches are becoming popular in the field of NLP, especially in the area of sarcasm detection. Therefore, in this SLR, studies that focus on these three approaches will be studied in detail.\n\n**FIGURE 2. General structure of sarcasm detection approaches.**\n[Diagram showing Sarcasm Detection Approaches divided into: Rule-based (Matching, Parsing), Lexicon-based (Statistical, Semantic), Machine learning (DT, SVM, KNN, Random forest, LR, MLP, NB, RIPPER), Deep learning (CNN, LSTM, GRU, Deep belief network), and Transformers (BERT, GPT-3, RoBERTa).]\n\n**TABLE II. SUMMARY OF THE REVIEWED ARTICLES**\n\n{{TABLE:tbl_02}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_02"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "V. EVALUATION METRICS",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Accuracy",
+          "subsubsections": [],
+          "text": "Accuracy is a common external measurement that reflects the percentage of the total number of tweets that are correctly classified as sarcastic or not sarcastic. It is calculated using the following equation, in which the denominator represents the total number of sarcastic tweets.\n$$Accuracy=\\frac{TP+TN}{TP+TN+FP+FN}\\times100$$",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "B. F1-Score",
+          "subsubsections": [],
+          "text": "F1-score is a combination of precision and recall measures, which are the most frequently used metrics. Indeed, to calculate F1-score, precision and recall need to be calculated using the equations (2) and (3).\n$$Precision=\\frac{TP}{TP+FP}\\times100$$\n$$Recall=\\frac{TP}{TP+FN}\\times100$$\nAs mentioned before, F1-score is calculated as a harmonic mean of precision and recall, as demonstrated in the equation below.\n$$F1=\\frac{2\\times Precision\\times Recall}{Precision+Recall}\\times100$$\nIn general, F1-score values are within the interval [W66373487, UNMAPPED:0]; therefore, the higher the F1-score value, the better is the classification. Table IV presents a summary and comparison of the evaluation metrics used in sarcasm detection in the selected articles. The table shows that more than four types of evaluation metrics have been applied to evaluate sarcasm detection. From the table, it can be observed that the most common measures are F1-score, precision, and recall, and they are followed by accuracy. The results in this table are based on the highest results reported by studies that used multiple algorithms or multiple datasets.\n\n**TABLE IV. SUMMARY OF THE EVALUATION METRICS AND PERFORMANCE OF THE REVIEWED ARTICLES**\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W66373487",
+            "W1966599906"
+          ],
+          "tables_in_text": [
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "0",
+            "2"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "One of the most significant aspects of most articles on models for sarcasm detection is performance evaluation, because the results provide an indication of the significance of a study. In this section, the common evaluation metrics used to assess sarcasm detection in the selected articles will be discussed. Confusion matrix is used for analyzing the performance of a binary-class model by depicting the relationship between the actual class and the predicted class. In this matrix, each row contains information about an actual class, while each column contains information about a predicted class. Accordingly, the confusion matrix aims to analyze how well a classification can recognize instances of different classes. Table III illustrates the confusion matrix [W2028070629].\n\n**TABLE III. CONFUSION MATRIX**\n\n{{TABLE:tbl_03}}\n\nIn the sarcasm detection problem, true positives (TPs) are considered as sarcastic tweets that are correctly classified as sarcastic text, and true negatives (TNs) are tweets which are not sarcastic that are correctly classified as not being sarcastic (i.e., these refer to correct decisions, which are represented by the diagonal in the confusion matrix). In contrast, false positives (FPs) are instances which are not sarcastic that are misclassified as sarcastic text, and false negatives (FNs) are sarcastic tweets which are misclassified as text that is not sarcastic. The following subsection describes the most common and significant metrics for evaluation with the confusion matrix.",
+      "citations": [
+        "W2028070629"
+      ],
+      "tables_in_text": [
+        "tbl_03"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "VI. DATASET COLLECTION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Dataset collection is a crucial step in the sarcasm classification process that can affect the entire procedure. Building and annotating datasets for sarcasm detection is a challenging task even for human annotators, since the sarcastic text could be implicit, ambiguous, and hard to identify [W2089173648, W2250204095]. It is normal for disagreements between annotators regarding the classification of a single text as sarcastic or not, so the task is even harder for an AI program. This section describes the datasets that were used in the reviewed literature. Noticeably, some articles utilized datasets that were used in the reviewed literature. Also, some articles utilized datasets from multiple sources, including social networks, news headlines, sarcastic reviews on online shops, books snippets, and forums, to stress on the generalization of their systems. For instance, the researchers in [W3151555354] utilized three different datasets, including book snippets, tweets, and Reddit comments. However, other articles relied on a single source for the dataset, for example, social network posts [W3158586872].\n\nSocial network posts have limited length; for example, Twitter limits tweets to 280 characters. This makes it simpler to obtain annotated text based on hashtags and API. The monthly number of active users on Twitter is about 330 million, which makes it a rich source of sarcastic tweets [W4292687057]. Therefore, most of the reviewed studies rely on Twitter as a source for their datasets, and few articles used datasets from Reddit and other sources. Twitter-based datasets can be built automatically using the Twitter streaming API while searching for a specific hashtag, such as \"#Irony\" and \"#sarcasm\" [W4207027346]. In this case, the annotation process is guided by the hashtag itself. In addition, it is already accurate to some extent, since the author clearly declares the sarcasm in the tweet. Another process for collecting datasets is manual self-annotation. For instance, in [W3111125993], the annotation process was undertaken by three linguistic annotators, each of whom worked on a subset of the dataset, and in [W4207027346], four expert annotators participated in the dataset annotation. In [W3158586872], the annotation was manually performed by three students. To ensure the reliability of the self-annotation, an evaluation step can be performed later by a third annotator [W3111125993].\n\nThe number of the collected instances of sarcasm in the considered datasets varied from 1264 to 1055277 [W3156289279, W4281251249]. Generally, the higher the number of tweets in the dataset, the higher is the effectiveness of the proposed models. Some studies used a public dataset, such as [W3015642072], while other articles collected data on their own, such as [W4285104833]. When a public dataset is used for evaluation, it allows for fairer and more meaningful comparison with other works that use the same dataset.\n\nThe number of sarcastic and non-sarcastic samples in the dataset obviously affect the performance of the detection model. An imbalanced dataset may skew the performance of the classification model. In general, the models developed using imbalanced datasets are likely to achieve greater accuracy than other models with conflicting F1-score values [W2024011160]. For example, the Riloff dataset [W2250710744] creates a bias toward non-sarcastic tweets as it consists of 1648 non-sarcastic tweets and 308 sarcastic tweets. A detailed description of the datasets in the reviewed articles is presented in Table V.\n\n**TABLE V. DESCRIPTION OF THE DATASETS USED IN THE REVIEWED ARTICLES**\n\n{{TABLE:tbl_05}}",
+      "citations": [
+        "W2089173648",
+        "W2250204095",
+        "W3151555354",
+        "W3158586872",
+        "W4292687057",
+        "W4207027346",
+        "W3111125993",
+        "W3156289279",
+        "W4281251249",
+        "W3015642072",
+        "W4285104833",
+        "W2024011160",
+        "W2250710744"
+      ],
+      "tables_in_text": [
+        "tbl_05"
+      ]
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "VII. DISCUSSION",
+      "subsections": [
+        {
+          "subsection_id": "s_7_1",
+          "subsection_index": 1,
+          "subsection_label": "A. Findings",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_7_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "1) Approaches",
+              "parent_subsection_id": "s_7_1",
+              "text": "In general, it is impossible to compare the different approaches objectively due to several variations in the dataset sources and task requirements. One of the most interesting findings, as shown in Fig. 3, is that more than half of the reviewed articles used DL as a classification method for sarcasm detection, and there was a noticeable upward trend in the application of DL techniques for solving several NLP problems. In fact, DL has proved its superiority in sentiment analysis, in general, and in sarcasm detection in particular. One possible reason for this is that the automated feature extraction aspect is more effective and gives better insights about the target text than handcrafted features used in other classical sarcasm detection techniques. There are, however, other possible explanations. For instance, with regard to model performance, it is found that the best accuracy for the reviewed articles was obtained with DL models. Moreover, specific DL techniques, such as RNN, are particularly designed for sequence input data, and this fits the requirements of sarcasm detection tasks.\n\nIn addition, as depicted in Fig. 3, an interesting observation was that most articles used hybrid approaches in order to exploit the advantages of more than one approaches. The hybrid approach is extremely important in the development of sarcasm detection tools, as demonstrated in several articles in Section IV. Moreover, classical ML algorithms were utilized by 16% of the researchers. In contrast, only a few of the reviewed articles utilized transformer-based approaches. This is probably because transformers are a relatively new invention for application to sarcasm detection models. However, the rapid improvement in computational resources and increase in the available datasets have led to an increase in the application of transformer-based approaches in recent times.\n\nFig. 4 depicts the frequency at which various sarcasm detection techniques were used in the reviewed articles in this SLR. Among the classical ML approaches, the most commonly used classifier is SVM. Moreover, for DL approaches, the most commonly used technique is Bi-LSTM, and for transformers, the most applied technique is BERT. To sum up, the most frequently utilized sarcasm detection approach is DL. Moreover, the transformer approach appears to be an emerging promising solution with comparative performance to currently popular techniques and it warrants further investigation.\n\n**FIGURE 3. Trends in the sarcasm detection approaches used by the reviewed articles.**\n{{TABLE:tbl_06}}\n\n**FIGURE 4. Classification techniques used for sarcasm detection in the reviewed articles.**\n{{TABLE:tbl_07}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_06",
+                "tbl_07"
+              ]
+            },
+            {
+              "subsubsection_id": "s_7_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2) Metrics",
+              "parent_subsection_id": "s_7_1",
+              "text": "As discussed in Section V, researchers used precision, accuracy, recall, F1-score, and AUC as evaluation metrics. As shown in Fig. 5, one of the most significant findings from this SLR is that the majority of researchers utilized F-score, followed by precision and recall. Furthermore, the most obvious finding to emerge from the analysis is that 10% of the reviewed articles used AUC as the evaluation metric. In addition, from the data in Fig. 5, it is apparent that accuracy was used as a metric by 63% of the researchers.\n\nOverall, none of the evaluation metrics fit all sarcasm detection problems due to differences in the characteristics of datasets and approaches used. It is not surprising that F1-score was the most frequently used metric (90% of the researchers used this metric). This is probably because the F-score can balance the precision and recall of the positive class. Moreover, the F1-score could be more suitable than other measures when the target classes are unevenly distributed. Another interesting observation was the correlation between accuracy and dataset balance in the reviewed articles, since the vast majority of datasets were balanced datasets. This may explain why the use of accuracy as an evaluation metric was as high as 63% in the reviewed articles. AUC was the least frequently used metric; this is probably because AUC is based only on the thresholds of the true positive rate and the false positive rate. This is in contrast to the F1-score, which takes into account the overall recall and precision values. In general, 87% of the observed studies used more than two metrics, and this makes the evaluation framework more robust.\n\n**FIGURE 5. Frequency of the use of various metrics for evaluation of sarcasm detection models in the included articles.**\n{{TABLE:tbl_08}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_08"
+              ]
+            },
+            {
+              "subsubsection_id": "s_7_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3) Datasets",
+              "parent_subsection_id": "s_7_1",
+              "text": "The dataset sources, number of datasets, dataset accessibility, number of instances, annotation methods, and dataset types of the included articles are discussed here.\n\nAn essential factor that affects the sarcasm detection process is the source of the dataset, as shown in Fig. 6. The findings showed that 34% of the analyzed articles used Twitter as a unique source of datasets. One possible reason for this is the huge number of Twitter users, which is 330 million monthly active users [W4292687057]. Moreover, Twitter provides concise text that can be automatically annotated by hashtags, and this facilitates dataset building. However, no single public dataset was used across all the reviewed articles.\n\nThe most obvious finding to emerge from the analysis is that 50% of the reviewed articles rely on heterogeneous dataset sources. This result may be explained by the different advantages offered by different sources. For instance, Twitter provides short texts while Facebook provides longer texts. Therefore, considering different sources for model building is expected to produce a more comprehensive classification model. Fig. 7 supports this notion, as it shows that 63% of the reviewed studies used multiple datasets rather than a single dataset.\n\nAnother important finding that strongly supports the transparency of the evaluation framework is that 71% of the considered articles used public datasets, 23% used private datasets, and 6% used both private and public datasets, see Fig. 8. This enabled the researchers to conduct a fair comparison of the proposed work with others conducted with the same public dataset. Additionally, 73% of the reviewed articles used less than 100,000 instances to build their classification model, while only 17% used more than 100,000 instances, as shown in Fig. 9. A possible explanation for this is that sarcasm detection tasks do not require a huge dataset to differentiate between sarcastic and non-sarcastic text. This is supported by the finding that good performance was observed for most datasets containing less than 100,000 instances. Moreover, the computation overhead is a serious concern when it comes to building a classification model.\n\n**FIGURE 6. Dataset sources of the included articles.**\n{{TABLE:tbl_09}}\n\n**FIGURE 7. Use of single or multiple datasets in the reviewed articles.**\n{{TABLE:tbl_10}}\n\n**FIGURE 8. Accessibility of datasets used in the reviewed articles.**\n{{TABLE:tbl_11}}\n\n**FIGURE 9. Number of instances evaluated in the reviewed articles.**\n{{TABLE:tbl_12}}\n\n**FIGURE 10. Annotation methods used in the reviewed articles.**\n{{TABLE:tbl_13}}\n\n**FIGURE 11. Distribution of dataset types in the reviewed articles.**\n{{TABLE:tbl_14}}\n\nAnother important issue related to datasets is the annotation method. As expected, 47% of the analyzed articles used self-annotated datasets, illustrated in Fig. 10. Self-annotated datasets are precise because the text is analyzed and annotated by experts and reviewed by another group of experts. However, self-annotation requires a tremendous amount of time [W2990612494]. Therefore, tweets could be annotated automatically based on the hashtag included in the tweet; this is a simple and time-conserving approach for annotations that has an acceptable level of correctness. However, only 13% of the considered articles used hashtag-based annotation, and 23% used both the self-annotation and hashtag annotation methods.\n\nAnother relevant finding was that 54% of the used datasets were balanced datasets in which the number of sarcastic and non-sarcastic instances was similar, as shown in Fig. 11. This is probably because the nature of the dataset highly influences the model prediction metrics, particularly accuracy and F-measure. These findings reflect those of Eke et al. [W2990612494], who also found that an imbalanced dataset can increase the accuracy of the model.",
+              "citations": [
+                "W4292687057",
+                "W2990612494"
+              ],
+              "tables_in_text": [
+                "tbl_09",
+                "tbl_10",
+                "tbl_11",
+                "tbl_12",
+                "tbl_13",
+                "tbl_14"
+              ]
+            }
+          ],
+          "text": "In several domains, NLP is an increasingly important topic with regard to AI and its applications. The research community is paying close attention to the sarcasm detection approaches, datasets and metrics. This subsection focuses on several observations from examination of different aspects of sarcasm detection.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_2",
+          "subsection_index": 2,
+          "subsection_label": "B. Open Research Questions",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_7_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "1) Language used in the social network",
+              "parent_subsection_id": "s_7_2",
+              "text": "The language used in social networks is not only restricted with regard to grammar, but also restricted to words that are not often included in dictionaries. This might pose an additional challenge in the recognition of sarcasm on Twitter and Reddit because of typos, non-vocabulary language, and non-grammatical context. As multilingual text has recently grabbed the attention of researchers, training models in more than one language might be more efficient.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2) Dataset",
+              "parent_subsection_id": "s_7_2",
+              "text": "One of the biggest challenges in training models is the skewness of data. This problem arises when the number of instances in one class, such as sarcastic text, is greater than that in the other class, that is, non-sarcastic text. Furthermore, the quality of the dataset is another challenge. The use of a mixed dataset that uses slang and informal language makes it more difficult to train the classification model, especially if the dataset does not contain hashtags. In such a scenario, creating standard datasets is a solution that may solve the mentioned problems.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3) Text-based sarcasm detection",
+              "parent_subsection_id": "s_7_2",
+              "text": "In speech, sarcasm detection includes features such as eye contact and body language, which help in the recognition of sarcasm. However, text data lack such features. Therefore, it is difficult and takes considerably more effort to identify sarcasm in text.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4) Variable context length",
+              "parent_subsection_id": "s_7_2",
+              "text": "According to the reviewed articles, finding the optimal length of conversational context is a challenge. The Twitter dataset is the most commonly used domain for sarcasm detection, but the short text can be noisy and may not have any relevant features. Therefore, detecting sarcasm from short text is difficult. Overall, the researchers' task is still challenging due to the variability in context length.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_2_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "5) Emoticons and special characters",
+              "parent_subsection_id": "s_7_2",
+              "text": "In the last decade, the use of emoticons and special characters in social networks has increased. Most people prefer to express their feeling through emojis and emoticons, especially in applications that have restrictions on the number of characters such as Twitter. This increases the likelihood of ambiguity and makes sarcasm detection more difficult. Therefore, researchers should take into account the importance of these features, as they may change the overall sentiment of the sentence.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_2_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "6) Data annotation",
+              "parent_subsection_id": "s_7_2",
+              "text": "The manual annotation method is a major challenge. The main problem is distinguishing between perceived and intended sarcasm. Most datasets built through manual annotation may, therefore, be limited by differences in the perception of the annotator and the intention of the author of the utterance. As the labeling is based on the perceived sarcasm, this may lead to false positives and false negatives. A solution for this was proposed in [UNMAPPED:78], according to which the annotator and author of the utterances should be the same individual. Moreover, manual annotation requires a lot of time and the recruitment of domain experts.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "78"
+              ]
+            },
+            {
+              "subsubsection_id": "s_7_2_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "7) Lack of real-time sarcasm detection",
+              "parent_subsection_id": "s_7_2",
+              "text": "With the increase in the volume of generated data on social networks, sarcasm detection in real time is a challenging but significant task. Despite this, none of the reviewed articles included real-time data analysis.\n\nOverall, there are still several challenges and open problems in sarcasm detection that need to be worked on. The following subsection provides future research directions.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "This subsection discusses the common issues and main challenges in the development of sarcasm detection tools for social networks, based on the findings from the reviewed articles.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_3",
+          "subsection_index": 3,
+          "subsection_label": "C. Future Research Directions",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_7_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "1) Considering more languages",
+              "parent_subsection_id": "s_7_3",
+              "text": "The majority of the recent sarcasm detection works focus on English and ignore other languages. To this end, one possible future direction is to consider multiple language models that have the ability to perform all sarcasm detection sub-tasks for multiple languages.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2) Application of transformers and DL models",
+              "parent_subsection_id": "s_7_3",
+              "text": "While considerably more work will need to be done on transformer-based, DL-based, and hybrid systems, their performance is superior to that of ML and classical NLP techniques. Moreover, the amount of work on transformer-based approaches is still limited, and therefore, there is scope for the development of more transformer-based sarcasm detection models.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3) Tweet correctness techniques",
+              "parent_subsection_id": "s_7_3",
+              "text": "The findings in the datasets indicate that Twitter is the most frequently used source of data for sarcasm detection model evaluation in the reviewed articles. However, tweets are likely to have many typos, which may negatively influence model performance. One possible future direction is to use an automatic technique for typo correction in the early stage of development of sarcasm detection systems.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_3_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "4) Exploring other social network sources",
+              "parent_subsection_id": "s_7_3",
+              "text": "Twitter and Reddit were the only dataset sources in the reviewed articles. While they are both good sources of data, the addition of more social networks sources would provide a more comprehensive model. Therefore, further work in this domain should focus more on other social networks sources such as Facebook and Instagram.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_3_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "5) Multi-culture datasets",
+              "parent_subsection_id": "s_7_3",
+              "text": "Sarcasm by its nature differs across cultures. In fact, there could be cultural differences even between people who speak the same language. Therefore, further research could focus on the relationships between culture and sarcasm and the detection of sarcasm in multi-culture datasets.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_3_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "6) Building multimodal sarcasm detection models",
+              "parent_subsection_id": "s_7_3",
+              "text": "Most of the recent work on sarcasm detection focuses only on text-based datasets. However, considering multimodal models is a good idea for exploring new methods to solve such problems.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_3_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "7) Use of emojis and emotions",
+              "parent_subsection_id": "s_7_3",
+              "text": "Sarcastic text on social network often contains emojis that are used to express a specific emotion, due to the limitations on the length of posts on some platforms. Therefore, more research is required on new ideas for dealing with data that can improve the performance of such classification models.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "This section describes the possible research directions based on our analysis of the 30 articles.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This SLR analyzed 30 articles that were able to address the four research questions. This section discusses the findings of the review, highlights the challenges, and provides future research directions that can help in the development of more accurate and efficient sarcasm detection tools.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "VIII. CONCLUSIONS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Recently, sarcasm detection, especially in social networks, has grabbed the attention of many researchers. This SLR covers articles on sarcasm detection to answer four research questions. The review of the selected studies provides an analysis of the current approaches, metrics and datasets used to evaluate their models, as well as the challenges facing the development of sarcasm detection applications. In this SLRs, 30 articles published between 2019 and 2022 obtained from four well-known digital databases in Computer Science were analyzed based on their approaches, datasets, and evaluation metrics. Moreover, challenges and open research problems that still prevail in sarcasm detection are discussed. The findings show that the DL approach is most widely utilized, and it is followed by hybrid approaches. Furthermore, Twitter is the most commonly utilized source for datasets, and most researchers used public heterogeneous datasets. With regard to the features of the datasets, most studies used balanced datasets, and there is no consensus among researchers about whether standard, publicly available datasets are suitable for sarcasm detection in social networks. With regard to performance metrics, precision, recall, accuracy, and F1-score were most frequently used in the selected articles, and the majority of the articles used F1-score. Finally, several recommendations, including considering more languages, building multimodal sarcasm detection models and tweet correctness techniques have been suggested to improve the efficiency and performance of sarcasm detection tools.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_1",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4362571114_tables.md"
+}

@@ -1,0 +1,480 @@
+{
+  "id": "W3100365535",
+  "metadata": {
+    "title": "State of the Art of Agile Governance: A Systematic Review",
+    "n_sections": 8,
+    "n_subsections": 20,
+    "n_subsubsections": 2,
+    "n_tables": 5
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Keywords",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Systematic Literature Review; Agile Governance; Information Systems; Software Engineering; Agile Enterprise; Agile Project Management",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Agility at the business level demands capabilities [UNMAPPED:1], such as flexibility, responsiveness and adaptability, which should be applied in combination with governance capabilities, such as strategic alignment ability, steering skills and dexterity to perform control; in order to achieve effective and responsive sense of coordination across multiple business units, especially in competitive environments. Under this context, the information and communication technologies (ICT or IT) are the link between the decision-making ability, the willingness strategic, and the competence to put into practice these tactics concretely. In fact, the design and maintenance of the IT systems for enterprise agility can be a challenge when the products and services must be compliant with several regulatory aspects (often needing to be audited). However, the establishment of the necessary management instruments and governance mechanism to fulfill this mission passes by the application of models and frameworks that many times have no guidance details of how to implement and deploy them (such as ITIL and COBIT, among others), affecting the organizational competitiveness [W1485555897, UNMAPPED:3].\n\nBefore proceeding, it is important to differentiate the well-known (1) specific agile approach widely held on organizations, such as agile software development or agile manufacturing; from the (2) agile governance approach proposed by this work. While the former has its influence limited to a localized result, usually few stages of the chain value [W4375849300] of the organization. Our proposal introduces the application of agility upon the system responsible for sense, respond and coordinate the entire organizational body: the governance (or steering) system. Figure 1 depicts the difference between those approaches, in order to facilitate understanding: on part (A) we use an analogy that illustrates the anatomy of an organization as an human body; meanwhile the part (B) relates those approaches to the chain value concept proposed by Porter [W4375849300].\n\nWe are also compelled to clarify the meaning of agility adopted by this work. In fact, we are adopting the agility definition proposed by Kruchten [W1556740091] as: \"the ability of an organization to react to changes in its environment faster than the rate of these changes\". This definition uses the ultimate purpose or function of being agile for a business, unifying and standardizing agile and lean approaches as simply \"agile\", rather than defining agility by a labeled set of practices or by a set of properties defined in opposition to the Agile Manifesto approach [UNMAPPED:6]. Due of this simplified and objective approach, this will be the definition of agile adopted for this work. To tell the truth, we recognize that while agility is focused on react rapidly to changes, lean is focused on combat the wastages. Although those approaches sometimes may seem confrontational if analyzed in its essence, we believe that the rational balance between those approaches can result in a unified \"agile\" approach that can achieve a better result than if they were applied separately, in consonance with Wang, Conboy and Cawley [W2007879862].\n\n**Figure 1. Organization's anatomy: an analogy. Source: Part (A), own elaboration; Part (B), adapted from [W4375849300].**\n\nTruth be told, when we look at the application of agility on governance it may seem like antagonist ideas (an oxymoron) or counter intuitive, because governance denotes the idea of mechanisms, control, accountability and authority, while agility conveys the idea of informality, simplicity, experimentation, and for some observers (maybe) \"almost anarchy\". Nevertheless, if the goal of enterprise is to achieve business agility, it cannot be reached without commitment from all sectors of the organization, which in turn cannot be achieved without governance.\n\nBased on those premises, arises as a relevant issue the understanding of the agile governance phenomena and the contexts in which they occur. Due once the agile governance phenomena are better understood in their essence, starting by its concept and application, as well as how it evolved over the time; become possible, in a second stage, map their constructs, mediators, moderators and disturbing factors from those phenomena in order to help organizations to achieve better results in their application: reducing cost and time, increasing the quality and success rate of their practice.\n\nHence, this paper reports on a systematic literature review carried out to map the state of art of agile governance (abbreviated by the acronym: SLR-AG), and it is part of a wider research conducted by the authors in order to identify combined application of agile and governance capabilities to improve business agility, as well as to extend the understanding of how these arrangements can help the organizations to attain greater enterprise agility and support its overall strategy.\n\nThis article is structured as follows: In Section 2, is given an overview of agile governance, analyze the theoretical roots, and existent reviews. In Section 3 we describe the methods applied and the methodological quality. Section 4 presents the research results and characterizes the studies included on it; then the following subsections address research questions, some emerging contributions, and discuss strength of evidence; as well as consider indications for research and practice, and examine limitations of the review. Section 5 concludes and affords recommendations for subsequent research on agile governance.",
+      "citations": [
+        "W1485555897",
+        "W4375849300",
+        "W1556740091",
+        "W2007879862"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "3",
+        "6"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "2. Background",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Governance: The Need to Be Agile",
+          "subsubsections": [],
+          "text": "Governance is primarily related with mechanisms and responsibilities through which the authority is exercised, decisions are made and the strategy is coordinated and steered on the organizations, whether they are a country, an enterprise, a specific sector or a project. Calame and Talmant [UNMAPPED:8] introduce one of the best definitions to governance, that synthesizes the most important and distinctive aspects, while at the same time generalizing and universalizing the approach: \"Governance is the ability of human societies to equip themselves with systems of representation, institutions, processes and social structures, in order to they manage themselves, through a voluntary movement\".\n\nCorporate governance is the series of processes, policies, laws, customs and institutions affecting the way a corporation is conducted, administered or controlled, including the relationships between the distinct parties involved and the aims for which a society is governed [UNMAPPED:9]. IT governance, on the other hand, is defined by the IT Governance Institute as a subset of Corporate Governance, a discipline focused on information and communication technologies and their performance systems and risk management [UNMAPPED:10].\n\nDyb\u00e5 and Dings\u00f8y [W2168811232] posit that the Agile Methodologies have gained importance and add competitiveness and dynamism to the process of software development in the area of Software Engineering, through initiatives where the principles of communication and collaboration are crucial, as also stated in [W1556740091, W2490342264]. Moreover, Dubinsky and Kruchten [W2097583938, W2139502185] highlight that Software Development Governance (SDG) has emerged in the last few years to deal with establishing the structures, policies, controls, and measurements for communication and for decision rights, to ensure the success of software development organizations.\n\nRecently, a proposal of agile governance has emerged. In 2007 Qumer [W1841017863] presents the first definition of agile governance we found, focused on Agile Software Development. In an article published in 2009 about controlling and monitoring of product software companies, Cheng, Jansen and Remmers [W2161199585] present the second definition to agile governance we found, focused on Software Development Governance (SDG). Additionally, in 2010 Luna, Costa, Moura and Novaes [W2129356846] proposed a third definition of agile governance, focused on IT governance, resulting from the wide application of adapted principles and values of Agile Software Development Manifesto [UNMAPPED:6] to the conventional governance processes. In 2013, a fourth definition for agile governance was introduced by Luna, Kruchten and Moura [W2040895150], as a result of perception of the multidisciplinary nature of the phenomena related to agile governance. All previously cited Agile Governance definitions are verbatim available in the Table 7. Hence, the concept of agile governance is gaining attention and evolving over the time as a meaning that is increasingly making sense in different contexts. In the sections that follow, we will dig into this issue gradually.",
+          "citations": [
+            "W2168811232",
+            "W1556740091",
+            "W2490342264",
+            "W2097583938",
+            "W2139502185",
+            "W1841017863",
+            "W2161199585",
+            "W2129356846",
+            "W2040895150"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "8",
+            "9",
+            "10",
+            "6"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Summary of Previous Reviews",
+          "subsubsections": [],
+          "text": "Based on the related work we looked for a previous systematic review related with the topic in many domains as follows. Dyb\u00e5 and Dings\u00f8y [W2168811232] point out some evidences about the application of agility beyond Software Engineering area, such as: agile manufacturing, lean development, new product development, interactive planning, maturing architectural design ideas and strategic management. These insights were very useful for our systematic review because they gave us some directions and helped us classify more accurately the findings of this research.\n\nWang, Lane, Conboy and Pikkarainen [UNMAPPED:19] conducted a workshop identifying current agile gaps and areas for future research. From the sample of 161 papers published on XP conference until 2009, they classified ten of them as related to the emerging area of business agility, which was pointed out as one of six emerging trends that must be explored and studied and points the direction for where agile research goes. Although this approach cannot be considered a systematic review, it presented an agile research topic map that influenced the findings treatment of our systematic review.\n\nIn the manufacturing industry, Ramaa et al. [UNMAPPED:20] address the dearth of research on performance measurement systems and performance metrics of supply chain network by reviewing the contemporary literature, developing a systematic literature review. Their study lists more than 60 references for further study. They present four definitions for Performance Measurement of Supply Chain (PMSC), as well as a brief discussion about the evolution of this issue.\n\nIn the IT governance area, Qumer [W1841017863] presents a summary of an exploratory review and analysis to identify the related concepts, key aspects and importance of IT governance, but he does not deepen the discussion. Correspondingly, Qumer proposes a conceptual \"agile responsibility, accountability and business value governance model\", for large agile software development environments. Likewise, Luna [UNMAPPED:21] conducted an exploratory review about the agile governance, using four electronic databases, found 75 references, trying to identify insights to propose a reference agile framework for implement and improve governance in organizations, called MAnGve, which is focused in the deployment process, as a \"catalyst\", accelerating the governance implementation.\n\nRecently, Wang, Conboy and Cawley [W2007879862] carried out an experience report analysis to provide a better understanding of lean software development approaches and how they are applied in agile software development. The findings of the study enrich our understanding of how lean can be applied in agile software development. The authors have identified six types of lean application in these experience reports and categorized them in a more systemic way: i) non-purposeful combination of agile and lean; ii) agile within, lean out-reach; iii) lean facilitating agile adoption; iv) lean within agile; v) from agile to lean; and, vi) synchronizing agile and lean.\n\nHowever, we did not find systematic reviews in other areas of knowledge related with the combination of agile capabilities with governance capabilities. In other words, apparently, no systematic review about agile governance has been done yet. Therefore, there are no common understandings about the challenges that we must deal with, when examining the effectiveness of agile capabilities and governance capabilities, available for organizations and practitioners.",
+          "citations": [
+            "W2168811232",
+            "W1841017863",
+            "W2007879862"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "19",
+            "20",
+            "21"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Objectives of This Review",
+          "subsubsections": [],
+          "text": "Preliminarily, no systematic review of agile governance has previously been found. The existing reviews that were presented in the preceding section are not systematic, or about this topic; neither covers the wide application of this field of study. In other words, this implies that executives, professionals, researchers and practitioners no have a unified reference to get an overview about this domain. The authors expect that this paper will be helpful to all of these groups, and that it will become clear which assertions on agile governance are sustained by scientific studies. This review aims to answer the subsequent research questions:\n\n* **RQ1:** What is the state of the art of agile governance in the world?\n* **RQ2:** How the domain of agile governance has been evolved?\n\nIn truth, to produce consistent findings with respect to agile governance, the review also ambitions to advance methodology for combining diverse study types, as well qualitative research, in systematic reviews of business agility interventions.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section describes the field of agile governance, its root ideas, also how this domain has connection with other disciplines, and summarizes the critic thinking about agile governance. We present a summary of prior reviews of the agile literature, vindicate the necessity for this review, and expound the research questions that inspired the work.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "3. Review Method",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Protocol Development",
+          "subsubsections": [],
+          "text": "A research protocol for the systematic review was developed by complying the guidelines, policies and procedures of the Kitchenham's Guidelines [UNMAPPED:23] and complemented by the Dyb\u00e5's approach [W2168811232], as well as by the consultation with specialists on the topic and methods. Succinctly, our protocol establishes: i) the research questions; ii) search strategy; iii) inclusion, exclusion and quality criteria; iv) data extraction; and, v) methods of synthesis. The protocol is available in full version at the URL of the following reference [UNMAPPED:25].",
+          "citations": [
+            "W2168811232"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "23",
+            "25"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Inclusion and Exclusion Criteria",
+          "subsubsections": [],
+          "text": "In consonance with the research protocol, the studies were suitable for inclusion in the review if they offered evidences that helped to answer fully or partially at least one of the research questions (see section 2.3). Due to this work being a systematic review, whereby the authors were intended to identify the maximum of evidence to help them to set up a consistent view about the state of the art of agile governance, it was not defined a minimum quality threshold for exclusion of papers. In other words, the quality was a criterion of classification and assessment of strength of evidences, but it was not an elimination criterion (see section 3.6.1).\n\nWe included studies that addressed in their goals, hypothesis and applications, or analyzed, in their results, the combined application of agility and governance capabilities. Qualitative and quantitative studies published up to and including 2013 were included in the systematic review. We included only studies written in English.\n\nWe excluded studies if their focus were not: computer science, general theory of administration or general systems theory. In like manner, technical content that have not passed through a sieve of external review were excluded, such as: books, technical reports, dissertations, etc. In a similar vein, studies that are not complete articles were excluded, such as: extended abstract, keynotes, presentations, among others. Studies that expressing personal points of view or opinions were excluded, as well as articles that were in the areas of this research, but they clearly were not related to the research questions.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Data Sources and Search Strategy",
+          "subsubsections": [],
+          "text": "Our search strategy combined scientific electronic databases and the Google web search engine to identify and retrieve the entire population of publications that meets the eligibility criteria specified in section 3.2. We searched in the following electronic sources: (1) ACM Digital library; (2) Scirus; (3) IEEE Xplore Digital Library; (4) ISI Web of Science; (5) ScienceDirect; (6) Scopus; (7) SpringerLink; (8) Google Scholar; (9) Publish or Perish (POP); and, (10) Google PDF Documents.\n\n**Figure 2. Systematic Review Process**\n\nAt the stage 1, the titles, abstracts, and keywords in the aforementioned electronic databases (except Google PDF documents) were searched applying the following search terms: (1) \"agile governance\"; (2) \"lean governance\"; (3) agile OR agility OR lean; (4) governance OR govern OR government OR \"public administration\"; (5) business OR enterprise OR corporate; (6) \"service management\" OR \"information technology\" OR \"information and communication technologies\" OR IT OR ICT.\n\nIn addition, these terms were combined by applying the boolean operators, \"OR\" and \"AND\", which implies that an article just had to include combinations of the terms to be retrieved, according to the following \"search string\" (S):\n\n$$ S = (1) OR (2) OR ((3) AND ((4) OR (5) OR (6))) $$\n\nEventually, we had to adjust the search string for the syntax of each electronic database, in other cases the searches had to be carried out in complementary steps (due to the limitation of the search interface of each database), though maintaining the same logic. Meanwhile, for the Google PDF Documents, due to the large amount of results, the search string was simplified to:\n\n$$ S* = (1) OR (2) filetype:PDF daterange:..2013-12-31 $$\n\nBased on those ten electronic sources, the search strategy culminated in a total of 2472 \"results\" (or \"hits\") that included 1992 unduplicated citations.",
+          "citations": [
+            "W1485555897",
+            "W4375849300",
+            "W1556740091",
+            "W2007879862"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1",
+            "3",
+            "6",
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Teamwork, Tool and Distributed Research",
+          "subsubsections": [],
+          "text": "At the same time, along this review was developed a software application (a tool) to support the research procedures. This software development was iterative and incremental, allowing the research was carried out in a geographically distributed way, by the internet. Therefore, for each stage, new interfaces and features were developed and made available for the researchers.\n\n**Table 1. Kappa coefficient and percentage of agreements.**\n\n{{TABLE:tbl_01}}\n\nDuring the stages 1 to 4 the team was arranged into groups composed by two researchers (or \"pair\"). At the stage 1 and 2, the researchers were organized into four pairs. Similarly, at the stages 3 and 4, the researchers were organized into three pairs. Meanwhile, at the stage 5, the work was developed individually, i.e., at this stage the set of research questions (RQs) were distributed among the researchers. Then they sought to answer the set of RQs based on the evidences found, and the result passed by a revision and cross-checking among them.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5. Citation Management, Retrieval, and Inclusion Decisions",
+          "subsubsections": [],
+          "text": "At the stage 1, the electronic databases were randomly distributed among the pairs. Significant citations from this stage were entered into, complemented, organized and catalogued with the assist of Mendeley [UNMAPPED:26]. The results (or \"hits\") were then imported by the developed tool for a research database which was hosted on the cloud, where were registered the source of each citation, and the duplicity were removed by \"title\".\n\nAt the stage 2, the researchers of the same pair analyzed the title and abstract from the same \"lot\" of papers, that resulted from stage 1, to define their importance to this systematic review. At each stage, the researchers' retrieval decision, retrieval status, and eligibility decision were recorded on the research database. The detected agreement was (80.6%) and the Kappa coefficients of agreement [W2053154970] observed by each pair, for each stage are depicted in Table 1. The Kappa coefficient for stage 2 assessments was 0.61, which is typified as \"substantial\", in agreement with Landis and Koch [W2164777277].\n\nAt stage 3, the researchers analyzed (in addition to title, abstract and keywords) the introduction and conclusion for each paper from stage 2, to ascertain their pertinence to the systematic review. Whenever there was unsure whether a study complied to the screening criteria, based on the title, abstract, introduction and conclusion, the paper was included in the next stage. The detected agreement was (86.6%), and the Kappa coefficient for stage 3 appraisal was 0.65, which is featured as \"substantial\" [W2164777277]. All disagreements were treated by discussion that comprised the two researchers from pair.",
+          "citations": [
+            "W2053154970",
+            "W2164777277"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "26"
+          ]
+        },
+        {
+          "subsection_id": "s_4_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6. Full Analysis",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_6_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.6.1. Quality Assessment",
+              "parent_subsection_id": "s_4_6",
+              "text": "Each one of the remaining studies was assessed individually by each researcher of the same pair, in consonance with 13 criteria, in a procedure in which every criterion was graded on a scale composed by the following values: (2) when the criterion was plentiful or explicitly met; (1) when the criterion was partial or implicit met; (0) when the criterion was absent or not applicable. The quality assessment criteria adopted for these studies is briefly depicted in Table 2. The detailed criteria are disclosed in Appendix A. Quality assessment form of the research protocol [UNMAPPED:25]. These criteria were result from the analysis of methodological reference for appraising the quality of qualitative research [UNMAPPED:29], as well as by the principles and good practices established for driving empirical research in software engineering [W2168811232, W2163621605, W2168130919, UNMAPPED:23].\n\n**Table 2. Quality criteria.**\n\n| Rigor Assessment Questions |\n|:---- |\n| 1. Is there a clear definition of the study objectives? |\n| 2. Is there a clear definition of the justifications of the study? |\n| 3. Is there a theoretical background about the topics of the study? |\n| 4. Is there a clear definition of the research question (RQ) and/or the hypothesis of the study? |\n| 5. Is there an adequate description of the context in which the research was carried out? |\n| 6. Are used and described appropriate data collection methods? |\n| 7. Is there an adequate description of the sample used and the methods for identifying and recruiting the sample? |\n| 8. Is there an adequate description of the methods used to analyze data and appropriate methods for ensuring the data analysis were grounded in the data? |\n| **Credibility Assessment Questions** |\n| 9. Is provided by the study clearly answer or justification about RQ / hypothesis? |\n| 10. Is provided by the study clearly stated findings with credible results? |\n| **Relevance Assessment Questions** |\n| 11. Is provided by the study a definition of Agile Governance (AG) or a definition some concept closely related with AG? |\n| 12. Is provided by the study justified conclusions? |\n| 13. Is provided by the study discussion about validity threats? |\n\nAfter the quality individual assessment step, when there were disagreements between the values attributed by the researchers on each pair about the same study, the tool pointed this out, and the pair had to reach a consensus, otherwise, a third researcher from the another pair (usually the more experienced) was invited to discuss the disagreements. Before the end of the stage all disagreements were solved by discussion.",
+              "citations": [
+                "W1485555897"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "25",
+                "29",
+                "1",
+                "0"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_6_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.6.2. Data Extraction",
+              "parent_subsection_id": "s_4_6",
+              "text": "Next, we decompose the research questions and identify the constructs for each one. The result of this step is available in Table 3. Along a third reading, data was extracted from every remaining study conforming to the predetermined extraction form (see Appendix B of the research protocol [UNMAPPED:25]).\n\nBoth the researchers from each pair extracted full data, from all studies, and then they discussed the data extracted during consensus meetings. Those evidences were gathered for posterior qualitative analysis of textual data. At the end of the stage 4, 1949 quotes were generated that helped answer fully or partially at least one of the research questions.\n\n**Table 3. Constructs.**\n\n| RQ1 |\n|:---- |\n| \u2022 Phenomena definition (meaning) |\n| \u2022 Phenomena characterization |\n| \u2022 State of theory and research |\n| \u2022 Related fields: groups |\n| \u2022 Context where take place: categories |\n| \u2022 Overall trends |\n| **RQ2** |\n| \u2022 Genesis |\n| \u2022 Evolution |\n| \u2022 Perspectives |",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "25"
+              ]
+            }
+          ],
+          "text": "The stage 4 comprised the data extraction (DE) and quality assessment (QA) procedures that occurred simultaneously, but as a matter of clarity, they will be explained separately. The remaining studies were read entirely at least twice by each researcher of the same pair. After the second reading of the paper, each researcher (from the same pair) set his/her decision about exclusion or inclusion of each paper in the research tool. When the both researchers of the same pair finished the individual analysis the research tool pointed out if there were disagreements between them. All disagreements were treated by discussion that involved the two researchers from pair, the pair had to reach a consensus, otherwise, the quality assessment was carried out (see section: 3.6.1), the paper was extracted (see section: 3.6.2), and included for next stage. The observed agreements was (91.1%), and the Kappa coefficient for stage 4 was 0.80, which is typified as \"substantial\" [W2164777277]. Truly, under the pairs' point of view, at this stage we had two \"substantial\" Kappa coefficients and other one \"almost perfect\", according to the same criteria. This result was further evidence of the evolution of the team's learning in this process.",
+          "citations": [
+            "W2164777277"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7. Synthesis of Findings",
+          "subsubsections": [],
+          "text": "Thereafter, during the stage 5, we use meta-ethnographic and qualitative meta-analysis methods, conforming to Noblit and Hare [UNMAPPED:30], to synthesize the data extracted from the studies. Initially the quotes were organized by research question and the coding of the constructs was complemented whenever it needed. We also carried out an open coding procedure to identify supplementary aspects of the relationship of the construct and the emerging categories. At the same time, it was a manner of identifying relevant words, or classes of words, in the data and then tagging them accordingly.\n\nThe second step of the synthesis was to ascertain the main concepts and categories from each study, adopting the original author's terms. The process was carried out by organizing the key concepts in tabular form to permit comparison crosswise studies and the mutual interpretation of findings into higher-order meanings, following similar approach of constant comparison applied in qualitative data analysis [W3022452870]. When the researchers identified divergences in findings, they investigated whether these could be elucidated by the distinctions in methods or nature of the study setting [W1994592819].",
+          "citations": [
+            "W3022452870",
+            "W1994592819"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "30"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The work developed on this systematic review adopted as a methodological reference a combination from the following approaches: [W2168811232, W2163621605, W2168130919, UNMAPPED:23]. This section describes the resulting approach.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "4. Results and Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Overview of Studies",
+          "subsubsections": [],
+          "text": "Concerning the nature of the research: 101 studies (60.5%) were developed by researchers (in the academy) and 66 (39.5%) were carried out by practitioners or had the industry focus.\n\n**Figure 3. Review's Timeline: studies by year.**\n\nFigure 3 presents the publication profile along the time, from the selected studies, grouped by year. Our review found no studies related with the issues of agile governance prior to 1996. In the same figure we can see three curves: the profile of publication for academy (A) and industry (I), as well as the total of publication (T) distributed along the years. Considering the phenomena as a nascent area we can approximate the data from T for a linear trend line (L), which equation is expressed in the Figure 3, presenting a coefficient of determination (R\u00b2 = 0.8029). Based on this information, we can observe a steady growth of studies related with agile governance, reinforcing the idea of this area is in formation. In spite of the timeline publications can be expressed by a trend line, we cannot perform long-term forecasts because shall happen likely loss of linearity resulting from a significant event in the evolution of the phenomena in study.\n\nEach publication was further classified based on the study type: only 36 papers (21.6%) could be considered empirical studies, which indicate a need for further studies conducted with more scientific rigor. The result from this analysis is listed in Table 5.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Research Methods",
+          "subsubsections": [],
+          "text": "The statistics of publication employing each research method are listed in Table 4. In the mixed group from Table 4 were accumulated studies with more than one research method. At same time, Edmondson and McManus [W2099358840] advocate that the research design has to adapt itself to the current state of theory and research. Actually, they arrange this state into three types: nascent, intermediate, and mature. According to this classification, for agile governance, the large number of exploratory qualitative studies denotes that the studies on this area are still maturing, indicating that the present state of theory and research on methods is evidently nascent, which implies a demand for exploratory qualitative studies, originally open-ended data that have to be construed for meaning: what matches with the evidence profile found by this review.\n\n**Table 4. Studies by research method.**\n\n{{TABLE:tbl_02}}",
+          "citations": [
+            "W2099358840"
+          ],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Methodological Quality",
+          "subsubsections": [],
+          "text": "Each study was assessed conforming to 13 quality criteria grounded on rigor, credibility and relevance, as described in section 3.6.1. Altogether, these 13 criteria give a measure of the range to which we can be trustful that a specific study's findings can generate a relevant contribution to this review. All included studies were graded as \"full\" or \"partial\" for the first screening criterion, which presenting the definition of the aims of the study. In general, this review often found that: methods were not quite explained; issues of bias, reliability, and validity were not always undertaken; and approaches of data collection and data analysis frequently were not well characterized.\n\n**Table 5. Studies by type.**\n\n{{TABLE:tbl_03}}\n\nIn complement, each study was classified according to its quality score, in consequence of the sum of the 13 individual quality criteria, attributed by the researchers after consensus, before the end of stage 4. Accordingly, each of the 167 studies has a Quality Score between 0 and 26 points. For these 167 papers (n) were applied a statistical treatment of Pareto distribution [W4248705221] for the Quality Score (QS) calculated, and the results are depicted in the Figure 4.\n\n**Figure 4. Histogram: Quality Score Pareto distribution.**\n\nThe results denote that, only 72 studies (43.1%) have QS above the average (QS\u2090\u1d65\u2091\u1d63\u2090g\u2091 = 10.7 points). Conjointly, 146 studies (87.4%) were placed into the first six frequency intervals with QS less than 16 points (intervals 1 to 6). In other words, just the 21 studies (12.6%) placed in the last four intervals of the Figure 4 present relative quality significance according to the quality assessment criteria defined.\n\nFurther, each article was classified about the convergence of the study with the goals of this research, using the Likert Scale [W4235424370]. As a consequence, the result from this convergence classification was combined with the score of the quality assessment generating the Figure 5, which highlights the status of each paper about these two classifications: quality and convergence. In a similar vein, Figure 5 can be analyzed in four quadrants, which were obtained using as a reference the middle point of each scale, arbitrarily defined. The first quadrant (Q1) joins the best of quality and relevance, positioning 34 studies (20.4%); while the second quadrant (Q2) presents 6 studies (3.6%) with good quality score, but with less convergence to the aims of this review. On the other hand, the third quadrant (Q3) has 49 studies (29.3%) with low quality scores and little convergence; therewith the fourth quadrant (Q4) is represented for 78 studies (46.7%) with low quality scores despite a good convergence to the goals of this review.\n\n**Figure 5. Scatter plot: Quality Score versus Synthesis Convergence.**\n\nAppropriately, 79.4% of the studies placed in Q1 were classified as empirical. Regarding the initiatives, this review found a rich set of contributions applicable in agile governance paradigm, from both academy and industry concerning to consistency and relevance about how the studies were conducted.\n\nAlthough we prioritized the presentation of the findings of the studies positioned at the first quadrant (Q1) from the Figure 5, the remaining studies corroborate with the profile identified by studies positioned in Q1. Accordingly, during the discussion, we shall complement the results of Q1 with the findings of the studies from other quadrants to give more contexts for conclusion, when appropriate.",
+          "citations": [
+            "W4248705221",
+            "W4235424370"
+          ],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Emerging Groups and Categories",
+          "subsubsections": [],
+          "text": "The set of evidences found was heterogeneous, leading the researchers to organize these studies into four major thematic groups: (1) software engineering, (2) enterprise, (3) manufacturing and (4) multidisciplinary. Following, we will introduce the studies contained in the four groups mentioned above. The 167 studies were classified according to the approach of constant comparison applied in qualitative data analysis [W3022452870], following a bottom-up strategy: firstly trying to identify emergent category, after trying to relate and group them, in a sequence of refinement cycles. Always as possible this classification was carried out according to the authors' point of view. In other words, when the authors were explicit about the category, their own classification was considered.\n\nAs a matter of fact, the authors were explicit about the category classification in 75 (44.9%) from the 167 papers selected. In 92 cases (55.1%), the category of the study was not explicit, and we had to compare the characteristics (content, objective and approach) of the paper with the categories previously identified to proceed the study classification. In other cases, the authors were not explicit about the category as well as the paper did not fit with any category previously identified: in these cases we had to propose a new category based on the paper characteristics. There were cases where the authors mentioned more than one category; in those cases we tried to identify which category was predominant, more consistent (or dense) in the paper content, to proceed with the study classification.\n\n**Table 6. Emerging (exclusive) Groups and Categories.**\n\n{{TABLE:tbl_04}}\n\nAfter the first cycle of classification for the studies, we started a classification refinement procedure, trying to review and confirm the classification from each cycle. In each cycle of this refinement procedure, each researcher revised the classification defined by the others. All discordances were treated by discussion that involved all the researchers who participated at this stage that had to reach a consensus. Any change in the classification, passed by the same procedure of revision and cross-checking among team researchers. The identification of emergent categories started with 34 original categories. After four refinement cycles, these categories were reduced to 16, sorted in four major groups, as depicted in Table 6.\n\nNonetheless, these groups are not isolated from each other. In truth, they have a strong relationship among each other, such as depicted in the Figure 6. Additionally, this figure is the result from a second non-exclusive classification about the relationship between the study characteristics and the four major groups, starting from the original and exclusive classification from the Table 6. In other words, adopting the same approach of revision and cross-checking applied in the exclusive classification, tags were applied for each study, trying to identify its relationship with the major groups, according to the study characteristics.\n\n**Figure 6. Emerging relationship (non-exclusive) between the major groups.**\n\nAnalyzing the data from Table 6 and the description for each category, we could still try group some categories by focus (or core orientation). Under this approach the G1 will not be affected. Nonetheless, on G2, the category Lean-Government (l-Gov) could be grouped in e-Government (e-Gov) category, due the second one might be a specific approach of the first one, and they have the same focus: application of lean or agile approaches in government, raising its representativeness for 12 studies (7.2%). Similarly, on G3, the category Lean Manufacturing (LM) may be grouped in the category Agile Manufacturing (AM), because they have the same focus: manufacturing, changing its representativeness for 13 studies (7.8%). In like manner, on G4, the category Lean Governance (LG) might be grouped in Agile IT Governance (AITG), due they have the same focus: IT governance, raising its representativeness for 12 studies (7.2%). Nevertheless, we preferred keep the original classification given by authors for final categorization of findings.\n\nRegardless of the groups and categories identified by this review, in spite of the G1 has the most part of the isolated papers (23.4% from the 167 papers have no relationship with other group), the Figure 6 denotes the relationship is denser between the G2 and G4 (sectors E \u222a G \u222a H \u222a J), due 29.3% from the selected papers are in these intersection regions. This finding implies the holistic nature from G4 and the wide approach of G2, inasmuch as the focus of the latter is the enterprise as a whole.\n\nComparing the values between the Table 6 and the Figure 6 is possible to identify a changing in the sort of representativeness of each group to this review. As a matter of fact, when we add the contribution of each sector from each group (even considering each intersection more than once, because some of them belongs to more than one group), the non-exclusive representativeness became: G2 (52%) > G4 (44%) > G1 (43%) > G3 (13%). This situation probably occurs due some studies originally classified exclusively according to Table 6 on the non-exclusive analysis carried out to generate the Figure 6, were classified also in other groups, in consonance with its characteristics. This phenomenon did not happen with the same intensity with the papers of G1 and G3, because their categories are more specific and have a better defined scope. Those evidences not only demonstrate the multidisciplinary nature of the agile governance phenomena, as well as they show a high degree of cohesion (intersection) among emerging groups.",
+          "citations": [
+            "W3022452870",
+            "W1485555897",
+            "W4375849300"
+          ],
+          "tables_in_text": [
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "1",
+            "3"
+          ]
+        },
+        {
+          "subsection_id": "s_5_5",
+          "subsection_index": 5,
+          "subsection_label": "4.5. Genesis and Evolution",
+          "subsubsections": [],
+          "text": "We also develop the timeline depicted in the Figure 7, under the lens of the evidences found, in order to identify relevant aspects in the formation of agile governance field, as well as understand its genesis and evolution.\n\nIn retrospect, this review regained the recent history of agile governance that is intimately related with the \"lean thinking\" begun in the 1950s on Japanese industry [W1549330170, W181088033]. For a better understanding of the temporal relationship between these facts we plotted some marks that highlight the increasing of importance of global governance issues in the business, such as: the Basel I, the first of the three most important regulatory marks in bank market [UNMAPPED:38], as well as Sarbanes-Oxley Act, the most important regulatory mark in stock market [UNMAPPED:39]. Our review found evidences that agile philosophy began at manufacturing industry [W156778789] ten years before the Manifesto for Agile Software Development [UNMAPPED:6]. In reality, the \"agility thinking\" has entered in the literature in the early 1990s [W2012044984]. However, as stated by Sun et al. [W2139571246] just after the introduction of the agile manufacturing paradigm by Nagel [W156778789], this concept began to attract significant attention from both the academy and industry.\n\n**Figure 7. Agile Governance genesis timeline.**\n\nA good evidence to understand the genesis and evolution of the agile governance phenomena is to analyze how the concept employed to describe it has been evolved over the time. Our review found only five studies in which were encountered agile governance definitions, those studies and the verbatim definitions are depicted in Table 7. Chronologically, in 2007 agile governance was first conceptualized on Agile Software Development context. In this meantime, in 2008, was carried out the first Workshop about Software Development Governance (SDG), led by Dubinsky, Chulani and Kruchten [UNMAPPED:43], as a landmark of the moment when this topic reached recognized significance in Software Engineering. Looking at the Table we can realize that the agile governance definition gradually had expanded its focus for Software Development Governance (SDG) in 2009, then to IT Governance in 2010, and reaching a multidisciplinary approach in 2013. This behavior is coherent as a domain that is taking shape, where the authors start to realize its amplitude and the relationships among the many contexts where the phenomena manifest themselves, broadly and holistically faceted and they try to cover their multidisciplinary scope.\n\n**Table 7. Agile Governance definitions**\n\n{{TABLE:tbl_05}}\n\nFurthermore, the Figure 3 denotes a rapid growth process about total number of publications (T) found by this review after 2001, nearly doubling in the range 2001-2006, almost tripling in 2007. We believe that the behavior of the \"T curve\" agrees with the idea that this is a recent field of study in developing, as well as we rely on a trend of rapid growth of the publications related with this domain for the coming years. Regarding to the profile of publication for Academy (A) and Industry (I), in spite of the result expected for the industry profile to be usually try to experiment, test or/and apply the knowledge developed by academy, on this case we can see a little different behavior: we can observe that the Industry has followed the profile of publication of the Academy without significant lag, implying agile governance as a topic of practical and immediate applicability. The agile software development methods are phenomena that have a similar behavior in this aspect.",
+          "citations": [
+            "W1549330170",
+            "W181088033",
+            "W156778789",
+            "W2012044984",
+            "W2139571246"
+          ],
+          "tables_in_text": [
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "38",
+            "39",
+            "6",
+            "43"
+          ]
+        },
+        {
+          "subsection_id": "s_5_6",
+          "subsection_index": 6,
+          "subsection_label": "4.6. The State of Art",
+          "subsubsections": [],
+          "text": "The studies that handle over the adoption and introduction of agile methods on governance capabilities are still at an initial stage. Many of them were presented as a set of good intentions, but without a scientific rigor, which compromises their credibility and applicability. On the other hand, the big picture depicted by all of them do not give a unified view of ongoing practice, but offers a straightforward picture of experience and multiple fragmented findings. These issues are potentiate when we address aspects of agility in governance matters, a young and nascent area is seven years old, considering the publication of the first definition of agile governance by Qumer in 2007 [W1841017863].\n\nBy means of the analysis of the publication timeline of the Figure 3 we can realize two stages whereby the agile governance phenomena recently passed: (1) the period until 2006: in which we can see weak signals of agile governance as phenomena in formation expressed by few and intermittent publications; and, (2) the period after 2006: when the phenomena starting to take shape, with the first few published definitions, some categories emerging, the start of a language's construction, though still with many noises, distortions and ambiguities. As a consequence, we can imply that the next great event on those phenomena will be related with the alignment of that language to allow an adequate communication among the scholars and practitioners in an effective way. This episode will support the academy and industry to communicate and understand the phenomenon more clearly, and consequently admit achieving the necessary fluency in this area of knowledge in order to conduct it to a new baseline, accelerating its development.\n\n**Figure 8. Positioning the agile governance phenomena.**\n\nConcerning to positioning of the phenomena, we can imply the agile governance as socio-technical phenomena positioned in a chaordic range between the innovation and emergent practices from agile (and lean) philosophy and the status quo of the best practices employed and demanded by the governance issues. The Figure 8 depicts this phenomena's positioning proposal. The socio-technical nature of agile governance is substantiated due we are handling with the understanding of the intersections between technical and social aspects: considering people as agents of change in organizations, in contexts where technology is a key element. Actually, the chaordic philosophy was proposed by Dee Hock, the founder and CEO emeritus of VISA credit card association [UNMAPPED:44] as \"a system of organization that blends characteristics of chaos and order\" [W1525853214], as an harmonious and fertile business environment, whereas the duality of coexistence between chaos and order ends up becoming a propitious habitat for learning, transformation, growing, creativity and innovation.\n\nIn this context, agile governance inherits chaotic elements from the agile paradigm in which fit the agile and lean capabilities, whereas acquires ordering elements from the governance paradigm, including legal and regulatory aspects. This approach demystifies the discussion mentioned at the introduction that suggests agility and governance as alleged antagonistic ideas. At the same time, it gives impulse for the consolidation of this concept as a creative and innovative balance between chaos and order, levering business achievements beyond the command-and-control conventional model.\n\nIn a complementary point of view, we can identify two overall phenomena's trend movements, in the agile governance paradigm, those are represented in Figure 8, based on the categories depicted in the Table 6: (Trend 1) mostly the categories related to G1 and G3 groups, develop efforts to bring governance practices for their core issues (respectively: Software Engineering and Manufacturing), leveraging existing agile culture in their environments; on the other hand, (Trend 2) mainly the categories comprehended in the G2 and G4 groups, promote the endeavor of applying agile capabilities with governance capabilities for achieve better results in their core issues (correspondingly: Enterprise and broad approach).\n\nAlthough these movements may seem contradictories, due to their point out different (and apparently antagonist) directions into the same phenomena; those must be observed only as a point of beginning, due to the reality experienced in each context, to achieve the same results: apply agile and governance capabilities in combination. In other words, they are actually \"spin convergent\" (in a spiral movement), because the resulting vector of these two forces will reach the same result: unifying, adapting and accommodating particular components and specific issues in each area of application, to deliver value faster, better, and cheaper to the business.\n\nThe evidences found by this review lead us to realize the urgent need for development of ontology for the agile governance paradigm, as \"an explicit formal specifications of the terms in the domain and relations among them\" [W2137079713], organizing and relating the concepts, synonyms and adequate terms to express the ideas in a clear, straight and objective way.\n\nIf in one hand, there are a set of principles, practices and values from subjacent areas (as software engineering, manufacturing, government and business management) useful to apply in agile governance context. On the other hand, these set of constructs are not organized and systematized for direct and immediate application: they need be translated and adapted for each context. Truly, the available knowledge has to be suitable for the broad context of this domain, and our review did not found a guide, model or framework that can help to apply this knowledge in a systematic and adaptive manner. We believe that all those set of knowledge should be organized, connected and systematized in some kind of conceptual framework or theory [W2137718776].",
+          "citations": [
+            "W1841017863",
+            "W1525853214",
+            "W2137079713",
+            "W2137718776",
+            "W1485555897"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "44",
+            "1"
+          ]
+        },
+        {
+          "subsection_id": "s_5_7",
+          "subsection_index": 7,
+          "subsection_label": "4.7. Emerging Contribution",
+          "subsubsections": [],
+          "text": "During the synthesis and refinement process of the review's findings, our perception and sensibility were shaped by the wealth of detail found about agile governance in the different areas of specialization identified guiding us to generate further contribution in order to provide some initial impulse to help the development of this field.\n\nThe emerging evidence of this review leads us to believe that agile governance can be broad and holistically defined, as:\n\n> \"is the ability of human societies to sense, adapt and respond rapidly and sustainably to changes in its environment, by means of the coordinated combination of agile and lean capabilities with governance capabilities, in order to deliver value faster, better, and cheaper to their core business.\"\n\nWhen we mentioned the term \"human societies\", we try to encompass any kind of organizations, such as: companies in any industry, non-profit institutions, as well as governments in any level or conjunction (cities, provinces, countries, or even governments associations, e.g. The United Nations).\n\nIn turn, \"core business\" is the raison d'\u00eatre of any organization, the cause of its existence. When the organization identifies its customers and recognizes which kind of benefit or value (by means of products and services) they are delivering to customers in order to achieve its institutional mission, they are addressing their core business. As a matter of fact, this concept can be applied for any kind of organization, for instance: in case of a company may be the target activity to achieve profit, for a NGO might be a variety of service and humanitarian functions, concerning to governments should be initiatives to accomplish the welfare of its citizens.\n\nGradually, business agility has become an expression that is not restricted to the universe of for-profit organizations. In consonance with the proposed definition, we distill a new definition to business agility as:\n\n> \"the ability to deliver value faster, better, and cheaper to the core business\".\n\nThis new agile governance definition is being presented in order to be comprehensive enough to cover all areas identified by this research, at the same time that it is still specific enough to be useful and applicable in each of these contexts, avoiding being another definition disconnected from the multidisciplinary nature of this wide field of study.\n\nIn spite of many of scholars can criticize the absent of the \"process\" concept on the aforementioned definition, we would anticipate in saying that agile governance is related much more to behavior and practice than anything else. Even because processes and procedures are already well established in governance context, and they \"need to be followed\", many of them needing to be audited [UNMAPPED:48], or regulated by laws [UNMAPPED:39], or else certified as international standards [W2103684453].\n\nAt this point we would like to clarify that agile governance do not come replace the conventional models, frameworks and methods, such as ITIL [UNMAPPED:3], COBIT [W1485555897], among others. Our proposal is just come shed a fresh look about governance, bringing enablers elements from agile philosophy to extend it for a more resilient and flexible paradigm. Actually, all knowledge relevant and useful existing related to governance topic have to be organized in some kind of dynamic referential repository which we will denominate conceptually of Governance Body of Knowledge (GBOK), which it should be organized systematically, fluidly and flexibly, as well as it does not end in the models cited in this work or known at the time of this publication. In fact, it must be complemented, organized, and must have a scope and boundaries better defined in future works.\n\nAt the same time, the synthesis of our findings when combined with the approach of agile methods on governance capabilities leads us to propose the following six meta-principles for agile governance, in order to guide future researches and, especially, to drive the practices:\n\n1. **Good enough governance:** \"The level of governance must always be adapted according to the organizational context\". The level of governance required to achieve business agility must be balanced, and adjusted when needed, taking into account the particular conditions, and timing of each organization. This meta-principle should lead the practitioners and researchers to reflect and consider the constraints experienced by each organization, without jeopardize the regulatory aspects or market rules. In other words, it can be accomplished respecting the particularities of each environment. For instance, something that is good for an organization can be too much for other, at least on a specific time frame. The question remains: is it worth paying for this \"extra\"? Taking for example the COBIT 5 framework [UNMAPPED:48], which has 37 processes, and 17 enterprise goals. Shall these processes and goals be applied in any cases? In any kind of organizations?\n2. **Business-driven:** \"The business must be the reason for every decision and action\". Decisions of any nature, in any organization instance, must be driven by and for the business. In other words, all decisions in any business unit, from entire organization (including its conjunctions and specific sectors) must be made taking into account the business strategy. People have to think each decision, design and approach to satisfy business requirements and priorities. Teams should create a broad culture that can influence the collective behavior in whole enterprise, in order to give rise to a cohesive organizational awareness. As a result of the alignment between the business layer and the governance layer, the connections among each unit of the entire organization, may work as a symbiotic relationship. This leads the organization to increase flexibility and to reduce the turnaround times when the business demands quick adapting of the infrastructure to its needs.\n3. **Human focused:** \"People must feel valued and incentivized to participate creatively\". People have to be valued as a key element of change and the driving force in organizations, as well as they must be encouraged to contribute creatively to the business aims. In organizations there are people who perform, control and decide about the processes, in so far there must be leaders that aim to create value in the company by means of getting the best from people, motivating them strategically, to obtain the need engagement to the business. Nonetheless, mostly the prevailing methods and tools of governance still are concentrated on structures and processes. The necessity to understand people as an essential and creative component of the structures and processes is a critical success factor for governance initiatives. At the same time, the creation of effective mechanisms to incentive and support the relationship, communication and collaboration among people is imperative.\n4. **Based on quick wins:** \"The quick wins have to be celebrated and used to get more impulse and results\". The quick wins achieved by team must be celebrated with the same intensity and seriousness with which the problems are addressed and solved, as well as its impulse must be used consciously to get more results. The quick wins seek an accumulation of small impulses which, together in the same direction, are reflected in the medium and long term great acceleration to the enterprise. This evolution must be continuously monitored and adjusted. The maturity achieved by the team reflects on \"less jerky movements\", less breakage and waste, as well as greater coordination between the parties involved (people, business units, etc.). The \"positive energy\" coming from these victories must be used consciously in the feedback and motivation to the team to continue development of the governance initiatives and, therefore, should be valued.\n5. **Systematic and adaptive approach:** \"The teams must develop the intrinsic ability to systematically handle change\". They should adopt a systematic and adaptive approach (adjusting the direction in line with the moment experienced by the organization). The teams and business units should seek to work as organisms adaptive rather than predictive ones. In other words, they should consider the change as natural component of the business environment, trying to adapt themselves to new factors arising from the development of their environments, as well as the business needs, rather than try to analyze previously all that can happen during each time box.\n6. **Simple design and continuous refinement:** \"Teams must deliver fast, and must be always improving.\" That is to say, they must choose always the simpler and feasible alternative to the solutions design, one that can be improved with the least possible waste at the earliest opportunity. The idea is to adopt simple design and to improve it as soon as possible, instead of a slow start, trying to establish a balance between the agile and lean approach. The architecture of the solutions should always be focused on streamlining between the desired results and the resources currently available. In other words, it is better to do something simple that generates results immediately, and pay a little more to improve it at the first opportunity (by means of a possible rework), than doing something complicated with a high cost of time and other resources, and end up losing the timing of the change in the business.\n\nIn fact, in these meta-principles, \"team\" is a generic word that can be applied for several complementary connotations in organizational context, such as: technical people, business people, and even the steering committee. Besides, the adoption of the Greek prefix \"meta\" to characterize them is due to our having designed these principles to provide a way of thinking across the disciplines that compose the agile governance phenomena, trying to cover their broad nature. Also we should clarify that the these meta-principles were shaped under the lens of the principles analysis method proposed by S\u00e9guin et al. [W185793899], properly adapted to the phenomena in study in this review.",
+          "citations": [
+            "W2103684453",
+            "W1485555897",
+            "W185793899"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "48",
+            "39",
+            "3"
+          ]
+        },
+        {
+          "subsection_id": "s_5_8",
+          "subsection_index": 8,
+          "subsection_label": "4.8. Strength of Evidence",
+          "subsubsections": [],
+          "text": "Using an approach similar to Dyb\u00e5 and Dings\u00f8y [W2168811232], we adopted the GRADE working group definitions to assess the entire strength of our review's evidences [W1247968195]. In relation to study design, were identified only eight studies where the authors argue that they have developed some kind of experiment, while the remnants primary studies were observational. Regarding the quality of the studies, truly methods were not well characterized, in general; issues of validity, bias, and confidence were not always undertaken; and approaches of data collection and data analysis frequently were not well reported. Concerning to consistency of the studies, were not found significant differences of alignment among them. In spite of studies present some concepts described in different ways, or use some different words to describe same concepts, this situation represents, in our opinion, the idea of incompleteness, but not the idea of inconsistency. In relation to directness, there are enough consistences and coherence between the studies selected by this review, but they present a fragmented view about the domain of agile governance.\n\nAnalyzing these four components of study, we identified that the strength of the evidence in the present review concerning to the state of art of agile governance is low. Thence, any estimation of effect that is grounded on evidence of agile governance from current research has low certainty. This evaluation is consistent with the nature of a nascent field and with the fact of this review being pioneer in an unexplored area, quite lacking of studies.",
+          "citations": [
+            "W2168811232",
+            "W1247968195"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_9",
+          "subsection_index": 9,
+          "subsection_label": "4.9. Implications for Research and Practice",
+          "subsubsections": [],
+          "text": "Several inferences for research and practice can be derived from our systematic review. However, companies and practitioners should use the findings of this review with critically discernment, in order to identify resemblance and discrepancy between the studies presented and their own reality. For research, this review demonstrates a clear necessity for studies with more scientific rigor, according to the quality assessment developed in section 4.3. Our review found only 36 studies (21.6%) that were empirically conducted, which indicates a need for further empirical studies.\n\nOur review confirms that agile governance has a wide spectrum of interest for executives from any business area, professionals, researchers and practitioners by treating, in essence, aspects such as: organizational performance and competitiveness, as well as it can be verified by the categories and major groups that emerged from these research findings. We believe that researchers and practitioners in agile governance should cooperate to define a common research agenda, for the sake of enlarge the usefulness and suitability of the research for industry and to produce an enough quantity of studies of great quality on subtopics associated to this field. We recognize that is outside the sphere of this paper propose such agenda, but we expect that the synthesis of research conferred herein may give the inspiration to conceive one.\n\nLikewise, we invite enterprises to engage in research projects in the future, with the view to address research aims that are significant for the industry. Truly, action research is a contributive and convergent way of systematize cooperation between researchers and industry that would be immensely positive for a flourishing field such as agile governance. In retrospect, these findings represent a great opportunity for new research and practice on this domain. At the same time, they might represent an obstacle to be overcome for a most significant advance in the production of this field, for industry and academy.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_10",
+          "subsection_index": 10,
+          "subsection_label": "4.10. Limitations of This Review",
+          "subsubsections": [],
+          "text": "Usually, the major limitations of a review are biases in the publications selection and imprecision in data extraction procedures [UNMAPPED:23]. In furtherance, to aid to assure that our selection process was unbiased, we elaborated a research protocol beforehand that delimited the research questions. Applying these questions as reference, keywords were identified and search terms, which would allow us to recognize the appropriate literature, were developed and tested.\n\nWe do recognize that the keywords, generally, are not patterned, much less in a multidisciplinary context such as agile governance. Besides, the subtlety of its application can be consequence from both knowledge domain and language specificity. Accordingly, by cause of our decision about the search strings and keywords, as well as the syntax of the search mechanism from each electronic database, there is a chance that pertinent studies were omitted.\n\nToward to minimize selection bias, every stage of the review process had a pilot practice. Special attention was given to the search strategy along with citation management procedure (stage 1 from Figure 2) in favor of clarifying vulnerabilities and refine the selection procedure. Strictly, to further ensure the impartial selection of studies, a multistage process was applied. Furthermore, this process (depicted in Figure 2) involved two researchers (or \"pair\") at the stages 1 to 4 who recorded the justifications for inclusion/exclusion at each step, as detailed in Section 3 and as suggested by Kitchenham et al. [UNMAPPED:23]. Indeed, none study was excluded without a consensus in the pair's analysis. Even in relation to the low Kappa coefficient in the initial stages of this review (see Table 1), the authors believe that it does not impact on the credibility of the decisions (inclusion or exclusion) because, whenever the researchers do not reach a consensus, the paper was included for next stage.\n\nOther limitation to consider is the fact of this review has an \"inaccessible list\" of 26 papers that apparently, have some relevance for this research, but could not be assessed to confirm this supposition. Meanwhile, this number of papers can be considered low (2%) if we consider the amount of 1272 input papers of the stage 3. In other words, this aspect can be considered part of the consistency of the strength of evidence found by this review, that despite being an aspect that cannot be ignored, it does not mischaracterize the representativeness the final findings.\n\nAll along the pilot of the data extraction procedure (stage 4), we found that various papers lacked enough details about the study design and related findings. Therefore, in the beginning, we diverged too much in what indeed we extracted. Directed toward reduce the bias, the data from the entire set of studies at this stage were extracted by two researchers separately (on each pair), conforming to the predetermined extraction form [UNMAPPED:25], and this information were gathered in a database through the tool developed during this review. After that, the researchers from each pair carried out a set of meetings to select the final extracted data by consensus, using another interface of the same tool. Moreover, we realized that the extraction process was constantly hampered by the manner some studies were disclosed. Lamentably, sometimes the documentation procedure cannot be satisfactorily carried out using the extraction form, due several studies lacked sufficient information to do that. Hence, there is a chance that the extraction procedure might have conducted to some imprecision in the data. Anyhow, we believe that because the methodological rigor followed by this review, the universe set of studies obtained, is at least, representative sampling from the phenomena under study.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "23",
+            "25"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Unfortunately, our review did not identify any previous systematic review about agile governance. Due that, this work can be considered the first systematic review about the agile governance, in which we found 167 studies related directly or indirectly to this domain.\n\nWe will now discuss our results, beginning by addressing an overview of the studies, analyzing the research methods employed by them and discussing their methodological quality. After that, we will address the findings about emerging groups and categories, followed by research questions and closing with a consideration of the state of art of agile governance. Thereafter, the upcoming subsections discuss the strength of evidence of these findings, followed by the implications of the findings for research and practice and emerging contributions. Eventually, we discourse about the limitations of this systematic review.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "5. Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This paper brings the following main contributions: (1) advance in the state of art of agile governance, providing a mapping of findings organized in four major groups and 16 categories, which can be figured by relevance and convergence; (2) the characterization of agile governance as a nascent multidisciplinary socio-technical phenomena positioned in a chaotic range between the innovation and emergent practices from agile philosophy and the status quo of the best practices employed and demanded by the governance issues, focused on organizational performance and competitiveness; and, (3) a new and convergent definition for agile governance, six meta-principles, the concept of a dynamic repository for the knowledge related to governance topic (GBOK) and some directions for research and practice.\n\nAs additional contributions, we improved and complemented the methodological approach on which was based this review (see section 3): (i) upgrading and adding new procedures to carry out a systematic review; (ii) as well as developing a tool to support this research in a geographically distributed manner; and, (iii) adopting quantitative procedures to develop a qualitative analysis of the evidences. We believe that this approach can, at least, inspire researchers and practitioners in future qualitative researches and systematic reviews.\n\nAn evident finding of the review is that agile governance is a nascent, wide and multidisciplinary domain, focused on organizational performance and competitiveness that needs to be more intensively studied and might have its boundaries better defined in future works. Absolutely, we can realize that there is a research backlog with topics that need to be tackled. Naturally, researchers and practitioners should work together to define a reciprocal research agenda for new research and practice on this domain, as well as to get closer to the wide spectrum of interest and application identified by this review. Furthermore, due the amplitude of the agile governance domain and the large number of findings identified by this systematic review, we consider the publication of other relevant aspects of this review as a future work.\n\nFinally, the authors believe that not only software development industry, manufacturing industry, and IT industry, but also whole business industry, will benefit with these results. Due once the agile governance phenomena are better understood in their essence, starting by its concept and application, as well as how it evolved over the time; become possible, in a second stage, map their constructs, mediators, moderators and disturbing factors from those phenomena in order to help organizations to achieve better results in their application: reducing cost and time, increasing the quality and success rate of their practice. As a consequence, improving the competitiveness of governments and companies through the improvement of their governance and management shall result in significant economic returns.",
+      "citations": [
+        "W1485555897"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We applied the SDC approach for the sequence of authors [W2137892569]. The authors acknowledge to CAPES, Brazil's Science without Borders Program, CNPq, ATI-PE and SERPRO by the research support. Thanks to all the researchers who participated in this systematic review in any of the phases, of which we cite: Derick Hsieh, Guilherme Dias da Silva, Renata Maria Andrade do Nascimento, Reynaldo Fabrinny Rodrigues Tib\u00farcio, Jirlaine Fonseca de Oliveira, Edmundo Rodrigues da Silva Porto Neto and Fabio Santos Batista. We are grateful to Tatiana Bittencourt Gouveia and Prof. Dr. Fabio Q. B. da Silva for having kindly provided their template of the research protocol, as an inspiration for elaboration of the protocol of this review. Special thanks to Luciano Jos\u00e9 de Farias Silva and Daniel de Andrade Penaforte for their valuable contributions. The research team thanks to the authors and publishers that have made available their papers for assessment, when asked about it.",
+      "citations": [
+        "W2137892569"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Appendix A. Studies Included in the Review",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "As a matter of length, we are depicting in this section only studies directly cited in the text of this paper. See the entire list, and references, about the studies included in this review at: http://www.agilegovernance.org/slr-ag-up-to-2013/studies.\n\n* [S17] Wang, L.X., Lane, M., Conboy, K., Pikkarainen, M., 2009. Where agile research goes: starting from a 7-year retrospective (report on agile research workshop at XP2009). ACM SIGSOFT Softw. Eng. Notes 34, 2003\u20132005.\n* [S26] Xu, F.J., Tong, F.C.H., Tan, C.J., 2011. Auto-ID enabled tracking and tracing data sharing over dynamic B2B and B2G relationships, in: 2011 IEEE International Conference on RFID-Technologies and Applications. Ieee, pp. 394\u2013401. doi:10.1109/RFID-TA.2011.6068668\n* [S28] Sun, Y., Zhang, Z., Valota, O., 2005. A Methodology to form agile strategies in manufacturing organisations, in: Proceedings. 2005 IEEE International Engineering Management Conference, 2005. Ieee, pp. 410\u2013414. doi:10.1109/IEMC.2005.1559163\n* [S33] Sharifi, H., Barclay, I., Gough, P., 1997. Moving towards agility: a way for UK manufacturing to go, in: 5th International Conference on FACTORY 2000, 2-4 April 1997, Conference Publication No. 435 0 IEE 1997. International Conference on FACTORY, pp. 2\u20134.\n* [S54] Qumer, A., 2007. Defining an Integrated Agile Governance for Large Agile Software Development Environments: A Systematic Review and Analysis, in: XP'07 Proceedings of the 8th International Conference on Agile Processes in Software Engineering and Extreme Programming. pp. 157\u2013160.\n* [S60] Luna, A.J.H. de O., Costa, C.P., De Moura, H.P., Novaes, M.A., 2010. Agile Governance in Information and Communication Technologies: Shifting Paradigms. JISTEM J. Inf. Syst. Technol. Manag. 7, 311\u2013334. doi:10.4301/S1807-17752010000200004\n* [S63] Cheng, T.-H., Jansen, S., Remmers, M., 2009. Controlling and monitoring agile software development in three dutch product software companies, in: 2009 ICSE Workshop on Software Development Governance. Ieee, pp. 29\u201335. doi:10.1109/SDG.2009.5071334\n* [S69] Wang, L.X., Lane, M., Conboy, K., 2011. From Agile to Lean: The Perspectives of the two Agile Online Communities of Interest, in: EUROPEAN CONFERENCE ON INFORMATION SYSTEMS (ECIS) 2011 Proceedings. Paper 209. p. 7.\n* [S71] Dubinsky, Y., Kruchten, P., 2009. 2nd workshop on software development governance (SDG), in: 31st International Conference on Software Engineering - Companion Volume, 2009. ICSE-Companion 2009. Ieee, pp. 455\u2013456. doi:10.1109/ICSE-COMPANION.2009.5071059\n* [S74] Dubinsky, Y., Kruchten, P., Finkelstein, A., Bass, L., Chulani, S., Prikladnicki, R., 2010. Software Development Governance (SDG) Workshop, in: ICSE '10 Proceedings of the 32nd ACM/IEEE International Conference on Software Engineering - Volume 2. pp. 463\u2013464.\n* [S75] Qumer, A., Henderson-Sellers, B., 2008. A framework to support the evaluation, adoption and improvement of agile methods in practice. J. Syst. Softw. 81, 1899\u20131919. doi:10.1016/j.jss.2007.12.806\n* [S90] Heston, K.M., Phifer, W., 2011. The multiple quality models paradox: how much \"best practice\" is just enough? J. Softw. Maint. Evol. 517\u2013531. doi:10.1002/smr\n* [S92] Kruchten, P., 2011. Contextualizing agile software development. J. Softw. Evol. Process 11. doi:10.1002/smr\n* [S117] Jones, C., Medlen, N., Merlo, C., Robertson, M., Shepherdson, J., 1999. The lean enterprise. BT Technol. J. 17, 15\u201322.\n* [S150] Luna, A.J.H. de O., Kruchten, P., de Moura, H.P., 2013. GAME: Governance for Agile Management of Enterprises: A Management Model for Agile Governance, in: 2013 IEEE 8th International Conference on Global Software Engineering Workshops. IEEE, pp. 88\u201390. doi:10.1109/ICGSEW.2013.20\n* [S165] Wang, L.X., Conboy, K., Cawley, O., 2012. \"Leagile\" software development: An experience report analysis of the application of lean approaches in agile software development. J. Syst. Softw. 85, 1287\u20131299. doi:10.1016/j.jss.2012.01.061",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_5",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3100365535_tables.md"
+}

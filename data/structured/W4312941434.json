@@ -1,0 +1,197 @@
+{
+  "id": "W4312941434",
+  "metadata": {
+    "title": "A Systematic Review on Image Data Protection Methods",
+    "n_sections": 5,
+    "n_subsections": 6,
+    "n_subsubsections": 0,
+    "n_tables": 1
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Recently, numerous data security systems (DSSs) and applications [W2927879472, W2887674935] have been widely used to perform several tasks in regard to security, privacy, and protection [W2928328296, W2997508611]. Smart applications are a crucial Internet of Things (IoT) applications that let consumers operate smart services online and they require security schemes. When users may remotely access a smart home system, privacy and confidentiality issues arise. Despite research on authentication techniques to increase smart home security, difficulties remain. Most present solutions concentrate on safe authentication and third-party communication without considering privacy leaks. Many protocols allow users to verify access to a wide variety of smart home gadgets, which is wasteful and unpleasant. In [W2928328296], the proposed technique uses XOR and cryptographically functions to accomplish mutual authentication with anonymity and complete forward security.\n\nUsually, these applications send data and other digital contents. Data could be in the form of text, image, video, or audio form. Amongst these forms of data, text and image are more preferable to be shared. Recently, a lot of data/information are shared and transferred using the Internet due to that data transfer has become faster than ever.\n\nA huge portion of data are transferred per second, producing a huge amount of information. This also would produce a huge amount of bytes size. This phenomenon has encouraged researchers to work and focus on enhancing the way these \"things\" are sharing data.\n\nAs expected, many proposed systems reviewed in the literature have considered this issue. Hence, the aim of this study is to review a number of these proposed systems as well as their techniques and strategies.\n\nThis paper is organized as follows. Section 2 provides the design of the review process and explains the review method being used. Section 3 presents the key findings from the selected reviewed papers in the literature. Section 4 discusses the implications of these findings and proposes an architecture of the multi-layer DSS. Finally, Section 5 provides the conclusions and description of future work.",
+      "citations": [
+        "W2927879472",
+        "W2887674935",
+        "W2928328296",
+        "W2997508611"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Study Design",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This section presents the context and research questions that are used to guide the review process.\n\nOne of the goals of data protection is to gain privacy of the data being protected. Generally, data security depends on techniques or methods that are applied to perform procedures for maintaining data to be safe from being accidentally altered, or modified in an unauthorized manner. For example, cryptographic techniques are normally used for achieving confidentiality and integrity of the CIA triad. Other techniques include using a data mask which is suitable for hiding personal information. In addition, data removal or erasure is another technique applied to protect data that had not been used for a long time. A number of these techniques are described in detail in [W3093033004, W2996268213, W1613656628, W3035341925, W2990690281, W2739914218, W2891980658, W3134057227]. Furthermore, in some cases, a combination of two methods is applied to the data system in order to strengthen the data protection procedure.\n\nThis review paper seeks to gain some insights on the status of research in image data protection methods by analysing a selected set of papers in the literature. In addition, the study also focuses on identifying the challenges and future trends in this area of research.\n\nThe following research question(s) guide the review process:\n1) What are the different types of methods that have been used in the image data protection procedures in DSS?\n2) What are the challenges and future trends in image data protection research?\n\nThe method used in this review process is characterized by these three important aspects: (1) keywords for selection, (2) the types of publication and indexing services from which the papers were to be extracted, (3) the period range of the selected publications.\n\nThe keywords used in the search engine to extract papers for this review are ones typically found in cybersecurity papers. These include \"data systems\", \"security\", \"information security\", \"data security systems\", \"data protection\", \"data encryption\", and \"cryptographic strategies\".\n\nThis review paper has collected a group of papers published as journals and conference proceedings that are from SCOPUS and ISI-indexed only.\n\nAnother criterion used for selecting the papers is the publication period range, which is between 2001 and 2020. This is considered to be a good coverage period in terms of publication date when most of information technologies and data systems are believed to be growing during the last two decades. The procedure applied for papers' extraction is in detail mentioned in **TABLE 1**.\n\n**TABLE 1.** Phases performed for extracting papers from digital libraries\n\n{{TABLE:tbl_01}}",
+      "citations": [
+        "W2927879472",
+        "W2887674935",
+        "W2928328296"
+      ],
+      "tables_in_text": [
+        "tbl_01"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Disciplines and Research Areas Where Security Methods Have Been Implemented",
+          "subsubsections": [],
+          "text": "In the literature, there have been various studies proposed to apply security methods. Those security methods are applied for a variety of purposes in many fields. As for example, a security scheme has been applied in the field of medical images with the purpose to resist potential attacks [W2992147767]. Another study from the field of medical images proposed by [W2992147767] has used the reversible watermarking technique where the relevant information has been embedded with the image. Medical images sometimes are stored in health information systems or other storages that need to be always secure and protected. Finally, in [W1484053352], medical images as plain images have been protected by implementing a security image processing technique. This technique aims to increase privacy of the selected information system and authentication of images specifically during the decryption process.\n\nSecurity of information has been considered by many research studies from the field of cloud computing such as in [W2125858711, W1983347733]. Cloud computing resources are key assets in which a huge number of users are always sharing and transferring data thoroughly [W2508317201]. This reason and other related issues have made cloud computing a vulnerable to so many attacks and threats from unauthorized parties and sources. Therefore, it is very important to overcome related challenges faced by security schemes and algorithms which are proposed to deal with the integration, confidentiality, availability of data and information to countermeasure such attempts of threats and actions e.g., denial of service. In [W2125858711], the security scheme aims to secure shared and transferred data as well as to services being requested by users. The security scheme aims by then to increase protection of data by taking the consideration of data integrity.\n\nBesides, Internet of Things (IoT) is another essential field that has been paid much attention by researchers [W2102314446, W2508317201, W2978986008] in order to maintain its resources, systems, information, and other assets confidential and protected. The authentication procedure has been considered widely for many IoT related systems such as those systems which require authentication via a remote environment for internet banking systems [W2070896463]. There is a need to authenticate users using a strong security mechanism. Such an authentication is an essential security procedure for user's data protection from being cloned while IoT-based services are performed.\n\nSecurity of information systems has been studied very extensively by many researches from the field of nano-communication [W2168067377], where it is a very important to consider nano-communication security by protecting those systems from being manipulated, modified, altered by harmful threats. Related security systems have considered both nano-networking and sensor networks to be protected.\n\nIn addition, there are several studies concerning the security of mobile communication systems to increase the safety of users, data, shared information [UNMAPPED:22]. There are further security procedures that trace mobile users and terminals in order to close such open ports and untrusted environments. Related security methods for the field of mobile computing to initialize a reliable security infrastructure in order to keep respective users, resources, terminals, and important resources in a private environment and to allow them interact in-between each other and operate securely [W2771164454]. Also, mobile computing related security methods focus on making middleware safe and unthreatened so that information systems and users can be protected.\n\nThe reviewed literature has shown that there are a number of methods and techniques applied for DSS-related protection purposes. In the next sections, we shall provide numerous examples of these strategies that are found in the literature.",
+          "citations": [
+            "W2992147767",
+            "W1484053352",
+            "W2125858711",
+            "W1983347733",
+            "W2508317201",
+            "W2070896463",
+            "W2168067377",
+            "W2771164454"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "22"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. DSS-Applied Watermarking Techniques",
+          "subsubsections": [],
+          "text": "In the medical images field, many researchers have designed and proposed a number of security methods. For example, in [W2792257088], authors have applied a watermarking scheme applied on medical images and health information systems where such a method is proposed to increase security of medical images as well as authentication. Besides, a transformation process has been applied to images for achieving stronger security [W3017123442, W3005591125]. It is mentioned that authentication and security scheme applied to such types of images can secure images against many types of attacks. Furthermore, the use of transformation-based watermarking to secure medical images and patients' records and information is analyzed in [W3003686330] with examples of embedding image hiding technique into an image scheme can be found in [W2993692270, W3006469203, W2792489537, W2940321106, W3006634823]. This is also called steganography [W15727771, W2904288768, W2517946822, W2805658303, UNMAPPED:34, UNMAPPED:38, UNMAPPED:39] by which a certain amount of information can be hidden [W2989719174, W2957293356]. For the purpose of hiding a medical image, one of the techniques is to embed an image to another. Precisely, the secret image can be inserted to the normal or cover image.\n\nUsually, this procedure can be followed by a transformation procedure in order to scramble the image, i.e., secret image or information aimed to be protected. The paper [W2950418934] mentions that safeguarding the originality and authenticity of medical images is crucial. Two approaches, reversible watermarking and region-of-interest (ROI) lossless watermarking, are primarily devoted to solving these problems. However, the former raises security issues by segmenting images geographically for watermark embedding. The latter falls short in safeguarding images against manipulation by not providing a reliable recovery option for the altered regions. In response to these problems, this work proposes a revolutionary resilient reversible watermarking approach. To eliminate potential for error in diagnosis, we propose a methodology that employs a reversible watermarking technique. To further safeguard picture originality, the procedure is integrated with singular value decomposition. In addition, for watermark creation, regions being processed are separated so that an efficient recovery mechanism may be designed even with limited embedding capacity. Finally, watermarks are included into whole medical pictures to eliminate the dangers associated with spatial image segmentation. Experiments show that with this proposed lossless plan outperforms prior art methods for protecting medical images in a variety of respects, including in terms of its remarkable indiscernibility and sufficient robustness, as well as its provision of reliable verification and recovery functions.\n\nIn [W2045728963], two security methods have been used which are watermarking and encryption in order to increase security and protection of medical images. Natural images have been considered to be original images and medical images taken as watermark images. Then, medical images will be embedded with the natural images. Then, an encryption scheme has been applied to this mixture using different encryption algorithms. In [W1484053352], encryption and watermarking have been the security technique used to be reversibly carried out so that the original image can be readable in the decryption party.\n\nThe applied security scheme in [W2125858711] has used a public key based authenticator with randomly performed masks. In [W2102314446], the security method has focused on detecting vulnerabilities at devices in order to increase security of embedded security devices.",
+          "citations": [
+            "W2792257088",
+            "W3017123442",
+            "W3005591125",
+            "W3003686330",
+            "W2989719174",
+            "W2957293356",
+            "W2950418934",
+            "W2045728963",
+            "W1484053352",
+            "W2125858711",
+            "W2102314446"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. DSS-Applied Cryptographic Techniques",
+          "subsubsections": [],
+          "text": "Cryptographic methods are proposed to be effective and applicable with nano-communication and its related sensor networks as proposed by [W2517946822]. Additionally, in the field of mobile communication [W2805658303], it is proposed that the use of cryptographic technique with a digital proxy signature security scheme might be able to produce more computation power than other competitive security schemes. Also, cryptographic methods have been used in medical images and information systems to ensure reliability and authentication of systems. In [W3001824711], a cryptographic algorithm to perform authentication procedure is implemented and applied to health information system. The proposed algorithm aims to secure data and records of patients and protect the system in terms of integrity.\n\nSecuring images using cryptographic techniques can be an alternative solution to securing by identifying features and other related properties such as biometrics [W2791925135]. Even then securing the associated images are also of concern to researchers. In [W3016845157], a visual cryptographic technique is proposed to secure images and its integrated information. The proposed visual cryptographic scheme is aimed to enhance security of information where additional parameters are used to increase security with more reliability.\n\nAnother visual cryptography scheme has been applied to color images. In this proposed scheme [W3011676662], details of images are expanded. The security scheme aims to make colors have similar contrasts. That means, regions and details inside the image are similar and therefore details and edges will not be obvious easily. Thus, this leads to an increase in security of images.\n\nCryptographic algorithms are also used to support image protection mechanisms that hide their information by embedding more than an image [W2942903479]. For example, in [W3010931211], encryption is applied on images to produce distorted forms which subsequently can only be decrypted through certain known cryptographic secrets. The proposed security method uses a double random phase cryptography procedure. In addition, an asymmetric encryption procedure has also been used after that in order to allocate initial values and system parameters.\n\nFor an effective security method related to the field of mobile computing, it is proposed by [W2771164454] to use an agent technology middleware. This security technology can be supported if a reliably prepared security infrastructure is used when such a standard cryptographic mechanism can be exploited to increase the security level of mobile computing related components [W1990075868] such as users, database, terminals, and communication medium.\n\nAn effective way to protect digital images and keep them secure is to use sometimes images' encryption. A 2D chaotic system has been designed in [W3003512042] in order to produce several 2D chaotic maps. This way can produce complex chaotic forms. An image encryption algorithm has been designed and the original image will be scrambled by using the chaotic sequences. This procedure is followed by a transformation. The scrambled image is confused and diffused by the chaotic sequences. It is mentioned by [W3003512042], the performance of the proposed encryption algorithm can be reliable.\n\nNowadays, encryption of image based on chaos is considered a secure choice in communications. The proposed security scheme in [W2956215630] depends mainly on the use of a logic based operation, that is, a bit-pair of XOR operation. It also aims to increase the form of the diffusion with pixel level XOR operator from the bottom to the top and from the right corner to the left corner. Authors in [W2956215630] have mentioned that the pair level encryption utilizing logic operation can significantly increase the security and encryption effectiveness. A chaotic random series for the encryption has been obtained using chaotic maps. It is reported that this scheme is robust and can resist a set of attacks.\n\nOne of the other security methods in addition to the image encryption procedure is to use an image compression process following the security scheme so that size of images will be significantly reduced [W3003538287]. This security procedure maintains the assurance of contents. To use the symmetric encryption scheme, keys are generated for both encryption and decryption terminals [W3005664058].\n\nSecurity images related methods are aimed to safe contents and information with the confidentiality of digital images. Additionally, these security methods are attempting to protect images from being unavailable either temporarily or permanently such as denial of service or service interrupt. In [W2913037985], a security scheme is proposed to enable a safe sharing of their contents. The proposed method has utilized the asymmetric encryption algorithms. This scheme shall increase the complexity in terms of computation for security purposes so that it can securely reconstruct pieces of data in different sources and data storages. The security of this scheme confirms its confidentiality for securely shared images. The proposed method has also utilized the steganography method to add a cover for a more security purpose. The proposed method in total has also confirmed it is suitable to resist against cryptanalysis related methods.",
+          "citations": [
+            "W2517946822",
+            "W2805658303",
+            "W3001824711",
+            "W2791925135",
+            "W3016845157",
+            "W3011676662",
+            "W2942903479",
+            "W3010931211",
+            "W2771164454",
+            "W1990075868",
+            "W3003512042",
+            "W2956215630",
+            "W3003538287",
+            "W3005664058",
+            "W2913037985"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. DSS-Applied Integrity Techniques",
+          "subsubsections": [],
+          "text": "Integrity of data and digital contents is very essential specifically for images that contain sensitive details such as medical images. For data integrity, in [W2991801957], a steganography technique is proposed to consider the issue of data integrity. For the integrity security objective, and in order to be securely achieved, the hashing algorithm has been used so that variables will be integrated once the integrity procedure has been performed.\n\nImages being transferred through cloud platforms have been paid a lot of attention in order to ensure they are stored, transferred, and managed in a secure manner. Such security schemes considering cloud images need to take into account a set of characteristics of cloud images. Thus, a real-time integrity verification scheme has been proposed and designed in [W2921575988]. For example, the authentication and integrity of data during generating, storing, and transferring processes should be carefully considered. Besides, providers of services are another security issue, in this setting, due to that such mis-behaviorally performed actions and threats might happen thorough. The proposed security scheme has utilized an adaptive reversible watermarking algorithm. So, the hiding information and images can be embedded and therefore data used for authentication procedure will also be hidden using the watermarking technique. The proposed method has established a protocol so that potential performance can do resist against attacks and privacy of digital contents of images could be achieved.",
+          "citations": [
+            "W2991801957",
+            "W2921575988"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5. Challenges Faced by DSSs",
+          "subsubsections": [],
+          "text": "This subsection discusses a number of challenges DSS might face towards achievement of highly secure performance.\n\nThere are a number of reported challenges faced by DSS in order to achieve a very highly advanced level of security for a wide range of applications. One of these challenges, the exponential increase in terms of amount of information. This increase has made the security task more difficult due to the huge number of sizes of processed information and stored data.\n\nBesides, a huge amount of data required a huge space assigned for storage. This requires a computation-efficient strategy that can be powerful to address such a very huge number of bytes.\n\nIn addition, availability of huge amount of data will be certainly vulnerable to many attacks and potential threats.\n\nResearches in the reviewed papers that have been conducted within the realm of cloud computing, such as [W2125858711, W1983347733], have also considered the issue of information security. Hence, cloud computing is very susceptible to a wide variety of assaults and dangers posed by untrusted third parties and sources as a result of this reason and other related problems. For this reason, it is of the utmost importance to overcome the related challenges faced by security schemes and algorithms that have been proposed to deal with the integration, confidentiality, and availability of data and information in order to countermeasure such attempts of threats and actions such as denial of service. According to [W2125858711], the purpose of the security system is to protect not only the data that is being shared and moved but also the services that users are requesting but also to improve the level of protection afforded to data by taking into account the data's integrity [W2104348420].",
+          "citations": [
+            "W2125858711",
+            "W1983347733",
+            "W2104348420"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6. Future of DSSs",
+          "subsubsections": [],
+          "text": "The application of security strategies and techniques to DSS will continue to grow in term of the management of the information size. In addition, there will be a number of data-related systems specifically those which include sensitive data and information such as smart IoT and cloud computing dependent applications. Finally, data systems that rely on open source and online platforms such as Software-as-a-service (SaaS) and Platform-as-a-Service (PaaS) are expected to be a major focus of DSS in the future where many security strategies and several security measures will be implemented to safeguard data associated with these types of systems.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This section reports the findings from the analyzed papers, organized according to how they are related to the research questions.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This paper has reviewed a number of methods collected from literature to provide some insights on the application of security and protection strategies to data and information related to DSSs, in particular, image data. Different types of security methods have varied levels of performance in terms of security strength and data management. Some methods are more suitable to certain types of data depending on the design of the proposed method, techniques or strategies of the security scheme, types of DSSs, and a few others. Preferably, there should be security strategies applicable to varied types of DSSs in order to achieve overall high level of security. The insights that we have uncovered in the course of this review serve as the basis for deriving a conceptual model for guiding the development of multi-layer DSSs.\n\nSecurity of information concerns two related issues which are the protection of information and reducing potential risks by preventing such a potential action which attempts to cause hazards to information [W3001824711, W2996838844]. Sometimes, information security aims to reduce unauthorized access to information resources. Security of information is the process that guarantees a safe arrival of information to the destination with no disclosure of any part belongs to information being protected [W3005336468]. This procedure aims to achieve a high level of the confidentiality, the integrity, as well as the availability [W2998233014]. This idea leads to the conceptualization of the security mechanism that is represented in **FIGURE 1** below.\n\n**FIGURE 1.** A graphical representation of multi-layer DSS\n\n```\n[Encryption terminal (left)]\nContents and information \u2192 Encryption terminal \u2192 Layer C \u2192 Layer B \u2192 Layer A \u2192 Connection links (wired or cloud) \u2192 Layer A \u2192 Layer B \u2192 Layer C \u2192 Decryption terminal \u2192 Contents and information verified? \u2192 Yes: Authorized entity / No: Halt\n```\n\nInformation security has applied several procedures for multi-layer DSS to help perform information protection. Verification of information received, as for example, is one of these procedures. In addition, it applies monitoring for information associated activities that might happen attempting to modify or change original contents.\n\nOne of the most critical issues that information security continuously tries to overcome or encounter is the handling of threats or unusual actions. In information security, there exist a lot number of threats or actions that behave in a non-authorized manner by which an explicit harmful can be caused to information. Security that is either for data or other contents, applies different kinds of countermeasures in order to prevent/reduce caused loss of information. Sometimes, it applies safeguards to block threats. Usually, threats try to access to information through vulnerabilities. Therefore, one of the measures to prevent threats is to eliminate those vulnerabilities [W2954712636, W4245103981].\n\nThere are many definitions of security found in the literature. Some are summarized as follows:\n\nOne of the best definitions describes security in the form of three objectives [W2148662091, UNMAPPED:65, UNMAPPED:66]. In a nutshell information security is the protection of data and information against any disclosure or leak to unauthorized party, any improper changing or modification, and also preventing any unauthorized access to contents of information at any time.\n\nIn the literature, there are several studies proposed to achieve information security. One of the examples is to detect the attack which causes the disclosure, modification, and/or unavailability of information or parts of its contents. In this procedure, it is also important to apply a detection technique that could efficiently and accurately find out vulnerabilities of information being protected [UNMAPPED:67].\n\nAnother example might be a procedure preventing information from being discoverable or shared with unauthorized parties. Prevention of threats is an important procedure that can keep information secure and protected [UNMAPPED:68, UNMAPPED:69].\n\nIn addition, vulnerabilities are considered to be blocked strictly. Usually, this procedure is necessary once the detection is done. Vulnerabilities are open ports that can be exploited by threats by which unusual actions very probably might occur.",
+      "citations": [
+        "W3001824711",
+        "W2996838844",
+        "W3005336468",
+        "W2998233014",
+        "W2954712636",
+        "W4245103981"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "67",
+        "68",
+        "69"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Conclusions and Future Work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This paper has reviewed a number of methods collected from the literature to provide some insights on the security and protection strategies applied to data and information related to DSSs. In particular, the review has focused on methods for protecting image data. The insights have motivated the investigation towards having more robust DSSs such as being supported by multi-layer encryption mechanism.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4312941434_tables.md"
+}

@@ -1,0 +1,775 @@
+{
+  "id": "W3187485442",
+  "metadata": {
+    "title": "Scalable Blockchains - A Systematic Review",
+    "n_sections": 12,
+    "n_subsections": 29,
+    "n_subsubsections": 6,
+    "n_tables": 11
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "1.1. Scope of Study",
+          "subsubsections": [],
+          "text": "In this paper, we aim to achieve a robust understanding of the challenge of achieving scalable applications using blockchain whilst highlighting the role of specific parameters such as block size, transaction processing speed, and block generation rate.\n\nThrough our research we identified existing surveys to review the state of the art with respect to scalable blockchains such as [W2486460265], [W3000385461], [W3039746697] and [UNMAPPED:14]. However, these studies are limited in that these have a limited scope in terms of coverage of different dimensions of scalability (horizontal and vertical, detailed in section 3) as well as depth and breadth of literature reviewed. For instance, [W2486460265] presented a comparison of POW and BFT based protocol families with respect to scalability, whereas [W2774802253] and [W2951250504] presented a comparative study of selected consensuses approaches. Although consensus algorithm is an important component of the overall blockchain system however other aspects of the system also have an impact on its scalability, which should be taken into account to achieve a comprehensive study. Furthermore, Kim et al. [W2900804173] presented an effort limited to only two aspects of vertical scalability i.e. throughput and storage. Additionally, existing reviews of scalable blockchains are also limited with respect to the methodology used to conduct the study with only Fournier et al. [UNMAPPED:14] representing a systematic approach. However this effort is limited in terms of its coverage as it is only focused at some aspects of scalability. Furthermore, the study has a weak article inclusion criteria with limited paper coverage and scope. Contrary to existing studies, we attempt to present a comprehensive study which adopts a systematic approach and takes into account both horizontal and vertical scalability thereby achieving depth and breadth of existing literature.\n\nIn addition to the limitations of existing efforts to review state of the art within scalable blockchains, the widespread use of blockchains has also resulted in increased awareness with regards to scalability as being one of the primary challenges encountered in widespread adoption of blockchains. Therefore, our study aims to present a comprehensive review of state of the art within scalable blockchains addressing the gaps in the existing surveys so as to help research community to contribute towards addressing this challenge.\n\nIn particular, we define scalability as a composite concept comprised of horizontal (node and client scalability) and vertical (throughput, block generation rate, latency, and storage) scalability. We conduct a first thorough systematic study of existing efforts to achieve scalable blockchains, focusing at three specific categories i.e. i) innovative methods and mechanisms to strengthen blockchain core (e.g. sharding, on- and off-chain solutions, blockchain redesign), ii) approaches leveraging blockchains to achieve scalable applications, and iii) efforts analyzing blockchain solutions with respect to scalability. Through a critical review of these efforts, we identify contributions from existing literature and highlight limitations to outline open challenges which require further efforts by the research and practice community.\n\nSpecifically, we make the following major contributions through this study:\n\n- Definition of scalability within the context of blockchains which encompasses both horizontal and vertical dimensions thereby achieving a broad coverage.\n- An in-depth study and analysis of existing literature with respect to blockchain scalability. This review provides a critical insight into the state of the art within scalable blockchains focusing at blockchain enhancement mechanisms, blockchain-based scalable applications, and scalability analysis of blockchains. Therefore, this paper provides a significant snapshot of existing literature in this domain.\n- Identification of open challenges to achieve scalable blockchains based on critical review of existing literature aiming to help channel efforts by research community to achieve scalability in blockchain-based applications.",
+          "citations": [
+            "W2486460265",
+            "W3000385461",
+            "W3039746697",
+            "W2774802253",
+            "W2951250504",
+            "W2900804173"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "14"
+          ]
+        },
+        {
+          "subsection_id": "s_1_2",
+          "subsection_index": 2,
+          "subsection_label": "1.2. Organization of the Paper",
+          "subsubsections": [],
+          "text": "Rest of the paper is organized as follows. First, an overview of Blockchain technology, its basic functions, types and applications with proper depth and sufficient breadth is presented in section 2. Section 3 discusses various dimensions of scalability, such as throughput, latency, block generation rate etc, which is a key barrier in applying the blockchain technology in various domains. Following that, various factors that can affect scalability are discussed in section 4. Section 5 contains research methodology which is mainly based on kitchenham et al. strategy [UNMAPPED:18]. Sections 6 and 7 discusses the state of the art solutions to improve one or more aspects of scalability and applications respectively. Discussions and analysis on available solutions is presented in section 8 and finally, section 9 contains the conclusions and future directions.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "18"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Decentralization is a key theme for recent advancements within computing systems with emerging applications in diverse domains, such as Industrial Internet of Things (IIoT), autonomous vehicles, supply chain management, and finance. With cutting-edge computing paradigms such as Cyber-Physical Systems (CPS), interaction among multiple different, geographically dispersed entities in an automated manner is critical to their wide-spread adoption. Distributed Ledger Technologies (DLTs) have recently emerged as enabling platforms to aid the drive towards decentralization within computing systems. A DLT typically involves participants across different networks to record and share data via a synchronized ledger. By providing fundamental properties such as public availability (typically), and immutability (tamper-proof) of the ledgers, DLTs foster trustworthy interactions in untrustworthy settings [W2531399364].\n\nA Blockchain system exemplifies distributed ledger technologies enabling a digital transaction's data to be stored in the form of a chained block where each participant stores the transaction records in these connected blocks and the transactions are included with the consensus of verifying nodes also known as miners. A blockchain based system has inherent properties of decentralization, transparency, trustless-trust, immutability, and traceability, since it allows each participating node to have equal opportunity to influence the ledger. The transparency and immutability is enforced by allowing the nodes to view and maintain the ledger which can only be altered with the consensus of other mining nodes [W4248175462]. Although Bitcoin [W4248175462] still represents the most popular application of blockchain, use of blockchain has witnessed significant attention across diverse application domains including healthcare, finance, e-government [W2801216993], and supply chain management [W2930456362]. Blockchain features such as security, immutability and decentralization have a profound role in this. The widespread adoption of blockchain has been facilitated by research on blockchain beyond cryptocurrencies where significant efforts have been made to devise different business models, its applicability in various domains and to optimize its adaptability for different applications. Furthermore, a number of platforms such as Ethereum [UNMAPPED:5], Multichain [UNMAPPED:6], and Hyperledger [UNMAPPED:7] have been developed to facilitate adoption of blockchain technology beyond cryptocurrency and have had significant impact to achieve its widespread adoption.\n\nIn addition to the inherent benefits of blockchain, the increasing use of blockchain within diverse domains has also identified several challenges which have to be addressed for widespread adoption. For instance, transaction malleability [W3008668298] is considered a significant threat for blockchain-based applications and therefore requires appropriate protection mechanisms to mitigate against it.\n\nOne of the significant factors in the adoption of blockchain is its ability to facilitate a large number of transactions which require a scalable solution. An empirical analysis of Bitcoin reveals that it supports seven transactions per second which is significantly low when compared to 2000 transactions per second achieved by VISA. Similarly, applications such as public voting require concurrent processing of a large number of transactions [W2989439229]. Such scenarios present opportunities for further dedicated research into the ability of blockchain technology to facilitate development of scalable applications and associated challenges. For instance, a common belief is to treat blockchain as a black box which can be used to develop decentralized applications that are inherently efficient. However, in order to use blockchain to achieve efficient decentralized application, a rigorous analysis of characteristics such as block size, transaction processing speed and block generation rate is required. For instance, a size of block in Bitcoin was set to 1MB, and it takes on average 10 minutes to generate a block. Enhancing the block size may result in improving throughput by including more transactions in a single block, but leads to an increase in the block propagation time. On the other hand, reducing the block size leads to a decrease in latency but can also lead to a problem of generation of multiple branches of chain known as forks [UNMAPPED:10].",
+      "citations": [
+        "W2531399364",
+        "W4248175462",
+        "W2801216993",
+        "W2930456362",
+        "W3008668298",
+        "W2989439229"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "5",
+        "6",
+        "7",
+        "10"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Blockchain Technology",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Hardware or Infrastructure Layer",
+          "subsubsections": [],
+          "text": "A typical blockchain network is comprised of multiple physical nodes which are potentially distributed across different geographic locations. These nodes can either be hosted within a cloud or a be part of an organization's corporate network with connections to other resources such as file storage. Blockchain is a peer-to-peer network which means all the participating nodes are connected to each other however this connectivity is achieved through traditional infrastructure governing the Internet. This network of computers computes transactions, validates them, and stores them in a ledger shared across all participating nodes. Data recorded in the blockchain can be stored locally on the participating nodes as part of; on-chain storage or in remote locations such as clouds as part of the off-chain storage.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Data Layer",
+          "subsubsections": [],
+          "text": "Blockchain is a linked-chain of blocks where transactions are stored in an ordered form. The data contained within a block can be divided into two types i.e. block header and block body as illustrated in **FIGURE 2**. Block body contains one or more transactions (data stored in the ledger as part of a transaction) and the transaction counter. Block header contains metadata about the block such as block version, Merkle tree root hash, time stamp, nonce and parent (previous) block hash. The data within a blockchain is immutable and cannot be modified or altered once it is added to the chain.\n\nSince the data is stored in an encrypted form, the identification of each block and the detection of any modification, is done by generating a fixed-length hash of the data via a cryptographic hash algorithm such as SHA 256. These hashes are stored in the form of a binary tree known as Merkle Tree (MT) (Patricia tree in Ethereum) and consist of valuable information of each block typically varying based on the type of blockchain (public or private). **FIGURE 3** presents an in-depth view of a blockchain highlighting different elements of a block and the connection between different blocks. To ensure integrity, security, and immutability, all transactions are digitally signed with a private key using asymmetric cryptography and only the public key holder can verify the signing entity. These signatures secure the identity of the sender (achieving authenticity and non-repudiation) as well as guarantee the integrity of the data by detecting any malicious tampering.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Network Layer",
+          "subsubsections": [],
+          "text": "Although the blockchain network is using Internet infrastructure, it is still a peer to peer network. The network layer, also known as the P2P layer or propagation layer, is responsible for overall node-to-node communication, discovery, and synchronization. It also takes care of state propagation to maintain the existing global state of the blockchain. In a public blockchain, any node can participate in the network by implementing the protocol. However, private blockchain is typically governed by a single entity that grants permission to the nodes to take part in the network.\n\nTypically, there are various types of nodes in a blockchain network, and depending upon their roles they perform certain tasks. However, there are two major types: a full node, and a normal node. A full node, also known as a validator node or a mining node, maintains a copy of all the history of transactions. Moreover, it takes part in the verification and authentication process including validation of the transaction's signature, and mining. It also takes care of the execution and implementation of consensus rules and processes. These nodes are the root of trust in a blockchain network. A mining node must always be a full node since it needs all transaction history to validate a transaction in a newly generated block. However, a full node need not necessarily be a mining node. It may take care of other issues (discussed above) without creating/mining new blocks.\n\nOn the contrary, a normal node, also known as lightweight node and Simplified Payment Verification (SPV) node in Bitcoin, do not perform verification/validation and maintains the storage of complete history of transactions, rather it can only generate and sends transactions while maintaining the header of the blockchain. Although, a lightweight node consumes less space, but these nodes are solely dependent upon full nodes even for a balance query, block synchronization, and correctness of data. For instance, in Bitcoin and Ethereum environment, the storage requirement of a full node is reaching 200GB and 1TB respectively. Whereas, a half node requires less than 50GB and 100GB for Bitcoin and Ethereum respectively.\n\n<div style=\"text-align: center;\">**FIGURE 1:** A layered view of blockchain</div>\n\n<div style=\"text-align: center;\">**FIGURE 2:** Structure of a block within blockchain</div>\n\n<div style=\"text-align: center;\">**FIGURE 3:** In-depth view of a blockchain</div>",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Consensus Layer",
+          "subsubsections": [],
+          "text": "The consensus layer plays a vital role in maintaining the reliability of the blockchain platform. The consensus is a set of rules, enforced by this layer, which must be followed by every participant to ensure smooth generation of valid transactions/blocks. Typically consensus algorithms guarantees the creation of a single continuous chain and prevents the formation of forks (i.e. multiple branches of a single chain). It acts as a core to maintain the agreement and synchronization of each node within a blockchain network. This layer is responsible for managing, maintaining, and administering block generation, validation, and ordering with the consensus of all participants distributed over a P2P network. It has the mechanism to guarantee the distribution of power across the network which consequently prevents tampering by a malicious adversary. It also takes care of the reward mechanism for mining/validator nodes.\n\nThere are various types of consensus approaches to ensure the consistency of the blockchain, including probabilistic and deterministic approaches. In the probabilistic approach, various nodes can have different views of the chained blocks which may result in the formation of forks. These forks are usually prevented by the longest chain rule. The examples of probabilistic approach are Bitcoin and Ethereum platforms which employ PoW (permissioned) and PoS (permissioned/permissionless) consensus methods respectively. On the other hand, in the deterministic approaches, the blocks are mined/validated by the special type of nodes known as ordering nodes. Therefore the possibility of fork generation is prevented. The example of this type of approach is Hyperledger [UNMAPPED:7] which employs PBFT (permissioned) consensus method.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "7"
+          ]
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5. Application or Presentation Layer",
+          "subsubsections": [],
+          "text": "The application layer consists of three major components; smart contracts, Decentralized Application(DApps), and chaincode. This layer can be sub-divided into application and execution layers. The application layer has various elements including interfaces, APIs, and scripts through which the user can interact with the blockchain core function whereas the execution layer contains the software code that executes the rules.\n\nSmart Contracts (SC) and Chaincode are often used as synonyms and refer to the executable code that is intended to control the actions as per a contract or agreement. Typically, they hold the transaction logic that has the power to control the overall business life-cycle. They consist of methods which are executed when a transaction is committed. The major difference between the SC and chaincode is that the former is typically distributed on-chain having their own address, usually written in solidity/Python language and deployed in Ethereum Virtual Machine (EVM) for compilation/transformation of code into byte-code for further deployment into a blockchain platform. The later, is the term used by Hyperledger Fabric community, usually written in java or Go language and executes separately (off the chain) from the validation process in the form of a secure docker container that is available on each blockchain instance. It also initiates and controls the interaction of applications with blockchain ledger via transactions submitted by DApps.\n\nA DApp are user-friendly programs that execute on the top of blockchain and provides interaction with the SC and chaincode, which in turn provides interaction with the blockchain platform. These applications are distributed and are controlled by multiple entities.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_6",
+          "subsection_index": 6,
+          "subsection_label": "2.6. Blockchain Process Flow",
+          "subsubsections": [],
+          "text": "Blockchain introduces a decentralized transaction processing and storage system whereby the contents of the shared ledger depend upon participating validator (permissioned blockchain) or mining (public blockchain) nodes who confirm the transaction legitimacy based on a predefined consensus process. The overall transaction process flow is illustrated in **FIGURE 4**.\n\nAs illustrated in **FIGURE 3**, the root of a blockchain is the genesis block also known as block 0 which is the first block created to form the blockchain. In terms of its contents, genesis block is similar to any other block in the blockchain with the exception that it does not contain the hash of previous block. In a typical blockchain setting, a client (often represented by a process) generates a transaction in the form of a block and broadcasts it to the participants of the peer-to-peer network. Upon receiving the transaction, all the participating validator/mining nodes use predefined consensus algorithm (also called mining) to verify the transaction. The mining process varies across blockchains and can include probabilistic (PoW and PoS) and deterministic approaches (PBFT). In a typical mining process such as PoW, several mining nodes compete with each other to perform validation and submit a mathematical proof of their work. Typically an incentive mechanism is in place for attracting the miners to use efficient hardware and by incentivizing the winner mining node. Once verified, the transactions are grouped in the form of block which is subsequently added to the blockchain by linking it with the previous block via a crypto-hash in the immutable main-chain to complete the transaction process flow.\n\n<div style=\"text-align: center;\">**FIGURE 4:** Typical blockchain process flow</div>",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_7",
+          "subsection_index": 7,
+          "subsection_label": "2.7. Permissioned vs. Permissionless Blockchain",
+          "subsubsections": [],
+          "text": "From the perspective of the participation of nodes, a blockchain can be divided into two broad categories; Permissioned and Permissionless blockchains [W3044610635]. The permissioned blockchains typically have three major characteristics, namely governance structure, private transactions, and an authentication process. They require the approval of the blockchain administrator or owner to join the system and participate in the consensus process [W2754866430]. Such type of blockchain are typically private (typical use cases are Banking and Payments, Food Tracking, Supply chain management, etc.) however, they can be public. They offer extremely fast output, scalability, and energy efficiency but are not truly decentralized and have partial immutability. Permissionless blockchains, on the other hand, typically offer true decentralization, transparency, immutability with high security. They require no prior approval of blockchain administrators or owner to join and interact with. They are typically known as public blockchains [W2754529701]. They offer slow transaction throughput with limited scalability and are not truly energy efficient. Most of the time, permissionless blockchain is ideal for running and managing digital currencies, public voting, etc.",
+          "citations": [
+            "W3044610635",
+            "W2754866430",
+            "W2754529701"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Blockchain is a distributed ledger technology which aids decentralized, distributed computing in a trustless environment. The attention gained by blockchain is primarily due to its most popular application i.e. Bitcoin [W4248175462] which effectively seeks to conduct financial transactions in a peer-to-peer model without the support of conventional banking system. Although Bitcoin was setup in 2009, the concepts and technologies which underpin blockchain in general and Bitcoin in particular have evolved over the last few decades. For instance, the concept of anonymous transactions (using pseudonyms) which cannot be traced back to the sender, was introduced by David Chaum in 1983 [W1601001795] and today serves as one of the elementary concepts within Bitcoin. Similarly, the consensus algorithm used by Bitcoin (Proof of Work (PoW)) is based on the HashCash [W1553435762] a countermeasure originally developed to protect against unsolicited email in 1999.\n\nDistributed ledger technologies in general and blockchain in particular can be represented in terms of different layers involved such as infrastructure, data, network, and application. We present a layered view of blockchain in **FIGURE 1** and use this structure to describe different layers and the components within them. In describing these layers and components, we have used language which is agnostic of technical terminologies used within a specific platform such as Ethereum, Hyperledger or Multichain.",
+      "citations": [
+        "W4248175462",
+        "W1601001795",
+        "W1553435762"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Blockchain Scalability Dimensions",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Horizontal Scalability",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.1.1. Client Scalability",
+              "parent_subsection_id": "s_3_1",
+              "text": "The clients are the application programs that submit transactions on the behalf of a user and the client scalability refers to the ability of a blockchain system to facilitate an increasing number of clients without affecting the overall performance.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.1.2. Node Scalability",
+              "parent_subsection_id": "s_3_1",
+              "text": "Node scalability refers to the ability of a blockchain system to facilitate an increasing number of nodes without affecting the overall performance.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Horizontal scalability refers to the ability of a blockchain to expand the network of participants by adding further nodes and clients. Horizontal scaling is related to improving the core framework of the system that improves the overall throughput of the system by facilitating maximum number of nodes or clients without degradation in efficiency and performance of the blockchain [UNMAPPED:25, UNMAPPED:26]. For example, the PoW based consensus approaches can deliver stable performance with increased number of nodes whereas the performance of Byzantine fault tolerance (BFT) based approaches degrades with increased in number of nodes.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "25",
+            "26"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. Vertical Scalability",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1. Throughput",
+              "parent_subsection_id": "s_3_2",
+              "text": "Transaction throughput, expressed as transaction per second (TPS) is a major component of scalability. It is the rate at which valid transactions are committed and added to the block after consensus is established among the stakeholders (miners) of the blockchain.\n\nThe significant rise in the volume of transactions does not allow current implementations such as Bitcoin, to fulfil the requirements of a transaction hungry environment. The traditional blockchain (Bitcoin) can support a transaction rate of up to seven transactions per second [W2799891711]. While other implementations, such as Ethereum [UNMAPPED:5] and Bitcoin cash [W2799891711], perform significantly better and can process up to 20 and 60 TPS respectively; however, these are still many times less than contemporary digital payment systems such as VISA which can process up to 24000 TPS [W2767579549].",
+              "citations": [
+                "W2799891711",
+                "W2767579549"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "5"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2. Block Generation Rate",
+              "parent_subsection_id": "s_3_2",
+              "text": "In a typical blockchain setting, multiple transactions are grouped together, depending upon the block size, to form a block. In this context, block generation rate (BGR) is the frequency at which a new block is mined, produced and added to the blockchain. The block generation is a resource-hungry process in terms of transaction mining and is dependant upon the size of block and consensus efficiency. For instance, the legacy Nakamoto's algorithm (Bitcoin) has a fixed block side of 1MB and requires each new block to have a unique hashing puzzle solution than previous block to be added to the chain. This results in requisite of 10 minutes time to generate a block [W2767579549]. The Ethereum has better BGR which is between 10 to 20 seconds.",
+              "citations": [
+                "W2767579549"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.2.3. Latency",
+              "parent_subsection_id": "s_3_2",
+              "text": "Within general computer science literature, latency is the time delay between input and output. Low network latency is of paramount importance in blockchain. Within blockchains, latency can refer to two different delays i.e. network latency and transaction's latency. The network latency is the measure of delay between initiating a transaction request and the confirmation of the transaction from the network. A transaction's latency is the measure of consensus efficiency which therein impacts to process and execute large volumes of transactions.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.2.4. Storage Scalability",
+              "parent_subsection_id": "s_3_2",
+              "text": "Storage scalability refers to the ability of participating nodes to mitigate concerns related to the storage requirements of a blockchain. The storage scalability can further be divided into block size and chain size management subdimensions as defined below.\n\n**Block size:** The block size is the limit of a block to accommodate number of transactions and associated information. For instance, in a typical Bitcoin network, the block size currently stands at 1 megabyte, that can accommodate more than 500 transactions [W2767579549]. The increase in block size is an important factor to improve TPS but may have adverse effect on block generation rate. On the other hand, decreasing the block size may lead to formation of forks. Therefore, there is a trade-off between TPS and BGR which impacts selecting the block size.\n\n**Chain size:** The blockchain is a decentralized ledger in which the number of transactions has witnessed continuous increase. A node, before participating in the network, requires enough storage to download the chain to have a complete view of the network. The Bitcoin blockchain has already exceeded 280 GB [UNMAPPED:30] which means a miner need to download huge amount of data locally to participate in the network. This factor has significant implications for resource-constrained devices such as Internet of Things (IoT) and therefore requires specific consideration to facilitate adoption of blockchain technology within such systems.\n\n<div style=\"text-align: center;\">**FIGURE 5:** Dimensions of blockchain scalability</div>",
+              "citations": [
+                "W2767579549"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "30"
+              ]
+            }
+          ],
+          "text": "Vertical scalability refers to enhancing the capabilities of participating nodes to achieve efficient processing of transactions [W3000385461, W2900804173, UNMAPPED:27]. Vertical scalability can be enhanced by adjusting the parameters such as block size, parallel mining, lightening, and sharding etc. Vertical scalability can be further divided into multiple sub-dimensions including throughput, block generation rate, latency, storage scalability which are described below:",
+          "citations": [
+            "W3000385461",
+            "W2900804173"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "27"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Although blockchain has witnessed significant adoption in recent years, scalability of blockchain-based solutions is one of the major concerns which may limit its role as a disruptive technology [W2989439229]. Therefore, our focus in this paper is to investigate and analyze current efforts to enhance the scalability of blockchain. Through our research we have concluded that scalability is a composite term with number of diverse interpretations found in literature. Therefore, in order to define scalability within the context of this study, we leverage definition of scalability in contemporary research where scalability can refer to: i) Horizontal: whereby it is achieved by adding/increasing more machines within the existing pool/network, or ii) Vertical: in terms of vertical scaling that is achieved by employing more power (processing, storage, memory, efficient strategy etc.) to existing pool of resources [UNMAPPED:24, UNMAPPED:25, UNMAPPED:26, UNMAPPED:27]. Therefore, we have used these fundamental concepts to define scalability within blockchains.\n\nIn addition to the fundamental scalability concepts found in contemporary literature, we have also consulted existing blockchain scalability research such as those discussed in existing surveys within blockchain scalability. Consequently, this section identifies and defines major factors which can be used to describe the scalability of a blockchain system. We define these as different dimensions of blockchain scalability and summarize them in **FIGURE 5**.",
+      "citations": [
+        "W2989439229"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Classification of Approaches to Scalable Blockchains",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. On-Chain Solutions",
+          "subsubsections": [],
+          "text": "The on-chain approaches aim to enhance blockchain scalability by adjusting the internal parameters of a blockchain. This can be achieved by improving the network latency or optimizing the transaction or message size. Some of the on-chain solutions are described below:\n\n**Blockchain pipelining:** Blockchain pipelining, proposed by McConaghy et al. [UNMAPPED:10], is an on-chain approach to improve transaction throughput by adding blocks in the main-chain without being verified by other nodes. The final decision for the validity of block for the formation of main-chain is done through voting among nodes as a separate layer.\n\n**Blockchain delivery network:** Through our research we have identified solutions which utilize delivery network including cut-through routing-enabled gateways or cloud delivery network. Such approaches aim to achieve improved transaction throughput, or a collaborative cloud storage mechanism to achieve storage scalability without disturbing the decentralized nature of blockchain.\n\n**Block size adjustment:** Another approach to attain scalability is to adjust the block size. However, these approaches are application-dependant and require tuning in line with application-specific requirement. For instance, too much increase in block size results in more transactions per block but leads to an increase in propagation time. On the other hand, too much reduction in block size may result in increased BGR with improved latency as well as leading to frequent generation of forks.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "10"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Off-Chain Solutions",
+          "subsubsections": [],
+          "text": "The off-chain solutions process transactions outside the main blockchain network to reduce the load from the main blockchain. These solutions are backed by creating ways that execute on the top of the blockchain. The solutions such as using payment channels (LN or Raiden network) or sharding are the famous off-chain solutions that have significant positive effects on the horizontal as well as vertical scalability. Such solutions particularly present opportunities to develop blockchain-based solutions for settings involving resource-constrained devices such as the IoT.\n\n**Payment channel networks:** The payment channel allows multiple off-chain transactions between parties by creating a micro-payment channel without having to commit all transactions publicly on the main-chain. It therefore results in increased throughput by reducing workload from the main-chain. In a typical payment channel network, two participants can perform an unlimited number of transactions and only two transactions are required for the main-chain to update a record that can be updated upon completion of all transactions between parties or upon the requirement of an on-chain transaction. Even the parties which are not directly connected can commit the transactions through intermediaries.\n\n**Sharding:** Typically, a mining node on a blockchain's network is responsible for storing all the states including critical information such as account balance and history of all transactions which reduces the transaction throughput linearly. Sharding is a well-established concept in databases to divide a huge database into smaller and manageable portions to increase its efficiency. In a blockchain, it refers to the horizontal division of the main-chain into multiple independent partitions known as shards. Each partition or shard is responsible for storing its state. Although sharding is considered to be an off-chain solution, in reality, it does not attempt to move the transactions off the chain but rather divides the main chain into multiple independent groups so that the mining nodes are not responsible for mining every broadcasted transaction on the network. Each shard works separately as an independent blockchain in the network but has a strong cryptographic binding with the main chain appearing as a Merkle tree and therefore can be integrated with the main chain.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Hardware-Assisted Approaches",
+          "subsubsections": [],
+          "text": "In addition to the software-based approaches, a number of solutions in literature use specialized trusted hardware devices either to improve consensus or to speed up the transaction process to enhance scalability within the blockchain. The hardware includes high processing machines or Trusted Execution Environment (TEEs) to efficiently handle transactions with accuracy and speed.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Parallel Mining/Processing",
+          "subsubsections": [],
+          "text": "Traditional blockchain is based on solo mining and offers limited transaction throughput and scalability. The parallel mining approaches are used to improve blockchain scalability by concurrent mining of multiple blocks without changing the basic structure of the blockchain.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "4.5. Redesigning Blockchain",
+          "subsubsections": [],
+          "text": "Through our research, we have identified few approaches which are focused on designing an efficient strategy such as a novel consensus framework to address various aspects of scalability. On the other hand, there exists some approaches that present an alternative scalable DLT solution (other than blockchain), such as Graphchain [UNMAPPED:31] or HashGraph [UNMAPPED:32] which uses Directed Acyclic Graphs (DAG) for a non-linear generation of blocks. However, these approaches are not in the scope of current study.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "31",
+            "32"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "As discussed previously in section 3, the blockchain scalability challenge can be defined through low transaction throughput, increased block/chain/e-signature sizes, network/node/clients storage limitations which limit blockchain's ability to realize its potential as a disruptive technology. Blockchain and cryptocurrency research community have made dedicated efforts to improve blockchain scalability taking into account the trade-off between decentralization, scalability, and security in the blockchain. Based on the findings of our research, we have categorized these scalability solutions into on-chain, off-chain, hardware-assisted solutions, parallel mining and redesigning the blockchain. A comparative analysis of these approaches and their individual limitations is presented in **TABLE 1**.\n\n**TABLE 1:** Comparison of different approaches to blockchain scalability\n\n{{TABLE:tbl_01}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Existing Surveys",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This section presents a critical insight into existing surveys reviewing state of the art within blockchain scalability. In order to perform a rigorous study of such efforts, we conducted a methodical effort to identify and review existing literature through digital libraries such as IEEE Xplore, Google Scholar, and Elsevier. More details of our method to identify relevant literature is presented in section 6. To identify existing surveys, we have focused at studies which review existing efforts to achieve scalable blockchain solutions presented in **TABLE 2**. Through our research, we have found some studies such as [W2967111530, W2913922433, W2911425533, W2948052034] which are generic surveys into blockchain and only make reference to scalability as a significant challenge for blockchain. These studies do not particularly explore or address blockchain scalability and therefore have been rendered out of scope of current survey.\n\nAmong existing surveys on scalable blockchains, a number of existing surveys are focused on studying different consensus protocols and their impact on blockchain scalability. For instance, Vukoli [W2486460265], Mingxiao et al. [W2774802253] and Wang et al. [W2951250504] are focused at a comparative study of blockchain consensus protocols from the perspective of scalability. These studies consider commonly used consensus protocols such as Proof-of-Work (PoW), Byzantine Fault Tolerance (BFT) and Proof of Stake (PoS) and highlight significance of parameters such as TPS, node and client scalability and other issues such as consensus finality and node identity management. Similarly, [UNMAPPED:14] has focused on PoW and the impact of block size on the scalability of this algorithm. Although these are early efforts to study existing work within blockchain scalability, these are limited in scope to study role of consensus protocols to achieve scalable blockchains. Furthermore, with the growth of blockchains a number of alternative consensus protocols have emerged since this study which requires a current attempt to review the literature.\n\nAnother notable contribution is by Kim et al. [W2900804173] which primarily focused on vertical scalability issues including low TPS, increased blockchain size, e-signature size highlighting challenges and identifying potential solutions. The solutions discussed are classified into five categories, i.e. on-chain, off-chain, side chain, child chain, and inter chain. The authors further elaborated the comparison of approaches of each category on three major aspects including throughput, cost capacity.\n\nMore recently, Xie et al. [W2971569867], Hafid et al. [W3039746697], and Zhou et al. [W3000385461] have focused at reviewing state-of-the-art within blockchain scalability. As highlighted in **TABLE 2**, these efforts have focused on the vertical scalability factors i.e., throughput, latency, and block size. For instance, Xie et al. analyses distributed storage approaches including DHT, Desema, Inter Planetary file system (IPFS), and BigchainDB, which improve storage scalability. Hafid et al. [W3039746697] present on-chain and off-chain solutions as two layers of scalability solutions with the main focus on sharding approaches and its security analysis and effects of various aspects such as heterogeneous sharding, shard size in maintaining the security of the blockchain. Zhou et al. [W3000385461] present a review of horizontal scalability solutions focusing on two aspects of blockchain scalability i.e., throughput and latency.\n\nIn summary, these studies lack a systematic approach to conduct the review as well as limited depth in terms of existing efforts to address blockchain scalability, leading to gaps in terms of coverage of different dimensions of scalability, as well as depth and breadth of the surveys. Furthermore, the challenge of blockchain scalability has recently attracted renewed attention primarily due to increasing size of the Bitcoin chain and developments such as Segregated Witness (SegWit) [UNMAPPED:38]. Therefore, a current and comprehensive effort is required to conduct a systematic review of state-of-the-art with respect to blockchain scalability to highlight existing work, limitations and future research directions. To the best of our knowledge, this is the first systematic literature survey, based on Kitchenham et al. strategy [UNMAPPED:18], taking into account existing efforts covering all the aspects of scalability discussed in section 3. In the context of the comparative analysis of existing approaches presented in **TABLE 2**, our effort aims to address the shortcomings highlighted in this comparison.\n\n**TABLE 2:** Comparative summary of existing surveys with this study\n\n{{TABLE:tbl_02}}",
+      "citations": [
+        "W2486460265",
+        "W2774802253",
+        "W2951250504",
+        "W2900804173",
+        "W2971569867",
+        "W3039746697",
+        "W3000385461"
+      ],
+      "tables_in_text": [
+        "tbl_02"
+      ],
+      "citations_unmapped": [
+        "14",
+        "38",
+        "18"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Survey Method",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "6.1. Selection Phase",
+          "subsubsections": [],
+          "text": "In selection phase, we initially selected four scientific databases including IEEE Xplorer, Springer, Science Direct, and ACM to extract relevant papers. In order to identify relevant literature, we used specific keywords such as Blockchain AND Scalability, transaction throughput, block generation rate, and blockchain storage scalability. Furthermore, through our preliminary study, we identified early blockchain scalability research in 2015, hence, our study focused on research conducted between 2015 and 2020. Finally, we have included all academic publications (journal, conference and workshop papers) within our study as well as technical reports with proposals for new algorithms.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "6.2. Identification Phase",
+          "subsubsections": [],
+          "text": "Through our initial search within scientific databases, we identified the number of relevant available literature to be limited, leading to extension in our search to include Google Scholar to expand existing literature. However, literature in Google Scholar presents a significant number of duplicate records i.e. studies overlapping between Google Scholar and other scientific resources. Therefore, a conscious effort was made to remove all such instances in a way that if an article appeared twice is only counted against its publisher database. Consequently, a total of 487 unique research articles were identified across all databases with their breakdown presented in **FIGURE 6**.\n\n**TABLE 3:** Preliminary search results\n\n{{TABLE:tbl_03}}\n\n<div style=\"text-align: center;\">**FIGURE 6:** Method used to identify, gather and refine research articles</div>",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "6.3. Screening and Refinement Phase",
+          "subsubsections": [],
+          "text": "Following the general search conducted in previous phase, we carried out a rigorous process of screening and refinement to filter the literature. One key criteria we used to perform this filtering was to include articles focusing on specific aspects of scalability as identified in section 3 such as transaction throughput, block size, chain size, storage scalability, block generation rate, and latency etc. Furthermore, we refined the articles to remove literature in languages other than English, to remove impurities and to exclude articles where definitions of scalability fall out of scope in relation to our definition in section 3.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_4",
+          "subsection_index": 4,
+          "subsection_label": "6.4. Compilation of Results",
+          "subsubsections": [],
+          "text": "Subsequently after applying the refinements, 63 articles were selected to be included in our study spanning across four categories as follows. The first category consists of 8 articles (**TABLE 2**) that review one or more aspects of scalability. These reviews served as a basis for conducting this study and have been analyzed in section 5. Forward snowballing is also performed in this category of papers to extract more results for the last category. Second category, summarized in **TABLE 10** consists of the 12 articles which encompasses the applications/implementation of blockchain technology in a specific application domain to improve its scalability. The third category includes 08 articles summarized in **TABLE 11** which are focused at analysing scalability of blockchain with respect to different dimensions of scalability. Finally, the fourth category consists of 35 articles summarized in **TABLES 4, 5, 6, 7, 8, 9** which propose novel approaches and mechanisms to advance the state-of-the-art with respect to scalability of blockchains.\n\nThe articles included in this study along with their categories are presented in **FIGURE 7**. In view of the different categories of articles identified through our research and in the interest of preserving focus and enhancing readability of the paper, we have organized the remaining paper as follows:\n\n- Section 7 presents a critical review of approaches focused at advancing state-of-the-art with respect to scalable blockchains.\n- Section 8 includes review of existing literature describing application of scalable blockchain within specific domains.\n- Section 9 analyzes literature focused at analysing scalability of blockchains with respect to different dimensions.\n\n<div style=\"text-align: center;\">**FIGURE 7:** State of the art in scalable blockchains</div>",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In order to achieve a comprehensive and structured study of existing efforts to achieve scalable blockchains, we have adopted a systematic approach developed by Kitchenham et al. [UNMAPPED:18] to review and analyze existing literature in this domain. **FIGURE 6** presents a graphical representation of the method we adopted whereas details of each phase within our study is explained in this section. As the first step to our study, we conducted a basic study of the prominent recent literature to achieve understanding of the problem domain and key contributors. Having established the suitability of the research, we devised our study into four phases i.e. selection, identification, screening and refinement, and compilation phases as shown in **FIGURE 6** and further elaborated in **TABLE 3**.",
+      "citations": [],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "18"
+      ]
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "7. Existing Literature to Advance Scalable Blockchains",
+      "subsections": [
+        {
+          "subsection_id": "s_7_1",
+          "subsection_index": 1,
+          "subsection_label": "7.1. Payment Channel Networks",
+          "subsubsections": [],
+          "text": "One of the most significant developments in improving blockchain scalability is the use of Payment Channel Networks (PCNs). In this respect, existing efforts can be classified into Lightning Network (LN) and Radian Network (RN).\n\nWith respect to LN approaches, Bitcoin Lightning Network [UNMAPPED:39] allows off-chain execution of the transaction to ensure micropayments via smart contracts without the requirement of trusted-parties reducing the transaction cost and counter-party risk. In particular, clients can rely on local consensus to perform a transaction with the on-chain commit delayed until either of the two clients wishes to do so. Protection mechanisms such as penalties and time-bound transactions are incorporated to mitigate against malpractice. Since the main chain stores opening and closure of the channel, the time taken for the opening of a channel is equivalent to traditional main chain transaction time. However, the fixed duration for a channel activity imposes recurring opening-closure channel problems and charging transaction fees every time two nodes want to commit the transaction after channel closure.\n\nMalavolta et al. [W2947736742] is another LN-based effort, however, focusing on the security and privacy challenges within such approaches. The authors presented an improved version of PCN that maintains the scalability with security and privacy, especially focusing at wormhole attacks through the application of ESCDA signatures, one-way homomorphic functions and locking mechanism in a payment path. This is accomplished by using the Anonymous Multi-Hop Lock (AMHL) method that includes cryptography in the basic design of PCNs to enhance security and privacy. It also uses a Hash Time Lock Contract (HTLC) to mitigate with the security issues and requires a single signature per transaction that reduces overall transaction size also leading to several benefits including reduced communication overhead, transaction fees and memory requirements for closing a channel.\n\nAn alternative to LN, Radian Network (RN) [UNMAPPED:41] is used with Ethereum to enhance its scalability. However, these solutions do not provide full-scale security and privacy. On the contrary, lightening approaches such as BOLT proposed by Green et al. [UNMAPPED:42, UNMAPPED:43] and its implementations [UNMAPPED:44, UNMAPPED:45, UNMAPPED:46] provide anonymity but it necessitates cryptographic primitives which are only available in Zcash and is limited to single-hop transfers.\n\n**TABLE 4:** Payment channel networks to enhance blockchain scalability\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W2947736742"
+          ],
+          "tables_in_text": [
+            "tbl_04"
+          ],
+          "citations_unmapped": [
+            "39",
+            "41",
+            "42",
+            "43"
+          ]
+        },
+        {
+          "subsection_id": "s_7_2",
+          "subsection_index": 2,
+          "subsection_label": "7.2. Sharding",
+          "subsubsections": [],
+          "text": "Sharding is another promising off-chain approach widely used for blockchain scalability. Inspired by similar concepts in database management systems, it adopts a divide and conquer philosophy for parallel execution of transactions by sharing the workload amongst various shards to achieve improved throughput and latency with significantly reduced communication and storage overhead. The notion of the shard was first used in cryptocurrency by Danezis and Meiklejoh in 2015 [W2105685537] while devising a distributed cryptocurrency framework whose monetary supply is controlled by a central point of trust (such as a central bank) yet relying on other distributed authorities called mintettes within a shard to prevent double-spending attacks. However, this approach is still prone to double spending attacks due to the non-BFT nature of two-phase commit in each shard.\n\nLuu et al. presented Elastico [W2535104337], a first secure sharding protocol, that can tolerate up to 1/4 Byzantine adversaries and scales linearly with the number of miners. Unlike BFT consensus protocols, it does not require a quadratic number of messages as the network grows. This is accomplished by the formation of small parallel working committees which are assigned to a shard containing a unique set of transactions. A byzantine consensus protocol is executed within each committee to prevent double-spending. The management and controlling of these shards is the responsibility of a consensus committee. It also ensures the generation of random bit strings with a bounded bias to be used in subsequent epoch to prevent adversaries to gain a computational advantage by using the observations from a previous epoch. The experiments show an increase in throughput (40TPS) but with high latency of 800sec. This is due to the fact that Elastico requires all committees and their identities to be re-established at every epoch which not only increases latency but also results in a significant increase in communication overhead. Moreover, the small committee size would limit the overhead of BFT protocol but would significantly increase the failure probability up to 0.97 [W2794533297].\n\nKogias et al. [W2794533297] extended the work of Luu et al. through an approach Omniledger, which guarantees security, consensus finality with relatively high TPS, and reduction in storage up to 1/4x. It also increases shard size to 600 members and shows a significant decrease in latency from the order of hundreds to the order of tens. The Omniledger uses byzcoinx, a variant of byzcoin [W2963517786], to improve TPS by utilizing a more robust communication pattern that resembles a two-level tree to efficiently process transactions within a shard. It employs a shard prune mechanism by summarizing the state of a shard's ledger to reduce ledger storage and bootstrapping cost. Omniledger favors security over scalability by choosing large shards at the cost of higher latency but guarantees the finality. The experimental results show that with 1800 hosts a TPS of approx. 4000 is achieved. However, as illustrated by [UNMAPPED:49], this is achieved at the cost of more bandwidth requirement per node which sometimes crosses 45Mbps. Furthermore, although the basic design is to achieve concurrency with encouraging results in initial rounds however further increase in concurrency results in performance drop due to the constant number of cryptocurrency operations which add overhead in the parallel consensus. Moreover, this approach can use a trust-but-verify methodology to tolerate up to n/4 failures to achieve low latency for micropayments, but with high risk for regular payments, especially due to the absence of liability in the decentralized ledgers. It also requires active participation of users for inter-shard transaction which is hostile especially for lightweight users.\n\nZamani et al. [UNMAPPED:49] presented a sharding framework Rapidchain, with further improvements in latency and throughput. The model has improved security, without the requirement of a trusted setup as in Omniledger and Elastico, with the ability to tolerate 1/3 adversaries in a shard containing 250 members and further offers 1/9x reduction in the amount of storage required by each participant after the same number of transactions. It ensures robustness and reduces communication overhead by using a novel gossiping protocol block pipelining with a cross shed communication mechanism inspired by methodology devised by Maymounkov and Mazi\u00e8res [W2119245106]. Additionally it requires O(nn) messages to bootstrap itself and further uses a similar approach by dividing miners into committees and parallelization of consensus and storage to achieve high throughput. It also offers sub-linear communication which is in the order of O(n) bits overhead per transaction to achieve speedy committee consensus.\n\nThe sharding solutions discussed above including Omniledger, Rapidchains, Elastico are limited to permissionless Cryptocurrencies by using unspent transaction output (UTXO) with main focus on security. Dang et al. [W2944812228] extended their solution to BFT-based permissioned blockchain mainly focusing on performance to achieve throughput similar to that achieved by VISA for the non-cryptocurriculum workload. Since the BFT protocols have poor node scalability, the methodology relies upon optimized trusted execution environment TEE (Intel SGX) to eliminate equivocation in the Byzantine failure model to achieve higher fault tolerance and lower communication overhead. The formation and assignment of nodes to shards with security is done by implementing a trusted randomness beacon inside TEE to generate unbiased random values in distributed settings and the fault tolerance of TEE is utilized to reduce shard size which means higher throughput per shard. Secure distributed transaction is achieved by using a two-phase locking mechanism and a two-phase commit. Compared with UTXO supported Omniledger, Elastico, Rapidchain with the general workload, the evaluation conducted by authors showed that a transaction rate of over 3000 TPS is achieved on Google cloud. However, the two-phase locking mechanism may not extract enough concurrency from workload because of the batching nature of blockchain. Therefore, optimization in concurrency control protocol is necessary.\n\nOzyilmaz et al. [UNMAPPED:51] focused on increasing transaction throughput and block generation rate (BGR) in a Bitcoin network without degrading network decentralization. The framework uses the concept of parallel mining by splitting the unspent transaction output (UTXO) space into a tree structure to increase transaction throughput. It also introduces the concept of half-node which can independently verify the transaction on the sub chain it is tracking. The core of this model is splitting the main chain into independently operable sub-chains for creating multiple blocks thereby providing the flexibility of nodes having less bandwidth and storage to track only a subset of the chain without losing any verification capability. Miners must create a block for each sub-chain, and a separate block containing these block headers to claim a block reward. The model uses existing Bitcoin mining approach in a multi-chain setup. However, to verify newly added blocks and detect double-spending attacks, a separate chain called eigen-chain is added that keeps track of all sub chain blocks by storing header hash. Although the model is a framework and not evaluated in a real environment, a theoretical comparison with other approaches including Segwit and Bitcoin-NG reveals that the approach scales exponentially with split counts. Furthermore, in order to operate as a half node, it requires to store only one sub-chain and an eigenchain.\n\nRen et al. [W2963775744] presented a concept of spontaneous sharding to achieve the scale-out throughput and to resolve the problem of double-spending without maintaining a complete set of transactions at all nodes. Spontaneous sharding comes with an assumption that all nodes are motivated and behave rationally. Each node strives to minimize its transmission and storage cost by reducing the proof size and the number of recorded transactions. This minimum cost will be used for the provision of the authenticity of the value in the transaction. However, limiting the number of attempts to recollect the proof in case of failure will prevent malicious nodes from jamming the network by spamming invalid proofs. The authors also acknowledge several issues that need to be addressed, including the storage cost per transaction which will not be scaled out since the sharding process may require recording the whole transaction set before sharding takes place. Furthermore, the issues of discrimination and hidden forks may arise due to varying proof size of transactions if a node refuses the values with huge proof size.\n\nKan et al. [W2886871703] and Yu et al. [W2914117349] focused on Multi-chain approach to sharding. Specifically, Kan et al. presented a layered architecture for heterogeneous inter-blockchain communication that provides routing management, message transfer with three-phase commit and escrow transfer to provide atomicity and consistency. Each blockchain system within the multi-chain architecture is considered as a shard to increase the throughput of the system. The core of this architecture is the router nodes, which maintain the details of different blockchains with the help of a unified transaction format for a standard cross-chain transaction, route information between multiple blockchains. The experiments were conducted to evaluate the performance, which shows that the TPS is increased with an increasing number of shards; this is obvious since each blockchain system within the model performs transactions independently. The throughput also decreases with an increase in the number of cross-chain transactions due to the three-phase commit for inter-chain communication that is time-consuming and consequently reduces overall TPS thereby necessitating optimization in confirming process of cross-chain transactions.\n\nYu et al. [W2914117349] focus on heterogeneous multi-chain sharding architecture where services are assigned to various subchains with sharding to enhance the scalability of blockchain for large scale business applications. The multi-chain architecture is based on various sub-chains controlled by a single main chain and a layer known as the value swab layer which enables interaction between them. This architecture allows the parallel functioning of multiple blockchains, which may belong to multiple organizations, managed by the main chain. The sub-chain downloads the relevant information from the main chain and run independently, the outcome of this chain then again transferred to the main chain. The sub-chains may be a part of different organizations/businesses with no restrictions on the use of a particular consensus algorithm. Although the flexible sharding architecture improves the scalability but it can increase the workload for the main chain by assigning the task and receiving the results from multiple sub-chains.\n\nLi et al. [W2603176690] focused on node scalability and presented a sharding architecture for multiple independent but interconnected sidechains to meet industrial standards. The architecture is based on a notion of satellite chains that contain multiple private (permissioned) ledgers running different consensus protocols and independent auditors and regulators. The regulators can enforce policies without participating in the consensus by using smart contracts. The auditor can passively see and audit the transaction whereas a node can join multiple satellite chains simultaneously. To form a satellite chain, all the interested nodes must agree on validators, consensus mechanism, and access policies. The satellite chain can also transfer assets to other satellite chains. However, the issue of load balancing is not addressed in the paper. As in a case where all or most of the nodes join the same satellite chain may result in overloading of that shard or satellite chain.\n\n**TABLE 5:** Sharding-based efforts to enhance blockchain scalability\n\n{{TABLE:tbl_05}}",
+          "citations": [
+            "W2105685537",
+            "W2535104337",
+            "W2794533297",
+            "W2963517786",
+            "W2119245106",
+            "W2944812228",
+            "W2963775744",
+            "W2886871703",
+            "W2914117349",
+            "W2603176690"
+          ],
+          "tables_in_text": [
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "49",
+            "51"
+          ]
+        },
+        {
+          "subsection_id": "s_7_3",
+          "subsection_index": 3,
+          "subsection_label": "7.3. Blockchain Delivery Network",
+          "subsubsections": [],
+          "text": "In addition to sharding and LN-based approaches, recent efforts have focused on advancements in blockchain delivery network to achieve scalable blockchains. In this context, Klarman et al. [UNMAPPED:59] focused on cryptocurrencies and propose a blockchain distribution network (BDN) framework bloXroute which leverages the power of cut-through routing and system-wide caching to reduce propagation delays and improve transmission rate which consequently increases the throughput. The authors proposed a mechanism to propagate the block to all its gateways without prior transaction knowledge which can further propagate the blocks through peers in P2P Network to avoid any discrimination. The bloxroute is an effective broadcast primitive to support thousands of transactions per second. It also supports multiple blockchains simultaneously and ensures neutrality by allowing users to directly audit the services of bloXroute. However, the methodology is based on the concept of fast propagation without information of blocks which may allow malicious entities to propagate blocks.\n\nAmong other approaches, He et al. [W2911211218] and Kuzmanovic et al. [W3136771524] focus on general blockchain-based scenarios. In this respect, Guobiao He et al. [W2911211218] presented an architecture that improves various aspects including resource utilization through QoS, improved BFT algorithm for security and a transaction level load balancing to improve the throughput of the system. Moreover, it uses a collaborative mechanism that interacts with cloud storage to solve the problem of storage scalability. The model is a four-layered architecture in which the first two layers contribute to improving the scalability of the architecture. In particular, control and authentication layer performs transaction-level load balancing to improve QoS whereas the cloud storage layer stores previous transaction blocks to improve storage burden on consensus node as it only stores one epoch of transaction block. However, load balancing overhead where one area share transaction with other area needs to be optimized.\n\nTraditional blockchain networks such as Bitcoin, consist of trustless peer-to-peer network model with scalability challenge in terms of transaction per second. Inspired by cloud delivery networks such as Youtube, Kuzmanovic et al. [W3136771524] proposed a framework, to optimize the transport layer to implement blockchain in a cloud delivery network without disrupting its decentralized nature to enhance throughput. The cloud distribution network can increase the performance by using a global infrastructure to support distributed blockchain neutrally. This is done by reversing the direction of trust and placing trust in a subset of nodes. The nodes can propagate the block on to the P2P network directly and can communicate it to other geographically apart nodes via Blockchain Distribution Network (BDN) that can be audited by other nodes in the network. The BDN helps to scale in various ways including transaction caching by distributing the transactions in the cloud and utilize indexes instead of a complete transaction. It also uses cut-through routing which propagates received bytes and does not wait for the complete block to be received, this will increase transmission speed especially for larger blocks. It can also solve the transaction in-cast problem in which transaction received at high rates is propagated via a single BDN server. However, the proficiency of design is unable to distinguish between distinct nodes, blocks, and transactions. Its generic nature is not able to identify and prevent malicious behavior and dishonest nodes. Thus the design heavily relies on trusted network infrastructure.\n\n**TABLE 6:** Blockchain delivery networks to enhance scalability\n\n{{TABLE:tbl_06}}",
+          "citations": [
+            "W2911211218",
+            "W3136771524"
+          ],
+          "tables_in_text": [
+            "tbl_06"
+          ],
+          "citations_unmapped": [
+            "59"
+          ]
+        },
+        {
+          "subsection_id": "s_7_4",
+          "subsection_index": 4,
+          "subsection_label": "7.4. Hardware-Assisted Approaches",
+          "subsubsections": [],
+          "text": "There are various approaches including [W2911788238, W2972190608, UNMAPPED:62] which depend upon trusted hardware to improve the chain performance. Among these approaches, Liu et al. [UNMAPPED:62] and Sanka and Cheung [W2911788238] used an on-chain approach whereas Lind et al. [W2972190608] and Das et al. [UNMAPPED:65] present an off-chain approach to scalability.\n\nThe BFT-based implementations in Blockchain can achieve higher transaction rates as compared to the traditional Bitcoin's network but it can scale to few tens of nodes due to the requirement of O(n\u00b2) message-exchanges to attain consensus on single operation among n servers. Liu et al. [UNMAPPED:62] addressed the issue of node scalability with a fast-BFT protocol and compared it with other variants of BFT protocols including zyzyyva, MinBFT CheapBFT. The core of the Fast-BFT is a novel message aggregation approach, with reduced message complexity from o(n\u00b2) to O(n), that combines hardware-based trusted execution environments with lightweight secret sharing. The message aggregation in FastBFT does not require any public-key operations (e.g., multi-signatures), thus incurring considerably lower computation/communication overhead. FastBFT further balances computation and communication load by arranging nodes in a tree topology, so that inter-server communication and message aggregation takes place along edges of the tree. FastBFT adopts the optimistic BFT paradigm that only requires a subset of nodes to actively run the protocol. Finally, a simple failure detection mechanism is used that makes it possible for FastBFT to deal with non-primary faults efficiently.\n\nSanka and Cheung [W2911788238] presented a hardware-based implementation of a caching system for Bitcoin's blockchain core using FPGA(Field Programmable gate array) with customized SHA-256 hash to reduce the load on blockchain servers and improve the scalability and throughput. The evaluation results showed an increase in throughput up to 103x when cache hits.\n\nUsing an off-chain method, Lind et al. [W2972190608] presented Teechain, a variant of Bitcoin-NG with improved throughput and latency. Teechain is based on off-chain replication with threshold secret sharing and uses a trusted execution environment, a hardware security feature in modern CPUs, as a root of trust to asynchronously process off-chain transactions. The Teechain can handle 1 million Bitcoin TPS in a 30 machine deployment which is 33x higher than the lightning network approach.\n\nTo execute reactive multi-round contracts in a cryptocurrency environment, Das et al. presented a model named FASTKITTEN [UNMAPPED:65], to allow execution of arbitrary complex SC off the chain using TEE within bitcoin/cryptocurrency environment at low cost. This prevents the SC to be executed by all users. It also increases off-chain SC execution efficiency by incentivizing honest behavior. The model is implemented using Intel SGX hardware, the result showed a block validation time of 5 seconds. FASTKITTEN supports batch execution of private user inputs that are not supported by both bitcoin and ethereum to provide faster execution of SCs with low computation cost. However, this model can run on a single TEE aka operator for the execution of SCs which adds centralization.\n\n**TABLE 7:** Hardware-assisted approaches to enhance blockchain scalability\n\n{{TABLE:tbl_07}}",
+          "citations": [
+            "W2911788238",
+            "W2972190608"
+          ],
+          "tables_in_text": [
+            "tbl_07"
+          ],
+          "citations_unmapped": [
+            "62",
+            "65"
+          ]
+        },
+        {
+          "subsection_id": "s_7_5",
+          "subsection_index": 5,
+          "subsection_label": "7.5. Parallel Processing",
+          "subsubsections": [],
+          "text": "One of the inherent limitations of blockchain is that the traditional Proof of Work (PoW) algorithm, based on solo mining, offers limited transaction processing speed and scalability. Hazari et al. [W2921390124] presented a parallel PoW approach that addresses the problem of low throughput by leveraging the benefits of parallel mining in order to accelerate the process of the traditional PoW approach without changing the basic structure of the PoW process. This is achieved by electing a manager node at every epoch to administer and control the miners within a particular block, with the target that no two miners can be assigned the same work. This approach also has a reward system and prevents the formation of forks. The approach prevents a miner with a high processing power for solving all the blocks by restricting them to act as a manager of a subsequent block to receive his reward. However, the approach is still biased with the miners having low processing power since those who have high processing power will quickly solve more blocks and have more chances to become a manager in subsequent blocks; thereby getting more rewards. Another issue is that the approach is heavily dependent upon managers to solve the current epoch. In case of failure of a manager node, a miner can still create transaction hash and nonce, but with traditional solo fashion which will consequently lead to an increase in mining time. However, the subsequent blocks will again follow the parallel strategy as the manager of the current block has been decided in the previous block. Furthermore, the benefits of parallel mining can only be achieved in the presence of multiple active miners in an epoch otherwise the approach will perform like a traditional solo PoW approach.\n\nGao et al. [W2806842189] focused on increasing throughput by simultaneous execution of smart contracts. Since most distributed ledger systems process smart contracts in a sequential manner therefore all users have to run smart contracts before its results can be accepted by the system limiting the system capable of handling a large number of smart contracts. If the smart contracts are more sophisticated then it can prevent other smart contracts from execution consuming all the computational resources. The authors addressed this issue by executing multiple smart contracts simultaneously which also increase overall throughput. This is accomplished by first dividing the smart contracts into subparts and a Sub Committee (SCom) which contains a group of users and then allowing only a committee to execute the particular smart contract. Consequently, multiple Subcommittees can be executed simultaneously. The security issue is resolved by allowing only those public keys of the user which recently involved in block generation and employing the majority voting criteria to prevent the users from controlling a SCom. The fairness in terms of incentives and workload of the users is ensured by using an ILP (integrated linear Programming) solver, but the short term fairness depends upon the even distribution (load balancing) of smart contracts on subcommittees.\n\n**TABLE 8:** Parallel processing approaches to enhance blockchain scalability\n\n{{TABLE:tbl_08}}",
+          "citations": [
+            "W2921390124",
+            "W2806842189"
+          ],
+          "tables_in_text": [
+            "tbl_08"
+          ]
+        },
+        {
+          "subsection_id": "s_7_6",
+          "subsection_index": 6,
+          "subsection_label": "7.6. Redesigning",
+          "subsubsections": [],
+          "text": "In addition to the approaches discussed earlier, a considerable number of efforts have focused on achieving scalable blockchains by strengthening its core components such as the consensus protocols, data storage and management capabilities etc. We present a summary of such approaches below.\n\nIttay Eyal et al. [UNMAPPED:68] proposed Bitcoin-NG, a variant of Bitcoin consensus algorithm where the leader is selected for every epoch allowed to serialize state machine transaction until the next leader election. Bitcoin-NG's bandwidth is limited only by the capacity of individual nodes (as higher throughput does not generate key block forks) and its latency is limited by network's propagation delay. The leader election is forward-looking which ensures continuous transaction processing in contrast to Bitcoin where the leader is in-charge of serializing only history. The protocol generates two types of blocks: key blocks for choosing a leader and micro blocks for ledger entries. Due to the frequent generation of microblocks, the short fork may occur on almost every leader switch which is resolved by poison transaction that contains first pruned block as proof of fraud invalidating the fee sent to fraudulent leader generating the fork. Although evaluation results show improvements in fairness and latency, key block forks do occur which can be resolved by the heaviest chain policy. Secondly, varying block sizes increases transaction frequency but increases block verification and propagation time. The Bitcoin-NG is still a PoW concept and is susceptible to selfish mining if the attackers are more than 25% of the whole network. Moreover, there are some issues in incentive policy highlighted by Yin et al. [W2807917085] including that the leader can enhance its revenue up to 100% of the fee by trying to mine the key block himself. Furthermore, a malicious elected leader may perform a DoS attack by not publishing micro-blocks.\n\nZang Wang [W2808185912] mainly addressed the issue of fast convergence across a large number of nodes by using a voter model and the Ising-Glauber model. The Majority vOting Consensus Algorithm (MOCA) is based on cellular automata which is a rule-based computational machine to perform an action. It employs a probability theory approach i.e. voter model which improves the consensus scalability by allowing adjustment of a voter's opinion based on the opinion of their neighbors and Ising-Glauber model which is based on spin (listening to neighbors). The experiments show that with 1000,000 nodes where each node has only 10 neighbors, the system will converge in a few iterations. However, the state where every node converged to the correct state is not possible if the adversaries are more than the number of the neighbor of each node, since there is a chance that an honest node is surrounded by adversary neighborhoods.\n\nThe work of Xinxin Fan and Qi Chai [UNMAPPED:70] focuses on addressing the issue of sidechains scalability by allowing a significant number of nodes to actively participate in the consensus process for large-scale IoT systems. Traditional DPOS consensus limits block production to limited partially trusted nodes. The Roll DOPS consensus consists of epochs and sub epochs and uses an Ethereum based community voting process for selection of block producers. The potential block producer attracts community members to vote for him via a campaign website offering available resources and rewards. N block producers are randomly chosen through deterministic random bit generator (DRBG) for the first epoch. These block producers then generate short-lived epoch specific private key shares to sign the PBFT process with ECDSA and BLS threshold schemes with Pederson's DKG's approach to speed up the PBFT process. The nodes which are not selected as block producers for the root chain also has an option to be selected as block producers of side chains. This auto-scaling process enables a significant number of nodes to participate in the consensus process. Although, the approach invites nodes to become block producers for root chain and side chains, but in IoT system majority of devices have low processing power and storage capacity, which may prevent the vast majority of devices to remain idle and not actively participate in the consensus process.\n\nThe peer to peer nature of the blockchain requires each client to download and maintain blockchain up to date therefore resource constrained devices cannot fully participate except for creating transactions. Dennis et al. [W2591964245] focused at addressing this challenge by allowing the data to be stored for only a preset period and empty blocks known as spent blocks which can be used as input to new blocks will automatically be deleted. Consequently, a mining node is no longer required to maintain the history of blockchain from the genesis block. All the miners, on a pre-set time every day, will add a checkpoint and remove all the blocks older than 30 days. The authors claim that this technique improves scalability by allowing the consistent size of 4.5GB for Bitcoin's blockchain irrespective of the network size, which is significantly smaller than its current size, without changing the properties of the traditional blockchain. However, the deletion process of spent blocks may add a delay in mining new transactions or halt the transaction at that time.\n\nMin et al. [W2587444899] presented the adoption of Blockchain in e-commerce specifically addressing the scalability barrier in terms of throughput in comparison with Bitcoin's network. The authors proposed addressing this problem by using a permissioned Blockchain framework (PBF) to create a public, autonomous e-commerce ecosystem. PBF partitions the network into subcommittees by using a random partition algorithm which can also limit dishonest peers. Each subcommittee has linear membership in the total computational power and runs an inner consensus protocol to process a separate set of transactions and blocks. The special committee agrees on peer's blocks, consisting of a set of valid transactions. Another special committee is designated to write peer's blocks into a global block so that each peer can identify number of transactions or blocks belonging to each peer at any point in history. Peer Inner Blockchain Protocol (PIBP) is used to improve throughput and support instant transactions. E-commerce Blockchain architecture keeps unlimited transactions without sacrificing higher credibility.\n\nAnother approach, named Trustchain, presented by Otte et al. [W2752019525] is focused at redesigning a sybil-resistant blockchain that is scalable in terms of transaction throughput. The authors use an agent-based approach that mainly focuses on trust and ensures the contribution of every agent which has taken resources with a decent transaction throughput. This is accomplished with the agents that can create their own genesis blocks and works in parallel powered by a Sybil resistant algorithm NetFlow which ensures the contribution of every agent that has taken resources. To increase the resistance against tampering double-spending attacks, each block also refers to a block in the chain of the counterparty. This ensures that each block has two incoming and two outgoing pointers. Evaluation showed an improvement in TPS for first 1000 transactions however with the subsequent increase in capacity of database, the insertion overhead also increased. This is because each insertion necessitates a DB query for fetch evidence about the latest block of a particular agent, which slows down the transaction rate.\n\nWith the traditional PBFT, instant consensus finality can be achieved, but this is at the cost of limiting the number of nodes due to the broadcast nature of the three-phase protocol. Fan et al. [UNMAPPED:74] proposed an improved version of PBFT with short-lived cryptographic keys to speed up the consensus process. PBFT experiences computational overhead which slows down consensus process due to round-based broadcast nature in which all nodes verify multiple received signatures from their peers. The authors addressed this issue by implementing short-lived cryptographic keys and a BC-based distribution approach to periodically update those keys. The efficient signature verification process has a key role in improving the scalability and computational cost of PBFT. This is accomplished by implementing the digital signatures at medium and low-security levels with periodic short length key pair update which has less communication overhead that enables faster verification process to improve the node scalability without compromising the transaction throughput.\n\nIn traditional blockchains such as Bitcoin, in order to participate in the formation of new blocks, a local copy of the global state of the system is required at the beginning. For instance, the space required to store Bitcoin's network is more than 150GB. Consequently, the participation of new members will be delayed. Ehmke et al. [UNMAPPED:75] presents a framework named Proof of Property (PoP) to address the storage issue by deriving the concept from Ethereum to keep the global state of the system in the current block and include the relevant state of the system in each transaction for efficient verification. Therefore reducing the space required to store the complete system. The proposed framework uses Markle Patricia Tree (MPT) and is based on the proof that in each transaction the input addresses owns enough coins to fulfill the stated transaction. Although the framework saves the chain storage space, the authors illustrated some of the issues that require further research, including the ability of PoP to keep only one state which is unspent transaction balance. Furthermore, the author also highlighted the importance of a missing mechanism to avoid the formation of forks especially in a situation where different clients could be in a different state. The drawback is that transactions already being processed might become invalid if the block they are included in, is in the part of the forked blockchain that will be dismissed.\n\nParth Thakkar [W2806281946] focuses on the optimization of various operations of hyperledger fabric to achieve a high throughput. These optimizations include crypto-operations serial validation of transaction in a block and multiple REST API calls to CouchDB to achieve maximum block size with low latency. The optimization consists of MSP cache, which uses a hash map as a key to prevent the decentralization of serialized identify and an ARC algorithm for cache replacement. This reduces crypto-operation and call-stack-depth. The optimization in the Validation system chaincode (VSCC) is by introducing parallel VSCC validation of a block through a configurable number of worker threads per channel which validates 1 transaction. This results in a reduction in the latency of VSCC from 300 to 30 ms and TPS of 950 for the block size of 30. The bulk-read/write during MVCC validation commit for CouchDB allows to cut down the number of REST API calls. With all three optimizations combined a TPS of 2250 is achieved. These optimizations have also been adapted in Hyperledger Fabric v1.1. The authors admit that they did not consider the network as a bottleneck, however, the nodes dispersed in diverse geographical locations with different arrival rates may impact the overall transaction rates.\n\nThe Cash Fault Tolerance (CFT) or Byzantine Fault Tolerance (BFT) based consensus algorithms usually use voting-based consensus in permissioned blockchain. They have a message complexity of O(N\u00b2) for validation of a transaction and limit the participation of a number of validator nodes. Since the immutability of blockchain is dependent on the phenomenon of excessive replication of data and therefore, limiting the number of nodes reduces the attack surface for an adversary trying to manipulate the ledger. Gupta et al. [UNMAPPED:77] proposed a framework to increase block generation rate by proposing a consensus algorithm for permissioned blockchains. Proof of win (PoWin), that is based on a knockout tournament between two players. The colosseum formulates a ring network and a two-step process. First, to find the validator node that can issue a PoWin certificate to a winner node in a knockout game. Second, a ring-based DHT keeper to store the results. The winning nodes propose a new block for blockchain and the keeper can verify matches. This elimination process amongst two opponents reduces the message complexity and allows the protocol to scale. However, the protocol heavily relies on validator node to control, manage, and verify the knockout results. A biased validator can easily drop a tournament by foreseeing that an ally is losing. Moreover, the framework lacks a mechanism to manage forks i-e simultaneous block generation in the same round.\n\nFurthermore, Wang et al. [UNMAPPED:78] presented a blockchain-based model for metering in industrial plants. The implemented approach guarantees security, trustworthiness, and immutability in metering systems via blockchain. It also deals with reducing complexity from O(n\u00b2) to O(n) by using a novel approach based on BFT. A two-layered hierarchical structure chronologically chained by a hash, an independent local chain for each industrial plant based on BFT protocol which prevents adversaries to change private ledger while enforcing crypto-primitive messages and threshold signatures to reduce communication messages within the individual plant to improve scalability. This is done by using a short signature scheme, Boneh-Lynn-Shacham (BLS), based on Diffie-Hellman assumption on certain elliptic and hyper-elliptic curves which significantly reduces the communication complexity in a consensus process. Secondly, A cloud-based state chain is used to aggregate all the data blocks of individual chains in an epoch. However, the design relies on the efficiency and trustworthiness of cloud infrastructure, and the performance of individual chains will directly have an impact on the aggregated state chain.\n\nKalodner et al. [W2888947553] presented an incentive-based model named Arbitrum to execute SC off the chain to cope with the limitations including privacy and scalability of the Ethereum platform. On contrary to traditional systems, the authors propose implementing SC as a virtual machine with a set of managers who maintain the VM state with only one manager chosen to control the VM. The validator nodes can accept and track the hash of the state endorsed by all managers. An incentive/penalty mechanism is employed by the verifiers, to cope with the disagreement among managers, by verifying the proof submitted by manager nodes. However, the irrational behavior of manager nodes may result in imposing an extra burden on verifier nodes.\n\nTeutsch and Reitwie\u00dfner [W2967439377] presented a model (TrueBit) to securely execute SC as well as reducing redundant computations of network nodes used in Ethereum by outsourcing computation with the incentive mechanism in place to motivate outsourcing parties and to guarantee the correctness of the solution. The model also consists of a network of trusted verification nodes, called judges, which has been occasionally forced to inspect the task via incentivized interactive verification game and submit incorrect solutions for further resolution of the occurrence of any dispute in the solution. The dissociation of verification protocol for mining nodes enables improvement in the transaction throughput without facing verifiers problem. However, the verification game introduces additional overhead on verifiers as well as requiring trusted verifiers to perform small computations to find the correctness in the solution. Moreover, it requires an attractive incentive mechanism for the verifiers to find the bugs in the solution. Furthermore, it also assumes that the attackers are rational with limited financial resources and cannot subvert the underlying consensus with at least one verifier present for checking each task.\n\nGorbunov et al. [UNMAPPED:81] presented an efficient vector commitment scheme for SC which is based on aggregating proofs across multiple commitments. It also improves propagation bandwidth for transmission of blocks by reducing the proof size. The small commitments and proofs generated by users in the point-proofs scheme allow a third party (block proposer) to aggregate multiple proofs concerning different commitments into a single proof. The scheme is especially focused on stateless block validation of SC for reducing its storage requirements. However, the model still requires 4.5GB of storage for 108 accounts which may lead to delays especially in the sharding scenario where frequent shard switching by a node requires downloading part of such a large state each time.\n\n**TABLE 9:** Existing efforts to redesign blockchain to enhance scalability\n\n{{TABLE:tbl_09}}",
+          "citations": [
+            "W2807917085",
+            "W2808185912",
+            "W2591964245",
+            "W2587444899",
+            "W2752019525",
+            "W2806281946",
+            "W2888947553",
+            "W2967439377"
+          ],
+          "tables_in_text": [
+            "tbl_09"
+          ],
+          "citations_unmapped": [
+            "68",
+            "70",
+            "74",
+            "75",
+            "77",
+            "78",
+            "81"
+          ]
+        },
+        {
+          "subsection_id": "s_7_7",
+          "subsection_index": 7,
+          "subsection_label": "7.7. Summary of Existing Literature to Advance Scalable Blockchain",
+          "subsubsections": [],
+          "text": "This section presented the state-of-the-art approaches that are focused at enhancing different aspects of scalability in the blockchain. It is evident from the literature that due to the adoption of blockchain in diverse scenarios, research community has made considerable efforts to devise solutions to address scalability challenges including throughput, storage, latency, and node/network size. These approaches are either focused specifically for on/off-chain or can be applied in both scenarios. Off-chain approaches can be further categorized into PCNs and Sharding which improve scalability by committing the transactions off the chain. Further, approaches such as BDN and parallel processing propose on-chain improvements whereas hardware-assisted approaches and those redesigning the consensus/data-structure are applicable to both on and off chain solutions to enhance the scalability in various scenarios. Key observations derived from this section are:\n\n- Sharding has emerged as one of the promising solutions to improve chain performance. The increase in the number of shards in the blockchain network scales the transaction throughput linearly without compromising the decentralized nature of the blockchain. These approaches can be applied to permissioned as well as permissionless scenarios. Many sharding solutions including Elastico [W2535104337] and Omniledger [W2794533297] rely on trusted setup and use UTXO with the main focus on security. They can tolerate up to n/4 malicious adversaries and have a decent transaction throughput but this is achieved on compromising latency. On the contrary, rapid-chain [UNMAPPED:49] has better throughput whilst significantly lowering the latency and storage. Moreover, it does not rely on trusted setup and can tolerate up to n/3 adversaries. Other sharding solutions, such as [W2944812228] used trusted hardware to improve performance under non-cryptocurrency load. However, sharding solutions also have various issues including low byzantine resiliency, increased latency, time-consuming bootstrap process, the formation of forks, security and efficient load balancing mechanism which need further research.\n\n- In recent years, the concept of PCNs was adapted by both bitcoin and the etherum community as Lightning Network [UNMAPPED:39] and Raiden Network [UNMAPPED:41] respectively to improve the overall blockchain's throughput. The PCNs are more suitable in scenarios like a bank to bank, bank to customer, and customer to customer within a bank. However, these PCN-based micropayment systems have several security and privacy issues which limit their widespread adaptation in the diverse application domains. The solution like BOLT [UNMAPPED:42, UNMAPPED:43, UNMAPPED:44, UNMAPPED:45, UNMAPPED:46] provides anonymity but lacks cryptographic primitives for multi-hop transfers. [W2947736742] tries to improve the security by using cryptographic primitives but primarily focusing on wormhole attacks. Moreover, the concept of micropayments via PCNs necessitates both parties to always remain online for committing transactions that make them vulnerable to attacks. Furthermore, the prolonged downtime of any party may result in the expiration of the waiting time for channel closure. This may lead to freezing of funds or a situation where a party can fraudulently pocket the funds and close the channel while other is away. This requires a strong mechanism where a party can prove a fraudulent activity to impose a penalty on the other party and an efficient balance planning mechanism to initially predict and freeze a certain amount that is required by the channel.\n\n- As blockchain overlays public network, an efficient network infrastructure is another key to blockchain scalability. The use of cut-through routing, such as proposed in [UNMAPPED:59], significantly improves the blockchain throughput. However, this requires a trusted setup due to the inability of segregating legitimate and malicious traffic.\n\n- One of the limitations in wider adoption of blockchain is the storage requirements to join the network. For instance, a node aiming to join the Bitcoin blockchain has to download the existing chain/ledger which currently is more than 260GB. In this context, cloud storage [W2911211218] can reduce the burden from mining nodes however it ads centralization thereby introducing single point of failure.\n\n- The use of efficient and/or trusted hardware with higher processing power, storage, and memory can greatly improve the performance in terms of throughput and latency of blockchain [W2911788238, W2972190608, UNMAPPED:62]. However, its adaption in public blockchain requires an incentive mechanism to attract the miners to use resourceful hardware.\n\n- Although parallel mining is proposed to increase throughput but the efficiency is directly proportional to the number of active miners in an epoch. Such approaches, for instance [W2921390124], require an efficient mechanism for managing the task-assignment to remove the bias against the miners with low processing power. Furthermore, the single managing entity in an epoch also increases the mining time in case of failure of a manager node.\n\n- The blockchain that has message complexity in the order of O(n) is considered as scalable. Reduction in message propagation quantity and complexity has significant positive effects in improving the throughput of a network [UNMAPPED:78].",
+          "citations": [
+            "W2535104337",
+            "W2794533297",
+            "W2944812228",
+            "W2947736742",
+            "W2911211218",
+            "W2921390124"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "49",
+            "39",
+            "41",
+            "59",
+            "78"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "With increased use of blockchains in diverse application domains, its scalability has emerged as a significant challenge. Consequently, a number of efforts have been made to address this challenge utilizing different approaches. In this section, we present a critical review of such approaches and organize them into different categories to aid readability and focus.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "8. Applications of Scalable Blockchain",
+      "subsections": [
+        {
+          "subsection_id": "s_8_1",
+          "subsection_index": 1,
+          "subsection_label": "8.1. Summary of Application of Scalable Blockchain",
+          "subsubsections": [],
+          "text": "Blockchain was initially proposed as a decentralized cryptocurrency, but with the evolution of DLTs and the arrival of smart contracts, this technology has witnessed a great expansion and now been applied to non-cryptocurrency domains including the health sector, businesses and finances, identity management, supply chain management, national/consortium databases, asset management, IoTs, and other cyber-physical systems. This section summarized existing literature with regards to applications of blockchain where blockchain is applied to increase the scalability of the existing system, a summary presented in **TABLE 10**. Especially with the exponential growth in IoT devices, and wide adoption of IoTs by domestic as well as commercial users, the researchers are attracted towards adaption of blockchain in the resource-constrained IoT scenarios to achieve enhanced security and decentralization. However, with the continuously increasing number of IoT devices, scalability of blockchain-based solutions for IoT systems becomes a challenge. Key observations found in this section are:\n\n- Blockchain has been applied to diverse domains (see **TABLE 10**) to improve the scalability of the existing systems. However, blockchains platforms such as Hyperledger, Ethereum, and Multichain offer different strengths and services which may not be suitable for all application types. For instance, the consensus algorithms supported by blockchain platforms vary which has an impact of the type of applications where a consensus algorithm is feasible. Therefore, blockchain platforms should not be considered as a out of the box solution and appropriate configurations may be required to achieve optimum performance.\n\n- Although blockchain offers fundamental benefits such as tamper-proof storage and decentralization, scalable blockchains introduce an additional dimension into the estimation of efficiency i.e. the DSS trilemma including decentralization, security, and scalability. Therefore, application design should take into account the trade-off between security, decentralization and scalability to achieve optimum solution.\n\n- The integration of IoT with blockchain [W2734854252, W2606467208, W2793346081, W2816372331, W2895570089, W2876503617, W2921052805] requires adjustments in the blockchain architecture to achieve better scalability. For instance, an efficient gateway, external storage, or delivery network can reduce the workload from resource-constrained IoT devices. However, this comes at the cost of partial or full centralization. Furthermore, recent efforts in adoption of DLTs within IoT have explored alternatives to blockchains such as Tangle [UNMAPPED:97] with IOTA [W2796334178] one of the widely used technologies.",
+          "citations": [
+            "W2796334178"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "97"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In addition to innovative methods to enhance scalability of blockchains, a number of efforts in existing literature are focused at application-specific measures to achieve scalable decentralization applications using blockchains. These applications leverage fundamental properties of block such as tamper-proof storage and decentralized architecture to achieve application function however adopt specific measures to improve the scalability required by the applications. For instance, Ruta et al. [W2734854252] presented a Service Oriented Architecture (SOA) that adds a semantic blockchain layer with the help of smart contracts for an efficient resource discovery process that includes registration, discovery, selection, and payments implemented in Hyperledger Iroha for IoT based CPS. Similarly, Dorri et al. [W2606467208] presented a centrally managed blockchain framework to optimize the energy consumption and distributed trust to increase BGR for a smart home IoT environment.\n\nOscar Novo et al. [W2793346081] also focused on the adoption of blockchain in IoT where scalability is a problem for managing access to billions of constrained devices in the IoT network and centralized access control systems lack the ability to deal with increased load efficiently. For IoT based on centralized models, single centralized access control server might become a bottleneck in blockchain when access control queries and updates are frequent. The approach uses a concept of management hub nodes to increase the latency of the overall IoT-based blockchain network.\n\nMost identity and access management solutions are centralized and require metadata exchanges which is either federation-based or manual. The central server maintains all the metadata of Identity Providers (IdP) and Services Providers (SP) into a centralized database. The copy of this database with signatures, which are usually valid for a few days, is communicated to all Federation Members (FM). Consequently, requiring all FMs to query the server for the updated version of metadata frequently. If the validity of the metadata signature is set too long, this may leave the SPs with the outdated information. Grabatin et al. [W2816372331] addressed this challenge by implementing Hyperledger Fabric based decentralized blockchain technology in managing metadata which has an intrinsic feature of instant ledger updates and reliability. The authors achieved Hyperledger-based solution which contains a feature that only allows parties that are part of the transaction to download metadata, consequently improving overall storage efficiency. This is done through a two-step process, including provider registration via chaincode deployed by a federation and micro federation creation. After SP registration, the clients can issue proposals for the creation of micro federation which contains all the required SPs. If all the SPs approve this event, the metadata of all SPs are integrated into the peer's ledger of the network in the form of a byte-array that can only be downloaded by the SP belongs to the same micro federation. This consequently allows different communication endpoints for different federations and allows SP to use less storage and requires less computational power to process the metadata. Although the solution improves efficiency compared to traditional setup, the performance of the system depends upon appropriate configuration of block time (s) in Hyperledger and SP's reaction time (r).\n\nBiswas et al. [W2895570089] mainly focused on the integration of blockchain with IoT. Traditional blockchains such as Bitcoin with a transaction rate of up to 7 TPS are primarily not designed for high transaction rates. However, IoTs connect billions of heterogeneous resource-constrained devices with requirement for exponentially higher transaction rate which is not supported by Bitcoin structure. The authors have filled this gap by designing an architecture that uses a concept of associating each IoT device with an organization via local registration process and a certification authority (CA) is used to authenticate each node to achieve better TPS and ledger scalability.\n\nLi et al. [W2876503617] presented a distributed storage for IoT based systems with security and accountability to reduce the burden from the central cloud server. The scheme consists of edge computing which helps IoT devices performing complex cryptographic computations at network edges. It also helps in collecting and forwarding data to DHT storage. The blockchain authenticates the read-write requests to the DHT by working as a trusted third party. To ensure the protection of the credentials, certificate-less cryptography is used that consists of a Key Generation Center (KGC) to create a partial private key based on the identity of the user which in turn will be used by the user along with a secret value for the establishment of a private key. This also avoids the key escrow problem in identity-based encryption. The proposed model can be applied to various application domains including smart grids, smart metering, healthcare, etc. Data in this scenario can be traded by the owner. For instance, a user can sell ECG data to a research institution by posting a transaction via blockchain. However, the design heavily relies on the scalability (throughput) of the system to efficiently utilize a decentralized storage mechanism. Moreover, the authors assume that communication between the edge servers and IoT devices is secure. Furthermore, the scheme still has security issues as there is no mechanism to cope with majority takeover attacks.\n\nPuthal et al. [W2921052805] presented a lightweight trust-based consensus mechanism Proof-of-Authentication (PoAh) for edge computing and resource-constrained IoT devices to reduce the latency up to 3 seconds which is in the order of 10 minutes in traditional PoW approach. The model uses EIGamal encryption for public and private key generation. Initially, the trusted miners are deployed as validators. The others can participate in mining with zero trust value, upon completion of every successful block, the trust value increases. A trusted mining node, based on asymmetric cryptography, authenticates a block signature via the public key of the source. It also checks the MAC address before broadcasting the block to the network with PoAh ID. The framework is implemented in a small scale environment using simulation in Python as well as on testbed using Raspberry Pi. Although the proposed mechanism reduces latency in small scenarios, its applicability in large scale scenarios is still required for the adaptation of this mechanism in real-world applications.\n\nHari and Lakshman [UNMAPPED:91] presented a blockchain-based framework for securing the Internet BGP and DNS infrastructure. Currently, they both are dependent upon PKI which can be compromised by APTs (Advanced Persistent Threats), a tamper-resistant blockchain-based resource management framework prevents a single malicious adversary to subvert the system. In this internet blockchain framework, the DNS management and registry entities like Ases act as peers with a private key associated with its internet blockchain address. Multiple genesis blocks are created within each registry that consists of transactions which contain the record of transfer of resource form its registry to internet entities. These records are then published into internet blockchain to provide an initial resource allocation state. These records are continue to be published but can not be revoked by a single entity. However, the blockchain has inherent scalability problems such as BGR and throughput which required to be addressed. Moreover, it also requires an incentive mechanism for global deployment and to enable a tamper-resistant internet.\n\nXu et al. [W2278867595] elucidate how the inherent properties of a blockchain can improve the software quality attributes including security, scalability, and sustainability by employing a distributed architecture as, an alternative to shared centralized data storage, in an untrusted environment. However, the validation (mining) process may increase the overall communication latency. It also requires an efficient strategy to decide which data is required to be stored on or off the chain due to the storage limitation of the current blockchain.\n\nA Blockchain-based collaborative and transparent V2X communication and accountability mechanism for misbehavior detection and revocation without requiring a trust is proposed in [UNMAPPED:93]. The scalability is achieved through a hierarchical consensus in which clusters are created dynamically to provide consensus decisions to misbehavior authorities via Road Side Units (RSU), which are fixed and have known identities therefore can be employed with a BFT based consensus. However, the performance of BFT based consensus starts degrading upon an increase in the number of nodes. To resolve this issue, the BFT consensus is applied to smaller groups of RSUs that reside in the same geographical location. The Misbehaviour authorities use the decisions of these small clusters to maintain the blockchain state. However, the framework requires vehicles and RSUs to have enough processing resources to implement a consensus mechanism. Moreover, an empirical study is also required to evaluate the performance of hierarchical consensus.\n\nAnother application framework, presented by Malik et al. [W2903302231] is the applicability of permissioned blockchain in the food supply market to promote food provenance. The framework ensures data availability, ensures the security of provenance information, and provides throughput scalability. This is done by creating agreed-upon rules for accessibility of data by a pre-trusted consortium of all business entities and participants and a blockchain technology vendor that consists of a hardware-software solution to manage and control the main-chain. A sharded architecture based on geographical zones is used to provide the transaction scalability. Each shard has a set of participants and dedicated validators to mine and maintain the local chain and lottery-based mechanism to select a cluster head. A global validator node is also employed which acts as a query manager to access the data based on access rules. The framework is generalized and can be applied to any supply chain scenario. However, the framework is based on strong assumption that trust is maintained through a central Certification Authority (CA).\n\nBloom and Farahmand [W2896120042] presented a study of the applicability of the Ethereum platform for small electricity producers in terms of increasing client base and trading frequency (Simulation in Python). The off-chain solution of heterogeneous Multi-Blockchain communication and provides routing management and message transfer with atomicity and consistency parallel running of the transaction to increase throughput (TPS). The model consists of four layers, the basic layer contains network, storage, sandbox, and DB management modules and serves as the foundation of the system. The blockchain layer consists of a block data structure, consensus, and encryption algorithms. The multi-chain communication layer is responsible for overall routing management and a cross-chain protocol to allow secure communication among various blockchains. The topmost layer is the application layer which contains services such as smart contracts, multiledger queries, and data opening methodologies. The core of this architecture is the router nodes, which maintain the detail of different blockchains and with the help of a unified transaction format for a standard cross-chain transaction to route information between multiple blockchains. The experiments were conducted to evaluate the performance, which shows that the TPS is increased with an increasing number of shards but decrease with an increase in the number of cross-chain transactions. Moreover, the experiments show that the Ethereum blockchain performs better for 600 participants with a trading frequency of 5 minutes per transaction but it is inversely proportional to the number of participants with higher trading frequencies furthermore the experiments are only based on Ethereum implementation and performance of other Blockchains are not studied.\n\n**TABLE 10:** Applications of scalable blockchains\n\n{{TABLE:tbl_10}}",
+      "citations": [
+        "W2734854252",
+        "W2606467208",
+        "W2793346081",
+        "W2816372331",
+        "W2895570089",
+        "W2876503617",
+        "W2921052805",
+        "W2278867595",
+        "W2903302231",
+        "W2896120042"
+      ],
+      "tables_in_text": [
+        "tbl_10"
+      ],
+      "citations_unmapped": [
+        "91",
+        "93"
+      ]
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "9. Approaches Analyzing Blockchain Scalability",
+      "subsections": [
+        {
+          "subsection_id": "s_9_1",
+          "subsection_index": 1,
+          "subsection_label": "9.1. Summary of Approaches Analyzing Blockchain Scalability",
+          "subsubsections": [],
+          "text": "The section presented (See **TABLE 11**) some of the empirical / theoretical studies analyzing the scalability of blockchain that we found during our survey. Various comparative studies including [W2798342357, W2798342357, W2899800109, W2893373097], encompassing different blockchain technology aspects are analyzed.\n\nThe results from the simulations, real-time and theoretical analysis revealed the following key observations:\n\n- An increase in block size results in increased throughput, however it should be well configured since block size directly affects the propagation time. For instance, the study by Croman et al. [W2511446761] revealed that, a Bitcoin network can achieve a TPS of 27 TPS in a scenario where block size does not exceed 4MB with a latency of \u2265 12 seconds.\n\n- Number of transactions directly affects the verification process, network overhead, and latency [W2767579549]. Consequently, in systems with a large number of transactions, appropriate mechanisms should be adopted to address the impact of high transaction numbers on the overall performance of the blockchain.\n\n- Network optimization or the use of efficient network hardware can be used as an approach to increase the latency of a blockchain network. Such delays can also introduce vulnerabilities such as transaction malleability within blockchain with the potential to compromise blockchain state [W3008668298].",
+          "citations": [
+            "W2798342357",
+            "W2798342357",
+            "W2899800109",
+            "W2893373097",
+            "W2511446761",
+            "W2767579549",
+            "W3008668298"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "A number of efforts have been made to identify the scalability challenge within blockchains. Such efforts have focused at analyzing blockchains with respect to specific parameters such as block generation rate, transaction processing speed, and block size to understand and highlight their role in achieving scalable solutions using blockchains. Additionally, such efforts also highlight potential of blockchain to achieve scalable solutions through appropriate configuration of blockchain parameters. A summary of efforts considered here is presented in **TABLE 11**.\n\nIn particular, Croman et al. [W2511446761] presented a study to characterize the Bitcoin network performance and suggests improvements in its scalability. The results showed that with a 10-minute BGR of the traditional Bitcoin network, a maximum of 4MB block size is practical to increase the throughput up to 27 TPS compared to the current 7 transactions per second. Furthermore, the latency or block interval must be 12s or higher to achieve full network bandwidth utilization. The authors also suggested that a fundamental protocol redesign is essential to attain the scalability of the decentralized Bitcoin network which can be achieved through use of bespoke consensus algorithms such as Proof of Stake.\n\nAniello et al. [UNMAPPED:100] mainly address the challenge of data integrity while also eliminating DoS attacks with BFT implementation and a DHT based implementation to improve scalability. The model is a two-layered architecture implemented on Faas scenario, the first layer consists of permissioned Blockchain and employs a consensus algorithm based on leader rotation approach at each round according to deterministic fair policy and defines the ordering of transactions. Each federation member with one miner having database ledger replicas maintains the integrity and the second layer, with permissionless POW, ensures the integrity of the first layer by storing the hashes of the first layer via an anchor manager. If a miner tries to alter the logs then the difference of hashes of both layers reveals this malicious activity. The scalability of the system is improved by using a DHT-based sharding solution in which a miner only handles specific subsets of transactions thereby making the system scalable.\n\nKhan et al. [W2989439229] presented an empirical study for permissioned as well as permissionless blockchain to determine the impact of various scalability aspects including throughput, block size, and BGR for an e-voting system. The authors used Multichain platform as blockchain fabric with additional nodes with java based clients included for permissioned blockchain. In the permissionless scenario, with 10 voters and the BGR and block size is small, the transaction rate of 266.6 TPS is achieved. However, the average transactions per block is recorded to be two which is due to the small number of voters and low BGR. Increasing the block size results in increasing the number of transactions to be handled; however, increase in BGR has lesser impact on overall transaction arrival and confirmation. In the permissioned scenario, with one client, stable throughput is achieved. However, as the number of concurrent clients increases, the network latency also increases, which results in delays and mining of empty blocks, this is to keep the blockchain live to maintain the pre-set BGR but at the cost of increasing workload on the master node.\n\nBen\u010di\u0107 and \u017darko [W2798342357, W2798342357] conducted a comparative study focused at evaluating two types of DLTs i.e. blockchains and DAGs. Specifically, the study considered Bitcoin and Ethereum as blockchain and nano as DAG DLT implementation comparing them with respect to various properties including data structure, consensus, ledger size, and transaction throughput. The paper also highlighted that the challenge of scalability is not limited to blockchains and is indeed applicable to other types of DLTs such as DAGs. It also highlighted approaches that are used to achieve scalability in both DLTs including block size increase, PCNs, nested chaining and sharding in blockchain and coupling network usage with transaction verification, so that transactions are managed by each client to be able to use network resources for scalability in DAG-based DLT.\n\nDennis and Disso [W2893373097] presented a comparative study of the scalability of two of the most valuable blockchains: Bitcoin and Ethereum, concerning historical data. On contrary to Ethereum, which requires chain state data, the blockchain requires full chain download in order to participate as a full node in the network making it more towards centralized favoring only resource-full entities to be able to participate. Download time for full blockchain for both network is calculated which results in the need for commercial hardware to participate in the network as a full node. The study also shows that the Bitcoin storage increases almost with the constant rate whereas Ethereum is facing exponential growth in chain size due to the drastic increase in transactions per day. The authors' emphasis on temporal blockchain [W2591964245] as a potential solution to reduce the chain size while maintaining the increasing number of average throughput per day.\n\nThe paper by Hao et al. [W2946395961] proposes BlockP2P that optimizes the P2P network topology to achieve improvements in latency and node scalability. The comparative results of BlockP2P with traditional Bitcoin and Ethereum network in a simulation environment show significant improvement in the efficiency of the proposed approach. The approach reduces the latency up to 90% and has better node scalability with respect to Bitcoin and Ethereum.\n\nOscar Novo [W2899800109] presented a comparative study of the proposed decentralized Access Management System (AMS) [W2793346081] with traditional AMS intending to gain an understanding of the scalability. Since the scalability of traditional access management systems depends on a single server while decentralized management implementation can handle several Management Hubs at the same time and an unlimited number of nodes in the blockchain network. The simulation results favor horizontal scalability with significant scaling advantages of the proposed approach over traditional blockchain scenarios by distributing load among different IoT devices called management hubs, however, the IoT devices need much more transaction rates, this requires optimization in the proposed techniques.\n\nGoswami et al. [W2767579549] presented the real-time and simulation-based analysis of various scalability bottlenecks such as block size, block interval, network latency, and transaction cost. The study identified that an increase in the number of transactions will lead to an increase in confirmation time, network overhead as well as increased latency and throughput. Further, the authors identified that the transaction fee plays an important role in deciding a transaction's confirmation time. Specifically, the higher fees will increase the probability of less confirmation time. The simulation results also show that confirmation time decreases when the number of transaction increases but at the cost of increasing latency. Furthermore, increased block size to include more transactions will efficiently increase the transaction load as well as the throughput. In the current Bitcoin system, the block size is fixed at a cap of 1 MB. If an increase in efficiency is desirable, this seems like a reasonable claim but too much increase in block size will increase propagation time.\n\n**TABLE 11:** Approaches analyzing blockchain scalability\n\n{{TABLE:tbl_11}}",
+      "citations": [
+        "W2511446761",
+        "W2989439229",
+        "W2798342357",
+        "W2798342357",
+        "W2893373097",
+        "W2591964245",
+        "W2946395961",
+        "W2899800109",
+        "W2793346081",
+        "W2767579549"
+      ],
+      "tables_in_text": [
+        "tbl_11"
+      ],
+      "citations_unmapped": [
+        "100"
+      ]
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "10. Open Issues and Challenges",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The emergence of scalability as one of the primary challenges concerning blockchain has drawn significant attention from the research community. The widespread adoption of blockchain technology in financial as well as non-financial sectors has a profound role in this and necessitates methods and mechanisms to boost horizontal as well as vertical scalability. Increased throughput, efficient storage mechanism, and low latency are the most desirable attributes to scale a blockchain to large number of nodes and clients with minimal performance degradation. Several approaches have been proposed to achieve scalable blockchain applications keeping in view the trade-off between the most desirable but diverse DSS (Decentralization, Security, Scalability) trilemma. Without completely addressing the scalability challenges, blockchain cannot reach its true disruptive potential. However, our analysis of state-of-the-art efforts highlights several limitations of these efforts which require further efforts from the research community. We summarize the key research challenges to achieve scalable blockchains below.\n\n- Sharding is one of the most widely adopted approaches to enhance blockchain scalability. Various sharding-based approaches including Elastico [W2535104337], Omniledger [W2794533297], and Rapidchain [UNMAPPED:31] are proposed to achieve low latency, high throughput, storage scalability, and Byzantine fault tolerance. Of these approaches, Rapidchain emerged as a protocol providing better scalability without compromising security and has a message complexity of O(n). However, these approaches are only for permissionless cryptocurrencies. On the other hand, [W2944812228] extended the solution to the general workload but solely relies on trusted hardware to reduce communication overhead.\n\nReducing message complexity within blockchain in general and within sharding in particular is the area that requires further exploration. Communication Cost Per Transaction (CCPT) is one of the key to blockchain scalability [UNMAPPED:78]. A blockchain with CCPT in the order of O(n) is considered as scalable. Existing solutions, in order to achieve O(n) CCPT, either sacrifice reliability, decentralized nature of blockchain, rely on trusted hardware, or assume that all nodes are motivated and behave rationally. Potential areas that can be explored are deployment of decentralized reputation management approaches and load balancing mechanisms with an attractive incentive policy to prevent abnormal behavior of nodes without trusted hardware.\n\n- Maintaining atomicity in a cross-shard transaction is a challenging task [W2886871703, W2896120042]. The operations on various shards are required to follow a timeline to validate the time sequence among these operations. In this case, deployment of load balancing mechanism can be explored to deal with miner node exhaustion and DoS situations when a shard has to deal with a large number of legitimate and illegitimate cross-shard transactions.\n\n- The Rapidchain [UNMAPPED:49] can tolerate up to 1/3 byzantine adversaries but they are only for cryptocurrency workload. A powerful mechanism to deal with byzantine adversaries and to cope with shard takeover for non-crypto currency based blockchains must be in place. Since performance (throughput) is directly proportional to the number of shards and an increasing number of shards also divides the resources and computational-power per shard. Consequently, a malicious adversary requires a minuscule amount of resources to have complete control over a shard. This can benefit from further research into the applicability of BFT tolerance mechanisms such as provided by Elastico, Omniledger, Rapidchain etc. under non-cryptocurrency workload to prevent malicious adversaries to completely take over the shard.\n\n- Another area that limits blockchain scalability and requires further attention from the research community is the formation of multiple branches of blocks known as forks. Currently, the longest chain rule [W4248175462, W2486460265] is applied to deal with these forks. However, without any fork avoidance mechanism in place, wastage of resources still occurs which can consequently affect the overall blockchain performance. A dimension of further research for this challenge is the formation of fork monitoring committees (consisting of incentivised nodes) that are separate from mining nodes which are used to handle the mining assignments of the mining nodes according to their processing power and to continuously monitor the formation of forks.\n\n- Through our research, we came across several approaches including [W2911211218, W3136771524, UNMAPPED:59] which rely on efficient network infrastructure and cut-through routing to improve latency. But this requires a complete trusted-setup or a trust management scheme to prevent network becoming a bottleneck or an attack surface. In this context, decentralized and lightweight reputation management approaches can be explored to fill this gap by creating a trusted environment.\n\n- The use of resourceful or trusted hardware devices for mining and validation in a permissioned (consortium) blockchain scenario decreases BGR which has a direct impact on transaction throughput [W2944812228, W2911788238, W2972190608, W2893373097, UNMAPPED:62]. However, its adoption in permissionless (public) blockchain scenarios requires an attractive incentive mechanism to attract miners to use hardware which has more processing power, storage, and memory.\n\n- Through the analysis, some efforts such as [W2989439229, W2798342357, W2893373097] were identified which were focused at investigating the role of parameters such as block size and block generation to achieve scalable blockchains. However, most of these efforts have focused at Bitcoin blockchain and therefore are specific to the settings used within Bitcoin. Further efforts are required to conduct similar analysis at a higher level of abstraction i.e. within a specific platform such as Ethereum or Multichain so as to highlight strengths and limitations especially with respect to scalability. Such efforts will help application developers understand the role of blockchain parameters and choose appropriate blockchain platforms that are suitable for specific application domains.\n\n- A critical component of blockchain software stack is consensus algorithm due to its decentralized operation. Although Bitcoin (first prominent blockchain application) is based on Proof of Work, several other consensus algorithms have been proposed including Proof of Stake, Proof of Authority, and Proof of Weight. However, in order to understand and highlight appropriateness of consensus algorithms for specific application domains, a rigorous empirical analysis of consensus algorithms is required. Current studies such as [W2810807736, W2914443561] have made initial efforts by conducting a feature-based comparison of existing consensus algorithms however our search did not identify any efforts to take an empirical approach to achieve such comparative analysis and therefore is an area of work which requires further attention from the research community.",
+      "citations": [
+        "W2535104337",
+        "W2794533297",
+        "W2944812228",
+        "W2886871703",
+        "W2896120042",
+        "W4248175462",
+        "W2486460265",
+        "W2989439229",
+        "W2798342357",
+        "W2893373097",
+        "W2810807736",
+        "W2914443561"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "31",
+        "78",
+        "49"
+      ]
+    },
+    {
+      "section_id": "s_11",
+      "section_index": 11,
+      "section_label": "11. Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Scalability of blockchains is one of the fundamental challenges which limit their widespread adoption in diverse application domains. This paper has contributed to defining this challenge as well as highlighting existing efforts to address this challenge for blockchains. Specifically, defining blockchain scalability as a composite concept, the paper has identified and described its different dimensions so as to refine the scope of this concept within blockchains. The paper has presented a first systematic effort to identify and collate existing efforts related to blockchain scalability in three aspects i.e. mechanisms and methods aiming to enhance blockchain scalability by contributing to the core blockchain functions, applications leveraging blockchain to achieve scalable applications, and efforts to define the scalability challenges through analysis of blockchain solutions. Although these represent a rich set of efforts, there remain open challenges to achieve scalable blockchain as identified in the paper. Our future work involves converging towards study of consensus algorithms to identify and analyze their role to enhance scalability of blockchains.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_12",
+      "section_index": 12,
+      "section_label": "Acknowledgment",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This publication is based upon work supported by the Khalifa University of Science and Technology under Award No. CIRA-2019-001.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_6",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_8",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_9",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3187485442_tables.md"
+}

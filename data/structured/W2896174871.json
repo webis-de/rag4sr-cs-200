@@ -1,0 +1,721 @@
+{
+  "id": "W2896174871",
+  "metadata": {
+    "title": "Machine Learning from Crowds: A Systematic Review of Its Applications",
+    "n_sections": 10,
+    "n_subsections": 25,
+    "n_subsubsections": 2,
+    "n_tables": 18
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "With the recent appearance of crowdsourcing platforms such as Amazon Mechanical Turk, a great number of machine learning practitioners have expressed interest in using them to increment the efficiency and scope of their work. Several problems that would be too expensive to deal with using traditional methods now become easier, while problems which were not feasible are now tractable. Citing Howe, the term crowdsourcing can be defined as [UNMAPPED:1]:\n\n\"[...] the act of taking a job traditionally performed by a designated agent (usually an employee) and outsourcing it to an undefined, generally large group of people in the form of an open call.\"\n\nFor Howe, the use of crowdsourcing involves two clearly defined elements: a generally large group of people and an open call. Recently, though, in the area of machine learning this term has been used to refer not only to humans but to other elements, such as sensors and algorithms. Even the open call requisite has been relaxed, allowing the use of a small group of people known a priori. In other words, when we talk about crowdsourcing problems in the context of this paper we refer to problems that use a group of elements that provide noisy data for a given example and whose quality we may, or may not, know much about. These elements could be, for instance, a group of experts examining medical images of patients, antivirus programs analyzing threats or Amazon Mechanical Turk workers analyzing facial expressions. These groups share one characteristic: there is some kind of uncertainty in the information provided by the members of the group, as some of them may be better at that task while others may have misunderstood the problem (or be malicious). The result of this annotation process is a dataset which is inherently noisy and that needs to be preprocessed to be useful in a machine learning task.\n\nThere are several applications of machine learning that meet the above description. For example, in the area of computer-aided diagnosis, we might want to determine whether a tumour in a medical image is benign or malign. However, in most cases, obtaining an accurate label to train is very costly, so normally a group of experts is asked to give their opinions about the image. Unfortunately, these professionals will probably have a different background, causing disagreements during the labeling process [W4384377323]. Another area of study where these algorithms could be of great help is the aesthetic image classification, in which one of the goals consists in creating a model able to distinguish between great and average images. However, the subjectiveness of the task makes it difficult to determine the ground truth necessary for standard models [W1511924373]. Despite this, we could use crowdsourcing platforms to collect several potentially noisy labels that could allow us to build an accurate model taking into account this diversity of opinions.\n\nIn this work, we analyze several applications dealing with crowdsourced data, in order to show the growing interest in this field, as well as the techniques being used and the problems being faced by researchers using crowdsourcing to develop state-of-the-art machine learning solutions. As proof of the interest in this topic, several reviews (e.g., [W2475282416]) and [W2585226541] about machine learning techniques and tools in this area have been published recently. However, these reviews do not include recent applications of these techniques, leaving a gap that this work is intended to fill. This kind of review, as can be found in other fields [W2036599383, W2127350252, W2517343931], can foster research, indicating challenges that could lead to new developments in the future.\n\nThe paper is organized as follows. In Section 2 we describe the systematic methodology followed, as well as the goals of this review. In Section 3 we analyze the research interest in applications of learning from crowdsourced data. In Sections 4 and 5 we analyze the type of crowd and the machine learning techniques used in these applications, while in Section 6 we show the main areas of application of crowdsourced machine learning. In Section 7 we discuss the main problems that remain unsolved and that could lead to future research in the field. Finally, in Section 8 we present the conclusions of this work.",
+      "citations": [
+        "W4384377323",
+        "W1511924373",
+        "W2475282416",
+        "W2585226541"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 The Need for a Review",
+          "subsubsections": [],
+          "text": "As seen in the introduction, learning from the wisdom of crowds is an interesting topic for several reasons. First of all, it allows us to tackle problems without enough available ground truth data, but in which the use of a group of people is possible. It also allows the collection and use of labeled data for problems where there is not an objective ground truth, such as affective behaviour recognition [W1923565741]. Generally, it also reduces the costs of the data gathering phase in supervised machine learning experiments [W2475282416].\n\nTo our knowledge, there has not been any attempt to explore the applications of the techniques involved in learning from crowdsourced data. An effort in this direction could reveal new branches for future research in this field, as well as ways to improve the results.\n\nof applications through the use of more powerful algorithms. In fact, we can find several reviews related to, but not exploring, this specific issue: two reviews of algorithms for solving the problem of learning from crowdsourced labeled data [W2475282416, W2585226541]; the challenges of using crowdsourcing from a system design perspective [W2293201672]; a taxonomy of crowdsourcing tasks not necessarily from a machine learning perspective [W2116947789]; a survey of data management techniques with crowdsourced data [W2329105431]; projects related to applying crowdsourcing for climate and atmospheric sciences [W2161448838]; uses of crowdsourcing in the different phases of software engineering [W2522186013]; incentives used in the crowdsourcing literature [W2093327657]; the concept of crowd intelligence, as well as the platforms and research problems associated with it [UNMAPPED:17]; and techniques related to task design, assignment and quality control [W2340432473]. These publications show a great interest in the topic, not only for the opportunities that it offers for data scientists, but also for the practitioners in other areas of research which could benefit from these new techniques.",
+          "citations": [
+            "W1923565741",
+            "W2475282416",
+            "W2585226541",
+            "W2293201672",
+            "W2116947789",
+            "W2329105431",
+            "W2161448838",
+            "W2522186013",
+            "W2093327657",
+            "W2340432473"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "17"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Review Questions",
+          "subsubsections": [],
+          "text": "In this review, we analyze applications of machine learning from data provided by crowds, in the form of both labels and features. Specifically, we address the following research questions:\n\n* **Q1** What has been the interest in the topic in the last decade?\n* **Q2** Which areas are associated with the greatest interest in the topic?\n* **Q3** How are the crowds used to achieve the goals of the application?\n* **Q4** What are the most commonly used techniques for tackling the caveats of using crowdsourcing for machine learning?\n* **Q5** What interesting future research lines follow from the applications?\n\nWe believe this information could be highly beneficial for machine learning practitioners as well as for researchers interested in gaining knowledge about how to learn from crowdsourced data.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Search Process",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.3.1 Database Search",
+              "parent_subsection_id": "s_2_3",
+              "text": "The following databases were used to gather articles containing applications of machine learning from crowdsourced data: Scopus, Web Of Science, Google Scholar, DBLP, ScienceDirect, ACM Digital Library, and IEEE Xplore Digital Library. In each of these databases we used a search string which, in general, searched for the presence of two terms in the title of publications:\n\n* Machine learning related terms, such as learning or classification.\n* Crowdsourcing related terms, such as crowds or annotators.\n\nWhere possible, we reduced the results from three search by only looking for articles and conference publications, and limiting the topics of both conferences and journals to those related to machine learning. For the specific strings for each database, we refer the reader to Appendix A.\n\nAs the search strings used were quite general (with the goal of obtaining a large number of publications) we then refined the results by reading the titles and abstracts within the articles, filtering out those that did not align with the topic of this paper. Specifically, all papers had to be about applications of machine learning from crowdsourced labeled data.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.3.2 Citation Analysis",
+              "parent_subsection_id": "s_2_3",
+              "text": "In this phase, we took the algorithms analyzed in [W2475282416, W2585226541] and searched for their citations on the Scopus platform, carefully selecting the papers related to the subject of this review.",
+              "citations": [
+                "W2475282416",
+                "W2585226541"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "We used three methods to obtain the articles reviewed in this work:\n\n* Database search, using search strings related to the goals of this review.\n* Citation analysis of the main machine learning algorithms present in the literature [W2475282416, W2585226541]",
+          "citations": [
+            "W2475282416",
+            "W2585226541"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4 Quality Assessment",
+          "subsubsections": [],
+          "text": "All the works analyzed in this review were published in peer-reviewed journals or conferences of recognized scientific value, which guarantees that they meet a certain standard of quality.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5 Data Extraction",
+          "subsubsections": [],
+          "text": "Once we established the pool of articles related to the topic of this survey, we went through them to answer the following questions:\n\n* **Q1** What has been the interest in the topic in the last decade?\n * Year of publication.\n * Publication type: journal or conference.\n * Author's country.\n * Publication citations.\n* **Q2** Which areas are associated with the greatest interest in the topic?\n * Area of knowledge of the application\n* **Q3** How are the crowds used to achieve the goals of the application?\n * Information provided by the annotator (for example, labels or features)\n * Platform used for the annotation process\n* **Q4** Which are the most commonly used techniques for tackling the caveats of using crowdsourcing for machine learning?\n * Learning algorithm family.\n* **Q5** What interesting problems arise from the analyzed applications?\n * New problems arising from each publication, if any.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This review follows the systematic procedure proposed in [W2168894761]. We start from various questions that are of interest and perform several steps with the goal of finding the relevant literature to augment our understanding of these questions, in a reproducible way. In this section, we summarize the details of the followed procedure.",
+      "citations": [
+        "W2168894761"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Research Interest Analysis",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We have found a total of 116 publications, 51 of which are journal publications, while 65 are published in conferences. To see the increasing interest in the research in this area, it can be observed the yearly increase in the number of publications in **FIGURE 1**, which indicates a rising interest in using crowdsourced data for machine learning applications.\n\n**TABLE 1: Number of publications by year**\n\n{{TABLE:tbl_01}}\n\n**FIGURE 1: Number of publications by year**\n\nIt is also of interest to see how the publications are distributed geographically. For this, we took the country of the publications' authors of the publications and made two graphs. The graph on the left (**FIGURE 2a**) shows the number of publications corresponding to each country. The graph on the right (**FIGURE 2b**) takes into account the total number of publications by country indexed by SJR (Elsevier, 2017) in the area of Artificial Intelligence, dividing the number of publications found in this study by the total number of publications for each country and then normalizing the results.\n\n**TABLE 2: Publications by country**\n\n{{TABLE:tbl_02}}\n\n**FIGURE 2a: Publications by country**\n\n**TABLE 3: Publications by country (Ratio)**\n\n{{TABLE:tbl_03}}\n\n**FIGURE 2b: Publications by country (Ratio)**\n\n**FIGURE 2: Number of publications by country in comparison with the total for the country.**\n\nCompared to the total number of publications for each country, it seems that there is a greater than expected number of publications in countries such as Switzerland or UK, while countries such as China have fewer publications related to the applications of machine learning from crowdsourced data.\n\nAs another interest indicator, we analyzed the mean number citations for each work using the total number of citations for a publication obtained through Scopus, as this platform provides accurate citation information. The mean number of citations by year can be seen in **TABLE 4**. It is significant the high mean number of citations for the papers published three or more years ago.\n\n**TABLE 4: Mean number of citations by year of publication**\n\n{{TABLE:tbl_04}}",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01",
+        "tbl_02",
+        "tbl_03",
+        "tbl_04"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Crowd Use Analysis",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Information Obtained from the Crowds",
+          "subsubsections": [],
+          "text": "In our research, we have identified 3 different types of information obtained using crowdsourcing: labels (e.g. for supervised machine learning), features, and a mixture of features and labels (Both). The distribution of the results can be seen in **FIGURE 3**.\n\n**TABLE 5: Distribution of type of crowd used in the publication**\n\n{{TABLE:tbl_05}}\n\n**FIGURE 3: Distribution of type of crowd used in the publication**\n\nThe predominant use of crowdsourcing for learning from crowdsourced data is the elicitation of labels for a dataset. This use is also the most studied in the literature and there exist several algorithms designed to improve the results when learning from them. However, there is also the need to obtain features, and also features and labels jointly, in order to create new datasets which may lead to interesting future opportunities.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 Characterization of Workers",
+          "subsubsections": [],
+          "text": "Although the term crowdsourcing usually refers to the use of a generally large group of (possibly) unreliable people, we have identified other different types of groups used for the same purpose and using similar crowdsourcing techniques: experts, volunteers, algorithms, etc. These other types of groups, albeit with characteristics distinguishing them from the standard crowdsourcing definition, are usually treated with the same methods, and that is why they are included in this study. The distribution of the number of publications for each category can be seen in **FIGURE 4**. In this figure, by the term crowd we refer to the use of (generally) non expert people, via platforms such as Amazon Mechanical Turk or CrowdFlower, who may receive some incentive. This is the use case that is nearest to the classic definition of crowdsourcing. This is also the most common use case. However, the use of experts is also very important in this field, coming in second place. We also distinguish between the above two categories and the one where the labeling process is performed by volunteers, since normally the characteristics of the problems solved by them fall between those of the two categories mentioned above. Apart from the use of people, we have also identified the use of other elements, such as algorithms or sensors. In the applications, these elements are treated with methods similar to the ones used with people. However, the number of publications using them is small with respect to the ones using people as annotators.\n\n**TABLE 6: Distribution of publications by worker type**\n\n{{TABLE:tbl_06}}\n\n**FIGURE 4: Distribution of publications by worker type**",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_06"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3 Platforms Used",
+          "subsubsections": [],
+          "text": "In **FIGURE 5**, we show the crowdsourcing platform used in the publications from the Crowd category in the above analysis, that is, the publications that use platforms available to the general public.\n\n**TABLE 7: Distribution of crowd category publications by platform**\n\n{{TABLE:tbl_07}}\n\n**FIGURE 5: Distribution of crowd category publications by platform**\n\nAs may be expected, Amazon Mechanical Turk was the most commonly used platform in the applications. Surprisingly, the second one was the author's own custom solution for the problem, followed by CrowdFlower, Microworkers and ChinaCrowds.",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_07"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section we explore the way in which the crowd is used to tackle the different problems, in terms of:\n\n* Information obtained from the crowds (labels, features,...)\n* Characterization of workers (experts, algorithms...)\n* Used platforms (Amazon Mechanical Turk, CrowdFlower,...)",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 Technique Analysis",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Normally, when learning from crowds, practitioners try to aggregate crowd responses so that the data is more accurate. We have grouped the publications into 3 categories: those using simple aggregation algorithms (Simple), such as the mean or majority voting of the annotations (most frequent value), those using complex algorithms for aggregating (Complex), such as algorithms learning annotators reliability iteratively, and those applications where no aggregation of data was used (No). **FIGURE 6** shows the distribution of the publications in these categories.\n\n**TABLE 8: Number of publications by aggregation type**\n\n{{TABLE:tbl_08}}\n\n**FIGURE 6: Number of publications by aggregation type**\n\nAs can be seen in **FIGURE 6**, although the use of complex aggregation is the most common approach, the use of simple aggregation is also very popular. On the other hand, more than 10 publications use the labels without any aggregation, as if they were the true labels themselves.\n\nInside de Complex aggregation category, we find a great number of different algorithms, most of them particularly designed to solve the task of aggregation of crowdsourced data for the precise problem they are trying to solve. However, following the taxonomy from [W2585226541], we can further divide the algorithms regarding the technique used, either optimization, i.e. algorithms capture the relations between workers and tasks using an optimization function, or PGMs, i.e. algorithm designed using a probabilistic graphical model. In **FIGURE 7**, one can see that, although optimization is also used in applications, the majority of the algorithms use an approach based on PGMs.\n\n**TABLE 9: Technique used in publications using complex aggregation**\n\n{{TABLE:tbl_09}}\n\n**FIGURE 7: Technique used in publications using complex aggregation**",
+      "citations": [
+        "W2585226541"
+      ],
+      "tables_in_text": [
+        "tbl_08",
+        "tbl_09"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6 Publication Areas",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "6.1 Bioinformatics",
+          "subsubsections": [],
+          "text": "There is a great interest in crowdsourcing techniques in the Bioinformatics community. Although the majority of publications use a small group of experts as annotators, several applications use platforms such as Amazon Mechanical Turk to obtain labels. Moreover, some applications use a mixture of algorithms and experts, as well as volunteers. In **TABLE 13** we show the references of the applications found, as well as information about the type of aggregation, the type of crowd and the platform used sorted by year.\n\n**TABLE 13: Publications in Bioinformatics**\n\n{{TABLE:tbl_13}}\n\nSpecifically, the area of medical images has recently expressed interest in this field as numerous applications require a great effort for labelling images [W2468387181, W2069816479], such as image segmentation or cell classification. In this way, the majority of the applications of learning from crowdsourced data in this field take advantage of these techniques for reducing the labelling effort as well as improving results in fields where labelling is not trivial. In this sense, we have found applications about: tumor segmentation [W1506037854]; remote malaria diagnosis [W2037287993] and malaria parasite quantification [W2101798695]; classifying GABAergic interneurons [W2055672229, UNMAPPED:23]; midbrain 3D ultrasound image segmentation [W63918057]; Crohn's disease segmentation [W848375797]; retinal fundus classification [W2052646460, W2694654282]; predicting malignancy of pulmonary nodules [W1833718570]; prematurity diagnosis in retinopathy [W109488022]; mitosis detection in breast cancer [W2339885376]; melanoma cell segmentation [W2481224930]; sperm analysis [W2592538491] and segmentation of chromosomes [W2736536606].\n\nThere is also interest in the biomedical information extraction community, which becomes clear from the fast growing of the number of related publications and experimental data. Although there are several applications and techniques for extracting information [W1968761064], several problems do need information that only a human or even an expert can provide as the reader can find in the following applications: extraction of patient's personal experiences [W2071411406]; refining curated protein interactions [W2020556160]; drug indication curation [W2013130010]; extraction of information such as phenotype or stage of an study [W2230749025]; biomedical compound figure annotation for publications [W2522765047]; identifying reports of randomized controlled trials [W2619694921] and drug side-effects discovery [W2743605915].\n\nOther interesting applications in this area include: estimation of respiratory rate from the gene normalization [W2074640468]; estimation of fetal heart rate, interbeat intervals and fetal QT intervals with noninvasive ECG [W2794550444]; protein folding [UNMAPPED:44]; ECG signal classification [W2091738337, W3099601712]; photoplethysmograms [W2224049904]; sleep spindle detection [W2296570892]; assessment of voice pathologies [W2294296906] and learning for ICD-11 sanctioning rules [W2586809425].",
+          "citations": [
+            "W2468387181",
+            "W2069816479",
+            "W1506037854",
+            "W2037287993",
+            "W2101798695",
+            "W2055672229",
+            "W63918057",
+            "W848375797",
+            "W2052646460",
+            "W2694654282",
+            "W1833718570",
+            "W109488022",
+            "W2339885376",
+            "W2481224930",
+            "W2592538491",
+            "W2736536606",
+            "W1968761064",
+            "W2071411406",
+            "W2020556160",
+            "W2013130010",
+            "W2230749025",
+            "W2522765047",
+            "W2619694921",
+            "W2743605915",
+            "W2074640468",
+            "W2794550444",
+            "W2091738337",
+            "W3099601712",
+            "W2224049904",
+            "W2296570892",
+            "W2294296906",
+            "W2586809425"
+          ],
+          "tables_in_text": [
+            "tbl_13"
+          ],
+          "citations_unmapped": [
+            "23",
+            "44"
+          ]
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "6.2 Computer Vision",
+          "subsubsections": [],
+          "text": "In computer vision, there is also a large number of publications covering different topics. However, unlike Bioinformatics, in this case most of the applications use crowd platforms such as Amazon Mechanical Turk. A summary of the applications seen for this area can be found in **TABLE 14**.\n\n**TABLE 14: Publications in Computer Vision**\n\n{{TABLE:tbl_14}}\n\nIn the area of affective interaction and emotion recognition (for an introduction to the topic, see [W6094958]) where there is a certain subjective component, crowdsourcing has a special relevance, as several algorithms allow to take into account the capabilities of an annotator for labeling certain types of cases. In particular, we have found applications related to: spontaneous facial expression recognition [W2084502373]; affective behaviour recognition [W1923565741]; emotion and mood recognition [UNMAPPED:56] and facial expression classification for affective interaction [W2407034139].\n\nIn the topic of object recognition (the reader may find an introduction in [W2071821890]), the crowd is used for segmenting and labelling images. The goal here is not to solve problems with subjective components but taking advantage of the crowd to quickly process images that would be used in a machine learning process. We have found the following works related to this problem: obtaining regions of interest from an image [W2605991684, W1574679496]; image object localization [W2402233488]; labeling crawled data for object detection [W2026566343] and using games for segmenting images [W2035770760].\n\nThe previous goal is also shared in the field of gestures [W2059732136] and activity recognition [W1983705368], where crowdsourcing also becomes a powerful tool: human activity tagging [W2110165259]; online gesture recognition [W2130580359]; daily human activity recognition [W2247607085] and gesture segmentation [UNMAPPED:66].\n\nOther interesting applications include: detecting the most dominant person of the group with audiovisual features of group interaction [W2108143062]; YouTube video categorization [W1972048511]; learning user preferences for visual summarization [W2020847903]; a framework for multimedia quality of experience evaluation [W2044885272]; labeling visual artworks [W927722562]; cropland image classification [W2364646945]; bumblebee image classification [UNMAPPED:73]; dog breed recognition [W2754809282] and plant type classification [W2574793465].",
+          "citations": [
+            "W6094958",
+            "W2084502373",
+            "W1923565741",
+            "W2407034139",
+            "W2071821890",
+            "W2605991684",
+            "W1574679496",
+            "W2402233488",
+            "W2026566343",
+            "W2035770760",
+            "W2059732136",
+            "W1983705368",
+            "W2110165259",
+            "W2130580359",
+            "W2247607085",
+            "W2108143062",
+            "W1972048511",
+            "W2020847903",
+            "W2044885272",
+            "W927722562",
+            "W2364646945",
+            "W2754809282",
+            "W2574793465"
+          ],
+          "tables_in_text": [
+            "tbl_14"
+          ],
+          "citations_unmapped": [
+            "56",
+            "66",
+            "73"
+          ]
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "6.3 Natural Language Processing",
+          "subsubsections": [],
+          "text": "As was the case with computer vision, most of the publications use crowd platforms such as Amazon Mechanical Turk to obtain useful information for their problems. The list of applications found in this area can be seen in **TABLE 15**.\n\n**TABLE 15: Publications in Natural Language Processing**\n\n{{TABLE:tbl_15}}\n\nThe publications found are diverse, with both problems where subjectivity is involved and problems where the main advantage of using crowdsourcing is the capability of providing inexpensive data. For an introduction to some of the following topics, we refer the reader to [W1663984431]. Especially, we have found applications about: sentiment analysis of online media [W1545370062, W1855293664]; joke's humour classification [W1755622456]; temporal relation classification [W3146981046]; word sense [W2058959415]; marketing messaging classification on Twitter [W1982051041]; POS tagging [W2129494713]; identifying fake Amazon reviews [W1795484492]; sequence labeling [W2112511942, W2740579382]; estimation of discourse segmentation [W2250244475]; emotion estimation from narratives [W1969033730]; crowdsourced translation [W2273171220]; entity disambiguation [W2584074358, W2604600148, W2755568384] and topic models [W2567736915].",
+          "citations": [
+            "W1663984431",
+            "W1545370062",
+            "W1855293664",
+            "W1755622456",
+            "W3146981046",
+            "W2058959415",
+            "W1982051041",
+            "W2129494713",
+            "W1795484492",
+            "W2112511942",
+            "W2740579382",
+            "W2250244475",
+            "W1969033730",
+            "W2273171220",
+            "W2584074358",
+            "W2604600148",
+            "W2755568384",
+            "W2567736915"
+          ],
+          "tables_in_text": [
+            "tbl_15"
+          ]
+        },
+        {
+          "subsection_id": "s_6_4",
+          "subsection_index": 4,
+          "subsection_label": "6.4 Geoscience",
+          "subsubsections": [],
+          "text": "We have also found several applications that use crowds to classify land images and detecting events for geographical applications (**TABLE 16**): land image classification [W2007509064, W2585878868, W2759531326]; attribute mapping [W4241282400]; human settlement mapping [W2548493338] and detecting geographical events [W2751717865].",
+          "citations": [
+            "W4241282400",
+            "W2548493338",
+            "W2751717865"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_5",
+          "subsection_index": 5,
+          "subsection_label": "6.5 Audio Recognition",
+          "subsubsections": [],
+          "text": "In the area of audio recognition (**TABLE 16**), we found publications looking for labeling databases for several problems, not only for speech [W2573736132, W2593679477] but for music [W2066903463, W2766587300] and emotion recognition [W2748699435]. There is also one application dealing with acoustic classification of animal species [W2635864993].",
+          "citations": [
+            "W2573736132",
+            "W2593679477",
+            "W2066903463",
+            "W2766587300",
+            "W2748699435",
+            "W2635864993"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_6",
+          "subsection_index": 6,
+          "subsection_label": "6.6 Web",
+          "subsubsections": [],
+          "text": "Different Web related problems (**TABLE 16**) can also benefit from using crowdsourcing techniques, especially in processing social generated content, where we found applications dealing with social media posts [UNMAPPED:111], fake content [W2754215704, W2607906563] or the quality of the reviews [W2535526893], and on wrapper generation [W2291090872].",
+          "citations": [
+            "W2754215704",
+            "W2607906563",
+            "W2535526893",
+            "W2291090872"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "111"
+          ]
+        },
+        {
+          "subsection_id": "s_6_7",
+          "subsection_index": 7,
+          "subsection_label": "6.7 Software",
+          "subsubsections": [],
+          "text": "In the area of software development (**TABLE 16**), we found publications related to various stages of the development process: improving performance of applications using crowdsourcing [W2111686683]; understanding review-to-behavior fidelity in mobile applications [W2396319824]; source code summarization [W2280357824] and classification of bug reports [W2725032736].",
+          "citations": [
+            "W2111686683",
+            "W2396319824",
+            "W2280357824",
+            "W2725032736"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_8",
+          "subsection_index": 8,
+          "subsection_label": "6.8 Education",
+          "subsubsections": [],
+          "text": "Regarding education (**TABLE 17**), we found several methods trying to solve the problem of grading in contexts where traditional grading is not possible, due, mainly, to problems of scalability. We refer the reader to [W2514832122], where different challenges of online education are discussed. Specifically, we found applications about: test grading without answers [W2949654880]; ordinal peer grading [W2166164009]; English grading [UNMAPPED:123] and peer grading taking into account both answers and grading [W2605343202].",
+          "citations": [
+            "W2514832122",
+            "W2949654880",
+            "W2166164009",
+            "W2605343202"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "123"
+          ]
+        },
+        {
+          "subsection_id": "s_6_9",
+          "subsection_index": 9,
+          "subsection_label": "6.9 Information Retrieval",
+          "subsubsections": [],
+          "text": "In the area of information retrieval (**TABLE 17**), there are applications related to learning relevance of medical documents [W3090888339], circumlocution of queries [W2090031974] and learning topic models [W2177561083].",
+          "citations": [
+            "W3090888339",
+            "W2090031974",
+            "W2177561083"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_10",
+          "subsection_index": 10,
+          "subsection_label": "6.10 Other Applications",
+          "subsubsections": [],
+          "text": "There are a great number of applications in other domains, such as security or energy, which are also relevant for this study (**TABLE 17**): deduplication of digital libraries [UNMAPPED:128]; imitation learning [W2032740574]; evaluation of procedural content generation [W1985718510]; action model acquisition [W934246857]; weighting antivirus labels [UNMAPPED:132]; aerosol optical depth estimation [W1889224438]; point of interest labeling [W2443200919]; detection of spatial events [W2293794854]; interstate conflict measurement [W2444250069]; annotation of energy data [W2583858526]; extracting semantic attributes to describe concepts [W2604188576]; category learning [W2766649874]; crowd databases [W2606444770] and network quality measurements [W2314839209].\n\n**TABLE 16: Publications in geoscience, web, audio recognition and software**\n\n{{TABLE:tbl_16}}\n\n**TABLE 17: Publications about education, information retrieval and other topics**\n\n{{TABLE:tbl_17}}",
+          "citations": [
+            "W2032740574",
+            "W1985718510",
+            "W934246857",
+            "W1889224438",
+            "W2443200919",
+            "W2293794854",
+            "W2444250069",
+            "W2583858526",
+            "W2604188576",
+            "W2766649874",
+            "W2606444770",
+            "W2314839209"
+          ],
+          "tables_in_text": [
+            "tbl_16",
+            "tbl_17"
+          ],
+          "citations_unmapped": [
+            "128",
+            "132"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "**FIGURE 8** shows the distribution of applications by knowledge area. Areas such as Bioinformatics, Computer Vision and Natural Language Processing are the areas where these techniques are most frequently applied, as some of the tasks align perfectly with the problems that crowdsourcing is trying to solve.\n\n**TABLE 10: Distribution of publications by knowledge area**\n\n{{TABLE:tbl_10}}\n\n**FIGURE 8: Distribution of publications by knowledge area**\n\nIn **FIGURE 9a**, we show the type of crowd (see Section 4) used in each area. Bioinformatics is the field with the greatest number of publications related to crowdsourced machine learning, a great number of them involve aggregating expert opinions in problems where the ground truth is not known (or difficult to know) and in which the use of non experts may be impossible due to the difficulty of the task. Other fields such as Natural Language Processing or Computer Vision share a similar distribution, as the most common use of crowdsourcing is through the crowdsourcing platforms. In the rest of applications the use of crowds is the most common use case, although the other approaches are also used.\n\n**TABLE 11: Knowledge area by worker type**\n\n{{TABLE:tbl_11}}\n\n**FIGURE 9a: By worker type**\n\n**TABLE 12: Knowledge area by technique**\n\n{{TABLE:tbl_12}}\n\n**FIGURE 9b: By technique**\n\n**FIGURE 9: Knowledge area by worker type and technique**\n\nWe can also compare which kind of aggregation is performed by area (**FIGURE 9b**). In this case, we find that areas such as Bioinformatics or Natural Language Processing seem to prefer aggregating results using complex algorithms, while other areas, such as Computer Vision, or Software tend to use a simpler approach.\n\nNext we examine each publication, according to these areas of knowledge, in more detail.",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_10",
+        "tbl_11",
+        "tbl_12"
+      ]
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "7 Future Research in the Field",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this section we comment on future lines of research found in the publications analyzed. To perform this analysis we extracted unsolved problems from the applications and categorized them into meaningful groups in order to facilitate the analysis of their recurrence, which can be seen in **FIGURE 10**.\n\n**TABLE 18: Distribution of publications by proposed problems**\n\n{{TABLE:tbl_18}}\n\n**FIGURE 10: Distribution of publications by proposed problems**\n\nOne of the most common needs revealed in the publications was to find some way to model the instance difficulty for a task [W2032740574, W1969033730, W2110165259, W2583858526, W2084502373, W2066903463]. Some authors [W2032740574] emphasize that the difficulty for a task could be used to reduce the number of annotations required, and hence the cost, for the correct coverage of an example, thus using fewer annotators for easy examples, while collecting more labels for the most difficult ones. Other authors highlight that estimating the difficulty of annotators could improve the reliability of the annotator performance estimation, which could lead to more powerful models [W1969033730, W2110165259, W2583858526, W2084502373, W2066903463]. There are some classic crowdsourcing algorithms that can take into account instance difficulty, such as [W2142518823, W2149273804, W2137935418], which could be used directly or as a basis for the development of new algorithms that consider the restrictions of the problem at hand, such as scalability to a large number of examples or the time complexity of the algorithm.\n\nThe other most common necessity is the development of active learning techniques [W2130580359, W3090888339, W2110165259, W2112511942, W2402233488, UNMAPPED:111]. As highlighted by the authors, these techniques would not only provide a way to reduce costs when selecting the next example to be annotated, but they could also be used to select which annotator is best for labeling each example, or if the example should be annotated by an expert, according to its difficulty. There are some proposed algorithms [W1995470018, W1995470018, W2161816739, W1995470018] that tackle this problem and which may be adapted for particular problems.\n\nThe analysis of annotator interdependency is also of interest, as several authors point out [W63918057, W1889224438, W2293794854, W3099601712, UNMAPPED:132]. Most of the models assume that annotators are independent of each other, which is generally not true. The relaxation of these restrictions could be desirable to obtain more powerful models, capable of learning relations between annotators, or even communities within them [W63918057].\n\nAnother necessity to be considered is the adaptation of standard approaches for leveraging temporal relations. Several problems related to temporality have been highlighted by several authors. In [W2090031974], for the problem of diagnostic medical queries, the authors propose the exploration of sessions, a sequence of queries about the same topic, although with different search strings. This idea could be applied to annotations, grouping them into sessions for each participant, and analyzing relations between sessions and within the same session. In [W2444250069], the authors propose the analysis of how the relations between political actors and events change over time. This could also be applied directly to the problem of crowdsourcing, analyzing how the relations between the data and the annotators change with time. In addition, not only the relations between actors, but the evolution of the accuracy and bias of an annotator as time increases could also be studied. This might provide very interesting insights into the learning component of a task and even the loss in accuracy related to boredom or fatigue [W2583858526, W3099601712].\n\nThere is also an increasing need for more datasets with the goal of making the analysis of the performance of new developments as general as possible [W2250244475, W2052646460, W2573736132, W1795484492]. As shown in [W2475282416], there are several public datasets for the problem of learning from crowdsourced data. However, some of them may need non-trivial preprocessing and feature extraction prior to their utilization in algorithm comparison.\n\nAnother very interesting proposal is the inclusion of contextual information in the estimation of the reliability of each annotator. Adding information about annotators, such as for example, past experience or age, could be very beneficial when estimating annotator performance [W2224049904]. Even, as the authors of [W1755622456] state, information of the country of origin or mother tongue could be very useful in some problems in which culture plays an important role. Furthermore, other complex relations and information about an annotator could be crowdsourced, capturing high level information that might be of use [W2101798695]. In addition, obtaining data about behaviours when annotators perform a task, such as the time to complete it, could be leveraged to improve annotations and annotator estimations [W2583858526].\n\nThere is also interest in analyzing the scalability of crowdsourcing [UNMAPPED:123] and in adapting algorithms to the MapReduce paradigm [W2293794854]. Related to this, in [UNMAPPED:123] the authors also express the need to develop real-time crowdsourcing algorithms. There is also interest in using crowdsourcing with multilabel [W2037287993, W2294296906] and multi-instance [W2593679477] problems. Some authors also mention the importance of exploring relations between features and annotators [W2066903463, W2112511942].",
+      "citations": [
+        "W2032740574",
+        "W1969033730",
+        "W2110165259",
+        "W2583858526",
+        "W2084502373",
+        "W2066903463",
+        "W2130580359",
+        "W3090888339",
+        "W2112511942",
+        "W2402233488",
+        "W63918057",
+        "W1889224438",
+        "W2293794854",
+        "W3099601712",
+        "W2090031974",
+        "W2444250069",
+        "W2250244475",
+        "W2052646460",
+        "W2573736132",
+        "W1795484492",
+        "W2475282416",
+        "W2224049904",
+        "W1755622456",
+        "W2101798695",
+        "W2037287993",
+        "W2294296906",
+        "W2593679477"
+      ],
+      "tables_in_text": [
+        "tbl_18"
+      ],
+      "citations_unmapped": [
+        "111",
+        "132",
+        "123"
+      ]
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "8 Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "With the rapid growth of the crowdsourcing field, several machine learning applications have appeared that are designed to solve problems that previously may have been unfeasible or to improve the results for problems which use several annotation sources to estimate a ground truth. Furthermore, the new era of big data opens the door to sources which may not be as accurate as those required by traditional machine learning algorithms. This may be the case of data coming from social networks or physical sensors. To tackle these, a different approach, as seen in the applications studied, may be required.\n\nIn this paper we have analyzed applications related to learning from crowdsourced labels, indicating the interest in the field as well as several features of these applications, from perspectives such as the type of technique used or the type of crowd employed. We have also analyzed some of the problems that remain unsolved in this field, which may open the door to relevant new research. In particular, we would like to highlight three problems that seem of particular interest and that are not completely solved:\n\n* **Instance difficulty.** Several publications state the need for a way to accurately estimate instance difficulty from crowdsourced data, which may reduce the annotation cost and improve the results. Even though there are some approaches that address this problem, the scalability of the algorithms could be the subject of future research.\n* **Annotator interdependency.** Most of the machine learning models proposed for the problem of learning from crowds assume that annotators are independent of each other, which is not usually true. The relaxation of this restriction could lead to learning about communities or groups among annotators with similar characteristics, which could be of interest on its own or useful for improving the results obtained for a problem.\n* **Temporal relations.** Another recurrent problem in the applications analyzed is the inexistence of algorithms dealing with temporal relations. This relation could exist between instances, with phenomena appearing such as concept drift or annotators, who could be influenced learning or by getting tired during the process of annotation.\n\nApart from these problems, we have identified several interesting machine learning problems that, when learning from crowds, have not been explored in the literature. In our opinion, that could lead to future research:\n\n* **Supervised feature selection.** There are many applications in which a previous feature selection is of great importance to obtain an adequate machine learning model, as well as to analyze the importance of different characteristics in a problem. To our knowledge, there has not been any effort to adapt the classical algorithms for feature selection to crowdsourced data, which could be very beneficial for the field.\n* **Supervised feature discretization.** Several algorithms, as, for example, Bayesian Networks, do not handle continuous features properly. Applying supervised discretization algorithms could make the use of this kind of algorithms easier, as well as improve the interpretability of the analysis.\n* **Visualization of crowdsourced data.** In the field of data science, an important task is the exploration and visualization of the data, so that the practitioner is able to decide how to approach further analysis. We believe that, as this kind of data collection is important both for researchers and data scientist alike, correct techniques for visualizing crowdsourced data will be undoubtedly helpful.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "9 Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This work has been partially funded by the Spanish Research Agency (AEI/MINECO) and FEDER (UE) through project TIN2016-77902-C3-1-P.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "Appendix A: Search Strings",
+      "subsections": [
+        {
+          "subsection_id": "s_10_1",
+          "subsection_index": 1,
+          "subsection_label": "A.1 Scopus",
+          "subsubsections": [],
+          "text": "The search string used in Scopus was:\n\n```\nTITLE(\n(learning or classification or model or inference or supervised)\nAND\n(crowds or crowdsourced or crowdsourcing or annotators or labelers))\nAND\n( LIMIT-TO(DOCTYPE,\"cp\") OR LIMIT-TO(DOCTYPE,\"ar\") )\nAND\n(EXCLUDE(EXACTKEYWORD_Crowd Simulation\"))\nAND\n(EXCLUDE(SRCTYPE,\"k\") OR EXCLUDE(SRCTYPE,\"d\"))\nAND\n(EXCLUDE(EXACTKEYWORD_Computer Simulation\"))\n```\n\nWith this string, apart from searching for the terms related to machine learning and crowdsourcing, we exclude some areas that are of no interest for our research, namely the areas related to simulation. We also limit the search for publications to journals and conferences.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_10_2",
+          "subsection_index": 2,
+          "subsection_label": "A.2 Web Of Science",
+          "subsubsections": [],
+          "text": "The search string used in Web Of Science was:\n\n```\n(TI=(learning OR classification OR model OR inference OR supervised) AND\nTI=(crowds OR crowdsourced OR crowdsourcing OR annotators OR labellers))\nNOT TI=(pedestrians OR dynamics OR segregation OR lanes OR crowding)\n```\n\nAs in the previous case, we limit the search to the terms related to learning from crowdsourced data and exclude several terms related to crowd prediction or crowding.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_10_3",
+          "subsection_index": 3,
+          "subsection_label": "A.3 Google Scholar",
+          "subsubsections": [],
+          "text": "The search string used in Google Scholar was:\n\n```\n\"(learning OR classification OR inference OR supervised) AND\n(crowd OR crowdsourced OR crowdsourcing OR annotations OR labelers)\"\n```\n\nThe meaning of this string is similar to the one above. We search for at least one of the terms inside the parenthesis. The title should have at least one term from each group.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_10_4",
+          "subsection_index": 4,
+          "subsection_label": "A.4 DBLP",
+          "subsubsections": [],
+          "text": "The search string used in DBLP was:\n\n```\n(learning|classification|\ninference|supervised)\n(crowds|crowdsourced|crowdsourcing|\nannotators|labelers)\n```",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_10_5",
+          "subsection_index": 5,
+          "subsection_label": "A.5 ScienceDirect",
+          "subsubsections": [],
+          "text": "The search string used in ScienceDirect was:\n\n```\nttl((learning or classification or inference or supervised) AND (crowds or crowdsourced or crowdsourcing or annotators or labelers))\n```",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_10_6",
+          "subsection_index": 6,
+          "subsection_label": "A.6 ACM Digital Library",
+          "subsubsections": [],
+          "text": "The search string used in the ACM Digital Library was:\n\n```\nlearning OR classification OR inference OR supervised AND crowds OR crowdsourced OR crowdsourcing OR annotators OR labelers\n```",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_10_7",
+          "subsection_index": 7,
+          "subsection_label": "A.7 IEEE Xplore Digital Library",
+          "subsubsections": [],
+          "text": "The search string used in the IEEE Xplore Digital Library was:\n\n```\n((\"Document Title\":\"crowdsourcing\" OR \"Document Title\":\"crowdsourcing\" OR \"\n\"Document Title\": \"crowdsourced\" OR\n\"Document Title\": \"annotators\" OR\n\"Document Title\":\"labelers\")\nAND\n(p_Title:\"learning\" OR\n\"Document Title\": \"classification\" OR\n\"Document Title\": \"model\" OR\n\"Document Title\": \"inference\" OR\n\"Document Title\": \"supervised\")\n```",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_16",
+      "placeholder": "{{TABLE:tbl_16}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_10",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_17",
+      "placeholder": "{{TABLE:tbl_17}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_10",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_18",
+      "placeholder": "{{TABLE:tbl_18}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2896174871_tables.md"
+}

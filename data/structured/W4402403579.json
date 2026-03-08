@@ -1,0 +1,475 @@
+{
+  "id": "W4402403579",
+  "metadata": {
+    "title": "Coordinated Control of Multiple Autonomous Surface Vehicles: Challenges and Advances - A Systematic Review",
+    "n_sections": 5,
+    "n_subsections": 7,
+    "n_subsubsections": 7,
+    "n_tables": 14
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In recent years, the deployment of ASVs has gained considerable momentum across various fields, including marine exploration, environmental monitoring, maritime security, and offshore operations. These unmanned platforms offer the potential to revolutionize our approach to tasks that were once reliant on crewed vessels, enabling greater efficiency, reduced operational costs, and increased safety in challenging maritime environments. As the capabilities of individual ASVs continue to evolve, the focus has shifted towards harnessing their collective potential through coordinated control strategies. The coordinated operation of multiple ASVs presents a unique set of challenges and opportunities that necessitate interdisciplinary research efforts at the intersection of robotics, control theory, communication systems, and marine science [W2285949792, W2787063656, W2013928382, W1866654860].\n\nThe concept of coordinating multiple ASVs goes beyond the mere aggregation of individual vehicles; it involves orchestrating their actions to achieve common objectives while adapting to dynamic environmental conditions and mission requirements. This requires the development of advanced algorithms that enable ASVs to collaborate, communicate, and adapt in real-time, fostering a synergy that surpasses the capabilities of isolated units. Coordinated control of ASVs not only enhances the efficiency and effectiveness of various marine applications but also opens up new avenues for scientific exploration and data collection in remote or hazardous regions of the world's oceans.\n\nIn this paper we present a comprehensive review that delves into the intricate landscape of coordinated control for systems of multiple ASVs, proposing a systematic approach. While acknowledging the contributions of traditional prior reviews [W4226073364, W3137411177, W3037669777, W4319996475, W3089916726, W3174398482], as shown in Table 1, this systematic review aims to push the envelope by introducing fresh perspectives that tackle the challenges associated with coordinated ASV control, ranging from communication constraints and collision avoidance to decentralized decision-making and adaptive mission planning. Furthermore, we highlight recent advances and innovations in control strategies and sensing technologies that are propelling the field forward. By surveying the state-of-the-art methods and discussing emerging trends, we aim to provide a comprehensive overview of the current research landscape and inspire further advancements in the field of coordinated ASV control.\n\nThe specific contributions of this review are as follows:\n\n- It presents a systematic review of the coordinated control of multiple underactuated ASVs, filling a notable gap in the literature where traditional reviews exist but lack this specific, systematic approach.\n\n- The review incorporates, among others, studies that explore the use of machine learning techniques in ASV control coordination.\n\n- A broad range of characteristics from each selected article has been extracted and compiled into tables to simplify the reading and information search process, making it as straightforward and visual as possible.\n\n**Table 1**\nSummary of contributions in major reviews on coordinated ASVs control\n\n{{TABLE:tbl_01}}\n\n- The review has been updated to include information up until September 2023.\n\nGiven Table 1, the factors that differentiate this review from [W3037669777] and [W4319996475], which are the ones that present the most points in common with the present work, are presented below.\n\nRegarding [W3037669777], the factors that differentiate it from the present review, in which a novel contribution is presented, are:\n\n- In [W3037669777] the systematic review approach is not used, so the selected papers may suffer from arbitrariness, bias, or the selection may not be complete.\n\n- The review [W3037669777] was published in 2020, and considering Figure 2, most of the articles that address the coordinated control of ASVs were published in the following years.\n\n- Studies dealing with the use of machine learning techniques in the control coordination of ASVs are not included in [W3037669777], unlike in the present work.\n\n- In [W3037669777], fully actuated ASVs are also consider, not only underactuated ones. Consequently, it delves into this particular subject to a lesser extent than our work.\n\n- In [W3037669777], each paper included in the review is not analyzed in depth, unlike in the present study, in which a lot of information about communication, disturbances, simulations/experiments, among others, is extracted.\n\n- Almost no experimental results are analyzed in [W3037669777]. On the other side, this work includes a detailed analysis of the experimental validation and applications (Table 11 and Table 12).\n\nRegarding now the differential factors with [W4319996475], the present study provides the following novelties:\n\n- In this instance as well, in [W4319996475], the systematic review approach is not used, so the selected papers may suffer from arbitrariness, bias, or the selection may not be complete.\n\n- In this context as well, the control of fleets with underactuated ASVs, although it is included in the review [W4319996475], is not its main focus. Note that the survey [W4319996475] covers topics such as navigation systems that include perception with computer vision or radars, path generation, estimation and control of an ASV and, on top of that, estimation and control of ASVs fleets.\n\n- In [W4319996475], only articles in which deep learning techniques are applied are considered, while in the present work this is just a feature of the control system that may or may not be present.\n\n- The main objective in [W4319996475] is to identify the gap between research in deep learning techniques and its applicability to ASVs, while this work presents the latest advancements in the coordinated control of multiple ASVs, among which may be deep learning techniques and their applications.\n\nThe rest of this systematic review is organized as follows: Section 2 provides the guidelines on how the systematic review was conducted. Section 3 presents the answers through discussions for each of the posed questions. In Section 4, the identified gaps and future works are presented. Finally, Section 5 offers some conclusions.",
+      "citations": [
+        "W2285949792",
+        "W2787063656",
+        "W2013928382",
+        "W1866654860",
+        "W4226073364",
+        "W3137411177",
+        "W3037669777",
+        "W4319996475",
+        "W3089916726",
+        "W3174398482"
+      ],
+      "tables_in_text": [
+        "tbl_01"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Review method",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Planning the review",
+          "subsubsections": [],
+          "text": "The planning phase marks the initial step of the systematic review, laying the groundwork for the entire process. At this juncture, essential tools are established, including the boolean function, criteria for inclusion and exclusion, selection of databases for the research, and crucially, the creation and appraisal of a protocol overseeing all stages.\n\n- Identification of the need: The motivation for embarking on a systematic review primarily emerges from the extensive nature of the research topic, necessitating a precise and rigorous approach for the accurate extraction of information. In the field of engineering, adopting such a methodology is uncommon due to its scientific rigor and the complexity involved in its execution.\n\nPresently, there is a lack of systematic reviews concerning coordinated control techniques for ASV. Moreover, the traditional reviews that do exist differ from the approach proposed in this article, with all differences detailed in Table 1.\n\n- Research questions: After pinpointing the specific topic, certain criteria assist in the precise formulation of research questions. The PICOC (Population, Intervention, Comparison, Outcome, Context) criteria, widely utilized across various fields, have been considered in this study. We have taken into account the criteria outlined in [W2982356474] and customized them to suit our specific situation. In this instance, only a selection of these criteria were employed to craft and address the questions this systematic review aims to resolve. Section 3 features a discussion where the corresponding answers are scrutinized and deliberated. The questions devised for this study are enumerated below:\n\nRQ.1: What coordinated control techniques are used in multiples autonomous surface vehicles?\n\nRQ.1.1: What are the limitations and advantages of the different techniques?\n\nRQ.2: Which are the most important characteristics about techniques that have been experimentally tested?\n\nRQ.3: Which coordinated control methods are used in each scenario, taking into account the influence of method configuration and communication topology?\n\nRQ.4: What machine learning techniques, including deep learning and other neural networks, are used and for what purposes?\n\n- Review protocol: The review protocol comprises a series of guidelines and standards that must be adhered to throughout all phases of the review, aiming to minimize bias and enhance the objectivity of the systematic review. In biosciences, such protocols are often documented in prospective registries like PROSPERO (https://www.crd.york.ac.uk/prospero/). Regrettably, equivalent registries are not available in the field of automation and control, so the following stages are mainly based on the protocol presented in [UNMAPPED:50].\n\nFor the systematic review, the clear presentation and development of the protocol are crucial, given that at least two individuals are involved in drafting the review. A prevalent approach, albeit time-intensive, involves two independent reviewers conducting and reporting the review phases separately, followed by a comparison and discussion of the results they each obtain. The primary aim of this exhaustive work is objectivity.\n\nA fundamental part of the protocol involves devising a boolean function that encompasses all terms pertinent to the selected theme, encapsulating synonyms and related terms to the key words of interest. Conducting this keyword-based research necessitates an in-depth exploration of the subject to identify the terms most commonly employed by authors.\n\nThe boolean function formulated for this study is as follows:\n\n(ASV OR \"surface vehicle\" OR USV OR UMV OR \"marine vehicle\" OR \"surface vessel\" OR \"surface craft\" OR \"marine craft\" OR \"Surface ship\" OR \"underactuated ship\" OR \"under-actuated ship\" OR \"marine vessel\" OR \"marine offshore\" OR \"Watercraft\" OR \"Water-craft\" OR \"sailcraft\" OR \"boat\") AND (\"flocking control\" OR \"Swarm control\" OR \"coordinated control\" OR \"formation control\" OR \"Cooperative control\" OR \"formation tracking\" OR \"control for target tracking\" OR \"tracking control\")\n\nThe first part of the boolean function defines the type of vehicles used, while the second one defines the detection of the coordinated control techniques.\n\nDuring the research process, a challenge faced was the limitations of various bibliographic databases, which are not fully equipped to accommodate this type of review. These limitations include restrictions on specific types of searches or searching within certain sections of papers. Consequently, the research using the boolean function was conducted within the titles, abstracts, and keywords of the documents.\n\nOwing to these database constraints, as detailed in [UNMAPPED:50], and considering the satisfactory coverage provided by the publishers as presented in Table 2, the selected databases for this study were as follows:\n\n\u2022 IEEE Xplore Digital Library\n\u2022 Scopus\n\u2022 ACM Digital Library\n\u2022 Science Direct\n\u2022 Web of Science\n\n**Table 2**\nDatabases coverage with respect to the content of the publishers [UNMAPPED:50]\n\n{{TABLE:tbl_02}}\n\nAfter identifying the research questions and creating the corresponding boolean function, it needs to be incorporated into various bibliographic databases, with adjustments made to align it with the search language specific to each database. In this study, the research was conducted by exclusively searching within the abstracts, titles, and keywords of the papers. This search yielded a total of 2334 items as of September 2023, as outlined in Table 3.\n\nAnother critical step within the planning phase is the establishment of inclusion and exclusion criteria. These criteria hold significant importance, serving as objective guidelines for the selection of studies eligible for inclusion in the review. In order for a paper to be included in the review,\n\n**Table 3**\nStudies obtained by each database\n\n{{TABLE:tbl_03}}\n\nit must meet all the inclusion criteria outlined in Table 4 and must not exhibit any of the exclusion criteria listed in Table 5.\n\n**Table 4**\nInclusion criteria\n\n- Full paper available online (through search engines or by contacting the authors)\n- Use or propose a coordinated control technique of multiple ASVs\n- The system must have a dynamic model\n\n**Table 5**\nExclusion criteria\n\n- Secondary studies and gray literature\n- Non-English written papers\n- Duplicated studies\n- Fully actuated system\n- Non-holonomic vehicles (without sway)\n- Hybrid fleet (that includes underwater or aerial vehicles)\n- Lack of tests or simulations\n- Studies clearly irrelevant to the research\n\nIn addition to the various tools required to narrow down the initial pool of 2334 papers obtained through the boolean function search (refer to Table 3), it is essential to establish guidelines for the selection of studies and the extraction of crucial data from each paper.",
+          "citations": [
+            "W2982356474"
+          ],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03"
+          ],
+          "citations_unmapped": [
+            "50"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Conducting the review",
+          "subsubsections": [],
+          "text": "The main objectives during this phase include the following:\n\n- Significantly reducing the extensive pool of obtained studies through the application of inclusion and exclusion criteria.\n- Creating a features table that highlights the principal characteristics of each article.\n\n- Selection of primary studies: To facilitate the primary study selection, the PRISMA [W4294215472] (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) approach is frequently employed. This method includes 27 items and a flowchart designed to streamline and organize the entire process. As illustrated in Figure 1, from the initial 2334 papers selected, the first screening removes duplicates, totaling 153 in this instance. This occurs because many databases overlap with certain publishers, as indicated in Table 2. Utilizing software, such as Mendeley, is recommended for automatic duplicate detection.\n\nThe subsequent step involved reviewing the titles, abstracts, and keywords of the 2181 remaining papers, applying the set inclusion and exclusion criteria to them. Often, scrutinizing these specific sections alone is insufficient to ascertain full compliance with all criteria, necessitating a thorough read-through of the entire paper. This challenge is primarily attributed to the lack of standardized guidelines for crafting these sections in the engineering domain, unlike in other fields such as medicine or psychology. Following this process, out of the initial 2181 articles, 411 were selected for comprehensive review, and ultimately, only 125 papers fulfilled the criteria for inclusion in the study. These papers will be assessed to address the previously posed questions. The Conducting phase proved to be the most challenging and time-consuming part of the systematic review, given the meticulous analysis of 2181 papers. It is important to highlight that each paper undergoes an independent evaluation by two reviewers, and a primary study must gain approval from both to be included. In instances of disagreement between the reviewers, the responsibility of making the final decision falls to a third reviewer.\n\n- Study quality assessment: A quality assessment was conducted on the studies, meaning that all the criteria listed in Table 6 were examined. The outcomes of this quality evaluation are presented in Table 7.\n\nIn addressing Question 2, a score of \"Partially\" has been allocated when the considered article does not sufficiently detail the communication topology.\n\nRegarding Question 3, three major constraints have been primarily considered (each elaborately discussed in Section 3.2): the absence of a diagonal matrix, model uncertainties, and whether perturbations are considered. The evaluation criteria are established as follows: if all three constraints are met, the score assigned is \"NO\"; if none are met, the score is \"HARD\"; and if some are met, the score is \"SOFT\".\n\n**Figure 1: PRISMA flowchart**\n\n- Extraction and synthesis of data: To compile and synthesize the data from the chosen papers, summary tables were developed and presented in Section 3. These tables enumerate the most significant features of the papers pertinent to the research subject. At this link (https://hdl.handle.net/20.500.12412/5698), an Excel document is available for readers, compiling all extracted features for each article into a single comprehensive table.\n\n\u2022 Year of publication.\n- The sort of control technique used, such as adaptive, a model predictive, a sliding mode control or any other.\n- If the effectiveness of the proposed control techniques has been demonstrated through simulations and/or experiments.\n- The architecture of the control system is determined by whether it is implemented in a centralized or decentralized way.\n- The information that needs to be exchanged between the ASVs: angle, position, speed and/or control action, as well as each vehicle regarding its own parameters.\n- The strategies for guidance and control used to facilitate cooperative behaviors include leader-follower dynamics, flocking techniques, and graph-based approaches, among others.\n- The various types of reference signals, such as trajectory-guided, path-guided, target-guided and formation stabilization coordinated controls.\n- Motion control problems, if disturbances are considered and the fields of application in which these techniques are used.\n- The communication protocol. We are interested in how each ASV communicates with the others. Specifically, we will note whether the control algorithm requires communication among all entities, only with adjacent ASVs, or exclusively with a leader, among other configurations.\n- Advantages and/or limitations mentioned by the original study authors or identified by the reviewers are also considered. This aspect is the only subjective element. However, we believe it enables the inclusion of valuable insights that are not captured by the other data.\n\u2022 If any machine learning techniques are used\n\n**Table 6**\nChecklist for quality assessment [UNMAPPED:50]\n\n{{TABLE:tbl_04}}\n\n**Table 7**\nChecklist for quality assessment. Par= Partially, Jou=Journal, Con=Congress\n\n{{TABLE:tbl_05}}",
+          "citations": [
+            "W4294215472"
+          ],
+          "tables_in_text": [
+            "tbl_04",
+            "tbl_05"
+          ],
+          "citations_unmapped": [
+            "50"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we outline the methodological framework employed to conduct our systematic review focused on the coordinated control methods for multiple ASVs. Given the complexity and breadth of the topic, it has become imperative to establish a rigorous and structured approach to identify, select, and analyze relevant literature. To this end, our systematic review has been developed in accordance with the guidelines set forth by [W2118328848] and [W2982356474], ensuring a methodologically sound and comprehensive examination of the field.\n\nAfter reviewing more than 2300 potential articles, merely 125 primary studies were determined to meet the established criteria. This data is subsequently compiled into different feature tables, serving as an effective method to achieve a comprehensive, thorough, and visual understanding of the selected subject. Upon concluding the process, the initially posed research questions are addressed, offering a complete insight into the topic.\n\nThe systematic review is structured into three sequential stages, each further divided into specific sub-stages, as outlined below:\n\n1. Planning the review\n \u2022 identification of the need\n \u2022 research questions\n \u2022 review protocol\n \u2022 evaluating protocol\n\n2. Conducting the review\n \u2022 selection of primary studies\n \u2022 study quality assessment\n \u2022 extraction and synthesis of data\n\n3. Reporting the review\n \u2022 specifying dissemination mechanisms\n \u2022 formatting the main report\n \u2022 evaluating the report",
+      "citations": [
+        "W2118328848",
+        "W2982356474"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Report of the Systematic Review",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. RQ.1: What coordinated control techniques are used in multiple autonomous surface vehicles?",
+          "subsubsections": [],
+          "text": "In the world of ASVs, coordinated control techniques are pivotal for effectively managing and operating multiple vehicles synchronised. The variety of control methods employed in this domain reflects the complexity and diversity of tasks that ASVs are expected to perform. This review categorizes the control techniques into several distinct groups, each supported by numerous references that demonstrate their application in the field, as shown in Table 8.\n\nA quantitative analysis of this table reveals a large and diverse landscape of control techniques applied to ASV coordination, where the techniques aimed at maintaining the stability of the controllers (Lyapunov) with more than 70 different references and the techniques focused on adaptive control with more than 40 references stand out above all. This fact has its logic due to the need to correct uncertainties in mathematical models for real implementations. The use of non-linear models also adjusts to the fact that the most used techniques are focused on Lyapunov.\n\nAmong the commonly used techniques, controllers based on back-stepping, neural networks and radial basis functions stand out. These trends are explained above all due to the non-linearities of the ASV models, as well as the rise of machine learning techniques. At a more moderate level, techniques based on sliding modes, robust control, predictive control and those based on extended-state-observer stand out.\n\n**Table 8**\nComparison of control techniques and their associated references\n\n{{TABLE:tbl_06}}\n\n**Figure 2: Development of Control Techniques, 2007-2023**",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_06"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. RQ.1.1: What are the limitations and advantages of the different techniques?",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1. Non-diagonal inertia matrices",
+              "parent_subsection_id": "s_3_2",
+              "text": "The main difficulty in controlling underactuated ships is that they are not actuated in the sway axis [W2010956689]. In the majority of the articles reviewed, about 80% the mass and damping matrices for ships are presumed to be diagonal. Such restrictive assumptions would necessitate the ship being akin to a semi-submerged sphere [W2010956689]. However, in practical terms, these assumptions do not entirely apply to real ships. This is evidenced by the fact that only 2 out of 17 experimental studies accounted for this limitation (see Table 10).\n\nFor this reason, non-diagonal inertia matrices in ASVs present a nuanced challenge in control system design. Diagonality in these matrices typically allows for the decoupling of specific dynamics from others, significantly simplifying the development of control systems. However, when this condition is not met, it tends to exacerbate existing issues, particularly with yaw control.\n\nIndeed, when the inertia matrix is diagonal, sway and yaw dynamics are decoupled, aiding the yaw controller design to some extent. Yet, simulations have shown that this decoupling does not entirely mitigate the problem of sway generation during turns, a phenomenon that remains uncontrollable. The work of Do and Pan [W2010956689], stands out for its thorough explanation of this issue and offers a potential solution, according to the literature and simulations conducted thus far. In fact, many authors of the aforementioned percentage papers recognized difficulties caused by the nonzero off-diagonal terms of system matrices. They neglected these terms and left the topic of dealing with these terms for a future work.",
+              "citations": [
+                "W2010956689"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2. Consideration of uncertainties",
+              "parent_subsection_id": "s_3_2",
+              "text": "In the realm of ASVs, the ability to maintain coordinated control in the face of environmental disturbances is paramount. Below it delves into the various types of disturbances that can affect the performance and operational effectiveness of ASVs participating in cooperative tasks. Disturbances, by nature, introduce unpredictability and complexity to the control systems of ASVs, demanding robust and adaptive control strategies to mitigate their effects. Environmental factors such as wind, waves, and currents pose significant challenges to maintaining formation integrity, trajectory tracking, and overall mission success. In Table 9, it is highlighted which articles consider certain factors as disturbances and which do not. Among the distinct types of disturbances considered are:\n\n- General disturbances encompass any external, non-specific factors that may affect the behavior or trajectory of autonomous vehicles, such as environmental variability, modeling errors, or inaccuracies in sensors and actuators.\n- Wind disturbances are aerodynamic forces and moments generated by air movement that can alter the direction, speed, and stability of surface autonomous vehicles.\n- Wave disturbances result from changes in the water surface, usually caused by wind, that can affect the navigation and stability of marine vehicles, inducing unwanted movements and trajectory variations.\n- Current disturbances refer to variations in the underlying water movement that can influence the speed and direction of autonomous surface vehicles, requiring control adjustments to maintain a desired trajectory.\n- Connection disturbances refer to operational disruptions stemming from physical connections, such as tethers or cables, between vehicles. These disturbances are pivotal in scenarios where ASVs are linked, as they can significantly affect formation dynamics and the execution of coordinated tasks.\n- None, if none of the aforementioned disturbances are considered.\n\nThe presence of studies that concurrently consider wind, wave, and current disturbances highlights the importance of addressing these factors in an integrated manner, given their interplay and combined impact on vehicle behavior. This holistic approach is crucial for developing more robust and adaptable control systems capable of handling the complexities and dynamics of the marine environment. Papers with this feature are [W2112618878], [W2957590566], [W3122200307], [W2722897766], [W1866654860], [W3173516246], [W4225615381], [W4296916442], [W3155023584], [W4292088823]. The wide array of references considering general disturbances indicates a common approach in the literature to evaluate the robustness and effectiveness of control algorithms under varied and unspecified perturbations. It is worth mentioning that only one article was found in the category of connection disturbances [W2134420023], where the two vehicles are connected by a floating flexible rope.\n\n**Table 9**\nDisturbances considered\n\n{{TABLE:tbl_07}}",
+              "citations": [
+                "W2112618878",
+                "W2957590566",
+                "W3122200307",
+                "W2722897766",
+                "W1866654860",
+                "W3173516246",
+                "W4225615381",
+                "W4296916442",
+                "W3155023584",
+                "W4292088823",
+                "W2134420023"
+              ],
+              "tables_in_text": [
+                "tbl_07"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.2.3. Constrained variables",
+              "parent_subsection_id": "s_3_2",
+              "text": "The explicit consideration of the constraints of the physical variables in the ASVs is frequently important to avoid problems in the control loops, damages to the hardware and undesirable dynamic behaviours at the ASV or at the whole fleet level.\n\nParticularly important is to take into account the limitations of the ASVs actuators, as problems like windup or bang-bang behaviour are easily met when these constraints are not addressed in the design of the controllers.\n\nNext, we summarize the main techniques found useful to deal with these constraints:\n\n\u2022 Tangent hyperbolic function: the tanh function can be used to map the computed control signals to the range within the saturated values of the actuator. This map is smooth and provides a gradual and continuous transition near the saturation limits, which makes it easier both to analyze and guarantee the system stability using Lyapunov theory and to avoid abrupt changes in the control signals preventing overshoots or oscillations. This technique have been applied in conjunction with adaptive controllers ([W2973904546] and [W1866654860]), barrier Lyapunov function (BLF)-based controllers [W3024021090], backstepping ([W3176668102] and [W2152343314]), and sliding-mode control [W4281255370].\n\n\u2022 Auxiliary systems: the inclusion of auxiliary systems in the control design also prevents undesirable closed-loop dynamical behaviours and yields to a smooth mapping of the control signals that makes it possible to use Lyapunov stability analysis. In this case, the reference or error signals are modified according to the dynamics of an auxiliary dynamical system, ensuring that the control input reaches saturated values smoothly and does not exceed them. Auxiliary systems have been used with adaptive controllers in [W3089037926] and [W3109767144], BLFs, and backstepping control in [W4285792307], [W4214756064].\n\n\u2022 Explicit constraints: the Model predictive control (MPC) techniques in Table 10 naturally address constrained variables introducing them directly in the set of constraints of the optimization problem that computes the optimal control inputs. These constraints may include input saturation and also saturations in the input change rate. Some BLF formulations can also explicitly include constraints. In particular, in [W4225615381] and [W4296916442], quadratic optimization problems are formulated based on control BLF to find the optimal control inputs taking into account stability constraints, safety constraints and input constraints, and the problem is solved using a recurrent neural network. Differently, [W4299348891] considers constraints in the velocities, and feedback mechanism is proposed to revise the trajectory and velocity of leaders when followers encounter velocity saturation.\n\n\u2022 Other techniques: In [W4313012923], a nonlinear function capturing saturations in the input is introduced in conjunction with an adaptive controller to avoid input overload, although the effectiveness of this technique is unclear. Moreover, [W2902983944] introduces a bio-inspired velocity controller that avoids saturations in the actual low-level controller that manages the actuators. In [W2722897766], a kinetic control law based on back stepping and a projection operator makes it possible to upper bound the control inputs a priori by design. Finally, [W2161374892] considers limitations in the surge velocities and the yaw rate to accommodate the hull speed and the ship's turning radius, respectively, modifying desired velocities to match these constraints.",
+              "citations": [
+                "W2973904546",
+                "W1866654860",
+                "W3024021090",
+                "W3176668102",
+                "W2152343314",
+                "W4281255370",
+                "W3089037926",
+                "W3109767144",
+                "W4285792307",
+                "W4214756064",
+                "W4225615381",
+                "W4296916442",
+                "W4299348891",
+                "W4313012923",
+                "W2902983944",
+                "W2722897766",
+                "W2161374892"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.2.4. Unmeasured states",
+              "parent_subsection_id": "s_3_2",
+              "text": "One of the initial steps in designing any controller is to understand the available information during each time instant, along with its reliability. Although in numerical validation this may not be a decisive factor, if one intends to bring a controller to experimental validation, it becomes a vital consideration. Despite the continuous evolution of sensor technology, challenges still exist in accurately measuring velocity or disturbances in real-time. This has led to the proposition of approaches where from the design stage, it is assumed that some information is not available and needs to be reconstructed. For this purpose, two main approaches have been identified: the use of state observers or machine learning techniques. However, in this section, we will focus on the former branch, leaving the latter for Section 3.5.\n\nOut of the 125 articles, 32 take into account unmeasurable states and implement a different approach than machine learning to address them. Among them, 21 articles utilize extended state observers with various variations, 6 employ Disturbance-Observer-Based methods, and finally, 5 implement High-Gain Observer techniques. On the other hand, among the variables that are most commonly reconstructed are various external disturbances, own or other agents' velocities, positions and orientations of neighbors or targets, or the unknown sideslip. Below, there is a summary of each of these approaches and how they contribute to the coordinated control system.\n\nDisturbances are one of the most challenging variables to measure and have a direct impact on vessel behavior. The use of Disturbance-Observers allows estimating these values from position or velocity measurements and also compensating them in control. Some examples of this can be found in [W2060471193], [W2330745128], and [W3173516246], where the estimated values are included in control to compensate for disturbances such as wind, currents, and sea loads. On the other hand, [W4312827573] implements a similar nonlinear observer, but this time it works in conjunction with a sliding-mode controller. Finally, an innovative approach is presented in [W2914860046], where Minimal Learning Parameters are included to enhance the observer's performance, thus proposing an adaptive finite-time disturbance observer.\n\nSimilarly, high-gain observers are primarily used for the estimation or reconstruction of velocities, which in many cases are difficult to measure accurately. For instance, [W3010897200] and [W4281643371] implement this type of observer in followers aiming to estimate or reconstruct the velocities of leaders, integrating this information with tan-type BLF controllers. This is akin to [W2762304185], where a fast convergent observer was designed. Conversely, [W2799324069] implements the observer in the leader to estimate the follower velocities, and finally, [W4214756064] implements it locally to estimate the own velocity and achieve feedback.\n\nTo conclude, extended state observers are the most commonly used, primarily due to their robustness, to the extent that some authors implement more than one within their control schemes. This is evident in cases like [W4285287000] and [W3156556499], where two observers are included, the first focused on disturbances and uncertainties, and the second focused on reconstructing the velocities and positions of the target. Another approach is the implementation of reduced-order extended state observers, which in [W2722897766] was used to estimate the unknown sideslip and thus compensate for the undesired effect of increasing sway. Regarding control techniques, it is evident that observers have been integrated with various control techniques. For example, [W3193458730] designs an observer to calculate disturbances and integrates it with MPC, while [W4296916442] implements the observer to estimate velocities and integrates it with BLF.",
+              "citations": [
+                "W2060471193",
+                "W2330745128",
+                "W3173516246",
+                "W4312827573",
+                "W2914860046",
+                "W3010897200",
+                "W4281643371",
+                "W2762304185",
+                "W2799324069",
+                "W4214756064",
+                "W4285287000",
+                "W3156556499",
+                "W2722897766",
+                "W3193458730",
+                "W4296916442"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "3.2.5. Collision avoidance and Connectivity preservation",
+              "parent_subsection_id": "s_3_2",
+              "text": "In this subsection, we will address jointly two problems that, initially, may appear to lack a direct connection. However, after the second phase of the present review, a clear relationship between them was evidenced due to the mathematical approach to solving them. In this approach, collision avoidance is addressed as a minimum or safe distance between agents, while connectivity preservation is defined as a maximum distance, with both constraints remaining constant over time. However, there is a set of articles that do not address them simultaneously. Therefore, the aim is to highlight both the techniques or approaches that address them jointly and those that treat them independently, particularly collision avoidance. Out of the 125 articles, 19 address both problems simultaneously, and there is a clear recurrence in the use of the Barrier Lyapunov Function (BLF) technique within this group, with a total of 12 articles implementing it. However, some details vary among different authors.\n\nFor example, [W3108271477], [W2285949792], [W3136344416], [W3010897200], and [W4281643371] incorporate tanh type BLF to handle constraint requirements within the range generated by a LOS scheme, contributing to achieving the desired formation. Another similar case is [W2986861550], who implements two tanh-type BLFs to keep the formation error within a predefined range. On the other hand, [W3155905652] and [W3110363133] also use LOS to generate constraints but implement Asymmetric Barrier Lyapunov Functions to handle them.\n\nAlthough the LOS scheme is widely used in various articles, other interesting approaches found in the literature that are also capable of satisfying both constraints are: [W4225615381] formulates constrained quadratic optimization problems using Lyapunov functions, high-order control barrier functions, and stable reduced-error observers to generate control actions without violating input constraints, stability, and safety. On the other hand, in [W4299348891], a strategy is implemented to handle collision and connectivity constraints by transforming the error into a dynamic surface through the creation of a dynamic surface that ensures stability with Lyapunov barrier functions.\n\nAmong the articles addressing these constraints simultaneously, the control schemes proposed in [W4296682687], [W3190445033], and [W3214458582] stand out. [W4296682687] formulates a Nonlinear Model Predictive Control (NMPC) with connectivity preservation and collision avoidance as a quadratic optimization problem with input and output constraints, while [W3190445033] and [W3214458582] employ the Prescribed Performance Control (PPC) methodology to ensure both constraints. It is important to note that these articles are the only ones that do not use Lyapunov barrier functions to tackle these constraints. Additionally, the constraints proposed in [W2040572242] and [W2285949792] are noteworthy, where the main variation is the addition of a field-of-view constraint. This is because the leader's information is not transmitted directly from the leader but measured by local sensors in the follower.\n\nOn the other hand, out of the 125 articles, 25 address collision avoidance without considering connectivity preservation. There is a clear recurrence of the artificial potential functions technique within this group to address this problem, with a total of 16 articles implementing it. The main difference among this group of articles lies in the technique they are combined with to complete the control scheme. Some examples include [W2076085918] and [W2979715977], where adaptive controls are used, or [W2060471193] and [W3176668102], where they are combined with backstepping, or [W2969058695], [W4229068747], [W2611792769], and [W2939154671], where they are combined with sliding mode techniques.\n\nContinuing the analysis of the remaining 9 articles, the use of techniques such as Null-Space-based Behavioral (NSB) in [W2134420023] and [W3175985899] is highlighted. In addition to including collision avoidance, other tasks are defined, such as ensuring distance between vehicles. Although this approach is less common, it can be adapted to more complex tasks with different objectives and priorities. Additionally, Model Predictive Control is employed in [W2110654297], [W3193458730], and [W4285260440], where distance constraints are included. Reinforcement Learning is also utilized in [W4289874348] and [W4281255370]. Finally, an innovative approach compared to the previously mentioned ones is implemented in [W4206086137], which is based on elliptic boundary cycles.",
+              "citations": [
+                "W3108271477",
+                "W2285949792",
+                "W3136344416",
+                "W3010897200",
+                "W4281643371",
+                "W2986861550",
+                "W3155905652",
+                "W3110363133",
+                "W4225615381",
+                "W4299348891",
+                "W4296682687",
+                "W3190445033",
+                "W3214458582",
+                "W2040572242",
+                "W2076085918",
+                "W2979715977",
+                "W2060471193",
+                "W3176668102",
+                "W2969058695",
+                "W4229068747",
+                "W2611792769",
+                "W2939154671",
+                "W2134420023",
+                "W3175985899",
+                "W2110654297",
+                "W3193458730",
+                "W4285260440",
+                "W4289874348",
+                "W4281255370",
+                "W4206086137"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_6",
+              "subsubsection_index": 6,
+              "subsubsection_label": "3.2.6. Communication considerations",
+              "parent_subsection_id": "s_3_2",
+              "text": "In most articles, the number of vehicles and the information shared among them is not a limitation, primarily because their validations are numerical simulations. However, a first step towards reality is to propose communication topologies where information is not shared with all agents but only with some neighbors or the leader. Broadcast communication, although used in fleet control, can lead to problems such as information redundancy, causing network nodes to receive redundant and non-useful information, not to mention the energy cost of generating it. On the other hand, communication topologies with neighbors or through graphs ensure that each node receives essential information to calculate its control actions based on the information from its closest neighbors, aiming to avoid collisions and preserve formation or safe distances between vehicles. Similarly, communication with neighbors or the leader reduces interference and can be more scalable as the number of vessels in a fleet increases.\n\nNevertheless, although many of the reviewed articles implement communication among neighbors or with the leader, as mentioned in Section 3.4, this section will address other considerations related to communications. These include approaches such as reducing shared information, asynchronous communications, communication delays, bandwidth reduction towards actuators, and real-time optimization of topologies.\n\nAmong the articles considering bandwidth, the commonly used approach is asynchronous transmission. This mechanism dynamically adjusts the frequency of data transmission or reception towards neighbors or leaders based on the change or variation of some variable. Its main objective is to improve efficiency and management in information exchange without compromising the performance of coordinated control. For example, [W4292158391] and [W4283321896] implement asynchronous communications where they update the position and angle of each agent based on the change in velocity, while [W3190445033] updates values based on the variation in control action between each instant. Another case is presented in [W4285287000] and [W3156556499], where state observers are used to estimate the position and velocity of the target, and event triggers are designed to update information based on the error. On the other hand, [W3214567980] and [W4296204195] perform updates based on a local path variable predictor and the internal dynamic auxiliary variable, respectively.\n\nAnother less direct approach is reducing transmitted information through state estimation. For example, [W3089037926] implements a virtual leader through which it estimates the velocity of the real leader based on its position and orientation. Similarly, [W3010897200], [W4284973780], and [W3155023584] propose the use of state observers in followers to estimate the velocities and positions of the leaders. It is important to highlight that the latter two utilize neural networks for their estimation. On the other hand, [W2066999351], [W2971793436] and [W4312661087] assess the robustness of their controllers against communication delays and packet losses. Finally, an innovative approach is presented in [W4296682687], where the Floyd method is included to optimize the topology in order to achieve optimal online communication.\n\nTo conclude with communication optimization, another approach identified in the literature is the reduction or optimization of transmissions to actuators or updates in control actions. Although this differs from communication between fleet agents, this strategy may be of interest in other applications where computational capacity is a limiting factor or where periodic variation in control actions is undesirable. An example of this is implemented in [W3025761030], where control actions are enabled based on their change from the previous instant. This is very similar to the proposal by [W3214567980], which additionally uses Event-Triggered mechanisms for changes in actuators and state estimation.",
+              "citations": [
+                "W4292158391",
+                "W4283321896",
+                "W3190445033",
+                "W4285287000",
+                "W3156556499",
+                "W3214567980",
+                "W4296204195",
+                "W3089037926",
+                "W3010897200",
+                "W4284973780",
+                "W3155023584",
+                "W2066999351",
+                "W2971793436",
+                "W4312661087",
+                "W4296682687",
+                "W3025761030"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_7",
+              "subsubsection_index": 7,
+              "subsubsection_label": "3.2.7. Other considerations",
+              "parent_subsection_id": "s_3_2",
+              "text": "Finally, we will address some less common but significant considerations that are worth mentioning due to their impact on framing future work. For instance, the proposition of control laws with 4 degrees of freedom including Roll is an example. While most authors simplify to 3 degrees of freedom for planar motion control, it cannot be denied that the rolling angle and its velocity can become destabilizing factors under certain disturbances, particularly in vessels equipped with a rudder to control yaw. For this reason, [W4281255370] proposes mitigating the effects of roll motion by employing a rudder stabilization strategy through the implementation of a finite-time Sliding Mode Control (SMC) scheme based on Reinforcement Learning (RL). In this same approach, a consideration that few authors have addressed is also included, such as the actuator delay, which can affect the performance of the controllers. To counteract this, the Pade approximation strategy and Laplace transform are used, defining an auxiliary variable to compensate for the actuator delay.",
+              "citations": [
+                "W4281255370"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. RQ.2: Which are the most important characteristics about techniques that have been experimentally tested?",
+          "subsubsections": [],
+          "text": "The aim of this section is to gain insights into the progress and state of the art of proposals that have been applied and validated in real-world settings and diverse contexts, and therefore this section focuses on those papers that underwent experimental validation. This issue becomes particularly relevant when verifying the number of papers that have been experimentally validated. Out of the 125 final articles, only 17 present experimental results. This demonstrates a clear research gap, which can be attributed at first glance to the challenges of implementing control algorithms on real autonomous platforms, due to complexity and associated costs and resources.\n\nNonetheless, in recent years, there has been a clear increase in the design of various new models of ASVs or Unmanned Surface Vehicle (USV)s, as evidenced in [W3174398482]. This suggests that other factors may hinder the implementation and validation of different control algorithms. Based on the discussion in Section 3.2, it can be concluded that many of the assumptions made during the design phases of the controllers are significant. This implies that numerical validation in a controlled environment, where the limitations and disturbances of the system are well defined, may be feasible. On the other hand, experimental validation, where various external factors exist, is more complex and presents different challenges that need to be considered in both pre- and post-validation phases.\n\nUpon examining Table 8 in the experiments section, it is evident that the most recurring assumptions in the literature are uncertainty and variable constraints, with 6 and 7 articles, respectively. It is imperative to consider these assumptions in a control system that will face uncontrollable external conditions or factors and also presents physical limitations. Furthermore, it is relevant to highlight assumptions such as non-diagonal M, communication bandwidth, or connectivity preservation, which also impact controller performance and can be mitigated with a symmetrical design in ASV models to reduce uncertainty in non-diagonality or by limiting the number of vessels to avoid bandwidth saturation during experiments.\n\nSimilarly, actuator faults or input delays are the least frequent assumptions within the experimental articles. For both cases, these assumptions may be easily negligible or controllable during short-duration experiments. However, they gain importance when considering robust systems capable of performing long-duration tasks or operating in adverse environments. A similar situation arises with disturbances caused by wind, waves, or currents, which are not directly controllable during outdoor experiments. Nonetheless, it is feasible to mitigate their impact by selecting time intervals when environmental conditions are favorable and minimally affect controller performance.\n\nContinuing with the analysis of experimental validation and its applications, Table 11 presents relevant information from the 17 articles. This includes the proposed control approach, the application, the environment or experimental setting, reference trajectories or paths, a brief description, and the number of vessels used during the experiment. Although these validations, in general, are not framed as tests where vessels must perform a specific task, it is worth noting the case of [W2134420023], where the main objective is to capture an object using a rope connected to two boats and transport it to a specific sector.\n\nWhen analyzing the various control approaches in the experimental articles, it proves challenging to identify clear recurrences or trends. However, techniques such as sliding mode, Lyapunov, and adaptive control have been widely applied. In contrast, nonlinear approaches or MPC are less common in this type of validation. Nonetheless, the presence of PID or fuzzy controls is notable. Despite being simpler and less robust than other techniques, they have been successfully implemented in real tests, where faster response times and processing are required. Another commonly used technique in experimental validation is extended state observers, which are often utilized to estimate unmeasurable velocities or disturbances. This proves very useful in platforms with limited sensors, as seen in [W2963631491], or for optimization in communications, as demonstrated in [W3214567980] and [W2966893381].\n\nRegarding the applications, they have been identified and grouped into four main categories: leader-follower, formation (triangular, diamond, parallel), surrounding control, and channel boundaries, with formation being the most recurrent. It is important to note that the main difference between the channel boundaries applications and the others lies in their consideration of navigation limits, aiming to ensure that the formation adapts without colliding with them. Although coordinated leader-follower techniques, as described in [W3037008193], or formation tracking, as mentioned in [W4226342866], are proposed to achieve this goal, among all the previously mentioned classifications, the latter is one that takes into account more realistic factors, such as fleet mobilization through port channels or narrow streets.\n\nIn contrast to simulation validation, where disturbances are defined and known, experimental validation primarily depends on the test site and the weather conditions at the time of evaluation. Upon examining various locations, it is evident that lakes are preferred for this type of validation, primarily due to the presence of disturbances such as waves, wind, and currents, which, compared to other environments, are of lesser magnitude. On the other hand, the two additional options represent opposing extremes: validation in indoor pools, where external disturbances are virtually negligible, and testing in open seas, where disturbances are considerably more aggressive and require more robust equipment to withstand them.\n\nAnother important aspect of the existing experimental validations is the number of vehicles composing the fleet and the reference trajectories or paths to follow. Concerning trajectories, the article presenting the most complex ones compared to others has been [W4367663218], which proposes tracking Euclidean curves in the plane. However, one of the main reasons why this complexity is possible may be due to disturbance control indoors. In general, reference trajectories are not more complex than straight lines, curved arcs, or smooth curves. Regarding the number of vehicles, it is evident that the most frequent numbers are 4 or 3, with [W2152343314] being an outlier, where the actual fleet consists of only one boat, and two virtual ones are used to complete the validation set-up.\n\nIt is noteworthy to highlight the presence of 5 articles implementing a circulating control. Although this application faces different challenges compared to following a predefined trajectory, it offers a wide range of real-life applications, such as maritime security, military applications, or search and rescue missions. A study addressing validation closely related to some of these applications is [W3134710221], where three vessels manage to reach, encircle, and rotate around a virtual target. On the other hand, study [W3034625574] proposes a control system capable of reaching one or more targets and maintaining a square formation around them while escorting.\n\nAnother essential element in validating control algorithms is the vessels themselves. While these can be classified in various ways, this review will focus on the characteristics outlined in Table 12. It is observed that the number of boat models is even more limited than the number of articles. Some of the most recurring vessels are the Huster-12 and 0.3 models, each mentioned in three articles. Both vessels feature similar hull designs but differ in size; the former being a medium-sized model, suitable for tackling outdoor environments such as lakes or rivers, while the latter is a small model used for indoor testing with force limitations.\n\nFrom a design or hull shape standpoint, most vessels have a very similar design, primarily monohull. However, the case of the DUCKLINGS presented in [W3103837574], which are catamarans, stands out. Although both designs have their advantages and disadvantages, some of the main differences lie in their stability against disturbances, speed, and cargo capacity. It could be argued that catamarans are more suitable for applications requiring strength and calm waters, while monohulls are more commonly used in applications demanding speed and facing stronger currents.\n\nWhile not all documents provide a detailed technical description of the vehicles, eight of the eleven models mentioned in the Table 12 have medium size and weight, allowing them to perform tasks outdoors but with limitations in cargo and force. In contrast, the Odin and Frigg models presented in study [W3175985899] are large-scale, capable of carrying up to 2 persons and performing maneuvers in open sea thanks to their waterjet propulsion system. A similar case is observed with the Jellyfish used in [UNMAPPED:62], which could also transport at least one person and, due to their design, face adverse conditions. It is important to note that these models were the only ones capable of validating their algorithms in open sea and with global route planning.\n\nWhen delving into the architecture of different vessels, four main components can be identified: power supply, processor, actuators, and sensors. Since experimental validations are often short-term exercises, the characteristics of the power supply are not frequently highlighted; however, in study [W2134420023], a service duration of approximately 12 hours is specified. This service duration has a direct relationship with the effort and speed of the vessels. However, in most of the reviewed documents, the reference speeds do not exceed 5 m/s, except for those using the Huster-12 model.\n\nIn underactuated ASVs the most commonly used actuators are a combination of two thrusters, allowing for differential movement, or a combination of rudder and thruster. In comparison, the latter, although simpler, presents greater constraints regarding rotation and movement. On the other hand, the most implemented sensors are IMUs and GPS, followed by sensors such as cameras, radars, or Light Detection and Ranging (LIDAR), with the latter being widely used for obstacle detection.\n\nTo conclude this section, it is worth mentioning that although communication among ASVs has been the subject of extensive research, there is a clear deficiency in experimental validation. While documents with numerical validations propose the use of 7 or more agents, as is the case in [W3016048010], experimental validations are limited to fleets of 4 or fewer, using communication techniques such as Wireless or Zigbee. Although these technologies have high consumption, they offer sufficient bandwidth to transmit the desired information among the different vessels, without representing a significant restriction in the validation process.\n\nSimilarly, it is evident that the limited number of agents in the experimental validations has not been sufficient to assess the impact of communication topologies on fleet controller performance and to identify potential bottlenecks such as medium access or broadcast interference. An example of this is the [W2966893381] study, where three agents and one leader were implemented with 433M Wireless communication among neighbors or with the leader, within a range of 125 meters. The author acknowledges the importance of evaluating the impact of message loss or connection loss in future work.\n\nRegarding communication topologies, there is a clear preference for neighbor-to-neighbor communication in experimental validation. However, given the number of agents in the fleets, broadcast communication among all agents could be a viable option, improving message uniformity, reducing delivery times, and covering a larger area. An example of this is the work by [W4226342866], where a fleet of three agents navigates through a narrow channel, obtaining distance measurements via Wireless communication. Although this experiment was conducted indoors, a potential research direction would be to evaluate the same system with more agents to understand the limits of broadcast communication and assess the impact of interference on fleet controllers.\n\n**Table 10**\nLimitations and advantages of the different techniques for each article\n\n{{TABLE:tbl_08}}\n\n**Table 10 continued**\n{{TABLE:tbl_09}}\n\n**Table 10 continued (Experiment section)**\n{{TABLE:tbl_10}}",
+          "citations": [
+            "W3174398482",
+            "W2134420023",
+            "W2963631491",
+            "W3214567980",
+            "W2966893381",
+            "W3037008193",
+            "W4226342866",
+            "W4367663218",
+            "W2152343314",
+            "W3134710221",
+            "W3034625574",
+            "W3103837574",
+            "W3175985899",
+            "W3016048010"
+          ],
+          "tables_in_text": [
+            "tbl_08",
+            "tbl_09",
+            "tbl_10"
+          ],
+          "citations_unmapped": [
+            "62"
+          ]
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. RQ.3: Which coordinated control methods are used in each scenario, taking into account the influence of method configuration and communication topology?",
+          "subsubsections": [],
+          "text": "In addressing the coordinated control methods used in ASVs, this review dissects the prevalent coordination strategies in what follows (see Table 13):\n\n- Leader-Follower: This approach involves a designated leader ASV guiding the movement of follower ASVs. The followers maintain a predefined position and orientation relative to the leader, adapting to its changes in trajectory. This method, evidenced by multiple references, is widely used due to its simplicity and effectiveness in structured environments.\n\n- Flocking: Inspired by the natural behavior of birds, flocking algorithms enable ASVs to move as a cohesive group without a fixed formation, adjusting their paths based on the position and velocity of their neighbors. This method, supported by many studies, offers flexibility and scalability, making it suitable for scouting and surveillance tasks. The fundamental rules of flocking, which promote this coordinated behavior, are threefold:\n - separation: avoid crowding by maintaining a comfortable distance from neighbors;\n - alignment: move in roughly the same direction and speed as nearby neighbors;\n - cohesion: stay close to neighbors to move as a group.\n\n- Formation Control: This technique allows multiple ASVs to maintain a predefined geometric shape while moving. It is characterized by its robustness and adaptability to dynamic environments, as seen in extensive research. The large number of references highlights its popularity and broad applicability in tasks requiring coordinated precision.\n\n- Formation Maneuver: Extending beyond static formations, this method focuses on the coordinated transition between different formations while considering the kinematic and dynamic constraints of ASVs. References illustrate its application in complex navigational tasks, where adaptability and precision are crucial.\n\n- Containment Control: In this strategy, a subset of ASVs, known as leaders, guide the overall group within certain boundaries, while the rest, the followers, ensure they remain within the leaders' formation. This method, although less cited, is useful for tasks requiring the ASVs to operate within constrained areas.\n\n**Table 13**\nClassification of formation control strategies\n\n{{TABLE:tbl_11}}\n\nAnother important aspect considered in the review is the classification of existing coordinated control methods for ASVs based on various types of reference signals. Table 14 provides a comprehensive overview, delineating these methods into four primary categories:\n\n\u2022 Trajectory-Guided Coordinated Control (TRCC): This method focuses on guiding a group of surface vehicles to follow one or multiple time-specific predefined trajectories. The implementation can be centralized, where all vehicles have access to the trajectory data, or distributed, where vehicles rely on exchanging information to maintain formation. In distributed settings, each vehicle gathers data from its neighbors through communication or sensors, necessitating consideration of individual vehicle dynamics and the constraints of communication networks. The significant number of references underlines the popularity and effectiveness of TRCC in ensuring coordinated movement with high temporal and spatial fidelity.\n\n- Path-Guided Coordinated Control (PACC): The aim here is to navigate a group of surface vehicles along predefined paths in a specific formation and at a set speed. This approach can be split into two main types: one where the path information is fully known and another where it's partially known. In the fully known scenario, control laws ensure each vehicle aligns with its path, and a distributed law updates path variables to coordinate the formation, including tasks like synchronization and containment. This often requires centralized planning for each vehicle's path. In the partially known scenario, the lack of complete path information for every vehicle necessitates a distributed control approach. The diversity of references in this category reflects the adaptability of PACC to various operational contexts, from structured environments to more dynamic, unpredictable settings.\n\n- Target-Guided Coordinated Control (TACC): This strategy involves aligning one or more surface vehicles into a formation to track one or multiple targets, differing from trajectory tracking by not having predefined velocity and acceleration data. Instead, target details such as speed and direction might need to be estimated collaboratively due to sensing or communication limits, ensuring consensus among the vehicles. The references under TACC demonstrate the method's reliance on robust estimation and control algorithms to compensate for the uncertainty and variability inherent in tracking moving targets.\n\n- Formation Stabilization Cooperative Control (FSCC): Unlike other methods that may involve following a leader or a specific path, FSCC's sole purpose is to position ASVs into a predetermined formation and maintain their positions stably without further movement. It is currently the least encountered method in the literature.\n\n**Table 14**\nClassification based on reference signal type\n\n{{TABLE:tbl_12}}\n\nTo effectively navigate the complexities of coordinated control in ASVs, it is crucial to understand the underlying communication aspects. On the one hand, communication topologies determine how individual ASVs within a fleet share information and make collective decisions, significantly affecting the system's robustness, flexibility, and efficiency. Table 15 classifies the primary communication topologies identified in this research, from fully connected networks where all units communicate with each other, to more structured systems such as leader-based and neighbor-based systems.\n\nOn the other hand, a clear distinction emerges between synchronous and asynchronous communication. Synchronous methods, known for their coordinated timing in communication and operations, are predominant. Within this category, the 'neighbour' topology is particularly notable, highlighting a decentralized approach where each ASV exchanges information locally with adjacent vehicles. This strategy enhances scalability and adaptability, which are vital in dynamic maritime settings. Closely following is the 'leader' topology, employing a more hierarchical structure to provide explicit guidance and coordination. Furthermore, the 'asynchronous' category includes the aperiodic communication methods, which, are less comparatively studied in the literature but can result in efficiency in the bandwidth usage and prevent delays by reducing the communication rates. The limited references to asynchronous topologies indicate an emerging interest, suggesting potential avenues for future research and development in ASV coordinated control systems.\n\n**Table 15**\nCommunication topologies\n\n{{TABLE:tbl_13}}\n\nFollowing the discussion on communication aspects, it is crucial to understand not only the type of information exchanged between them but also the self-knowledge each ASV possesses. In Tables 16 and 3.4, when detailing information, \"p\" refers to position, \"a\" to angle, \"s\" to speed, \"ca\" to control action, and \"gt\" stands for guidance-targets, which involves the transmission of objective points. Finally, with the abbreviation \"N/S,\" it is understood to mean \"Not Specified.\" Only in [W4367663218] and [W3009423519] do the ASVs exchange guidance-targets.\n\nIn addition, Tables 16 and 3.4 compile, for each reference, additional details such as the type of transmission (synchronous or asynchronous), the coordinated control method, and the architecture of the coordinated control system. Figure 3 illustrates the distinct characteristics of these three architecture types. In the centralized architecture depicted in Figure 3 a, a smart network incorporates a central data fusion hub, allowing each ASV to exchange data with this central hub. Figure 3 b outlines the decentralized topology, characterized by the presence of multiple fusion centers that can communicate with each other, while direct communication between ASV is absent. Finally, Figure 3 c depicts the distributed system, where ASV must interact directly with each other, sharing their data across a network to collectively gather insights about the entire system.\n\n**Figure 3: Differences between centralized, decentralized and distributed system architecture**\n\nAnother column is dedicated to the associated coordinated control method, as well as the control technique utilized. Furthermore, the tables are divided according to formation control strategies.",
+          "citations": [
+            "W4367663218",
+            "W3009423519"
+          ],
+          "tables_in_text": [
+            "tbl_11",
+            "tbl_12",
+            "tbl_13"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5. RQ.4: What machine learning techniques, including deep learning and other neural networks, are used and for what purposes?",
+          "subsubsections": [],
+          "text": "To initiate the discussion on the utilization of machine learning, an initial screening was conducted, where only papers employing such techniques were identified. Out of the 125 articles analyzed, 48 employ some form of machine learning technique. Regarding a temporal analysis, it is observed that 33 out of the 48 papers were published between 2020 and 2023. This finding constitutes clear evidence of the current trend towards the implementation of these techniques in fleet management. However, for a more detailed analysis, a discussion will be presented below on the techniques used in each paper and the problems they aim to address within coordinated control.\n\nTable 17 presents the 48 identified papers divided according to the coordinated control technique. Homogeneity in their application is evident, although at first glance, it appears that they are more commonly used in formation control. This is mainly due to the number of papers addressing this type of coordinated control. However, it is clear that these techniques contribute to the challenges faced by each type of control, making them scalable for various applications and turning them into one of the most widely used tools today.\n\nPerforming a similar analysis to question 1, we have identified the challenges addressed by different machine learning techniques, classifying them into 8 groups:\n\n- Model uncertainties: Techniques used to identify or compensate for errors in modeling.\n- Disturbances: Techniques enabling the calculation or understanding of external disturbances unrelated to the vessel.\n\u2022 Formation: Techniques directly contributing to the performance of coordinated control.\n- Input Gains: Techniques for calculating actuator gains to achieve desired forces and torques.\n- Actuator faults: Techniques for detecting and responding to faults in actuators.\n- Dynamic Control: Techniques contributing to the control of linear and angular velocity per agent.\n- Estimate: Machine learning techniques for estimating the state of neighboring vessels.\n\u2022 Trajectory: Techniques for calculating or improving reference trajectories.\n\n**Table 17**\nMachine learning techniques and their applications\n\n{{TABLE:tbl_14}}\n\nBelow, we include a summary of the approaches taken by various papers, considering machine learning techniques and how each one addresses different problems. In general, the following techniques were identified and grouped:\n\n- Neural networks, which encompass techniques such as Wavelet Neural Network (WNN) or Single Hidden Layer Neural Networks (SHLNN), among others.\n- Radial Basic Function Neural Networks (RBF-NN), which, although could be grouped within the previous category, have been treated individually due to their widespread use.\n\u2022 Minimal Learning Parameter (MLP)\n\u2022 Reinforcement Learning, being the least utilized.\n\nTaking a closer look at the challenges faced by machine learning techniques, it is evident that model uncertainties constitute over 80%, being the most common objective in the use of machine learning. However, each article takes a different approach. For instance, [W3085629799] proposes a two-layer approach, with the first layer handling distributed control and a second layer managing force and torque control. In this case, adaptive control is implemented, where local neural networks are capable of estimating parameters to enhance behavior and performance. This approach is quite similar to that of [W3136344416], where a neural network is also proposed to adjust error weights based on velocity measurements, enhancing the performance of Dynamic Surface Control (DSC).\n\nThe second most frequently addressed challenge by machine learning techniques is external disturbances, which, in most cases, are grouped and simultaneously considered with model uncertainties, as disturbances can directly affect the latter. However, as mentioned in section 3.2.2, disturbances can vary depending on their environment and affect fleet behavior differently. Therefore, works such as [W4299348891], where a neural network with a filter was implemented to exclusively identify disturbances, or [W2972849724], where an adaptive neural network is proposed to estimate and pre-compensate for them in control, highlights the importance and contributes to understanding the impact of these disturbances on fleet control.\n\nIn comparison to other neural networks, Radial Basic Function Neural Networks have been widely utilized in fleet control, particularly in dynamic control layer, due to their processing time, low susceptibility to overfitting, and ability to identify unknown nonlinear functions. For instance, in [W4297533945], this technique is employed to estimate model uncertainties and external marine disturbances. However, this technique is rarely used alone and; in many cases, it is combined with other techniques to increase its robustness and improve its performance. For example, in [W4292088823], the MLP method is additionally utilized to effectively reduce computational load by estimating the upper limit of the ideal weight matrix instead of updating the entire matrix.\n\nAnother problem closely related to model uncertainties is the determination of the input gain, mathematically defined as the reciprocal of inertial terms related to mass and directly impacting the design of kinetic controllers. Although it can be encompassed as an uncertainty, some papers have addressed it separately. For instance, in [W2979715977], a neural estimator was developed to identify it, while in [W3151185582], it is calculated using RBF-NN alongside model uncertainties simultaneously. In both cases, this allows for more efficient control design and better performance.\n\nAs mentioned previously, most articles utilize machine learning techniques to identify parameters or disturbances in real-time. However, a group of works with a different approach was also identified, where machine learning techniques played a more direct role in fleet control. For instance, in [W3016048010], a distributed tracking controller based on WNN is proposed, while in [W3214458582], knowledge acquired through RBF-NN is reused to develop decentralized formation control. However, it is noteworthy to mention the proposal of [W3149053487], who employs a formation control model based on Deep Reinforcement Learning (DRL), being the only one with this approach in this review.\n\nAnother interesting approach is the use of machine learning techniques to compute control actions for actuators. Unlike previously discussed approaches, these methods do not contribute to identifying unknown parameters but rather aim to solve calculation problems while improving execution times. Examples of this approach can be found in [W4225615381] and [W4296916442], where single-layer recurrent neural networks are employed to solve quadratic optimization and enable real-time implementation. Moreover, some studies utilize multiple machine learning techniques, allowing them to address various problems simultaneously. For instance, in [W4281255370], a neural network is used to identify actuator faults, and reinforcement learning is applied to ensure formation performance without violating speed constraints.\n\nOn the other hand, an innovative yet underutilized approach in the analyzed works is the use of machine learning techniques to improve or correct trajectories. In most studies, trajectories or paths are predefined and must adhere to certain constraints to facilitate tracking. However, a different approach is proposed in [W2905326419], which employs a BLS to smooth the trajectories generated by an upper layer. This layer alone is incapable of accounting for the dynamic characteristics of the vessel or external disturbances. Still, through coupling with the BLS, it can identify model uncertainties, external disturbances, and further smooth the trajectories sufficiently to meet the necessary requirements simultaneously.\n\nTo conclude, the last approach found was the use of machine learning techniques to estimate not only uncertainties or disturbances but also to reconstruct velocities or positions from measurements of different sensors. This means that machine learning techniques not only serve to support or enhance controller performance but also include them as a fundamental part of control architectures. For example, [W3176668102] proposes a observer based on radial basis function neural networks capable of reconstructing velocities from position and angle measurements. Another similar case is [W3155023584], which implemented an observer based on neural networks to reconstruct follower velocities, reducing communication load while also capable of detecting actuator faults and compensating input gains.",
+          "citations": [
+            "W3085629799",
+            "W3136344416",
+            "W4299348891",
+            "W2972849724",
+            "W4297533945",
+            "W4292088823",
+            "W2979715977",
+            "W3151185582",
+            "W3016048010",
+            "W3214458582",
+            "W3149053487",
+            "W4225615381",
+            "W4296916442",
+            "W4281255370",
+            "W2905326419",
+            "W3176668102",
+            "W3155023584"
+          ],
+          "tables_in_text": [
+            "tbl_14"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In recognition of its significance and breadth, the reporting segment of this review has been allocated its own dedicated section. In this section, we provide a clear and detailed answer to each of the research questions that were exposed at the beginning of the review.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Detected Gaps and Future Research",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We have identified several key areas that require further exploration. Despite discussing these issues in relevant sections, it is crucial to emphasize them here to outline future research directions.\n\nA notable observation is the scarcity of experimental studies within the domain; out of the 125 papers reviewed, merely 17 delve into experimental validations. This disparity underscores a critical need for more empirical investigations to bridge the gap between theoretical advancements and their practical applicability.\n\nMoreover, the literature demonstrates that asynchronous communication among ASVs has received limited attention. Given the dynamic and often unpredictable nature of marine environments, enhancing asynchronous communication capabilities could significantly improve the robustness and adaptability of coordinated ASV operations. Some proposals for future research include the development of more robust and adaptive communication protocols utilizing advanced networking technologies such as mobile networks and satellite communication, which can be implemented in more challenging environments and allow for the assessment of their impact on fleet controller performance.\n\nAmong the experimental studies, a conspicuous deficiency is the lack of validation in diverse and challenging environments, such as rivers or areas with strong current perturbations. Such conditions are commonplace in real-world scenarios and pose significant challenges to ASV coordination, necessitating more focused research in these contexts.\n\nThe exploration of ASV designs in the reviewed literature appears to be narrowly focused, with minimal consideration given to alternative configurations like tricatamarans. Expanding the scope to include a wider variety of vessel designs could unveil novel control strategies and operational efficiencies, enriching the field with diverse perspectives.\n\nAnother aspect that requires attention in future work is the importance and impact of communications between fleet agents. Factors such as latency and link reliability are essential in experimental validation and can have a considerable impact on controller performance. Similarly, another aspect is communication security and information encryption to protect system integrity. In real-world applications, communication between agents becomes an essential factor that must be evaluated and validated experimentally.\n\nThe issue of fault detection and actuator blockage resolution in experimental validations is another critical gap. The ability to detect and mitigate failures is paramount for ensuring the safety and reliability of ASV fleets, particularly in complex coordination scenarios. Thus, this area emerges as a fertile ground for future research, aiming to enhance the resilience of ASV operations.\n\nAlthough machine learning techniques have been used in coordinated control schemes, there is a clear gap in the application of techniques such as deep learning, reinforcement learning, and deep reinforcement learning. These methods enable the proposal of deeper, feedback-based networks that enhance the robustness of control architectures. In addition to being used for parameter estimation or disturbance management, they can also be integrated into coordinated control for decision-making tasks, such as obstacle avoidance or generating speed and orientation references.\n\nFinally, there is a significant deficiency in validations involving a larger number of vehicles. Increasing the number of coordinated vessels in experimental setups could provide valuable data on the complexity and scalability of control algorithms. Additionally, this would allow for the assessment of the impact of a larger fleet on communication and the quality of information shared among agents. Factors such as medium access, communication interference, and the need for increased information traffic should be experimentally validated in larger fleets. This would not only allow for the evaluation of the scalability of communication architectures but also their direct impact on the performance of control algorithms.\n\nIn summary, while the reviewed literature lays a solid foundation in the field of ASV coordination, the detected gaps highlight substantial opportunities for future research.\n\nAt this link (https://hdl.handle.net/20.500.12412/5698), an Excel document is provided, compiling all extracted features for each article in one comprehensive table. It is made available not only for consultation but also as a foundation for future expansion and updates.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This paper offers a systematic review of the latest advancements in the coordinated control of multiple ASVs. Our study centers on underactuated surface vessels, delving into coordinated control strategies that are customized to their distinctive features. We delve into various methods, outlining their advantages and disadvantages, applications, and the specific coordinated control tactics applied in each case. Furthermore, we investigate the techniques that integrate machine learning for improved autonomous capabilities. Several gaps have been identified, highlighting areas that are ripe for future exploration.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4402403579_tables.md"
+}

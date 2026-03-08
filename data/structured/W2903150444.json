@@ -1,0 +1,786 @@
+{
+  "id": "W2903150444",
+  "metadata": {
+    "title": "Calibration and validation of accelerometer-based activity monitors: A systematic review of machine-learning approaches",
+    "n_sections": 8,
+    "n_subsections": 23,
+    "n_subsubsections": 18,
+    "n_tables": 1
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In research on physical activity (PA) and sedentary behavior (SB), precise assessment of PA and SB is essential in order to examine their relationship with various health outcomes, to assess the effectiveness of behavioral interventions, and to identify at-risk populations [W2156132533, W2084779848]. Over the past few years, objective measures, especially using wearable accelerometer-based activity monitors, have been extensively used for precise assessment of PA and SB [W2156132533, W2084779848, W2007485584]. However, robust data processing methodologies for converting accelerometer-provided data (signals) into different aspects of SB and PA, including time spent in various intensity categories, the type of activities performed, and estimate of energy expenditure (EE) have remained a non-trivial challenge [W2084779848, W2007485584, W2136019090, W1976451292].\n\nTraditionally, accelerometers have provided proprietary manufacturer-provided measures known as \"activity counts\" (AC) and researchers have mostly used (linear) regression analysis to relate AC with activity energy expenditure (AEE) [W2084779848, W1976451292]. Receiver Operating Characteristics (ROC) curve analysis is another approach that has been used for establishing activity intensity cut-points [W2778426046]. Using these relatively simple methods (referred as traditional statistical methods in the literature), several regression-based equations and sets of thresholds (cut-points) have been established for estimating EE and activity intensity [W2108707936]. Regression-based equations and cut-points have been widely used in the existing literature for the assessment of PA and SB mainly due to their transparency and simplicity of implementation [W2108707936, W1968717320, W2098450425]. However, several studies have emphasized that these methods are not accurate in the presence of a wide range of activity types in free-living settings [W2084779848, W2007485584, W1976451292, W2084298121, W2144700034].\n\nTherefore, there has been a demand for applying more sophisticated data modeling approaches [W2007485584, W1976451292, W2108707936, W2528451523, W2084878507]. There has been a shift from traditional statistical approaches towards ML-based modeling approaches, which are advanced statistical techniques with the ability to capture complicated relationships and nonlinearities in data, in order to calibrate and validate accelerometer-based activity data using either AC or raw acceleration data [W2084779848, W2778426046, W2108707936]. More recently, with the emergence of raw accelerometry, employment of more sophisticated data modeling approaches with raw acceleration data have been further emphasized [W2164365672]. It is widely accepted that raw accelerometry together with sophisticated modeling approaches, could enable developing precise data processing techniques [W2007485584, W2164365672]. Raw accelerometry has been also coupled with traditional statistical modeling approaches [W2778426046, W1689929051, W2528042246]. Hence, requests to discontinue the development of linear regression calibration equations and cut-points in order to avoid further methodological differences and discrepancies have emerged [W2007485584, W1976451292].\n\nDespite the promising shift towards ML-based modeling approaches, several parameters and issues regarding the development and use of advanced ML-based modeling approaches have still remained elusive [W2084779848, W2007485584, W1976451292, W2084878507]. The effects of parameter choices, including data type (raw acceleration data versus AC), sampling frequency, window size, input features, axes of measurement, ML technique, and accelerometer placement, to predictive ability of ML-based models have still remained unclear [W2084779848]. Similarly, the predictive accuracy and generalization capability of ML-based models in relation to accelerometer placement in free-living settings is yet unknown [W2084779848, W1976451292, W2084878507].\n\nGiven the current existing knowledge gaps, we conducted a systematic review to identify studies that calibrated and validated accelerometer-based activity monitors using ML-based modeling approaches for predicting the type, intensity and/or EE of physical activity in order to examine (a) the reported effects of data type, sampling frequency, window size, input features, axes of measurement, and accelerometer placement on the predictive ability of ML-based models, and (b) the generalization capability of ML-based models to independent population in free-living settings. The main findings are further discussed in relation to the existing literature to further clarify how ML-based modeling approaches contribute to the existing analytical challenges of calibration and validation of accelerometer-based activity monitors. The recommendations for future studies and directions are made to move this field of research forward.",
+      "citations": [
+        "W2156132533",
+        "W2084779848",
+        "W1976451292",
+        "W2778426046",
+        "W2108707936",
+        "W2007485584",
+        "W2084298121",
+        "W2144700034",
+        "W2528451523",
+        "W2084878507",
+        "W2164365672",
+        "W1689929051",
+        "W2528042246"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Eligibility criteria",
+          "subsubsections": [],
+          "text": "We included original peer-reviewed journal articles including calibrated and validated ML-based models, based on data acquired from a single body-fixed accelerometer in order to predict the type, class, intensity and/or EE of activities. The monitored activities had to be health-related and daily activities such as walking, cycling, sedentary activities, etc. Studies validating a previously developed ML-based model were also included. In case of multiple accelerometers at various body locations the study was included if calibration and validation of ML-based models was based on data acquired from each attachment site. Studies with logistic regression (LR) were also included. Although LR is not always considered as a ML approach, it is a member of discriminative models in ML field.\n\nStudies were excluded if they met at least one of the following exclusion criteria: (1) acceleration data gathered using smartphone-based or not body-fixed (e.g., the sensors were placed in subjects' pockets) accelerometers; (2) studies using combined data acquired from multiple accelerometer placements (e.g., accelerometers placed at hip and wrist) or using combined data from combination of accelerometer data with other sensor data (e.g., gyroscope and accelerometers), in which no independent model using only acceleration data acquired merely from a single accelerometer placement was reported; (3) study participants had certain type of diseases (e.g., Parkinson's, peripheral arterial disease, etc.) or disabilities; and (4) studies aimed at predicting activity type, class, intensity, and/or EE in real-time.\n\nThese exclusion criteria were selected because body-fixed accelerometers have been the most common method for objective measurement of SB and PA [W2084779848]. Most large-scale studies have used a single wear location to measure acceleration data [W2084779848]. Studies with smartphone-based or not body-fixed accelerometers were excluded to enable comparison between different wear locations. These studies make different assumptions such as changes in accelerometer's position and orientation [W2039493784]. Studies with unhealthy subjects were excluded because the methods developed for healthy subjects might not be applicable to unhealthy subjects due to altered mobility and even different SB and PA indicators [W1976451292]. Finally, the studies aimed at measurement of SB and PA in real-time were excluded to enable fair comparison across the studies. These studies consider computational complexity of feature computation and prediction methods together with prediction accuracy for light-weight computation, which might result in sacrificing predictive accuracy (e.g., a limited number of features are extracted [W2159613676]).",
+          "citations": [
+            "W2084779848",
+            "W2039493784",
+            "W1976451292",
+            "W2159613676",
+            "W2156132533",
+            "W2007485584",
+            "W2136019090"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2. Information sources",
+          "subsubsections": [],
+          "text": "The PubMed and Scopus databases were initially searched on 01 July 2017. The two search strings are given in the Supplemental material, Search strings. The search results were limited for human subjects and English-language articles. The search results were not limited by date and included papers from all years in both databases. Additional articles were identified by searching the references in papers identified by the search strategy.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3. Study selection",
+          "subsubsections": [],
+          "text": "Search strings were defined and validated by all authors (VF, MN, MK, RK, and TJ). One person (VF) performed the initial search and screened the titles and abstracts of all articles identified by the search strings to exclude articles that were not relevant according to the eligibility criteria. The initial literature search produced 3171 articles (Fig. 1). After removal of duplicate articles, 2482 articles remained for screening. On the basis of titles and abstracts screening, 2391 articles were excluded from the review. Additional 13 articles were manually identified from references in the papers. Two authors working independently (VF and MN) read the remaining 104 articles in full text and checked for eligibility using a predefined form including the eligibility criteria items. Disagreements concerning inclusion/exclusion of the papers were first resolved by discussion between VF and MN. The unresolved disagreements by discussion were resolved by a third independent reviewer (TJ). Of the 104 full text articles, 62 articles were finally considered eligible to be included in this review.\n\n**FIGURE 1**\nFlow diagram of selected studies.\nRecords identified through Scopus database searching (n = 2501)\nRecords identified through PubMed database searching (n = 670)\nRecords after duplicates removed (n = 2482)\nArticles excluded on basis of title and abstract (n = 2391)\nFull text articles assessed for eligibility (n = 104)\nArticles included for the review (n = 62)\nArticles identified by hand/citation search (n = 13)\nFull-text articles excluded (n = 42)\nReasons for exclusion:\nSmartphone-based or not body-fixed accelerometers (n = 6)\nNo model developed based on single accelerometer data (n = 14)\nNo machine learning model developed (n = 12)\nModels developed for real-time use (n = 5)\nDetails of experimental design not specified clearly (n = 5)",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4. Risk of bias in studies",
+          "subsubsections": [],
+          "text": "The risk of bias at the study level was evaluated using the modified QualSyst tool [W2514517103]. The irrelevant criteria were excluded and some of them were adopted based on earlier recommendations, including representative activities and sample population, as well as a clear specification of extracted features, input features, and signal axes [W2084779848, W2084878507, W2030168699]. Finally, ten criteria were used for scoring the studies, which are presented in Table S1 in the Supplemental Material. The risk of bias was evaluated with a summary score (range: 0\u20131), with a higher score indicating better quality. The ten criteria were validated by all the authors and risk of bias was assessed by the first author (VF).",
+          "citations": [
+            "W2514517103",
+            "W2084779848",
+            "W2084878507",
+            "W2030168699"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5. Synthesis of the results",
+          "subsubsections": [],
+          "text": "Since classification (i.e., AR) and regression (i.e., AEE) are considered as two independent tasks in ML field [W2142827986], the studies calibrating and validating both AR and AEE models were counted and reported independently in both categories. To report the extracted data and their effects on results of ML-based models, if multiple parameters were tested (e.g., multiple window size), all the tested parameters were extracted from the included studies. The most optimal parameters as stated by the authors are reported as the parameters used for model development, whereas the effects of other tested parameters are discussed narratively in the text. Similarly, to report the predictive accuracies of ML-based models, overall accuracy (defined as the proportion of the total number of predictions that were correct) for AR models and root mean squared error (rMSE in MET values) for AEE models, achieved by the most optimal models were extracted and reported. For AR models, if overall accuracy was not presented, sensitivity (defined as the average of true positive rates for the activity categories) was extracted and reported. When the results were evaluated based on the extracted predictive accuracies, those studies which did not present overall accuracy or sensitivity for AR models and rMSE for AEE models were eliminated from the analysis.\n\nFour common accelerometer placements were observed; including hip, wrist, ankle and thigh. The predictive accuracies were extracted in relation to these four placements. Additionally, the predictive accuracy of calibrated and validated models for any other wear locations were also extracted and reported under category 'other placements'. If models were developed for more than one other wear location, the highest predictive accuracy achieved was extracted and reported under 'other placements' category. Similarly, if different anatomical sides were considered for accelerometer placement (i.e., left and right or dominant and non-dominant), the highest predictive accuracy achieved was extracted and reported. If more than one validation approach was used, the accuracies of leave-one-subject-out (LOSO) validation were extracted, which is known to provide a good estimate of model accuracy [W2007485584, W2314289569].",
+          "citations": [
+            "W2142827986",
+            "W2007485584",
+            "W2314289569"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This systematic review is reported in accordance with the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines [W4294215472]. Throughout this paper, the term \"activity recognition\" (AR) refers to all classification models calibrated and validated for classifying activities into types, classes, or intensities (i.e., using classification techniques not from metabolic equivalent [MET] predicted values) and the term \"activity energy expenditure\" (AEE) refers to all regression models calibrated and validated for estimating EE.",
+      "citations": [
+        "W4294215472"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1. Quality of the included studies",
+          "subsubsections": [],
+          "text": "The mean quality score in the included studies was high (average: 0.88, range: 0.60\u20131.00). Main sources of bias were small sample size and monitoring a limited set of activity types. Quality scores of the studies in relation to the adopted criteria are presented in Table S1 in the Supplemental Material.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2. The extracted data items and model type",
+          "subsubsections": [],
+          "text": "The extracted data items from the included studies along with population characteristics are presented in Table 1. Forty out of the 62 included studies calibrated and validated AR models, 14 calibrated and validated AEE models, and 8 calibrated and validated both AR and AEE models. Thus, the denominator is 48 when reference is made to AR studies/models and 22 when reference is made to AEE studies/models.\n\nFig. 2 and Fig. 3 show the extracted overall accuracies of the calibrated and validated AR and AEE models in relation to accelerometer placements and independent validation, respectively. In Fig. 2, sensitivity is presented as the measure of performance for two studies, since the overall accuracies were not presented [W2047245102, W2202411278]. Also, the results of three studies are not shown, since other measures of performance than overall accuracy were reported visually per activity, not as a single value [W2169642908, W2318313152, W2314386516]. In Fig. 3, median rMSEs or rMSE are estimated from the figures in the articles for three studies [W2522491157, W1990776473, W2575795810]. Additionally, the results of four studies are not shown because one of the studies examined the validity of an AEE model independently in relation to direct observation (not AEE) [W2103319536] and three studies presented other measures of performance than rMSE [W2315380544, W2128121198, W2138934389].",
+          "citations": [
+            "W2047245102",
+            "W2202411278",
+            "W2103319536"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3. Study characteristics",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.3.1. Sample population",
+              "parent_subsection_id": "s_3_3",
+              "text": "Eight studies were performed with more than one population. Sixteen populations within 15 studies comprised exclusively children and/or adolescents, 36 populations used within 34 studies comprised exclusively adults, and three populations comprised exclusively older adults. Additionally, fifteen populations within 14 studies comprised subjects with relatively wide age range (mixed age range) including children, adolescents, adults, and/or older adults. The age range was not reported in one study.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.3.2. Accelerometer placement",
+              "parent_subsection_id": "s_3_3",
+              "text": "The models were mainly developed for hip- (n = 43), wrist- (n = 31), ankle- (n = 15), and thigh-worn (n = 10) accelerometers, respectively. Other accelerometer placements (e.g., chest ear, knee, shin), altogether, were used in fourteen studies.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.3.3. Machine learning algorithm",
+              "parent_subsection_id": "s_3_3",
+              "text": "The artificial neural network (ANN) was the most commonly used ML algorithm in the included studies (n = 32), followed by support vector machines (SVM) (n = 18), random forest (RF) (n = 12), decision tree (DT) (n = 11), and LR (n = 7). Additionally, other ML algorithms including Na\u00efve Bayes (NB), Bayesian network, K-nearest neighbors (KNN), and hidden Markov model (HMM), altogether, were used in seventeen studies.\n\n**TABLE 1**\nPopulation characteristics and the extracted data items for activity recognition and energy expenditure estimation studies, listed by first author's last name (publication year).\n\n{{TABLE:tbl_01}}\n\n*Indicates optimal parameters mentioned by the authors. Abbreviations: NA: Not applied, NR: Not reported, BMI: Body mass index, IMU: Inertial measurement unit, ANN: Artificial neural network, BN: Bayesian network, DT: Decision tree, HMM: Hidden Markov models, KNN: K-nearest neighbors, LR: Logistic regression, NB: Naive Bayes, PCA: Principal Component Analysis, RF: Random forest, SVM: Support vector machines, VM: Vector magnitude, TD: Time-domain, FD: Frequency-domain.*\n\n**FIGURE 2**\nThe extracted prediction accuracies (overall accuracy in %, shown inside the bars) of activity recognition models in relation to accelerometer placement, categorized by the age range of the population using which the models were developed. The literature reference numbers and quality scores are presented in square brackets [ ] and parentheses (), respectively. *Indicates the data type was activity counts. ^ Indicates the data were acquired in free-living settings.\n\n**FIGURE 3**\nThe extracted prediction accuracies for activity energy expenditure (root mean squared error in MET shown inside the bars) models in relation to accelerometer placement, categorized by the age range of the population using which the models were developed. The literature reference numbers and quality scores are presented square brackets [] and parentheses (), respectively. *Indicates the data type was activity counts. ^ Indicates the data were acquired in free-living settings.",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_01"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4. Data type (raw acceleration data versus activity counts)",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.4.1. Activity recognition",
+              "parent_subsection_id": "s_3_4",
+              "text": "Thirteen studies (27%) calibrated and validated AR models with AC data [W2050998072, W2117794119, W2072672344, W2089888151, W1978708566, W147367985, W2335233570, W2164041372, W2125212922, W2030401894, W1986827214, W2410833519, W2295454405]. Among these studies, three pointed out that raw acceleration data may be useful for improving the predictive accuracy [W2117794119, W2072672344, W2164041372]. Regarding accelerometer placement, only three of the studies with AC [W2117794119, W2072672344, W2410833519] considered other wear locations than hip (Fig. 2).",
+              "citations": [
+                "W2117794119",
+                "W2072672344",
+                "W2164041372",
+                "W2410833519"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.4.2. Activity energy expenditure",
+              "parent_subsection_id": "s_3_4",
+              "text": "Eleven studies (50%) calibrated and validated AEE with AC data [W2522491157, W2103319536, W2315380544, W2171154466, W2021754517, W2164041372, W2125212922, W2030401894, W1986827214, W2410833519, W2295454405]. Among these studies, four pointed out that raw acceleration data may be useful for improving the predictive accuracy [W2522491157, W2021754517, W2164041372, W2030401894]. Regarding accelerometer placement, only two of the studies with AC [W2522491157, W2410833519] considered other wear locations than hip (Fig. 3).",
+              "citations": [
+                "W2522491157",
+                "W2021754517",
+                "W2164041372",
+                "W2030401894",
+                "W2410833519"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5. Sampling frequency",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_5_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.5.1. Activity recognition",
+              "parent_subsection_id": "s_3_5",
+              "text": "Thirty-five studies (72%) calibrated and validated AR with raw acceleration data. Across these studies, the sampling frequency varied from 20 to 100 Hz. Seventeen studies developed the models using data sampled at 20 to 30 Hz [W2202411278, W2002566365, W2168538666, W2170931123, W2076552240, W2048606477, W1599865649, W2152195551, W2327453846, W2323345995, W2400273852, W2465778425, W2765650986, W2469746617, W2531386895, W2785176356, W2002353621], eleven studies using data sampled at 50 to 90 Hz [W2169642908, W2318313152, W2314386516, W2132691216, W2048606477, W2051029594, W2019098172, W2094523840, W2335233570, W2200539030, W2279300874], and seven studies using data sampled at 100 Hz [W2047245102, W2109179821, W1564237868, W1550111146, W2305750651, W2765650986, W2765422955].\n\nOne study, in which the accelerometer was placed at the wrist, investigated the optimal sampling frequency rate for development of AR models [W2048606477]. According to this study, a sampling frequency between 20\u201325 Hz is enough for developing wrist-based AR models and increasing the sampling frequency above 25 Hz does not improve the predictive accuracy of the models.",
+              "citations": [
+                "W2047245102",
+                "W2109179821",
+                "W1564237868",
+                "W1550111146",
+                "W2305750651",
+                "W2765650986",
+                "W2765422955",
+                "W2048606477"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_5_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.5.2. Activity energy expenditure",
+              "parent_subsection_id": "s_3_5",
+              "text": "Eleven studies (50%) calibrated and validated AEE with raw acceleration data. Across these studies, the sampling frequency varied from 20 to 100 Hz. Among these studies, seven developed the models using data sampled at 20 to 40 Hz [W2575795810, W2138934389, W2317306538, W2293725939, W2521135770, W2606552756, W2002353621], three studies using data sampled at 60 to 80 Hz [W1990776473, W2664062929, W2279300874], and one study using data sampled at 100 Hz [W2318313152].",
+              "citations": [
+                "W1990776473",
+                "W2664062929",
+                "W2279300874",
+                "W2318313152"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6. Windowing approach and window size",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_6_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.6.1. Activity recognition",
+              "parent_subsection_id": "s_3_6",
+              "text": "The window size varied from 1 to 60 s in the studies that calibrated and validated AR models. Seven studies (15%) used fixed-length overlapping sliding windows with a window size ranging from 2 to 10.24 s and overlapping size ranging from 20% to 75% [W2047245102, W2132691216, W2076552240, W2051029594, W1564237868, W2305750651, W2765650986]. Other studies (85%) used fixed-length non-overlapping sliding windows with a window size ranging from 0.5 to 60 s. Out of the studies using non-overlapping windows, seven studies with AC [W1978708566, W147367985, W2335233570, W2164041372, W2125212922, W2030401894, W1986827214] and four studies with raw acceleration data [W2327453846, W2323345995, W2531386895, W2002353621] selected the window size of 60 s. Four studies with raw acceleration selected the window size of 20 or 30 s [W2019098172, W2400273852, W2200539030, W2785176356]. Seven studies, one of which with AC [W2050998072], selected the window size of 12.8 or 15 s [W2050998072, W2048606477, W2048606477, W2094523840, W2548437830, W2765422955, W2279300874]. Eleven studies, three of which with AC [W2117794119, W2072672344, W2410833519], selected the window size from 5 to 10 s [W2202411278, W2128121198, W2002566365, W2117794119, W2072672344, W2170931123, W1599865649, W2152195551, W2465778425, W2469746617, W2410833519]. Four studies with raw acceleration data selected the window size from 1 to 2.5 s [W2169642908, W2314386516, W1550111146, W2471209076]. One study used AC directly without segmentation [W2089888151], one study used varying window length (consisted of an integration and threshold technique) [W2109179821], and one study did not report the window size [W2295454405].\n\nWith respect to age group, across the studies with children and/or adolescents (n = 12), five studies selected non-overlapping window size of 60 s [W1978708566, W147367985, W2335233570, W2030401894, W1986827214], one study 12.8 s [W2548437830], and one study 15 s [W2765422955]. One study used the window size of 10.24 s with 50% overlapping [W2765650986]. Three studies used the non-overlapping window size of shorter than 10 s [W2072672344, W1599865649, W2471209076], and one study AC without segmentation [W2089888151]. Accordingly, out of the studies with adults (n = 25), two studies selected non-overlapping window size of 60 s [W2125212922, W2002353621], two studies 30 s [W2400273852, W2785176356], one study 20 s [W2019098172], two studies 15 s [W2050998072, W2279300874], and one study 12.8 s [W2202411278, W2169642908, W2168538666, W2117794119, W2170931123, W2152195551, W1550111146, W2465778425, W2469746617]. One study used varying window length [W2109179821], and seven studies used a window size of 2\u201310.24 sec with 20%\u201375% overlapping [W2047245102, W2132691216, W2076552240, W2051029594, W1564237868, W2305750651, W2765650986]. Of the three studies with older adults, one study used non-overlapping window size of 60 s [W2531386895], one study 30 s [W2200539030], and one study 1 s [W2314386516].\n\nThere was an agreement with the findings between the studies testing the effects of window size on the predictive accuracy of AR models. Two studies with AC in children and/or adolescents reported minimal accuracy reduction when the window size decreased from 60 to 30, 20, 15, and 10 s [W147367985, W2030401894], and one study with raw acceleration data in older adults when the window size decreased from 30 to 15, 10, and 5 s [W2200539030]. Three studies with raw acceleration data, one of which with children and/or adolescents [W2094523840], one with adults [W2002566365], and one with mixed age range [W2548437830] also reported minimal accuracy reduction when decreased from 12.8 to 8, 6.4, 4, 3.2, 2 and/or 1.6 s. One study with raw acceleration data from adults found 1.5 s as the most optimal window size, while with 1, 2, 2.5, and 3 s windows the results were comparable [W1550111146].",
+              "citations": [
+                "W2047245102",
+                "W2132691216",
+                "W2076552240",
+                "W2051029594",
+                "W1564237868",
+                "W2305750651",
+                "W2765650986",
+                "W2327453846",
+                "W2323345995",
+                "W2531386895",
+                "W2002353621",
+                "W2019098172",
+                "W2400273852",
+                "W2200539030",
+                "W2785176356",
+                "W2050998072",
+                "W2048606477",
+                "W2048606477",
+                "W2094523840",
+                "W2548437830",
+                "W2765422955",
+                "W2279300874",
+                "W2117794119",
+                "W2072672344",
+                "W2410833519",
+                "W2169642908",
+                "W2314386516",
+                "W1550111146",
+                "W2471209076",
+                "W2089888151",
+                "W2109179821",
+                "W2295454405",
+                "W1978708566",
+                "W147367985",
+                "W2335233570",
+                "W2030401894",
+                "W1986827214",
+                "W1599865649",
+                "W2125212922",
+                "W2202411278",
+                "W2168538666",
+                "W2170931123",
+                "W2152195551",
+                "W2465778425",
+                "W2469746617",
+                "W2002566365"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_6_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.6.2. Activity energy expenditure",
+              "parent_subsection_id": "s_3_6",
+              "text": "Nineteen studies (86%) calibrated and validated AEE models using fixed-length non-overlapping sliding windows with a window size ranging from 4 to 60 s. The other three studies (14%) used adaptive windowing on the basis of variation in AC [W2103319536, W2315380544, W2021754517]. Out of the studies using non-overlapping windows, five studies with raw acceleration data [W2171154466, W2164041372, W2125212922, W2030401894, W1986827214] and four studies with AC selected the window size of 60 s [W2128121198, W2138934389, W2606552756, W2002353621]. Six studies with raw acceleration data selected the window size of 30 s [W2575795810, W2317306538, W2293725939, W2521135770, W2606552756, W2664062929]. Three studies, two of which with AC [W2522491157, W2410833519], selected the window size from 10 to 15 s [W2522491157, W2279300874, W2410833519]. One study with raw acceleration data selected the window size of 4 s [W1990776473], and one study did not report the window size [W2295454405].\n\nWith respect to age group, across the studies with children and/or adolescents (n = 4), three studies selected non-overlapping window size of 60 s [W2171154466, W2030401894, W1986827214], and one study 15 s [W2522491157]. Out of the studies with adults (n = 12), three studies selected non-overlapping window size of 60 s [W2317306538, W2125212922, W2002353621], four studies 30 s [W2575795810, W2293725939, W2521135770, W2606552756], one study 15 s [W2279300874], and one study 4 s [W1990776473]. Two studies used varying window length [W2103319536, W2021754517].\n\nOne study with AC in children and/or adolescents tested the effects of different window size on the predictive accuracy of AEE models and reported minimal accuracy reduction when the window size decreased from 60 to 30, 20, 15, and 10 s [W2030401894].",
+              "citations": [
+                "W2103319536",
+                "W2315380544",
+                "W2021754517",
+                "W2128121198",
+                "W2138934389",
+                "W2606552756",
+                "W2002353621",
+                "W2522491157",
+                "W2410833519",
+                "W2279300874",
+                "W1990776473",
+                "W2295454405",
+                "W2171154466",
+                "W2030401894",
+                "W1986827214",
+                "W2317306538",
+                "W2125212922"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_7",
+          "subsection_index": 7,
+          "subsection_label": "3.7. Feature generation and selection",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_7_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.7.1. Activity recognition",
+              "parent_subsection_id": "s_3_7",
+              "text": "Ten studies (20%) used an automated feature selection method in prior to develop AR models [W2169642908, W2128121198, W2117794119, W2048606477, W1564237868, W2152195551, W2305750651, W2765650986, W2548437830] and four studies (8%) tested different manually-provided feature sets [W2094523840, W2465778425, W2785176356, W2295454405]. Twenty two studies (46%) with raw acceleration data used a combination of TD and FD features as inputs [W2202411278, W2169642908, W2128121198, W2002566365, W2132691216, W2170931123, W2109179821, W2048606477, W2051029594, W2019098172, W2094523840, W2152195551, W2327453846, W2323345995, W2200539030, W2765650986, W2471209076, W2548437830, W2469746617, W2531386895, W2765422955]. Twenty studies (41%), eight of which with AC [W2050998072, W2117794119, W2072672344, W147367985, W2164041372, W2125212922, W2030401894, W1986827214], used only TD features as inputs [W2050998072, W2168538666, W2117794119, W2072672344, W2076552240, W1978708566, W1599865649, W1564237868, W1550111146, W147367985, W2400273852, W2465778425, W2305750651, W2785176356, W2164041372, W2125212922, W2030401894, W1986827214, W2279300874, W2295454405]. One study used a combination of TD and wavelet features extracted from AC [W2335233570], one study a combination of TD, FD, and wavelet features extracted from raw acceleration data [W2048606477], and one study only FD features extracted from raw acceleration data [W2047245102]. One study used Ngram features extracted from AC (an approach used in natural language processing) [W2410833519], one study used raw acceleration without feature extraction (distance-based method) [W2314386516], and one study used AC without feature extraction [W2089888151].\n\nThere was an agreement with the findings between the studies testing the inclusion of wavelet or distance-based features as additional input features to the combination of TD and/or FD features. Two studies with raw acceleration data reported that the inclusion of wavelet features to a combination of TD and FD features [W2132691216, W2094523840], and one study with AC reported that the inclusion of distance-based features to TD features [W2295454405] minimally improved the predictive accuracy of AR models. Similarly, there was an agreement with the findings between the studies testing the inclusion of FD to TD features when the models were developed within the sample population. Four studies with raw acceleration data reported that inclusion of FD features to TD features improved predictive accuracy of AR models when the models were developed within a population [W2094523840, W2327453846, W2548437830, W2785176356]. On the contrary, one study reported that the inclusion of FD features did not improve the predictive accuracy of models [W2785176356], whereas another study reported that their inclusion improved the predictive accuracy of models when cross-validated in an independent population [W2548437830].",
+              "citations": [
+                "W2169642908",
+                "W2128121198",
+                "W2117794119",
+                "W2048606477",
+                "W1564237868",
+                "W2152195551",
+                "W2305750651",
+                "W2765650986",
+                "W2548437830",
+                "W2094523840",
+                "W2465778425",
+                "W2785176356",
+                "W2295454405",
+                "W2335233570",
+                "W2047245102",
+                "W2410833519",
+                "W2314386516",
+                "W2089888151",
+                "W2132691216",
+                "W2327453846"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_7_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.7.2. Activity energy expenditure",
+              "parent_subsection_id": "s_3_7",
+              "text": "Two studies (9%) used an automated feature selection method in prior to developing their AEE models [W2318313152, W1990776473] and three studies (14%) tested different manually-provided feature sets [W2317306538, W2521135770, W2295454405]. Sixteen studies (73%), eight of which with AC [W2522491157, W2103319536, W2315380544, W2021754517, W2164041372, W2125212922, W2030401894, W1986827214], used only TD features as inputs [W2522491157, W2575795810, W2103319536, W2315380544, W2021754517, W2125212922, W2030401894, W1986827214, W2279300874, W2295454405]. Four studies (18%) with raw acceleration data used a combination of TD and FD features as inputs [W2318313152, W1990776473, W2138934389, W2002353621]. One study used Ngram features extracted from AC [W2410833519] and one used AC directly without feature extraction [W2171154466].\n\nTwo studies with AC tested the inclusion of different input features to TD features, and showed a minimal benefit in the inclusion of distance-based [W2295454405] and anthropometrical features [W2317306538] to TD features.",
+              "citations": [
+                "W2318313152",
+                "W1990776473",
+                "W2317306538",
+                "W2521135770",
+                "W2295454405",
+                "W2138934389",
+                "W2002353621",
+                "W2410833519",
+                "W2171154466"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_8",
+          "subsection_index": 8,
+          "subsection_label": "3.8. Axes of measurements",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_8_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.8.1. Activity recognition",
+              "parent_subsection_id": "s_3_8",
+              "text": "Twenty one studies (43%) that calibrated and validated AR models used all three axes of measurement (i.e., x-, y-, and z-direction) [W2314386516, W2128121198, W2002566365, W2132691216, W2168538666, W2072672344, W2170931123, W2051029594, W1978708566, W1564237868, W1550111146, W2465778425, W2200539030, W2305750651, W2765650986, W2471209076, W2469746617, W2785176356, W2171154466, W2293725939, W1986827214], eleven studies (23%) used the resultant orientation-independent vector magnitude (VM) [W2202411278, W2019098172, W2094523840, W2327453846, W2323345995, W2548437830, W2531386895, W2765422955, W2279300874, W2410833519, W2295454405], seven studies (15%) used vertical axis [W2050998072, W2117794119, W2048606477, W147367985, W2164041372, W2125212922, W2030401894], and four studies (8%) combined all three axes of measurements and VM [W2169642908, W2076552240, W2152195551, W2002353621] for developing the models. Two studies used z-axis [W2047245102, W2109179821], one study a biaxial accelerometer [W2138934389], and two studies did not report which axes of measurement used for developing the models [W1599865649, W2335233570].\n\nThere was a somewhat contradictory finding between the studies testing the inclusion of different axes of measurements. One study with raw acceleration data found no benefit in the inclusion of more than one axis for the prediction accuracy of wrist-based AR models [W2048606477]. On the contrary, one study with AC found that triaxial data increased the accuracy of both hip- and ankle-based AR models in comparison to uniaxial data [W2072672344]. However, the data type was different between the studies.",
+              "citations": [
+                "W2169642908",
+                "W2076552240",
+                "W2152195551",
+                "W2002353621",
+                "W2047245102",
+                "W2109179821",
+                "W2138934389",
+                "W1599865649",
+                "W2335233570",
+                "W2048606477",
+                "W2072672344"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_8_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.8.2. Activity energy expenditure",
+              "parent_subsection_id": "s_3_8",
+              "text": "Thirteen studies (59%) that calibrated and validated AEE models used all three axes of measurement [W2318313152, W2522491157, W1990776473, W2575795810, W2103319536, W2315380544, W2171154466, W2021754517, W2317306538, W2293725939, W2606552756, W2664062929, W1986827214] and three studies (14%) used VM for developing the models [W2279300874, W2410833519, W2295454405]. One study used vertical axis [W2125212922] and one study a biaxial accelerometer [W2138934389] for developing the models. One study with AC reported that using triaxial data was beneficial compared to vertical axis only for predictive accuracy of hip-based models [W2021754517].",
+              "citations": [
+                "W2125212922",
+                "W2138934389",
+                "W2021754517"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_9",
+          "subsection_index": 9,
+          "subsection_label": "3.9. Machine learning technique",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_9_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.9.1. Activity recognition",
+              "parent_subsection_id": "s_3_9",
+              "text": "Nineteen studies performed AR with more than one ML technique. There was a consistency between the studies testing different techniques. Six studies reported that the predictive accuracy of different techniques, including ANN, SVM, RF, NB, K-nearest neighbors, and/or DTs were comparable and satisfactory, and therefore they did not specify the algorithms with the highest accuracy [W2128121198, W2048606477, W1550111146, W2765422955, W2279300874, W2295454405]. This was further supported by six studies that also found comparable predictive accuracy with different techniques while the most optimal technique(s) were SVM (compared to ANN, DT, and/or NB) [W2170931123, W2051029594], SVM and DT (compared to ANN, LR, and NB) [W2048606477], SVM and majority voting (compared to ANN and DT) [W2170931123], deep-learning neural network (compared to a standard ANN) [W147367985], and rotation forest (compared to ANN and KNN) [W1564237868]. On the contrary, there were six studies that found a significantly higher accuracy for ANN (compared to DT, LR, and NB) [W2202411278], a Bayes approach (compared to SVM) [W2109179821], HMM (compared to quadratic discriminant analysis) [W2050998072], RF and majority voting (compared to ANN, DTs, KNN, SVM, and/or majority voting) [W2765650986], RF (comparing to ANN, DT, SVM, and majority voting) [W2785176356], and a distance-based method (compared to ANN, KNN, citation KNN, and SVM) [W1986827214].",
+              "citations": [
+                "W2128121198",
+                "W2048606477",
+                "W1550111146",
+                "W2765422955",
+                "W2279300874",
+                "W2295454405",
+                "W2170931123",
+                "W2051029594",
+                "W2048606477",
+                "W147367985",
+                "W1564237868",
+                "W2202411278",
+                "W2109179821",
+                "W2050998072",
+                "W2765650986",
+                "W2785176356",
+                "W1986827214"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_9_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.9.2. Activity energy expenditure",
+              "parent_subsection_id": "s_3_9",
+              "text": "Three studies performed AEE with more than one ML technique. Two of these studies reported comparable accuracy for different techniques, including ANN, DTs, KNN, LR, NB, RF, and/or SVM [W2279300874, W2295454405]. One study found a significantly higher accuracy for a distance-based method (compared to ANN, KNN, citation KNN, SVM) [W1986827214].",
+              "citations": [
+                "W2279300874",
+                "W2295454405",
+                "W1986827214"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_10",
+          "subsection_index": 10,
+          "subsection_label": "3.10. Accelerometer placement",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_10_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.10.1. Hip, wrist, ankle, and thigh",
+              "parent_subsection_id": "s_3_10",
+              "text": "##### 3.10.1.1. Activity recognition\n\nTen studies compared AR models with hip and wrist, six studies with hip and ankle, four studies with hip and thigh, seven studies with wrist and ankle, three studies with wrist and thigh, and two studies with ankle and thigh (Fig. 2). Eight of the studies comparing hip- and wrist-based models reported a higher accuracy for the hip-based model [W2048606477, W2051029594, W1599865649, W2327453846, W2400273852, W2765422955, W2002353621, W2410833519] and one study reported a higher accuracy for the wrist-based model [W2465778425]. One study reported a higher accuracy for the wrist-based model when the models were developed with laboratory-acquired data and a higher accuracy for the hip-based model when the models were developed with free-living data [W2200539030]. On average, the absolute difference between accuracy of the hip- and wrist-based models was 5.5% (standard deviation 4.6%). Three of the studies comparing hip- and ankle-based models reported a higher accuracy for the hip-based model [W2117794119, W2072672344, W2051029594] and two studies reported a higher accuracy for the ankle-based model [W2132691216, W2410833519]. One study reported a higher accuracy for the hip-based model when the models were developed with laboratory-acquired data and a slightly higher accuracy for the ankle-based when the models were developed with free-living data [W2200539030]. On average, the absolute difference between accuracy of the hip- and ankle-based models was 5.6% (SD 6.3%). One of the studies comparing hip- and thigh-based models reported a higher accuracy for the hip-based model [W2051029594], while three studies reported a higher accuracy for the thigh-based model [W2132691216, W2400273852, W2295454405]. On average, the absolute difference between accuracy of the hip- and thigh-based models was 8.9% (SD 5.6%).\n\nOf the studies comparing wrist- and ankle-based models, three studies reported a higher accuracy for the wrist-based model [W2051029594, W1564237868, W2305750651] and three studies reported a higher accuracy for the ankle-based model [W2094523840, W2548437830, W2410833519]. One study reported a higher accuracy for the wrist-based model when the models were developed with laboratory-acquired data and a higher accuracy for the ankle-based model when the models were developed with free-living data [W2200539030]. On average, the absolute difference between accuracy of the wrist- and ankle-based models was 7.1% (SD 5.3%). One of the studies comparing wrist- and thigh-based models reported a higher accuracy for the wrist-based model [W2465778425], while two studies reported a higher accuracy for the thigh-based model [W2051029594, W2400273852]. On average, the absolute difference between accuracy of the wrist- and thigh-based models was 6.0% (SD 7.2%).\n\nOne of the studies comparing ankle- and thigh-based models reported a higher accuracy for the ankle-based model by 6% [W2132691216] and one study reported a higher accuracy for the thigh-based model by 1% [W2051029594].\n\n##### 3.10.1.2. Activity energy expenditure\n\nSix studies compared AEE models with hip and wrist, three studies with hip and ankle, two studies with hip and thigh, three studies with wrist and ankle, and two studies with wrist and thigh, see Fig. 3. Of the studies comparing hip- and wrist-based models, four studies reported a higher accuracy for the hip-based model [W2522491157, W2575795810, W2664062929, W2002353621], while two studies reported a higher accuracy for the wrist-based model [W2317306538, W2410833519]. On average, the absolute difference between accuracy of the hip- and wrist-based models was 0.06 MET (standard deviation 0.04 MET). One of the studies comparing hip- and ankle-based models reported a slightly higher accuracy for the hip-based model [W2522491157], while two studies reported a higher accuracy for the ankle-based model [W2664062929, W2410833519]. On average, the absolute difference between accuracy of the hip- and ankle-based models was 0.73 MET (SD 0.80 MET). Two of the studies comparing hip- and thigh-based models reported a higher accuracy for the thigh-based model by 0.16 MET [W2317306538] and 0.10 MET [W2575795810].\n\nTwo of the studies comparing wrist- and ankle-based models reported a higher accuracy for the ankle-based model [W2664062929, W2410833519] and one study reported similar accuracies for the ankle- and wrist-based models [W2522491157]. On average, the absolute difference between accuracy of the wrist- and ankle-based models was 0.08 MET (SD 0.08 MET). The two studies comparing wrist- and thigh-based models reported a higher accuracy for the thigh-based model by 0.11 MET [W2317306538] and 0.20 MET [W2575795810].",
+              "citations": [
+                "W2048606477",
+                "W2051029594",
+                "W1599865649",
+                "W2327453846",
+                "W2400273852",
+                "W2765422955",
+                "W2002353621",
+                "W2410833519",
+                "W2465778425",
+                "W2200539030",
+                "W2117794119",
+                "W2072672344",
+                "W2132691216",
+                "W2295454405",
+                "W1564237868",
+                "W2305750651",
+                "W2094523840",
+                "W2548437830",
+                "W2522491157",
+                "W2575795810",
+                "W2664062929",
+                "W2317306538"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_10_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.10.2. Other accelerometer placements than hip, wrist, ankle, and thigh",
+              "parent_subsection_id": "s_3_10",
+              "text": "##### 3.10.2.1. Activity recognition\n\nThree studies compared AR models with other placement(s) and hip, wrist, ankle, or thigh (Fig. 2). The other placements used in these three studies were chest [W1564237868, W2305750651], and chest and lower back (the accuracy of chest-based model was higher) [W2051029594]. One study comparing hip-based model and other placement-based model reported a higher accuracy for the hip-based model by 1% [W2051029594]. Of the studies comparing wrist- and other placement-based models, two studies reported a higher accuracy for the wrist-based model [W1564237868, W2305750651] and one study reported a higher accuracy for the other placement-based model [W2051029594]. On average, the absolute difference between accuracy of the wrist- and other placement-based models was 0.7% (SD 0.4%). Of the studies comparing ankle- and other placement-based models, two studies reported a higher accuracy for the other placement-based model [W2051029594, W1564237868] and one study reported similar accuracies for the ankle- and other placement-based models [W2305750651]. On average, the absolute difference between accuracy of the ankle- and other placement-based models was 1.0% (SD 0.8%). One study comparing thigh- and other placement-based models reported similar accuracy for the thigh- and other placement-based models [W2051029594].\n\n##### 3.10.2.2. Activity energy expenditure\n\nTwo studies compared AEE models with other placement(s) and hip, wrist, or ankle (Fig. 3). The other placements used in these two studies were chest [W1990776473], and chest and knees (the accuracy of chest-based model was higher) [W2522491157]. One study comparing hip- and other placement-based models reported a higher accuracy for the other placement-based model by 0.04 MET [W2522491157]. Two studies comparing wrist- and other placement-based models reported a higher accuracy for the other placement-based models by 0.09 MET [W2522491157] and 0.70 MET [W1990776473]. One study comparing ankle- and other placement-based models reported a higher accuracy for the other placements-based model by 0.09 MET [W2522491157].",
+              "citations": [
+                "W1564237868",
+                "W2305750651",
+                "W2051029594",
+                "W1990776473",
+                "W2522491157"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_10_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.10.3. Generalization capability",
+              "parent_subsection_id": "s_3_10",
+              "text": "##### 3.10.3.1. Activity recognition\n\nSix studies tested the validity of AR models in an independent population, see Fig. 2 [W2170931123, W2152195551, W2323345995, W2548437830, W2785176356, W2125212922]. Two of these studies found accuracy degradation in the heterogeneity due to population age range, as the data acquisition protocols for populations used for model development and independent validation were similar (i.e., in a controlled manner outside and/or inside laboratory). These two studies reported 3\u201317% accuracy degradation when the models cross-validated on an independent population with different age range [W2548437830, W2785176356]. Additionally, one study showed 17% accuracy degradation even though population characteristics and data acquisition protocols were similar in both populations [W2125212922]. On the other hand, two studies found the main reason for accuracy degradation in the difference between laboratory- and (semi-)free-living-acquired acceleration data and reported 20\u201330% accuracy reduction when cross-validating the laboratory-calibrated model on data (semi)-free-living settings, even though the population characteristics used for model development and independent validation were similar [W2170931123, W2152195551]. Additionally, one study reported 2\u20136% accuracy degradation when free-living-calibrated models were cross-validated in free-living settings, even though the population characteristics were markedly different [W2323345995].\n\n##### 3.10.3.2. Activity energy expenditure\n\nThree studies tested the validity of AEE models in an independent population, see Fig. 3 (only one of them is shown) [W2103319536, W2315380544, W2125212922]. One of these studies examined the validity of model in relation to direct observation for assessment of SB in free-living settings [W2103319536] and two studies in relation to indirect calorimetry in controlled settings [W2315380544, W2125212922]. One of the two studies that examined the validity of AEE model in relation to indirect calorimetry reported 30% increase in rMSE when the models were cross-validated in an independent sample [W2125212922]. The other study reported the mean absolute percentage error ranging from 17% to 22%, depending on the performed activity [W2315380544].",
+              "citations": [
+                "W2170931123",
+                "W2152195551",
+                "W2323345995",
+                "W2548437830",
+                "W2785176356",
+                "W2125212922",
+                "W2103319536",
+                "W2315380544"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Data type (raw acceleration data versus activity counts)",
+          "subsubsections": [],
+          "text": "ML-based models have been developed with both activity counts and raw acceleration data. A considerable number of the studies that used AC for developing the models have pointed out that using raw acceleration data might be beneficial for improving the predictive accuracy of ML-based models. This finding is in agreement with the existing literature suggesting the use of raw acceleration in calibration and validation studies [W2084779848, W2164365672, W2127870937].\n\nRegarding accelerometer placement, it appeared that when raw acceleration data was used, alternative wear locations in addition to hip including wrist, ankle, and thigh were also considered. Several of the included studies reported that AC during different types of activities could be very similar (e.g., sitting and standing) [W2117794119, W2072672344, W2323345995, W2164041372]. The transformation of raw data into AC eliminates significant information that can help to distinguish between various activities [W2117794119, W2072672344, W2164041372]. This can affect the ability of ML-based models to differentiate between different activities, due to the similarity of input features to ML-based methods derived from AC time-series for different activities [W2021754517]. Therefore, it seems that raw accelerometry together with advanced ML techniques allow for alternative sensor placements in addition to conventional hip-worn accelerometers for both AR and AEE.",
+          "citations": [
+            "W2084779848",
+            "W2164365672",
+            "W2127870937",
+            "W2117794119",
+            "W2072672344",
+            "W2323345995",
+            "W2164041372",
+            "W2021754517"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Sampling frequency",
+          "subsubsections": [],
+          "text": "Currently, accelerometers are able to measure and save high frequency acceleration data [W2528451523, W2164365672]. However, recording data at high frequencies might not be practical for long term monitoring due to memory and/or battery exhaustion [W2778426046, W2048606477]. Even though only one study has demonstrated that using data sampled at higher frequency than 25 Hz has no benefits for predictive accuracy of wrist-based AR models [W2048606477], it appears that sampling frequency above 30 Hz might not be needed for development of ML-based models. Indeed, a majority of studies have used data sampled at 20\u201330 Hz.\n\nHowever, it is not yet possible to confirm whether the need of relatively low sampling frequency data is a unique advantage of ML-based approaches over other traditional statistical analytics. This is mainly because raw acceleration data is relatively new and calibration studies are still being developed [W2007485584]. A recent systematic review on the calibration of raw accelerometer data partially supports that statistical approaches tend to use higher sampling frequencies between 60\u2013100 Hz, whereas ML-based modeling approaches used relatively lower sampling frequency [W2778426046]. This partially supports that ML modeling approaches might offer the opportunity of calibration and validation of accelerometer-based activity monitors using data sampled at relatively lower sampling frequency.",
+          "citations": [
+            "W2528451523",
+            "W2164365672",
+            "W2778426046",
+            "W2048606477",
+            "W2007485584"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3. Windowing approach and window size",
+          "subsubsections": [],
+          "text": "The most widely used segmentation method was the fixed-size sliding window approach. Window sizes ranged from 1 to 60 s in the included studies, with some studies including a degree of overlap between windows. However, it seems that in response to the recommendation for using shorter window size [W1976451292, W2098450425, W2326204356, W2060699725], a majority of AR studies used relatively short window size between 5 to 15 s for AR. On the contrary, it appeared that a longer window length was used with AC data. This adds to the growing body of evidence that ML-based modeling approaches together with raw accelerometry provide several potential opportunities including AR using relatively shorter window size. Notably, with respect to age group, studies with children and/or adolescents had mostly selected the window size of 30 s or higher. Additionally, different trend was seen for ML-based AEE models, selecting a longer window size. According to the existing literature, it would be preferable to limit window size to smaller values, preferably between 5 to 15 s in order to better describe activities and estimate AEE in free-living settings [W1976451292, W2098450425, W2326204356, W2060699725]. This is even more important in children and adolescents since their physical activity patterns are more sporadic [W2084779848, W2778426046, W2084878507]. Future studies focusing on estimation of AEE in children, and/or adolescents should consider shorter window size to effectively monitor more sporadic physical activity patterns [W2084779848, W2778426046, W2084878507].\n\nSmaller window size can lead to accuracy loss, but notably, the accuracy degradation was minimal and the accuracies remained still acceptable in the included studies. This was observed in different age groups. This is promising, as it suggests that ML-based modeling approaches can provide comparable results with minimal accuracy reduction using relatively shorter window size, as opposed to cut-point methods where the results vary greatly depending on the window size [W2291769085]. However, the issue of transitive activities has been almost completely neglected in the field. All but three of the included studies assumed that each window interval consists of only a single activity. The transition from one activity type to another under free-living conditions can be problematic for ML-based modeling approaches, since they rely on the extracted features within a predetermined period [W2084779848, W2200539030, W2021754517]. Further research in free-living settings using criterion measures (e.g., direct observation) is needed to elucidate the accuracy of different window sizes. To be better suited for free-living applications, perhaps, future studies will need to develop models that use transition points to define window boundaries rather than sliding windows [W2084779848, W2084878507, W2200539030, W2021754517], which could be more feasible with the presence of raw data [W2084779848, W2021754517].",
+          "citations": [
+            "W1976451292",
+            "W2098450425",
+            "W2326204356",
+            "W2060699725",
+            "W2084779848",
+            "W2778426046",
+            "W2084878507",
+            "W2291769085",
+            "W2200539030",
+            "W2021754517"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4. Feature generation and selection, axes of measurements",
+          "subsubsections": [],
+          "text": "Input features is one of the most primary factors, if is not the most important factor, that directly affects the results of ML-based models [W1960210438]. AC-based studies demonstrated that extracting TD features from all three axes of measurement is beneficial for the predictive accuracy of ML-based models. However, contradictory results from raw acceleration-based studies (only one study) suggest that the inclusion of more than one axis of measurement is not beneficial for the predictive accuracy of wrist-based AR models. Extraction of FD features in addition to TD features is prevailing with raw accelerometry. Controversy exists across the included studies regarding the importance of FD features. The contradictions are mainly explained by the fact that input features may need to vary according to the prediction goal and accelerometer placement [W2084779848, W2084878507, W2327453846], while the studies rarely applied an automated feature selection procedure to find the optimal features in relation to accelerometer placement. As the tested feature sets in some studies were manually-provided, an optimized combination of FD and TD features selected by automated feature selection methods might resolve the contradictions.\n\nTherefore, it remains still open which features from which axes of measurement should be used in ML-based methods when developing AR and AEE models in accordance to accelerometer placement. Similarly, it is not clear whether extracting features from 3D raw acceleration data improves upon orientation-independent VM. A comparative study on the effects of different feature sets, selected by automated feature selection methods, on the results of ML-based models is still lacking. Future studies should consider running different feature selection procedures independently for various accelerometer placements in order to find optimal features in accordance with both accelerometer placement and prediction goals. These location-optimized feature sets can potentially lead to improvement and less variation in the results of ML-based models [W2084779848, W2327453846]. To find location-optimized feature sets, a wide set of combination of TD and FD features extracted from all the axes of measurement and VM (and possibly demographic and anthropometric features) should be fed into feature selection procedures [W2084779848, W2084878507].",
+          "citations": [
+            "W1960210438",
+            "W2084779848",
+            "W2084878507",
+            "W2327453846"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_5",
+          "subsection_index": 5,
+          "subsection_label": "4.5. Machine learning technique",
+          "subsubsections": [],
+          "text": "It might be difficult to find an ML technique that is universally better than others for either AR or AEE [W2295454405]. This is mainly because the predictive accuracy of ML techniques can vary depending on the feature sets, wear location, and even PA and SB constructs being assessed [W2092417862]. ANN, SVM, and RF were the most commonly applied techniques among the included studies. No agreement was observed between the included studies on which ML technique was the most feasible technique. This has been also observed in the existing literature [W2778426046]. A majority of studies comparing ML techniques on the AR and AEE tasks consistently found that the predictive accuracy of different ML techniques are comparable, suggesting that certain ML techniques could be adopted in order to harmonize data processing methods, and avoid proliferation of data processing methods and methodological discrepancies [W2098450425, W2164365672].\n\nFuture studies should consider applying various ML techniques in order to enable comparison between different techniques and find the optimal methods in relation to prediction goals, accelerometer placement, and population group.",
+          "citations": [
+            "W2295454405",
+            "W2092417862",
+            "W2778426046",
+            "W2098450425",
+            "W2164365672"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_6",
+          "subsection_index": 6,
+          "subsection_label": "4.6. Accelerometer placement",
+          "subsubsections": [],
+          "text": "Accelerometer placement is one of the main causes of incomparability of the results across the PA and SB studies (e.g., observational, intervention, etc.) [W1976451292]. To date, there has been no consensus on a single accelerometer placement within the literature [W1984246512]. Perhaps the reason why no consensus has been achieved yet can be explained by the high variation in accuracy of earlier modeling approaches depending on accelerometer placement [W2035855116, W1811913911]. Similarly, there appears to be no agreement on a single optimal accelerometer placement which would provide the highest accuracy. However, notably, accuracies of ML-based models can vary (for both AR and AEE estimation tasks), but not greatly depending on the sensor placement. Studies comparing different ML-based models with data from various accelerometer placements have clearly stated that the accuracy of models are close to each other and acceptable [W2522491157, W2048606477, W2051029594, W2327453846, W2465778425, W2765422955, W2664062929, W2002353621], except a few studies in which the difference was substantial which can be explained by study design [W2128121198, W2094523840, W2548437830]. Probably, a consensus for a standardized location might be achieved, considering that advanced ML modeling approaches may provide the opportunity of processing accelerometer data with minimal accuracy loss according to the wear location.\n\nDue to the high compliance and feasibility of wrist-worn accelerometers, wrist was the placement of choice in several large studies including the National Health and Nutrition Examination Survey (NHANES) and the UK Biobank study [W2108707936, W2528451523]. It seems very realistic that wrist would be the preferred choice of placement in a majority of future studies. This signifies the finding that ML approaches have minimized the differences in predictive accuracies due to wear location [W2035855116, W1811913911]. Given that ML approaches have enabled precise measurement of SB and PA from wrist-based data comparable to other wear locations [W2048606477], it might be possible to adopt wrist as the common wear location and enable the comparability of accelerometry results across the studies. However, over longer period, the minimal differences in results in relation to accelerometer placement could change to substantially different results [W2522491157, W2530754091]. Additional independent validation studies under free-living conditions are still needed to further confirm whether the minimal variability of results according to accelerometer placement is transferable to free-living settings.",
+          "citations": [
+            "W1976451292",
+            "W1984246512",
+            "W2035855116",
+            "W1811913911",
+            "W2522491157",
+            "W2048606477",
+            "W2051029594",
+            "W2327453846",
+            "W2465778425",
+            "W2765422955",
+            "W2664062929",
+            "W2002353621",
+            "W2128121198",
+            "W2094523840",
+            "W2548437830",
+            "W2108707936",
+            "W2528451523",
+            "W2530754091"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_7",
+          "subsection_index": 7,
+          "subsection_label": "4.7. Generalization capability",
+          "subsubsections": [],
+          "text": "ML-based models were rarely validated independently. It is widely accepted that LOSO-based validation provides a good estimate of how ML-based models will be generalized [W2314289569]. Arguably, four of the included studies well discussed and showed that LOSO-based validation overestimated the accuracy of ML-based AR models [W2169642908, W2152195551, W2200539030, W2785176356]. This issue has also been shown for ML-based AEE models [W2125212922]. This is implying the development and evaluation of the method on the same subjects (LOSO or random split) might encourage the ML methods to overfit the data, resulting evaluation statistics validation to be biased and overly optimistic.\n\nWhen ML-based models are cross-validated on an independent population, unseen activities which were not part of model development along with heterogeneity in sample characteristics are among the other important reasons of accuracy reduction [W2152195551, W2125212922]. More importantly, the accuracy reduction becomes more severe when laboratory-calibrated models are cross-validated to (semi-)free-living settings [W2170931123, W2152195551, W2200539030]. It was observed that when AR models were cross-validated on an independent population, the overall accuracy often remained higher than the accepted level of 80% suggested in previous studies [W2200539030]. However, when the data of independent population was acquired under free-living, the overall accuracies remained below the accepted level of 80% (except one method). This may be because the duration of activities (i.e., transitive activities), types, and acceleration signals (both AC and raw acceleration data) vary greatly in free-living settings compared to laboratory-controlled conditions [W2323345995, W2021754517]. It appears that the high accuracy of laboratory-calibrated models will not be translated to free-living settings and accuracy loss could be substantial and often not clinically acceptable [W2169642908, W2170931123, W2323345995, W2200539030]. Additionally, LOSO-based validation (as well as random split) alone might not be enough for understanding that how ML-based models will perform in a new population, even if the population characteristics remain homogenous [W2169642908, W2152195551, W2200539030, W2785176356]. Reporting the predictive accuracy of ML methods for each subject is needed to understand how inter-subject variability will affect the performance of ML models. Future studies should develop ML models using data from more subjects and activity types in order to improve the predictive and generalization capability. In line with previous research, demanding independent validation in free-living settings [W2778426046, W2804167751], future studies should also move beyond LOSO-based validation towards independent validation of ML-based models in free-living settings on both homogenous and heterogeneous populations.",
+          "citations": [
+            "W2314289569",
+            "W2169642908",
+            "W2152195551",
+            "W2200539030",
+            "W2785176356",
+            "W2125212922",
+            "W2170931123",
+            "W2323345995",
+            "W2021754517",
+            "W2778426046",
+            "W2804167751"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_8",
+          "subsection_index": 8,
+          "subsection_label": "4.8. Study limitation",
+          "subsubsections": [],
+          "text": "The current study has some limitations. Using data fusion of multiple sensors remained outside the scope of this review. Furthermore, we did not focus on the predictive accuracy of ML-based modeling approaches in relation to activity types (e.g., household activities) together with accelerometer placement. If measuring types of activities is of interest, a specific accelerometer placement might provide substantially better results. However, the focus was on the overall predictive ability of ML-based models, as in many applications (e.g., surveillance studies) a wide range of activities including both SB and PA under free-living conditions is of interest. Comparing the predictive accuracy of ML modeling approaches to regression- and cut-point-based methods remained outside the scope of this review. Instead, we assumed that ML models are superior to the traditional statistical procedures.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this extensive systematic review of 62 published studies, we reviewed the effects of various parameters on the predictive ability of ML-based models as well as the generalization capability of ML-based models to independent populations in free-living settings. Given the heterogeneous nature of studies as well as the abundance of parameters and methodological decisions that affect the results of ML-based models, it is difficult to provide conclusive evidence for the most optimal parameters. Nevertheless, it appears that various ML modeling approaches together with raw acceleration data sampled at 20\u201330 Hz have provided comparable predictive accuracies regardless of accelerometer placement for both AR and AEE-based models. However, the generalization capability of ML-based models to independent populations in free-living settings is still a challenge and further studies are needed.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In summary, based on the included papers, our review highlights that relatively low frequency raw acceleration data together with various ML-based modeling approaches offers opportunities for predicting activity type, intensity and energy expenditure with comparable overall predictive accuracies regardless of accelerometer placement. These opportunities also include minimizing accuracy variation due to window size. However, raw accelerometry has also led to methodological discrepancies, since it is not clear which features from which signals should be extracted. Furthermore, most studies relied on laboratory-controlled data, fixed-length non-overlapping windows, and LOSO validation for calibration and validation of accelerometer-based activity monitors using ML-based methods. Due to these reasons, it appeared that the high predictive accuracy of laboratory-calibrated models has not been reproducible in free-living settings. Moving towards independent validation of ML-based models under free-living settings is required in order to develop models with clinically acceptable accuracy in free-living settings and independent populations.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Recommendations for future studies and directions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In light of the current existing knowledge and knowledge gaps, for addressing the gaps as a move towards consensus and standardization, future studies should consider the following key points:\n\n* Raw acceleration data allow for AR and AEE estimation from various wear locations including the conventional hip placement as well as alternative placements such as wrist.\n* A sampling frequency of 20\u201330 Hz could be sufficient for both tasks of AEE and AR.\n* ML-based modeling approaches are able to classify activities using a short window size of 5\u201315 sec.\n* Input features should be selected in relation to accelerometer placement and prediction task (i.e., AEE or AR) from a broad list of FD and TD features extracted from different axes of measurement (and possibly demographic and anthropometric features) using automatic features selection procedures rather than manually-provided feature sets.\n* ANN, SVM, and RF are among the most commonly employed ML-based algorithms, which can be proper candidates for developing of ML-based models.\n* Development of ML-based models using free-living- or semi-free-living-acquired data rather than laboratory-acquired data.\n* Moving beyond LOSO-based validation towards independent validation of ML-based models in free-living settings on both homogenous and heterogeneous populations.\n* With the presence of raw acceleration data, developing methods for identifying the transition points between activities rather than relying on fixed-length windows.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Conflict of interest",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The authors attest that they have no conflicts of interest to disclose. This paper reflects the viewpoints of the study authors only.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This work has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Sk\u0142odowska-Curie grant agreement No 713645, the Ministry of Education and Culture in Finland [grant numbers OKM/86/626/2014, OKM/43/626/2015, OKM/17/626/2016], Infotech Oulu, Finland, and Northern Ostrobothnia Hospital District.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W2903150444_tables.md"
+}

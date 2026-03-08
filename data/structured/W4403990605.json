@@ -1,0 +1,405 @@
+{
+  "id": "W4403990605",
+  "metadata": {
+    "title": "New Challenges in Point Cloud Visual Quality Assessment: A Systematic Review",
+    "n_sections": 5,
+    "n_subsections": 8,
+    "n_subsubsections": 6,
+    "n_tables": 3
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 INTRODUCTION",
+      "subsections": [
+        {
+          "subsection_id": "s_1_1",
+          "subsection_index": 1,
+          "subsection_label": "Our contribution",
+          "subsubsections": [],
+          "text": "PCQA is a live research topic with a very active community. Most of the progress and new proposals in the field focus on PCQA for human visualization. The number of research papers presenting subjective test results and datasets, objective QA benchmarks and novel metrics has been multiplied since 2020 after the standardization of MPEG-I PCC standards [W2905544027] and the first version of the JPEG Pleno common test conditions (CTC) for PCC QA [UNMAPPED:1]. However, with the emergence of immersive technologies and all the modern and future use cases that came along, the scope of subjective QA in terms of evaluated IFs has greatly evolved since the definition of the JPEG Pleno recommendation, and the range of objective QA metrics was also transformed. The current recommendations do not and cannot apply to all the research issues that subjective tests should investigate, and the features currently taken into account by standard objective metrics are not enough. The proposed methods and conditions for subjective PCQA are too diverse and strive away from the CTC. Objective PCQA metrics also have a much diversified range of features to consider.\n\nTherefore, an up-to-date review of literature is much needed in order to trace the evolution path of this research topic. Previous literature reviews about this field [W3008942803, W2805269828] review the development in PCQA only up to the standardization of the JPEG Pleno CTC, prior to the tremendous progress of the last few years, or focus mostly on the latest progress for other types of data and limited use cases [W2976816541]. A more recent survey [UNMAPPED:12] is focused only on the key papers of the literature. The authors discuss the methodologies used in the most cited subjective studies and present a benchmark of the most cited objective metrics. But they do not consider the whole picture of the research field which limits the observations. Also, they only present the distortions types used in these studies without discussing them, and do not include a discussion about the evolution and future of the field.\n\n**FIGURE 2. Flow diagram of our systematic review paper identification and screening methodology. Template from Page et al. (2021)**\n\nIn this paper, we make a systematic review of the PCQA literature in order to make an overview of the tremendous progress made and amount of papers published in the last 5 years. We focus on the case of visual PCQA for representation of real-life objects or people. We explore the publications that present subjective QA experiments and datasets, new objective QA metrics, and performance benchmarks. By making statistical analysis of a selected set of 148 relevant papers, we identify the IFs of interest and the tendencies of methodologies in subjective QA, and we review the state-of-the-art progress and current goals of objective QA metrics. In conclusion to our analysis, we discuss the next and upcoming interests that will or should be investigated by the community.",
+          "citations": [
+            "W2905544027",
+            "W3008942803",
+            "W2805269828",
+            "W2976816541"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1",
+            "12",
+            "2021"
+          ]
+        },
+        {
+          "subsection_id": "s_1_2",
+          "subsection_index": 2,
+          "subsection_label": "Research questions",
+          "subsubsections": [],
+          "text": "Our topic of interest is PCQA for human vision. Our research questions are the following:\n\n1. What aspects of PC visual quality have been considered in subjective PCQA?\n2. What aspects of PC visual quality still need to be considered in objective and subjective PCQA?\n3. What are the needs for new standardization of PCQA methodologies and metrics?\n4. What are the next steps in optimizing the QoE of PC visualization in XR applications?",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Point cloud (PC) is the generalization in 3D of the principle of pixels for 2D images. More in detail, a point cloud is a set of thousands to billions of points (depending on the use case and the type of data) that each have 3D space coordinates and various attribute values (color, surface normal, transparency, etc.). Unlike in 3D meshes, there is no spatial connection between the points in a PC [UNMAPPED:1], which allows the representation of non-manifold objects [W2905544027]. Advantages to using PCs rather than meshes include a lesser time and memory complexity, making them more practical for storage and transmission. So far, meshes are preferred in mainstream and industrial applications because they are easier to manipulate, edit and render. However, the newest immersive technologies brought up numerous new use cases for PCs that do not require manipulation and editing.\n\n**FIGURE 1. PC capture methods with examples of acquired data. (a) terrestrial LiDAR. (b) UAV LiDAR. (c) camera array/matrix. (d) multi-video camera studio (e) NeRF. Pictures from Schwarz et al. (2019); Themistocleous (2018); Mildenhall et al. (2021) and JPEG Pleno DB.**\n\nPoint cloud data can be saved in the same graphics file formats as meshes, by storing individual points as vertices without any faces. For colored PCs, it is generally the PLY format (polygon file format) that is used, despite the availability of PC specific formats (laz/las for LiDAR data, or pcd of the Point Cloud Library (PCL) project for PCs in general). This is due to the import/export capabilities and support of the common PC softwares. With PLY, each point has 3D space coordinates (x, y, z), and optionally other dimensions and properties to represent the point attributes. Common properties are the point colors (r, g, b) and the normals (nx, ny, nz) which are the coordinates of the normal vector to the surface of the point. It can either be coded in ASCII or binary format.\n\nPoint clouds are relevant for representation of real life scenes, objects or places in 3D. The capture and acquisition methods, as well as the point attributes represented, are various and depend on the use case they should fit to. Laser scanners (LiDAR) are used to acquire point clouds describing $ 360^{\\circ} $ representation of a building or scene. They can also be dynamically acquired with LiDARs mounted on terrestrial vehicles or unmanned aerial vehicles (UAVs). This type of PC is used for 3D cartography, architecture planning, and in military operations. However, as these methods only capture the geometry, the resulting PC data has no color attributes. Such data are generally only used for machine vision tasks.\n\nFor content destined to human vision, 2D-to-3D computation methods such as photogrammetry or NeRF models [W4200150166] permit to obtain photo-realistic PC representations of objects, people or scenes based on 2D content with depth or spatial information, or just on multiple 2D views. Acquisition for generation of such representations is done with RGB-D (RGD+Depth), time-of-flight, stereoscopic or regular cameras. In recent mobile hardware, the camera can be coupled with an integrated LiDAR used in place of a depth sensor (RGB+LiDAR). With these methods, the more there are input views on the content to represent, the higher the density of the resulting textured PC will be. This method is generally used for 3D modeling of real objects, but it can also be coupled with LiDAR scans from terrestrial or UAV systems for colored representations of lands and buildings. Other use cases are cultural heritage, 3D printing and industrial quality control. Cameras can also be arranged in camera arrays or matrices to capture many viewpoints at once in video. For a complete 3D reconstruction of a moving object or person, cameras are arranged in multi-video camera studio settings. The volumetric videos are captured with such setups and stored as PC sequences, which are commonly referred to as dynamic point clouds (D-PC). Use cases for 3D PCs and D-PCs include immersive telecommunication, immersive media broadcasting, and virtual museums and theaters [UNMAPPED:4]. These applications all induce the use of eXtended Reality (XR) displays and virtual/mixed environments in 6 degrees of freedom (DoF). Fig. 1 shows the different acquisition methods mentioned with examples of captured content.\n\nXR applications have become the main motivation for development in PC processing. They require PC objects or sequences to be rendered and played in virtual/mixed scenes. The common approach for PC rendering is to use surface reconstruction [UNMAPPED:5] and render them as meshes (surface-based rendering). With this method, we either map the point colors to a texture or use the vertex colors. To keep the advantages of PC representation in storage and rendering, another approach is to render each vertex (a point and its attributes) as a particle or graphic object (point-based rendering). In this second approach, the size of point objects is selected to visually fill the gaps between points and make the displayed content appear as a watertight surface. When rendering large data, point-based rendering also allows control of the level of detail (LoD) in order to limit the use of computational resources.\n\nFor PCs acquired with LiDARs, the data are captured dynamically and concatenated into scans of large areas (typically 2M to 1G points [W4388711634]) and are therefore more spatially voluminous. For volumetric videos and 3D reconstructions of objects or people, we need visually accurate representations that can be rendered as seemingly watertight (typically 100k to 2M points) for a high visual quality, for every single frame in the case of D-PCs. Such voluminous data is costly in terms of memory space for storage and in terms of time for transmission, and this issue is even worse when using meshes instead. To address this problem, point cloud compression (PCC) methods that fit different use cases have been developed. Main approaches are based on 3D spatial division and octree coding for geometric data such as LiDAR scans, and 3D-to-2D projection and image coding for textured PCs. More recently, the field of PCC has also been taken over by AI with the emergence of compression methods using feature detection and learning-based auto-encoders. In response to a need for common ground solutions, the MPEG expert group developed and defined two standard compression schemes: geometry-based PCC (G-PCC) and video-based PCC (V-PCC). G-PCC (ISO/IEC 23090-9 (2021)) encodes voxelized PC coordinates in an octree and uses another encoder for the attributes associated with the octree leaves. V-PCC (ISO/IEC 23090-5 (2023)), designed for D-PCs, generates 2D patch maps respectively for the geometry (depth map) and the attributes (texture maps), and encodes them with a state-of-the-art video codec. Other more recent standard methods such as AVS PCGC [W2976304245] and the JPEG Pleno PCC [UNMAPPED:8] codec use learning-based coding approaches. Aside from the standards, learning-based PCC has been a very active research field in the last 5 years.\n\nTo be characterized and fit to a given use case, the performance of these compression methods, but also of the capture, transmission and rendering methods, need to be evaluated through quality assessment (QA). For geometric LiDAR scans, which are mainly used in machine vision tasks and not human vision, objective QA metrics that measure the geometric acquisition error or the compression distortion error are used. For colored PCs and D-PCs representing content destined to be visualized by human observers, optimization of the visual quality is important in order to improve the quality of experience (QoE) in use cases and applications. In this case, subjective PCQA is needed to assess the impact of capture, compression, transmission and rendering artifacts on visual perception, and to identify influential factors (IF). Subjective tests are essential in the first place to assess the human perception of quality and user expectations, and to determine better visualization and display methods, parameters and conditions. Yet, since such tests require time, material and participants, and cannot be included as quality control in production pipelines, objective PCQA for immersive media is also an important research field. Metrics are being developed to predict the visual quality of PCs. Their aim is to correlate with subjective test results in order to ultimately replace them. In PCQA, as in QA in general, objective metrics can be categorized by the computational approach and input of references. Full-reference (FR) metrics compute a quality score for a distorted stimulus by comparing it to its reference (same stimuli prior to distortion). Reduced reference (RR) metrics only use limited information about the reference, and no-reference (NR) metrics evaluate a stimulus without any comparison to a reference. This last category allows blind QA in cases where no reference is available, like during compression and after transmission. For PCQA, objective metrics either take the raw points data as input (3D-based), or compute a quality score based on 3D-to-2D projections of the PC in rotating camera videos, 6 viewpoint cubes, or patch maps (projection-based). The first standardized approaches for objective PCQA are computations based on a point-by-point MSE or PSNR measure (MSE-based) for the geometry and/or color (color-based) data. The tremendous development of the research has however brought upon many new approaches. Similarly to PCC, the state-of-the-art metrics use AI principles or only feature extraction in their computation (learning- or feature-based). The learning-based category also includes metrics that consider perceptual features of the evaluated PC in the quality score computation in order to correlate with the human visual system (perceptual-based metrics). It is to be noted that these categories are not exclusive of each other and that a metric can use feature extraction or be based on perceptual features without being learning-based.",
+      "citations": [
+        "W2905544027",
+        "W4200150166",
+        "W4388711634",
+        "W2976304245"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "1",
+        "4",
+        "5",
+        "8",
+        "2019",
+        "2018",
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 METHODOLOGY",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "A systematic review has to apply described and published search rules and protocols. The objective is to do a review of the research field of interest that is as exhaustive as possible. It also requires precise documentation on the search tools, queries, filters and exclusion criteria for the studied papers that were used. It allows the readers to understand, validate and potentially replicate the process in the future.\n\nTherefore we detail below the steps of our method for searching, selecting, sorting and analyzing scientific papers.\n\n1. We first selected 13 target papers that represent our prior knowledge of the studied topic [W1960997355, W2319503556, W2793293836, W2933989402, W3015751022, W3035130434, W3113576815, W4231046765, W4388117856, W3164568205, UNMAPPED:16, UNMAPPED:17, UNMAPPED:25]. The works presented in these papers include various subjective test procedures and results, datasets, objective metrics and objective benchmarks. From the titles and keywords of these papers, we define a short vocabulary that will be used in queries to search for the complete set of papers to be studied. The selected vocabulary contains the words: Point cloud, Volumetric video, Quality, Evaluation, Preference.\n2. We ran a first query on only the paper titles in order to get a first large overview of the results, elaborate the next queries and identify words to exclude. We ran the query on two online libraries: IEEE Xplore and ACM Digital Library. In this query, we split the vocabulary into two sub-groups such that the paper titles have to contain at least one expression from each. The sub-groups are [point cloud, volumetric video] and [quality, evaluation, preference].\n3. Based on the results of the first query, we elaborated a second vocabulary based on the titles, keywords and abstracts. We separated it into 3 sub-groups of expressions with equivalent meanings: [point cloud, volumetric video], [quality assessment, quality evaluation, preference, visual quality] and [subjective, objective, metric]. In order to filter out some irrelevant results (not related to human visual PCQA, we also excluded a limited sub-group of words describing unrelated papers (PCQA for machine vision in autonomous vehicles): [vehicle, landscape]. We ran this query on the paper titles, keywords and abstracts, and included results from a third online library: Scopus. After removing the duplicates in results of both queries in each library, we got 186 papers from IEEE Xplore, 35 from ACM Digital Library, and 287 from Scopus.\n4. Since the results collected from Scopus contain papers published by IEEE and ACM, we had to manually remove from the Scopus results the papers that were already found in IEEE Xplore and ACM Digital Library. Afterwards, Scopus results were narrowed down to146, which left us 367 distinct papers in total.\n5. We then did a first screening of the 367 papers based only on the paper titles and abstracts. We marked and removed all the papers where the title or abstract revealed that the type of data or focus use cases were not implying human visual tasks or visual quality assessment with PCs. The excluded topics and types of data were: machine vision tasks only, autonomous driving, uncolored LiDAR scans, volumetric videos represented only as meshes, spatial videos and light fields. After this first screening, a total of 198 papers were left with a majority of 140 from IEEE Xplore, 22 from ACM Digital Library, and only 36 left from Scopus.\n6. The final step of the papers screening was an overview of all the remaining contents for eligibility in order to filter out and keep only the final set of articles to study. During this second screening, we removed all remaining articles where the content relates to the excluded topics mentioned in the previous step. We also excluded all papers that, despite being related to PCQA, were not presenting newly published subjective test results, objective metrics, or metric benchmarks. This included previous surveys, technical papers only introducing QA toolboxes, or case studies that only present results from a previous paper. In this step, we also removed all articles that we could not access a full PDF version of. After this last step of narrowing down the results, a final set of 144 papers was left to study. This includes 111 articles from IEEE Xplore, 14 from ACM Digital Library and 20 from Scopus.\n\n**TABLE 1. All the papers of the analyzed set sorted by content. Subjective Tests are papers that present subjective test procedures and/or results. Metrics Benchmarks are papers that include performance benchmarks of QA metrics. Objective Metrics are papers that introduce new objective QA metrics.**\n\n{{TABLE:tbl_01}}\n\n7. During the paper content screening for eligibility and later, we also added 9 more papers to the final set [W4229003875, W2892040042, W4379514530, W2319503556, W3211374646, W2985655328, W4399537314, W4387831705, UNMAPPED:33], that were citing or cited by our selected papers, and were included because their content was eligible and particularly relevant to the study.\n8. At last, we analyzed the 154 papers of the final set that all contain at least results and protocols about subjective PCQA tests, the introduction of new objective PCQA metrics, or benchmarks of QA metrics performances. Our research process is summarized in Fig. 2.\n\nDuring the analysis, we extracted for each paper a set of relevant information depending on its content. For all papers, we noted the source dataset and type of data used or presented. For subjective PCQA papers, we noted the type(s) of display (2D, 3D, VR/MR), the user interactivity (passive with 0 DoF, or active with 3/4/6 DoF), the rendering technique(s), the rating methodology, the number of observers, the investigated IFs, and whether the test was run in-lab, cross-labs or remotely. When the test results were made available, we also noted the associated dataset.\n\nFor objective PCQA papers introducing new metrics, we noted the name of the metrics, the dimensional category of the approach (3D-based or projection-based) and the reference base of the metric (full-reference (FR), no-reference (NR) or reduced-reference (RR)). We also identified, for each metric, all the categories to which its computation corresponds (MSE-based, feature-based, learning-based, perceptual-based, color-based,...).\n\nFor all papers that present benchmark results for objective QA metrics, we noted the dataset(s) used as ground-truth and the categories of metrics evaluated (standards, image quality metrics (IQMs) and state-of-the-art FR, NR or RR). All the analyzed papers can be classified into 3 non-exclusive categories: subjective QA studies, objective QA metrics, and metric performance benchmarks. The queries and the collected data will be made available $ ^{1} $.\n\n**FIGURE 3. Venn Diagram of the set of selected papers.**",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 RESULTS",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Results on subjective QA",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.1.1 Participants and test conditions",
+              "parent_subsection_id": "s_3_1",
+              "text": "From the 69 subjective QA papers we analyzed, a large majority of 63 presents tests run in-lab, including 11 cross-lab tests (same test in different labs). Single lab tests follow the CTC recommended in (ITU-R Recommendation BT.500-14 (2019)) for the experiment environment settings. They have an average of 37.1 observers for each stimuli (with a minimum of 16 and a median of 29), while cross-labs have 50.8 (with minimum of 30 and median of 46). The tests presented in the 6 other papers are more recent and run remotely. Even though remote tests lack control over the viewing conditions, which typically implies a higher user-bias and inter-observer standard deviation ( $ \\sigma $ ), they make participation easier and satisfy a higher needed number of observers (n) in order to result in confidence intervals (CI) equivalent to those of in-lab tests (CI depends on $ \\frac{\\sigma}{\\sqrt{n}} $ ). Remote tests all have at least 33 valid observers, 55.4 on average and 60 on median, which is almost twice as much as for in-lab tests and results. Yet subjective QA experiments are still mostly run in-lab. Following the JPEG Pleno CTC [UNMAPPED:1] for PCQA permits to control and limit the need in terms of observers (15-20 observers recommended). The flexibility in participation of remote and cross-lab tests is useful in cases where an experiment aims to evaluate IFs that are not considered by the standard CTC and/or a more difficult task.\n\nStudies with XR displays, where the inter-user variability is even higher and that cannot be run remotely as easily, are also run exclusively in-lab. XR QA tests in 6DoF conditions are the most demanding in terms of settings control and participation (36.5 observers on average).\n\n**FIGURE 4. Examples of subjective test interface for different interaction levels: (a) 2D Passive DSIS (0DoF) from Ak et al. (2024); (b) 3DoF manipulation from Fan and Gao (2023); (c) 6DoF navigation on 2D display from Mekuria et al. (2017); (d) 6DoF navigation in VR from Alexiou et al. (2020).**",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "1",
+                "2019",
+                "2024",
+                "2023",
+                "2017",
+                "2020"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.1.2 Test methodologies",
+              "parent_subsection_id": "s_3_1",
+              "text": "In a common subjective QA experiment, observers visualize a set of stimuli with defined distortion types, viewing conditions and interaction methods. They assess the visual quality of the stimuli on a defined rating scale, and optionally fill a questionnaire for more QoE assessment data. The methodology differs from test to test depending on the focus of the study.\n\nThe rating scale used in subjective PCQA is generally the absolute category rating-scale (ACR) where the observer rates the stimuli based on a reference scale, or double stimulus impairment scale (DSIS) where the observer evaluates the distorted stimuli in comparison to their reference. We found 23 studies using ACR and 46 using DSIS, which are proportions in agreement with the observations of Yingjie et al. (2023) on a smaller set of papers. For at least 12 of them, the paper mentions the use of a hidden reference (HR) in the stimuli set as a high quality anchor. But since this inclusion is recommended in ITU-R Recommendation BT.500-14 (2019), it is likely that much more than these 12 papers use it without mention. Most experiments on 2D display with static PCs use DSIS (40 out of 46) as it is the recommended methodology in the CTC. But studies in XR are more varied (8 with ACR and 11 with DSIS). ACR is shown to be just as efficient in XR by the latest studies [W4388117856] than DSIS. It is also more fit to the use cases and the evaluation of dynamic content than a double stimuli displaying method.\n\nPrior to the standardization of MPEG codecs, PCQA studies were using only texture and geometry noise and down-sampling in order to create different quality levels for the stimuli (14 out of 22 studies before 2020, and the other 8 are either using no distortion or QA of codecs for standardization). Since the release of the MPEG-I PCC standards in 2020, almost every PCQA study has been about compression distortion. 28 studies use G-PCC, 36 use V-PCC, 5 use Google Draco, 14 use more recent learning-based codecs, 5 use the CWI-PL codec for tele-immersive communication.\n\n**TABLE 2. Summary of the identified methodologies and distortions for each type of display and task in subjective PCQA.**\n\n{{TABLE:tbl_02}}\n\n**FIGURE 5. Evolution of tendencies in subjective PCQA in terms of display and approach (a), and in terms of user and manipulation freedom (b).**\n\nA few studies evaluate the visual quality and QoE of point clouds in real time streaming applications [UNMAPPED:41, UNMAPPED:42]. The MPEG standards and popular AI codecs (including the recent JPEG Pleno codec [W4290056783]) are not yet optimized for this use case, so the compression methods used in this scenario are Draco or CWI-PL. However, results of the subjective studies we analyzed tend to suggest that these two codecs are also those with the lesser visual quality. V-PCC, the most often used, is shown to offer the best ratio between bitrate and visual quality [W4214586618, W4308097575]. It is also shown to be the most fit for visual content and D-PCs [W3037401511], and is therefore the most used in recent studies and XR experiments (10 out 18 XR studies use V-PCC).\n\nFor the standard codecs, the different quality levels for the stimuli are those defined by JPEG Pleno CTC, despite there being no study to justify these parameters as optimal [W4399537314]. In large experiments comparing and evaluating many codecs, the many types and levels of distortions make the set of stimuli too large for a single session test. In such cases, tests are split into sessions with 20-30 stimuli per session in general. For each observer, participating in an experiment is never longer than 30 minutes.",
+              "citations": [
+                "W4388117856",
+                "W4290056783",
+                "W4214586618",
+                "W4308097575",
+                "W3037401511",
+                "W4399537314"
+              ],
+              "tables_in_text": [
+                "tbl_02"
+              ],
+              "citations_unmapped": [
+                "41",
+                "42",
+                "2023",
+                "2019"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.1.3 Interaction, display and rendering",
+              "parent_subsection_id": "s_3_1",
+              "text": "Fig. 4 shows examples of subjective test interfaces for different interaction levels and methodologies. 53 out of 69 studies use 2D displays. For 39 of them, a passive approach is used, in which the stimuli are shown to the observers either as static images (5 out of 39) or videos with a rotating viewpoint around the objects (34 out of 39). For only 12 of them we could confirm an active assessment approach where users were free to manipulate the object and choose their point of view. For the last 2 studies with 2D display, no information was given about the interactivity of the interface. The large superiority in popularity of the passive approach was not shown in previous surveys and reviews. For studies using the active approach, depending on the interface, observers are either only able to rotate the stimuli (3DoF manipulation), also allowed to zoom in and out (3DoF manipulation + zoom), or free to translate its position in 3D space (6DoF manipulation). Another interactive method is to have the observer control an avatar to move around the stimuli in a virtual room (6DoF navigation). This last approach is used with a 2D screen in a few early papers [W1960997355, W2319503556], leading to the use of HMDs later. As can be seen on Fig. 5b, the rise of XR in QA has almost totally replaced 2D displays in studies focused on interactivity or specific use cases.\n\nThe passive approach reportedly allows better inter-user consistency and confidence interval [W4308097575], which is why it has been selected for standardization. But it is not reflective of real in-context viewing conditions, and does not fit the evaluation of dynamic content. 4 experiments studying user preferences and display as an IF have users view PCs on 3D stereo displays or eye sensing light-field displays (ELFD) [W3113576815, UNMAPPED:48, UNMAPPED:49], but no significant difference with using 2D screens was found. With HMDs (head-mounted displays) however, differences in freedom and effort influence the ratings. We found 18 papers presenting subjective studies in VR, MR or AR (including 2 that also present a test with 2D display). From these 18, 16 present experiments in 6DoF navigation. These studies show an important inter-observer variability and aim to demonstrate a significant impact of the display and task on user behavior and ratings. The amount of PCQA studies in XR is growing each year as can be seen on Fig. 5a and will likely keep going as they are closer to the expected application for the evaluated content. For the same reason, most XR studies (11 out of 18) are about the quality of volumetric videos represented as D-PCs. In total, 21 of the 69 analyzed subjective PCQA experiments assess D-PCs, and this proportion is also expected to grow.\n\nAnother IF that has been evaluated in subjective PCQA is the PC rendering approach. While early studies used sparse PCs rendered only as sets of pixel-sized points [W2742710256, W2743427350, UNMAPPED:25, UNMAPPED:50, UNMAPPED:51], the majority of subjective experiments (48 out of 69) use vertex-based rendering. Points are rendered either as squares [W3037306954], cubes [W2890979795], disks [UNMAPPED:49] or spheres [UNMAPPED:56]. Since the industrial approach for volumetric content mostly considers meshes, 12 studies use surface-based rendering and compare it to point-based rendering. Results of these studies conclude on the same observations [W3113576815, W3037401511]: for highly distorted objects, point-based rendering is better than surface-based; it is also preferred for any distortion level except when the viewing distance (distance between the object and the viewpoint) is too short. A few studies using surface-based rendering [W3113576815, UNMAPPED:36, UNMAPPED:57] also include object shading and dynamic lighting, allowed by mesh rendering engines. [UNMAPPED:58] is the first study that considers lighting in point-based rendering, and compares it to mesh surface shading. However, the points shading is based on their normals. In this experiment, rather than being processed as a point attribute like the color, the normals are estimated from the distorted geometry of the stimuli. As a consequence, the addition of lighting has a negative revealing effect on the geometry quality.",
+              "citations": [
+                "W1960997355",
+                "W2319503556",
+                "W4308097575",
+                "W3113576815",
+                "W2742710256",
+                "W2743427350",
+                "W3037306954",
+                "W2890979795",
+                "W3037401511"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "48",
+                "49",
+                "25",
+                "50",
+                "51",
+                "56",
+                "36",
+                "57",
+                "58"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.1.4 Sources and PCQA datasets",
+              "parent_subsection_id": "s_3_1",
+              "text": "For subjective QA, the available source PCs are not as numerous as for video or mesh QA. Out of 39 studies on static colored PCs, 28 use stimuli from the MPEG and JPEG Pleno repositories. For D-PCs, only a handful of PC sequences are available. Stimuli from the MPEG database (8i and Owlii) [UNMAPPED:59, UNMAPPED:60] are used in almost every (all except three [W3037401511, W4387831705, UNMAPPED:42]) subjective PCQA study on D-PCs. The only other used source for D-PCs is the Vsense VVDB2.0 dataset [W3037401511]. Other datasets of source point cloud sequences [W4384703234, W3200257964] offer more diversity and range, but have not been used in as much studies so far. All these sequences were also captured in studios with limited space for the models, and therefore all represent humans doing short movements.\n\nFinally, 31 of the analyzed papers have their stimuli and results (mean opinion scores, MOS) publicly available as PCQA datasets, and 7 of them are from XR studies. These datasets are used in other studies as ground-truth for evaluating the performances of objective QA metrics or, for the largest and most diverse of them, to train learning-based PCQA models. The most used datasets in the 119 metric performance benchmarks are SJTU-PCQA [W3094394107]: used in 40), WPC [W4288084829]: used in 31), ICIP2020 [W4308097575]: used in 19), IRPC [UNMAPPED:58]: used in 13) and M-PCCD [W2985655328]: used in 11). For metrics performances on D-PCs, there are 8 benchmarks, with 4 using the VsenseVVDB datasets [W2976816541, W3037401511], and 4 others using ground-truth ratings collected in their own subjective experiment. About datasets built from studies in XR, the most popular are PointXR [W3037306954]: used in 4 benchmarks) and SIAT-PCQD [W3190803734]: used in 2). The largest datasets for model training are LS-PCQA [W4288084829]: used in 7) and the most recent BASICS [W4388711634]: used in 3 already). The last two are very recent and will likely also be very popular as ground truth for benchmarks. Other recent and innovative databases are the QAVA-DPC and ComPEQ-MR datasets [W4387831705, UNMAPPED:69] that also contain the observers' behavioral and gaze data from a 6DoF experiment in XR. Table 2 gives a summary of all the subjective test scenarios we found, with an example of dataset for each.\n\n**FIGURE 6. Evolution of tendencies in objective PCQA metrics development in terms of reference use (a), and in terms of base approach (b).**",
+              "citations": [
+                "W3037401511",
+                "W4387831705",
+                "W4384703234",
+                "W3200257964",
+                "W3094394107",
+                "W4288084829",
+                "W4308097575",
+                "W2985655328",
+                "W2976816541",
+                "W3037306954",
+                "W3190803734",
+                "W4288084829",
+                "W4388711634"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "59",
+                "60",
+                "42",
+                "58",
+                "69"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Results on objective QA metrics",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1 Types of PCQA metrics",
+              "parent_subsection_id": "s_3_2",
+              "text": "In the 91 papers presenting objective PCQA metrics we identified, 95 metrics are introduced in total [W3089343273, W4389230952, W2793293836, UNMAPPED:71] each present not one but 2 metrics). 62 of these metrics are 3D-based and 35 are projection-based. Among them, 7 are hybrid metrics using both approaches and counted in both categories. Generally for this last category, the geometry is evaluated in 3D space and the texture (color attributes) on projection maps. The projection-based approach is justified by the fact that, unlike 3D-based metrics, it can easily take into account more IFs that are not noticeable from just the raw point data, like rendering artifacts and conditions. The analyzed metrics also include 5 others that are neither based on 3D or 2D data. 2 of them [W4285266685, W4323519265] are designed to assess the quality of an encoded point cloud during transmission, based on the distorted bitstream prior to decoding (bitstream-based). 2 others [W3183144290, UNMAPPED:76] are AI-based metrics, trained with subjective test MOS, that computes a quality score based on input subjective experiment parameters (condition-based). The last metric of the analyzed set [W3087831856] uses a combination of these two approaches.\n\nBitstream-based and condition-based metrics are also NR metrics. Before the MPEG PCC standardization, all metrics were FR (48 in total presented in 45 papers of the set). We also identified 8 RR metrics, and 39 NR metrics. One of the selected papers [W4389230952] presents two metrics that are FR and NR versions of a same method. From the NR metrics, 35 were also learning- and/or feature-based. Learning-based PCQA is the most active research sub-field of PCQA today. 52 of the 95 metrics we identified are learning-based, including 29 that were published just in 2023 and early 2024. We also found 17 perceptual-based metrics from which 13 are also learning-based. Here, we count as perceptual-based the feature-based metrics who extract perceptual features, and the learning-based metrics that visual attention prediction models (saliency-based). Among perceptual-based metrics, 6 are saliency-based and use the predicted saliency of individual points and regions to compute a weighted score. Fig 6b shows the evolution of interest in the development of different categories of metrics over the years.\n\n**TABLE 3. Most cited and well performing objective quality metrics from different categories. The last column is the ratio of datasets validating the metrics (where PLCC > 0.7 and SROCC > 0.7 on average) among the 12 most popular.**\n\n{{TABLE:tbl_03}}",
+              "citations": [
+                "W3089343273",
+                "W4389230952",
+                "W2793293836",
+                "W4285266685",
+                "W4323519265",
+                "W3183144290",
+                "W3087831856"
+              ],
+              "tables_in_text": [
+                "tbl_03"
+              ],
+              "citations_unmapped": [
+                "71",
+                "76"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2 Existing benchmarks for metric performance",
+              "parent_subsection_id": "s_3_2",
+              "text": "The performances of metrics are evaluated and compared through benchmark studies. From the 121 objective PCQA benchmarks we analyzed, almost all were using Pearson's linear correlation coefficient (PLCC) and Spearman's rank-order correlation coefficient (SROCC) to assess the performance of metrics. More than half (70 out of 121) also use the root mean square error (RMSE), 23 use Kendall's rank-order correlation coefficient (KROCC), and 21 use the outlier ratio (OR). The most often assessed metrics in these benchmarks are either standardized point-based metrics [W2793293836, UNMAPPED:25] not well performing but used as references, or state-of-the-art metrics that were shown to have high correlation with subjective ratings. These non-standard most assessed metrics are PCQM [W3015751022], PointSSIM [W3035130434] and GraphSIM [UNMAPPED:80] (Graph-based metric using Graph Signal Processing to connect the points and define local regions to evaluates). These are all FR metrics. Despite the presence of inconsistencies in benchmarks on the same datasets, these 3 metrics are shown to be among the best on average. For NR and RR metrics, the most often used are BQE-CVP [W3202211958], PCM-RR [W3089343273], 3D-NSS [W3190212754], IT-PCQA [UNMAPPED:83] and MM-PCQA [W4388117499], with the best performing being BQE-CVP and 3D-NSS. They have been shown to not be inferior to FR metrics. Some more recent metrics among the new best performing will likely be used often in future studies are MS-PointSSIM [W4389474382] and MS-GraphSIM [W3207150002] (multi-scale versions of previously cited metrics), MPED [W4304758157], and GMS-3DQA (NR metric). Table 3 lists the best performing metrics according to the literature with the ratio of datasets on which they were shown to perform well by benchmarks and the categories they correspond to.\n\nAmong the aforementioned NR metrics, there are also projection-based metrics [W3202211958, UNMAPPED:83]. But for FR metrics, the most popular state-of-the-art methods are all 3D-based despite an important number of well-performing projection-based methods that have equivalent performance [W4288084829, W3190803734, W3094394107]. This is because, for FR PCQA, objective studies were using image-quality metrics (IQM) computed on self-defined projections in early studies and still tend to do so because they were shown to rival the best 3D-based PCQA metrics. The most efficient and popular IQMs used in PCQA studies are VIF [W2046119925] and IW-SSIM [W2114582993]. VMAF, not mentioned in the survey of Yingjie et al. (2023), is a weighted combination of several IQMs and a state-of-the-art tool that performs well for video QA. In PCQA, it also outperforms most state-of-the-art 3D-based methods in a recent benchmark [W4388711634]. The performance of these IQM for PCQA still depends on the selected viewpoints to assess [W2743427350] and the score pooling method [W3164568205, UNMAPPED:38]. It has also been observed that IQMs and projection-based metrics in general are better at predicting the quality of PCs when they represent inanimate objects [W4388711634, W2114582993]. For virtual humans content, saliency and spatial features play a too important role in subjective QA, which is why the best performing metrics for this category are 3D feature-based perceptual metrics. For colored PCs representing buildings or places (captured with LiDARs+photogrammetry), projection-based metrics performances are not satisfying enough, and should not be considered for such large and sparse geometric data.\n\nBecause to consider the scope of a metric in its performance assessment is essential, some of the benchmarks, to this end and to avoid bias, use cross-dataset evaluation. However, out of 54 cross-dataset benchmarks, 36 oppose datasets with various reference stimuli. For the others, the ground-truth ratings of all used datasets are for stimuli of the same sources (MPEG and JPEG repositories). Among the 36 benchmarks that use datasets with varied sources, 33 include ground-truth scores collected in different interaction conditions (passive and active tasks, 2D and XR displays). However, no benchmark assesses the performance of metrics on XR datasets for D-PCs.",
+              "citations": [
+                "W2793293836",
+                "W3015751022",
+                "W3035130434",
+                "W3202211958",
+                "W3089343273",
+                "W3190212754",
+                "W4388117499",
+                "W4389474382",
+                "W3207150002",
+                "W4304758157",
+                "W4288084829",
+                "W3190803734",
+                "W3094394107",
+                "W2046119925",
+                "W2114582993",
+                "W4388711634",
+                "W2743427350",
+                "W3164568205"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "25",
+                "80",
+                "83",
+                "38",
+                "2023"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Table 1 shows all the analyzed papers sorted by category of content. From the 154 papers of the final set, 69 present subjective QA experiment protocols and/or results, all aiming to compare and evaluate experiment settings, codecs, rendering parameters, or other IFs. These 69 papers include 40 that also use their results to make a benchmark of QA metrics performances. 91 of the papers introduce new PCQA metrics, including 83 that compare its performance to other metrics in a benchmark. Between the 91 objective metrics papers and the 69 subjective QA papers, there is an intersection of 12 papers that present both, including 8 that also have metrics benchmarks. In total we have reviewed 121 benchmarks, including 6 from papers that present neither subjective tests, nor new metrics. Instead, they either evaluate PCQA metrics on sampled meshes [UNMAPPED:35, UNMAPPED:36] or D-PCs with temporal subsampling/pooling [W3164568205, UNMAPPED:38], are cross-dataset surveys [UNMAPPED:12] or focus on a codec only [W4205899500]. These numbers are visually described in Fig. 3.\n\nBased on the analyzed set, the go-to conferences for PCQA are IEEE QoMEX (20 papers), IEEE ICIP (13 papers), IEEE MMSP (9 papers), IEEE ICME (8 papers), ACM MM (5 papers), and EUSIPCO and IEEE ICASSP (both 4 papers). The highlight journals are IS&T Electronic Imaging and IEEE Transactions on Multimedia (both 7 papers), IEEE Transactions on Circuits & Systems for Video Technology (6 papers), IEEE Access and IEEE Signal Processing Letters (both 5 papers).",
+      "citations": [
+        "W3164568205",
+        "W4205899500"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "35",
+        "36",
+        "38",
+        "12"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 DISCUSSION",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Considering XR and more IFs in subjective PCQA",
+          "subsubsections": [],
+          "text": "From our observations on subjective PCQA, we can deduce that experiments have evolved toward 2 main categories: passive tasks with 2D display, and active tasks with HMDs. In both cases, it is mostly compression distortion that is studied and evaluated. For 2D experiments, the CTC of JPEG Pleno are followed. They have the advantage of resulting in less outliers and are less demanding in observers to achieve significant results. They can also be conducted through crowdsourcing, which led to an interest and increase in remote experiments during and after the covid-19 pandemic and lockdowns. 2D tests are less demanding in observers to achieve significant results, thanks to the well defined conditions and simple tasks. Such experiments allow to easily obtain meaningful and exploitable MOS, but are very limiting in terms of context. The CTC do not allow consideration of all IFs exclusive to the target applications. With 2D displays, the CTC imply a passive rating task, with no observer interaction. Tests with interactive interfaces in 2D are becoming less and less popular, as the influence of interaction is being studied with immersive displays instead. Tests in XR environments do not have the limits of passive 2D experiments and have conditions closer to the target use cases, which allows to study dynamic content and the influence of real viewing conditions on the perceived quality. However, the freedom (mostly 6DoF) it gives to users results in a higher inter-observers variability and a more important need in participants. PCQA (and 3DQA in general) in XR do not have any CTC to follow, since they have yet to be defined. Tests in XR have become essential to identify and investigate numerous IFs that have only recently become research interests.\n\nIn subjective QoE assessment, experiments have to target specific IFs to evaluate. In regards of our Research Question n\u00b01, the investigated IFs in subjective PCQA so far are:\n\n1. The semantic category of content represented in the stimuli: people (dynamic or static), animals, objects, buildings, landscapes...\n2. The type of display (2D screen, 3D stereo, ELFD, or HMD).\n3. The quality level (from compression or other types of distortion) of the stimulus, and quality switches (for PC streaming).\n4. The viewing distance between the observer and the display (for 2D display experiments) and/or between the viewpoint and the stimulus.\n5. The rendering method (point-based or surface-based, with or without shading, point size,...).\n\nConsidering Research Question n\u00b02, there are other and new found IFs that have just recently become subjects of evaluation or have not yet been investigated. The lighting of the environment and shading of the stimuli with point-based rendering [W4386249389, UNMAPPED:58] have been looked into only in very few studies, and not enough to draw conclusions. The orientation [W2762234458] and intensity [W3089272598] of lighting were shown to have an impact on the visual quality in mesh QA. The shading for point-based rendering is computed and executed differently than for standard surface shading. To compute the lighting intensity of points, the normals (3D normal vector to the points surface) are necessary attributes. As mentioned in the results, Javaheri et al. (2021a) compares the subjective QA of PCs rendered with a reconstructed shaded surface and rendered as lit points, but uses normals that were re-estimated after the compression distortion to light the points. It does not consider the case of decoded normals distorted by compression as an attribute, like the point cloud colors. To consider more attributes in PCC in order to improve the quality of rendered point clouds [UNMAPPED:93], as well as evaluating such compression and render pipelines, is therefore a new coming challenge in PCQA.\n\nOther surface properties could be set as attributes in a PC just as the normals (like the metalness, smoothness, transparency, or emission of points) and could also be used to optimize point-based rendering. Therefore their transmission or estimation could also be investigated and considered in future PCQA studies. The compression distortion of these attributes having an impact on point-based rendering also implies that further comparisons with mesh rendering (surface-based) are needed. Evaluating PCs with attributes and geometry distorted by PCC and meshes distorted by mesh codecs in this context will allow us to compare them as 3D representations of data and go toward optimization of volumetric objects and video rendering.\n\nAnother IF that has just recently become a focus and constitutes a current challenge is the observers' behavior and gaze data. The results of experiments in which such data were collected [W4388117856, W4298632837, UNMAPPED:69] have yet to be exploited. As concluded in these papers, further studies are needed to understand the impact of the QA task on the exploration behavior of observers. Tests with more semantic categories of content and spatial exploration are also needed as, so far, gaze and behavior data were only collected for the D-PCs of MPEG-I.",
+          "citations": [
+            "W4386249389",
+            "W2762234458",
+            "W3089272598",
+            "W4388117856",
+            "W4298632837"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "58",
+            "93",
+            "69"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 Developing and evaluating versatile QA metrics",
+          "subsubsections": [],
+          "text": "In this subsection, we bring elements of answers to our Research Question n\u00b02 about objective PCQA. As mentioned, objective QA performance studies tend to use IQMs rather than objective metrics designed for PCQA. The metric considered and shown to be the best performing, in correlation with standard subjective QA scores, is the learning-based PCQM [W3015751022]. However, this metric only accounts for the raw point cloud data (point coordinates and colors) in its score computation and can therefore not consider IFs such as rendering and display distortions. To consider various types of distortions and factors other than coding artifacts, IQMs or projection-based PCQA metrics should be used. The difference between IQMs and projection-based PCQA metrics is actually just that in projection-based PCQA, the type of projection is defined and generated as part of the metric score computation. The performance of IQMs can still vary depending on the type of projection used. Alexiou and Ebrahimi (2017b) study the number and type of viewpoints needed for IQMs to perform well in correlation with subjective QA scores. They conclude with suggestions that fit different semantic content categories but are not exhaustive, and do not consider D-PCs. Further and more complete benchmark studies for IQMs and projection-based metrics, notably including VMAF, will therefore help in improving PCQA for more IFs and types of distortion.\n\nDevelopment of learning-based metrics has brought tremendous improvement to PCQA, and the recent release of large-scale PCQA datasets for QA model training [W4388711634, W4288084829] is encouraging further progress. Among the best performing learning-based examples are metrics that are also perceptual-based, another important category and axis for development. Examples of the most common extracted visual features [W3015751022, UNMAPPED:95] in the computation of these metric scores are: the chroma, hue and lightness of points in order to characterize the texture; and the surface normals, the curvature, the roughness, the omni-variance, the planarity, and the sphericity in order to characterize the geometry. Those features are evaluated and weighted in a global quality score. Another important perceptual feature that can be used to weigh the points or faces of the assessed objects is their saliency, predicted by visual attention models [W4362480394, UNMAPPED:97]. Predicting visual attention to improve objective QA is already a challenging focus for other types of media. Only few PCQA metrics use this perceptual feature, yet it could be efficient in order to increase correlation with subjective QA scores using interactive display or XR, and therefore closer to a description of the visual quality as would be experienced in context of application.\n\nBesides, regarding the quality of objective prediction, we have noticed that no benchmark assesses the state-of-the-art metrics when compared to data from a test in XR for D-PCs. With the recent release of such datasets [W4387831705, UNMAPPED:69, UNMAPPED:98], more benchmarks filling this gap should soon be published and potentially reveal a new challenge for objective PCQA. Another not yet much explored aspect of the performance of metrics is not only their prediction accuracy, but also their runtime. In-pipeline QA for real-time transmission is a hot research topic that motivates the development of new NR metrics. There are nearly as many NR metrics than FR metrics and, as can be seen in Fig. 6, the large majority of developed metrics in the latest years are NR. The challenge of performant NR PCQA, as can be shown by the numerous metrics of this type from the last few years, is an active focus for the research community. However, to fit the target use cases, it should bring about a next challenge, which is timely efficient quality predictions.\n\nObjective PCQA metrics, in general, should also be more diligently assessed in terms of prediction accuracy in order to identify and account for their scope. To this end, more versatile ground-truth datasets should be used and developed.",
+          "citations": [
+            "W3015751022",
+            "W4388711634",
+            "W4288084829",
+            "W4362480394",
+            "W4387831705"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "95",
+            "97",
+            "69",
+            "98"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3 Standardizing new CTC",
+          "subsubsections": [],
+          "text": "The most used experiment parameters and tools in practice that we identified from the results of our analysis are the CTC and recommendations of JPEG Pleno [UNMAPPED:1]. Indeed, the majority of subjective PCQA studies were using 2D displays with rotating camera videos of the stimuli rendered as watertight points, and the DSIS rating methodology. The reference PCs, static or dynamic, were taken from the MPEG and JPEG Pleno repositories and were distorted using the MPEG PCC standards using quality parameters defined in [UNMAPPED:1]. For objective QA, the most cited and assessed metrics are the point-to-point, point-to-plane [W2793293836] and plane-to-plane [UNMAPPED:25] measures which are also recommended by JPEG. These metrics are however always shown to be among the least efficient and only measure geometry (or only texture for the attribute point-to-point) distortions.\n\nThese CTC do not fit to the evaluation of all IFs, and particularly not to the experiments in XR. The interactivity and 6DoF that XR applications offer cannot and should not be neglected in PCQA. Until now, such experiments followed only a few recommendations from standards for other types of tests [UNMAPPED:99, UNMAPPED:100] but these cannot exhaustively define CTC for all immersive QA experiments. To answer Research Question n\u00b03, all parameters that are not given by the current standards or are unfit for PCQA have yet to be defined (rendering, virtual scene, rating methodology). So far, popular conditions for PCQA in XR seem to be a 6DoF environment, using the ACR methodology [W4388117856]. But more tests in XR are needed to go toward the definition of a standard. Parameters such as the visual settings of HMDs, and the boundaries of user-freedom have not been addressed in studies. Further experiments are needed to compare all possible conditions and eventually establish new CTC for subjective PCQA in XR.\n\nRegarding objective QA standards, PCQM (the best performing and most versatile FR PCQA metric) has recently been added to a JPEG recommendation [UNMAPPED:101]. Judging from the latest trends in objective PCQA studies, The next challenge in standardization should be going toward another CTC definition specific to blind PCQA, which would include NR metrics to be used in use case applications. As mentioned earlier, there is still progress to make in the evaluation of such metrics. A call for proposals would encourage further progress and assessment in the field.",
+          "citations": [
+            "W2793293836",
+            "W4388117856"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "1",
+            "25",
+            "99",
+            "100",
+            "101"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4 Considering a larger range of use cases in QoE Assessment",
+          "subsubsections": [],
+          "text": "Finally, in this subsection, we consider Research Question n\u00b04. In this systematic review, we wrote an overview of the results and observations made in subjective PCQA studies, including a regard on the performance of PCC standards and learning-based schemes. As we noted previously, the PCC codes that offer the best visual quality are not designed and optimized for real-time transmission [UNMAPPED:42]. However, the codecs used instead in a real-time scenario (Draco and CWI-PL) result in significantly less visual quality than V-PCC for the same bitrates [W4214586618, UNMAPPED:69]. The most recent standardized learning-based PCC schemes are not yet out-performing V-PCC either [W4399537314]. There is a need thus for new or updated codecs that allow real-time transmission and state-of-the-art visual quality, which is a challenge currently addressed by standardization groups. Emerging PCC schemes, like the recent JPEG Pleno PCC standard [W4290056783], could also aim to fulfill this need.\n\nAdditionally, we have mentioned that rendering options for PCs could be improved by using new attributes such as the normals that could be encoded and decoded like the colors. Most learning-based PCC methods [W2976304245, W4388711634] only encode the geometry, and the reference softwares of standards only consider the colors as attributes. Implementing the encoding and decoding of more PC attributes is another horizon of progress that could improve PCs as a representation for 3D data. However, the possible steps forward in PCC need to be identified as first, which is already an upcoming challenge. Codec prototypes and their evaluation through PCQA is first needed to identify the attributes to consider for these upgrades.\n\nFinally, another noticeable loophole in PCQA is the availability of diverse sources of content and materials. For QA of static and single frame PCs, there are many large datasets with PCs representing content from a great variety of semantic categories and with a large range of textures and geometries. The same observation cannot be made for D-PCs. All freely available source sequences for QA of D-PCs represent single virtual humans with limited movement in space and time (generally stationary and only 10 seconds). The test sequences from 8i and Vsense are the same sources that are used in almost subjective QA studies on D-PCs. Volumetric videos in XR do not have to be limited to representing only humans. Immersive and interactive movies have complex dynamic scenes with accessories and scenery that virtual humans interact with. Other sources, such as UVG-VPC [W4384703234] and CWIPC-SXR [W3200257964] have yet to be used in more experiments, to bring diversity to dynamic test data and prevent and content bias. More content is needed to assess the performance of PCC codecs and PCQA methods and tools for the future. Additionally, the capture and publication of new open access point cloud sequences that represent more various scenes, people interacting with each other or with objects, or moving objects alone, would fill this hole and allow research in PCC and PCQA in context of a greater variety of use cases.",
+          "citations": [
+            "W4214586618",
+            "W4399537314",
+            "W4290056783",
+            "W2976304245",
+            "W4388711634",
+            "W4384703234",
+            "W3200257964"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "42",
+            "69"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "Based on the results of our analysis, we identify the current progress and tendencies in subjective and objective PCQA, and discuss our research questions listed in the Introduction.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "CONCLUSION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this paper, we made an overview and analysis of subjective and objective point cloud visual quality assessment. To this end, we conducted a systematic review of 154 selected papers presenting experiments, tools and methods in the research field, representing its evolution and history throughout the last decade. After a statistical analysis of our set of selected papers, we discussed the trends, further improvements and challenges they imply.\n\nThe field of PCQA has come a long way since the first versions of its related standards. The current CTC for subjective experiments, even though massively adopted and efficient in terms of cost and methodology, are not up to date anymore and cannot apply to the testing of new scenarios and IFs of interest, notably for QA in XR. The standard objective PCQA metrics have been by far surpassed in performance by recent alternatives, among which the most promising are learning-based, perceptual-based and no-reference metrics. Ideally, new standardization efforts in both PCQA and PCC for XR and real-time applications should be considered.\n\nOngoing and next steps in PCQA toward high quality volumetric content in XR applications could be further works with subjective studies in order to investigate influential factors such as: the exploration behavior and visual attention of observers; the rendering methods and the shading of PCs; and to evaluate new PCC codecs, notably learning-based methods (including the recently standardized JPEG Pleno codec [W4290056783]), in terms of visual quality and efficiency. Regarding objective PCQA, the focus is and will be on feature selection and weighting (using visual attention data for instance) for perceptual learning-based metrics. Progress is also needed in PCQA metric performance evaluation, in terms of runtime for NR metrics that aim at fitting the case of real-time transmission and in-pipeline QA, and in terms of prediction accuracy. For the latter, more versatile and diverse subjective QA ground-truth data, such as BASICS dataset, need to be collected and made freely available, cultivating the circle of dependency between research in subjective and objective PCQA.",
+      "citations": [
+        "W4290056783"
+      ],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4403990605_tables.md"
+}

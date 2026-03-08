@@ -1,0 +1,300 @@
+{
+  "id": "W4297186575",
+  "metadata": {
+    "title": "Data Driven Models for Contact Tracing Prediction: A Systematic Review of COVID-19",
+    "n_sections": 7,
+    "n_subsections": 14,
+    "n_subsubsections": 0,
+    "n_tables": 6
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Keywords",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Coronavirus; Data Driven Decision Making; Prediction; Pandemic; Covid-19; SARS-CoV-2",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Pandemics have always been a source of concern for medical practitioners globally. The potential danger of major infectious diseases spreading across the globe before an adequate response can be made is a contentious topic. The wide spread of the pandemic has a significant impact on any country's healthcare system. The world has experienced this during the SARS, H1N1 and SARS-CoV-2 outbreaks. The toll it takes on contingency policies is indeed significant [W2804836199]. The Coronavirus disease (COVID-19) caused by the SARS-CoV-2 virus was the most recent in a long series of virus-related diseases that have significantly impacted the world. Coronavirus disease (COVID-19) was first detected on December 8, 2019, in the city of Wuhan, China [W3015559628]. Given the fact that Coronavirus (nCoV) is a variant of the Coronavirus that has not been observed yet, containing the outbreak was nearly impossible [W3089190579, W3012769470].\n\nLack of understanding, coupled with the absence of a cure, pushed experts to work tirelessly to develop novel therapies and vaccinations for infected patients. Despite this, data scientists started working on producing data-driven decision models and algorithms to understand how transmissible the virus was and how it could be traced effectively. In general, contact tracing is the process of identifying close contacts of an infected person, whether they are symptomatic or asymptomatic. In this case, the Centers for Disease Control (CDC) and Prevention have given two main guidelines to be followed for close contact identification and they are: (1) Distance requirement of less than 2-feet and a minimum duration of 15 minutes [W4281932075, UNMAPPED:6]. Since the beginning of the digital health revolution [W3011374263, W3008582897], a massive amount of health-related data has been acquired and processed through efficient data modelling techniques for better predictive analysis. Nonetheless, the accuracy of these models was heavily dependent on the available training data sets [W3005995896, W3092123642]. Researchers are constantly developing algorithms to better understand and improve control as well as administer solutions for pandemic crisis through numerous data-driven decision-making techniques. Considering the critical nature of the COVID-19 pandemic, surveying the right and competent data-driven decision making methods will help to narrow down appropriate and plausible methods for better combating the disease. The results will also assist us in determining unascertainable characteristics of the new virus and the subsequent development throughout the pandemic. The aim of this paper was to gather, summarize, and analyze articles published in the context of data-driven decision-making applications, particularly for contact tracing applications. The following are the specific research propositions: (RP1) is to identify data sources for contact tracing solutions around the globe; (RP2) is to understand the number of studies that addressed issues with regards to the COVID-19 outbreak up to the end of 2021; (RP3) investigates the usage of data-driven decision making methods and tools used for contact tracing; (RP4) identifies resources of information and data; and lastly (RP5) determines the most used techniques and tools in terms of frequency. The rest of this paper is organized as follows: The second section provides methods; the third section reports results; the fourth section presents discussion of the results; and the fifth section provides the conclusion of the study.",
+      "citations": [
+        "W2804836199",
+        "W3015559628",
+        "W3089190579",
+        "W3012769470",
+        "W4281932075",
+        "W3011374263",
+        "W3008582897",
+        "W3005995896",
+        "W3092123642"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "6"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "2. Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Data Sources for Contact Tracing",
+          "subsubsections": [],
+          "text": "Identifying the data sources for COVID-19 is crucial as it gives an overall picture where the information originates from. In return, it gives an idea on how hard or easy it is to conduct data driven decision making in order to do predictions. Furthermore, studies on a selected 30-countries from Legender et al. [UNMAPPED:11] and Rahman [UNMAPPED:12] in Table 1 show an overview of contact tracing solutions from these countries while Figure 1 illustrates world map for the countries studied. In general, what the data shows is that most of the contact tracing solutions require their information to be locked and stored in the mobile phones in which it requires special permission from the users. It also illustrates that most of the latest solutions have been using BLE-based technology that captures mainly time, duration and IDs of other users, however, does not record the medical condition of the patient. In return, data driven decision making for COVID-19 becomes much harder even if there is more information being captured on the applications as the data is being stored in mobile phones. Therefore, data driven decision making for COVID-19 tracing prediction will need to heavily rely on clinical information from healthcare centers.\n\n**Figure 1. World Map for 30-Countries Studied**\n\n[Image: World map with countries marked]\n\n**Table 1. Contact Tracing Solution Information by 30-selected Countries**\n\n{{TABLE:tbl_01}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ],
+          "citations_unmapped": [
+            "11",
+            "12"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Literature Review",
+          "subsubsections": [],
+          "text": "To ensure the presence of relevant papers, the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) criteria checklist was adopted [W2337101104]. Subsequently, to categorize the primary features of studies, a synthesis of relevant literature was undertaken concerning the main characteristics. From 2020 to August 16, 2021, literature search was conducted on four main sources i.e., Web of Science, Scopus, Emerald, and IEEE. Key terms used were \"data driven decision making\", \"prediction\", \"techniques\", \"COVID-19\" and \"Coronavirus\". Search terms were also used to create a Boolean search algorithm which was then iteratively applied on every database source.",
+          "citations": [
+            "W2337101104"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Enclosure and Elimination Criteria for Research Selection",
+          "subsubsections": [],
+          "text": "Articles were incorporated if they matched the subsequent requirements: (a) the studies or assessments with regards to COVID-19 and (b) papers that discussed the application of data driven decision making techniques or data exploration methods. These types of approaches were chosen based on methods described by Patel and Patel [W2337101104]. Due to the vast diversity of methods available in this field, studies reviewed were only limited by papers that were available in the English language. Papers were considered ineligible if they matched any of the following requirements: (I) the paper doesn't refer to any topics on pandemics or COVID-19 and this includes the title, abstract and also the references; (II) other than papers and conference publications other materials such as book chapters, letters, short abstracts, briefing comments were excluded; (III) papers in any other language other than English; (IV) image processing techniques were also excluded; and (V) the full text documents that were unavailable were also excluded.",
+          "citations": [
+            "W2337101104"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4 Data Extraction Phase",
+          "subsubsections": [],
+          "text": "A total of 390 articles were retrieved from searching the databases i.e., IEEE, Science Direct, Scopus, and Emerald. The entire process is highlighted by the PRISMA approach illustrated in Figure 2. Before beginning search, few inclusions and exclusion criteria were applied for the purpose of filtering papers that were relevant. In the first step, headings and summaries of retrieved papers were reviewed to identify significance for inclusion. In second step screening was applied to remove any duplication. This step consists of a comprehensive screening process. During this stage, the entire texts of relevant studies have been carefully reviewed and filtered. In the third step full text eligibility is determined and after complete analysis, the decision of selecting papers that are relevant is completed. After completing steps (I to IV) there were 38 manuscripts that still remained eligible and relevant. An extraction form was created to keep track of the articles during the reviewing process. Generic information and specific information were both included in this classification system. General information comprises of author names, publication date and publisher. The specific information covers the primary purpose of research; Data driven decision making approaches, application of the Data driven decision making method and tools, disciplinary, primary outcomes, assessment results, data resources, sample sizes, software used, and the study's nation place. The attributes of the articles included were extracted and compared to the previously defined classification. All the information that was retrieved, was re-examined to obtain an agreement.\n\n**Figure 2. Systematic Literature Review Process (PRISMA)**\n\n[Image: PRISMA flow diagram showing:\n- Database searching (n=390): Emerald (n=50), IEEE (n=200), Scopus (n=40), Science Direct (n=100)\n- Duplicate articles found (n=15)\n- Articles after duplicates removed (n=375)\n- Articles excluded by screening abstract and title (n=128)\n- Articles available full text (n=247)\n- Full text articles eliminated due to quality issues and inaccessibility (n=117)\n- Full text records for eligibility (n=130)\n- Records not meeting criteria (n=92)\n- Final included records for meta-analysis (n=38)]",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "3. Results",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Study Characteristics",
+          "subsubsections": [],
+          "text": "There were twenty-eight journal publications and ten conference papers that fulfilled our eligibility requirements and criteria. Table 2 shows the distribution of studies by year, with the most recent studies appearing first. As can be seen, most of the studies were published in the year 2020.\n\n**Table 2. Articles Published According to Year**\n\n{{TABLE:tbl_02}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_02"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 The Distribution of Papers by Countries",
+          "subsubsections": [],
+          "text": "Overall, the selected research article is distributed by 17 different nations, which is a large number when broken down by country (Table 3). In addition, the essay makes use of global statistics on the sickness pandemic that has swept the world. Compared to other countries, India has the highest frequency of occurrences.\n\n**Table 3. Characteristics of Paper Based on Country Origin**\n\n{{TABLE:tbl_03}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 The Usage of Data Driven Decision Methods Assessed through Articles",
+          "subsubsections": [],
+          "text": "Following the findings in research conducted by Patel and Patel [W2337101104], frequency of methods used in predicting pandemics has been investigated. The primary goal of this paper is to determine the extent of usage of data driven decision making techniques in predicting outbreak or number of cases during pandemics. Table 4 presents a summary on usage of appropriate data driven decision making methods in the assessed publications, based on the number of articles analysed. According to the findings, methodologies have been categorised into 22 major categories. The decision tree was the most often employed technique among the examined publications (13.64%). It was ranked top in effectiveness of determining the relationship between independent factors and a single dichotomous dependent variable [W2177870565]. One important thing to note is the researcher's usage of multiple types of data driven decision making techniques during their investigation.\n\n**Table 4. The Rate of Occurrence of Data Driven Decision Making Methods in the Selected Articles**\n\n{{TABLE:tbl_04}}",
+          "citations": [
+            "W2337101104",
+            "W2177870565"
+          ],
+          "tables_in_text": [
+            "tbl_04"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 The Distribution of Data Driven Decision Making Software in Reviewed Articles",
+          "subsubsections": [],
+          "text": "Data driven decision making approaches necessitate the use of specialised tools and an appropriate platform (Table 5). Review on the frequency of various devices employed in this research has been listed in this section. Among other tools, Python had the most significant percentage (25%), followed by SPSS with six publications (16.67%) and WEKA five articles (13.88%). Others that had a small percentage were Matlab, Orange, R, Fuzzy, SQL and 2 other privately owned softwares. Eight other articles from the total publications (22.22%) did not specify the tools used.\n\n**Table 5. Tools used in Data Driven Decision Making**\n\n{{TABLE:tbl_05}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_05"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "An initial search of scientific databases resulted in 390 citations, which was significant. At the first screening stage, three articles were deleted from consideration due to duplication. Following that, 128 publications were removed since their abstracts and titles were deemed irrelevant by the reviewers. The second screening stage, defined as the complete test screening stage, resulted in the removal of 117 articles due to their inaccessibility and poor overall quality. In the final filtering of full-text articles, it is crucial to distinguish between those relevant to the issue and those that are not, such as medical, anatomy, economic impact, and others. As a result, 38 papers were recognised as being potentially connected.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "4. Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The principal purpose of this research is to offer a complete overview about data-driven data driven decision making methods in managing viruses' transmission. After screening of 337 articles, 38 publications were selected and analysed.\n\nThis study describes the study's findings and conclusions. In terms of country, most of the research has been performed in India. This could be justified by the reality that a large number of outbreaks happened in India. Social media is an additional source of information in the modern era, capable of creating substantially more data in a shorter period than traditional sources [W3015559628]. Accessing this type of data is convenient in comparison to other traditional data in terms of information tracking. The qualitative assessment finds out that researchers tend to use organised approaches such as regression to build analytical models to understand unknown pandemics and diseases better. All these tactics have been successfully implemented in a variety of medical sectors with outstanding results [W2295079358]. Additionally, research indicates that categorization algorithms are being deployed at a higher rate than expected. Researchers can determine the optimal approach for implementing accurate prediction models for unknown diseases. These models may then be used to forecast significant outcomes [W2741072280, W2783900457]. Following that, developing predictive models can benefit physicians, health policymakers, and society. Since most studies were conducted in India, these models may require further testing. None of the research, however, recommended the implementation of developed models in real-world settings. On the other perspective, many authors expressed confidence regarding the development of predictive models. Maakoul et al. [W3123504580] perspective on forecasting model construction is compatible with the research findings. Multiple researchers, including [W2783900457, W3099862003, W3014524604], performed a systematic review of COVID-19 analytical models. They determined that the projected models lack sufficient documentation and are hence prone to prejudice. The data indicated that the fundamental objective of pandemic sickness is to halt the spread of infectious diseases [W3011802905]. When a new disease forms as part of a pandemic, the disease's nature is often unknown, and scientists' primary focus is determining the disease's characteristics. As a result, the great majority of research is devoted to elucidating the disease's characteristics. This is explained by the fact that scientists should concentrate diagnosis over other tasks during a pandemic sickness outbreak [W2912453786]. The second critical factor to consider in pandemic diseases is the virus's transmission. As a result, around 10% of studies have focused on forecasting the disease's development. On the other hand, the test size of datasets is quite varied and diversified, owing to usage of varies methodologies. The findings indicated that most of the research uses a variety of data resources but small in sample size (Table 6).\n\n**Table 6. Overview on Reviewed Articles**\n\n{{TABLE:tbl_06}}\n\nThe usage of enormous data collections can boost the intensity of the findings and the precision of the model's expectations, which can aid experts in their efforts to better understand and combat this emerging illness. As a result, researchers are encouraged to employ massive datasets for their studies, even if they are conducted on a global scale, to make better diagnostic and beneficial recommendations. In terms of pandemic lead diseases, most of the activities are concentrated under the COVID-19 umbrella. Those who came in second place discussed issues that were relevant to influenza pandemics. Given the high prevalence of these two disorders, it is reasonable to expect this outcome. The use and retrieval of huge amounts of data provided by automated systems as a main resource makes it easier and more convenient to access data. As an outcome, recently performed data-driven studies are more expedient than previously. Most of the papers excluded past pandemics such as Asian flu and H1N1 since the authors of these papers did not consider these diseases to be epidemics. Furthermore, there were certain drawbacks to this investigation, which have been discovered.\n\nIn today's world, studies on COVID-19 are published daily. The entire screening and filtering looked at the literature between the years 2020 and 2021. As a result, certain studies may overlook the period between publication and the publication of this article. Therefore, additional studies will be required to complete the findings. Another drawback of this study is that only four journal databases were used as electronic search engines. Due to the access restriction, the other databases that may have quality academic journals should be integrated in future studies. The present research paper provides researchers with a valuable framework for upcoming work by allowing them to grasp the overall framework of data-driven decision-making performances in pandemics and for their submissions to recognize the disease better. Yet to come, research might include the construction of search algorithms in larger datasets or the examination of data-driven decision-making applications as a broader idea. An article on the analysis and incorporation of non-English written papers using machine translation techniques may be adopted in the near future. At the very least, it would be fascinating to incorporate non-English-based papers.",
+      "citations": [
+        "W3015559628",
+        "W2295079358",
+        "W2741072280",
+        "W2783900457",
+        "W3123504580",
+        "W3011802905",
+        "W2912453786"
+      ],
+      "tables_in_text": [
+        "tbl_06"
+      ]
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "5. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This research is expected to make it easier for academics to identify published papers on data-driven decision making techniques and the Covid-19 pandemic. The PRISMA method for systematic review and meta-analysis was useful for inclusion and exclusion criteria, thus allowing researchers to evaluate the quality of papers to be included or otherwise for the study. Healthcare related decisions, especially during a pandemic, should be based on well-informed and readily available research evidence. Systematic research provides evidence-based medicine that introduces evidence from ongoing contact tracing methods that are mostly effective. PRISMA provides such evidence with good reviews. All data-driven decision-making techniques utilised in global pandemics are listed throughout this paper. However, the bulk of these techniques were developed to avoid and forecast the COVID-19 pandemic during its current phase. According to the study findings, the primary goal of data-driven decision-making applications is to increase the characteristics of the condition being treated. Medical practitioners don't really have the time to synthesize the huge number of articles being written in this space. As such, the value this paper brings to the healthcare community is to identify, summarize, and evaluate studies that will make available evidence more accessible to healthcare practitioners. Additionally, it can aid politicians and decision-makers in making more informed choices about the identification and management of severe pandemics in the countries where they operate.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "6. Declarations",
+      "subsections": [
+        {
+          "subsection_id": "s_7_1",
+          "subsection_index": 1,
+          "subsection_label": "6.1 Author Contributions",
+          "subsubsections": [],
+          "text": "Conceptualization, S.M. and T.O.K.Z.; methodology, S.M., T.O.K.Z. and K.S.M.A.; validation, S.M. and T.O.K.Z.; formal analysis, T.O.K.Z, B.P. and M.J.K.; investigation, S.M., T.O.K.Z. and B.P.; writing\u2014original draft preparation, S.M., B.P. and M.J.K.; writing\u2014review and editing, S.M. and M.J.K.; supervision, S.M. and K.S.M.A.; project administration, K.S.M.A. All authors have read and agreed to the published version of the manuscript.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_2",
+          "subsection_index": 2,
+          "subsection_label": "6.2 Data Availability Statement",
+          "subsubsections": [],
+          "text": "Data sharing is not applicable to this article.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_3",
+          "subsection_index": 3,
+          "subsection_label": "6.3 Funding and Acknowledgements",
+          "subsubsections": [],
+          "text": "This study is supported by Faculty of Management (FOM), Multimedia University, Malaysia.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_4",
+          "subsection_index": 4,
+          "subsection_label": "6.4 Institutional Review Board Statement",
+          "subsubsections": [],
+          "text": "Not applicable.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_5",
+          "subsection_index": 5,
+          "subsection_label": "6.5 Informed Consent Statement",
+          "subsubsections": [],
+          "text": "Not applicable.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_6",
+          "subsection_index": 6,
+          "subsection_label": "6.6 Conflicts of Interest",
+          "subsubsections": [],
+          "text": "The authors declare that there is no conflict of interests regarding the publication of this manuscript. In addition, the ethical issues, including plagiarism, informed consent, misconduct, data fabrication and/or falsification, double publication and/or submission, and redundancies have been completely observed by the authors.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4297186575_tables.md"
+}

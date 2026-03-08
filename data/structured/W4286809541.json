@@ -1,0 +1,429 @@
+{
+  "id": "W4286809541",
+  "metadata": {
+    "title": "Machine Learning Techniques, Features, Datasets, and Algorithm Performance Parameters for Sentiment Analysis: A Systematic Review",
+    "n_sections": 7,
+    "n_subsections": 15,
+    "n_subsubsections": 8,
+    "n_tables": 6
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The proliferation of Internet and Mobile technologies has led to the rapid adoption of social networks and micro-blogging sites. Equally, there is a rising trend in sharing user views and experiences about products and services daily on the Internet. For example, when customers want to purchase a new product or service, they often check on the reviews left behind by previous customers. By the same token, companies can access product and service reviews made by their clients through the different micro-blogging and social media networks like Twitter, Instagram, Facebook, YouTube, and LinkedIn to help them discover and eventually make improvements on the targeted products and/or services and/or make better business decisions [W2788856212]. It is not feasible for humans to read all the posts (tweets, comments, and reviews) made by clients.\n\nConsequently, this has become a fertile area for research, particularly in the design of automated computer algorithmic techniques for carrying out two popular and important tasks: text classification and sentiment analysis.\n\n- Naive Bayes and Support Vector Machines are the two most popularly used machine learning techniques in sentiment analysis.\n- Twitter data and reviews data are the most popular datasets used in sentiment analysis with machine learning techniques.\n- The most popular features in sentiment analysis using machine learning techniques are Word stem, n-grams, and Bag of Word.\n- Accuracy is the most commonly used algorithm performance metric in sentiment classification where machine learning techniques are used.\n\nSentiment analysis involves classifying a particular text into positive, neutral, or negative classes. From published literature, there exist three approaches to sentiment analysis. These include Lexicon-based, machine learning, and the blended technique called ensemble/hybrid approach, which bears some aspects from the other two approaches. Various Lexicon-based sentiment analysis techniques and tools have been explored [UNMAPPED:2]. Diverse machine learning tools and techniques for performing sentiment analysis have been explored and discussed in depth [UNMAPPED:3]. In an attempt to improve sentiment classification and general sentiment analysis quality and accuracy, research has advanced to involve the combination of lexicon-based and machine-learning-based techniques in what is classically known as ensemble or hybrid techniques [UNMAPPED:4]. In the machine learning-based approach, several techniques have been used, including the following: Support Vector Machine (SVM), Na\u00efve Bayes (NB), Random Forests (RF), Artificial Neural Networks (ANN), K-Nearest Neighbors (KNN), Decision Trees (DT), Logistic Regression, and Maximum Entropy (ME).\n\nThese algorithms generally belong to a class of algorithms called classification algorithms. These algorithms also fall in the group of supervised machine learning algorithms. The algorithms must first be trained using a pre-identified classes of outputs called training data and thereafter gain the capability of classifying real input data called test data. For purposes of sentiment analysis and text classification, many annotated datasets exist for different application domains. These datasets include Twitter data, Amazon product review dataset [W2047756776], gender classification dataset [W155912292], and customer review dataset [W2160660844], among others. This study examined 235 papers on sentiment analysis utilizing numerous machine learning techniques published from 2013 to 2020. We especially used three online libraries: Science Direct, Academia.edu, and Research-gate. Based on the specific query strings used, we identified 235 articles. Upon applying the systematic review framework outlined in sections 3.3 and 3.4 of this study, 24 papers that met our inclusion criteria were selected for a thorough and comprehensive review.\n\nThis systematic review paper is structured in the following fashion. Section 2 defines the related works in this research sphere. Section 3 outlines the research methodology employed in this study. Section 4 gives a detailed review of the carefully selected papers. Section 5 is the discussion of the key results of this comprehensive review. Lastly, section 6 concludes this review paper.",
+      "citations": [
+        "W2788856212",
+        "W2047756776",
+        "W155912292",
+        "W2160660844"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Related Work",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Granularity Levels in Sentiment Analysis",
+          "subsubsections": [],
+          "text": "Three sentiment analysis levels exist. They include aspect-level together with sentence-level and document-level [UNMAPPED:7]. At the aspect level, the primary objective is to discover the four attributes of the opinion. Aspect extraction and the subsequent aspect sentiment classification are the two primary tasks defined at this finer-grained level of sentiment analysis. A positive, neutral, or negative opinion on a given object is referenced to an object's attribute and not the entire object.\n\nAt the sentence level, the focus is to identify if a sentence carries a sentiment or not, in addition to assessing the sentimentality of particular independent sentences. This granularity is a bit more puzzling because the sentiment orientation is exceedingly reliant on the context in which the word is used. Common challenges in this level include handling sarcasm and comparisons at the sentence level.\n\nThe last level is the document-level granularity. In this case, the text is treated as one unit and consequently assigned a positive, neutral, or negative sentiment class. This involves assuming the whole document presents a single opinion about the opinion holder and cannot, therefore, be used where a document compares or evaluates multiple entities.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "7"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Approaches to Sentiment Analysis",
+          "subsubsections": [],
+          "text": "Typically, sentiment analysis through machine learning techniques is performed using any of the following approaches or their combinations: unsupervised, supervised, and hybrid approaches. According to [W2737990573], the supervised machine learning approach uses algorithms like Support Vector Machine (SVM), Na\u00efve Bayes (NB), K-Nearest Neighbor (KNN) and Artificial Neural Networks (ANN). A huge dataset of categorized data is used to train a sentiment classifier or a set of multiple sentiment classifiers in this approach. The purpose of this is to develop a sentiment classification model that can predict the opinion or sentiment in new pieces of text. This is because oftentimes, labeled data is not available, or the process of annotating data is cumbersome.\n\nOn the other hand, unsupervised machine learning approaches use words together with their respective sentiments. Every word found in the lexicon bears sentiment polarity scores that signify if the sentiment is positive, neutral, or negative. Lexicons can be created from a current corpus or dictionary. Contrasting this with the supervised approach, the unsupervised machine learning approach does not necessitate using labeled datasets. In its place, it requires an extensive lexicon that includes the largest possible number of sentiment words.\n\nInstead of utilizing either the supervised or unsupervised approach, a few researchers have opted to integrate both of these approaches. The resulting new model, usually known as the semi-supervised approach, employs a huge quantity of unlabeled data and a small quantity of partially labeled data in creating improved sentiment classifiers. Then, the model classifies the unlabeled data employing supervised classifiers that have been trained using labeled data.",
+          "citations": [
+            "W2737990573"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Common Sentiment Classifiers / Classification Techniques",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.3.1 Na\u00efve Bayes (NB)",
+              "parent_subsection_id": "s_2_3",
+              "text": "This sentiment classification technique is probabilistic and often performs well when large datasets are used. The classifier must first compute a posterior probability and then assume that the features involved are conditionally independent. Even so, to do away with unwanted effects, smoothing techniques are employed [UNMAPPED:9].",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "9"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.3.2 Support Vector Machine (SVM)",
+              "parent_subsection_id": "s_2_3",
+              "text": "Like the NB model, this model is also probabilistic and must have training data for model training. SVM employs nonlinear mapping to locate a big margin between various classes. The classifier tries to discover a decision margin that makes the most of the separation gap between two classes. SVM classifier is highly accurate even though it requires additional time in model training. Contrasting with the NB classifier, SVM does not make any assumption regarding the conditional independence of classes [W2806345781].",
+              "citations": [
+                "W2806345781"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.3.3 Logistic Regression (LR)",
+              "parent_subsection_id": "s_2_3",
+              "text": "This model is employed in classification tasks. It is normally used to associate one definite independent variable with at least one independent variable. The LR classifier tries to identify a hyper-plane that makes the most of the separation gap amid classes [W2806345781].",
+              "citations": [
+                "W2806345781"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_3_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "2.3.4 Random Forests (RF)",
+              "parent_subsection_id": "s_2_3",
+              "text": "The RF classifier is an ensemble of decision-tree based classifiers. As such, the RF classifier creates a set of decision trees from the existing dataset for training. Upon getting votes from the various decision trees, the RF classifier determines the ultimate class or label of an object in the test dataset [W2806345781].",
+              "citations": [
+                "W2806345781"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "In this section, we briefly describe some of the most popular machine learning techniques used in sentiment analysis. This list is therefore not exhaustive.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_4",
+          "subsection_index": 4,
+          "subsection_label": "2.4 Datasets",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.4.1 Twitter Sentiment Analysis Dataset",
+              "parent_subsection_id": "s_2_4",
+              "text": "This particular dataset contains 99,989 tweets for model training. Each of the tweets is labeled as positive or negative. Of this set, 56,457 tweets are labeled as positive, while the remaining 43,532 tweets are labeled as negative, according to [W2806345781].",
+              "citations": [
+                "W2806345781"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.4.2 Stanford-Sentiment140 Corpus",
+              "parent_subsection_id": "s_2_4",
+              "text": "This dataset has 1.6 million tweets for model training. This set is evenly divided into positive and negative tweets [UNMAPPED:45].",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "45"
+              ]
+            },
+            {
+              "subsubsection_id": "s_2_4_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.4.3 First GOP Debate Twitter Sentiment Dataset",
+              "parent_subsection_id": "s_2_4",
+              "text": "Crowdflower hosts this dataset, and it contains tweets about the first GOP debate held for the presidential nomination in 2016. The dataset has 13,871 tweets, with 2,236 being positive, 8,493 being negative, and the remaining 3,142 tweets bearing a neutral sentiment label [W2806345781].",
+              "citations": [
+                "W2806345781"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_4_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "2.4.4 Health Care Reform (HCR)",
+              "parent_subsection_id": "s_2_4",
+              "text": "This dataset was collected from Twitter using the #hrc search tag [UNMAPPED:45]. It has 888 tweets, of which 365 are positive, and 523 are negative.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "45"
+              ]
+            }
+          ],
+          "text": "The following are some of the common Twitter datasets.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_5",
+          "subsection_index": 5,
+          "subsection_label": "2.5 Algorithm Performance Parameters",
+          "subsubsections": [],
+          "text": "Based on the review conducted, the performance of different sentiment classifiers is based on the following algorithm performance evaluation metrics: Accuracy, Recall, Precision, and F-score, whose formulae are given below [W2946870453]. However, it was observed that most studies focus on accuracy alone while it is our understanding that the other three parameters could be used to give a better estimation of the performance of sentiment classification techniques.\n\n$$ Accuracy=\\frac{Number\\ of\\ Correct\\ predictions}{Total\\ number\\ of\\ predictions\\ made} $$\n\n$$ Precision=\\frac{TruePositives}{TruePositives+FalsePositives} $$\n\n$$ Recall=\\frac{True\\ Positive}{True\\ Positive+False\\ Negative} $$\n\n$$ F1=2\\times\\frac{Precision \\times Recall}{Precision+Recall} $$\n\nAccuracy measures the percentage of correctly classified cases. Precision measures that ratio positive cases to the sum of all positive cases. Recall measures the number of correctly cases classified into a class in relation to all cases present. F-score is a measure of the weighted average of recall and precision. Where classes are unevenly distributed, this parameter is the best to use in gauging algorithm performance [W2946870453].",
+          "citations": [
+            "W2946870453"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Sentiment analysis is a research area that involves analyzing the sentiments, opinions, attitudes, emotions, appraisals, and evaluations of people towards entities like products, services, people, topics, brands, and their attributes [W2895288604]. An opinion has the following four attributes:\n\n- Object \u2013 the target of the opinion;\n- Aspect \u2013 an object's targeted attribute;\n- Sentiment orientation \u2013 what indicates if the opinion is positive, neutral, or negative;\n- Opinion holder \u2013 this is the individual or party that articulates an opinion.\n\nConsidering the above attributes of an opinion (quintuple), sentiment analysis presents a very thought-provoking research area with multifaceted tasks [UNMAPPED:6]. Sentiment classification, subjectivity classification, aspect extraction, spam detection, and lexicon creation are some of the most frequently studied sentiment analysis tasks.",
+      "citations": [
+        "W2895288604"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "6"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Research Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Research Questions",
+          "subsubsections": [],
+          "text": "To reflect the primary objectives of this study, especially while carrying out the systematic review of the selected articles, five research questions required to be answered:\n\n- RQ1: Which current machine learning techniques are the most popular in sentiment analysis?\n- RQ2: What machine learning techniques are particularly applied in Twitter sentiment classification?\n- RQ3: What kinds of datasets are commonly used for performance evaluation?\n- RQ4: What are the main features of the datasets for Twitter sentiment analysis?\n- RQ5: What are the key algorithm performance metrics for sentiment classifiers?",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Query String and Search Space",
+          "subsubsections": [],
+          "text": "A query string refers to the blend of certain keywords applied to extract search publications or articles from the chosen online libraries. The specific keywords that were extracted from the six research questions include: Machine learning techniques, Sentiment analysis, Twitter sentiment analysis, machine learning techniques. The following search query was completed using the above keywords:\n\n`((\"Machine learning techniques\" OR \"Machine learning algorithms\") AND (\"Twitter sentiment analysis\"))`\n\nThe following popular online search libraries were mainly used: Science Direct, Research Gate, and Academia.edu. Since these libraries differ in search characteristics, we adjusted the query strings slightly to ensure that more appropriate articles are extracted. This means that the same query was applied at different times, with each iteration having some slight modifications to the keywords' arrangement.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Selection Criteria",
+          "subsubsections": [],
+          "text": "This section involves articles Inclusion Criteria (IC) rules:\n\n- IC1: Articles published from 2013 to 2020;\n- IC2: Articles that used one machine learning technique in sentiment analysis;\n- IC3: Articles that used hybrid techniques that involved various machine learning algorithms;\n- IC4: Articles with experiments and results;\n- IC5: Articles written in English;\n\nBesides the inclusion above, only those articles bore greater relevance to the research questions considered for this study.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Quality Assessment",
+          "subsubsections": [],
+          "text": "For purposes of achieving high-quality results, the following specific quality assessment parameters were considered:\n\n- Credible electronic scientific libraries were used to extract the appropriate research materials\n- To ascertain the highest quality of results, only the most recent publications were considered\n- The process of selecting the articles was unbiased.\n- The systematic literature review steps discussed above were strictly followed.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5 Data Extraction and Synthesis",
+          "subsubsections": [],
+          "text": "Upon completing the search process, 24 most relevant publications were identified.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "This study was carried out to obtain key information from the most current research publications on sentiment analysis with particular emphasis on machine learning techniques, features, datasets and algorithm performance metrics used. The articles are published in the last 6-7 years.\n\nSystematic reviews scrutinize gaps amid various researches over some time [W2106956101]. A research methodology outlines the step-wise structure followed in carrying out the study. According to [W2118328848], an in-depth procedure, specific structure, and boundary lines should be used to guide the process of selecting the most pertinent study articles that bear the utmost quality. The methodology adopted in preparing this systematic review is provided in this section. The exact steps followed consist of searching for relevant publications, publication inclusion criteria, publication exclusion criteria, and the findings in the publications. A Systematic Literature Review Guidelines document in the domain of software engineering was equally important in this regard [W2753886076, UNMAPPED:17, UNMAPPED:18].",
+      "citations": [
+        "W2106956101",
+        "W2118328848"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Literature Analysis",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Synthesis of the Experimental Results",
+          "subsubsections": [],
+          "text": "Tables 1-6 represent sentiment classification techniques using machine learning approach.\n\n**TABLE 1. Twitter Dataset**\n\n{{TABLE:tbl_01}}\n\n**TABLE 2. Facebook Dataset**\n\n{{TABLE:tbl_02}}\n\n**TABLE 3. YouTube Dataset**\n\n{{TABLE:tbl_03}}\n\n**TABLE 4. Reviews Datasets: Amazon Reviews, Hotel Reviews, Book Reviews, Multi-Domain Reviews**\n\n{{TABLE:tbl_04}}\n\n**TABLE 5. Aljazeera Dataset**\n\n{{TABLE:tbl_05}}\n\n**TABLE 6. Other Datasets: Blogs, Goodreads.com, Subjectivity, NetvizzApp**\n\n{{TABLE:tbl_06}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02",
+            "tbl_03",
+            "tbl_04",
+            "tbl_05",
+            "tbl_06"
+          ]
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 Accuracy of the Techniques/Algorithms",
+          "subsubsections": [],
+          "text": "In their study, [W1604955787] used SVM alone on Twitter reviews and comments, attaining a 95% accuracy with an extensive feature set. A different study by [W1803479510] applied SVM to hotel reviews and attained 83% accuracy with feature weights generated using a new mathematical approach. This significant variation in the accuracy shows that SVM accuracy depends on the dataset and features used. In other cases, SVM was used in combination with other machine learning methods. For instance, [W2295178230] used an SVM and NB ensemble on the Twitter dataset and attained 87% F-measure accuracy.\n\nThe lowest SVM performance was recorded by [W1543211283], who applied it to the goodreads.com dataset and attained a 58% accuracy but with using multi-way classification where other algorithms such as KNN, MB, MNB, Decision Table, and J48 were also studied. This is a classic example of where ensemble methods perform lower than independent methods. The highest accuracy was obtained where SVM was used in the study by [W2466468039], who used SVM, BPNN, NB, and Decision Trees on various datasets, and this resulted in 96.06% accuracy with POS tagging.\n\nIn the Naive Bayes (NB) method, the highest accuracy recorded in the papers reviewed is also in the same study where SVM performed the best according to [W2466468039]. NB was used alone, such as in the study by [W2047308542] using Amazon reviews dataset and word features, the accuracy was 75%. A variation of NB, Complement Na\u00efve Bayes, was applied in a study by [W2239389665] with an extensive set of Twitter features that resulted in 79.4% accuracy. The lowest recorded performance of NB in this study by [UNMAPPED:35]. Just as was the case with SVM, this is one reason that many studies argue that SVM and NB have comparatively similar accuracy levels.\n\nIt is worth noting that other machine learning methods have good accuracy levels even though they are not popular. For instance, the Random Forest (RF) method achieved 84.0% accuracy, while the KNN method achieved 82.3% accuracy in a study by [W2801757018]. Unfortunately, other techniques such as Decision Trees, Logistic Regression, and Maximum Entropy were not used alone in any of the 24 studies; hence difficult to get their independent accuracies.",
+          "citations": [
+            "W1604955787",
+            "W1803479510",
+            "W2295178230",
+            "W1543211283",
+            "W2466468039",
+            "W2047308542",
+            "W2239389665",
+            "W2801757018"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "35"
+          ]
+        },
+        {
+          "subsection_id": "s_4_3",
+          "subsection_index": 3,
+          "subsection_label": "4.3 Datasets Used",
+          "subsubsections": [],
+          "text": "13 out of the 24 papers reviewed used Twitter as a source of data. Other studies used different data sources, including Aljazeera [W2127613773], Facebook and Blogs [UNMAPPED:39], Amazon Reviews [UNMAPPED:34], goodreads.com [W1543211283], Aljazeera movie reviews [UNMAPPED:35], YouTube comments [W2886144607, W2915909857], Multi-domain reviews [W2239389665], hotel reviews [W1803479510], book reviews [W1543211283], subjectivity dataset [W2466468039, W2801757018], and a combination of Hotels reviews, Facebook, Twitter, and YouTube [W2466468039].",
+          "citations": [
+            "W2127613773",
+            "W1543211283",
+            "W2886144607",
+            "W2915909857",
+            "W2239389665",
+            "W1803479510",
+            "W2466468039",
+            "W2801757018"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "39",
+            "34",
+            "35"
+          ]
+        },
+        {
+          "subsection_id": "s_4_4",
+          "subsection_index": 4,
+          "subsection_label": "4.4 Features Extracted",
+          "subsubsections": [],
+          "text": "Different studies used different features from their datasets. The popular feature, Word stem, was used in the studies by [W2295178230], [W2127613773], [W2564760299], [UNMAPPED:39], [W1560738869] and [W1543211283]. Another common feature, n-gram, was used in the following studies: [W2127613773], [W2564760299], [UNMAPPED:39], [W2250594687], [W2239389665], [W1560738869], and [W2409135246].\n\nSome of the reviewed papers also used features that were not common or popular among the reviewed papers. These include Bag of Words (BoW), Bigrams, unigrams, word features, opinion features, Sentiment Lexicon features, sentence-level features, emoticon-based features, discourse markers, user and network features, stylistic features, text-related features, domain-dependent features, and morpholexical features, Text Blob, SentiWordNet, and WSD, Sentiment orientation weight, Lexicon entries, Low-level stem, Standard features, linguistic features, and others.",
+          "citations": [
+            "W2295178230",
+            "W2127613773",
+            "W2564760299",
+            "W1560738869",
+            "W1543211283",
+            "W2250594687",
+            "W2239389665",
+            "W2409135246"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "39"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The selected papers were analyzed and the results presented in the tables below. The results are presented based on the machine learning technique(s) the studies used, features extracted, highest accuracy attained, and the article's reference. The reason for this breakdown is to help identify what machine learning techniques, features, and algorithm performance parameters are used for different datasets and social media platforms. It makes it easier to analyze, for instance, the techniques, features and accuracy levels of the techniques used for different social media platforms like Twitter and Facebook.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Results and Discussions",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "Limitations of This Study",
+          "subsubsections": [],
+          "text": "The following are the limitations of this study:\n\n1. The performance of the machine learning algorithms reviewed was reported by various researchers who tested them. These researchers' actual performance or accuracy levels may be inaccurate, and this may generally affect the analysis of this research findings.\n2. While a stringent approach was used in selecting the 24 papers reviewed in this study, there may be a few research works relevant to this study that was still left out. This may arise from a few factors, including but not limited to the inclusion criteria that were used in this study.\n3. The reviewed articles showed varying performances of the same machine learning technique, making it challenging to pinpoint the best performing technique.\n4. This review was limited to conventional machine learning techniques. There was no coverage of deep learning techniques.\n\nThis paper came up with five key findings that could contribute greatly to the advancement of sentiment analysis in the future. First, whereas different methods have been used to carry out a sentiment analysis on data from different social media platforms, this review establishes that the commonest machine learning techniques in the decreasing order of their popularity are: Na\u00efve Bayes (NB), Support Vector Machines (SVM), and K-nearest neighbor (KNN), Decision Trees, Artificial Neural Networks (ANN) and Random Forests. Of these, the most popular three are NB, SVM, and KNN. Other techniques such as were used in one article and therefore considered very rare. It was noted that the choice of the technique was dependent on the data. NB and SVM have similar accuracy levels. Researchers' concern is to factor in text structure, data volume, and duration taken for model training and running. Machine learning techniques work well even with huge quantities of data, which requires more time to train the model than lexicon-based approaches. However, to improve the accuracy and quality of sentiment classification and analysis results, we suggest the application of ensemble approaches that involve combining machine learning methods with lexicon-based methods.\n\nSecond, this review shows that the commonest machine learning techniques used in carrying out sentiment analysis on different datasets are equally the commonest techniques used on Twitter datasets. They include NB, SVM, KNN, and ANN. This finding provides a ready recipe for those interested in studying these popular algorithms or even combining them to achieve better results by creating hybrid models that benefit from the advantages of the techniques combined while diminishing their disadvantages or limitations when used independently. Moreover, these findings give researchers room to investigate unpopular machine learning techniques for sentiment analysis.\n\nThird, we also identified Twitter as the commonest social media platform for extracting datasets suitable for sentiment analysis throughout this review. This is evident because most of the papers we reviewed used Twitter as their preferred data source. This is because Twitter is available, has rich content in the form of tweets, and is accessible. Checking on any common topic on Twitter could reveal that daily, there are millions of tweets. Conversely, we observed that there is little focus on other social networks like YouTube, Facebook, and WordPress blogs. Although the content and structure of data on these other social media platforms may differ from that on Twitter, this area is worth researching. It may yield new interesting findings and knowledge.\n\nFourth, this review shows that Word stem and n-grams are the commonest features used in sentiment analysis both on Twitter and other platforms or datasets. It would be interesting to investigate further if other features would yield better results than these common ones hence becoming a research area of interest.\n\nFinally, accuracy is the single-most commonly referenced and used sentiment classifier performance parameter. In all the 24 papers reviewed, accuracy was considered and reported. One paper however simply indicated that the accuracy improved without giving the percentage.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The discussion of our findings below is aligned with the research questions of this study.\n\n**RQ1: Which current machine techniques are the most popular in sentiment analysis?**\n\nThe papers reviewed machine learning techniques used in sentiment analysis. Out of the 24 papers reviewed, 20 articles used Na\u00efve Bayes (NB) technique in its simple form or other enhanced forms like Complement Na\u00efve Bayes (CNB), Bernoulli NB (BNB), or Multinomial Na\u00efve Bayes (MNB). This qualifies the Na\u00efve Bayes technique as the most popular (83.3%) machine technique for sentiment analysis based on the papers reviewed. This was closely followed by Support Vector Machine (SVM) that was used in 16 of the 24 papers. This is the popularity of 66.67%. Interestingly, SVM was not used in other forms apart from a particular use of Linear SVM in one study.\n\nThe other machine methods attracted a usage popularity of less than 50%. For instance, K-Nearest Neighbor (KNN) method was used in 8 studies, which presents a 33.33% popularity among the considered studies. This was followed by Decision Trees that was used in 5 studies (20.83% popularity), Artificial Neural Networks (NN) was used in 4 studies (16.67% popularity), and Random Forests (RF) was used in 3 studies representing a 12.5% popularity. Both Maximum Entropy (ME) and Logistic Regression (LR) methods were used in 2 studies, representing a popularity of 8.33%.\n\n**RQ2: What machine learning techniques are popularly applied to sentiment classification on Twitter?**\n\nOf the 24 articles reviewed, 13 of them used Twitter datasets, which confirms the popularity of Twitter as a data source for sentiment analysis among popular studies. Interestingly, this review observed a positive correlation between machine learning techniques generally used for sentiment analysis and those specifically used for Twitter sentiment analysis. In particular, this review observed that nine of the reviewed papers used SVM. Nine of the reviewed papers equally used the NB technique. Both algorithms represent a 69.23% popularity among researchers in Twitter sentiment analysis. This confirms the popularity of these two machine techniques among researchers in sentiment analysis. The other techniques in their decreasing popularity are KNN, ANN, RF, DT, MaxEnt, LR. The RF and DT techniques tied at 2 articles each while MaxEnt and LR tied at 1 article. This still confirms that SVM and NB are the most popularly or commonly used techniques for Twitter sentiment analysis.\n\n**RQ3: What kinds of datasets are commonly used for performance evaluation?**\n\nThe 24 articles reviewed in this paper featured the application of different datasets from various platforms. This included Twitter, Facebook, YouTube, Amazon Reviews, Hotel Reviews, and Movie Reviews. Twitter social media network is the most popular as it offered the most popular dataset used in 12 of the studies, representing 50% popularity. This was followed by reviews (books, movies, hotels), representing 25% popularity of this study. Facebook was used in 3 studies, which is 12.5% in popularity, while YouTube had 8.33% popularity. This shows that Twitter is the most popular platform for studies on sentiment analysis. This is because Twitter data is easily accessible, available, and the quantity of tweets is good for model development, training, evaluation, and implementation.\n\n**RQ4: What are the main features of the datasets for Twitter sentiment analysis?**\n\nThe papers reviewed contained machine learning techniques that exploited various features. The list of features used in the studies includes word stem, n-grams, unigrams and bigrams, hybrid unigrams and bigrams, word features, opinion features, Bag of Words (BoW), discourse markers, stylistic markers, morpho-lexical features, sentiment orientation weights, lexicon entries, low-level stem, domain-dependent features, and standard features among others. The most popular features in their order of decreasing popularity are Word stem, n-grams, and Bag of Word tying with unigrams/bigrams or a combination of unigrams with bigrams. The other features appeared only in one study each. The popularity of word stem was 33.33%, featuring in 8 of the 24 reviewed papers. In comparison, n-gram followed closely with a popularity of 20.83% as both n-grams, and unigram/bigram each scored 8.3% popularity.\n\n**RQ5: What are the key algorithm performance metrics for sentiment classifiers?**\n\nWith reference to section 2.5, this study identified accuracy as the main and most popularly used measure of the performance of machine learning techniques in sentiment analysis. However, it should be noted that other parameters like Recall, Precision and F-score could be used to select better machine learning algorithms for different application areas in sentiment analysis. For example, if data classes are unevenly distributed, then it is best to use F-score parameter.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Conclusion and Future Work",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Sentiment analysis is currently a hot area of research within the larger knowledge discovery domain. Considering the huge volumes of data generated daily on the different social networking and micro-blogging sites in the form of tweets, posts, comments, and reviews, sentiment analysis techniques are often applied to get useful insights to help with brand reputation monitoring, getting the sentiments of the public regarding a given product or service just before it is launched, predicting election results, and a plethora of other applications. Three approaches to sentiment analysis are available. This systematic review presents research on sentiment analysis on data from social media networks and microblogging websites.\n\nIn conclusion, sentiment analysis has seen wide-ranging applications in various areas, including brand reputation monitoring, forecasting political election results, disaster location and response, data security awareness creation, business strategy and quality improvement, disease outbreak monitoring, and perceptions of people towards certain sports. These vast application areas show that sentiment analysis is useful in improving decision-making through gathering and analyzing people's perceptions towards a phenomenon, concept, person, or thing. We recommend that in the future, further studies be carried out to create a universal sentiment analysis model that could be applied to various data types and other social networking sites for purposes of obtaining user sentiments in a bid to expand the application of sentiment analysis in real life.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This research did not receive any specific grant from funding agencies in the public commercial, or not-for-profit sectors.\n\nThe authors declare no competing interests.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4286809541_tables.md"
+}

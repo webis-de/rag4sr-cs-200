@@ -1,0 +1,819 @@
+{
+  "id": "W3134215180",
+  "metadata": {
+    "title": "Deep Learning for Android Malware Defenses: A Systematic Literature Review",
+    "n_sections": 6,
+    "n_subsections": 9,
+    "n_subsubsections": 13,
+    "n_tables": 21
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Android is one of the most popular smartphone operating systems (OS), having dominated more than 70% of the mobile OS market share since October 2016, according to a Statista report [UNMAPPED:138]. Due to its openness and popularity, Android has become one of the primary targets of cyberattacks [W2060537671]. Developers may take advantage of crafted malicious applications to divulge mobile user privacy or perform other dangerous operations on users' mobiles, which is extremely harmful to mobile users. On the other hand, there is a large scale of Android apps in the real world, with over 3 million Android apps available through the official store, Google Play. Although Google is constantly upgrading its protection against malicious attacks and has developed Google Play Protection (GPP) [UNMAPPED:52], it is not reliable and researchers have proved that crafted dangerous apps can easily bypass the GPP's detection [W2808617203, W3008101892, W4245027182, W3005140940]. Apart from the official market, there are hundreds of unofficial and third-party markets, where the security of Android apps is highly unpredictable [W2572070369, W2940856488, W3122252170, W3044866801]. Therefore, it is a pressing demand to propose an available and reliable approach to defend against malware attacks on the Android platform.\n\nAndroid malware defenses are a critical research topic in computer security. Manually analyzing malware, by formulating corresponding rules and inspecting the behaviors and source code of suspicious Android apps, is a time-consuming process\u2014i.e., it does not scale to a large amount of Android software. Besides, with malware techniques constantly evolving, manual malware analysis couldn't keep pace with the evolving attack strategies. In recent years, a large volume of research related to automatic Android malware analysis has been proposed, utilizing data mining and machine learning approaches to achieve acceptable malware detection performance. These approaches employ a series of machine learning algorithms (e.g., support vector machine, random forest) to build a prediction model based on feature vectors extracted from the Android application package (APK) [W2122672392, W2077278164, W2007857904]. However, traditional machine learning algorithms are limited in their ability to learn complicated representations in high-dimensional spaces [W2919115771]. In addition, the performance of machine learning models heavily relies on the training data, and these trained models are likely to become obsolete as the Android apps evolve and software engineering advances. What's more, attackers continue to update their fraud techniques to bypass protection software as well as well-trained machine learning models in order to victimize users and businesses. In front of the increasing difficulty of Android malware defenses, it is non-trivial to construct a robust and transparent defense model or system only by traditional machine learning techniques [W3161331107].\n\nDeep learning has emerged as the dominant research field of machine learning over the last decade, with notable achievements in many domains like speech recognition [W2160815625, UNMAPPED:8] and image processing [W2097117768, W2549139847]. In contrast to conventional machine learning techniques, feature extraction can be performed automatically when deep learning methods are fed with raw data. Deep learning can learn feature representation from the inputted raw data with little prior knowledge, which is the key advantage of deep learning. In 2014, deep learning tools were applied to Android malware defenses and demonstrated superior performance [UNMAPPED:184]. Subsequently, an increasing number of researchers have developed Android malware defenses models or frameworks based on a variety of deep learning techniques. As a result, an up-to-date comprehensive survey of DL-based Android malware defenses is urgently required.\n\nThe domain of Android malware defenses has been widely researched in recent years, and we present related contributions of other researchers in **TABLE 1**. Several early studies [W2060537671, W2343325785, W2575599800] have comprehensively reviewed Android malware techniques and traditional defensive approaches. With the wide use of advanced machine learning techniques, many researchers have reviewed relevant studies on Android malware defenses with machine learning or deep learning [W2966376065, W3112311055, W2784097977, W3091722391, W3021556647, UNMAPPED:110]. However, these previous works couldn't provide a complete picture of current research interests and trends on DL-based Android malware defenses though they analyze all possible available methods. First, these previous studies focus only on one aspect of Android malware defenses, using machine learning/deep learning techniques to detect Android malware (ML/DL-based malware detection), but neglect other critical aspects of using deep learning to prevent/defend against malicious behaviors (e.g., malware evolution, adversarial malware detection, deployment, malware families). While distinguishing malware from benign apps is critical, enhancing Android software security is not a straightforward binary classification task. Indeed, it requires not only locating malicious applications but also comprehending malicious behaviors, to which many researchers have contributed. However, these research studies are overlooked from previous review work, making it difficult for future researchers to comprehend the state of the art of this research field. More importantly, these early surveys are not based on completed systematic approaches, and thus they could not provide a comprehensive overview of the research trends and open issues in this domain. Thus, a number of unanswered questions remain regarding the development of deep learning-based Android malware defenses. For example, the prior works still could not answer what are the state-of-the-art DL-based malware defense approaches (e.g., deep learning models and feature processing approaches) and what aspects require more research efforts in the future. Furthermore, most previous works focused on relevant studies published before 2019. However, DL-based Android malware defenses have attracted significant research attention in recent two years, which means it is necessary to conclude the significant recent research achievements. As a result, this article fills the research gap in this field by conducting a systematic and organized literature review, summarizing previous research and presenting research trends on Android malware defenses related to deep learning.\n\nThis survey aims to shape the research area of using deep learning techniques to defend against Android malware, and position existing works and current progress. Specifically, this paper makes the following contributions:\n\n- We systematically collect and review 132 primary studies published between 2014 and 2021 on DL-based Android malware defenses.\n- We present a comprehensive qualitative and quantitative synthesis based on the collected studies. Our synthesis covers the following themes: research objectives, APK characterization, deep learning techniques, deployment, and model evaluation.\n- We further enumerate current issues of the existing works from different aspects and provide recommendations based on findings to support further research in this domain.\n- We provide trend analysis to identify potential future trends for the research community.\n\nThe remainder of this paper is structured as follows: Section 2 presents the review methodology used in this paper. Section 3 discusses the reviewed results and open issues for the proposed research questions. Section 4 and 5 discuss potential implications and possible threats to validity of this study respectively. Finally, Section 6 concludes the paper.\n\n**TABLE 1. Summary of Related Work**\n\n{{TABLE:tbl_01}}",
+      "citations": [
+        "W2060537671",
+        "W2808617203",
+        "W3008101892",
+        "W4245027182",
+        "W3005140940",
+        "W2572070369",
+        "W2940856488",
+        "W3122252170",
+        "W3044866801",
+        "W2122672392",
+        "W2077278164",
+        "W2007857904",
+        "W2919115771",
+        "W3161331107",
+        "W2160815625",
+        "W2097117768",
+        "W2549139847",
+        "W2343325785",
+        "W2575599800",
+        "W2966376065",
+        "W3112311055",
+        "W2784097977",
+        "W3091722391",
+        "W3021556647"
+      ],
+      "tables_in_text": [
+        "tbl_01"
+      ],
+      "citations_unmapped": [
+        "138",
+        "52",
+        "8",
+        "184",
+        "110"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Review Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Research Question",
+          "subsubsections": [],
+          "text": "In this paper, we seek to investigate the following research questions:\n\n- **RQ1:** What are the research objectives of the DL-based Android malware defense solutions?\n- **RQ2:** What approaches have been developed for malware defenses?\n - **RQ2.1:** How are features processed for model training?\n - **RQ2.2:** What deep learning architectures are used?\n - **RQ2.3:** How are DL-based Android malware defenses approaches deployed in practice?\n - **RQ2.4:** How are DL-based Android malware defenses approaches evaluated?\n- **RQ3:** What are the emerging and potential research trends for DL-based Android malware defenses?",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Search Strategy",
+          "subsubsections": [],
+          "text": "After identifying the research questions, the next step is searching for relevant primary studies. To this end, five popular digital libraries, including IEEE, ACM Digital Library, Springer, Science Direct, and Wiley Online Library, are identified and the searching string is constructed based on the proposed searching items proposed in **TABLE 2**. To ensure that we did not overlook any significant relevant work, we conducted further searching processes on two of the most popular research citation engines, including Web of Knowledge\u00b2 and Google Scholar.\u00b3 In addition, we also performed a lightweight backward snowballing [UNMAPPED:80], which means that we only carried out snowballing once, before we identified the final review list.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "80"
+          ]
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Data Selection Process",
+          "subsubsections": [],
+          "text": "Only those studies related to deep learning-based Android malware defenses should be considered for further review; therefore, any primary studies that meet any of the proposed exclusion criteria would be deemed irrelevant and would be excluded from the preliminary result set. On the other hand, obtaining all relevant studies doesn't guarantee that we are able to identify the final list of papers, as it is impossible that the quality of all selected studies is desirable. For this reason, we defined a quality appraisal criterion and evaluated the quality of each paper by reading its full text. The complete list of exclusion criteria and quality appraisal criterion is available at our online supplementary materials. After these steps, we finally obtained 132 primary studies. **TABLE 3** and **FIGURE 1** provided a summary for our examined papers.\n\n**FIGURE 1(a)** shows the distribution of the amount of chosen studies over time. Intuitively, the number of publications related to DL-based Android malware defenses has seen a continued increase since 2014. Although we only included the public articles before November 30, 2021, in this review, the number of selected publications in 2021 is still large. These facts demonstrate that the field of Android malware defenses using deep learning is attracting growing attention, illustrating the critical need for systematic and comprehensive review work to summarize the prior work and current research trends.\n\nOn the other hand, we examined the distribution of venue domain and type for these 132 articles respectively. The results showed that over 35% of primary studies are from Security (SEC) venues, accounting for the most proportion. Both the proportion of Artificial Intelligence (AI) and Software Engineering/Programming Languages (SE/PL) is more than 10%. As for the type of venues, we found the percentage of collected studies published in conferences and journals is quite close, at about 50%. In addition, we counted the frequency of all major venues where our selected studies were published (see **FIGURE 1(b)**). The results indicated that these primary studies were mainly collected at top venues, especially the venues in SEC domain (e.g., CCS, USENIX Security, TIFS) and more and more relevant studies have started to be presented in top venues in SE domain recently (e.g., ICSE, ASE, and FSE).\n\n**TABLE 3. Summary of the Process of Data Search and Selection**\n\n{{TABLE:tbl_03}}\n\n**FIGURE 1. Summary of the Examined Primary Studies**\n\n**(a) Publication Count Over Time**\n\n{{TABLE:tbl_04}}\n\n**(b) Word Cloud of All Major Venue Names of the Sources**\n\nComputer & Security, USENIX Security, TrustCom, SCN, TDSC, IJCAI, ACSAC, Big Data, TIFS, ICFEM, TOSEM, CNCA, SCN, FSE, ESORICS",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03",
+            "tbl_04"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this paper, we followed the methodology suggested by Kitchenham [W2168894761] to conduct a systematic review. The main steps of the Systematic Literature Review (SLR) can be summarized as follows: (1) planning the review and developing a review protocol, (2) identifying research questions, (3) designing search strategies, proposing exclusion criteria, (4) data extraction, and (5) data synthesis.\n\n**TABLE 2. Search Keywords**\n\n{{TABLE:tbl_02}}\n\n*Note: * means the plural form. For example, \"Phone*\" refers to \"Phone\" or \"Phones\".*\n\nThe following subsections discuss the review protocol used in this paper. Due to page limitations, we detailed the systematic review process and results online as supplementary materials\u00b9.",
+      "citations": [
+        "W2168894761",
+        "W2988335058",
+        "W2962700793",
+        "W2966376065",
+        "W2795309687"
+      ],
+      "tables_in_text": [
+        "tbl_02"
+      ],
+      "citations_unmapped": [
+        "5"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Results Analysis",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Malware Defenses Objectives",
+          "subsubsections": [],
+          "text": "Deep learning techniques have been applied to various aspects of malware defenses to protect mobile users from severe malware attacks. After discussing among all authors and drawing on the classification scheme used in previous surveys by Faruki et al. [W2060537671] and Ucci et al. [W2900633536], we classify reviewed studies into the following categories: malware detection (binary classification), malware family attribution, repackaged/fake app detection, adversarial learning attacks and protections, malware evolution detection and defense, and malicious behavior analysis. **FIGURE 2** depicts the statistical trends of research objectives for the sources.\n\n**Malware Detection (Binary Classification).** As shown in **FIGURE 2**, malware detection (binary classification), which determines whether a given application is malicious or benign, receives the most research attention (68%) and the increasing trend is expected to continue. This result is not surprising given that the most urgent task at the moment is to protect mobile users from malicious attacks by automatically distinguishing malware from goodware, which is why many previous surveys have primarily focused on this research topic. Droid-Sec [UNMAPPED:184] is the first attempt to detect Android malware using deep learning-based methods. The methodology of Droid-Sec can be summarized as three steps: (1) Android applications collection and labeling, (2) feature extraction and characterization, (3) deep learning models training and evaluation. The empirical results of Droid-Sec have demonstrated that deep learning techniques are much more effective for malware detection compared with traditional machine learning techniques like Support Vector Machine (SVM). In fact, most primary studies related to DL-based malware detection usually follow a similar methodology with Droid-Sec but explore the applicability and effectiveness of different state-of-arts deep learning techniques in more complex scenarios, which is consistent with previous literature [W3112311055].\n\n**Malware Family Attribution.** Another important aspect of Android malware defenses is malware family attribution. **FIGURE 2** shows that 20 reviewed articles (15%) are specialized for identifying Android malware families. Given the growing number of malware variants, malware can be categorized into certain categories that are associated with different malicious objectives and behaviors, like the Adware family that displays unwanted advertisements to mobile users. In contrast to malware detection (binary classification), malware family attribution identifies which family a malware sample belongs to. Most primary studies like [W2989930814] and [UNMAPPED:141] employ multi-class classification approaches to identify existing or old malware families. As a large number of new malware variants are created, Qiu et al. [W2979774094] proposed deep learning-based approaches to detect zero-day malware families.\n\n**Repackaged/Fake App Detection.** In 5% of sources, deep learning-based repackaged/fake app detection is investigated. Attackers can unpack an existing malicious/benign application, modify its contents and repackage it, depriving app developers of revenue and contributing to the spread of malware on mobile devices [W2963213304]. For this reason, identifying repackaged or fake applications and analyzing the behaviors of variants is also critical. For example, in order to locate counterfeit mobile applications in application markets, Ullah et al. [W2983034768] and Karunanayake et al. [UNMAPPED:74] propose DL-based Fake app detectors to prevent the publishing of fake apps in app stores.\n\n**Adversarial Learning Attacks and Protections.** **FIGURE 2** shows that 16 primary studies (12%) focus on adversarial learning attacks and protections on DL-based malware defenses. Despite the fact that numerous research studies have demonstrated that deep learning models provide promisingly high performance to identify malware, these models have been shown to be particularly vulnerable to well-designed adversarial attacks [W2963178695, UNMAPPED:82]. Adversarial attackers could inject a small but intentional perturbation to create adversarial examples, causing the trained models to misclassify adversarial examples. For example, Chen et al. [W2966342255] performed adversarial attacks on DNN-based malware detection models, decreasing the accuracy from over 90% to 0%. Consequently, there is a corresponding increase in the attention dedicated to adversarial attacks against malware defense models, as shown in **FIGURE 2**. Depending on when the attacks occur, adversarial attacks are split into two main categories: evasion attacks for testing samples and poisoning attacks for training samples. With respect to the two types of adversarial attacks, the majority of sources (14 studies, 87%) discuss evasion attacks and protections for DL-based Android malware defense models, and conversely, only two recent studies focus on poisoning attacks [W3180545700, W3120073944]. We discuss more details about this topic in Section 3.6.2.\n\n**Malware Evolution Detection and Defense.** With regard to the malware evolution problem, **FIGURE 2** indicates that only seven papers (5%) attempt to develop solutions for malware evolution, but it is remarkable that all seven papers were published within the last three years. Due to the rapid evolution of mobile malware and the emergence of new variants and families, the performance of DL-based malware defenses models decays significantly over time. Pendlebury et al. [W2964636835] revealed that the detection performance of deep learning-based classifiers decreases drastically from almost 90% to below 30% for future malware samples. Thus, model retraining and active learning are applied to reverse and improve aged models by Pendlebury et al. [W2964636835]. However, the underlying models are still incapable of distinguishing evolved malware in this manner, as they still rely on humans to determine when models should be retrained. In the light of this issue, recent studies [W2964450831, W3198941561, W3038770761, W3153208318, W3097730806, UNMAPPED:37] introduce a variety of approaches to slow down the aging of malware defense models, which are further discussed in Section 3.6.3.\n\n**Malicious Behavior Analysis.** There are six primary studies (5%) related to malicious behavior analysis in collected studies. Malicious behavior analysis aims at identifying or assessing risk behaviors in unknown applications. As for Android malware, malicious behaviors have diverse types, and a malicious application often performs more than one malicious behavior, increasing the difficulty of analysis. In addition, malicious applications may utilize code obfuscation and dynamic payload to conceal malicious behaviors. Hence, it is a relatively challenging research topic to investigate. In order to prevent malicious activities while apps are running, Gronat et al. [W2974078865] and Lorenzo et al. [W2990211342] employ recurrent neural networks to visualize potential risks for Android malware samples. For Android malware, performing malicious behaviors requires using dangerous semantic features such as permissions and API calls related to users' privacy. To assist mobile users in determining the security risk before installing unknown applications or granting permissions, some researchers examine the consistency between risk permissions and metadata-based features of apps, like descriptions [W3000122187, W2940477855] or icon widgets [UNMAPPED:170].\n\n**DISCUSSION.** Despite the rapidly growing number of research studies on deep learning for Android malware defenses, it appears that previous research studies focus on relatively simple application scenarios. More than half of the sources focus on malware detection through various deep learning strategies. Additionally, most of these existing studies focus on improving malware detection performance through the use of various advanced deep learning techniques and demonstrate that the newly proposed models outperform prior models on their own experimental datasets. It is noteworthy that an increasing number of recent studies have started to address specific issues to better apply DL-based malware detection models in practice (e.g., on-device malware detection [W2982299304, W3023529621], explainable malware detection [W3133963303, W2990121995], malware detection on imbalanced data [W3089392154, W2984666763]). However, the number of relevant studies remains small. How to improve the robustness, effectiveness, stability, and reliability of malware detectors with the help of deep learning is an open issue for future researchers.\n\nCompared with Android malware detection, the number of literature focusing on other research objectives is relatively small, requiring further in-depth research. Taking malware behavior analysis as an example, defining specific malicious behaviors and associating them with the raw code of Android APKs remains challenging issues. Thus, these research objectives require more works to integrate domain knowledge and provide fundamental theoretical construction. Except that, while this review categorizes the existing literature's research objectives into six categories, the scope of Android malware defenses is actually much broader. Therefore, future research should not be limited to these six categories, but should instead propose Android malware defense approaches that leverage advanced deep learning techniques in more new application scenarios.\n\n**RQ1: What are the research objectives of the DL-based Android malware defense solutions?**\n\n- The main objective is still malware detection (binary classification) using deep learning techniques;\n- On the whole, 53 primary studies focus on other research topics like malware family attribution and adversarial attacks, and the number is not small and cannot be neglected;\n- At the beginning, researchers only focused on the field of malware detection, but in recent years, an increasing number of primary studies have applied deep learning to analyze Android malware in more complex scenarios.",
+          "citations": [
+            "W2060537671",
+            "W2900633536",
+            "W3112311055",
+            "W2989930814",
+            "W2979774094",
+            "W2963213304",
+            "W2983034768",
+            "W2963178695",
+            "W2966342255",
+            "W3180545700",
+            "W3120073944",
+            "W2964636835",
+            "W2964450831",
+            "W3198941561",
+            "W3038770761",
+            "W3153208318",
+            "W3097730806",
+            "W2974078865",
+            "W2990211342",
+            "W3000122187",
+            "W2940477855",
+            "W2982299304",
+            "W3023529621",
+            "W3133963303",
+            "W2990121995",
+            "W3089392154",
+            "W2984666763",
+            "W2988335058",
+            "W2962700793",
+            "W2966376065"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "184",
+            "141",
+            "74",
+            "82",
+            "37",
+            "170"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 APK Characterization",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1 Program Analysis Approaches",
+              "parent_subsection_id": "s_3_2",
+              "text": "As shown in **FIGURE 3**, program analysis approaches to extract raw features from Android APKs can be categorized into three types: static analysis, dynamic analysis, and hybrid analysis.\n\n**Static Analysis.** **FIGURE 3** presents that the majority of sources (73%) extract raw features using static analysis approaches. Reverse-engineering tools such as Androguard [UNMAPPED:21] and APKtool [UNMAPPED:11] are required to disassemble and/or decompile Android APK. The raw information extracted from the APK files is used for further analysis of malicious applications. The extracted information is diverse. Raw binary code and opcode sequence can be fed directly to DL models [W2982645003, W2963401022, W3003235347, UNMAPPED:141]. Aside from that, high-level semantic features like API calls and permissions are also widely used [W2744095836, W2885070483, W2586845402, W2980750320].\n\n**Dynamic Analysis.** Only 17% of primary studies use dynamic analysis approaches to collect raw features from Android APK files. This finding is not surprising given that dynamic analysis requires executing apps in a protected environment and dynamic analysis can only provide a partial picture of applications (i.e., it is challenging to cover all code) [W2060537671, W2343325785]. However, dynamic analysis works by running samples to examine the runtime behaviors and system metrics of Android applications, which is more resilient to malware evasion techniques like obfuscation [W2577741565]. Representative dynamic analysis tools include TaintDroid [UNMAPPED:35], CopperDroid [W2070386561], etc. Dynamic features are obtained by dynamically executing collected app samples in a controlled environment, such as an Android emulator or a real mobile device. Thirteen primary studies employ emulators such as Genymotion to monitor the application's dynamic behaviors. However, various anti-emulator techniques are developed to conceal malicious activities. Thus, we also discovered that there are seven primary studies focusing on dynamic analysis on real mobile devices. For example, Alzaylaee et al. [UNMAPPED:5] demonstrated that on-device dynamic analysis performed much better than on-simulator dynamic analysis concerning stability and detecting ability.\n\n**Hybrid Analysis.** **FIGURE 3** presents that 10% of primary studies involve hybrid program analysis (which combines static and dynamic analysis). Static program analysis has the advantage of providing full code coverage at a lower computational cost but it is vulnerable to evasion techniques like obfuscation, while dynamic program analysis allows for the analysis of run-time behaviors in a controlled environment but the code coverage may be limited [W3047657293, W2792736988]. Although hybrid analysis leverage the complementary strengths of both types of program analyses, it is still computationally intensive, which may explain why the number of related studies is small.\n\n**FIGURE 3. Summary of the Primary Studies by Program Analysis Approaches**\n\n**(a) Trends of Program Analysis Approaches**\n\n{{TABLE:tbl_05}}\n\n**(b) Overall Distribution**\n- Static Analysis: 73%\n- Dynamic Analysis: 17%\n- Hybrid Analysis: 10%",
+              "citations": [
+                "W2982645003",
+                "W2963401022",
+                "W3003235347",
+                "W2744095836",
+                "W2885070483",
+                "W2586845402",
+                "W2980750320",
+                "W2060537671",
+                "W2343325785",
+                "W2577741565",
+                "W2070386561",
+                "W3047657293",
+                "W2792736988"
+              ],
+              "tables_in_text": [
+                "tbl_05"
+              ],
+              "citations_unmapped": [
+                "21",
+                "11",
+                "141",
+                "35",
+                "5"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2 Feature Categories",
+              "parent_subsection_id": "s_3_2",
+              "text": "As illustrated in **FIGURE 4**, extracted features can be summarized into 13 categories, indicating the diversity of raw feature types. Note that many studies may combine multiple types of features in order to accurately represent a malicious application.\n\nAs can be observed from **FIGURE 4**, semantic features are the most common. API calls (55.3%) and permissions (51.5%) have been the most frequently used feature types, accounting for well over half of primary studies. A possible explanation for this might be that API calls and permissions carry sufficient semantics and that the risk API calls and permissions usually result in dangerous or malicious behavior. Other types of semantic information extracted from the decompiled code such as filtered intents and app components are also used by a large number of primary studies. There are also 13 primary studies (10%) using program graphs like Control Flow Graph (CFG) and Data Flow Graph (DFG) to represent an application when analyzing Android malware. Apart from the semantic information extracted from decompressed APK, we find eight recent studies leverage app metadata such as icons and app descriptions for the subsequent analysis.\n\nAlthough the aforementioned features are usually extracted via static analysis, we discover two distinct dynamic features. 18 primary studies employ Linux kernel system calls as extracted features to capture malicious behaviors. Unlike API calls, Linux kernel system calls are not dependent on the Android OS version, making them more resilient to malware evasion strategies [W2577741565]. Additionally, 14 primary studies examine characteristics associated with dynamic activities such as network access and memory dump. These observations from **FIGURE 4** corroborate those from **FIGURE 3**, indicating that static analysis is the most frequently occurring approach for program analysis.\n\nAlthough high-level semantic features such as API calls remain the most commonly used, there is an increasing number of primary studies using raw code sequences to construct feature vectors. **FIGURE 4** indicates that the most frequently occurring raw code feature is raw opcode sequences from disassembled Android apps (with 22 studies). The raw opcode sequences are fed into deep neural networks to learn high-level semantic feature representation automatically [W3112311055]. Notice that four primary sources convert disassembled code to Java source code to construct feature vectors. On the other hand, we find that 13 primary studies fed the deep neural models with the raw classes.\n\n**FIGURE 4. Summary of the Primary Studies by Feature Categories**\n\n{{TABLE:tbl_06}}",
+              "citations": [
+                "W2577741565",
+                "W3112311055"
+              ],
+              "tables_in_text": [
+                "tbl_06"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.2.3 Feature Encoding Approaches",
+              "parent_subsection_id": "s_3_2",
+              "text": "**FIGURE 5** provides a summary of examined sources based on feature encoding approaches. Following program analysis, the extracted information is further encoded into feature vectors and then fed into deep learning models. There are numerous ways to represent extracted features in primary studies, as extracted data from Android applications take on a variety of categories. Thus, we classify feature encoding approaches into the following five categories:\n\n**Categorical encoding.** **FIGURE 5** indicates that categorical encoding approaches are most frequently occurring at 47% of sources (62 primary studies). This result appears to be consistent with Section 3.2.2 which indicates that categorical semantic features like API calls and permissions are the most frequently used. Typically, a numerical vector is constructed to indicate the presence of each categorical feature. It is noteworthy that we discovered that 55 out of 62 primary studies adopt one-hot encoding to record the information of the presence of each possible feature value for applications. For instance, DroidDetector [W2313513770] considers a total of 192 features through hybrid analysis, and constructs a 192-dimensional vector for each app where each feature is assigned a value of 1 if it occurs in the app; otherwise, it is assigned a value of 0. Besides, we find that seven sources assign each feature a discriminative integer and store the used features in a numerical vector. Although categorical encoding is the most prevalent strategy because of its simplicity, it has two significant drawbacks: (1) high dimensional generation, (2) embedding in isolation between distinct patterns [W2617241599].\n\n**Text-based encoding.** It is quite common to employ approaches from natural language processing to encoding sequential features. **FIGURE 5** indicates that 26 primary studies (20%) attempt to utilize text-based feature encoding approaches. Numerous state-of-the-art text encoding approaches have been introduced to process sequential data. In fact, one-hot encoding is the simplest method of text encoding but one of its disadvantages is high dimensional problem that we discussed before. In addition, some researchers employ discrete encoding approaches like Bag of Words (BOW), Term Frequency\u2013Inverse Document Frequency (TF-IDF), and N-Gram [W2999422148, W3015902623, W2979774094, W3036599180, W2983034768, W2772660489, W2745604838, W2887944710]. These methods, however, are still limited by data sparsity and high dimensionality issues [W3007595536]. Therefore, many primary studies further investigate the effectiveness of pre-trained word embedding models, such as Continuous Word2vec [W2996927499, W3047657293, W2940477855, W2789983203, W2914710727, W2980750320, W3036962827] and GloVe [W2789983203].\n\n**Graph-based encoding.** We find that 15 primary studies (11%) employ graph-based representation approaches. Deep4MalDroid [W2577741565] obtains system calls through dynamic analysis tools to construct a weighted directed graph, and graph structure information including weights of each edge and in-degree and out-degree of each node is stored in vectors as inputs. Xu et al. [W2989930814] encode CFG and DFG into adjacency metrics respectively and combine them into a single metric in embedding layers. In [W2943383044], the authors investigate several state-of-the-art graph embedding approaches to encode API call graphs, including DeepWalk [UNMAPPED:121], Node2vec [UNMAPPED:55], HOPE [W2387462954], etc.\n\n**Image-based encoding.** Image-based representation, employed in 16 primary studies (12%), usually transforms extracted features into a grayscale or color image. The most common scenario is directly transforming bytecode into images. For instance, IMCFN [W3006334803] reads an Android binary as a vector of 8-bit unsigned integers and then converts it into a two-dimensional array. Following that, the Android bytecode is visualized as a color image based on the RGB color map. Numerous research studies used similar approaches to encode Android bytecode [W3044668093, W2982645003, W2963401022, W2998961572, W3006325478, W2998906013, UNMAPPED:141].\n\n**Hybrid encoding.** Combining distinct feature encoding approaches to process richer features is also common in collected research (6%). Take Kim et al. [W2885070483] as an example. The authors construct one-hot vectors to record the existence of categorical features like permission, string and app components. At the same time, in order to alleviate the impacts of obfuscation techniques, a similarity-based feature vector generation process is introduced to encode sequential features like opcode and API calls. In [W2980521818, UNMAPPED:74, UNMAPPED:170], since these studies also consider icons or pictures of Android applications, both image embedding approaches and text embedding algorithms are used to encoding features.\n\n**FIGURE 5. Summary of the Primary Studies by Feature Encoding Approaches**\n\n{{TABLE:tbl_07}}\n\n**DISCUSSION.** According to our reviewed results, the majority of research constructs feature vectors by recording the existence of various categorical features of Android applications. Many studies create a look-up table to list all the potential features based on prior knowledge or feature selection approaches, and then build a fixed-size one-hot feature vector to represent each application [W3089392154, W3095781263, W3083155189, W2982299304, W3023529621, W2563758005, W3021426193, W2974078865, W2768653635, W2531296565, W2945645805, W3152624640, W2727410211, W2984666763, W3099091571, W3036833724, W2800912855, W2587002069, W3133963303, W2313513770, UNMAPPED:184]. For instance, Wu et al. [W3133963303] identified 158 high-risk features to construct feature vectors (including 97 API calls and 61 permissions). However, there are several issues to process features in this way. One of these is that it is pretty difficult to define a robust malicious feature list using either humans' experience or traditional feature selection approaches. The built feature lists can't encompass all potential malicious characteristics, resulting in poor performance in the practical application. Even when all features in the training data are used, concept drift caused by Android malware evolution is a serious problem that cannot be ignored [W3097730806]. Android malware continues to evolve with similar functionality but a completely different implementation, easily evading detection by Android malware defense models. As a result, how to design effective and practical feature lists is a challenging issue.\n\nAs shown in **FIGURE 3**, static program analysis is the most common approach (73%). Furthermore, our results in Section 3.2.2 show that the majority of reviewed studies extract static semantic features from disassembled files. A significant drawback of this approach is its weak ability to handle obfuscation problems. Obfuscation techniques (e.g., polymorphic code, encryption) transform malware binaries into self-compressed and uniquely structured binary files that are resistant to reverse-engineering approaches [W2057787526, W2972552958]. Obfuscation techniques improve code protection for Android apps, but create significant barriers to malware analysis. For example, code reordering aims to modify the order of instructions in smali code but preserve the original run-time execution trace, thereby evading detection by malware defense tools [W2887787078]. By using a variety of obfuscation techniques, malware attackers can produce multiple variants of a single malicious sample, complicating malware defenses. Although some studies have shown that the proposed DL-based approaches are slightly affected by some simple obfuscation approaches [W2885070483, W2968263527, W2849849680, UNMAPPED:108], we cannot ignore the fact that the real-world obfuscation techniques constantly update and evolve against anti-malware approaches [W3112311055]. Investigating obfuscated apps using deep learning techniques is a potential future research topic, and we outline some potential research trends: (1) using deep learning techniques to detect and analyze obfuscation approaches; (2) analyzing malware based on bytecode-level rather than capturing semantic features.\n\n**RQ2.1: How are features processed for model training?**\n\n- Static analysis is mostly used to obtain features, and static semantic features like API calls and permissions remain the most frequently utilized.\n- The number of primary studies devoted to dynamic analysis is rising and many generally applicable methodologies/frameworks are proposed.\n- One-hot encoding and text encoding are mostly used to represent features.\n- 13 primary studies encode raw bytecode into feature vectors.",
+              "citations": [
+                "W2313513770",
+                "W2617241599",
+                "W2999422148",
+                "W3015902623",
+                "W2979774094",
+                "W3036599180",
+                "W2983034768",
+                "W2772660489",
+                "W2745604838",
+                "W2887944710",
+                "W3007595536",
+                "W2996927499",
+                "W3047657293",
+                "W2940477855",
+                "W2789983203",
+                "W2914710727",
+                "W2980750320",
+                "W3036962827",
+                "W2577741565",
+                "W2989930814",
+                "W2943383044",
+                "W2387462954",
+                "W3006334803",
+                "W3044668093",
+                "W2982645003",
+                "W2963401022",
+                "W2998961572",
+                "W3006325478",
+                "W2998906013",
+                "W2885070483",
+                "W2980521818",
+                "W3089392154",
+                "W3095781263",
+                "W3083155189",
+                "W2982299304",
+                "W3023529621",
+                "W2563758005",
+                "W3021426193",
+                "W2974078865",
+                "W2768653635",
+                "W2531296565",
+                "W2945645805",
+                "W3152624640",
+                "W2727410211",
+                "W2984666763",
+                "W3099091571",
+                "W3036833724",
+                "W2800912855",
+                "W2587002069",
+                "W3133963303",
+                "W3097730806",
+                "W2057787526",
+                "W2972552958",
+                "W2887787078",
+                "W2968263527",
+                "W2849849680",
+                "W3112311055",
+                "W2988335058",
+                "W2962700793"
+              ],
+              "tables_in_text": [
+                "tbl_07"
+              ],
+              "citations_unmapped": [
+                "121",
+                "55",
+                "141",
+                "74",
+                "170",
+                "184",
+                "108"
+              ]
+            }
+          ],
+          "text": "As a response to RQ2.1, this section discusses the APK feature processing approaches used in the collected studies. Each Android application is packaged as an APK file, a zip archive that primarily contains the app's manifest and bytecode. Before being fed into deep learning models, the collected Android APK data needs to be transformed into a formalized representation compatible with deep learning models. These research studies usually process APK files using reverse-engineering tools (program analysis approaches) and then various raw characteristics (feature categories) are extracted. After that, feature encoding approaches are utilized to perform further feature embedding operations on the raw information extracted from applications. To gain a better understanding of APK characterization mechanisms in DL-based Android malware defenses, we discuss the reviewed results from three perspectives, including program analysis approaches, feature categories, and feature encoding approaches.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Deep Learning Techniques",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.3.1 Learning Paradigms",
+              "parent_subsection_id": "s_3_3",
+              "text": "Regarding the type of deep learning paradigms, **TABLE 4** indicates that supervised learning-based Android malware defenses appear most frequently (81.8%). It is worth noting that only one primary source employs unsupervised learning. Specifically, CADE [W3153208318] proposes an unsupervised representation learning approach to combat concept drift for security applications. Twenty primary studies (15.2%) develop Android malware defense approaches based on unsupervised & supervised scenarios. Specifically, unsupervised DNN models such as AutoEncoders are usually employed to initialize a neural network's weights. Then, the pre-trained model can be fine-tuned using labeled samples using a standard supervised back-propagation algorithm [W2982739679, W2563758005, W2738263528, W2577741565, W2768653635, W2531296565, W2955305247, W3082603384, W2997032875, W2586845402, W3036833724, W2800912855, W2587002069, W2745604838, W2313513770, W2751702350, UNMAPPED:184, UNMAPPED:199]. Besides, three primary studies rely on reinforcement learning to conduct the research [W3099091571, W2782999659, W3212677680]. These observations indicate that supervised learning techniques that require sufficient labeled data occupy an absolutely dominant position in this research domain currently.\n\n**TABLE 4. A Summary of Learning Paradigms**\n\n{{TABLE:tbl_08}}",
+              "citations": [
+                "W3153208318",
+                "W3099091571",
+                "W2782999659",
+                "W3212677680"
+              ],
+              "tables_in_text": [
+                "tbl_08"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.3.2 Deep Learning Models",
+              "parent_subsection_id": "s_3_3",
+              "text": "The reviewed sources consider a variety of deep learning models. We categorize these DL models according to their model architectures and summarize the primary studies regarding DL models in **FIGURE 6**.\n\n**Multilayer Perceptrons (MLPs)**, also known as deep feedforward networks or feedforward neural networks, are among the simplest deep learning models for Android malware defenses. Building an MLP is straightforward and MLP can learn hierarchical feature representation of inputs. MLPs are demonstrated to be universal approximators, capable of approximating any measurable function to any designed degree of accuracy [W2137983211]. As a result, MLPs serve as the basis of many advanced deep learning models and are widely used in a variety of research areas [W2557283755]. We thus observe from **FIGURE 6** that MLPs are the most frequently occurring DNN models, referring to 45 primary studies (34.1%).\n\n**Convolutional neural networks (CNNs, ConvNets)** improve traditional MLPs by introducing convolution and pooling (or subsampling) operations to learn high-level features from low patterns with higher efficiency and accuracy. It is remarkable that CNNs have also been among the most popular deep learning models in Android malware defenses, accounting for 41 sources (31.1%) since 2017. We observe that numerous sources employ CNNs to learn feature representations for opcode, bytecode, and API call sequences [W2996927499, W3044668093, W3034897363, W2982645003, W2963401022, W3125596609, W2789983203, W2944407972, W2599823825, W2735043505, W2943383044, W3006334803, W2966270452, W3004280948, UNMAPPED:141]. This observation is unsurprising given that CNNs can automatically learn useful context structural information of Android apps in comparison to MLPs.\n\n**Recurrent Neural Networks (RNNs)** have emerged as a successful paradigm for modeling sequential data since RNNs incorporate hidden units that implicitly maintain the history of all past elements in the sequence [W2110485445]. As such, it becomes a powerful tool in Natural Language Processing (NLP) and speech processing [W2919115771]. The programming pattern of Android applications is sequential and logical, and capturing sequential and semantic properties from the decompiled code is essential for improving malware defense models' performance. **FIGURE 6** shows that 17 primary studies (12.9%) use RNNs to defend against Android malware attacks. Except for standard RNNs, advanced variants such as Long Short Term Memory (LSTM) and Gated Recurrent Unit (GRU) are often deployed to overcome the vanishing gradient problem, thereby enhancing model performance [W3047657293, W2990211342, W3036491774, W2772660489, W2792736988, W2753669113, W2782578820, W3046554150].\n\n**Autoencoders (AEs)** are unsupervised neural networks that learn the latent space of inputs in an unsupervised manner. AEs have been successfully used in dimensionality reduction and information retrieval tasks [W2163922914, W2557283755]. The typical structure of AEs consists of two components: an encoder mapping inputs to a hidden representation, and a decoder mapping the hidden representation back. AE and its variants, such as Denoising Autoencoders (DAEs) and Variational Autoencoders (VAEs), have been widely applied to Android malware defenses, referring to 11 sources (8.3%).\n\n**Deep Belief Networks (DBNs)** belong to probabilistic generative models, and DBNs are hierarchically constructed by multiple layers of stochastic hidden variables [W1973445088]. DBNs learn multiple layers of features from unlabeled inputs in an unsupervised manner, and these features can then be used to optimize discrimination in a supervised manner to perform the classification tasks. Deep belief networks are one of the first non-traditional models to admit deep architecture training successfully, but they are currently rarely used compared with other advanced deep learning networks [W2557283755]. **FIGURE 6** presents a consistent result that DBNs were also the first DNN network to build Android malware defense models, with the highest proportion between 2014 and 2016.\n\n**Generative Adversarial Networks (GANs)** are composed of a generative model and a discriminative model. The generator is trained to generate new samples in order to fool the discriminative model, while the discriminator tries to distinguish the generated samples from the real samples, liking in a game of cat and mouse to compete with each other. GANs were even described as the most interesting machine learning idea in the last ten years by AI pioneer Yann LeCun in 2016. Nevertheless, only three primary studies render GAN-based Android malware defense architectures [W2962117360, W2945645805, UNMAPPED:108], showing that further explorations to the application of GANs in malware defenses are still needed.\n\n**Graph Neural Networks (GNNs)** are designed by extending deep learning techniques to graph data. AI researchers have developed a variety of GNN architectures, such as Graph Convolutional Network (GCN) [UNMAPPED:78] and Graph Attention Network (GAT) [UNMAPPED:152]. In **FIGURE 6**, we can observe that two recent studies propose GNNs-based heterogeneous graph representation learning approaches in Android malware defenses [W3147879240, UNMAPPED:37].\n\n**Attention-based neural networks** are capable of learning the dependencies between inputs and target sequences, bringing a huge improvement in Machine Translation [UNMAPPED:166]. As such, one source [W3133963303] proposed an explainable attention-based Android malware detection model since attention mechanisms can provide information about the elements' relevance to their targets. Although there is currently only one primary study employing attention mechanisms, a variety of popular attention mechanisms have been proposed and demonstrated to perform well in NLP or CV, such as self-attention, soft/hard attention, local and glocal attention, co-attention, etc. As a result, we suggest that future researchers make more efforts to apply attention-based models to more specific issues in Android malware defenses.\n\n**Deep Reinforcement Learning (DRL)** operates on a trial-and-error paradigm to teach an autonomous agent how to perform a task without human guidance. DRL has demonstrated its significant performance in the fields of games, robotics, and self-driving cars [W3100789280, W3123212791]. In Android malware defenses, we also find three DRL-based primary studies [W3095781263, W3099091571, W3212677680]. For example, Zhao et al. [W3212677680] and Rathore et al. [W3099091571] examine the effectiveness of reinforcement learning for evading adversarial attacks and relevant protection strategies.\n\n**Transformers** enable much more parallelization than CNNs and RNNs by leveraging the self-attention mechanism. This capability makes it possible to efficiently (pre-)train extremely large language models on GPUs. Bidirectional Encoder Representations from Transformers (BERT) is among the most widely used transformer-based pre-trained language models [UNMAPPED:30]. We found one research study that employed BERT to model sequential features on highly imbalanced malware data.\n\n**Hybrid-based models** integrate several basic DNN blocks to formalize more robust and effective models. As shown in **FIGURE 6**, hybrid-based models have been leveraged in 11 primary studies (8.3%). Numerous deep learning framework combinations have been considered, like AE and CNN [W3181333984, W2800912855], RNN and CNN [W2980521818, W2941199301], MLP and LSTM [W2849849680], etc.\n\n**Others.** Recent years have seen rapid advancements in deep learning, with new deep learning techniques being proposed constantly. Two sources leverage deep learning models that fall outside of the aforementioned categories. Bai et al. [W3089392154] perform Android malware family classification through siamese neural networks. Ma et al. [W3103625270] adopt deep residual learning to detect sensitive behaviors.\n\n**FIGURE 6** demonstrates that multiple types of deep learning models have been adopted to defend against Android malware. In the earlier years, unsupervised DNN models like AE and DBN drew the most research attention. However, beginning in 2017, popular supervised DNN architectures such as MLP, CNN, and RNN garnered increased attention. Another intriguing finding is that a variety of advanced approaches have emerged over the past three years, including GAN, GNN, attention, transformer, DRL, and hybrid models. These observations further support that deep learning has garnered growing interest in the field of Android malware defenses.\n\n**FIGURE 6. Summary of the Primary Studies by Deep Learning Models**\n\n{{TABLE:tbl_09}}",
+              "citations": [
+                "W2137983211",
+                "W2557283755",
+                "W2996927499",
+                "W3044668093",
+                "W3034897363",
+                "W2982645003",
+                "W2963401022",
+                "W3125596609",
+                "W2789983203",
+                "W2944407972",
+                "W2599823825",
+                "W2735043505",
+                "W2943383044",
+                "W3006334803",
+                "W2966270452",
+                "W3004280948",
+                "W2110485445",
+                "W2919115771",
+                "W3047657293",
+                "W2990211342",
+                "W3036491774",
+                "W2772660489",
+                "W2792736988",
+                "W2753669113",
+                "W2782578820",
+                "W3046554150",
+                "W2163922914",
+                "W1973445088",
+                "W2962117360",
+                "W2945645805",
+                "W3147879240",
+                "W3133963303",
+                "W3100789280",
+                "W3123212791",
+                "W3095781263",
+                "W3099091571",
+                "W3212677680",
+                "W3181333984",
+                "W2800912855",
+                "W2980521818",
+                "W2941199301",
+                "W2849849680",
+                "W3089392154",
+                "W3103625270"
+              ],
+              "tables_in_text": [
+                "tbl_09"
+              ],
+              "citations_unmapped": [
+                "141",
+                "108",
+                "78",
+                "152",
+                "37",
+                "166",
+                "30"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.3.3 Model Explanation",
+              "parent_subsection_id": "s_3_3",
+              "text": "Deep learning approaches with a sophisticated architecture remain black-box models [UNMAPPED:109]. Specifically, these constructed models cannot provide evidence to interpret why a given sample is identified as malicious. The absence of sufficient transparency and trustworthiness in the proposed approaches is a significant obstacle to employing theoretical tools in practical malware analysis. As a result, it is necessary to develop explanation approaches for malware defense models. In collected studies, ten studies (7.5%) exploited interpretable deep learning techniques in Android malware defenses. **TABLE 5** summarizes a comparative result towards interpretable tools. Interestingly, nine out of ten primary sources are proposed after 2019, indicating that explainable deep learning approaches for malware defenses are a current hot research topic.\n\nWith respect to the scope of interpretability, it is remarkable that most studies leverage local approaches (seven out of the 10 studies). Global methods describe how features affect the prediction on average, whereas local methods aim to explain individual predictions [UNMAPPED:109]. Regarding the explanation approaches used in sources, state-of-the-art model-agnostic explanation approaches, including LIME [W2516809705], SHAP [UNMAPPED:102], Anchor [W2788403449], LORE [W2803532212], and LEMNA [UNMAPPED:58], are most frequently occurring (four primary sources [W3083155189, W3000122187, W3120073944, UNMAPPED:163]). These approaches treat the target classifier as a blackbox and approximate the decision boundary of any machine learning model by using a simple explainable model. Note that two primary studies employ gradient-based explanation approaches (e.g., integrated gradients and Grad-CAM) to back-propagate gradients through the DNN in order to measure the sensitivity of each feature [W3125596609, UNMAPPED:163]. Wu et al. [W3133963303] design an interpretable approach to classify Android malware by leveraging a customized attention mechanism.\n\n**TABLE 5. A Summary of Explanation Approaches Used in DL-based Android Malware Defenses**\n\n{{TABLE:tbl_10}}\n\n**DISCUSSION.** Our results indicate that supervised learning techniques occupy an absolutely dominant position in the current research. However, this kind of learning involves data labeling, which is costly and requires domain-specific knowledge. In Android malware defenses, Anti-Viruses (AVs) like VirusTotal are widely used to provide ground truth for experimental data. We cannot ignore the following significant issues. First, it may be convenient to use AVs to distinguish between malware and benign apps. However, AVs couldn't perform complex labeling tasks such as evolved malware labeling or malware behavior labeling, which still require substantial expertise. Second, most of the AVs work on the signature, heuristic, and behavior-based detection engines [W2732916693]. These approaches, however, are still time-consuming and human-dependent, and the more serious problem is that they cannot work well on future samples [W2732916693]. Furthermore, one commercial AV may produce inconsistent results over time, or distinct AVs may produce different results, causing the ground-truth unreliable [W3153065797]. As a result, reliable data labeling for Android malware defenses may be a potential research topic. We also encourage our fellow researchers to focus more on deep learning techniques requiring less human labor to annotate data, like active learning, semi-supervised learning, reinforcement learning, or unsupervised learning.\n\nAlthough all studies we investigated in this review are related to deep learning, most studies employed neural networks with three to four layers. Training a very deep neural network on a small scale of data would cause severe overfitting [W2557283755]. Although shallow DNN networks have demonstrated promising performance in Android malware defenses, a deeper neural network is worth further exploring in this domain. On the other hand, pre-trained models trained on large amounts of data play an important role in CV and NLP domains, as they lower the barrier to applying these DNN models to real-world problems. With the explosive growth of the number of Android malware, it appears that it is not a good solution to train a DNN model from scratch every time a model is needed. A pre-trained DL model for Android malware can considerably bring convenience for the research in this domain.\n\nWith the exponential growth of Android applications, the requirement for massive computational resources to achieve the desired performance is becoming an increasing issue in this domain. In comparison to text and image, Android files are larger in size and have a more complex structure and feature processing by reverse-engineering tools is required, which is time-consuming. Furthermore, current deep learning frameworks involve a considerable amount of computational resources to approach state-of-the-art performance [UNMAPPED:125]. As a result, improving the computational efficiency of DL-based Android malware defense approaches is a growing need.\n\nInterpretable or explainable deep learning-based Android malware defenses are also a future interesting topic [W2962772482, W4205601502]. Recently, researchers have focused on conducting empirical studies to highlight the need of explainable AI/ML models for software engineering [W3013745307] and developing novel approaches for explainable AI/ML models for software engineering [W3013745307, W3001551606, W3129454500, W3083954092, UNMAPPED:120, UNMAPPED:124]. Although prior studies have attempted to employ local/global explainable approaches to provide explanations based on the Android characteristic-based features for each unknown sample [W3133963303], there are still several issues requiring further exploration. First, current studies mainly focus on simple semantic characteristic-based features extracted from APK, so richer feature types and in-depth explanations of source code should be investigated further. Specifically, deep learning techniques have been widely utilized to analyze raw code but how to transform the unreadable code into semantic interpretation is an unsolved problem. On the other hand, an effective evaluation system for explainable Android malware defenses is currently unavailable, making it significantly more difficult for researchers to measure the quality of explanation results and compare alternative explanation approaches. Indeed, it is nearly impossible for experienced malware analysts to detect all malicious behaviors in malware samples without making a mistake. Therefore, improving the reliability of explanations for malware samples is a potential challenge for future researchers.\n\n**RQ2.2: What deep learning architectures are used?**\n\n- MLPs, CNNs, and RNNs are mostly used in Android malware defenses.\n- Research is primarily focused on supervised learning tasks, especially binary classification tasks.\n- The applications of recent advanced DL techniques (e.g., GAN, attention and DRL) to Android malware defenses are still relatively preliminary.\n- The interest in explainable DL-based malware defenses raises, and ten related studies have been published from 2019.",
+              "citations": [
+                "W2516809705",
+                "W2788403449",
+                "W2803532212",
+                "W3083155189",
+                "W3000122187",
+                "W3120073944",
+                "W3125596609",
+                "W3133963303",
+                "W2732916693",
+                "W3153065797",
+                "W2557283755",
+                "W2962772482",
+                "W4205601502",
+                "W3013745307",
+                "W3001551606",
+                "W3129454500",
+                "W3083954092"
+              ],
+              "tables_in_text": [
+                "tbl_10"
+              ],
+              "citations_unmapped": [
+                "109",
+                "102",
+                "58",
+                "163",
+                "125",
+                "120",
+                "124"
+              ]
+            }
+          ],
+          "text": "Responding to RQ2.2, this section provides a detailed review of the primary studies according to deep learning techniques. To comprehend this section, readers are expected to be relatively familiar with deep learning. For more details on the patterns described, readers are referred to the deep learning textbook by Goodfellow et al. [W2557283755].",
+          "citations": [
+            "W2557283755"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 Deployment of Analysis",
+          "subsubsections": [],
+          "text": "Deployment approaches for malware defenses can be grouped into three categories: (i) off-device, (ii) on-device, and (iii) distributed, i.e., a combination of (i) and (ii) [W2060537671].\n\nIn 93.2% of sources, the proposed tools are deployed off-device (see **TABLE 6**). Specifically, most studies design an off-device approach and conduct experiments on personal computers or higher-performance GPU servers. Automated malware defenses on a large volume of data require massive computational resources. Thus, the majority of sources didn't consider deploying the obtained DL models on mobile devices for real usage.\n\nConversely, only two studies propose on-device approaches [W2982299304, W3023529621]. On-device Android malware defenses provide analysis results through the mobile device itself, without the need to share or upload private data. Currently, on-device Android malware defenses frameworks with deep learning techniques are usually implemented by transplanting the model trained on servers to smartphones. Feng et al. [W2982299304, W3023529621] proposed two on-device Android malware detection systems, MobiDroid and MobiTive, which leveraged deep learning techniques to provide real-time detection on the user's mobile device. Specifically, they first maintained an effective Android malware detection model on the server side before migrating the pre-trained model to TensorFlow-lite\u2074 model. They demonstrated that the proposed approach could provide a reliable and fast reactive detection service on mobile devices.\n\nWe also found seven distributed approaches (5.3%) [W2795309687, W3021426193, W2963401022, W3036599180, W2983034768, W2782999659, W2966270452]. Distributed malware defense that performs on-the-fly analysis and/or detection on the mobile device while performing detailed and computationally expensive analysis on a remote server [W2060537671]. A good example is R2-D2 proposed by Hsien et al. [W2963401022] in which Android users scan a suspicious app on their own mobile device, and if the app is previously unrecognized, the app's classes.dex is transformed into an RGB image that needs to be uploaded to the server side. In their back-end server, the image will be fed into a CNN network and, once identified, the results will be sent to the users' phone. One of the major drawbacks is that distributed approaches reveal significant private data to the cloud as the uploading process via the Internet and the analysing server itself may not be secure. In the machine learning domain, G\u00e1lvez et al. [W3186817993] utilize semi-supervised ensemble learning to implement a privacy-respect malware detector. However, privacy protection for distributed DL-based approaches still needs to be thoroughly studied.\n\nIn commenting on these findings, we would encourage authors to propose more on-device and distributed malware defense approaches. Furthermore, we would encourage future authors to investigate possible solutions to real-world issues such as privacy protection and computation resource limitations.\n\n**TABLE 6. A Summary of the Deployment of Malware Defense Tools**\n\n{{TABLE:tbl_11}}\n\n**DISCUSSION.** Most of the surveyed studies proposed off-device Android malware defense models. They firstly collected a number of malware samples and performed model training and model evaluation on personal computers or GPU servers, which is a fairly common operation in the domain of deep learning applications. However, as malware techniques evolve and update, the problem of model aging is inevitable, resulting in significant performance degradation over time. When a new Android malware family is reported, it is relatively difficult for these obsolete models to update it in a responsive time. In addition, off-device analysis can't provide timely protection for mobile users. Distributed or on-device Android malware is one of the potential solutions, but the number of related research studies is relatively small at the moment. Furthermore, the prior approaches suffer from several critical flaws requiring further investigations.\n\nThe existing distributed/on-device frameworks for Android malware defenses are quite simple and limited. Firstly, suspicious Android applications must be uploaded to the server-side, which requires a heavy communication overhead. It is a potential option to assign parts of the computational tasks to smartphones. But there is a challenge to seeking the trade-off between the detection performance and the real-time demand. On the other hand, the communication process between clients and servers via the Internet may not be secure enough. It is not a difficult job for attackers to modify uploading data or steal private data. As a result, taking privacy protection into account is necessary for future work. Without a doubt, with the rapid development of deep learning techniques and smartphones, there will be new available DNN architectures supporting working effectively on mobile devices. Thus, we hope future researchers can propose more practical on-device approaches.\n\n**RQ2.3: How are DL-based Android malware defenses approaches deployed in practice?**\n\n- Most studies propose the Android malware defense models based off-device.\n- There are seven papers focusing on distributed malware defenses.\n- Only two papers propose on-device models that can perform a whole malware defense process on the mobile device.",
+          "citations": [
+            "W2060537671",
+            "W2982299304",
+            "W3023529621",
+            "W2795309687",
+            "W3021426193",
+            "W2963401022",
+            "W3036599180",
+            "W2983034768",
+            "W2782999659",
+            "W2966270452",
+            "W3186817993"
+          ],
+          "tables_in_text": [
+            "tbl_11"
+          ]
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5 Performance Evaluation",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_5_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.5.1 Dataset",
+              "parent_subsection_id": "s_3_5",
+              "text": "First, we examined the experimental datasets used in collected studies. **FIGURE 7** indicates that the authors can collect malware and goodware samples from a variety of sources. With respect to goodware samples, the official Google Play Store is the most frequently used one (37.1%). Note that third-party markets such as Anzhi, HUAWEI app store, and APKPure are also popular sources for real-world Android samples. Conversely, public research datasets such as Drebin [W2122672392], AMD [W2620844046], and Genome [W2125011234] are more popular to gather malicious applications. It is remarkable that 61 primary studies collect malware samples from Drebin (46.2%). One potential disadvantage is that these datasets are not maintained or updated after being released, causing collected samples to be outdated. Taking Drebin as an example, the dataset includes 123,453 benign samples and 5,560 malware samples from 2011 to 2014. Although these datasets are widely used, it appears that the evaluation results may not reflect the real detection capability of recent malware samples. To overcome such a limitation, **FIGURE 7** shows that the authors show an increasing interest in online repositories like AndroZoo [UNMAPPED:10] and VirusShare [UNMAPPED:155] to collect recent malicious samples.\n\nSecond, for the scale of evaluation data, **FIGURE 8(a)** represents the distribution of the number of evaluation data, while **FIGURE 8(b)** displays the distribution of the ratio of the size of benign samples to malware samples. The median number of goodware samples used in performance evaluation is 9945, while the median number of malware samples used in performance evaluation is 7149 (see **FIGURE 8(a)**). **FIGURE 8(b)** shows that the goodware:malware rate of 19 primary studies is set to 1:1, constructing a balanced dataset. Pendlebury et al. [W2964636835] described that the number of goodware in the real world is much greater than the number of malware, and Android malware accounts for between 6% and 18.6% of all apps. However, it appears that only seven sources (5 < a <= 10) and six sources (a > 10) appear to adhere to a realistic setting for the ratio of goodware to malware. There are even 28 primary studies constructing the evaluation dataset with more malware samples. Pendlebury et al. [W2964636835] confirmed that unrealistic assumptions about the ratio of goodware to malware cause biased performance. As such, we would encourage authors to construct evaluation data in appropriate and reliable settings.\n\n**FIGURE 7. Summary of the Primary Studies by Evaluation Datasets**\n*(Red frame for goodware and black frame for malware)*\n\n{{TABLE:tbl_12}}\n\n**FIGURE 8. Summary of the Size of Evaluation Data**\n\n**(a) The Distribution of the Number of Evaluated Applications**\n\n{{TABLE:tbl_13}}\n\n**(b) The Distribution of the Ratio of Goodware to Malware**\n\n{{TABLE:tbl_14}}",
+              "citations": [
+                "W2122672392",
+                "W2620844046",
+                "W2125011234",
+                "W2964636835"
+              ],
+              "tables_in_text": [
+                "tbl_12",
+                "tbl_13",
+                "tbl_14"
+              ],
+              "citations_unmapped": [
+                "10",
+                "155"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_5_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.5.2 Evaluation Approaches",
+              "parent_subsection_id": "s_3_5",
+              "text": "**FIGURE 9** summarizes the evaluation approaches used across the reviewed studies. We can observe here that 59 primary studies (44.6%) employ k-fold cross-validation and 44 primary studies (33.3%) utilize holdout validation. Due to malware evolution, 14 primary studies (10.6%) split evaluation data based on timestamps in order to perform time-aware experiments. To compare performance, we can see that 67 sources (50.7%) compare the performance with traditional machine learning approaches like Drebin [W2122672392] and MaMaDroid [UNMAPPED:104], while 44 sources (33.3%) compare the performance with other deep learning-based approaches. It is interesting to observe that seven primary studies (5.3%) compare the proposed approaches with non-learning tools such as signature-based anti-virus scanners. It is worth noting that 36 sources (27.2%) evaluate the influence of hyperparameters in deep learning models (e.g., learning rate and hidden layer size). Only seven primary studies conduct case studies to conduct an in-depth manual analysis of specific results. To prove the robustness of the proposed approaches, some studies also examine their resilience against obfuscation (7.5%) and adversarial attacks (12.8%). To demonstrate the reliability of the proposed approaches, 14 primary studies (10.6%) list the top significant features to measure the contribution of different features for the predictions. Additionally, we discover that 11 sources (8.3%) perform evaluation tests in real-world scenarios to further prove the performance.\n\n**FIGURE 9. Summary of the Primary Studies by Evaluation Approaches**\n\n{{TABLE:tbl_15}}",
+              "citations": [
+                "W2122672392"
+              ],
+              "tables_in_text": [
+                "tbl_15"
+              ],
+              "citations_unmapped": [
+                "104"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_5_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.5.3 Evaluation Metrics",
+              "parent_subsection_id": "s_3_5",
+              "text": "The previous results indicate that most studies focus on a classification problem. As such, evaluation metrics from traditional classification problems are directly utilized to measure the performance of proposed malware defense models in the majority of collected studies. These standard classification evaluation metrics (e.g., accuracy, precision, recall, F1-score, True Positive Rate, False Positive Rate, Receiver Operating Characteristic (ROC) curve) are discussed in [W3039088822, W3112311055] in detail. Computational efficiency is another common measure criterion in review papers. Specifically, time costs like feature processing time and hardware resource consumption like memory usages are typically considered.\n\nTo ascertain the effectiveness of these deep learning-based approaches, we also looked at the specific values of the evaluation metrics. Because accuracy and F1 score are the most frequently occurring (71.2% sources use accuracy and 43.1% sources use F1 score), we record the highest accuracy and F1 score values presented in reviewed sources. **FIGURE 10** presents their distribution. It is remarkable that the median number of accuracy/F1 is 98%. Moreover, the accuracy/F1 values of 25% of sources are greater than 99%. Numerous research studies [W2964636835, UNMAPPED:12] have pointed out that most studies present overly-optimistic results caused by a series of biased experimental settings (e.g., data imbalance, outdated data). However, this issue still needs to be thoroughly studied in the future. For more information about potential risks/biases that undermine the evaluation performance, readers are referred to the empirical study by Arp et al. [UNMAPPED:12].\n\n**FIGURE 10. The Distribution of the Performance Metric Values**\n\n{{TABLE:tbl_16}}",
+              "citations": [
+                "W3039088822",
+                "W3112311055",
+                "W2964636835"
+              ],
+              "tables_in_text": [
+                "tbl_16"
+              ],
+              "citations_unmapped": [
+                "12"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_5_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "3.5.4 Availability",
+              "parent_subsection_id": "s_3_5",
+              "text": "The availability of proposed works in collected studies is investigated, which helps future researchers measure and certify the proposed tools. **TABLE 7** presents a summary of the publicly available tools. In reviewed sources, there are only 30 primary studies providing publicly available tools, with just 22.7%. Among the publicly available approaches, 26 approaches are open-sourced. It is noticeable that 26 sources out of the 30 are from 2019 to 2021, indicating that the research community in DL-based Android malware defenses is showing an increasing interest in sharing their research efforts.\n\n**TABLE 7. List of Publicly Available Tools**\n\n{{TABLE:tbl_17}}\n\n**DISCUSSION.** The first problem is that evaluation results may not reflect the real performance of the model. For example, it is quite common to combine malware datasets released a long time ago such as Drebin and Contagio, with the latest benign samples from official Android markets to build new experimental trained data [W2999422148, W2990211342, W3034897363, UNMAPPED:108]. These malware datasets have not been updated in real time to include the latest malware samples, and thus contain outdated malware samples. On the other hand, as defense strategies evolve, some malicious technologies used in public data sets are likely to be abandoned. The model trained using these types of data is rather weak to deal with the most recent malicious apps.\n\nThe data distribution is highly imbalanced, posing a serial of challenges when performing malware analysis. First, the amount of benign samples is much larger than that of malware samples in the real-world scenario but this fact is usually overlooked by prior researchers [W2964636835]. Similarly, the number of samples differs greatly among various malware families or malware categories. For Drebin data set as an example, though its 5560 malware samples can be classified into 179 distinct families, there are only 33 families that include more than 15 examples. Thus, malware families with small scale are easy to be misclassified into the training data set's dominant family categories. Bai et al. [W3089392154] demonstrated that although many proposed approaches have been proven good performance with high accuracy, these models suffered from poor performance to predict small families, even with the help of down-sampling methods. As a result, we suggest that considering data imbalance when analyzing malware may be critical for developing a more practical malware defense approach.\n\nAnother significant issue is limited reproducibility. Our reviewed results reveal that only a small number of primary studies share their source code, which makes future researchers' validation of assessment results more difficult. Except for the source code, most studies collect evaluation data from a variety of sources but more details for the collected data are missing. Daoudi et al. [W3165327389] attempted to reproduce five ML-based Android malware detectors, but only one was successful. Thus, providing a transparent framework to manage performance evaluation is required for future researchers.\n\n**RQ2.4: How are DL-based Android malware defenses approaches evaluated?**\n\n- Evaluation data is collected from a variety of resources.\n- Classic classification evaluation metrics are mostly used to measure the performance.\n- Almost half of the sources reported a 98% accuracy.\n- Thirty works have made their contributions publicly available.",
+              "citations": [
+                "W2999422148",
+                "W2990211342",
+                "W3034897363",
+                "W2964636835",
+                "W3089392154",
+                "W3165327389"
+              ],
+              "tables_in_text": [
+                "tbl_17"
+              ],
+              "citations_unmapped": [
+                "108"
+              ]
+            }
+          ],
+          "text": "Assessing the performance of the proposed approach is an important process. As a response for RQ2.4, we analyzed the evaluation approaches utilized in the surveyed studies.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6 Trend Analysis",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_6_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.6.1 Statistic Analysis",
+              "parent_subsection_id": "s_3_6",
+              "text": "In order to locate current research concerns, we first sorted collected studies according to the number of citations per year, and the counts are based on the citation counts of Google Scholar before Dec 2021. **TABLE 8** mentions the top 10 primary publications. It is apparent from this table that integrating deep learning techniques into malware detection is still the main focus (seven out of the ten sources). But specifically, these research studies employ various deep learning models (e.g., MLP, CNN, DBN.) to detect malicious applications. Note that Grosse et al. [W2744095836] has the largest number of citations, and one reason for the high citation counts is that this work investigates the viability of adversarial attack techniques against neural networks in this field, which sets the foundations for future work. Another work [W2964636835] published in 2019 that examines malware evolution is also a highly cited paper. These facts demonstrate that the robustness of DL-based detection models is attracting increased research attention.\n\nAlthough sorting these primary studies based on citations can help us identify high-impacted work, it is not applicable to recent work due to the time delay. We, therefore, list all recent publications (from 2019 to 2021) presented in top venues that have the highest quality ranking (A*) in the CORE ranking system, as shown in **TABLE 9**, which can help us seek the current research focus of top researchers. It is worth noting that top venues, especially in the security domain (CCS and USENIX Security), publish an increasing number of relevant studies. Although most listed papers in this table still focus on malware detection, they make deeper analysis on more specific issues in Android malware detection, such as evaluation metrics, data imbalance problems, interpretability, model aging, etc. It is also noteworthy that \"Adversarial Learning Attacks and Protections\" and \"Malware Evolution Detection and Defense\" are frequently occurring in the top venues recently. These two issues are closely related to the practicability and effectiveness of the proposed architectures, which belong to key areas for future research to improve the state of the art in Android malware defenses.\n\n**TABLE 8** and **9** further summarize the deep learning architectures used in these listed studies. **FIGURE 6** displays that CNN, RNN, and MLP have been widely used in Android malware defenses in recent years, MLP appears most frequently among listed important works. This is not a surprising outcome. MLP is the simplest but quintessential deep neural network, and thus researchers would tend to conduct experiments based on MLP networks first when they have a new research idea. Compared with the sources listed in **TABLE 8**, recent studies adopt more advanced deep learning models such as attention-based networks and GNN. These observations also illustrate that the application of advanced deep learning techniques to the Android malware defenses domain is actually in a preliminary stage. In recent years, deep learning has brought impressive progress in many domains and many modern DL approaches are up-to-come, such as deep active learning, reinforcement learning, transfer learning, controllable generative models, etc. However, the application of deep learning technologies in the field of mobile security is far behind the development of deep learning itself. Research toward DL-based Android malware defenses is active currently, and hence we believe more advancements are expected in the near future.\n\n**TABLE 8. Top 10 Cited Papers Based on Citations per Year**\n\n{{TABLE:tbl_18}}\n\n**TABLE 9. A Summary of Recent Papers Published in Top Venues**\n\n{{TABLE:tbl_19}}",
+              "citations": [
+                "W2744095836",
+                "W2964636835"
+              ],
+              "tables_in_text": [
+                "tbl_18",
+                "tbl_19"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_6_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.6.2 Adversarial Learning Attacks and Protections",
+              "parent_subsection_id": "s_3_6",
+              "text": "Deep learning models are not resistant to adversarial attacks, which can cause a model to output an entirely incorrect prediction. Adversarial examples can be generated by just applying minor but intentional perturbations to original samples. A detailed taxonomy of adversarial sample crafting techniques and defensive techniques can be found in these survey work [W2962700793, W2180612164]. As discussed before, we discovered 16 primary studies (12%) related to adversarial learning attacks and protections. **TABLE 10** presents a detailed summary for these 16 primary studies.\n\nFocusing on the target phase of adversarial attacks, it is apparent that evasion attacks receive more research attention, accounting for 87.5%. Evasion attacks modify the data point at inference time, resulting in misclassification. For example, Grosse et al. [W2744095836] perform adversarial evasion attacks on DNN-based malware detection models. This work exploited Jacobian based white-box attacks [W2180612164] to generate adversarial examples, and the evaluation results indicated that the evasion algorithm can misclassify 63% of all malware samples on Drebin. Conversely, only two primary studies [W3180545700, W3120073944] investigated poisoning attacks, where the adversary's objective is to victimize the model training process. It is interesting to observe that both of these two sources are devoted to backdoor poisoning attacks.\n\n**TABLE 10** shows that five sources focus on white-box attacks. White-box attacks assume that the adversary has knowledge about the trained model such as model architectures and hyperparameters. For example, Grosse et al. [W2744095836] require the gradient information of DNN networks to craft adversarial examples. Five sources perform black-box attacks on DL-based malware detection models, where the adversary requires no knowledge about the target classifier. Six primary studies also assess the robustness of DNN models in both black-box and white-box scenarios. These studies demonstrated that the attackers are slightly more vulnerable when having a limited knowledge of the model architecture.\n\nWith regard to adversarial defense strategies, **TABLE 10** indicates that 75% of sources adopt defense mechanisms for adversarial attacks. It is worth mentioning that most studies apply adversarial training and ensemble learning to defend against adversarial attacks [W2744095836, W2753669113, W3212677680, UNMAPPED:87, UNMAPPED:88, UNMAPPED:123].\n\n**TABLE 10. A Summary of Adversarial Attacks and Defenses**\n\n{{TABLE:tbl_20}}",
+              "citations": [
+                "W2962700793",
+                "W2180612164",
+                "W2744095836",
+                "W3180545700",
+                "W3120073944",
+                "W2753669113",
+                "W3212677680"
+              ],
+              "tables_in_text": [
+                "tbl_20"
+              ],
+              "citations_unmapped": [
+                "87",
+                "88",
+                "123"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_6_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.6.3 Malware Evolution Detection and Defense",
+              "parent_subsection_id": "s_3_6",
+              "text": "In the security domain, malware evolution has several similar concepts such as concept drift [W3153208318], time decay [W2964636835] and model aging [W3097730806]. **FIGURE 2** shows that seven recent sources for detecting and defending malware evolution have been found. In order to better understand the current research state, **TABLE 11** provides a summary of these seven primary studies. It is worth highlighting that four primary studies [W2964450831, W3038770761, W3097730806, UNMAPPED:37] attempt to capture features' semantic similarity to slow down model aging. Pendlebury et al. [W2964636835] propose a time-aware performance metric for measuring classifiers' resilience to malware evolution. Indeed, these approaches merely slow down model performance degradation caused by malware evolution. Thus, model updating approaches like model retraining or active learning are also frequently investigated to reverse and improve obsolete models [W2964636835, W3097730806]. However, such model updating approaches remain evolution-insensitive, requiring periodical retraining. In addition, this process often needs significant amounts of effort in labeling new samples. To this end, Yang et al. employ contrastive learning to identify and understand drift malware samples before updating the aging models.\n\n**TABLE 11. A Summary of DL-based Malware Evolution Detection and Protection Approaches**\n\n{{TABLE:tbl_21}}\n\n**RQ3: What are the emerging and potential research trends?**\n\n- Although there exists much research on DL-based on Android malware defenses, this topic still requires more in-depth analysis.\n- Malware evolution and adversarial attacks are two recent hot topics.\n- How to improve the reliability, robustness and practicability of DL-based Android malware defense frameworks is a future challenge.",
+              "citations": [
+                "W3153208318",
+                "W2964636835",
+                "W3097730806",
+                "W2964450831",
+                "W3038770761"
+              ],
+              "tables_in_text": [
+                "tbl_21"
+              ],
+              "citations_unmapped": [
+                "37"
+              ]
+            }
+          ],
+          "text": "Advanced deep learning techniques have been widely applied in Android malware defenses since 2014. **FIGURE 1** reveals there is a growing interest in this emerging research topic, far from reaching its peak. In order to determine general research trends, we conduct a statistic analysis of the sources and present a detailed analysis for some specific popular topics as a response to RQ3.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In order to answer the research questions presented in Section 2.3, we conducted a detailed review of the selected primary studies. Section 3.1 discusses the analysis results for RQ1; Section 3.2, 3.3, 3.4, and 3.5 presents the results for RQ2.1, RQ2.2, RQ2.3, and RQ2.4 respectively; while Section 3.6 presents the results of RQ3. To help our fellow researchers better understand the details for each primary study, we uploaded a detailed table in our online supplementary materials.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Open Issues and Future Trends",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this work, we summarized the relevant sources of DL-based Android malware defenses and discussed research trends and challenges from various aspects in Section 3. Here we draw on these findings of this systematic review to provide a set of discussion points around the research and practice of Android security for future researchers.\n\n**Android malware defenses remain a hot topic for further investigation.** As our systematic review revealed, much research has been devoted to DL-based Android malware defenses in recent years, and the amount of relevant research is constantly increasing. It suggests that mobile security is a major concern nowadays. Mobile phones have become an integral part of people's daily life, and mobile users also pay much more attention to private mobile security, particularly the prevention of malicious applications.\n\nHowever, the majority of existing research focuses on malware detection as a binary classification problem, which is far from enough to address current issues and improve mobile security. Malware remains among the most effective threats in the cyber space, and malware writers continue to update malware techniques to bypass security detection. As a result, this research requires more in-depth analysis rather than simply seeking a binary label. Other research aspects, like malware attribution/behaviors, malware variants, malware triage and treatments of infection, still receive scant attention.\n\n**Data imbalance.** As shown in Section 3.5.1, the sources prefer to construct a relatively balanced dataset for performance evaluation purposes. However, Android malware defenses suffer from serious sample sparsity and imbalance issues. In the Android landscape, the number of goodware is significantly greater than the number of malware [W2964636835]. Additionally, malware families are also highly imbalanced (thousands of samples in some families but only a few in others). Many previous studies have demonstrated that imbalanced data distributions hinder the performance [W3089392154, W2964636835]. Thus, how to develop effective solutions against data imbalance in DL-based Android malware defenses has gained immense research interest. From our reviewed results, we identified two related studies to handle the data imbalance issue, including a Siamese network-based approach for imbalanced family classification [W3089392154] and a BERT-based approach for imbalanced malware detection [W2984666763]. However, these two studies are limited to relatively simple scenarios, and thus more efforts are still required to overcome the negative influences of data imbalance on Android malware defenses.\n\n**Improving practicality and reliability is a priority.** Our review also revealed that improving the practicality and reliability of DL-based Android malware defense approaches gathered increasing research interests. Although advanced deep learning techniques have been demonstrated to be effective at defending against malware attacks in a series of research experiments, how to effectively apply these approaches in practice remains unsolved. Future research should not only find a solution to overcome the limitation of mobile computing resources to deploy DL-based malware defense architectures, but also propose a comprehensive framework to tackle many realistic challenges such as internet privacy protection and information updating, which may require knowledge in other specific areas of cyber security and computer internet. Except for that, the black-box nature of deep neural networks poses a serious barrier to implementing these proposed approaches in practice. How to improve the transparency of the malware defense process will be a noteworthy research topic in the future.\n\n**Deep learning in Android security is still in an early stage.** Compared with other research domains, research towards deep learning in the Android security community seems to be relative singleness. First, supervised DNN networks are the most investigated, and these studies usually consider DNN networks with three to four layers in their proposed architectures. Secondly, more advanced deep learning approaches like reinforcement learning and online learning are covered by a minority of papers. Thirdly, most previous works adopt deep learning techniques on some simple tasks like binary Android malware classification. In fact, deep learning has made considerable achievements in computer vision and natural language processing. These advanced techniques have been demonstrated a powerful capability in solving many complex tasks [W2919115771]. For example, Wu et al. [W3133963303] introduce an attention mechanism to improve the interpretability of Android malware detection models. Thus, it is promising to apply advanced deep learning techniques to assist us in solving more complex and specific issues in Android security. At the same time, while supervised learning is dominant in the Android security domain, labeling data is time-consuming and requires substantial expertise. As described by deep learning textbook by Lecun et al. [W2919115771], unsupervised learning belongs to the future of deep learning. We encourage our fellow researchers to make more efforts on unsupervised deep learning in Android security to make more advancements in the future.\n\n**APK embedding is an important but untouched topic.** Different from image or word information, Android apps are composed of multiple complex data. Android APK is a zip archive consisting of multiple files. Through reverse engineering, various types of features like permissions and opcode can be extracted for further analysis. In fact, deep learning still struggles to model these complex data modalities [UNMAPPED:125]. Therefore, existing research either transforms APK into a single type of feature or designs a multimodel deep learning architecture to handle them. To obtain a formalized representation compatible with DL models, embedding techniques from CV and NLP are introduced to encode features, but these techniques may be relatively shallow for APK files with complicated structures. As for Android security, there is still a long way to explore \"APK embedding\" for DNN models.",
+      "citations": [
+        "W2964636835",
+        "W3089392154",
+        "W2984666763",
+        "W2919115771",
+        "W3133963303"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "125"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 Threats to Validity",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Even though this systematic review was conducted by following a well-established methodology [W2168894761], we can't guarantee that our results covered all relevant studies, caused by some limitations during the review process. Thus, this section describes possible threats to the validity of our empirical study.\n\n**Search items and strategies.** One main potential threat is relevant publication collection bias. In order to locate relevant studies, we described a list of search strings and search databases in Section 2.2. Search strings were formulated by different items from both software engineering and artificial intelligence domains. Although we added alternative spellings and synonyms for search items, we may still miss some search items. For instance, deep learning is a rapidly developing research field and AI scientists would continue to propose new DL techniques in a short time; thus, identifying all relevant DL items is a challenge. To minimize this issue, we retained the DL items described in [W2557283755, W2919115771, W2076063813] surveyed by AI experts. After search strings were identified, five well-known electronic databases were used to collect relevant studies. We also conducted further searching processes on two popular research citation engines and a backward snowballing to cover the relevant publications in the broadest sense.\n\n**Data selection bias.** The selection of publications was conducted by one researcher only, which may cause missing studies. Despite that, all authors formulated an appropriate study selection scheme together, and the other three authors gave effective and detailed feedback and monitored review execution closely throughout the review process. On the other hand, in order to reduce the impact of subjective factors in the quality evaluation process, H5-index of the venues was introduced as a quality appraisal criterion. Although the H5-value may change over time, the influential papers from the top venues were guaranteed to be taken into account.",
+      "citations": [
+        "W2168894761",
+        "W2557283755",
+        "W2919115771",
+        "W2076063813"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6 Conclusions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This article provides an in-depth examination of the use of deep learning in Android malware defenses. Additionally, the study discusses research objectives, characteristics, approaches, and challenges associated with Android malware defenses using deep learning. We collected 132 relevant studies. Our reviewed results indicate that deep learning techniques are becoming a powerful and promising tool to defend against Android malicious applications. We discovered that (1) most studies are conducted to detect malware, but other types of more detailed analysis on malicious apps are receiving increasing attention; (2) static program analysis is widely used to collect features, and semantic features are frequently occurring; (3) various DNN architectures are employed to analyze malware, among which MLPs and CNNs are the most widely used; (4) most approaches are performed as a supervised classification task; (5) distributed analysis and on-device analysis is gradually valued; (6) adversarial learning and malware evolution are two recent hot topics.",
+      "citations": [
+        "W2988335058",
+        "W2962700793",
+        "W2966376065",
+        "W2795309687",
+        "W2986232939"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "5"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_1",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_4",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_16",
+      "placeholder": "{{TABLE:tbl_16}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_17",
+      "placeholder": "{{TABLE:tbl_17}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_5",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_18",
+      "placeholder": "{{TABLE:tbl_18}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_19",
+      "placeholder": "{{TABLE:tbl_19}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_20",
+      "placeholder": "{{TABLE:tbl_20}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_21",
+      "placeholder": "{{TABLE:tbl_21}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_6",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3134215180_tables.md"
+}

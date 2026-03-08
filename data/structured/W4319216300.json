@@ -1,0 +1,427 @@
+{
+  "id": "W4319216300",
+  "metadata": {
+    "title": "Interpretable Machine Learning for Dementia: A Systematic Review",
+    "n_sections": 7,
+    "n_subsections": 10,
+    "n_subsubsections": 6,
+    "n_tables": 8
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "KEYWORDS",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "dementia, diagnosis, explainable artificial intelligence, interpretability, machine learning, mild cognitive impairment",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "1 | INTRODUCTION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Traditional dementia diagnosis typically relies on longitudinal clinical observations, medical history, and symptoms of cognitive decline such as impaired memory and visuospatial deficits, often supported by imaging findings. Computer-aided decision tools are increasingly making use of machine learning to speed up diagnosis, provide support where expert knowledge is sparse, and reduce subjectivity [W2105037799]. Machine learning models have been shown to perform as well as, or even exceed the accuracy of predictions made from imaging by radiologists, as they can exploit the rich information present in dense, high-dimensional data [W2964629181]. They also show promise at identifying those at risk earlier in the disease trajectory, because relying on longitudinal clinical observations usually means that the disease has already progressed beyond the point that preventive protocols or adjustments can be effective. However, despite promising results in medical research, computer-aided tools have yet to be widely adopted in the clinic. A major factor in this is the black-box nature of predictive models, which makes them difficult to interpret and, ultimately, to trust [W2891503716, W2958089299].\n\nInterpretable machine learning (IML) often used synonymously with explainable artificial intelligence (XAI), can be used to explain the output of predictive models by (1) describing the mechanism by which the model generates its decision, (2) highlighting which of the input features are most influential on the decision, or (3) producing examples that maximize its confidence for a specific outcome. As shown in Figure 1, an interpretation stage can be introduced into the machine learning pipeline that can confirm a clinician's diagnosis or provide patient-specific evidence of the disease. Although arguments for explainability often focus on trust [W3013872196, W3029137193, W3091348074, W3211317523, W2282821441, UNMAPPED:5, UNMAPPED:8, UNMAPPED:10], other goals include fairness, accessibility, interactivity, and exploration; the process of model interpretation may uncover new knowledge about the model, data, or underlying disease [W2981731882]. There is also growing pressure from a legal standpoint to provide explanations\u2014both to the clinician and the patient. This became evident when new European General Data Protection Regulations (GDPRs) were introduced in 2018 calling for more transparency, and individuals were given a \"right to explanation\" [UNMAPPED:14]. Moreover, a report from the National Health Service (NHS) Artificial Intelligence (AI) Lab and Health Education England published in May 2022 noted that \"adopting AI technologies [is] at a critical juncture\" with calls for \"appropriate confidence\" in AI for both health care workers and the public. The phrase \"appropriate confidence\" shifts focus away from trust (a subjective and qualitative measure) to reflect how users must be able to \"make context-dependent value judgments and continuously ascertain the appropriate level of confidence in AI-derived information\" [UNMAPPED:15]. This distinction mirrors the difference between the use of AI for lone decision-making versus as a decision-support tool, with the latter being the focus of translational research.\n\nThe field of IML has grown rapidly over the last 20 years [W2891503716, W2958089299, W2981731882], particularly in tasks involving natural language processing or computer vision. This rapid growth has led to inconsistencies in the terminology used to describe such methods, making it difficult to identify relevant studies. Although many reviews on IML introduce taxonomies that bring clarity to the different methods [UNMAPPED:16], there is still inconsistency across research papers when incorporating explanation methods in their analysis. In dementia studies specifically, coupled with the variety of data available for differential diagnosis and prognosis, this has led to a complex landscape of methods that makes it hard to identify best practice. There is also variability across machine learning studies in the reporting of implementation details, which can also inhibit translation to clinical practice. This systematic review aims to summarize current progress and highlight areas for improvement to allow dementia researchers to better navigate this emerging field.",
+      "citations": [
+        "W2105037799",
+        "W2964629181",
+        "W2891503716",
+        "W2958089299",
+        "W2981731882"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "14",
+        "15",
+        "16"
+      ]
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "2 | BACKGROUND",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 | Properties of Interpretable Methods",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.1.1 | Intrinsically Interpretable Models Versus Post Hoc Interpretation Methods",
+              "parent_subsection_id": "s_3_1",
+              "text": "Machine learning methods such as linear regression, k-nearest neighbors, decision trees, and their extensions can be classified as intrinsically interpretable because for a given set of inputs and outputs, the end-user can easily trace how the inputs have been used to arrive at the final probability, value, or prediction often via a formula or rule-based framework. For example, linear regression predictions are a weighted sum of the input features, or subset of important features based on their assigned weights if regularization techniques (such as Least Absolute Shrinkage and Selection Operator (LASSO)) are used. Similarly, decision trees can be interpreted because their final probabilistic outputs or values are derived via a rule-based framework allowing users to trace the decision boundaries from input to output.\n\nPost hoc interpretation methods involve an additional step of exploration after training, in which the trained model is probed or manipulated to generate information on how input features influence the output. Such methods include perturbation methods, backpropagation, feature relevance ranking, or example-based explanations. Perturbation methods, sometimes referred to as sensitivity analysis, involve systematically changing the input data (e.g., removing features) and observing its effect on the output. This allows users to determine whether the model is more sensitive to specific features or regions. Backpropagation is often used for \"black-box\" models such as deep neural networks, where the underlying predictive process is complex due to non-linear operations and high-dimensional input data. These methods utilize the weights learned during training to propagate the output probability back into the input space, resulting in heatmaps that highlight the importance of pixels, regions, or features. By probing the model after training, post hoc approaches have the advantage of deriving explanations without compromising accuracy for instances where deep models outperform less-complex linear approaches. Figure 2 contains schematic representations of two post hoc methods: class activation mapping (CAM) and occlusion, their properties, and questions an end-user could use to determine which method is most appropriate.\n\nCreating intrinsically interpretable models is more challenging for neural networks due to their complex architectures. However, examples include ProtoPNet [UNMAPPED:19], a neural network for which the final classification is generated by chaining learned \"prototypes\" (or parts of the image) through a transparent algorithm. Transformer networks can also be considered as an interpretable deep learning models because the self-attention mechanism that generates their output can also be used to highlight important regions or features [UNMAPPED:20, UNMAPPED:21]. Although transformers were designed initially for use in natural language processing tasks, the evolution of vision transformers has led to a rise in use across the medical imaging domain [UNMAPPED:22, UNMAPPED:23]. Transformers and their vision counterparts show promise for being able to maintain the predictive power of deep neural networks while incorporating attention into their architectures.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "19",
+                "20",
+                "21",
+                "22",
+                "23"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.1.2 | Model-Agnostic Versus Model-Specific",
+              "parent_subsection_id": "s_3_1",
+              "text": "Methods such as occlusion are model agnostic: they can be applied to any predictive model. Other examples include Shapley values [UNMAPPED:24], local interpretable model explanations (LIME) [W2282821441], and counterfactual examples. Counterfactual examples explain models by producing synthetic representations of the input data that maximize the probability of a chosen outcome. For instance, warping the input image from a healthy participant so that the model believes it is likely to belong to a person from the dementia class would highlight features that the model associates with the disease. However, the generalizability of model-agnostic methods is limited as they are often unable to produce fine-grained explanations.\n\nModel-specific methods may be more appropriate for interpreting neural networks, where information is needed on a pixel or voxel level. Examples include Grad-CAM [UNMAPPED:25] and layer-wise relevance propagation [W1787224781]. However, model-specific methods rely on assumptions about the underlying architecture such as the presence of convolutional layers to produce an explanation, which limits their use for comparing results across model types.\n\n**TABLE 1** Properties of Interpretation Methods\n\n{{TABLE:tbl_01}}\n\n**FIGURE 1** We propose a diagnostic pipeline that starts with data acquisition through to clinical interpretation. Data can be categorized into imaging and non-imaging groups. Data items can be used individually or combined to make a prediction. A model can be trained to predict the probability an individual's likelihood to have or develop dementia using these data. A clinician using this model may wish to interpret the result, to understand \"why\" this person has been classified as having dementia, which could influence the most appropriate treatment response or help to confirm their own diagnosis. The interpretation method depends on the model and data types involved. Most methods either produce heatmaps, which visualize influential regions or use techniques to rank the most important features.\n\n**FIGURE 2** Example brain scan [UNMAPPED:80]. (A) High-level illustration of class activation mapping for image-based classification. An individual case is fed through the model and the output probability is backpropagated to the last convolutional layer in the network. The values across all filters in the layer are pooled (typically global pooling is used) and up-sampled to the input space to produce a heatmap that indicates which features have most influence on the final prediction. (B) Illustration of occlusion methods for interpreting image-based models. Occlusion-based maps are produced by comparing the output of the model between the original image and the image when a patch is removed (or perturbed, e.g., using a fixed value). This process is repeated for different patches to build up an image that indicates the model's sensitivity to a given patch. (C) Descriptions of the top three interpretation methods, their properties, and example questions of their use-case in a clinical setting.",
+              "citations": [
+                "W2282821441",
+                "W1787224781"
+              ],
+              "tables_in_text": [
+                "tbl_01"
+              ],
+              "citations_unmapped": [
+                "24",
+                "25",
+                "80"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.1.3 | Model- Versus Individual- Versus Group-Level Explanations",
+              "parent_subsection_id": "s_3_1",
+              "text": "IML methods can also be categorized according to the application-level of the explanation. Model-level (or global) explanations describe the overall model and can be used to identify the most important features across all classes. Methods such as LIME can be used to produce individual-level explanations, which describe the important features for a specific case. This is likely to be more useful in clinical settings, as patient-specific explanations can be used to inform future treatment or confirm a diagnosis. In many cases, a single IML method can be used to produce explanations across several levels. For example, group-level explanations can be produced by combining or averaging the individual explanations produced by LIME for each subject group. On the other hand, perturbation methods such as occlusion are not useful for deriving patient-specific explanations because they rely on the learned model's behavior across all examples seen during training. Moreover, some methods require the class of interest to be specified to calculate the explanation such as class activation mapping (or CAM) and layer-wise relevance propagation (LRP). In these cases, the output is produced based on the gradient of the loss function with respect to a specific class (via backpropagation) and the result is a heatmap representing the relevance to that group. Many neural network-based approaches rely on backpropagation and differ mainly in the way non-linear operations are handled and propagated.",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "Here we introduce some of the key properties of model interpretation methods. Understanding their properties can help researchers to critically analyze the resulting explanations, and identify which methods are most appropriate for a given clinical scenario or question. These properties include whether they are intrinsic or post hoc, model-agnostic or model-specific, and whether they produce model, individual, or group level explanations. However, the categorization of these methods varies across the literature and some methods can fall into more than one group. Therefore, these properties and the methods associated with them are best considered within the context of the predictive task.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 | Study Motivation",
+          "subsubsections": [],
+          "text": "Although there are several reviews that summarize IML literature across medical imaging and computer vision [W2964629181, W2891503716, UNMAPPED:27], few focus on their application to dementia research and machine learning. Borchert and colleagues recently reviewed neuroimaging-based machine learning for dementia prediction, with recommendations on how to increase impact in memory clinic settings [UNMAPPED:28]. Similarly, Thibeau-Sutre and colleagues performed a review on interpretable methods in neuroimaging, where they highlighted various methods and assessed their reliability [UNMAPPED:29]. However, to our knowledge this systematic review is the first to consider both imaging and non-imaging-based machine learning methods for dementia diagnosis, where model interpretability is a specific inclusion criterion. Our review is also not limited to Alzheimer's disease but considers approaches that include a range of dementia-causing neurodegenerative diseases. This review aims to (1) summarize the different approaches to interpretable or explainable dementia prediction, (2) report and highlight the variability in study design and how this impacts clinical interpretability, and (3) offer recommendations for dementia researchers that wish to incorporate interpretable methods in future work.",
+          "citations": [
+            "W2964629181",
+            "W2891503716",
+            "W2105037799"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "27",
+            "28",
+            "29"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "The landscape of interpretable machine learning has grown rapidly with the development of new techniques and their applications across domains. Details on these methods and their properties can be found in resources such as Christoph Molnar's guide [UNMAPPED:17]. Recent reviews of interpretable machine learning have introduced frameworks (taxonomies) that summarize their properties, provide a visual aid, and promote consistency across future work [W2981731882, W4200274996, UNMAPPED:16].",
+      "citations": [
+        "W2981731882",
+        "W4200274996"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "17",
+        "16"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "3 | MATERIALS AND METHODS",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 | Screening Process",
+          "subsubsections": [],
+          "text": "All records were screened using a two-stage process using two independent reviewers based on: (1) title and abstract only and (2) full-text. The inclusion and exclusion criteria used to filter studies are summarized below:\n\n**1. Article type**\n* Inclusion: Any published original research paper (or pre-prints) in peer-reviewed academic journals or conferences.\n* Exclusion: Conference proceedings, corrections, erratum's, reviews, and meta-analyses.\n\n**2. Task**\n* Inclusion: Application of machine learning to do one or both of the following: (i) classify dementia patients from healthy controls or mild cognitive impairment patients, (ii) classify individuals that convert from stable/early mild cognitive impairment to progressive/late mild cognitive impairment or dementia.\n* Exclusion: Unsupervised algorithms (e.g., clustering methods, generative adversarial networks) or applications of supervised machine learning to non-diagnostic tasks (e.g., segmentation, brain atrophy, brain parcellation, brain-age prediction, prediction of cognitive assessment scores, genome-wide analysis, survival analysis).\n\n**3. Application to dementia**\n* Inclusion: Studies with patient groups based on a clinical diagnosis of dementia, Alzheimer's disease, or phenotypic syndrome (e.g., frontotemporal lobar degeneration).\n* Exclusion: Studies with patient groups based on other neurodegenerative diseases (e.g., Huntington's or Parkinson's disease) without an accompanying dementia diagnosis.\n* Exclusion: Classification of other forms of neurodegeneration (e.g., multiple sclerosis, traumatic brain injury, stroke, or mild cognitive impairment only).\n\n**4. Model interpretability**\n* Inclusion: Studies must refer to the interpretability of the classification model in the abstract or provide example model explanations in the main text.\n* Exclusion: Classical data-driven feature selection or dimensionality reduction studies (e.g., principal component analysis).\n\n**5. Data**\n* Inclusion: Studies must report experimental details including the type of prediction model used, and at least one of the following performance metrics: accuracy, area under the curve, precision, recall, sensitivity, or specificity within the text or figures.\n\n**6. Not human**\n* Exclusion: Non-human studies, for example, mouse models.\n\nA PRISMA flowchart [W3144543375] describing the study selection process is shown in Figure 3. For title and abstract screening, any papers that were on the borderline for inclusion were assessed blindly by a second reviewer. Any studies without consensus automatically progressed onto the second screening stage. This led to 144 papers requiring a full-text screening for inclusion. We removed 48 reports upon reading the full-text for failing the eligibility criteria. We contacted the authors for any full-text papers we could not retrieve online. We applied the same blind review process for borderline full-text reports to obtain a final list of 92 publications. For these included studies we extracted the following information where applicable:\n\n* Data sources\n* Group labels / diagnostic categories\n* Sample size (total number of participants across datasets)\n* Validation or test split procedure used\n* Whether quality control or data augmentation had been performed\n* The type of input data used by the model\n* The predictive model used\n* Whether the task was binary or multiclass\n* Performance metrics (e.g., accuracy, precision, recall, specificity, sensitivity)\n* The interpretability method\n* Important features (or regions) derived from the model\n* Whether attempts had been made to validate the interpretability method\n* Whether the code has been made publicly available\n\n**FIGURE 3** PRISMA flowchart outlining the screening strategy used to identify relevant studies [W3144543375]. A search was performed on three databases: PubMed, Scopus, and Web of Science and returned a total of 1058 records. After duplication removal and screening against eligibility criteria, 92 full-text studies were left for inclusion in this review. Studies were excluded for not being focused on dementia (non-dementia), not clearly demonstrating interpretable methods or model explanations (no model explanations), focusing on the wrong task, for example, regression or survival analysis (wrong task), missing data (such as performance metrics), or being of the wrong article type (review papers, book chapters, conference proceedings).",
+          "citations": [
+            "W3144543375",
+            "W2105037799",
+            "W2964629181"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 | Risk of Bias",
+          "subsubsections": [],
+          "text": "During screening, 200 papers were excluded because they did not address model interpretability. However, ascertaining what qualifies as interpretable raises important questions about what counts as an \"explanation.\" For instance, many studies involved the use of feature selection methods or dimensionality reduction prior to model training, for example, using principal component analysis. These studies may refer to the reduced features as being \"interpretable\"; however, we do not include these studies here as the emphasis was on the input features and not the trained prediction models. It is also important to note that not all studies explicitly mention the interpretability of their model despite them being inherently interpretable. This is particularly relevant for earlier studies that use classical regression techniques but may not have been captured by our search query. In addition, disease progression models can be used to predict diagnosis and can be inherently interpretable [W2767333668]. However, they are not included in our review, as these models typically rely on unsupervised clustering methods. As such there is a risk of bias, as we focus only on machine learning studies that explicitly mention interpretability and include example inferences.",
+          "citations": [
+            "W2767333668"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "We conducted a systematic review of studies that used machine learning or deep learning for diagnostic classification of dementia and interpret the results either using post hoc analysis or inferring from an interpretable model. A protocol for this systematic review was registered on PROSPERO (ID: CRD42021291992) [W4319216300]. PROSPERO is an international prospective register of systematic reviews that helps to avoid duplication and reduce reporting bias. A database search was used to identify reports published before March 1, 2022, across PubMed, Scopus, and Web of Science. We constructed our search query by linking four key concepts together: dementia, classification, machine learning, and interpretability. The search query run on each database is given below (adapted for each database) and all terms were searched across titles, abstracts, and keywords (if available):\n\n(\"dementia\" OR \"alzheimer\")\nAND\n(\"predict*\" OR \"classif*\" OR \"diagnosis\")\nAND\n(\"deep learning\" OR \"machine learning\" OR \"neural network*\") AND\n(\"explain*\" OR \"interpret*\" OR \"saliency\" OR \"Grad-CAM\" OR \"Layer?wise relevance propagation\" OR \"occlusion\" OR \"visuali*\" OR \"transformer\")\n\nThis returned 219 records on PubMed, for which the MeSH terms \"dementia\" and \"diagnosis, computer assisted\" were also used. On Scopus the query returned 531 records and on Web of Science the query returned 308 records. A total of 530 records were removed with EndNote's automated de-duplication tool and manual assessment before screening.",
+      "citations": [
+        "W4319216300"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "4 | RESULTS",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 | Study Details",
+          "subsubsections": [],
+          "text": "The key study details across all studies can be found in Table S1. Here we summarize the trends seen in the data sets used, variability in sample size, and use of neuroimaging data.\n\nWe identified that 67 of 92 studies used the Alzheimer's Disease Neuroimaging Initiative (ADNI) dataset. The ADNI is a longitudinal multicenter consortium of multi-modal (imaging and non-imaging) data which started in 2004 and has since grown to include four studies exploring the early detection, intervention, prevention, and treatment of Alzheimer's disease dementia [W2122328291]. The open-source, longitudinal, and multi-modal features of this study make it attractive for machine learning research. This reliance and overrepresentation of studies using ADNI poses a limitation on the generalizability of the methods used. ADNI was designed to represent a clinical trial population that is biased toward older ages and more advanced pathology than may be observed population-wide [W2001477615, W1858759550] and is also subject to demographic sampling biases toward socioeconomic status and ethnicity.\n\nOther popular open-source data sets include the Australian Imaging, Biomarker & Lifestyle Flagship Study of Ageing (AIBL), and the Open Access Series of Imaging Studies (OASIS). These research studies often have strict imaging protocols resulting in highly quality controlled imaging data; however, in hospital and memory clinics data quality can be more variable. Solely relying on large research studies can, therefore, limit generalizability. Fifteen studies utilized in-house, custom data sets from memory clinics or hospitals. These studies have the advantage of being able to tailor the imaging protocol to the specific study, balance group sizes, and ensure consistency across timepoints. However, due to constraints in recruiting participants, such studies often have smaller sample sizes (n = 40 to n = 2169), with the largest being a non-imaging study based on routinely available clinical test scores.\n\nWe identified variability in sample size across all included studies with $ 11 \\leq n \\leq 95,202 $ (n = total number of participants across all included data sets). This is important, as increasing the number of examples seen during training can improve performance and robustness to heterogeneity. Twenty-one studies combined multiple data sets to increase the training power. Sample size is also important for during inference, since larger test sets provide better estimations of performance on unseen data and increased confidence. Forty-five of 92 studies used a hold-out test set, either from a subset of the initial data or an additional, independent source. The remaining studies opted for nested, or internal cross-validation approaches to quantify performance. However, cross-validation has been shown to underestimate confidence intervals errors, particularly when using small data sets, and is therefore not suitable as a reliable estimate of predictive power [UNMAPPED:36]. Only 17 studies used data from external sources to create an independent test set and explicitly test the generalizability of the trained models. Although the performance often drops in external data sets, it can provide a better indication of out-of-sample model behavior, which is useful for clinical translation. This is also important for interpretability, as models with generalizable performance are better positioned to distinguish significant, robust important features from noise.\n\nSeventy-seven of 92 studies used imaging as part of the study, and 59 used imaging alone (one used retinal instead of brain imaging). Some of these $ (n=28) $ fed the whole image into the prediction model, whereas others performed voxel- or vertex-wise analysis $ (n=17) $, for example, voxel-based morphometry or extracted regional measures, for example, cortical thicknesses $ (n=27) $. Most whole image-based studies utilized 3D data (approximately isotropic voxels or multiple slices per participant, n=21) as opposed to single 2D slices $ (n=7) $. We observed a shift toward 3D whole image-based studies with time, likely due to hardware advancements and the increased performance benefits of deep learning over tabular data-based machine learning methods.",
+          "citations": [
+            "W2122328291",
+            "W2001477615",
+            "W1858759550"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "36"
+          ]
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2 | Implementation Details",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_5_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.2.1 | Model Accuracy",
+              "parent_subsection_id": "s_5_2",
+              "text": "For the task of classifying patients with Alzheimer's disease from healthy controls, reported model accuracies ranged from 77.0% to 96.8%. However, Rieke and colleagues [W2885850791] clearly state that \"[their] focus was on the different visualization methods and not on optimizing the network,\" which may explain the lower reported accuracy values. On the other hand, the highest accuracy of 96.8% (area under the curve $ [AUC]=99.6\\%, n=83 $) was reported by Qiu and colleagues [W3023079706], where they used a multi-modal approach combining a fully convolutional neural network with age, gender, and cognitive scores (Mini-Mental State Examination [MMSE]). They also evaluate the generalizability of their model using independent, external data sets acquired from the Australian Imaging, Biomarker & Lifestyle Flagship Study of Ageing (AIBL) and the National Alzheimer's Coordinating Center (NACC) and reported accuracy values of 93.2% (AUC = 97.4%, n = 382) and 85.2% (AUC = 95.4%, n = 565), respectively.\n\nFor the more challenging task of identifying individuals with mild cognitive impairment (MCI) who later converted to Alzheimer's disease (pMCI) from those that remained stable (sMCI), the range of reported classification accuracies was 65.4% to 88.5% [W2969595880, W2803144007]. The overall drop in performance for this task is expected, since the definition of the MCI label is ambiguous and can differ between centers, leading to a heterogeneous group of participants at various disease stages [UNMAPPED:41]. In addition, there is a less-distinct difference in the neuropathology between these two groups compared to individuals with and without dementia. Therefore, most machine learning studies rely on clinical diagnosis based on symptoms or follow-up assessments to identify subjects in the MCI group. Nine studies performed multi-class classification to identify individuals with MCI from healthy controls and dementia patients, or to classify patients with varying degrees of disease severity (e.g., very mild, mild, or moderate dementia) [UNMAPPED:42].\n\nFor tasks involving other phenotypes such as frontotemporal or Parkinson's disease dementia, similar accuracies up to 97.0% [W3157083093, W3122625233, W2093120878] were found, highlighting the predictive power of machine learning approaches to diagnosis outside of Alzheimer's disease. It is important to note that without performing a thorough meta-analysis, care must be taken when comparing results due to variability in sample size, validation strategies (whether values are given from cross-validation or hold-out test sets), and the amount of time spent optimizing hyperparameters.",
+              "citations": [
+                "W2885850791",
+                "W3023079706",
+                "W2969595880",
+                "W2803144007"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "41",
+                "42"
+              ]
+            },
+            {
+              "subsubsection_id": "s_5_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.2.2 | Model Interpretability",
+              "parent_subsection_id": "s_5_2",
+              "text": "All studies applied interpretability techniques to identify or visualize the most important features. The choice of interpretability method is strongly dependent on the underlying prediction model. Popular approaches included simple visualization or ranking features based on learned weights to more complex occlusion-based techniques and class-activation mapping. Although the latter two are more commonly associated with explanations in the image domain, weight visualization or ranking is useful for models such as support vector machines (SVM) or logistic regression, as each weight corresponds to an input feature and can be used to infer their relative importance.\n\nFor studies with neuroimaging, this typically involved overlaying heatmaps on a representative brain scan and discussing the regions associated with a specific class. For example, disease probability maps produced by the classification model of Qiu and colleagues identified the temporal lobes, hippocampus, cingulate cortex, corpus collosum, and parts of the parietal and frontal lobes as high risk for classification as an Alzheimer's disease patient [W3023079706]. This was replicated across many of the included studies, with the hippocampus consistently reported as one of the most informative regions (n = 43/76). Eight studies did not infer any specific regions from their visualizations or model explanations. For non-imaging studies, the type of explanations varied due to the different input features and modeling approaches. For example, studies that utilized electronic health records and clinical information (n = 5) commonly reported known risk factors such as age, smoking, cardiovascular problems, and lack of exercise as predictive of future dementia diagnosis.\n\nMulti-modal approaches provide opportunities to investigate where imaging or non-imaging data were most predictive. Although this depends heavily on the nature of the experiment and data fusion method, such studies demonstrate the utility of including multiple sources of information via increased performance and by ranking the most important features. For example, Venugopalan and colleagues found that the Rey Auditory Verbal Learning Test was a distinguishing feature even in the presence of other imaging-derived regional features [W3127597934]. Velazquez and colleagues also included this test as a feature but instead found that the 13-item Alzheimer's Disease Assessment Scale (ADAS) and Functional Activities Questionnaire were more useful, among other factors such as age and hippocampal volume [W3159837519]. However, given that cognitive tests are designed specifically to be used as dementia biomarkers, it is unsurprising that these are highlighted by predictive models for classification tasks. On the other hand, Polsterl and colleagues noted that whilst clinical variables were relevant as hippocampal shape in most cases, there were a few exceptions amongst Alzheimer's Disease patients, demonstrating subject-level variability [UNMAPPED:48].\n\nFor other diagnoses such as frontotemporal dementia, Hu and colleagues identified the right frontal white matter, left temporal, bilateral inferior frontal, and parahippocampal regions as valuable for prediction [W3122625233]. The model used by Morales and colleagues highlighted cerebral white matter and volumes of the lateral ventricles and hippocampus as most relevant to dementia in Parkinson's disease [W2093120878]. Studies that performed differential diagnosis were also able to compare the important regions across dementias. For example, Iizuka and colleagues highlight the significance of the cingulate island sign on brain perfusion single-proton emission computed tomography (SPECT) imaging for differentiating between subjects with dementia with Lewy bodies and those with dementia of the Alzheimer's type [W2950278227].",
+              "citations": [
+                "W3023079706",
+                "W3127597934",
+                "W3159837519",
+                "W3122625233",
+                "W2093120878",
+                "W2950278227"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "48"
+              ]
+            },
+            {
+              "subsubsection_id": "s_5_2_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.2.3 | Validation Approaches",
+              "parent_subsection_id": "s_5_2",
+              "text": "A crucial challenge is how to validate the resulting explanations, particularly in the absence of in vivo ground truth. Most imaging-based studies $ (n=41/58) $ relied on previous research on the neuroanatomic correlates of dementia to qualitatively assess whether their model is utilizing disease-specific regional information. Seven studies designed statistical tests to quantify the discriminative power of the identified regions of interest or their correlation with other biomarkers and predictors. Both B\u00f6hle and colleagues and Dyrba and colleagues correlated the relevance assigned to hippocampus with hippocampal volume; an indicator of atrophy [W2956993163, W3215207525]. Bae and colleagues correlated the mean intensity values of identified regions with the rate of change of several measures of cognitive decline [UNMAPPED:52]. Others $ (n=4) $ used t-tests to compare their findings with traditional analysis methods such as voxel-based morphometry [W2964629181, W3215207525, W3035309915, W2053074745]. Hu and colleagues performed a t-test to compare the important regions associated with patients with Alzheimer's disease with those associated with frontotemporal dementia [W3122625233]. Liu and colleagues conducted causal analysis using genetic information alongside imaging-driven important regions [W2981334597].\n\nThree studies made use of simulated data sets, where they had control over the group-separating features to perform preliminary tests of the explanation method [W3120388949, W3130718864, W3175538383]. Studies that used multiple interpretability methods $ (n = 9) $ were also able to comment on whether these highlighted the same regions. Four studies validated their findings by reporting a second classification accuracy using the identified regions of interest as input features [W3130718864, W2037937061, W2297154078] or incorporating them as anatomic landmarks [W2906155095].\n\nDespite these efforts, most studies were unable to assess the utility of other regions that were highlighted by the model but were without known pathological relevance. Although Qiu and colleagues correlated their findings for 11 subjects with post-mortem neuropathology, they lacked the statistical power to draw any significant insights [W3023079706]. This challenge also prevailed for non-imaging studies, although models based on demographic information utilized known risk factors [W3165523276], and speech-based models were able to contextualize their findings with phrases and indicators associated with Alzheimer's disease [W3157651102]. Moreover, many of the diagnostic labels in publicly available data sets are based on clinicians' ratings, which have been shown to be subjective and can be confirmed only through post-mortem analysis. Therefore, some studies may include dementia patients with mixed pathology, including vascular dementia, which should be considered when assessing potential diagnostic specificity of model predictions.",
+              "citations": [
+                "W2956993163",
+                "W3215207525",
+                "W2964629181",
+                "W3035309915",
+                "W2053074745",
+                "W3122625233",
+                "W2981334597",
+                "W3130718864",
+                "W2037937061",
+                "W2297154078",
+                "W2906155095",
+                "W3023079706",
+                "W3165523276",
+                "W3157651102"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "52"
+              ]
+            }
+          ],
+          "text": "Technical details regarding the choice of predictive model, reported performance, and interpretation across all included studies can be found in Table S2. Here we comment on the observed model accuracies, identified important regions, and the various approaches to validate their explanations.\n\n**FIGURE 4** Key characteristics identified across all 92 included studies. (A) The number of papers per year. (B) The modalities used in the study. (C) The type of machine learning or deep learning model used to predict and interpret. (D) The type of interpretability method. For imaging studies only $ (n = 77) $: (E) The type of input data used by the predictive model. Tabular is used to denote measures such as cortical thickness or volume. One study used both tabular and voxel-wise features. (F) The proportion of studies that used 3D or 2D whole images. (G) The top six important brain regions identified. Blood-based: Blood-based biomarkers; CAM, class activation mapping; $ [C/D/S/R]NN $, [convolutional/deep/spiking/recurrent].\n\n**TABLE 2** Figure 4(A): Number of Studies per Year\n\n{{TABLE:tbl_02}}\n\n**TABLE 3** Figure 4(B): Modalities Used in the Study\n\n{{TABLE:tbl_03}}\n\n**TABLE 4** Figure 4(C): Model Types Used\n\n{{TABLE:tbl_04}}\n\n**TABLE 5** Figure 4(D): Interpretability Methods\n\n{{TABLE:tbl_05}}\n\n**TABLE 6** Figure 4(E): Model Input Type (Imaging Studies)\n\n{{TABLE:tbl_06}}\n\n**TABLE 7** Figure 4(F): Whole-Image Dimensions\n\n{{TABLE:tbl_07}}\n\n**TABLE 8** Figure 4(G): Top-6 Key Regions (Imaging)\n\n{{TABLE:tbl_08}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_02",
+            "tbl_03",
+            "tbl_04",
+            "tbl_05",
+            "tbl_06",
+            "tbl_07",
+            "tbl_08"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "We reviewed and extracted data from all included studies using Excel to highlight trends in the study design, performance, and IML methods used. The key findings are summarized in Figure 4 and extracted data items can be found in the Supplementary Material.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "5 | DISCUSSION",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1 | Recommendations for Interpreting Interpretability Studies",
+          "subsubsections": [],
+          "text": "Here we provide recommendations for comprehending studies on IML to help researchers interpret the results accurately:\n\n**Scrutinize the interpretability method details:** Currently all interpretability methods have limitations and drawbacks. Techniques such as occlusion are strongly linked to the sample size, as the more samples seen during training, the more robust it will be to changes in non-disease relevant patches. Sample size is also important for heterogeneous disease pathologies. Data augmentation methods help to build models that generalize well to new cases; however, heterogeneity can make it difficult to decipher between patient-specific disease relevant pathology and spurious artifacts of the interpretation technique. There is also a strong dependence on model performance. This should be considered when being presented with interpretability findings, as explanations from models with poor predictive power may be inaccurate and group-level findings are likely to be affected by falsely classified samples.\n\n**Identify whether the method is model-, group-, or individual-level:** The results can differ greatly depending on whether the output is group-level or individual-level, and the pathways to clinical impact will vary as a result. Occlusion techniques are often not suitable for making individual-level explanations for a given prediction. The results obtained by occluding patches across a single example case are still a representation of the overall model susceptibility to a given patch. In contrast, methods such as LRP and CAM allow for individual heatmaps that reflect the regional relevance associated with a single case.\n\n**Relevance and importance do not guarantee biological significance:** Although interpretable methods present exciting opportunities to improve our understanding of model predictions, the results are not necessarily related to biological or pathological features. Many of these methods are model agnostic or have been developed primarily outside the medical imaging context. Therefore, they lack considerations of causation needed to correlate their outputs with biological relevance. The values and scores derived from methods such as LRP are better interpreted as \"where the model sees evidence\" [W2956993163] or in the case of class activation maps, \"which features has the model learned as relevant to this class.\" However, they are not sufficient for identifying potential interactions between voxels or features, or high-level concepts such as atrophy. Similarly, some identified features may be a result of the presence of noise, artifacts, or group differences from the underlying data, which can be misleading.",
+          "citations": [
+            "W2956993163"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2 | Recommendations for Study Design and Report Writing",
+          "subsubsections": [],
+          "text": "When carrying out studies that incorporate interpretable methods, we highlight three recommendations when (designing the experiment and) reporting their findings:\n\n**Design the entire study with the end-user in mind:** The choice of interpretability method depends on the needs of the end-user. Therefore, it can be beneficial to conceptualize the type of questions to be asked, whether that may be \"which features are most important to the model\" or \"for this individual, how have the input features been used to arrive at the final prediction?\" Addressing the interpretability of the study early on will allow researchers to better design their study, such as determining whether ground-truth annotations may be desired to validate their interpretability models or if simulated preliminary results could benefit them as previously seen [W3120388949, W3175538383, W3183221166]. Research aiming to perform classification between disease groups may be better suited toward group-level post hoc explanations that are able to highlight specific features of interest. Alternatively, if the focus of the research is to better understand the disease-causing pathology, then counterfactual examples that provide clinicians with an explanation of which brain changes would convert a diagnosis from healthy to dementia may be more useful.\n\n**Use diverse data sets:** Our review identified a strong bias toward certain data sets in data-driven approaches for dementia research, such as the ADNI (Alzheimer's Disease Neuroimaging Initiative). To better understand the limitations and potential application for both interpretable methods and the predictive models themselves, it is important to use data derived from different cohorts and different acquisition methods. For example, in Eterminani and colleagues [W3157083093], data across multiple studies was used to evaluate a model using individuals with Alzheimer's disease, dementia with Lewy bodies, and frontotemporal dementia such that they could evaluate the model's generalizability. Although open-source data sets are crucial for the development of robust predictive models, they do not always provide a reliable measure of performance in a clinical setting, where image quality may be poorer, sample sizes are smaller, and cohorts may be more demographically diverse. Extending research in this area to clinically acquired data sets could also create opportunities to explore and identify bias by observing differences in model explanations across groups.\n\n**Consistently adhere to reporting standards:** Adherence to reporting standards will play a crucial role in the development of this field as researchers will be able to quantitatively compare performance across studies (e.g., meta-analyses) and better contextualize results. Although several checklists and guidelines such as CLAIM (Checklist for Artificial Intelligence in Medical Imaging) [W3013294478] and STARD (Standards for Reporting of Diagnostic Accuracy Studies) [W2554140915] exist for AI applications in health care, here we emphasize areas in which we observed large variability across the included studies. For example, when reporting model performance results, we suggest that researchers provide confusion matrices, as they provide concise access to several measures of performance such as balanced accuracy, sensitivity, and specificity. Single measures of accuracy may not be sufficient, particularly in dementia studies where unbalanced data sets are common, and sensitivity to true positive cases may be more desirable than robustness to false positives. We also re-emphasize the importance of clearly specifying the sample size across prediction tasks and data sets and providing confidence intervals where available. This amount of detail varied among the studies included in our review but is important, particularly when reporting results from multiple prediction tasks. Data sets also differ in their labeling procedures, so studies must be careful when training models across cohorts and clearly highlight any discrepancies. Many dementia-causing diseases can only truly be diagnosed post-mortem, and definitions of categories such as mild cognitive impairment are still debated [UNMAPPED:69]. Furthermore, in imaging studies where multiple scans are available per participant (i.e., from several time points), researchers should ensure that their methods are robust to data leakage by splitting their data sets on a subject level and clearly stating if multiple scans have been used during training or testing. Models should be tested on hold-out test sets (and external data sets where possible) rather than relying on cross-validation for more a reliable estimate of performance on new data.",
+          "citations": [
+            "W3120388949",
+            "W3175538383",
+            "W3183221166",
+            "W3157083093",
+            "W3013294478",
+            "W2554140915"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "69"
+          ]
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "5.3 | Remaining Challenges",
+          "subsubsections": [],
+          "text": "A key challenge that remains is that IML methods have yet to be thoroughly tested to ensure that they are robust and reliable. Some research efforts in computer vision have attempted to address this. For example, Adebayo and colleagues define and tested several post hoc explanation methods against pre-defined sanity checks to see if explanations were robust to small perturbations in the data and different architectures [W2979200397, UNMAPPED:70]. Several methods failed these tests and were deemed to be unreliable. Moreover, Tian and colleagues evaluated the test-retest reliability of feature importance for models trained to predict cognition, and they elucidated a trade-off between feature weight reliability and model performance [W3172343328]. Our review identified one study, which assessed the robustness of two explanation methods by defining a continuity and selectivity metric. In that study, the authors tested whether the heatmaps produced via perturbation and occlusion techniques are consistent across similar images (continuity) and whether relevant occluded regions correlated with the change in class probability (selectivity) [UNMAPPED:73]. They also quantitatively compared the heatmaps and their robustness characteristics across different model architectures. A similar test was carried out by Thibeau-Sutre and colleagues who compared heatmaps produced across multiple cross-validation folds as well as different hyperparameter values [W2997907261]. However, none of these measures consider characteristics that are application specific, such as robustness to scanner artifacts or non-disease-related variability in brain structure that may arise in more clinical, diverse data sets. Moreover, a particular explanation method may be insufficient according to the test defined in computer vision-based studies but may still be sufficient for decision support. Context-specific quality criteria is needed to ensure that the outputs are clinically useful, while affording some flexibility against strict test as the field of IML continues to develop.\n\nThere was also a limited involvement of neuroradiologists and clinicians throughout these studies. This is essential to designing informed experiments that address the relevant questions and ensuring that work in this field has an impact on translation. Ding and colleagues used radiologists at the diagnostic level to demonstrate whether the deep learning model outperforms on an independent test set [W2899635607]. However, none of the studies identified through our review incorporated clinicians to systematically validate model explanations. Although there is a range of supporting literature, perspectives and reviews highlighting the need for interpretable machine learning in medical imaging [W3211317523, W3030973653, W3200676672, UNMAPPED:27, UNMAPPED:29], being able to demonstrate its impact through semi-structured interview and qualitative analysis would be a key step toward proving how such techniques can fulfill it. Moreover, the complexity and heterogeneity of neurogenerative disease pathology has limited researchers' ability to make conclusive statements about newly identified regions of interest. The lack of expert validation meant that studies rely on comparisons to previous literature, as discussed in Section 4.2.2. This creates a potential contradiction that can inhibit the discovery of new mechanistic insights. Therefore, a challenge lies in finding balance between designing experiments that can systematically evaluate and quantify the accuracy of model explanations, while also being able to identify clinically useful biomarkers from the results.",
+          "citations": [
+            "W2979200397",
+            "W3172343328",
+            "W2997907261",
+            "W2899635607",
+            "W3211317523",
+            "W3030973653",
+            "W3200676672"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "70",
+            "73",
+            "27",
+            "29"
+          ]
+        },
+        {
+          "subsection_id": "s_6_4",
+          "subsection_index": 4,
+          "subsection_label": "5.4 | Future Directions",
+          "subsubsections": [],
+          "text": "Interpretable machine learning has the potential to enhance the dementia prediction pipeline and open avenues for new insights into disease mechanisms. Group- or patient-level explanations could be useful for identifying features that are relevant to specific phenotypes or stages and aiding the development of preventative therapies. Identifying which regions the model focuses on could also be used to influence other stages in the imaging protocol. For instance, acquisition sequences could be optimized for imaging-specific regions of interest, even in real time [W2901872559]. More generally, being able to differentiate between biologically relevant features specific to groups with similar clinical profiles helps to demonstrate the benefit of computer-assistive technologies. Individualized, patient-specific explanations can serve as a huge step toward personalized medicine with clinicians being able to identify key drivers of a patient's diagnosis. Looking ahead, interpretable models could help to advance scientific discovery by identifying novel biomarkers such as disease-specific genes [W3095769488]. Although machine learning is not currently used in clinical trial recruitment, model explanations also provide opportunities to enhance patient stratification or explore treatment response through predictors associated with specific brain regions.",
+          "citations": [
+            "W2901872559",
+            "W3095769488"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Our results highlight the growth in this cross-disciplinary research area, particularly through the combination of neuroimaging and neural networks, which can match and outperform clinical predictions across a range of dementia-related tasks. The range of accuracies indicates that interpretable models do not necessary require a loss in performance, previously seen as a limitation of IML, as studies have still been able to demonstrate ways to probe the \"black-box,\" identify important features, or provide rule-based explanations [W2945976633, W2918556752]. To maximize the impact of machine learning in clinical practice, we provide recommendations to aid clinicians when interpreting results, encourage more homogenous reporting standards, and highlight several challenges that remain.",
+      "citations": [
+        "W2945976633",
+        "W2918556752"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "6 | CONCLUSION",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Interpretability is key for the clinical application of machine learning in decision-making tools for dementia prediction. The need for model explanations has been identified both in the legal sector and health services as the use of machine learning based solutions continues to rise. In this systematic review, three databases were searched to identify 92 studies that have applied interpretable methods to machine learning models designed for the prediction of dementia. We found a large bias toward open-source data sets such as ADNI, which may have limited the generalizability of findings. A key emerging theme was the challenge of validating interpretation methods. Although this challenge also exists outside of dementia research, we highlight that domain-specific quality criteria may also require critical assessment of the clinical utility. Dementia prediction tasks are made ever more difficult by the high dimensionality of data and interactions between factors such as age, sex, genetic history, and lifestyle. Building models that make use of this multi-modal landscape of information but can still disentangle their influences on the output would help bring the power of machine learning models one step closer to large-scale clinical adoption.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_5",
+      "source_subsection_id": "s_5_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4319216300_tables.md"
+}

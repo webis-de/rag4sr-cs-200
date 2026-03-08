@@ -1,0 +1,430 @@
+{
+  "id": "W4389935031",
+  "metadata": {
+    "title": "Methods for Evaluating Learning Analytics and Learning Analytics Dashboards in Adaptive Learning Platforms: A Systematic Review",
+    "n_sections": 4,
+    "n_subsections": 9,
+    "n_subsubsections": 11,
+    "n_tables": 5
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The field of Adaptive Learning (AL) is a relatively new area of research that spans multiple disciplines and involves numerous synonyms and definitions. While terms such as personalized learning, individualized learning, intelligent tutoring, and customized learning are sometimes used interchangeably, adaptive learning is the most used term [W3093893125]. Adaptive learning platforms (ALPs) have gained significant attention in recent years, leading to the development of various methods to design and evaluate personalized activities and content. However, assessing ALPs is a complex and multi-dimensional process involving several factors such as Learning Analytics (LA), Learning Analytics Dashboards (LAD), system usability, user perception, use, and pedagogy.\n\nWhile numerous reviews on adaptive learning and learning analytics exist, few studies have specifically focused on evaluating ALPs. Martin, Denne and Bonk [W3045469867] synthesize several systematic reviews on adaptive learning and learning analytics. The synthesis on adaptive learning includes: (1) A meta-analysis to address the question: Can students improve their knowledge when the system adapts to their profile and performance? (2) An analysis of 42 studies on source of adaptation focusing on learner and learner environment interaction; analysis of 29 studies on adaptation of content, presentation and instruction; 25 studies on rule-based, probability-based, or other adaptive pathways; (3) Content analysis involving 70 studies addressing learning styles in adaptive educational hypermedia systems. (4) Analysis of 98 studies determining characteristics for learner models in adaptive systems. (5) Document analysis of 78 studies and reviews on learning styles in adaptive systems; (6) Review of 78 studies that explored learner, dimensions of these traits, and identification techniques for these traits in adaptive learning systems; (7) 61 empirical studies were reviewed on adaptive sources based on learner models and adaptive targets based on content and instructional models; and (8) A qualitative thematic analysis of 62 studies and a subset of 12 studies on experimental designs for meta-analysis to study the effects of adaptivity in educational games. The review of reviews on learning analytics [W3045469867] includes (1) Analysis of 40 studies identifying the research objectives and methods applied in learning analytics and educational datamining studies; (2) reviewed 44 studies to examine learning analytics methods, benefits, and challenges in higher education; (3) examined 43 studies on applied research design, topic of study, educational context, learning scenario, pedagogical practices, learning platform, technology tools, and methodological techniques, (4) conducted a review on 52 studies focusing on visual learning analytics of educational data identifying approaches, audience, purposes, contexts, and data sources. (5) did a systematic review of 107 studies identifying what data was collected, modeling methods, research themes, system evaluation, and similarities and differences between open learner models and learning analytic dashboards, (6) reviewed 29 papers examining learning analytic dashboards from a self-regulated learning perspective, (7) 11 studies were reviewed to examine the efficacy of learning analytics interventions in higher education which (8) build upon where 46 studies were inspected to address whether and to what extent learning analytics were successful in providing study success in higher education.\n\nMousavinasab et al. [W2904197112] conducted a review of 53 studies that investigated the variant characteristics of Intelligent Tutoring Systems across various educational fields. In their review, they raised several questions concerning the methods employed to assess these systems. For example, the importance of the learners' role in evaluating intelligent tutoring systems is evident, especially when assessing system usability. Only 5.66% of the reviewed studies evaluated intelligent tutoring systems based solely on learner experiences. However, in studies where learner experiences were combined with other variables, such as learner and system performance, learner experiences were more frequent. The review fails to provide information on the specific methods utilized to obtain the learner experience or the types of usability tests employed. Understanding the various evaluation perspectives and assessment methods utilized in evaluating Learning Analytics (LA) and Learning Analytics Dashboards (LADs) is crucial. The absence of comprehensive insights on evaluation methods for LA and LADs is the driving force behind this systematic review. So, this review expands the work of Tretow-Fish and Khalid [W4285141600] and aims to synthesize evaluation methods used in the design, development, and implementation of ALP's LA and LAD to support pedagogical and learning-related decisions for educators and students. The review will analyze the research design, frameworks, methods, and instruments utilized to evaluate ALP's LA and LAD, the resulting impact, and the integration of students' and educators' perceptions of LAD and LA into the evaluation methods. The research will significantly contribute to the field of usability engineering, user experience, and digital learning technology. Investigating the evaluation methods applied to ALPs is crucial to enhance the quality of the learning experience and outcomes, improving educators' teaching experiences and their technology adoption, aiding the development process in companies, and ensuring the proper implementation of evaluation methods. The scope mentioned above, and motivation led us to devise the research question:\n\n**How to evaluate the Learning Analytics and Learning Analytics Dashboards of Adaptive Learning Platforms?**\n\nThe objective is to identify a set of methods for evaluating the technological features' functionalities and perceived experiences and another set of methods for demonstrating the evidence of improving learning outcomes, learning experience, and teaching quality. The researchers and practitioners will be able to apply the synthesized methods and instruments for the evaluation of learning analytics and dashboards in the contexts of digital platforms and for the assessment of impact. The review will provide insights for identifying the scope of future research by providing an overview of how LA and LADs of ALPs are evaluated, with what purpose, and on which variables. Furthermore, the outcome can advance the field of interaction design, while the latter can contribute to the broader domain of service design and innovation in education and training.",
+      "citations": [
+        "W3093893125",
+        "W3045469867",
+        "W2904197112",
+        "W4285141600",
+        "W3146142859",
+        "W2031429568",
+        "W2116257273",
+        "W2297983710"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Selection of Papers: PRISMA",
+          "subsubsections": [],
+          "text": "The paper selection process follows the four phases of the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) protocol [W3146142859], which are identification, screening, eligibility, and inclusion (see Figure 1). To review the evaluation methods utilized for Learning Analytics (LA) and Learning Analytics Dashboards (LAD) on Adaptive Learning Platforms (ALPs), a range of keywords including evaluation, adaptive learning, learning analytics, learning analytics dashboards, assessment, and others are employed in different combinations. The search was limited to articles that had been peer-reviewed and published in English, Danish, and Norwegian (considering the authors' language abilities) from 2011 up to the search deadline of September 1, 2021.\n\n**TABLE/FIGURE 1: PRISMA Flow-Chart**\n\n{{TABLE:tbl_01}}\n\n*Note:* Records excluded during screening: n = 294; Full-text articles excluded: n = 51.\n\nAfter testing different keyword combinations and consulting with a librarian, four databases were selected. Various combinations of the keywords returned the following results: Scopus (n=75), ACM (n=144), ScienceDirect (n=106), ERIC (n=14), and Taylor Francis (n=38). The screening and eligibility stages involved applying specific exclusion criteria, which are as follows: (1) Papers that do not primarily investigate the LA or LAD of an ALP were excluded. (2) Papers focusing on LA and LAD in other e-learning environments that do not meet the adaptivity requirements of the learning platform were excluded. (3) Papers without empirical data examining LA or LAD on ALP or those that do not primarily focus on LA and LAD evaluation were excluded. (4) Only included papers published in the main conference proceedings, while workshop papers and posters were excluded. The two authors independently screened different databases, and only the papers selected by one author (n=83) were included in this document. For this review, 32 articles and two reviews were included for analysis and synthesis.",
+          "citations": [
+            "W3146142859",
+            "W4285141600",
+            "W3093893125",
+            "W3045469867",
+            "W2904197112"
+          ],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Constant Comparative Analysis Method",
+          "subsubsections": [],
+          "text": "We applied the constant comparative analysis method [W2031429568] for the analysis and synthesis. The articles were encoded according to themes and then divided into categories and subcategories. During this process, the coded sections were regularly compared to similar parts of texts containing the same codes. The intention was to connect the texts and ensure the continuity of the codes' definitions [W2031429568]. Each included paper was read to identify methods, variables, and purpose of evaluating LA and LAD. The data extracted from the papers are tabulated to synthesize: (1) The methods used when evaluating LA and LAD. (2) Variables measured by the methods to evaluate LA and LAD. (3) The purpose of the evaluation method applied. A thematic analysis was initiated from the identified purposes, and categories were developed.",
+          "citations": [
+            "W2031429568",
+            "W4285141600",
+            "W3093893125",
+            "W3045469867"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Signature Pedagogy for Analytical Thematization in C6",
+          "subsubsections": [],
+          "text": "To thematize the category of C6 an evaluation of the pedagogical implementation of ALP's LA Shulman's theory of signature pedagogics was applied [W2116257273]. The application was to identify and categorize the levels of pedagogy evaluations which coincide with signature pedagogy's dimensions of the surface, deep, and implicit structure. Surface structure describes learning activities in an educational context, such as interactions between teacher, student, and technology, or concrete learning activities, such as reading, discussing, and completing assignments on an ALP. Deep structure describes the context and pedagogic structures that learning activities exist in, such as Flipped Classroom, Inquiry-Based Learning, and Dialogic Teaching. Lastly, the implicit structure represents the inherent values associated with the surface, and deep structures of the signature pedagogy, such as Flipped Classroom's purpose of distributing the workload to student preparation implies an intrinsic value contribution to in-class learning activities.",
+          "citations": [
+            "W2116257273"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "The selection of papers and the process of analysis and synthesis is conducted using two distinct established methods.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Analysis and Synthesis",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 C1) Evaluation of LA and LAD Design and Framework",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.1.1 Users' Perception on Framework and Design",
+              "parent_subsection_id": "s_3_1",
+              "text": "The first theme of Users' Perception on Framework and Design consists of four papers where users' perception was primarily used for evaluating the LA and LAD design and framework in ALPs. Abech et al. [W2297983710] proposed EduAdapt, an architectural model for the adaptation of learning objects which considered device characteristics, learning style, and students' contextual information in its content recommendation to users. In evaluating the architectural model, scenarios, use cases, prototypes, a learning style survey, and a self-developed user experience survey were used. The study developed a mobile application prototype and applied it in an undergraduate course called Ubiquitous and Mobile Computing with learners (n=20) from the Computer Science area for one month of teaching. The main scientific contribution was proposing a learning object adaptation model employing inferences, rules, and learning styles in a varied context ontology. Lau, Lee, and Singh [W2012734393] developed a recommender system for personalizing system recommendations using students' annotated metadata through a schema. The system was evaluated in two stages by students (n=92) enrolled in the course Introduction to Personal Finance, with 42% completing the evaluation. The first stage evaluated the ontology's quality using a questionnaire on 12 competency statements. The second stage used a novel seven-pillar evaluation framework, which included user-perceived accuracy, novelty, domain coverage, confidence, information adequacy, usefulness, and usability. The study's contribution was a framework that enabled learners to use their peers' opinions to locate relevant and quality resources. Tahmasebi, Ghazvini, and Esmaeili [UNMAPPED:10] developed a feature-based educational recommender ranker system that interacts with users based on their learning styles. The system was, among other methods, assessed through a user questionnaire to evaluate the general perception of the proposals from the recommender system. The empirical study was done on science and engineering students (n=77) through a questionnaire during two semesters. The findings showed that the proposed method outperforms the general search algorithm and that the tool could be used for other systems. Fasihuddin, Skinner, and Athauda [W2291976040] also used user perception to identify patterns and threshold levels that lead to optimal precision in detecting learning styles by tracking learners' behaviors in open environments. User perception was applied in their framework through the Indexed Learning Styles questionnaire (ILS). The empirical study was done on a prototype Cloud Adaptive Learning Courses (CALC) of an open learning environment developed and piloted on undergraduate students (n=83) taking an undergraduate IT course. It was shown that threshold values derived from literature and customized to suit open learning environments provided high accuracy in identifying learning styles.",
+              "citations": [
+                "W2297983710",
+                "W2012734393",
+                "W2291976040"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "10"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.1.2 System Evaluation as a Feature of the ALP",
+              "parent_subsection_id": "s_3_1",
+              "text": "In the theme System Evaluation as a Feature of the ALP, two studies where the evaluation of the framework and design of the ALP is a feature of the ALP were found. Dounas, Salinesi, and Beqqali [UNMAPPED:12] presented a framework to evaluate the INSPIREus adaptive educational hypermedia environment. The study analyzed the system's suitability for different learner types and examined if it fulfilled four requirements. The system was monitored using a novel tool, RMAS, and the collected data was checked against automatically derived constraints from the requirements. The study involved informatics and telecommunications students (n=21) over a three-month course. The results showed INSPIREus was most accurate for theorist learners and least accurate for reflector learners. It fulfilled two requirements but struggled with communication and control sharing. The system also needed more flexibility in addressing individual student needs. Fasihuddin, Skinner, and Athauda [W2291976040] evaluated the precision of the threshold levels for identifying students' learning styles in a literature-based method. The precision was computed as the similarity of the system-identified learning style to the learning style determined by the ILS survey responded to by the students.",
+              "citations": [
+                "W2291976040"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "12"
+              ]
+            },
+            {
+              "subsubsection_id": "s_3_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.1.3 Requirement and Comparative Analysis of Framework and Design Evaluations",
+              "parent_subsection_id": "s_3_1",
+              "text": "In this section, the theme of Requirement and Comparative Analysis of Framework and Design Evaluations is presented, constructed from two studies, where Abech et al. [W2297983710] set up a comparative analysis of an ontology specified for adaptive learning systems called OntoAdapt against other ontologies. The comparative analysis was done through scenarios, analyzing the quality and fidelity of OntoAdapt. The comparative analysis was done with evaluation metrics from the Full Ontology Evaluation (FOEval) method, some additional variables provided by the software Prot\u00e9g\u00e9 and complemented with the Manchester\u2014Web Ontology Language (OWL) tool Ontology Metric. In the study's second phase, the ontology was assessed on the platform EduAdapt to investigate if the use of ontology matches the learning objects adaptation scope. Santos and Boticario [W2080565629] proposed the TORMES methodology for eliciting recommendation opportunities in a recommender system using six steps: (1) Context of use, (2) User requirements, (3) Modeling of the design solution, (4) Publication of the design solution, (5) Usage to gather evaluation data, and (6) Feedback from evaluating design requirements. The study demonstrated the methodology's use in two contexts, namely the Discovering the Platform course in dotLRN LMS and the EBIFE course in the Willow free-text adaptive computer-assisted assessment system, each with two iterations. Results revealed that TORMES can detect problematic affective situations and react efficiently, but the system was intrusive in gathering affective data, causing discomfort among participants.\n\nIn addition to the three presented themes of (1) Users' perception of framework and design, (2) System evaluation as a feature of the ALP, and (3) Requirement and comparative analysis of framework and design evaluations, four papers applied the evaluation of LA and LAD design and framework as a secondary focus. Mavroudi et al. [W2181131678] presented a framework to frame the user requirements of an adaptive system. Beckmann, Bertel, and Zander [UNMAPPED:15] presented a framework to adapt learning material. Rinc\u00f3n-Flores et al. [W2987253659] developed an algorithm from three different forecast models, and this algorithm was based on unstructured data implemented in an adaptive learning system. Lastly, Sharma, Papamitsiou, and Giannakos [W2963403519] developed a prediction algorithm for an adaptive learning system applied in an experimental design.",
+              "citations": [
+                "W2297983710",
+                "W2080565629",
+                "W2181131678",
+                "W2987253659",
+                "W2963403519",
+                "W4285141600",
+                "W3093893125",
+                "W3045469867",
+                "W2904197112",
+                "W3146142859",
+                "W2031429568"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "15"
+              ]
+            }
+          ],
+          "text": "In reviewing the included studies, the category of Evaluation of LA and LAD design and Framework emerged. This category is divided into the themes of (1) Users' perception of framework and design, (2) System evaluation as a feature of the ALP, and (3) Requirement and comparative analysis of framework and design. Six papers focus on evaluating the framework and design of LA and LAD on ALPs, whereas four papers apply the evaluation as a secondary contribution of their paper. These four will be assessed at the end of the C1 category.",
+          "citations": [
+            "W4285141600",
+            "W3093893125",
+            "W3045469867"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 C2) Evaluation of Users Performance with LA and LAD",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.2.1 Sorting LA Content on User Performance",
+              "parent_subsection_id": "s_3_2",
+              "text": "In this section, the Sorting LA content on User Performance theme is presented which is constructed from four studies. Hsu and Li [W2032417675] developed a new algorithm called the competency-based guided-learning algorithm (CBGLA). CBGLA-based learning system guided learners in achieving the learning objectives through personalized learning paths on the student's performance on the platform. A pilot study of the system was tested on third-year college students of electrical engineering (n=6) before an experiment on the same type of students (n=59) was conducted. The findings showed that the CBGL system supported students' learning. Yuksel et al. [W2402939184] presented a study on an adaptive brain-computer system (BACh). The system increased the difficulty of a musical learning course aimed at the piano when cognitive workload levels became low. In a within-subject test design, study participants (n=6) undertook a training task playing 15 easy and 15 complex pieces on the piano. Pieces were learned through a typical approach (control), and two were learned afterward through BACh. Participants then played the four pieces, and performance data was used to assess the system. Results showed that learning with BACh increased accuracy and speed compared to the control setup. Fadljevi\u0107 et al. [W3012146720] presented an e-learning system to support students' acquisition of health literacy with content developed in collaboration between clinical psychologists, pedagogues, and medical students. The Moodle-based system adapted text difficulty depending on students' reading competence, performance score, and self-assessment of students. From the LA, students were grouped into four competence levels. The study's participants were students (n=196) from 6th to 8th grade and worked using the system for four weeks. The results showed that at each difficulty level, students could be separated into a class of slow and a class of fast students. The text difficulty was for no students deemed unsuitable. Rinc\u00f3n-Flores et al. [W2987253659] presented a predictive algorithm applied in an adaptive learning environment where instructors (n=3) taught a Physics II course. The algorithm was trained on photographs, grades, and log data from instructors' previous course students (n=182). The results showed that the algorithm provided a good forecast of the performance of each group. Al-Shanfari et al. [W3000784194] presented an open learner modeling system (OLMlet) that used student question answers to provide adaptive feedback to students based on the correctness of their answers. The mixed method study was done with undergraduate engineering students (n=32) in an introduction to Java programming course. Students were split into a control and a test group. The control group was presented with only the skill meter (performance score). The test group was presented with the alignment between the system's evaluation of students' performance and confidence levels. The findings showed that low-achieving students benefited highly from being presented with a visual alignment model. The visual model of alignment was associated with positive changes in their performance.",
+              "citations": [
+                "W2032417675",
+                "W2402939184",
+                "W3012146720",
+                "W2987253659",
+                "W3000784194"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.2.2 Effect of LA Features on User Performance",
+              "parent_subsection_id": "s_3_2",
+              "text": "Five papers constitute the theme of Effect of LA Features on User Performance. Zhang et al. [W3192286783] presented the Student-Centered Online One-to-one Tutoring system (SCOOT), where students could ask questions outside school to expand the flexibility of posing questions. The study sought to evaluate the efficiency of SCOOT and examine how students' prior knowledge and simple patterns of tutoring sessions affected student learning. The evaluation included integrating students' learning performance and behavior log files instead of conducting between-subject experiments. The empirical study comprises 40 tutoring sessions randomly selected over 50 days with a pre-test and a post-test. The study participants (n=810) were selected from Grade 7 mathematics. The results showed that the flexibility element of SCOOT was necessary and that SCOOT further increased performance differences between high- and low-achieving students. In Kim, Jo, and Park [W2113723816], a LAD for students in the virtual learning environment Cyber Campus was implemented, which distributed video lectures and quizzes and enabled students to submit assignments. Through an experimental design on college students (n=151), the LAD was assessed on whether it would lead to higher performance. The findings showed a significant difference between the treatment and control groups. Students who had access to the LAD performed better, but an exciting finding showed that few uses of the LAD led to higher satisfaction compared to more frequent uses. Furthermore, learners who used the LAD frequently and performed well were less satisfied with the LAD. Latham et al. [W140539764] applied Oscar, an adaptive online conversational intelligent tutoring system that delivered a personalized natural language tutorial by predicting and adapting to students' learning styles. Participants in the study were undergraduates of science and engineering (n=70) who previously worked with the content and were to revise the topics with Oscar. Results showed a significant difference in the group with mismatched learning styles; students performed better when presented with materials matching their learning styles. In a subsequent study, Latham, Crockett, and McLean [W2060412612] Oscar was assessed on whether it supported students' discussions in constructing knowledge. Students' learning styles were defined through Oscar's adaptation algorithms, and the validity of the system's categorization of students' learning styles was tested on student perception. The empirical study involved undergraduates (n=62) in science and engineering in assessing whether they improved their performance using Oscar. Findings showed a significant difference between match/mismatch groups. Effenberger and Pel\u00e1nek [W2966635399] presented RoboMission, which was an adaptive learning system for introductory programming. RoboMission took the form of a programming game. The case study examined the task sessions from students (n=3,800), illustrating that designing performance measures is nontrivial but possible. Three papers [W2032417675, W2402939184, W3000784194] presented in C2 (1) also evaluate the effect of LA as described in C2 (1).\n\nIn addition, Santos et al. [W2257534079] evaluated the effectiveness of supporting the learning process by, e.g., giving affective and sensory input to help calm users in a stressful learning context and whether the input was helpful in the students' performance. Hooshyar et al. [W2508148179] evaluated students' improvement of learning achievement on their Solution-based intelligent tutoring system through pre- and post-tests, showing a positive impact on the learning achievements of the experimental group. Troussas et al. [W3155236522] evaluated students' learning outcomes through a t-test on log data from the adaptive system. Beckmann, Bertel, and Zander [UNMAPPED:15] used performance statistics to assess a correlation between learning styles, learning content format, and other statistics. Lo, Chan, and Yeh [W1986984999] evaluated the students' engagement with learning on the platform, and Katuk, Kim, and Ryu [W2067024332] assessed the students' learning performance by applying a pre and post-test setup. Lynch and Ghergulescu [UNMAPPED:36] assessed students' performance and performance improvements with log files and developed prediction algorithms based on the Item Response Theory. Finally, Papamitsiou et al. [W3082311223] used students' performance to compare and evaluate their self-assessment of their preparation and their engagement.",
+              "citations": [
+                "W3192286783",
+                "W2113723816",
+                "W140539764",
+                "W2060412612",
+                "W2966635399",
+                "W2032417675",
+                "W2402939184",
+                "W3000784194",
+                "W2257534079",
+                "W2508148179",
+                "W3155236522",
+                "W1986984999",
+                "W2067024332",
+                "W3082311223",
+                "W4285141600"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "15",
+                "36"
+              ]
+            }
+          ],
+          "text": "This category emerges from the frequent use of user performance in LA is applied as a criterion for evaluating ALPs. We further thematize the category nuancing how user performance is applied. The themes are (1) sorting LA content based on user performance and (2) the effect of LA features on user performance. Ten papers focus on evaluating user performance with LA and LAD on ALPs. Eight papers also evaluate the category but as a secondary contribution of their paper.\n\n**TABLE/FIGURE 6: Review of Results**\n\n{{TABLE:tbl_05}}",
+          "citations": [
+            "W4285141600",
+            "W3093893125"
+          ],
+          "tables_in_text": [
+            "tbl_05"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 C3) Evaluation of Adaptivity",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.3.1 Adaptivity Based on Users' Psychological Inclinations",
+              "parent_subsection_id": "s_3_3",
+              "text": "Only one study evaluated adaptivity on users' personalities. Tlili et al. [W2954460532] assessed students (n=50) in exploratory research on building an evidence-based model to map users' personalities on Big Five Inventory dimensions to adapt learning content through the iMoodle LMS. The findings showed that the Bayesian network makes it possible to model learners' personalities compared to BFI for the three personality dimensions of extraversion, openness, and neuroticism.",
+              "citations": [
+                "W2954460532"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.3.2 Adaptivity on Users' Affective Capabilities",
+              "parent_subsection_id": "s_3_3",
+              "text": "Bres\u00f3 et al. [W2274395781] evaluated adaptability and variability of content from simulations and user feedback in the Personal Health System, a part of Help4Mood. The personal health system was developed to support users, so they do not relapse into depression. The system adapted its content to users' stamina or mood. Simulations (n=20.000) were done on 19 tasks and 31 subtasks; one or more subtasks could form a task. The paper concluded that the framework provided adaptive and varied sessions, improving users' use experience. Santos et al. [W2257534079] presented an Ambient Intelligence Context-aware Affective Recommender Platform (AICARP) that applied Tutor-Oriented recommendations Modeling for Educational Systems (TORMES) elicitation methodology to sense changes in learners' affective state from sensory communication channels. In the exploratory empirical case study, participants (n=6) completed tasks in a Wizard of Oz setting with a psycho-educational expert as the wizard. Findings showed that recommendations from an intelligent ambient system could tackle affective issues during the second language learning process.",
+              "citations": [
+                "W2274395781",
+                "W2257534079"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "3.3.3 Adaptivity on Users' Cognitive Capabilities",
+              "parent_subsection_id": "s_3_3",
+              "text": "Khawaja, Chen, and Marcus [W2020145237] presented a model for improving performance in complex and time-critical situations by dynamically deploying more appropriate output strategies to reduce cognitive load on linguistic behavioral features. The study examined a session where participants (n=44) managed firefighting tasks as a team. The findings showed that an interaction system could apply speech and linguistic patterns to determine cognitive load and adapt system responses minimizing users' cognitive load to maintain performance. Lo, Chan, and Yeh [W1986984999] presented an adaptive web-based learning system that adapted learning material to students' cognitive styles. In an initial study, cognitive styles were identifiable from students' (n=162) browsing behavior in the adaptive learning system. Evaluating the impact of the adaptive web-based learning system on students' engagement, another study was set up on college students (n=170) from Computer Science and Informatics. The results showed that the adaptive learning system significantly impacted temporal elements' effect on students' learning engagement. The study demonstrated that the adaptive web-based learning system based on students' cognitive styles could effectively enhance students' engagement in learning for Interpersonal and Mastery styles. In addition to the five papers synthesized above, six papers evaluated adaptivity. Di Mascio et al. [W2010889192] presented usability associated with adaptivity and Hsu and Li [W2032417675] assessed the effectiveness of adaptivity. Latham et al. [W140539764] and Latham, Crockett, and McLean [W2060412612] used learning styles to adapt material delivered to students and used their performance scores to evaluate the adaptivity of their method. Tahmasebi, Ghazvini and Esmaeili [UNMAPPED:10] used users' perception of the proposed learning material fit users' learning styles as an evaluation of the adaptivity. Papamitsiou et al. [W3082311223] used students' self-assessments to evaluate performance from multimodal data.",
+              "citations": [
+                "W2020145237",
+                "W1986984999",
+                "W2010889192",
+                "W2032417675",
+                "W140539764",
+                "W2060412612",
+                "W3082311223"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "10"
+              ]
+            }
+          ],
+          "text": "This category surfaces from the different studies that Evaluate the Adaptivity of ALPs. Evaluation of adaptivity in the ALPs is divided into three themes: (1) adaptivity based on psychological inclinations, (2) adaptivity based on users' affective capabilities, and (3) adaptivity based on users' cognitive capabilities. Five papers evaluate the adaptivity of LA and LAD on ALPs. Six additional papers mention adaptivity in their studies but do not present it as their main focus.",
+          "citations": [
+            "W4285141600",
+            "W3093893125",
+            "W3045469867"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_4",
+          "subsection_index": 4,
+          "subsection_label": "3.4 C4) Evaluation of ALPs Through Perceived Value",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_4_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.4.1 Users' Perspectives on Usability",
+              "parent_subsection_id": "s_3_4",
+              "text": "Di Mascio et al. [W2010889192] developed the TERENCE system's Graphical User Interface (GUI) prototypes for supporting poor comprehenders and their educators. Three groups participated in the development: primary-school students (n=170), educators (n=10), and experts (n=10) such as psychologists and linguists. Usability evaluations, including expert-based evaluation, observations, think-aloud, and verbal protocol of experts and users, were conducted to identify users' requirements and context of use. Findings highlighted the importance of considering the timing and focus of users' participation and system performance during the execution of users' tasks in usability testing. Nye et al. [W3043976934] evaluated the usability of MentorPal, a virtual mentor system that gave career advice to high school students (n=31) attending STEM internships, with the Unified Theory of Acceptance and Use of Technology constructs (UTAUT) survey and a survey generated from variants of the CAPA system. MentorPal's career advice focused on STEM careers in the Navy, and the researchers observed the students' usage unobtrusively. Although the study had limited sample size, diversity, and impact, the students found the MentorPal experience compelling and valuable. The study's findings suggested the need to improve the diversity representation and coverage of students' main career interests by mentors. Troussas et al. [W3155236522] studied i-LearnC, an intelligent tutoring application for learning C programming. The application overlaid Facebook, and as students made mistakes, a virtual coach (ViC) provided suitable learning material to correct misconceptions. ViC advised the pace of instruction based on students' profiles built on current and previous knowledge levels, collaboration preferences, and types of misconceptions. In an experimental design, second-year students (n=400) in an undergraduate course on Object-Oriented Development of Applications used i-LearnC, and assessment was done through a survey on the CIAO! framework, which evaluated students' use of technology-based teaching and learning. Results showed students had a positive attitude toward using Facebook for educational purposes, appreciated the communication and collaboration features, and found them helpful. Peer recommendation for collaboration showed a significant difference in acceptance of recommendations provided by i-LearnC compared to the conventional system. Dirin, Laine, and Nieminen [W2591149599] presented an adaptive mobile learning application that provided theory and assessment for driving school students based on their learning competence and progress. The empirical study was done on participants with driver's licenses (n=7) and instructors (n=5) to identify user needs and requirements for the target application to develop a paper-based prototype. The prototype was tested in a usability laboratory on the user experience factors of delightfulness, adjustability, satisfaction, and reliability. The findings demonstrated that users' emotional attachment is essential for the target users.",
+              "citations": [
+                "W2010889192",
+                "W3043976934",
+                "W3155236522",
+                "W2591149599"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_3_4_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "3.4.2 Self-efficacy Elements and Learning Styles",
+              "parent_subsection_id": "s_3_4",
+              "text": "Hooshyar et al. [W2508148179] presented a solution-based intelligent tutoring system (SITS) with an automatic text-to-flowchart conversion approach for engaging students in flowchart development aimed at improving students' problem-solving skills in an experimental design. Participants were university students (n=32) in an introductory programming course completing a self-developed questionnaire on students' learning attitude, interest, and technology acceptance, assessing the ease of use and usefulness of SITS. From the questionnaire, it was seen that using SITS, students experienced an enjoyable learning context, were motivated to use it and experienced the content proposals from the system as helpful. Beckmann, Bertel, and Zander [UNMAPPED:15] presented an adaptive learning system that targets performance, motivation, satisfaction, and previous knowledge to assess the effectiveness of a Moodle platform using an adaptive learning 'layer' to distribute content to students' learning styles. In a mixed-methods study design, students (n=53) of Computer Science and Media studies participated under laboratory conditions completing a questionnaire on learning motivation and satisfaction. Analysis with non-parametric statistical methods resulted in no significance of a good or bad fit between visual/verbal format and individual learning style on study time and learning outcomes. Also, there was a significant influence of matching learners' learning styles with learner satisfaction and motivation. Katuk, Kim, and Ryu [W2067024332] presented IT Tutor, which is an adaptive learning system. In a one-way between-subject design study, participants (n=80) assessed the e-learning application, the tutorial session, and the learning experience using a learning experience questionnaire and other instruments. The results indicated that the lower or medium achievers gained certain benefits from the platform, while the high achievers in learning performance might suffer from boredom. Lynch and Ghergulescu [UNMAPPED:36] assessed the Adaptemy system, which used curriculum-mapped content to provide personalized learning journeys to students. Secondary students participated in an objective study (n=7,614) assessing the adaptivity content and a subjective study (n=80) assessing the perceived learning experience. The subjective study revealed that the students felt increased confidence in solving math questions and an increase in enjoyment, confidence, and improved learning. In addition, 17 papers reported the evaluation of perceived value. Five studies [W2297983710, W2274395781, W2257534079, W2954460532, W3192286783] presented the evaluation of perceived value as a method for further informing the performance of LA. Two studies [W2274395781, W2257534079] used the evaluation of perceived value to evaluate adaptability and variability and to assess the usability of the LA. Hsu and Li [W2032417675] presented the perceived value of students to determine satisfaction levels of LA, Khawaja, Chen, and Marcus [W2020145237] estimated the perceived level of cognitive load, Zhang et al. [W3192286783] evaluated the practical value of the LA, and Abech et al. [W2297983710] and Mavroudi et al. [W2181131678] developed the application with input on the perceived value from students. Lo et al. [W1986984999] used Myers-Briggs definitions to create cognitive style questionnaires to get students' insights on their cognitive styles. Latham et al. [W140539764] and Latham, Crockett, and McLean [W2060412612] used a self-developed user evaluation questionnaire to understand students' perceived value of the intelligent conversational agent system Oscar. Tahmasebi, Ghazvini, and Esmaeili [UNMAPPED:10] used users' perceptions for the assessment of the adaptivity of their system. In the assessment process, they also evaluated users' experienced value of the system. Fasihuddin, Skinner, and Athauda [W2291976040] applied the Felder and Silverman Learning Styles (ILS) survey to compare the automated calculation of Learning Styles on behavior and interactions with students' perceived learning styles. Yuksel et al. [W2402939184] used questionnaires to evaluate participants' perceived performance with BACh and used interviews to assess whether the level changes were done adequately. Al-Shanfari et al. [W3000784194] used semi-structured interviews to understand student experiences and explain behavior identified in the data logs acquired from the system.",
+              "citations": [
+                "W2508148179",
+                "W2067024332",
+                "W2297983710",
+                "W2274395781",
+                "W2257534079",
+                "W2954460532",
+                "W3192286783",
+                "W2032417675",
+                "W2020145237",
+                "W2181131678",
+                "W1986984999",
+                "W140539764",
+                "W2060412612",
+                "W2291976040",
+                "W2402939184",
+                "W3000784194"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "15",
+                "36",
+                "10"
+              ]
+            }
+          ],
+          "text": "The evaluation of ALPs through perceived value is divided into the following themes: (1) users' perspectives on usability and (2) self-efficacy elements and learning styles. Eight papers focus on evaluating LA or ALPs from users' perceived value or evaluation of users' perceived value. All the papers analyzed in this review used some element of users' perspective, but most with it as a secondary focus.",
+          "citations": [
+            "W4285141600",
+            "W3093893125"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_5",
+          "subsection_index": 5,
+          "subsection_label": "3.5 C5) Evaluation of Multimodal Methods",
+          "subsubsections": [],
+          "text": "Only three papers pertained to category C5, eliminating the need for themes to further refine the studies. Papamitsiou et al. [W3082311223] introduced a self-assessment adaptive learning system using multimodal data analysis in various configurations. The study involved 32 undergraduates who participated in an online adaptive self-assessment procedure. Multimodal data were collected using cameras, wristbands, eye-tracking, clickstreams, and EEG caps, measuring variables such as cognitive load, heart rate, blood volume pressure, temperature, EDA, attention, and emotions. Six configurations explained learners' high performance, while three configurations explained learners' medium/low performance based on engagement measures from the collected data. Sharma, Papamitsiou, and Giannakos [W2963403519] studied an online adaptive self-assessment system for a Web Technologies course with 32 undergraduates. They collected EEG, eye-tracking, facial expressions, and wristband data, used feature selection algorithms, and employed Machine Learning techniques for prediction purposes. In contrast, Yuksel et al. [W2402939184] used brain and MIDI data to evaluate piano performance in the BACh platform.",
+          "citations": [
+            "W3082311223",
+            "W2963403519",
+            "W2402939184"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_3_6",
+          "subsection_index": 6,
+          "subsection_label": "3.6 C6) Evaluation of the Pedagogical Implementation of ALP's LA and LAD",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_3_6_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "3.6.1 Evaluation of ALP's LA Deep Structure",
+              "parent_subsection_id": "s_3_6",
+              "text": "Four papers mentioned pedagogical theory as a contextual factor for their studies. None of the studies evaluated how pedagogical theory was evaluated in either LA, LAD, or frameworks. Di Mascio et al. [W2010889192] applied expert evaluation consisting of 10 learning experts, who evaluated the TERRENCE system prototype, they included a pedagogical direction described as the pedagogical stimulation plan. The results from the user evaluation consisted of users (n=170) who assessed whether the expectations of the pedagogical stimulation plan were met. The evaluations were done through observational, think-aloud, verbal protocols, and controlled experiments. Abech et al. [W2297983710] reviewed other works on an ontology that had a pedagogical approach. The reviewed ontologies were compared to their own ontology's adaptation to learning styles, but their ontology was not assessed on any pedagogical parameters. Hsu et al. [W2032417675] used competency-based learning to develop their Competency-Based Guided-Learning Algorithm (CBGLA). However, their study does not mention how CBGLA could or should be implemented in a pedagogical context, nor how CBGLA resulted in the development of users' competencies. Troussas et al. [W3155236522] mentioned the Revised Bloom Taxonomy and collaborative learning theory as the fundamental theory for their research on the adaptive learning system i-LearnC. Still, no further description or evaluation of deep structure was included.",
+              "citations": [
+                "W2010889192",
+                "W2297983710",
+                "W2032417675",
+                "W3155236522"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "For the category of C6, the three dimensions (surface structure, implicit structure and deep structure) of signature pedagogy [W2116257273] are used to assess the papers' level of pedagogy evaluation. We do not include the theme for evaluating ALP's LA surface structure or implicit structure in this category. All included studies examine learning activities and/or interactions between students, teachers, and ALP's LA and LAD as examined in the categories of C2\u2013C5. No studies were exclusively categorized as a C6 category, which follows that all studies evaluate ALP's LA and LAD on signature pedagogy's surface structure dimension. Moreover, the signature pedagogy dimension of ALP's LA and LAD's implicit structure was evaluated by no papers. This leaves the evaluation category of the pedagogical implementation of ALP's LA and LAD with only one theme: Evaluation of ALP's LA deep structure. Four papers have a secondary focus on evaluating ALP's LA deep structure.",
+          "citations": [
+            "W2116257273"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "We report the results of a qualitative synthesis of a systematic review. Evaluation methods identified in the papers are grouped into six categories based on their main focus. These categories are: C1) evaluating design and framework, C2) performance, C3) adaptivity, C4) perceived value, C5) multimodal methods, and C6) pedagogical implementation. These categories are further described in the following sections. Each category has multiple themes to specify the studies' focus. Papers may be presented in multiple themes within a category. Some studies used multiple evaluation methods. We review and map these studies at the end of each category's section (see Table 2).\n\nThe distribution of the identified evaluation categories and how they are connected to each other is visualized in figures 2 and 3 showing a low representation of studies evaluating multimodal methods (C5) and pedagogical implementation (C6). 27 studies contribute to multiple evaluation categories and only five papers fall under single category. In addition, in literature, there is a preference for variables used to assess and describe students and platforms compared to variables assessing and describing teachers (see Table 1).\n\nFurthermore, the most frequently applied methods of evaluation are visualized in figure 4 where Logs on user activity (n=11), Interviews (n=5), and Pre- and Post-test (n=5) are the most preferred methods used.\n\n**TABLE/FIGURE 2: Distribution of Evaluation Categories on the Evaluated Papers**\n\n{{TABLE:tbl_02}}\n\n**TABLE/FIGURE 3: Frequency of Primary Focus Evaluation Categories and Their Combinations in Studies**\n\n{{TABLE:tbl_03}}\n\n**TABLE/FIGURE 4: Variables and Their Category Association Used by Learning Analytics and Learning Analytics Dashboards Either Describing or Being Described by Students, Teachers, or the Platform When Evaluating Adaptive Learning Platforms**\n\n{{TABLE:tbl_04}}\n\n*Note:* As an example of how to read the table, the variable of Time is used to describe student performance (C2) whereas, self-assessment is a variable being described by students.\n\n**TABLE/FIGURE 5: Word Cloud on Methods from Table 1 Showing Methods (n=235) with a Frequency of <1**\n\n*Statistical analysis, Student t-distribution, Surveys, ANOVA, Learning experience questionnaire, Evaluation questionnaire, Final scores on tests or exams, Logs on user activity, Pre- and post-tests, Index of Learning Styles questionnaire, Interviews, Observations, User satisfaction scores, K-means analysis*",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_02",
+        "tbl_03",
+        "tbl_04"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This study extends the research conducted by Tretow-Fish and Khalid [W4285141600] through a systematic literature review, encompassing the analysis of 32 empirical papers and two reviews. A comprehensive assessment of Learning Analytics (LA) and Learning Analytics Dashboards (LAD) on Active Learning Platforms (ALPs) involves the examination of 27 studies contributing to multiple evaluation categories, with only five papers falling within a single category (Figure 3).\n\nA notable trend in the literature review is the prevalence of variables employed for assessing and characterizing students and platforms, in contrast to the limited attention given to variables focused on evaluating and describing teachers (see Table 1). The preferred methods for assessment predominantly include questionnaires (surveys), log files, and interviews (see Figure 4). Notably, the evaluations encompass ontologies, frameworks, methodologies, experimental designs, mathematical models, and LA statistics\u2014components integral to Learning Analytics. However, assessments of pedagogical elements are conspicuously absent from the literature.\n\nFew studies have addressed the pedagogical implementation of ALPs, with the majority treating it as a secondary focus rather than a primary concern. Despite various investigations into ALPs' LA and LADs, the existing literature predominantly evaluates the surface structure (i.e., operational acts \u2013 demonstrating, questioning, etc.), neglecting the deep structure (i.e., know-how of discipline \u2013 math by derivation practice, design by doing iterative design) and implicit structure (i.e., moral values \u2013 nursing for physical and mental health) in impact and method evaluation. Specifically, none of the reviewed studies, whether as a primary or secondary focus, systematically assess the deep and implicit structures in impact and method evaluation related to ALP's LA and LAD.\n\nOur review reveals a noteworthy gap in the educational exploration of ALP's LA and LAD as tools for informing pedagogical or didactic decision-making among students and educators. The deficiency extends to the scarcity of studies employing established pedagogical methodologies, theories, and concepts\u2014such as Flipped Learning, Inquiry-Based Learning, Simulation Laboratories, and Gamification. Consequently, the overall understanding of ALP's potential as a learning tool within an educational context remains underdeveloped, hindering the application of informed pedagogical or didactic choices informed by relevant theories.\n\nFor future research endeavors, a comprehensive examination of multimodal features (C5) is warranted, delving into the nuanced ways various modes of interaction influence the efficacy of LA and LADs in ALPs. Subsequent investigations should scrutinize the deep or implicit structures underpinning the pedagogical implementation of ALP's LA and LAD (C6). Methodologies ought to be developed for aligning robust pedagogical theories and concepts, thereby informing the development and assessment processes. Furthermore, future studies should incorporate evaluations encompassing teachers' perspectives to attain a holistic understanding of the impact of LA and LAD on ALPs implementation.\n\nAn essential question emerges: How can we enhance the quality of learning and teaching through LA when data collection and presentation lack a foundational methodology, framework, or theory? This query underscores the need to associate actions with data rather than merely presenting metrics such as learning objectives' difficulty, time spent on the platform, or active users. The proposed future investigations must intricately link pedagogy to LA and LAD of ALPs, providing essential support for teachers and students as they navigate cognitive and meta-cognitive impacts, behavioral changes, and social learning activities.\n\nIn essence, the envisioned assessments should integrate ontologies, frameworks, methodologies, experimental designs, mathematical models, and LA statistics\u2014comprehensive components constituting the foundational elements of LA. Notably absent in the current landscape are evaluations of pedagogical elements, a critical gap that future research must address to comprehensively advance the field.",
+      "citations": [
+        "W4285141600"
+      ],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_2",
+      "source_subsection_id": "s_2_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4389935031_tables.md"
+}

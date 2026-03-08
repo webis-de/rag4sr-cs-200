@@ -1,0 +1,429 @@
+{
+  "id": "W3094535194",
+  "metadata": {
+    "title": "Recommender Systems to Support Learners' Agency in a Learning Context: A Systematic Review",
+    "n_sections": 17,
+    "n_subsections": 7,
+    "n_subsubsections": 6,
+    "n_tables": 2
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Recommender systems are \"tools and techniques that suggest items that are most likely of interest to a particular user\" [1, p. 1]. They constitute a powerful method to help users to filter for the products that are most likely to be chosen, out of a very large number of products. They use algorithms that account for, among other elements, the user's browsing patterns, searches, purchases and preferences [UNMAPPED:2]. Research into recommender systems is evolving rapidly, and such systems are being leveraged in more and more specific domains [W2105953200], particularly in the domain of technology-enhanced learning (TEL) given the digitalisation of learning and the growth of educational data [W2199058847].\n\nLiterature reviews published in recent years about recommender systems in education have considered specific approaches and methods. For example, Tarus, Niu, and Mustafa [W2579393094] looked at ontology-based recommenders. Although they identified that ontology-based recommendation combined with other recommendation techniques is widely used to recommend learning resources, they did not closely examine the techniques that could be used with this recommendation. Other reviews considered the application domain. Verbert et al. [W2128070164] presented a context framework for TEL, with different contextual variables: computing, location, time, physical conditions, activity, resource, user, and social relations. They surveyed 22 recommender systems, not papers in which these systems were the subject of experiments, and they did not explain how they chose the systems. Rahayu et al. [W2589035561] conducted a systematic review of recommender systems in a study on the pedagogical use of ePortfolios. Furthermore, others have looked at issues related to recommender systems: Camacho and Alves-Souza [W2792159272] compiled papers using social network data to mitigate the cold-start problem, which is caused by not having enough items or learners to initiate a recommender system [W2055330993]. Erdt, Fernandez, and Rensing [W1452699976] conducted a quantitative survey in which they discussed methods for evaluating recommender systems (type, subject and effects). Although the results of the aforementioned studies are enlightening, it should be noted that there is a lack of information regarding search strategies (e.g., descriptors used for selecting articles) and criteria for inclusion and exclusion. Finally, the chapter by Drachsler et al. [W2199058847] in *The Recommender Systems Handbook*, \"Panorama of Recommender Systems to Support Learning,\" mainly provided an overview of recommender systems from 2010 to 2014. When they considered more recent publications based on empirical data, they did not mention the search strategy.\n\nRecommender systems are guides that can help teachers find solutions to their documented needs in a context where teachers are responsible for their own professional development and showing agency, a concept we define below [W2938638191]. Teachers have reported that they wish to receive recommendations for resources or people based on their preferences, goals and search topics or recommendations for resources other teachers found interesting and useful. We therefore wanted to examine whether recommender systems that recommend learning resources or people (peers or experts) are a promising solution.\n\nWe focused on articles discussing recommender systems that support the recommendation of resources in a learning context. To this end, we identified and analyzed 878 articles and retained 56. This paper is structured as follows: we first describe the recommender systems for TEL, particularly the different techniques and ways to evaluate the systems. Then, we present the methodology we used to perform the systematic review. Finally, we present our results and we discuss the main findings, identify their limitations and provide recommendations for future research.",
+      "citations": [
+        "W2105953200",
+        "W2199058847",
+        "W2579393094",
+        "W2128070164",
+        "W2589035561",
+        "W2792159272",
+        "W2055330993",
+        "W1452699976",
+        "W2938638191"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "2"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "Recommender Systems for Technology-Enhanced Learning",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The role of recommender systems is twofold [W2105953200]. Its first task is to predict value: how much will the user value a given resource? The answer is usually presented on the same scale as the one used by the evaluation system (for example, a number of stars). The second task is to recommend resources: what are the N resources most likely to be of high value to a given user? The answer is presented as a top-N recommendation, or simply sorted by expected value, such as when performing a search in a search engine, with the most relevant results at the top.\n\nPreferences may be expressed either explicitly or implicitly. Implicit preferences are gathered through the user's actions. These actions are very telling about the user's preferences, even if they are unaware of it: clicking on a link (advertisement, search result or cross-reference), purchasing a product, following someone on a social network, spending time watching a video or listening to a song, etc. For explicit preferences, the system asks the user to rate an item. This can be done using a variety of paradigms, such as a scale of 0\u20135 stars (with or without half points), positive or negative votes, or only upvotes. These data are harder to collect, since they require user action and thus more effort compared to implicit data.\n\nThe rise of the use of recommender systems in various contexts (such as Netflix and Amazon) has also been seen in education, as mentioned in the chapters \"Recommender Systems in Technology-Enhanced Learning\" and \"Panorama of Recommender Systems to Support Learning\" in the 2011 and 2015 editions of the *Recommender Systems Handbook*. In the context of TEL, recommender systems can assist in carrying out a learning activity, viewing content, taking a course, joining a community, contacting a user, etc. [W2028377258]. However, the recommendation of resources in a learning context is different from the recommendation of products in a commercial setting [W1891536404]. On this topic, Drachsler, Hummel, and Koper [W2171109587] refer to Vygotsky's [W2135943618] zone of proximal development to support the theory that a recommender system should suggest resources that are slightly higher than the learner's current level.",
+      "citations": [
+        "W2105953200",
+        "W2028377258",
+        "W1891536404",
+        "W2171109587",
+        "W2135943618"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "Learners' Agency",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Agency is defined as \"[a] learner's ability to define and pursue learning goals\" [16, p. 24]. Agency is manifested through self-directed learning behaviour, that is, \"[a] process in which individuals take the initiative, with or without the help of others in diagnosing their learning needs, formulating learning goals, identifying human and material resources for learning, choosing and implementing appropriate learning strategies, and evaluating learning outcomes\" [17, p. 18]. Agency exists at the intersection of self-determination (an autonomous, authentic free will to learn) and self-regulation (the exercise of agentic, self-controlled learning activity), a relationship that J\u00e9z\u00e9gou [18, p. 183] describes as interdependent. Carr\u00e9 [19, p. 56] represented the articulation of these three concepts (Figure 1) as follows:\n\nIdentifying human and material resources for learning presents a significant challenge: many resources exist, but not all are being used, or are even known. Self-regulated learners, that is, those who take control of their learning, must manage their resources, environment and context, as well as their tools [W2069145983, UNMAPPED:21]. To assist them in recognizing and managing resources to further the goals they have chosen, we must provide the necessary resources, using the benefits identified by the community. Recommender systems are therefore an interesting avenue to consider in a context where we wish to support the user in their learning process while simultaneously acting within their zone of proximal development.\n\n**FIGURE 1.** The double dimension of self-direction in training [19, p. 89]\n\nThere is, however, some level of uncertainty regarding the processes involved in supporting a learner's agency. The structure (the rules, roles and resources, both explicit and assumed) required to support agency is a central question [UNMAPPED:16]. Accordingly, the tension between agency and the provided external structure must be a concern for designers of networked learning environments. Rather than set agency and structure in opposition to each other, Brennan [UNMAPPED:16] maintains that they are mutually reinforcing concepts, and she proposes using structure to shape agency, converging at the concept of zone of proximal development, while also tying in the concept of \"scripting,\" that is, structuring elements that support agency.\n\nBrennan [UNMAPPED:16] recommends five strategies that designers of learning environments can adopt to support agency. Among those, \"support access to resources\" implies making resources available at the right moment, in the right format and at a level fitting the expectations of the learner, whether or not those resources are centralized. Drachsler et al. [W2171109587] argue that, in a context of lifelong learning, personal recommender systems in learning networks are necessary to guide learners in choosing suitable learning activities to follow.\n\nTherefore, of the tasks that recommender systems can support [W2199058847], here we will examine the following: finding good items (content), finding peers, and suggesting learning activities. Tasks that do not fit well in the context of supporting agency, on the other hand, will not be covered in this review. One is the recommendation of learning paths: as agency \"accounts for the individual's personal control and responsibility over his or her learning\" [22, p. 14], we wondered whether learning path recommendations would constrain rather than foster agency. Assuming that learners show agency when they determine, influence and personalize their learning paths, which are behaviors that manifest agency [W2766996664, W2587784044], does a system restrain or expand agency when recommending learning paths? One may say, it depends whether the selection and sequencing of resources stimulate or not the learner's agency. That said, we recognize that the sequencing of items is an important part of regulation [W1994659425] and that it may have value at least for beginners. In the learning sciences, this has been debated at length by those favourable to scripting, for example, online collaborative learning [W2131910319]. This is why, to support the agency of learners, it seems more appropriate to present the range of resources that could allow them to achieve their goal, then let them negotiate and create a meaningful learning path for themselves, rather than to provide a predefined learning path. By doing so, we emphasize the principle of epistemic agency [W92263566, UNMAPPED:28], which refers to the control people have over the resources they use to achieve their goals. The other task that will not be covered here is predicting learning performance, as the focus of our work does not necessary take place in a formal context.",
+      "citations": [
+        "W2069145983",
+        "W2171109587",
+        "W2199058847",
+        "W2766996664",
+        "W2587784044",
+        "W1994659425",
+        "W2131910319",
+        "W92263566"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "21",
+        "16",
+        "28"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "Recommendation Techniques",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The principal recommendation techniques are content-based, collaborative filtering, and hybrid. Content-based recommender systems recommend items that are similar to the ones that the user has liked in the past [W2200988052]. These systems may use a case-based approach or an attribute-based approach [W2171109587]. The first one assumes that if a user likes a certain item, this user will probably also like similar items, and the second one recommends items based on the matching of their attributes to the user profile.\n\nRecommender systems based on collaborative filtering leverage the preferences of other users to provide a recommendation to a particular user. Such systems are called collaborative because they consider two items (book, movie, etc.) to be related based on the fact that many other users prefer these items, rather than by analyzing all of the attributes of the items [UNMAPPED:2]. Many different methods may be used to analyze the items; two of them, user-based and item-based, are described below.\n\nIn a user-based approach, users who rated the same item similarly may have the same tastes [W2171109587]. One can then recommend to a user items that are well rated, either by similar users or by users they trust. The user-based collaborative filtering concept requires calculating the distance between pairs of users, based on their level of agreement about items they have both rated [UNMAPPED:2]. Systems based on this approach predict a user's appreciation for items by linking this user's preferences with those of a community of users who share the same preferences [W2134584261].\n\nThe item-based collaborative filtering approach, on the other hand, recommends items that are preferred by similar users, based on user data instead of ratings [W2171109587]. The system calculates the distance between each pair of items based on how closely users who have rated the items agree. This distance between pairs of items tends to be relatively stable over time, such that the distances can be pre-calculated, meaning recommendations can be generated faster [UNMAPPED:2].\n\nFinally, techniques can be combined in various ways to create a hybrid recommender system. Adomavicius and Tuzhilin [30, p. 740] illustrate how content-based and collaborative methods can be used to:\n\n- Implement collaborative and content-based methods separately and combine their predictions\n- Incorporate some content-based characteristics into a collaborative approach\n- Incorporate some collaborative characteristics into a content-based approach\n- Construct a general unifying model that incorporates both content-based and collaborative characteristics\n\nObviously, other techniques can be combined using the same processes.",
+      "citations": [
+        "W2200988052",
+        "W2171109587",
+        "W2134584261"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "2"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "Evaluation of Recommender Systems",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Many strategies may be used to evaluate recommender systems. The choice of a strategy should take into account the tasks that the system supports as well as the nature of the data sets [W2042455790, W2161153091]. Beyond technical considerations, we must account for the needs and characteristics of learners [W2115794341]. There are three types of experiments [W298464722]:\n\n- Offline experiments use a protocol and existing data to evaluate the system's performance. Generally, offline experiments use data sets that mimic user behaviour to tweak the parameters of an algorithm, or to compare different approaches.\n- User studies require enlisting users, asking them to perform multiple tasks requiring interaction with the system, and collecting data about these interactions. Users are asked a few questions after they complete certain requested tasks.\n- Online experiments evaluate the system's performance under real-life conditions, with the users being oblivious to the experiment being conducted. They measure the change in user behaviour as the result of interacting with different recommender systems.",
+      "citations": [
+        "W2042455790",
+        "W2161153091",
+        "W2115794341",
+        "W298464722"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Research Methodology",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "Research Questions",
+          "subsubsections": [],
+          "text": "In this literature review discussing recommender systems that aim to suggest resources in a learning context that supports the learner's agency, we are focusing on the following specific questions:\n\n- **RQ1:** What are the resources recommended, and what techniques were used to recommend them?\n- **RQ2:** How were experiments performed to evaluate these recommender systems?\n- **RQ3:** What were the results of these experiments and how were they presented?",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "Criteria for Inclusion and Exclusion",
+          "subsubsections": [],
+          "text": "The articles we wanted to analyze had to meet a number of criteria. The peer-reviewed articles, written in English between 2008 and 2018, had to deal with a recommender system in a learning context. The systems had to recommend resources and describe the way in which the recommendations were made (algorithms, approaches). As mentioned earlier, we excluded articles that recommended learning paths, since learning paths restrict agency more than they support it. Finally, the articles retained had to describe how the prototype or systems suggested were evaluated, according to either the quality of the resources recommended or the impact of the recommendations. We thus excluded articles that only presented an appraisal of algorithmic performance (speed of execution of algorithms, for example). Finally, the data used had to be real and not simulated. Articles that used generated data sets, or data sets extracted from other contexts (for example, MovieLens) for their evaluations, were therefore excluded.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "Search Strategy",
+          "subsubsections": [],
+          "text": "To find articles that cover recommendations systems in a learning context, we selected three databases. The two databases selected in education were chosen for their broad scope: Education Source (over 1000 journals) and ERIC (over 250 journals). As the subject of this review is related to technology and informatics, a database in computer science was added: Computers & Applied Sciences Complete (over 480 journals). These databases use different thesauruses, so the search criteria were different depending on the database. Searches in the education databases looked only at recommender systems, since the context is implicitly education. Searches in the applied computer science database looked at the intersection of a search on recommender systems and a search on education.\n\nSearches in the three databases leveraged the union of the sets of results from searches by controlled vocabulary (using descriptors [DE] in Education Source and ERIC and subject items [ZU] in Computers & Applied Sciences Complete) and by free vocabulary (title [TI] and abstract [AB]). The terms used in the controlled vocabulary searches were chosen after an iterative process in which we looked at subjects used in publications related to recommender systems. The searches were performed in January 2019 (Table 1).\n\n**TABLE 1.** Requests by database\n\n{{TABLE:tbl_01}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_01"
+          ]
+        },
+        {
+          "subsection_id": "s_6_4",
+          "subsection_index": 4,
+          "subsection_label": "Analytical Process",
+          "subsubsections": [],
+          "text": "The references were imported into Rayyan[^1] in order to identify duplicates and analyze the articles by title and abstract. The references to articles that remained after this step were imported into a reference management application (Mendeley[^2]) to allow for annotations when reading the full articles. Though the author screened and evaluated the articles, the identification process was performed with the help of a documentation specialist, and the thesis director supervised the conduct of the review. Regarding the interrater reliability of the process, 10% of the articles (88 randomly selected articles) were submitted to a knowledgeable computer scientist who applied the same selection criteria. According to Cohen's kappa, which is a coefficient of interrater agreement for nominal scales [W2053154970], the coding consistency for inclusion or exclusion of articles between the two raters was \u03ba =.82. To ensure a rigorous process, we also examined the intrarater reliability, which is a measure of self-consistency that aims to investigate the reproducibility of the measurements [W613277099]. One year after the first screening, we reconducted the screening for another 10% of the articles. All inclusion/exclusion decisions remained the same, except for one paper that was included in the first screening and then excluded the second time. After verification, it was excluded at the next step (full article reading), so the decision was still the same.\n\nEvaluating the quality of the full articles left us with articles that fit all the parameters stipulated in our research questions and met the inclusion criteria listed previously. To do this, we used a table in which we inventoried the main required elements: the recommendation context, the recommendation approach used, the experimental method and the results of the experiment. If an article did not provide an answer to all these elements, it was excluded.\n\nFinally, the last step in the analysis was performed in Excel by the author. Each article retained was submitted to a content analysis based on thematic units. The coding system developed included information about the article, the recommender system (items, supported tasks, technique, presentation of the algorithm), the experiment settings (data, comparison, participants, methods) and the results of the experiment (measurements, results, visualization, comments). The majority of the information was written by the author of the article; therefore, we sometimes had to infer data. For example, we had to deduce the technique used by some recommender systems from their algorithm or illustration. The results are shown in the next section.\n\nA total of 1014 references from three databases were considered; 136 duplicates were removed, and 878 were analyzed by title and abstract. We excluded articles that were not based in a learning context (538 articles), did not discuss a recommender system (112 articles), were not in English (5 articles) or were retracted by their author (1 article). The remaining 222 articles were then read in full and were evaluated and analyzed. We excluded articles that did not discuss resource recommendation (70 articles). We also excluded articles where the evaluation was incomplete or missing (42 articles), the systems were not recommender systems (39 articles), the system approach or algorithm was not covered (11 articles) or the application was in a context other than learning (13 articles). Figure 2 summarizes the process we followed, Figure 3 shows the number of included papers by database, and Figure 4 shows the number of included papers with variation by year. A file with all included references is available at the Additional file.\n\n**FIGURE 2.** PRISMA flow diagram\n\n**FIGURE 3.** Number of included papers by database\n\n**FIGURE 4.** Number of included papers by database and year",
+          "citations": [
+            "W2053154970",
+            "W613277099"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "A systematic review is defined as \"a review of existing research using explicit, accountable rigorous research methods\" [35, p. 2]. It is a type of review that searches for, appraises and synthesizes the results of research [W2079283960]. The Evidence for Policy and Practice Information (EPPI) approach that we have followed is characterized by the use of explicit and transparent methods with the following steps: define the question, search the literature, extract relevant data, analyze data, and interpret and situate findings. Explicit methods improve the internal validity of the process and offer a critical assessment of scientific knowledge that can be leveraged for decision-making [UNMAPPED:37]. To define the criteria for inclusion and exclusion, as well as the search strategy and evaluation and analysis criteria, we relied on the characteristics of recommender systems, particularly recommender systems for TEL.",
+      "citations": [
+        "W2079283960"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "37"
+      ]
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "Results",
+      "subsections": [
+        {
+          "subsection_id": "s_7_1",
+          "subsection_index": 1,
+          "subsection_label": "Supported Tasks and Recommendation Techniques in Use (RQ1)",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_7_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Supported Tasks",
+              "parent_subsection_id": "s_7_1",
+              "text": "For this systematic review, the following supported tasks were considered, according to their capacity to support learner agency: finding good items, suggesting learning activities and finding peers. Their distribution and variation over the years are shown in Figures 5 and 6.\n\n**FIGURE 5.** Supported tasks\n\n**FIGURE 6.** Supported tasks by year\n\nWe identified multiple types of \"good items\" recommended by the systems analyzed: books, learning content, publications (forum or blog posts, articles, etc.), learning material, learning objects, papers and videos. In the large majority of cases, the systems were meant for students.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Recommendation Techniques in Use",
+              "parent_subsection_id": "s_7_1",
+              "text": "In order to complete tasks, such as finding good items (content), finding peers and suggesting learning activities, the recommender systems documented in the retained articles use different techniques, as shown in Figures 7 and 8.\n\n**FIGURE 7.** Techniques used in retained articles\n\n**FIGURE 8.** Techniques used by year",
+              "citations": [],
+              "tables_in_text": []
+            }
+          ],
+          "text": "We first focused on the tasks that the inventoried recommender systems support, and the ways in which these systems express ratings. We also looked at the techniques used and how they were reported.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_2",
+          "subsection_index": 2,
+          "subsection_label": "The Conduct of Experiments (RQ2)",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_7_2_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Settings",
+              "parent_subsection_id": "s_7_2",
+              "text": "Experiments were conducted with students or learners (38 articles), users (9 articles), staff members (3 articles), participants (1 article) or readers (1 article), and 4 articles mentioned experiments with multiple groups (students and teachers; students and staff members; students and community members; mentees and experts).\n\nOut of 39 articles (69.6%) showing comparisons, 8 had a comparison group consisting of participants who did not receive recommendations. In 22 cases, the comparison was against other recommendation techniques. In 11 cases, the parameters of the algorithm were compared. In one case, the comparison was between the levels of the participants (the effects on a group of novices compared to the effects on a group of more advanced participants).\n\nFinally, 12 articles described experiments that used a \"training set\" and \"test set\" strategy. The training/test ratio used was 80/20 (5 articles), 70/30 (3 articles), 65/35 (2 articles) and 28/1 (1 article). Only one article used a training set smaller than the test set (9/12).",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_2_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Types of Experiments",
+              "parent_subsection_id": "s_7_2",
+              "text": "Since making recommendations in a learning context differs from making recommendations in a marketing context [W1891536404], many authors, including Fazeli et al. [W2739622022], argue that accuracy is not the only metric to consider. Figure 9 shows the types of experiments used in the articles analyzed. Some articles show results that are applicable to more than one type of experiment.\n\n**FIGURE 9.** Types of experiments\n\nUnsurprisingly, in the 30 articles concerning experiments testing accuracy, the evaluation metrics most commonly used are precision, recall and the F1-measure. In 13 cases, these metrics were used together. Only 2 articles recount experiments using precision without the other two metrics; 2 more used recall alone, and only 1 presents solely F1 results. Table 2 shows the number of articles using each metric where p is prediction, r is rating, N is the number of items, Nr is the number of relevant items, Ns is the number of selected items and Nrs is the number of relevant and selected items.\n\n**TABLE 2.** Evaluation metrics\n\n{{TABLE:tbl_02}}\n\nRank accuracy metrics can be used, and this was the case for three articles. These articles applied normalized discounted cumulative gain (NDCG), a measure used when graded relevance values are available, and average reciprocal hit rate (ARHR, also known as mean reciprocal rank [MRR]), which is used for evaluating the ranking of the top-n recommender systems.\n\nFor user studies (user satisfaction), the data gathered are sometimes quantitative: for example, how many times a recommendation was clicked, or whether a subject looked at a recommendation (determined by tracking eye movement). The data are sometimes qualitative (for example, the subject's state of mind, or whether the subject enjoyed the system), often obtained through questionnaires filled out before, during or after a recommendation system is used, which can be advantageous compared to offline and online experiments.\n\nUser studies were the type of evaluation most often used in the articles analyzed, as they were used in 32 articles (57.1%). Of those, half indicated that they evaluated user satisfaction. Others mentioned evaluating perceived quality (7), usefulness (3), helpfulness (2), acceptance (2) and motivation (1). In all cases, user feedback was gathered using a survey (often included directly in the application). Among those, one article specified using a feedback form, another specified using two surveys, and two articles mentioned using interviews to gather data on user appreciation.\n\nFinally, one way to carry out online experiments is to redirect a portion of users to different recommender systems (or techniques, or parameters) and record interactions between users and the different systems. In such cases, we consider the effect of the recommender systems on the learner's performance to be behaviour modifications. Only 10 of the 56 articles (17.9%) analyzed included an evaluation of the repercussions of the recommender system on learning. In all cases, the effects of the recommender systems on learners' performance were measured based on tests performed on the students. Nine articles out of ten used two data points (pretest and post-test), while only one used three data points (pretest, midterm exam and final exam). In all 10 articles, authors used statistical tests to compare the results obtained: 5 used t-test, 2 used ANOVA, 1 used ANCOVA, and 2 did not specify the method they used.",
+              "citations": [
+                "W1891536404",
+                "W2739622022",
+                "W2589035561",
+                "W2105953200",
+                "W2200988052"
+              ],
+              "tables_in_text": [
+                "tbl_02"
+              ],
+              "citations_unmapped": [
+                "2"
+              ]
+            }
+          ],
+          "text": "To answer the question about how the experiments were conducted, we looked at the experiment goals and settings and at the types of experiments. For all three types of experiments, we looked at the metrics used as well as the participants involved.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_7_3",
+          "subsection_index": 3,
+          "subsection_label": "Results of Experiments (RQ3)",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_7_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "Presentation of Results",
+              "parent_subsection_id": "s_7_3",
+              "text": "For each result, we noted the way in which it was conveyed, be it through text, charts or tables. The following Venn diagrams show, for every experiment type, the various combinations of methods used to report the results. We can see that for every experiment type, most articles use a combination of text and tables (Figures 10, 11 and 12).\n\n**FIGURE 10.** Ways in which results were reported when evaluating accuracy\n\n**FIGURE 11.** Ways in which results were reported when evaluating user satisfaction\n\n**FIGURE 12.** Ways in which results were reported when evaluating learning performance",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_7_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "Results of the Experiments",
+              "parent_subsection_id": "s_7_3",
+              "text": "Here we will synthesize the results described in the articles studied, first presenting the articles that reported experiments testing accuracy, then those reporting user experiments, and last, those focused on learning performance. Since this is a systematic review and not a meta-analysis, we took a step back and analyzed the conclusions drawn by the authors. As the experiment settings vary and differ, it would be perilous to compare their results.\n\nThe 30 experiments evaluating accuracy introduce results for each evaluation metric used. Studies comparing different algorithm parameters declared positive results [W2087801835, W290340400]. Two articles were more nuanced: one because the accuracy of all algorithms was under 84% [W2187516662], and the other because the proposed algorithm was better with small item lists [W2401544298].\n\nStudies comparing different recommendation techniques most often concluded by focusing on the proposed approach that obtained better results [W323743999, W2068959244]. The studies comparing hybridization methods shone a light on the best hybridization techniques [W2594079227, W2055299609]. Finally, some articles concluded by emphasizing the performance of the proposed approach, and solutions to problems encountered, like the problem of sparsity [W2800255956], which is caused by a lack of sufficient information to identify similar users [W1984357113]. Lastly, some approaches were proposed and evaluated for accuracy but were not compared. Those conclusions were relatively positive in terms of precision and recall [W2012266188].\n\nFor user studies, the articles that compared groups that did and did not receive personalized recommendations came to positive conclusions. For example, Hsieh, Wang, Su, and Lee [W2121570806] presented results in which most of the experimental group learners said that the recommender system reduced the amount of effort required to search for articles they liked. Others were less positive, like Cabada, Estrada, Hern\u00e1ndez, Bustillos, and Reyes-Garc\u00eda [W2602414392] and Wang and Yang [W2017394402]. Studies comparing algorithm parameters had positive conclusions [W2022257002]. For comparisons between techniques, the results highlighted the techniques that lead to better responses according to the questionnaires, such as in Han, Jo, Ji, and Lim [W2534592853], who concluded that \"[t]he proposed CF recommendation, which considers the correlations between learning skills, was observed to be more useful, accurate, and satisfactory\" (p. 2282).\n\nThe results were also positive for articles that did not describe a comparison [W1984357113, W2772709112]. Some of them were also prospective, like Drachsler et al. [W2172060349], who presented the participant's ideas for future developments regarding, among other things, privacy and the possibility of rating the recommendations they received.\n\nFinally, for each of the 10 articles on experiments that tested learning performance, the studies demonstrated that post-test results were statistically better for groups exposed to recommender systems [W2109546091]. Of those studies, six made sure that the groups were of similar levels at the outset, pointing out that pre-test results did not show significant difference [W2117248627]. Two more articles mentioned that the groups were of similar levels without indicating whether statistical tests were performed on pre-test results, and two more did not mention pre-test scores. Finally, one article mentioned that \"the experimental group outperformed the control group in terms of overall quality of summary writing in the final exam. However, such a difference was not revealed between the two groups with respect to their performance in listening comprehension, reading comprehension, grammar, and vocabulary tests\" [54, p. 633].",
+              "citations": [
+                "W2087801835",
+                "W290340400",
+                "W2187516662",
+                "W2401544298",
+                "W323743999",
+                "W2068959244",
+                "W2594079227",
+                "W2055299609",
+                "W2800255956",
+                "W1984357113",
+                "W2012266188",
+                "W2121570806",
+                "W2602414392",
+                "W2017394402",
+                "W2022257002",
+                "W2534592853",
+                "W2772709112",
+                "W2172060349",
+                "W2109546091",
+                "W2117248627"
+              ],
+              "tables_in_text": []
+            }
+          ],
+          "text": "In this section, we will analyze the results of the documented experiments for accuracy, user satisfaction and learning performance. We will start out by examining how the authors reported their results.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "Results are shown according to the way they answer each of the three research questions. The first section shows the supported tasks and the techniques used, the second section shows the experiments documented in the articles, and the last section shows the results of the experiments.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "Discussion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Our systematic review of recommender systems in education, particularly in a context where resource recommendation supports agency, leads us to establish the relevance of accounting for publication in both education databases and applied computer science databases.\n\nWhile studying the context in which recommender systems are used in education, we established that, in most cases, the systems aimed to find good items and suggest learning activities, while only two articles introduced systems for finding peers. These ratios are similar to those identified by Drachsler et al. [W2199058847], who identified 61 articles about systems that aimed to find good items, 9 that aimed to find peers, and 4 that aimed to recommend learning activities. We noticed that the main recommendation techniques (content-based, collaborative filtering, hybrid) that were used followed the same ratios. We have not identified any clear trend regarding either the tasks accomplished by the recommendation systems or the recommendations techniques that have been used over the years.\n\nContent-based recommender systems generate recommendations based on the products' features and their ratings from the user [W2022257002]. Their preferences are usually represented with an attribute or keyword preference vector. Each attribute has a dimension, and each item has a position in that space, as defined by the vector. Each user has a preference profile, also defined by a vector. Vectors may be represented in a number of ways \u2013 for example, 0 or 1 representing whether or not the attribute is present (true or false), or the number of occurrences to include an intensity value.\n\nIn the articles, different calculations were used to establish the similarity between two vectors (the user's preferences and the features of the item). One of the measures used is cosine similarity, which corresponds to the angle between these vectors [W400725385]. Another measure used in the articles is Euclidean distance [W2786664528].\n\nThe vast majority of the articles describing collaborative filtering systems employ a user-based approach (15 articles). Lau, Lee, and Singh [W2012734393] state that \"to date, as far as we have surveyed, item-based CF [collaborative filtering] is yet to be employed prevalently in the e-learning domain in any significant way\" (p. 85). The similarity metrics used vary, but the Pearson correlation is the most common. Other similarity metrics are Jaccard similarity, k-means algorithms and the Markov chain model.\n\nOf the four articles that did not use content-based or collaborative filtering techniques, three used the association rule and one presented a knowledge-based system. The association rule is frequently used in sales, to suggest items complementary to those already in the shopping cart. It is the probability that a user will choose two products divided by the multiplication of the probability that the user will choose product X by the probability that the user will choose product Y [W2117248627]. This approach can be used in a learning context to suggest complementary resources when the user identifies a resource that may help them reach their goal. Knowledge-based recommender systems suggest items based on deductions about the needs and preferences of users [W2022257002]: \"[k]nowledge-based approaches use knowledge about how a particular item meets a particular user need, and can therefore reason about the relationship between a need and a possible recommendation\" [47, p. 20].\n\nFinally, systems labelled \"hybrid\" use a combination of two or more of the techniques discussed above [W2022257002]. They use advantages from one technique to offset the disadvantages of another [W2043023544]. For example, content-based techniques can be combined with collaborative filtering techniques to handle the cold-start problem [W2401544298].\n\nThe limitations of each approach were documented in previous research, and many of the authors of the selected articles also mentioned them, particularly in reference to the cold-start problem [W2055330993] and the sparsity problem [W1984357113].\n\nBy looking at experiment settings, we observed that most articles focus only on one type of experiment (accuracy, user satisfaction, learning performance). This can be explained by the fact that different types of experiments lend themselves to being performed at different stages of the development process, from prototyping to large-scale implementation.\n\nUser studies were the type of evaluation most often used in the articles analyzed. However, user studies are very expensive to conduct in terms of both cost and time, and it can be difficult to recruit a sufficient number of participants. The biases inherent in this type of experiment are the same as those noted in experiments in other contexts (representativeness of samples, desirability, etc.). It is from this perspective that Fazeli et al. [W2739622022] proposed a study in which they \"traded loss of experimental control (which would have been obtained by working with fake users and fake problems) for increased ecological validity (which is obtained by working with real users, real problems, and real resources)\" (p. 304). They used five user-centred metrics, explicitly establishing a parallel with the learning domain by using Vygotsky's zone of proximal development: accuracy, novelty, diversity, serendipity and usefulness.\n\nThe results of the evaluation of the system documented are overwhelmingly positive. The results are also sometimes prospective, looking to improve the system or continue conducting experiments. Given that we were looking for a way to make better resources available for learners to pursue a goal, the results confirm that recommender systems can be a powerful method to support their agency. The positive results in terms of accuracy, learning performance and user satisfaction solidify our hypothesis that recommender systems can suggest good items, learning activities, peers and experts based on learners' preferences, goals and search topics.\n\nThe results are presented as text and tables, as is conventional for scientific articles. Some of the results would benefit from using alternative data visualization techniques; in online publications, they could even be represented dynamically. For example, in order to let the reader view the results of each study, we developed a visualization tool that allows users to filter conclusions according to various parameters: the experiment type, the year the article was published, the supported tasks and the approach used (content-based, collaborative filtering, hybrid, other). The tool (see screen capture in Figure 13) is available at http://mdeschenes.com/recsys/.\n\n**FIGURE 13.** Visualization tool for the conclusions of articles analyzed\n\nThough we refrained from comparing the results of the different experiments, it is observed that all the reported results were positive according to the different measures applied. It seems that researchers did not publish \"negative results.\" Could it be that some researchers wait to find an algorithm whose experimentation is acceptable before publishing, a tendency known as publication bias? This bias has already been documented in systematic reviews on recommender systems [W2518040354].\n\nSome initiatives seek to reduce this bias, such as the LAK Failathon, the goal of which is to offer an explicit and structured space for researchers and practitioners to share their failures and to help them learn from each other's mistakes [W2914630865]. However, there is still a long way to go before we can compare different algorithms, in different contexts, with different users.",
+      "citations": [
+        "W2199058847",
+        "W2022257002",
+        "W400725385",
+        "W2786664528",
+        "W2012734393",
+        "W2117248627",
+        "W2043023544",
+        "W2401544298",
+        "W2055330993",
+        "W1984357113",
+        "W2739622022",
+        "W2518040354",
+        "W2914630865"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_9",
+      "section_index": 9,
+      "section_label": "Limitations",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Even though systematic reviews attempt to bring together all the knowledge in a given topic, they are not free from limitations [W2079283960]. In the identification phase, we may have missed interesting articles inventoried in databases other than those used. To mitigate this risk, we used three databases, even though using two databases is considered acceptable. The search terms as well as the various thesauruses used may be considered a limitation; however, we made sure to attempt multiple iterations in order to refine the search.\n\nIn a similar vein, while it is preferable not to limit the literature to a certain period, we choose an 11-year period, which we justify by the fact that the topic is of a technological nature, and technology is a rapidly evolving field. There are undoubtedly interesting articles in other languages that were not retained; we only considered articles in English.\n\nIn the screening, eligibility and inclusion phases, the main limitation is that the decisions were made by the author alone. To reduce bias, we asked a computer scientist to screen a number of articles to verify the interrater reliability and conducted an intrarater reliability analysis 1 year after the first screening. As well, some article authors did not explicitly name the approach used (content-based, collaborative filtering, hybrid, other). In those cases, we had to deduce the method from the explanation they provided.\n\nAs for the quality of the 56 studies used, we kept all those that answered our three research questions even though some offered few details. Moreover, one might argue against five of the studies retained since they did not include enough participants. They document user-centric evaluations that had fewer than 20 participants, the number of participants considered to be the minimum for user-centric evaluation of recommender systems [W2101019781].",
+      "citations": [
+        "W2079283960",
+        "W2101019781"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_10",
+      "section_index": 10,
+      "section_label": "Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this literature review, we looked at articles about recommender systems that recommend resources in a learning context. It is not surprising, then, that most of the experiments were conducted on students. However, from an agency point of view, it would be beneficial to conduct research with learners in a less formal setting. We argue that these results could also be applicable to both lifelong learning and professional development, including professional development for teachers.\n\nWe suggest that this systematic review has shown that there is a need to develop peer recommender systems for TEL. Those peers could be other learners with whom we can learn, or experts from whom we can learn. It could be applied to learners in a formal context, and, again, it could be applied to lifelong learning.\n\nAs other authors have done before us (including [W2199058847, W2739622022]), we maintain that evaluation prototypes should not be limited to accuracy. They could also consider user studies and online experiments.\n\nWhen it comes to the need to use online evaluations to investigate the effects of recommender systems on learning, we suggest not limiting the measurements of effects to the learners' grades. As for educational success, which includes but is not limited to academic achievement, we suggest conducting research that considers aspects other than grades, such as learners' engagement in the learning process and achievement of the goals they have set.\n\nWith this in mind, we also suggest not waiting until the end of the development process to conduct user studies and online experiments. We suggest borrowing the principle of iteration from design-based research: \"During formative evaluation, iterative cycles of development, implementation, and study allow the designer to gather information about how an intervention is or is not succeeding in ways that might lead to better design\" [68, p. 7]. Thus, ways of documenting variation in user satisfaction throughout the iterations should be planned, while accounting for the context in which recommender systems are used.\n\nWe also suggest borrowing from co-design and participatory design the idea of involving the users in the design process. This means no longer designing *for* users (or on behalf of users), but *with* users [W4205986762]. Our aim is therefore to fulfill the needs expressed by the target audience and to find solutions to problems, not always to generalize.",
+      "citations": [
+        "W2199058847",
+        "W2739622022",
+        "W4205986762"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_11",
+      "section_index": 11,
+      "section_label": "Supplementary Information",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Supplementary information accompanies this paper at https://doi.org/10.1186/s41239-020-00219-w.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_12",
+      "section_index": 12,
+      "section_label": "Additional File 1",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_13",
+      "section_index": 13,
+      "section_label": "Acknowledgements",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The author thanks Dr. Th\u00e9r\u00e8se Laferri\u00e8re, director of her Ph.D. project. She also thanks Dr. S\u00e9verine Parent, Catherine Lamy as well as her colleagues from the Faculty of Education at Laval University for their advice about systematic literature reviews. Thanks to Nancy Desch\u00eanes, who provided interrater agreement data and translated this article.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_14",
+      "section_index": 14,
+      "section_label": "Authors' Contributions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The author read and approved the final manuscript.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_15",
+      "section_index": 15,
+      "section_label": "Funding",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This article was written as part of a doctoral project and will be included in the author's thesis. Funding for the research project was provided by the Fonds de recherche du Qu\u00e9bec \u2013 Soci\u00e9t\u00e9 et Culture (FRQSC).",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_16",
+      "section_index": 16,
+      "section_label": "Availability of Data and Materials",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The data that support the findings of this study comprise academic papers that are available from the respective publishers. We have included full references to all of the papers at the Additional file.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_17",
+      "section_index": 17,
+      "section_label": "Competing Interests",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "The author declared that she has no competing interest.\n\nReceived: 5 February 2020 Accepted: 25 May 2020\n\nPublished online: 21 October 2020",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": "s_7_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W3094535194_tables.md"
+}

@@ -1,0 +1,662 @@
+{
+  "id": "W4206133222",
+  "metadata": {
+    "title": "AI-based Carcinoma Detection and Classification Using Histopathological Images: A Systematic Review",
+    "n_sections": 8,
+    "n_subsections": 14,
+    "n_subsubsections": 7,
+    "n_tables": 16
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1. Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Cancer is a leading cause of death worldwide [W2889646458]. The International Agency for Research on Cancer reported [W2889646458, W3128646645] nearly 18.1 million new cases and 9.6 million cancer deaths worldwide in 2018. It has risen to 19.3 million cases and 10 million cancer deaths in 2020. Carcinoma accounts for 80 to 90 percent of all cancer cases that emerge in epithelial cells. The two major subtypes of carcinomas are adenocarcinoma (ADC) and squamous cell carcinoma (SCC). ADC occurs in mucus-producing glandular cells including lung, pancreas, esophagus, colon, breast, prostate, cervix, and vagina. SCC develops in multiple regions such as head and neck, lung, cervix, esophagus, prostate, vagina, and skin [UNMAPPED:3].\n\nEarly detection and treatment of carcinoma can reduce death rates and improve long-term survival rates. Conventional diagnosis of carcinoma involves clinical examination, laboratory tests, imaging tests (CT, MRI, PET, X-ray), and biopsy [W3043758081, UNMAPPED:5]. Biopsy is the gold standard diagnostic technique used to remove tissue samples from the affected area. The scientific examination of tissue samples under a microscope after the staining process is called histopathology. Hematoxylin and eosin (H&E) staining is a routine staining procedure used by pathologists. As a result of treating the cells with the hematoxylin stain, nuclei of the cells turn a purplish blue color, and cytoplasm and connective tissue turn pink due to the eosin stain [UNMAPPED:5].\n\nThe purpose of histopathological image analysis is to examine tissue growth patterns and cell morphology. Pathologists scan tissue slides under a microscope at multiple magnifications. At low magnifications (4X, 10X), they observe the overall tissue sample and get a perspective about the malignant region, especially the architectural pattern of malignancy. Subsequently, they carefully study the slides at higher magnifications (40X, 60X, 100X), to evaluate the morphology at the cellular level. Generally, any malignant tumor has some common microscopic features, such as irregular shape and size of cells and nuclei, hyperchromatic (dark) nuclei, prominent nucleoli, increased nucleus to cytoplasm ratio (NC ratio), increased number of mitotic figures, and abnormal mitotic divisions [UNMAPPED:5].\n\nHistopathological characteristics of SCC include sheets or clusters of polyhedral cells, keratinization, and keratin pearl formation. Additionally, the presence of large cells, vesicular nuclei, and abundant eosinophilic cytoplasm are some of the other microscopic features [UNMAPPED:6, UNMAPPED:7]. Intercellular bridges are a characteristic of squamous epithelium and can be observed at the early stages of SCC [UNMAPPED:8]. **FIGURE 1** shows a few SCC microscopic features at multiple magnifications. ADC shows lepidic, acinar, papillary, micropapillary, solid, and cribriform histopathological growth patterns in some organs, as shown in **FIGURE 2** [W2922268597]. Histopathological variants of SCC and ADC can be differentiated using cell level information [UNMAPPED:10].\n\n**FIGURE 1**: Histopathological features of SCC\n- Sheet Pattern (10x)\n- Eosinophilic cytoplasm (40x)\n- Keratinization (4x)\n- Keratin Pearl (4x)\n- Intercellular bridges creating mosaic pattern (40x)\n\n**FIGURE 2**: Different histopathological patterns of ADC [W2922268597]\n- Acinar\n- Micropapillary\n- Solid\n- Cribriform\n- Non-tumor\n\nManual histopathological examination is laborious, time-consuming, and subjective, with considerable inter and intra-observer variations among experts [W3043758081, UNMAPPED:5]. These limitations call for automation of clinical decision-making. With the technological advancement over the past decades, many researchers have combined image processing, pattern recognition, machine learning (ML), and deep learning (DL) techniques to develop computer-aided diagnostic (CAD) systems for carcinoma detection and classification in order to achieve rapid and reproducible results [UNMAPPED:11].\n\nML is a core discipline of AI that learns discriminative patterns from existing data [W3043758081, UNMAPPED:11]. However, this requires human efforts and domain knowledge to extract appropriate features. It is also important to apply preprocessing algorithms to improve feature extraction, by suppressing unwanted distortions and enhancing or normalizing the histopathological images. DL is considered as a recent evolution of ML with complex functionality. In order to improve the performance of CAD systems, DL extracts the features directly from raw images instead of feature engineering. ML/DL algorithms improve the CAD system performance with increased training samples because they enable the computer to learn from experience [W3043758081]. The classical ML/DL approaches include segmentation of region of interest (ROI), carcinoma detection, and carcinoma classification as different grades or types of carcinoma. These approaches either use microscopic images or whole slide images (WSIs) and extract local or global features from images for diagnosis. Thus, in cancer research, accurate detection and differentiation among carcinomas are crucial for appropriate treatment decisions.\n\nSeveral studies have demonstrated the potential of ML- and DL-based methods for ADC and SCC detection and classification that complement the conventional light microscopy analysis by experienced pathologists. The main challenge in the histopathological research field is to build a novel, generalized, and fully automatic CAD system that provides an appropriate diagnosis robust enough to handle either microscopic images or WSIs, irrespective of imaging artifacts. In this article, we present a systematic review of the literature to evaluate the application and performance of ML and DL algorithms in detection and classification of malignant lesions of epithelial layer. We also highlight our observations on research gaps and make recommendations for future research.\n\nWe organize our review article as follows. Section 2 provides methodology for the systematic literature review. Sections 3 and 4 present search results and article analysis, respectively, followed by summary of SCC and ADC in Section 5 and 6, respectively. Section 7 provides discussion and future direction, and Section 8 presents the conclusion to the article.",
+      "citations": [
+        "W2889646458",
+        "W3128646645",
+        "W3043758081",
+        "W2922268597"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "3",
+        "5",
+        "6",
+        "7",
+        "8",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2. Methodology for the systematic literature review (SLR)",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1. Study selection",
+          "subsubsections": [],
+          "text": "The literature contribution was found by exploring iterative and systematic search on online databases, namely Scopus, Web of Science, IEEE Xplore digital library, ScienceDirect, PubMed, and ACM. The search strings considered were (\"Deep learning\" OR \"artificial intelligence*\" OR \"machine learning\" OR \"neural network\" OR \"image process*\") AND (\"squamous cell carcinoma\") AND (\"histopath*\" OR \"H&E\"). The same search string was used to find ADC articles by replacing the phrase \"squamous cell carcinoma\" with \"adenocarcinoma.\" This search string was jointly developed by the authorship team after examining the terminology used in different articles.\n\nThe research questions of this study are listed below:\n1. What has been the research trend in automated detection and classification of carcinoma?\n2. What type of preprocessing and segmentation methods were involved in current literature?\n3. What methods were used for classification and detection of carcinoma of various organs?\n4. What kind of histopathological imaging and magnifications were reported in these studies?\n\n**Inclusion criteria:**\n- Studies using ML and DL for automated classification, detection and grading of ADC and SCC\n- Studies using H&E stained microscopic images and WSIs\n- Studies published in first and second quartiles (Q1 and Q2)\n\n**Exclusion criteria:**\n- Studies using ML and DL model to predict the carcinoma prognosis, recurrence, survival rate, metastasis, and treatment efficacy\n- Studies using ML and DL models for detection of other carcinomas\n- Studies that include search string in indexed keywords of the articles\n- Conference articles, letter to editors\n- Studies reported in languages other than English\n\n**Information obtained from articles:** We extracted the information from selected articles, analyzed, and tabulated it in the Microsoft Excel format. The following details were noted down:\n- Publication details (article title, authors name, year, country, problem statement)\n- Dataset details and image magnification used for study\n- Methods used in study (ML algorithms, DL models)\n- Outcome in terms of accuracy, precision, recall, F1 score, area under curve (AUC)",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "A systematic approach is used to identify the literature in this study. The methodology includes defining a problem, considering articles, which satisfy inclusion/exclusion criteria, extracting relevant information from the article, and finally, assessing the extracted data [W2995527107]. The main aim of this study is to explore the literature based on the terms that represent the primary concepts: \"squamous cell carcinoma,\" \"adenocarcinoma,\" \"automated detection and classification,\" and \"histopathology.\" SLR was carried out to track the technological development and to identify future scope in carcinoma detection and classification. We conducted the literature search between December 2019 and May 2021.",
+      "citations": [
+        "W2995527107"
+      ],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3. Search Results",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "We limited the article search to the article title, abstract, and author's keywords. A total count of 2,579 articles was obtained. Search discipline was not limited to any domain. Subsequently, 86 articles were selected in accordance with inclusion and exclusion criteria and after the removal of duplicated articles among the databases. The reference list of the selected articles was considered and screened. A total of 15 articles that were not being selected from the search string was also considered for the study. Finally, a comprehensive full-text examination was performed on 101 journal articles. **TABLE 1** summarizes article search results.\n\nThe schematic representation of the systematic review process is shown in **FIGURE 3**. In the subsequent section, we discuss the analysis performed in this study.\n\n**TABLE 1: Article search results**\n\n{{TABLE:tbl_01}}\n\n*Final selected articles = 101*\n\n**FIGURE 3**: Study selection process\n- Title, abstract, author keyword search for SCC: (\"Automat*\" OR \"Deep learning\" OR \"artificial intelligence*\" OR \"machine learning\" OR \"neural network\" OR \"image process*\") AND (\"squamous cell carcinoma\") AND (\"histopath*\" OR \"H&E\"))\n - Scopus: n=310, WoS: n=85, SD: n=398, IEEE: n=10, PM: n=157, ACM: n=03\n - Total: N=963\n- Title, abstract, author keyword search for ADC: (\"Automat*\" OR \"Deep learning\" OR \"artificial intelligence*\" OR \"machine learning\" OR \"neural network\" OR \"image process*\") AND (\"adenocarcinoma\") AND (\"histopath*\" OR \"H&E\"))\n - Scopus: n=563, WoS: n=127, SD: n=648, IEEE: n=22, PM: n=246, ACM: n=10\n - Total: N=1616\n- Total articles before duplicates removal: N=2579\n- Articles count after duplicates removal: N=1358\n- Excluded articles based on inclusion/exclusion criteria: n=1272\n- Full length article after screening: N=86\n- Articles obtained from reference list of selected articles: n=15\n- Articles included for literature review: N=101",
+      "citations": [],
+      "tables_in_text": [
+        "tbl_01"
+      ]
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4. Analysis",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1. Descriptive analysis",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_4_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "4.1.1. Year-based analysis",
+              "parent_subsection_id": "s_4_1",
+              "text": "In **FIGURE 4**, it can be observed that carcinoma is one of the study areas since 1990. However, those studies were heavily dependent on the statistical analysis. Many of the 101 articles reported have been written in the last decade because of rapid evolution in ML and DL techniques and their applications in carcinoma diagnosis. Based on the trend, we anticipate that a greater number of studies could emerge within the research domains of automation systems for carcinoma detection and classification.\n\n**TABLE 2: Article analysis based on year of publication**\n\n{{TABLE:tbl_02}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_02"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "4.1.2. SJR/JCR quartile-based analysis",
+              "parent_subsection_id": "s_4_1",
+              "text": "We divided the journals into each subject category based on quartiles of Journal Citation Reports (JCR)/SCIMAGO Journal and Country Rank (SJR). Out of 60 journals, the top 16 journal names that published greater than or equal to two articles and the article counts of the corresponding journals are depicted in **FIGURE 5**. We carefully chose articles from Q1 and Q2 because the most prestigious journals within a subject area occupy Q1 (top 25% of journals in the list) and Q2 (top 25% to 50% group). Among the selected articles, 76.6% (46 out of 60 journals) of the articles were published in Q1 journals and 23.4% (14 out of 60 journals) of the articles were published in Q2 journals. Additionally, among 60 journals, 30% (18 journals) of journals were of open access type. The year of quartile rank list consideration is 2020.\n\n**TABLE 3: Analysis based on article count with journal names**\n\n{{TABLE:tbl_03}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_03"
+              ]
+            },
+            {
+              "subsubsection_id": "s_4_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "4.1.3. Geographical context-based analysis",
+              "parent_subsection_id": "s_4_1",
+              "text": "**FIGURE 6** depicts geographic context-based analysis of carcinoma detection and classification, where it shows article count of each country. We grouped some countries into category-1, category-2, and category-3 based on their article count as 3, 2, and 1, respectively. Category-1 in **FIGURE 6** includes Netherlands, Turkey, Switzerland, Iran, France, Brazil, and Singapore. Category-2 comprises Sweden, Finland, Italy, South Africa, Austria, Germany, Israel, and Pakistan. Category-3 includes Malaysia, Libya, Republic of Korea, Saudi Arabia, Slovenia, Spain, Sri Lanka, Taiwan, Bangladesh, and Croatia. The majority of research was reported by developed and developing economies, with the top four countries on the list being the United States (34 papers), China (17 papers), India (14 papers), and the United Kingdom (13 papers). The articles also show collaborative work with multiple countries, which indicates the importance of research on carcinoma in a global scenario. **FIGURE 7** shows the count of articles that has been published by various universities of the top four countries. We observed the authors' collaborative work with different universities within these countries and among other countries too. It clearly shows the widespread interest among people from various universities.\n\n**TABLE 4: Country-based analysis**\n\n{{TABLE:tbl_04}}\n\n**TABLE 5: University-based analysis in top four countries (USA)**\n\n{{TABLE:tbl_05}}\n\n**TABLE 6: University-based analysis in top four countries (China)**\n\n{{TABLE:tbl_06}}\n\n**TABLE 7: University-based analysis in top four countries (UK)**\n\n{{TABLE:tbl_07}}\n\n**TABLE 8: University-based analysis in top four countries (India)**\n\n{{TABLE:tbl_08}}",
+              "citations": [],
+              "tables_in_text": [
+                "tbl_04",
+                "tbl_05",
+                "tbl_06",
+                "tbl_07",
+                "tbl_08"
+              ]
+            }
+          ],
+          "text": "Descriptive analysis was carried out to observe the statistics related to the articles obtained during SLR. We conducted the quantitative analysis based on the article information to assess the relevance of our domain of interest. The descriptive analysis of selected articles was performed based on the year of publication, leading journals, and geographical context. Sections 4.1.1, 4.1.2, and 4.1.3 provide a comprehensive overview of descriptive analysis.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_4_2",
+          "subsection_index": 2,
+          "subsection_label": "4.2. Article analysis",
+          "subsubsections": [],
+          "text": "Our main objective is to group the downloaded articles in such a way that each group provides essential information about carcinoma diagnosis. We consider various research articles to provide a comprehensive review of AI-based techniques for carcinoma diagnosis using histopathological images. **FIGURE 8** shows categorization of articles based on the primary organ of carcinoma, and its detailed discussion is provided in Sections 5 and Section 6.\n\n**FIGURE 8**: Section summary\n- Squamous cell carcinoma (SCC) (Sec. 5)\n - Head and Neck SCC (Sec. 5.1)\n - Oral precancerous and OSCC classification (Sec. 5.1.1)\n - OSCC grade classification (Sec. 5.1.2)\n - ROI detection from OSCC (Sec. 5.1.3)\n - H&N miscellaneous (Sec. 5.1.4)\n - Lung SCC (Sec. 5.2)\n - Skin SCC (Sec. 5.3)\n - Cervix SCC (Sec. 5.4)\n - Esophagus SCC (Sec. 5.5)\n- Adenocarcinoma (ADC) (Sec. 6)\n - Colon ADC (Sec. 6.1)\n - Gastric and pancreas ADC (Sec. 6.2)\n - Prostate ADC (Sec. 6.3)\n - Female genital organs and esophagus ADC (Sec. 6.4)\n - Lung ADC (Sec. 6.5)\n - Miscellaneous ADC (Sec. 6.6)",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In Sections 4.1 and 4.2, we discuss the relevant articles to identify the current trends and technology of carcinoma detection and classification. The descriptive analysis and article analysis were performed to investigate the importance of the topic.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5. Squamous Cell Carcinoma",
+      "subsections": [
+        {
+          "subsection_id": "s_5_1",
+          "subsection_index": 1,
+          "subsection_label": "5.1. Head and Neck SCC",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_5_1_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "5.1.1. Oral precancerous and cancerous lesion classification",
+              "parent_subsection_id": "s_5_1",
+              "text": "Diagnosis of precancerous lesions of oral cavity, namely oral submucous fibrosis, leukoplakia, and erythroplakia, at the earliest is important because they could progress into carcinoma in situ and/or SCC [UNMAPPED:15]. Mahmood et al. [W3043758081], Nag et al. [UNMAPPED:16], and Alabi et al. [W3151286594] provided a comprehensive review on precancerous and cancerous lesions of H&N region. Precancerous changes manifest significant cytological and tissue architectural changes such as pleomorphism, increased NC ratio, loss of polarity of basal layer, increased mitotic count, keratinization in single cells, keratin pearls, and irregular epithelial stratification [UNMAPPED:16]. Nag et al. [UNMAPPED:16] highlighted the importance of tissue architecture and analysis of cellular changes for early detection that helps improve patient stratification.\n\nIn [UNMAPPED:15], Liu et al. proposed oral cancer risk index that helps prediction of OSCC risk in patients with oral leukoplakia. The specificity and sensitivity of 99% and 98% were achieved using support vector machine (SVM) classifier. Krishnan et al. [UNMAPPED:18] segmented the epithelium layer based on texture and color gradient. They obtained 98% segmentation accuracy. Further, in [W2071957125, UNMAPPED:20, UNMAPPED:21], the authors classified the oral tissue images as normal, oral precancerous lesion, and OSCC. Krishnan et al. [W2071957125] differentiated oral tissue images based on texture features of collagen fibers using SVM and obtained 91.64% accuracy. In [UNMAPPED:21], Krishnan et al. calculated epithelium thickness and tissue architecture using fractal dimension and performed statistical analysis to classify the images. Krishnan et al. [UNMAPPED:20] extracted HOS-, LBP-, and LTE-based texture features from histopathological images. Out of the five classifiers, fuzzy classifier achieved 95.7% accuracy. These studies were carried out with the images captured at 40X [W2071957125] and 10X [UNMAPPED:18, UNMAPPED:20, UNMAPPED:21] magnifications. Many researchers reported the feature extraction from epithelial tissue [W2071957125, UNMAPPED:18, UNMAPPED:20, UNMAPPED:21]. However, it is also important to measure the epithelial-connective tissue interface (ECTI) for proper diagnosis. Eid et al. [UNMAPPED:22] used fractal geometry quantifiers to quantify ECTI irregularity, using 377 histopathological images collected at 40X magnification. They used linear discriminant analysis (LDA) for classification and reported a sensitivity and specificity of 63% and 67%, respectively. Along with tissue architecture analysis, cell nuclei were considered to assess tumor development by Landini et al. [UNMAPPED:23] based on graph theory. The discrimination rates of 67%, 100%, and 80% were obtained for normal, dysplastic, and OSCC cells, respectively.",
+              "citations": [
+                "W3043758081",
+                "W3151286594",
+                "W2071957125"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "15",
+                "16",
+                "18",
+                "21",
+                "20",
+                "22",
+                "23"
+              ]
+            },
+            {
+              "subsubsection_id": "s_5_1_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "5.1.2. Oral cancer grade classification",
+              "parent_subsection_id": "s_5_1",
+              "text": "Carcinomas can be graded as well differentiated (WD), moderately differentiated (MD), and poorly differentiated (PD). Almangush et al. [W3027174361] discussed different WHO grading and staging systems, and highlighted the importance of AI to improve staging, grading, and treatment planning of OSCC. Rahman et al. [UNMAPPED:25] and Nawandhar et al. [W2976786915] proposed a ML-based classifier to classify normal cells and oral SCC. Further, they graded OSCC into three grades based on texture features, gradient features, geometrical features, and Tamura features. In [W2976786915], Nawandhar et al. classified 676 OSCC microscopic images using maximum voting method and obtained 95.56% accuracy. A total of 305 features were extracted after applying contrast limited adaptive histogram equalization (CLAHE) technique. Rahman et al. [UNMAPPED:25] considered texture-based features for SVM classifier to distinguish normal and cancerous cells and achieved 100% accuracy. Although both groups of researchers collected the images at 40X magnification, the experiments were conducted on different image datasets. Das et al. [UNMAPPED:26] extracted small patches from 156 WSIs, digitized at 40X magnification instead of digital microscopic images for OSCC grade classification. They performed a comparative study among the transfer learning approach using Alexnet, VGGNet, and ResNet models with that of the training from scratch. The results showed that convolutional neural network (CNN) designed from scratch performed better than transfer learning models, with an accuracy of 97.51%. In [W3153926656], Musulin et al. exploited XceptionNet with stationary wavelet transformation technique to grade 322 images captured at 10X magnification. They obtained a classification AUC of 0.96.",
+              "citations": [
+                "W3027174361",
+                "W2976786915",
+                "W3153926656"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "25",
+                "26"
+              ]
+            },
+            {
+              "subsubsection_id": "s_5_1_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "5.1.3. ROI detection from OSCC",
+              "parent_subsection_id": "s_5_1",
+              "text": "OSCC WSIs were classified as tumor, lymphocytes, and stroma using ResNet, DenseNet, InceptionNet, XceptionNet, and MobileNet, out of which MobileNet showed superior performance, with an accuracy of 96.31% [W2973237362]. A few histopathological features such as nuclei detection and delineation [W2962715904, W3095138978, UNMAPPED:30], mitotic cell detection and count [W2603925730, UNMAPPED:33], tumor-associated tissue eosinophilia [W2143230707], microvessel architecture [W2987523870, UNMAPPED:36], and keratin pearl count [UNMAPPED:36] were used to distinguish OSCC from various other types of cancer. GPU-based squamous cell segmentation was performed by Nawandhar et al. [W3095138978], using k-means clustering algorithm. They extracted morphological and Law's texture features from images of SCC cases. Lu et al. [UNMAPPED:30] reported nuclei segmentation using watershed method and extracted shape features and texture features from segmented nuclei. The extracted features were statistically analyzed using Wilcoxon rank sum test to identify the top five histomorphometry features for further analysis. In [W2962715904], Das et al. proposed a two-stage model for automatic detection and segmentation of nuclei from OSCC. They implemented CNN model for nuclei detection and achieved precision of 82.03%. In the second stage, the authors used Chan-Vese model for segmentation of nuclei after applying contour enhancement using non-subsampled contourlet transform. Further, they also implemented an automatic technique to classify mitotic and non-mitotic cells [W2603925730]. Stain normalization was performed using singular value decomposition (SVD) method and mitotic, and non-mitotic cells were extracted using Otsu's thresholding. The statistical features, namely entropy measures, fractal dimension, and Hu's moment-based descriptors, were used for random forest (RF) tree ensemble learning algorithm to classify mitotic and non-mitotic cells [W2603925730]. Tandon et al. [UNMAPPED:33] presented a study on comparison of mitotic figure count in normal oral sample, oral dysplasia, and oral SCC tissue sample stained with crystal violet and H&E staining technique. SCC group had a significantly higher proportion of abnormal mitotic figures compared with normal and dysplasia samples irrespective of the stain used. Lorena et al. [W2143230707] used immunohistochemistry (IHC) and H&E stained images to count eosinophils in oral SCC images. Statistical tests supported the evidence that special staining techniques such as IHC were not required to identify eosinophils in oral SCC.\n\nMicrovessels in tumor tissue varied in terms of size, shape, and texture [W2987523870, UNMAPPED:36]. Fraz et al. [W2987523870] segmented microvessels from WSIs of oral SCC samples using deep network and achieved an accuracy of 96%. Tan et al. [UNMAPPED:36] performed morphometric analysis of microvessel density (MVD) and keratin pearls of three different grades of OSCC images, captured at 20X and 10X magnifications. Morphometric analysis showed that MVD was significantly lower in WDSCC compared with MDSCC, and the keratin pearl count was significantly higher in WDSCC compared with MDSCC and PDSCC. Recently, deep segmentation models such as SegNet, UNet, and DeepLabv3+ were used to segment the tumor region from histopathological images [W3153926656, W3109918169].",
+              "citations": [
+                "W2973237362",
+                "W2603925730",
+                "W2143230707",
+                "W2987523870",
+                "W3095138978",
+                "W2962715904",
+                "W3153926656",
+                "W3109918169"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "33",
+                "36",
+                "30"
+              ]
+            },
+            {
+              "subsubsection_id": "s_5_1_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "5.1.4. H&N miscellaneous",
+              "parent_subsection_id": "s_5_1",
+              "text": "In the 1990s, a few researchers [W2045856790, UNMAPPED:38] differentiated benign and malignant squamous tumors of H&N region based on nuclei information. Cooper et al. [UNMAPPED:38] differentiated larynx SCC samples as verrucous SCC and benign squamous papilloma based on morphometric analysis. Jin et al. [W2045856790] reported that the area and the diameter of nuclei were increased in invasive SCC in comparison with normal mucosa and squamous papilloma. Mete et al. [W2124237925] and Halicek et al. [W2977899280] proposed automation systems to detect H&N SCC using WSIs and achieved accuracies of 96% and 85%, respectively. DBSCAN clustering algorithm detected malignant areas based on nuclei color and shape features in HSV color space. They classified the WSI patches as normal or malignant using SVM [W2124237925]. Halicek et al. [W2977899280] also used HSV color space for InceptionNet architecture in SCC diagnosis.",
+              "citations": [
+                "W2045856790",
+                "W2124237925",
+                "W2977899280"
+              ],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "38"
+              ]
+            }
+          ],
+          "text": "SCC of head and neck (H&N) is the sixth leading cancer incidence worldwide, with approximately 600,000 new cases annually [W2977899280]. The prevalence rate is increasing in Southeast Asian countries due to alcohol consumption, smoked and smokeless tobacco, diet, viruses, immunosuppression, and chronic infections. H&N SCC develops in mucosal linings of upper aerodigestive tract, tongue, oral cavity, pharynx, larynx, trachea, nasal cavity, and paranasal sinuses [W3043758081]. Oral SCC (OSCC) was observed in 95% cases of oral cancer and is the most common among H&N region [W2976786915]. The higher incidence of oral cancer is due to the late diagnosis of potential precancerous lesions. Section 5.1.1 discusses SCC and precancerous lesion classification. Section 5.1.2 describes different grades of OSCC. Section 5.1.3 reports ROI detection from the tissue sample that helps SCC diagnosis, and Section 5.1.4 provides the literature on SCC of H&N regions other than oral cavity.",
+          "citations": [
+            "W2977899280",
+            "W3043758081",
+            "W2976786915"
+          ],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_5_2",
+          "subsection_index": 2,
+          "subsection_label": "5.2. Lung SCC",
+          "subsubsections": [],
+          "text": "Lung cancer accounts for more than 1.4 million deaths worldwide annually [W2514628397]. Classification of lung cancer subtypes as ADC, SCC, large cell carcinoma, and small cell carcinoma was based on morphological features of tumor tissue, particular tumor cells, and surrounding tissue environment [W2548615865, UNMAPPED:10]. Several researchers [W2514628397, W2548615865, W2066032304, W2144012133, W3134849846, W3150538710] have reported the use of traditional ML approaches such as SVM [W2514628397, W3150538710], RF [W3134849846], AdaBoost, cw-Boost [W2066032304], fast adaptive neural classifier [W2144012133], and statistical model [W2548615865] to distinguish ADC and SCC. The classification was performed based on various features extracted either from cells, nuclei, or images. The features such as texture features, morphological features, Hu's moments, GLGCM, wavelet transform, GLCM, LBP, GLDS, Markov random field, VGGNet features, HOG, GIST, LeNet features, and densitometric features were reported in the literature [W2514628397, W2548615865, W2066032304, W2144012133, W3150538710, UNMAPPED:10, UNMAPPED:47]. Li et al. [W3150538710] applied Lasso and Relief feature selection methods and LDA feature reduction technique on the set of features extracted from tissue samples. In [W3134849846], Nishio et al. classified the lung cancer subtypes using the homology-based feature extraction method. They obtained accuracy of 78.33% with RF classifier, which was better than the accuracy of 70.83% using texture features with RF classifier. A few researchers [UNMAPPED:10, UNMAPPED:47, UNMAPPED:48] reported the implementation of hash-based image retrieval techniques to distinguish lung cancer subtypes. Hashing-based image retrieval with majority voting method achieved 87.3% accuracy [UNMAPPED:10, UNMAPPED:48], whereas 97.98% classification accuracy was obtained on supervised graph hashing technique [UNMAPPED:47]. Segmentation of nuclei using Otsu's thresholding method was reported [W2514628397, W2144012133]. Some research groups proposed feature enhancement methods to improve classification accuracy [W2066032304, W2144012133, W3150538710].\n\nFurther, deep CNN pretrained models such as InceptionNet, AlexNet, VGGNet, and ResNet were exclusively used in ADC and SCC classification [W2949648625, W2760946358, W3155033502, W3113328935, W3141984075, UNMAPPED:50]. Coudray et al. [W2760946358] considered InceptionNet and obtained AUC of 0.97 for the cancer genome atlas (TCGA) image classification. However, the authors tested the model on independent datasets collected at 5X and 20X magnifications. The results showed that AUC around 0.834 to 0.861 was obtained using images of 20X magnification. An AUC around 0.871 to 0.928 was achieved on images of 5X magnification. Noorbakhsh et al. [W3113328935] also reported the use of transfer learning with InceptionNet network for TCGA tiles classification. They obtained AUC around 0.87 for ADC and SCC samples of lung, esophagus, and cervix region. Yu et al. [UNMAPPED:50] used InceptionNet, VGGNet, and AlexNet models for the classification and obtained AUC of 0.93 for VGGNet and InceptionNet. However, AlexNet achieved a smaller AUC of 0.75. Hence, the authors concluded that tumor type and subtype classification might require deep layer networks. In these studies, WSI was broken into varied non-overlapping patches [W2760946358, UNMAPPED:50]. In [W2949648625], Khosravi et al. considered random patches from TCGA WSI dataset and fine-tuned the parameters of InceptionNet model. The classification accuracy of 92% was achieved. Kanavati et al. [W3155033502] and Yang et al. [W3141984075] introduced EfficientNet for lung cancer subtype classification and AUC above 0.95 was obtained. Both research groups trained the model using private and public WSIs, digitized at 10X [W3155033502] and 20X [W3141984075] magnifications. Before training, Otsu's thresholding was used to remove the white background region. In a recent study, Chen et al. [W3132591370] reported a new method for lung cancer subtype classification using annotation-free WSIs with a slide-level label. They exploited ResNet model and obtained ROC values of 0.96 and 0.94 for ADC and SCC classification, respectively.",
+          "citations": [
+            "W2514628397",
+            "W2548615865",
+            "W3150538710",
+            "W3134849846",
+            "W2066032304",
+            "W2144012133",
+            "W2760946358",
+            "W3113328935",
+            "W2949648625",
+            "W3155033502",
+            "W3141984075",
+            "W3132591370"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "10",
+            "47",
+            "48",
+            "50"
+          ]
+        },
+        {
+          "subsection_id": "s_5_3",
+          "subsection_index": 3,
+          "subsection_label": "5.3. Skin SCC",
+          "subsubsections": [],
+          "text": "Skin SCC is the second most common skin cancer; it accounts for around 20% of non-melanoma skin malignancies [W2226743799]. Noroozi et al. [W2226743799] proposed an automatic method using histopathological images to differentiate SCC in situ from actinic keratosis. A total of 30 images were collected at 60X magnification. They extracted intensity profiles of epidermis region for Bayesian classifier and obtained 92.1% accuracy. The same group of researchers [UNMAPPED:57] differentiated basal cell carcinoma from SCC using 33 images captured at 40X magnification in another study. They considered Z-transform features with SVM classifier and achieved an accuracy of 84%.",
+          "citations": [
+            "W2226743799"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "57"
+          ]
+        },
+        {
+          "subsection_id": "s_5_4",
+          "subsection_index": 4,
+          "subsection_label": "5.4. Cervix SCC",
+          "subsubsections": [],
+          "text": "Cervical cancer is the most common cause of death in women, with 80% of cases observed in developing countries [W2897927086, W2027123781, W2139754658]. Cervical intraepithelial neoplasia (CIN) is a premalignant lesion. If CIN is left untreated, it may progress to SCC of cervix [W2139754658]. Several researchers [W2897927086, W2027123781, W2139754658, W2584110890, UNMAPPED:62] classified CIN into CIN-I, CIN-II, and CIN-III grades, based on the severity of abnormal cells. Wang et al. [W2139754658] reported a block-based coarse segmentation of squamous epithelium from WSIs digitized at low magnification. Further, SVM was used for classification based on texture features obtained from the squamous epithelium. Keenan et al. [W2027123781] presented a method to construct Delaunay triangulation mesh of nuclei to perform the nuclei analysis. Discriminant analysis showed that the classification accuracy of CIN-I, CIN-II, and CIN-III were 76.5%, 62.3%, and 98.7%, respectively. Zhang et al. [W2584110890] proposed a shape-based graph search method for nuclei segmentation from images. Almubarak et al. [UNMAPPED:62] classified the segments of images using CNN and constructed a new feature vector from probability of all segments to classify the image. The authors obtained 77.2% accuracy using logistic regression (LR) and RF tree classifiers. Zhang et al. [W3135959923] presented stacked ensemble framework to classify tissue samples into low and high SCC grades. They obtained 90% accuracy for ensemble learning and 89.17% after applying synthetic minority oversampling data augmentation technique. Further, Wu et al. [W2897927086] proposed CNN model to classify cervical SCC into three different subtypes as keratinizing, nonkeratinizing, and basaloid SCC. They reported the use of 3,012 patches obtained from 502 images and obtained 108,432 patches after data augmentation. The model achieved classification accuracy of 93.33% and 89.48% for the augmented image group and original image group, respectively.",
+          "citations": [
+            "W2139754658",
+            "W2027123781",
+            "W2584110890",
+            "W3135959923",
+            "W2897927086"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "62"
+          ]
+        },
+        {
+          "subsection_id": "s_5_5",
+          "subsection_index": 5,
+          "subsection_label": "5.5. Esophagus SCC",
+          "subsubsections": [],
+          "text": "The eighth most common malignancy in the world is esophagus carcinoma (EC). Esophagus SCC (ESCC) and esophagus adenocarcinoma (EAC) are two major variants of EC. In western countries, EAC is the most common variant, and ESCC is dominant in developing countries [UNMAPPED:64]. Das et al. [UNMAPPED:26] proposed CNN-based SCC grade classification of esophagus and oral tissue images. Hosseini et al. [UNMAPPED:64] differentiated precancer of ESCC, called squamous cell dysplasia, from normal tissue. They considered the images of two different magnifications and enhanced the G component of RGB images using CLAHE technique. Fractal-based analysis was performed to measure geometrical complexity of images. The k-nearest neighbour (KNN) classifier provided an accuracy of 97.78% for classification.",
+          "citations": [],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "64",
+            "26"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we describe different approaches used to detect and classify SCC of various organs. Sections 5.1, 5.2, 5.3, 5.4, and 5.5 provide a detailed discussion on the existing literature for SCC diagnosis of head and neck region, lung, skin, cervix, and esophagus, respectively.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "6. Adenocarcinoma",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "6.1. Colon ADC",
+          "subsubsections": [],
+          "text": "Colon and stomach cancer are the causes of leading deaths in developed countries, with colon cancer ranking second in women and third in men during 2018 [W3004016611, UNMAPPED:65]. Colon ADC is the most common cancer, and diagnosis is based on the architectural appearance of gland formation and its morphology [W2753886374]. Segmentation helps to localize information such as texture and spatial arrangement of cells specific to the glandular areas. Many researchers used MICCAI Gland Segmentation (GlaS) Challenge in 2015 [W2288892845], releasing images with annotations in their studies to demonstrate gland segmentation [W2753886374, W2762006829, W2959438241]. CNNs manifest great potential in differentiating diagnostic features of H&E stained images. Manivannan et al. [W2753886374] combined handcrafted features with features computed by CNN for gland segmentation. They predicted local patch labels using SVM and obtained Dice score above 0.85. Kainz et al. [W2762006829] also segmented and classified glands as benign and malignant. The authors separated the hematoxylin and the eosin components using the color deconvolution method and observed relevant information of tissue structure in red channel of CLAHE enhanced images. They proposed CNN models, namely Separate-net and Object-net for segmentation and classification, respectively. Binder et al. [W2959438241] presented multiple organ glands and stroma segmentation using dense UNet from GlaS dataset. They obtained a Dice coefficient of 0.92 for colon gland segmentation and 0.93 for stromal segmentation. They also segmented breast glands and stroma with Dice coefficient of 0.78 and 0.87, respectively. The model was originally trained on colon dataset. Another group of researchers used private dataset to segment the glands [W2128252595, UNMAPPED:65, UNMAPPED:71].\n\nQaiser et al. [UNMAPPED:65] proposed fast tumor segmentation by RF regression model on different WSI datasets. They combined deep convolutional and persistent homology features extracted from hematoxylin, eosin, and background channels. A precision of 0.77 was obtained. However, all the above studies used pixel-based annotation to perform the segmentation. Tosun et al. [UNMAPPED:71] and Gunduz-Demir et al. [W2128252595] reported the object-based segmentation algorithm for ROI segmentation. The authors [W2128252595] differentiated false glands and true glands from segmented glands using decision tree (DT) classifier, and accuracy of 82.57% was achieved. Tosun et al. [UNMAPPED:71] reported accuracy of 94.89% for segmentation of normal and cancerous regions from 16 biopsy samples captured at 5X magnification.\n\nIn [W2053360744], Onder et al. extracted texture features using local histograms and co-occurrence matrices, and labeled images as normal and colon ADC using quasi-supervised texture labeling methodology. They achieved false and true positive rates up to 19% and 88%, respectively. Iizuka et al. [W3004016611] and Kosaraju et al. [UNMAPPED:74] proposed CNN models to differentiate ADC and adenoma tumor patches of colon and gastric WSIs. Kosaraju et al. [UNMAPPED:74] performed noise removal by Gaussian blur smoothing operation, followed by thresholding to remove the background. The images were captured at three different magnifications in which combination of 20X and 5X magnification levels obtained around 93% accuracy. Additionally, results showed that the TCGA stomach and colon carcinoma exhibit similar pathological patterns [UNMAPPED:74]. Yoshida et al. [UNMAPPED:75] developed an e-Pathologist system using multi-instance learning, using neural network classifier. They analyzed the automated system on 1,077 and 251 tissue samples from the two hospitals, digitizing the images at 40X magnification. The undetected rate of carcinoma, undetected rate of adenoma, and over-detected rate were 0%, 9.3%, and 9.9%, respectively for dataset 1 and 0%, 36.1%, and 27.1%, respectively, for dataset 2 [UNMAPPED:75]. Zhou et al. [W3119690984] performed classification and localization of colon ADC using weakly supervised deep CNN methods. Gaussian blur operation and Otsu's thresholding were used in this study. Further, CNN features from image level and heatmap features from cell level were extracted. They achieved an accuracy of 94.6% and 92%, respectively, for TCGA and private dataset using RF classifier. Ghosh et al. [W3130936001] implemented ensemble CNN model to detect colon ADC tumor region in histopathological images. They considered two datasets with images of 20X magnification. Instead of single-center dataset, the model provided better accuracy of 99.13% when datasets were combined. Liang et al. [UNMAPPED:78] presented a method to identify histopathological images of ADC using multi-scale feature fusion CNN-based shearlet transform technique. They achieved detection accuracy of 96% for 8,000 image patches in the training dataset.",
+          "citations": [
+            "W3004016611",
+            "W2753886374",
+            "W2288892845",
+            "W2762006829",
+            "W2959438241",
+            "W2128252595",
+            "W2053360744",
+            "W3119690984",
+            "W3130936001"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "65",
+            "71",
+            "74",
+            "75",
+            "78"
+          ]
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "6.2. Gastric and pancreas ADC",
+          "subsubsections": [],
+          "text": "Gastric ADC is also known as stomach ADC. It represents 90% to 95% of stomach cancer cases in developed countries [W3004016611]. Yoshida et al. [UNMAPPED:79] reported a CNN model to detect stomach ADC using WSIs. The images of 3,062 gastric biopsy specimens were captured at high and low magnifications. Yoshida et al. [UNMAPPED:75, UNMAPPED:79] compared the ePathologist software to detect gastric and colon ADC with expert classification results. Although the overall concordance rate of e-Pathologist was as low as 55.6% for the three-tier classification, it identified 90.6% of negative specimens. Sharma et al. [W2624699030] presented a comparative study among AlexNet transfer learning model, customized CNN model, and RF classifier with handcrafted features for gastric carcinoma classification. They obtained better results for RF model in comparison with CNN model. In [UNMAPPED:81], Yu et al. performed multi-centric study for gastric ADC and normal classification. WSIs were collected from four different private hospitals, and images were digitized at 20X magnification. They performed color deconvolution operation and Otsu's thresholding to remove the background, followed by neural network for classification. Langer et al. [UNMAPPED:82] detected pancreatic ADC from 103 images captured at 45X magnification collected from mice. They applied watershed segmentation for nuclei extraction. Stromal segmentation was performed using color clustering techniques. RF and DT classifiers were used for the detection in which RF results were more promising than DT. Recently, Naito et al. [W3153942604] proposed EfficientNet deep network model for pancreatic ADC and non-ADC classification. They performed transfer learning and obtained 0.984 AUC.",
+          "citations": [
+            "W3004016611",
+            "W2624699030",
+            "W3153942604"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "79",
+            "75",
+            "81",
+            "82"
+          ]
+        },
+        {
+          "subsection_id": "s_6_3",
+          "subsection_index": 3,
+          "subsection_label": "6.3. Prostate ADC",
+          "subsubsections": [],
+          "text": "Prostate ADC is one of the most frequently diagnosed cancers in men, with a high rate of death worldwide [W4247277608]. Detection of prostate ADC using multiscale analysis on WSIs was reported [W4247277608, UNMAPPED:85, UNMAPPED:86]. Rashid et al. [W4247277608] proposed two-stage detection technique to differentiate benign and malignant glands with an accuracy of 93%. Glands were segmented using LDA and connected component techniques with the images captured at 5X magnification. RF classifier used morphological features from segmented regions to identify benign or probable malignant regions. In the second stage, images captured at 20X magnification were considered for nuclei segmentation. They used modified watershed algorithm for nuclei segmentation and extracted specific features for final glands classification. Doyle et al. [UNMAPPED:85] automated the detection of prostate ADC using a hierarchical cascaded scheme, where they considered first order statistics, co-occurrence, and wavelet features. At each scale, pixel-wise Bayesian classifier was designed to obtain the likelihood scenes. Nir et al. [UNMAPPED:86] developed an algorithm to detect cancer and to find the grading agreement among the pathologists. They explored the use of ML and DL techniques for classification of benign and malignant patches. The proposed method achieved 92% accuracy in cancer detection and 79% of accuracy in cancer grading. The Kappa value, which represents classifier's overall grading agreement with the pathologists, was reported as 0.51. Leng et al. [W2943806262] designed a regression model to estimate cancerous regions in WSI and achieved AUC of 0.951. They reported the use of colorimetric analysis of H&E and IHC stained histopathological specimens.\n\nGleason grading system measures a) abnormality of the prostate cancer cells, b) histological growth pattern, and c) the speed of the spread of cancer. It remains the most powerful grading system since 1960. Xu et al. [W2972784366] automated Gleason grading of prostate ADC using SVM algorithm and obtained AUC of 0.87. They extracted H channel from H&E stained RGB images and applied multi-thresholding approach to remove the background. In [W2912031427], Lawson et al. used persistent homology to capture architectural features of Gleason patterns after performing Reinhard color normalization and color deconvolution operation. They used various statistical techniques including principal component analysis, hierarchical clustering and t-distributed stochastic neighbor embedding to classify images according to the grading system. Linkon et al. [W3157896304] shed light on the evolution of deep learning in prostate ADC detection and Gleason grading. Their extensive review of the literature highlighted lack of reproducible data in this research field. Several researchers automated the grading system [W3045168954, W2949226441, UNMAPPED:93, UNMAPPED:94] using DL models. Pantanowitz et al. [W3045168954] reported ensemble CNN model for carcinoma diagnosis and grading; they performed tissue detection, classification, and slide level analysis. Gradient boosting classifier was used to differentiate tissue and background. AUC around 0.99 was obtained for external and internal test sets. Arvaniti et al. [W2949226441] automated Gleason grading system using transfer learning approach on TMA dataset. The authors used different CNN models in which MobileNet performed well, with an average recall of 70% for Gleason grades classification. Ambrosini et al. [UNMAPPED:93] implemented CNN model to extract cribriform growth pattern of prostate ADC, achieving 0.81 AUC. Another research group [UNMAPPED:94] used CNN model to detect ADC, grading them into different Gleason grades using 85 images collected at 20X magnification. They achieved accuracy of 91.05% for benign versus ADC classification and 85.4% for Gleason grading.\n\nGland segmentation helps detection of prostate cancer. Singh et al. [W2668608389] applied pixel- and object-based approaches to segment different regions from tissue samples. They collected the images from TCGA database and digitized at 40X magnification. Rashid et al. [UNMAPPED:96] differentiated benign and malignant glands based on nuclei feature and the ratio between epithelial layer area and lumen area of segmented regions. They used LDA for gland pixel labeling and watershed segmentation algorithm for ROI segmentation, followed by SVM for classification. A sensitivity of 0.83 and specificity of 0.81 were achieved for classification of glands.",
+          "citations": [
+            "W4247277608",
+            "W2943806262",
+            "W2972784366",
+            "W2912031427",
+            "W3157896304",
+            "W3045168954",
+            "W2949226441",
+            "W2668608389"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "85",
+            "86",
+            "93",
+            "94",
+            "96"
+          ]
+        },
+        {
+          "subsection_id": "s_6_4",
+          "subsection_index": 4,
+          "subsection_label": "6.4. Female genital organs ADC and esophagus ADC",
+          "subsubsections": [],
+          "text": "Endometrial [UNMAPPED:97] and ovarian [UNMAPPED:98] tissue types were classified into benign and ADC classes. The classification was performed using CNN and attention mechanism, where VGGNet was the backbone [UNMAPPED:97]. The network accuracy was around 76% for four class classification and around 93% for two-class classification using 498 tissue samples. Patch-based endometrium and colon ADC was detected by Riasatian et al. [W3138973186]. They used the DenseNet topology as a feature extractor and performed classification using SVM. In [UNMAPPED:98], Yu et al. reported transfer learning approach on different CNN models, in which VGGNet identified the cancerous regions with AUC greater than 0.95. The authors also performed tumor grade classification and obtained AUC greater than 0.80. Tomita et al. [W2986668407] extracted grid-based features using CNN and detected esophagus ADC through an attention-based technique. They used 180 WSIs, digitized at 20X magnification, and achieved mean accuracy of 0.83. The proposed model depends on tissue-level annotations, unlike contemporary methods that are based on pixel/ROI annotation [W2922268597, W2977899280, W2071957125, W2973237362, W2987523870, W2045856790, W2066032304, W2139754658, W2624699030, W4247277608, W2912031427, W3045168954, W2949226441, W2668608389, W3033382446, W2971376088, UNMAPPED:25, UNMAPPED:26, UNMAPPED:36, UNMAPPED:38, UNMAPPED:57, UNMAPPED:71, UNMAPPED:82, UNMAPPED:85, UNMAPPED:86, UNMAPPED:96, UNMAPPED:101].",
+          "citations": [
+            "W3138973186",
+            "W2986668407"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "97",
+            "98"
+          ]
+        },
+        {
+          "subsection_id": "s_6_5",
+          "subsection_index": 5,
+          "subsection_label": "6.5. Lung ADC",
+          "subsubsections": [],
+          "text": "As discussed in Section 5.2, lung carcinoma is categorized into four different subtypes. Several researchers proposed AI-based approaches to detect and classify lung cancer into its subtypes [W2922268597, W2514628397, W2548615865, W2066032304, W2144012133, W2949648625, W2760946358, W3113328935, W2986668407, W3033382446, W2971376088, W2889164281, W2970152602, W3019142647, UNMAPPED:10, UNMAPPED:47, UNMAPPED:50, UNMAPPED:101, UNMAPPED:104, UNMAPPED:105, UNMAPPED:106]. Wang et al. [UNMAPPED:101] segmented ADC nuclei using active contour method and classified ADC tumor cells, stromal cells, and lymphocytes using CNN model. The accuracy of 90.1% was obtained for test dataset [UNMAPPED:101]. Wen et al. [UNMAPPED:104] performed nuclei segmentation using intensity and texture features. They used SVM and RF models to classify image patches as good quality, under quality, and over quality segmentation. RF achieved better accuracy than SVM for test datasets. F1 scores above 75% were achieved for two independent datasets. Kanavati et al. [W3033382446] differentiated carcinoma and benign tumor based on EfficientNet model in sliding window fashion. The authors obtained AUCs above 0.97 for four independent test datasets. Shi et al. [UNMAPPED:105] proposed a pairwise-based deep ranking hashing algorithm to detect carcinoma image patches, achieving 97.4% accuracy. Wang et al. [W2971376088] performed an image-level classification of WSIs using a weakly supervised learning approach. A fully convolutional network was used to retrieve discriminative blocks and representative features from images. Further, they classified lung cancer as normal, SCC, ADC, and small cell carcinoma using RF classifier. Frank et al. [W3019142647] performed image entropy tiles analysis using a customized CNN model. They obtained an accuracy of 92% for lung ADC and SCC classification.\n\nADC was classified into its subtypes based on histological growth patterns using WSIs [W2922268597, UNMAPPED:106]. Nguyen et al. [W2922268597] reported an accuracy of 89.24% for classification of five ADC subtypes using CNN with soft voting technique. Wei et al. [UNMAPPED:106] implemented ResNet model for carcinoma region identification. A total of 422 WSIs digitized at 20X magnification was considered for the study. A Kappa score of 0.525 and an agreement of 66.6% with the three pathologists for classifying ADC subtypes was reported. Antonio et al. [W2889164281] used pretrained autoencoder as a feature extractor for convolutional classifier and classified transcriptome subtypes of lung ADC. They evaluated the results with three varied input images sizes and filter sizes. The sparse autoencoder network with 2048\u00d72048 input size resulted in 98.9% classification accuracy.",
+          "citations": [
+            "W3033382446",
+            "W2971376088",
+            "W3019142647",
+            "W2922268597",
+            "W2889164281"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "101",
+            "104",
+            "105",
+            "106"
+          ]
+        },
+        {
+          "subsection_id": "s_6_6",
+          "subsection_index": 6,
+          "subsection_label": "6.6. Miscellaneous ADC",
+          "subsubsections": [],
+          "text": "Canine mammary tumors (CMTs) in dogs have elevated rates of occurrence and mortality, which include ADC as one of the subtypes. They are also considered great models for studies of human breast cancer. Kumar et al. [W2970152602] evaluated a fused framework, where they extracted features using VGGNet and performed classification using SVM and RF on canine mammary tumor and human breast cancer datasets. The proposed framework with SVM resulted in mean accuracy of 97% and 93% for binary classification of human breast cancer and CMT, respectively. However, the highest accuracy was obtained at the lowest magnification.",
+          "citations": [
+            "W2970152602"
+          ],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In this section, we provide the details of state-of-the-art methods of ADC detection and classification using ML and DL approaches. We subdivided the section into six subsections based on the primary organ of origin, namely colon, gastric and pancreas, prostate, female genital organs and esophagus, lung, and miscellaneous ADC. The details of the methods used in the literature for ADC diagnosis are provided in Sections 6.1\u20136.6.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_7",
+      "section_index": 7,
+      "section_label": "7. Discussion and Future Directions",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Histopathological image analysis has become a recognized field because of the complexity involved in the analysis. Hence, there is a clear need for quantitative image-based assessment. This article presents a review on detection and classification of carcinomas using different approaches in CAD systems. Traditional ML follows five major steps, namely data collection, image preprocessing, segmentation of ROI, extraction of features from the segmented regions, and classification of tissue samples or detection of carcinoma. However, DL approaches learn hierarchical feature representations from the raw images. Some traditional image preprocessing operations such as image enhancement, color normalization, and noise removal from images suppress the unwanted data and enhance the image features. Various algorithms, namely Reinhard method, Macenko method, stain deconvolution, CLAHE, and Gaussian blur smoothing were applied before ROI segmentation [W2976786915, W2071957125, W3095138978, W2603925730, W2066032304, W2144012133, W3150538710, W2027123781, W2139754658, W2762006829, W2959438241, W2128252595, W3119690984, W3130936001, W2972784366, W2912031427, W2949226441, W2668608389, W2970152602, UNMAPPED:18, UNMAPPED:20, UNMAPPED:21, UNMAPPED:23, UNMAPPED:25, UNMAPPED:26, UNMAPPED:64, UNMAPPED:65, UNMAPPED:74, UNMAPPED:81].\n\nSome studies in the literature used segmentation methods to extract the ROI. Based on methods used in the literature, we categorized the segmentation methods into threshold-based, contour- and transform-based and cluster-based methods. In threshold-based approaches, use of Otsu's thresholding [W2603925730, W2514628397, W2066032304, W2144012133, W3155033502, W3141984075, W3119690984, W2972784366, W2912031427, W2949226441, W2668608389, UNMAPPED:21, UNMAPPED:26, UNMAPPED:74, UNMAPPED:81, UNMAPPED:85], incremental thresholding [W2027123781, W2139754658], and multiple thresholding [W2972784366, UNMAPPED:22] were reported for extraction of ROI. Contour-based segmentation includes active contour methods [W2962715904, W2027123781, UNMAPPED:101] and Sobel edge detectors [UNMAPPED:21]. Transform-based approach mainly used watershed segmentation [W4247277608, W2971376088, UNMAPPED:18, UNMAPPED:23, UNMAPPED:30, UNMAPPED:86]. Cluster-based segmentation includes k-means clustering, fuzzy c-means clustering, and DBSCAN [W2976786915, W3095138978, W2143230707, W2753886374, UNMAPPED:82]. The literature also includes single-pass voting [UNMAPPED:10], region-based segmentation [W2128252595, UNMAPPED:71], graph-based segmentation [W2959438241], deep network segmentation models [W3153926656, W3109918169], and connected component analysis [W2226743799]. However, majority of the research groups performed segmentation using thresholding. Various types of texture features, topological features, morphological features such as shape, structure, color, pattern and size, Z-transform features, object-based features, and CNN features were extracted from ROI or image patches. Feature extraction was performed either on grayscale images or on specific color components of RGB, LAB, and HSV/HSI [W2976786915, W2603925730, W2143230707, W2987523870, W3109918169, W2045856790, W2514628397, W2548615865, W2144012133, W2027123781, W2139754658, W2584110890, W2753886374, W2128252595, W2053360744, W3119690984, W4247277608, W2912031427, W2668608389, UNMAPPED:21, UNMAPPED:22, UNMAPPED:23, UNMAPPED:25, UNMAPPED:30, UNMAPPED:47, UNMAPPED:57, UNMAPPED:62, UNMAPPED:64, UNMAPPED:65, UNMAPPED:75, UNMAPPED:79, UNMAPPED:82, UNMAPPED:85, UNMAPPED:86, UNMAPPED:96, UNMAPPED:101, UNMAPPED:104]. We summarized the extracted features reported in the literature in **TABLES 9 and 10**.\n\nThe state-of-the-art literature considered various classifiers for carcinoma detection and classification, as listed in **TABLES 9 and 10**. **FIGURE 9** shows the percentage of various classifiers used by researchers in the literature. We highlighted the top three classification techniques in which deep neural networks [W2922268597, W2977899280, W3153926656, W2973237362, W2962715904, W2987523870, W3109918169, W2066032304, W3150538710, W2949648625, W2760946358, W3155033502, W3113328935, W3141984075, W3132591370, W2897927086, W3004016611, W2762006829, W2959438241, W3119690984, W3130936001, W2624699030, W3153942604, W3157896304, W3045168954, W2949226441, W3138973186, W2986668407, W3033382446, W3019142647, UNMAPPED:26, UNMAPPED:74, UNMAPPED:78, UNMAPPED:79, UNMAPPED:81, UNMAPPED:93, UNMAPPED:94, UNMAPPED:97, UNMAPPED:98, UNMAPPED:101, UNMAPPED:105, UNMAPPED:106] such as pretrained models (AlexNet, VGGNet, ResNet, InceptionNet, EfficientNet, etc.), autoencoders, and customized CNNs top the list. SVM [W3134849846, W3150538710, W2753886374, W2972784366, W2668608389, W3138973186, W2970152602, UNMAPPED:86, UNMAPPED:96] and RF tree classifier [W3134849846, W3119690984, W2624699030, W4247277608, W2971376088, W2970152602, UNMAPPED:82, UNMAPPED:86] were second and third in the list. In the 'Others' category, we included hashing, LR, quasi-supervised learning algorithm, ensemble learning, and linear classifier based on different features extracted from ROI for decision-making.\n\n**TABLE 9: Classifiers used in literature**\n\n{{TABLE:tbl_09}}\n\nWe listed different magnifications used to capture the traditional microscopic images and digitized WSIs in **TABLES 11 and 12**. Additionally, some studies reported hierarchical cascaded scheme for detecting ADC on digitized histopathology images at different scales [UNMAPPED:74, UNMAPPED:85]. **FIGURE 10** (left) shows that 52.5% of the articles detected and classified carcinoma using high magnification images. It indicates that more than 50% of researchers used 20X, 40X, 50X, and 60X magnification images. We studied the usage of private and public datasets reported in the literature. Out of 101 articles, 68% of the articles used private datasets, and around 8% used both public and private datasets as shown in **FIGURE 10** (right).\n\nPerformance measures are used to evaluate ML and DL models. When we observe the literature, there were various evaluation metrics reported for ADC and SCC classification. In **TABLES 13 and 14**, we listed evaluation measures used in SCC and ADC classification, respectively. Among various evaluation metrics, accuracy was the commonly used performance measure. In the case of some studies, the lower performance could be due to small datasets with high magnification images [W2071957125, W3134849846, W2128252595, W2624699030, UNMAPPED:62, UNMAPPED:96], imbalanced dataset [W2986668407, UNMAPPED:97], CNN with small datasets [W2962715904], downsampled images, and WSI scanning artifacts [W2977899280]. In earlier days, only cells and nuclei shape features were used for classification [UNMAPPED:22]. However, statistical features, Haralick texture features, fractal dimension, and color features were used in later days [W2976786915, W2071957125, UNMAPPED:25]. A few researchers used small dataset and achieved good results [W2603925730, W2987523870, W2124237925, W2226743799, UNMAPPED:25, UNMAPPED:57]. This may be because the datasets were not representative of different microscopic features. It could also be because images were captured at low magnification but covering large areas of views [UNMAPPED:15, UNMAPPED:20]. Some researchers applied augmentation techniques to increase the dataset size [W2973237362, W2962715904, W2897927086, UNMAPPED:26], which improved the model accuracy. Further, most of the studies of lung cancer subtype classification were either performed on TCGA, Stanford TMA and ICGC WSI datasets or considered both private and public WSIs to train the model [W2514628397, W2066032304, W2949648625, W2760946358, W3113328935, W3141984075, W3132591370, UNMAPPED:10, UNMAPPED:47, UNMAPPED:50]. However, the qualities of histopathology slides from TCGA and hospitals were quite different. Hence, we could observe a variation in model performance [W3119690984]. In a few studies [W3134849846, W3150538710], the model performance was less as compared to other lung cancer classification models because of microscopic images from private hospitals with small sized datasets. The studies [W2514628397, W2144012133, UNMAPPED:10] reported the use of only cell-level information from the images captured at 40X magnification for classification, which resulted in model accuracy of around 85%. Weak boundaries of the cell images and strong edges within the cells can mislead the classification process. When we use the hashing method for classification with limited number of hash bits, it may result in same hash entries for different images [UNMAPPED:10]. In the case of small dataset, traditional ML approach achieved better results than CNN model [W2624699030], and combining two datasets resulted in better performance [W3130936001].\n\nIn **TABLES 9, 10, 11, and 12** we summarize magnification details, various traditional image processing steps, and ML and DL techniques used to automate SCC and ADC diagnosis from histopathological images. In this section, we discuss the overall outcome of our review of literature and future direction in AI-based techniques for carcinoma diagnosis.\n\n**TABLE 10: Dataset and magnification usage categories**\n\n{{TABLE:tbl_10}}\n\n**FIGURE 10**: Different image magnifications used in the literature (left); Dataset used in the articles (right)\n\n**TABLE 11: Performance metrics measured in SCC articles**\n\n{{TABLE:tbl_11}}\n\n**TABLE 12: Performance metrics measured in ADC articles**\n\n{{TABLE:tbl_12}}\n\n**TABLE 13: Summary of SCC articles**\n\n{{TABLE:tbl_13}}\n\n**TABLE 14: Summary of ADC articles**\n\n{{TABLE:tbl_14}}\n\n**TABLE 15: Number of microscopic images with magnification details reported in the articles**\n\n{{TABLE:tbl_15}}\n\n**TABLE 16: Number of WSIs and TMA with digitized magnification details reported in the articles**\n\n{{TABLE:tbl_16}}\n\nthat needs consistent collaboration of computer scientists, clinicians, and pathologists.\n\n- **Image preprocessing:** Some of the issues that affected SCC/ADC detection systems include variations in illumination, color shade variations, and image blurring. This is due to uneven staining, tissue folds, or debris. Such artifacts can be handled by using different preprocessing algorithms. Kumar et al. [W2970152602] performed a study to understand the color normalization algorithms on ConvNet feature extractor. Their results showed that the accuracy without stain normalization was better than that with stain normalization. However, Ozturk et al. [UNMAPPED:110] classified the image as cancerous and noncancerous patches after applying noise reduction and enhancement techniques for deep networks. The authors reported that the preprocessing methods contributed to the learning to some extent. However, excessive preprocessing decreased the model performance. From the above findings, we can observe that the researchers' opinions are divided on the need of preprocessing for DL models. However, it is a required step in traditional ML methods to extract appropriate handcrafted features. To illustrate, the authors reported that the ML-based skin SCC detection system's accuracy was reduced because of not using any preprocessing techniques [W2226743799, UNMAPPED:57]. Presently, researchers use the color augmentation technique as one of the data augmentation techniques to increase the training dataset. Nevertheless, excessive color changes can lead to misclassification.\n\n- **Generalizability:** Several researchers considered tissue samples from specific organs of origin of SCC and ADC. They implemented various ML algorithms and CNN models to detect carcinomas. However, the state-of-the-art methods lack generalizability. To date, even though many automated systems have been developed, they are not suitable for being applied to a similar problem. For example, whether a diagnostic model developed for SCC/ADC of lung is useful for diagnosing SCC/ADC of esophagus has not yet been explored. Hence, we need a generalized model that eliminates need for multiple decision systems for carcinoma diagnosis based on primary organs. The robustness of the automated system could be improved by including a variety of data during training.\n\n- **Effect of magnification:** Generally, a pathologist scans tissue samples under a microscope at multiple magnifications for interpretation and diagnosis. Low magnification images include a larger field of view as compared to high magnification images. We observe that the researchers used different magnifications for their studies to extract the features. For instance, Hosseini et al. [UNMAPPED:64] trained a classification model separately by taking the images from 10X and 20X magnifications and proposed a fractal-based approach to differentiate normal and esophagus dysplasia. Kumar et al. [W2970152602] studied the influence of magnification in carcinoma classification. They achieved higher accuracy at 4X and 10X magnification and lower accuracy at 40X magnification. Further, there are a few studies listed in **TABLES 15 and 16** that considered images of two or three different magnifications to train the model. However, no studies reported the feature extraction from images captured at multiple magnifications. Microscopic images from multiple magnifications could be used to improve classification and detection results. Additionally, images extracted from WSIs at multiple magnifications may be used for this purpose. Extracting different microscopic features from images at multiple magnifications would more closely mimic the pathologists' evaluation.\n\n- **Ground truth:** It is evident from the review of literature that the majority of algorithms proposed were based on fully supervised learning. Recently, a few research groups proposed weakly supervised learning techniques [W3033382446, W2971376088] for fast classification with a small number of ROI annotated images and the rest all were image-level labels. Obtaining well annotated data for supervised learning often requires domain expertise. For instance, in [W3033382446], a group of 39 pathologists annotated the WSIs. There may be interobserver variability that should be quantified among the pathologists. In [W2949226441, UNMAPPED:86, UNMAPPED:106], inter-observer variability was measured using the Kappa coefficient. The major problem in supervised learning is to obtain the ground truth for training a model. Most of the articles considered private datasets and some used public datasets, namely TCGA and TCIA of WSIs. However, none of the public datasets provided ROI annotation with original histopathological images for SCC or ADC detection. There is a lack of standard datasets with annotation to validate and compare the proposed algorithms.\n\n- **Pretrained networks and deep networks:** It is evident in this article that out of 101 research papers, vast majority of contributions by deep networks were published after 2017. Some of the studies used pretrained networks as feature extractors [W3150538710, W3135959923, W2753886374, W3119690984, W3138973186, W2889164281, W2970152602, UNMAPPED:47, UNMAPPED:62, UNMAPPED:65] and classified carcinoma into different subtypes. These pretrained networks were trained on natural scene images (e.g., ImageNet). The features learned from these networks may not be accurate for histopathological images. Given a small dataset, training only the last few decision layers using the regularization technique is recommended to avoid overfitting. In the last two years, end-to-end trained networks for carcinoma diagnosis were proposed by many researchers [W2962715904, W2987523870, W2762006829, W2624699030, W2986668407, W3033382446, W3019142647, UNMAPPED:26, UNMAPPED:74, UNMAPPED:78, UNMAPPED:93, UNMAPPED:106]. However, there is no clear way to select and design CNN models from scratch. Hyperparameter optimization (decay, dropout rate, learning rate, etc.) squeezes additional performance from a deep network model. It would be more useful to have a clear recipe to obtain the best set of hyperparameters. Many researchers chose hyperparameters randomly, which often seems to work well. However, some tips for tuning hyperparameters for histopathological images would help researchers to obtain more accurate and faster results. A few disadvantages of DL are 1) training deep networks from scratch that requires a large amount of data to obtain superior results, 2) model requires huge memory and is computationally expensive, and 3) accountability is important in medical image analysis otherwise it becomes a serious legal issue. Hence, it is necessary to observe the intermediate layers result of deep networks in order to understand the complex feature patterns.\n\n- **Whole slide image:** Carcinoma diagnosis using WSI is a trending topic. During our review process, we could find more than 50% of articles that used WSIs for detection and classification (details in **TABLES 15 and 16**). A pathologist usually takes around fifteen minutes to evaluate one whole slide [W2971376088]. Successful application of DL models in WSI analysis was described in the literature. However, a major issue faced during WSI analysis is that it is hard to train DL models directly because of its huge file size and GPU/CPU memory requirement. Instead, most of the reported studies extracted small patches with the help of pathologists, divided the images into random patches, quantized images from higher bit to lower bit representation, or resized the images. These steps may lead to information loss from the images or may take a long time to extract the patches. A reasonable strategy would achieve minimal information loss by utilizing maximal architecture capacity and minimum human intervention. Several research groups used varied patch sizes ranging from 32x32 pixels to 10,000x10,000 pixels. The patch selection itself is a key research area for WSI analysis. Currently, multiple scanners from different vendors output the images in different file formats with varied pixel resolutions. The WSI size is depends on the scanner's objective lens magnification and number of individual pixels within the digital camera's sensor and the monitor. Hence, comparison among the results of the literature across the various studies is a challenging task, which could be an interesting future research direction.\n\n- **Dataset:** The quality of trained model depends on the quantity of data in the dataset. Imbalanced classes in the dataset may lead to biased results. In **TABLES 15 and 16**, we can observe the numbers of microscopic images and WSIs reported in the literature. Training CNNs using a small dataset may lead to overfitting. Image augmentation reduces the time and efforts required to obtain additional training data, increases the robustness and generalization potential of CNN, and alleviates overfitting. Some techniques such as rotation, flipping, translation, transformation, scaling, and color jittering can be applied. Generative adversarial networks offer synthetic data augmentation. However, the techniques applied should not alter any information hidden in images. Researchers used different sizes of images to train their models. So far, there is no publicly available dataset that could be used to validate and compare algorithms' performance. It is critical to know how big such datasets would have to be and what kinds of variations need to be covered in it. Some of the researchers used only publicly available databases, which could be different in terms of what pathologists encounter in their day-to-day practice. Hence, it is desirable to train the model using both private and public datasets.\n\n- **WSI versus microscopic images:** The introduction of WSI helps to convert entire tissue on glass slides into a digital format that pathologists can view on a computer screen at different magnifications. They can also navigate spatially in the same way as a microscopic study using different computer software (e.g., Image Scope). The resolution of images differs greatly depending on the digital cameras used and the numerical aperture of the objective lenses used in the WSI systems. **FIGURE 11** shows a few images at 20X magnification with different cameras. It is important to note that WSI varies from conventional microscopy image because of the camera's sensor. We observe that many researchers proposed automated SCC/ADC detection systems using WSIs, whereas many other researchers used traditional microscopic images collected from clinical environments. Additionally, whole slide imaging involves a huge initial cost of the scanners, which is difficult to bear for small pathology laboratories. Hence, it is desirable to develop a robust approach that can handle both types of images.\n\n**FIGURE 11**: Images of an enterobius parasite using a similar 20X objective, but with different cameras [UNMAPPED:111]\n- a, b, c: Different camera outputs at same magnification\n\n- **ML and DL approaches:** Several studies investigated the potential of ML and DL that could detect and classify carcinomas. A comparative study of carcinoma detection and classification between deep neural networks and ML models is desirable. The results provided by ML-based approaches are verifiable, whereas deep neural models are certainly complex. Thus, DL and ML approaches could be integrated to produce a hybrid approach that provides a reliable and accountable solution. It is also interesting to combine evolutionary optimization with them [UNMAPPED:112].",
+      "citations": [
+        "W2603925730",
+        "W2514628397",
+        "W2066032304",
+        "W2144012133",
+        "W3155033502",
+        "W3141984075",
+        "W3119690984",
+        "W2972784366",
+        "W2912031427",
+        "W2949226441",
+        "W2668608389",
+        "W2027123781",
+        "W2139754658",
+        "W2962715904",
+        "W4247277608",
+        "W2971376088",
+        "W2976786915",
+        "W3095138978",
+        "W2143230707",
+        "W2753886374",
+        "W2128252595",
+        "W2959438241",
+        "W3153926656",
+        "W3109918169",
+        "W2226743799",
+        "W3134849846",
+        "W3150538710",
+        "W3138973186",
+        "W2970152602",
+        "W2624699030",
+        "W2071957125",
+        "W2986668407",
+        "W2977899280",
+        "W2987523870",
+        "W2124237925",
+        "W2973237362",
+        "W2897927086",
+        "W3130936001",
+        "W3033382446",
+        "W3135959923",
+        "W2889164281",
+        "W2762006829",
+        "W3019142647"
+      ],
+      "tables_in_text": [
+        "tbl_09",
+        "tbl_10",
+        "tbl_11",
+        "tbl_12",
+        "tbl_13",
+        "tbl_14",
+        "tbl_15",
+        "tbl_16"
+      ],
+      "citations_unmapped": [
+        "21",
+        "26",
+        "74",
+        "81",
+        "85",
+        "22",
+        "101",
+        "18",
+        "23",
+        "30",
+        "86",
+        "82",
+        "10",
+        "71",
+        "96",
+        "62",
+        "97",
+        "25",
+        "57",
+        "15",
+        "20",
+        "110",
+        "64",
+        "106",
+        "47",
+        "65",
+        "78",
+        "93",
+        "111",
+        "112"
+      ]
+    },
+    {
+      "section_id": "s_8",
+      "section_index": 8,
+      "section_label": "8. Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "This review highlights the massive opportunity for automated carcinoma (SCC/ADC) detection and classification. We organized the articles based on specific organs of carcinoma origin such as lung, head and neck region, female genital system, skin, prostate, colon, stomach, and esophagus. There is limited evidence of generalized carcinoma diagnostic system. Hence, it is necessary to develop novel methods to aid SCC/ADC diagnosis using modern AI-based approaches. Integration of different microscopic features obtained from images at multiple magnifications requires a comprehensive evaluation of each feature on a large multi-centric dataset. Most recent studies used deep neural networks and WSIs in carcinoma diagnosis. However, having a good prediction system is often not enough. Future avenues could include the development of explainable AI approaches which will aid early detection of SCC/ADC. Ultimately, automation brings down lead time in carcinoma diagnosis and also reduces pathologists' workload. This would benefit hospitals that lack experts in pathology, giving them some initial insights into the diseases.",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_04",
+      "placeholder": "{{TABLE:tbl_04}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_05",
+      "placeholder": "{{TABLE:tbl_05}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_06",
+      "placeholder": "{{TABLE:tbl_06}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_07",
+      "placeholder": "{{TABLE:tbl_07}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_08",
+      "placeholder": "{{TABLE:tbl_08}}",
+      "source_section_id": "s_4",
+      "source_subsection_id": "s_4_1",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_09",
+      "placeholder": "{{TABLE:tbl_09}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_10",
+      "placeholder": "{{TABLE:tbl_10}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_11",
+      "placeholder": "{{TABLE:tbl_11}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_12",
+      "placeholder": "{{TABLE:tbl_12}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_13",
+      "placeholder": "{{TABLE:tbl_13}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_14",
+      "placeholder": "{{TABLE:tbl_14}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_15",
+      "placeholder": "{{TABLE:tbl_15}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_16",
+      "placeholder": "{{TABLE:tbl_16}}",
+      "source_section_id": "s_7",
+      "source_subsection_id": null,
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4206133222_tables.md"
+}

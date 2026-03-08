@@ -1,0 +1,347 @@
+{
+  "id": "W4406083100",
+  "metadata": {
+    "title": "Human-AI Collaboration Is Not Very Collaborative Yet: A Taxonomy of Interaction Patterns in AI-Assisted Decision Making From a Systematic Review",
+    "n_sections": 6,
+    "n_subsections": 9,
+    "n_subsubsections": 5,
+    "n_tables": 3
+  },
+  "sections": [
+    {
+      "section_id": "s_1",
+      "section_index": 1,
+      "section_label": "1 Introduction",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "Advances in Artificial Intelligence (AI) developments open new possibilities for supporting human decision making across a wide variety of applications. Decision making tasks in a broad range of applications share a process that starts when evidence is presented before making a decision within discrete choices, usually with follow-up effects. Within this framework, the decision-making process emerges as a scenario for human-AI teamwork where at a minimum two parties, i.e., the human and the AI, factor into finding a solution to the decision problem. The exact dynamics of how this collaboration occurs can vary from one situation to another, leading to multiple interaction options that range from simple recommendations to involved exchanges [W2984353433, W4366590516, W4380365974]. To bridge algorithmic suggestions and human expectations, embracing a human-centered approach in designing AI solutions is crucial to identify what information AI should provide to aid humans while ensuring a safe and transparent operation. It is equally crucial to understand how and when to best communicate the information for designing successful human-AI interactions. Explainable AI (XAI) expands model capabilities by providing not just so-called black box recommendations but also justifications tailored to end users' needs. The design of justifications from a human-centered perspective informs what AI models should deliver and it naturally involves careful thought on how to present this support, although it may not specifically address the ensuing interactions. The presentation style (how) and the strategic timing (when) for providing AI-generated insights are closely related to the type and sequence of interactions between humans with AI, which are ultimately enabled by the affordances of certain assistance elements [W4380365974]. Despite the importance of and opportunities in interaction design within AI, there is not currently a common vocabulary to describe and differentiate these interactions.\n\nInteractivity is a familiar concept to humans and widely studied in more specialized domains such as information visualization, interface and software design [W2161133721], and human-human interactions from a social perspective [W4255790322]. Understanding interactions requires delving into multiple dimensions that involve subjects, modes, and purposes of interaction, and the context in which they take place [UNMAPPED:94]. Among these, interaction patterns emerge as sequences of behaviors that occur more often than by chance between agents and systems or artifacts. We have learned from these disciplines the importance of deliberate choices in selecting interaction types crucial for achieving specific goals, rather than imbuing unnecessary high levels of interactivity that do not result in better products [W1998242516]. Likewise, finding the right balance of interactivity between humans and AI systems is not just a matter of enhancing user experience but is essential for achieving clear communication, trustworthiness, and meaningful collaboration. Previous AI design guidelines consider pertinent aspects during interactions with end users, including the time when to act or interrupt, display information relevant to the user's current task, and deliver an experience aligned with expectations and avoid bias reinforcement [UNMAPPED:4]. As noted from these aspects, implementing interactivity requires an understanding of capabilities of both agents and materialization through an interface. While current AI systems excel in offering problem-solving capabilities, there is often a disproportionate emphasis on the technological advancements, overlooking the critical aspects of user interface and experience. This oversight is apparent in many empirical studies where interactions with AI agents are typically reduced to basic actions like menu selections or button clicks.\n\nWhich forms of interactivity to incorporate in human-AI interactions is an open question and may depend on the overall context, emphasizing the need to deliberately study interaction patterns between humans and AI that can guide the development of better solutions. Researchers in numerous empirical studies have actively evaluated human-AI interactions across various application domains and decision tasks [W4366590516, W4380365974]. However, the specific configurations needed to evaluate the effect of different AI assistance elements (or other context-related factors) on humans interacting with AI, can lead to multiple forms of collaboration or the actual interactions afforded. Referring to different types of interactions is particularly difficult since we lack of a common language that captures a broad range of ways in which humans can interact with AI when solving decision making tasks. The absence of a comprehensive taxonomy hampers the aggregation and synthesis of knowledge across diverse studies and limits the exploration of new interaction paradigms. Meanwhile, the field of Human-Robot Interaction (HRI) has studied in particular how humans and robots communicate, collaborate, and engage with each other, often through the analysis of observable patterns in their interactions [W2908413129, W2000818954, UNMAPPED:29]. These patterns cover various aspects of social interactions, such as greetings, attention, feedback, turn-taking, social cues, and farewell. All these elements foster a more natural and efficient communication experience, which can take place in AI technologies that incorporate natural language abilities. Other domains such as information visualization and user interface design have also developed taxonomies and libraries of interaction patterns based on different criteria such as user's intent, purpose, scope, abstraction level, and granularity [W3036815191, W2161133721]. These categorizations serve as a base to build on more comprehensive taxonomies grounded on and informed by evidence from empirical studies and incorporating knowledge from interaction design in other disciplines. In the context of AI, previous attempts to describe possible interactions between humans and machines or AI have grouped them by user control and initiative [W4283770858, UNMAPPED:109], task nature [W2123179704], and level of automation [W4288086168]. Overall, the existing classifications of interactions that involve AI are mostly focused on specific domains or contexts but do not provide a general and comprehensive framework for characterizing and analyzing interaction patterns that apply to multiple domains. This highlights the importance of a structured framework for categorizing different interaction patterns, providing designers not only with an understanding of existing ways for humans to collaborate with AI but also to make informed decisions on interaction design to build better partnerships between humans and AI.\n\nTo address this gap, we first conducted an extensive systematic review on human-AI interactions that have been reported for human-AI decision making scenarios. We searched for relevant articles from five databases that cover Human-Computer Interaction (HCI) studies and related disciplines and selected 105 to conduct a detailed coding and analysis of the sequences of interactions that exist between humans and AI. Furthermore, we considered the task context, AI system involved, and the evaluation methods included in these empirical studies. Grounded in the trends from our systematic review, we propose a taxonomy of interaction patterns that comprises seven interaction patterns that arise between humans and AI. To the best of our knowledge, there is not yet a comprehensive and structured classification of existing interaction patterns between humans and AI. We propose our taxonomy of interactions as a tool to better understand existing interaction patterns across domains and applications, allowing us to identify the occurrences of common interactions across multiple domains. We envision the use of taxonomy to foster dialogues on interactivity in AI-assisted decision making, encourage refinement and evaluation of novel patterns, and ultimately design better and more user-centered AI-based solutions.",
+      "citations": [
+        "W2984353433",
+        "W4366590516",
+        "W4380365974",
+        "W2161133721",
+        "W4255790322",
+        "W1998242516",
+        "W2908413129",
+        "W2000818954",
+        "W3036815191",
+        "W4283770858",
+        "W2123179704",
+        "W4288086168"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "94",
+        "4",
+        "29",
+        "109"
+      ]
+    },
+    {
+      "section_id": "s_2",
+      "section_index": 2,
+      "section_label": "2 Methods",
+      "subsections": [
+        {
+          "subsection_id": "s_2_1",
+          "subsection_index": 1,
+          "subsection_label": "2.1 Search Strategy and Selection Criteria",
+          "subsubsections": [],
+          "text": "This survey focuses on Human-AI interaction paradigms for explicit decision-making tasks, in contrast to proxy task where users are asked to simulate the AI outputs. Therefore, we aim to understand and evaluate the works that study human-AI interactions during decision-making tasks under AI assistance, instead of improvements of the model. Our survey covers studies conducted between 2013 and June 2023. Specifically, we searched within five databases: ACM Digital Library, IEEE Explore, Compendex, Scopus, and PubMed. The first four have extensive coverage of relevant studies in HCI covering conference proceedings and journal publications (Compendex and Scopus included papers from more subjects), while PubMed allowed us to capture research specifically related to medical applications of Human-AI interaction and decision-making. We defined the search terms covering four dimensions: use of AI systems, human-AI interaction or collaboration studies, decision-making tasks, and interaction design. We included the last term since we wanted to focus on articles that evaluate interactions with AI systems during decision making tasks. The complete set of keywords used in our search can be found in the appendix. We defined the following inclusion criteria:\n\n- The tasks in consideration are those related to decision-making, and in particular, we limit the study selection to those that implement complete decision making processes and not only evaluations of decision makers' perceptions, such as understanding, preferences, or judgments of AI's advice.\n- The paper shows an implementation of the interface that was presented to human users to interact with AI.\n- The modes of interaction encompass screen-based interfaces, virtual agents, and non-embodied setups.\n- We have restricted our selection solely to papers featuring empirical user studies.\n\nIn addition to the inclusion criteria above, our search excluded studies in robotics and gaming by filtering out these keywords in the title and abstract. We excluded studies that involve robots because physical embodiment enables more dimensions of an interaction and those involving gaming scenarios because they are more complex, with less constraints to study how humans can interact with AI assistance. However, studies that implement decision making tasks through gamified tasks were included. Other survey papers or comments were also excluded by filtering out keywords in the title and abstract.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_2",
+          "subsection_index": 2,
+          "subsection_label": "2.2 Study Selection",
+          "subsubsections": [],
+          "text": "The initial search returned 3,770 papers, and 358 duplicates were found and deleted automatically. This left us with a total of 3,412 papers to screen. They were assigned to two authors to first go through title and abstract screening, followed by full-text screening. The screening phase was oriented towards the exclusion of papers that were not focused on human-AI interaction, i.e., limited to technical contributions, did not involve a complete decision-making task, were short papers (less than 8 pages), involve gaming or robotics, have not been peer-reviewed, and were review or survey papers. We did not constrain our selection to works that directly manipulate the type of interaction between the human and AI. Our main interest was on which were the existing/available ways for humans to interact with AI agents in the evaluation of human-AI decision making. The total and abstract screening excluded 2,893 papers, and at the full-text review stage, 363 papers were filtered out. Lastly, 156 were considered for the information extraction stage, of which 51 were removed as a more detailed reading allowed us to identify that they did not satisfy the inclusion criteria of supporting actual AI-assisted decision making tasks. **Figure 3** in the Appendix summarizes the complete paper selection process. At the end, 105 articles were included in our review.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_2_3",
+          "subsection_index": 3,
+          "subsection_label": "2.3 Data Extraction Strategy",
+          "subsubsections": [
+            {
+              "subsubsection_id": "s_2_3_1",
+              "subsubsection_index": 1,
+              "subsubsection_label": "2.3.1 Analysis Process",
+              "parent_subsection_id": "s_2_3",
+              "text": "The data extraction template was developed by all authors and informed by previous surveys of empirical studies in human-AI interaction [W4366590516, W4380365974]. Two authors distributed the final selected articles to be analyzed and coded the assigned articles independently. Then, one author checked the individual reports of each article to ensure consistency in the final extraction. Further discussions with the other authors took place to clarify discrepancies in the interactions or ambiguous cases. For the analysis of the interaction patterns, the authors reviewed the sequences of interactions and discussed how to group them into the design patterns that were repeated and are presented in this work. We iterated over the definition of each pattern to refine the actual components that constitute the interaction.",
+              "citations": [
+                "W4366590516",
+                "W4380365974"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_3_2",
+              "subsubsection_index": 2,
+              "subsubsection_label": "2.3.2 Context",
+              "parent_subsection_id": "s_2_3",
+              "text": "We identified general information in which the decision making task takes place. This includes the domain and we adapted the categories initially proposed in this survey of AI-assisted decision making [W4380365974]. Furthermore, we specified the decision making task to be completed by the human (e.g., detection of hate speech, sleep stage classification, price estimation, among others) and the level of expertise required to successfully complete the task.",
+              "citations": [
+                "W4380365974"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_3_3",
+              "subsubsection_index": 3,
+              "subsubsection_label": "2.3.3 AI System",
+              "parent_subsection_id": "s_2_3",
+              "text": "As we are interested in humans' interactions with AI agents, we retrieved the original goal of incorporating AI assistance in the decision-making task, and briefly characterized the AI system used in the study. In particular, we extracted the technique supporting the AI's recommendations (whether a real model was used or the outcomes were simulated), its performance (if any evaluation metric was reported), and the terminology used to introduce the AI agent to participants in the user study. Further details such as data type and source, output type were not reported as the main focus of this survey is on the interactions rather than the type of AI methods as previously surveyed in [W4380365974].",
+              "citations": [
+                "W4380365974"
+              ],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_3_4",
+              "subsubsection_index": 4,
+              "subsubsection_label": "2.3.4 Evaluation",
+              "parent_subsection_id": "s_2_3",
+              "text": "In the empirical studies selected for this survey, humans were directly interacting with an AI systems and it is relevant to evaluate how they perceive such assistance and the outcomes of this interaction. We extracted the constructs evaluated in the studies and classified them as objective or subjective dependent variables depending on how they were assessed.",
+              "citations": [],
+              "tables_in_text": []
+            },
+            {
+              "subsubsection_id": "s_2_3_5",
+              "subsubsection_index": 5,
+              "subsubsection_label": "2.3.5 Interaction Building Blocks",
+              "parent_subsection_id": "s_2_3",
+              "text": "An interaction involves a reciprocal action or influence between two agents in the context of this survey [UNMAPPED:94]. To characterize this, we defined two elements: the action undertaken and the resulting output of that action. These two elements constitute the interaction building blocks that can be integrated into more complex interactions. In the definition of our taxonomy of human-AI interactions, we considered these building blocks as the main elements that constitute the interaction patterns. Drawing insights from prior studies on human-AI interactions, we defined the following (action - output) pairs available for the agents involved in the interaction. These building blocks primarily focus on the AI assisting the user in decision-making processes and are grouped based on the main action and specify the agent that can execute it. It is important to highlight that these building blocks can also occur sequentially, where one may be triggered in response to another. However, we have chosen to maintain a granular level of detail in the following descriptions to better capture the nuances of individual actions that later compose the interaction patterns.\n\n- **Predict - Outcome:** The agent produces a solution to the primary decision-making task after receiving task information. This action is observed to be executed by either the AI or the user independently.\n- **Decide - Outcome:** The agent integrates the assistance they received with the task-related information available to finalize the decision outcome. This action is typically observed to be executed by the user.\n- **Provide - Options:** The agent offers solutions for a secondary task that, while not directly resolving the primary decision-making task, are still informative. This action is typically observed to be executed by the AI.\n- **Display - Information:** The agent presents supplementary evidence (e.g., explanations, uncertainty values, alternate solutions) supporting a solution to the primary decision-making task. This action is observed to be predominantly executed by the AI.\n- **Request - Outcome/Information:** The agent actively seeks information or solutions from its counterpart. This action is observed to be either mandatory or optional and is typically executed by the AI when it requires user inputs, or by the user when they seek a direct solution or supplementary information from the AI.\n- **Collect - Inputs:** The agent gathers task-related information and provides it to the other agent. This action is observed to be typically executed by the user when their input is needed for the AI to provide a solution to the decision-making task.\n- **Modify - Outcome/Information:** The agent makes changes to the solutions or supplementary information provided by its counterpart. This action is typically observed to be optional and executed by the user.\n- **Delegate - Decision:** The agent decides whether to retain responsibility for the task or transfer to its counterpart. This action is observed to be executed by either the AI or the user. Events after delegation can differ, ranging from complete surrender of agency to opportunities for supervising the other agent's decision-making process.\n- **Other:** if an action does not fit the previous types.\n\nThese concepts were refined and iterated as we reviewed more works. For each paper, we first identified all possible (action - output) pairs as the building blocks for each agent involved in the decision-making task and included a brief description in free text form. Then, we defined a sequence of interactions considering the order in which these events take place and the agent in charge. The sequences were not preset in advance in the extraction template since we wanted to discover the interaction patterns here. We note that depending on the experimental manipulation of the user study, different modes of interactivity with the user could be plausible and we separated these into different sequences.",
+              "citations": [],
+              "tables_in_text": [],
+              "citations_unmapped": [
+                "94"
+              ]
+            }
+          ],
+          "text": "",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_3",
+      "section_index": 3,
+      "section_label": "3 Results",
+      "subsections": [
+        {
+          "subsection_id": "s_3_1",
+          "subsection_index": 1,
+          "subsection_label": "3.1 Taxonomy of Interaction Patterns for AI-Assisted Decision Making",
+          "subsubsections": [],
+          "text": "We present seven categories of interaction patterns that we have identified in our corpus, illustrated in **Figure 1**. To formulate the taxonomy, we began by reviewing previous literature containing taxonomies of interaction techniques in other domains, such as information visualization [W2161133721], human-robot interaction [W2000818954], multi-agent systems [UNMAPPED:22], and educational technologies [W1998242516]. Contrasting the concepts in these taxonomies with a sample of studies in human-AI interaction that we were familiar with, we identified potential ways in which the types of interactions described previously could potentially apply to humans interacting with AI during decision making. In each pattern formulation, we considered an appropriate level of abstraction so that they can capture multiple actions of the agents and generalize over various studies included in the systematic review. The interaction patterns we defined in the taxonomy are comprised of the interaction building blocks and can borrow some of the other pattern categories. We identified the different categories of interaction patterns using a combination of an automated search for certain action-output pairs present in sequences of interactions that we characterized in the data extraction stage of the review, followed by manual inspection and verification. Interactions involve changes over time and we attempted to capture this evolution/progression in the interaction patterns presented below and in the diagrams that illustrate them. Furthermore, we included a \"Other patterns\" category to present the interaction patterns that did not exactly fit into the main categories. In the following descriptions, we assume that users already have some background knowledge or intuitions that can be used during the decision making task. Lastly, the classification of interaction patterns does not mean they are mutually exclusive events, but elements that can be consolidated and combined.\n\n**AI-first assistance.** This pattern manifests when the decision-making problem and the AI-predicted outcome are simultaneously displayed to the user. As the ultimate decision maker, the user can choose to incorporate the AI's advice into their final decision or opt to disregard it. When task-related stimuli (e.g., images or case details) are presented alongside the AI-predicted outcome, the user is provided with a more comprehensive set of information to consider. In addition, the AI's outcome can be accompanied by support information as captured in the Display - Information building block. This pattern has been previously observed and referred to as the \"concurrent paradigm\" [W4306809523] or \"one-step workflow\" [W4283172359].\n\n**AI-follow assistance.** This pattern begins with the user forming an independent preliminary prediction given the decision-making problem. Following this initial judgment, the AI's predicted outcome is presented and may accompanied by support information. This procedure provides the user with a reference (their initial assessment) to compare against the AI's advice, and an opportunity to reassess their initial judgment. This approach has been identified as the \"sequential paradigm\" [W4306809523] or \"two-step workflow\" [W4283172359] and has been commonly used to evaluate the human's reliance on the AI's advice.\n\n**Secondary assistance.** In this pattern, the AI offers information that does not serve as direct solutions to the decision-making problem. The user must interpret this supplementary information as an auxiliary task to determine its relevance and decide how to incorporate it into their primary decision-making process. We distinguish this as a unique interaction pattern because users respond differently to direct assistance compared to more secondary assistance in their decision-making process. For example, machine learning models can predict risk values associated with certain profile information and the human's decision problem is to make an investment decision [W4213371886].\n\n**Request-driven AI assistance.** In this interaction pattern, the user has to actively seek information or solutions from the AI. Rather than the AI's inferences being automatically presented, the user can control when they want to receive the AI assistance. Meanwhile, the user can spend more time deliberating about the problem, a strategy known as cognitive forcing [W2983137008, UNMAPPED:18]. This pattern can be perceived as less intrusive to the user, as it empowers the user to \"ask\" for information or solutions from the AI, and allows the user to anticipate the AI's assistance in the decision-making process.\n\n**AI-guided dialogic user engagement.** Within this interaction pattern, the AI facilitates a dialogue-like engagement with the user. Guided by the AI's instructions, the user responds by providing pertinent information. The iterative exchange continues until the AI's instruction requirements are satisfied, and is followed by the presentation of the AI's predicted outcome for the decision-making task. This responsive exchange not only involves retrieving and sharing information in line with the task but also ensures that the users recognize the influence of their inputs on the AI's predicted outcome. While this pattern has been commonly observed in humans interacting with conversational agents [W4224308588, W4224241499], it is not only limited to traditional conversational interfaces [W4312055540].\n\n**User-guided interactive adjustments.** Inspired by the taxonomy of interactive explanations recently proposed from a scoping review [W4366590516], we included an interaction pattern where humans can modify the outcome space of the AI agent. Typically, information flows from the AI to the user. However, in this pattern, the direction of flow is reversed, with humans providing the AI with feedback, corrections, or information to shape its inferences. While a detailed classification of potential modifications is beyond the scope of this survey, we distinguished cases in which the changes are merely visual updates in the interface or considered as feedback to improve the underlying AI models, as in interactive machine learning [W1501005121].\n\n**Delegation.** In this interaction pattern, both the user and the AI leverage their unique strengths and capabilities to optimize the decision-making outcome. Delegation can be a strategic choice when one agent assesses its counterpart as better equipped for a particular task [W4200195738]. On the other hand, if an agent feels confident in their ability to complete the task, they will take the lead. Studies highlight that the complementary abilities of humans and AI when synergized properly, can enhance the decision-making outcome [W4225159586].\n\n**Others.** We included within this category those patterns that involve a combination of the main interaction blocks and did not fit into the patterns described before. More complex interaction emerges when the decision making problem may involve multiple individual decisions, agents (more than two), and continuous interactions with an AI agent.\n\n**Figure 1. Taxonomy of interaction patterns identified in AI-assisted decision making.** The user (human) and the AI are represented as separate agents and the temporal evolution of the interactions is illustrated from top to down. The boxes contain the building blocks (action-output) pairs that compose each pattern. The direction of arrows denote the agent who started the action. Dashed lines represent optional operations.",
+          "citations": [
+            "W2161133721",
+            "W2000818954",
+            "W1998242516",
+            "W4306809523",
+            "W4283172359",
+            "W4213371886",
+            "W2983137008",
+            "W4224308588",
+            "W4224241499",
+            "W4312055540",
+            "W4366590516",
+            "W1501005121",
+            "W4200195738",
+            "W4225159586"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "22",
+            "18"
+          ]
+        },
+        {
+          "subsection_id": "s_3_2",
+          "subsection_index": 2,
+          "subsection_label": "3.2 Identification of Interaction Patterns in AI-Assisted Decision Making Studies",
+          "subsubsections": [],
+          "text": "We identified the different categories of interaction patterns in the selected 105 articles. If a study included more than one interaction sequence, i.e., the experimental manipulation resulted in different ways in which users can interact with the AI, we considered them separately and counted patterns in each one. In total, we analyzed 131 sequences. The most common interaction pattern during empirical evaluations of AI-assisted decision making tasks was the AI-first assistance (n=67), followed by the AI-follow assistance (n=28). Furthermore, the AI's solutions to the decision making task were presented along with additional information in the majority of the cases, 81% and 68% during AI-first and AI-follow interactions, respectively. For instance, in the AI-first pattern for predicting student outcomes, the AI takes student-related features and predicts pass or fail with a confidence value [W3093066786]. Participants then review this AI prediction alongside the student data to make their final decision. Meanwhile, in the AI-follow pattern for another binary task, participants make a initial prediction regarding the output of speed dating events, and then a final one after seeing AI's prediction. We observed 16 instances of the Secondary assistance pattern in which the AI support did not propose a direct solution to the decision making task but rather estimated an outcome informative for the task. In particular, we noticed that most of the decision making tasks required expertise (11/16). As an example, in the task of predicting gestational diabetes mellitus (GDM), healthcare professionals are presented with various descriptive features such as a history of diabetes mellitus, age, body weight, etc [W4306149475]. The AI system processes this information and outputs a categorized risk of GDM, labeling it as either low or high. Rather than offering a direct solution, the AI presents this risk category alongside an explanation, thereby serving as a form of secondary assistance.\n\nSometimes during the decision making task, users had to actively seek support from the AI agent as specified in the Request-driven AI assistance (n=25). More specifically, the requests could be for a direct solution to the decision making task (n=14) or for the presentation of support information (n=13). In the former, only in three cases the request for the AI's solution was optional [W3193357523, W3183362408, W3173265486], meaning that users could come with a solution to the decision making task on their own. As illustrated in a house search scenario, users could choose to use an AI system to help them find a house that satisfies certain requirements, with the option to directly submit the suggested house or verify [W3173265486]. Meanwhile, the support information at the user's discretion was identified in eight cases [W4220694472, W3119689140, W4286565523, W4360991197, W3172630084, W4281566573, UNMAPPED:101], for demanding explanations in particular. In the AI-first assistance pattern, where the user may not have an opportunity to form an independent assessment of the decision making problem, we observe cases (n=10) in which users are given the ability to control when they want to receive the AI assistance via a request [W3193357523, W4312055540, W4288086168, W4286565523, UNMAPPED:18, UNMAPPED:53].\n\nTo a lesser extent, we found the interaction patterns that involve more exchange components between the human and the AI agent. For the AI-guided dialogic user engagement, as the name suggests, five out of the six interactions were supported via conversations with the AI agent. Through conversational interfaces, users had to provide some constraints given in the decision making problem for the AI to propose a candidate solution [W4224308588, W4224241499, UNMAPPED:53]. However, such exchange of information does not necessarily rely on a conversational interface, as demonstrated in the evaluation of an AI system that could constantly provide guidance on a decision sub-problem for identifying bird categories [W4312055540]. The two-way interaction occurs as the AI requests and suggests bird attributes for description, culminating in a bird category suggestion. Users can actively engage by processing the attributes, considering the AI's input, and making decisions regarding the bird's attributes. Ultimately, they verify the AI's suggested bird category. For a different purpose, interactivity components also support the adjustment of the AI's outcome space, and we found the User-guided interactive adjustments in nine cases that differed on the observed effect of the adjustment. For instance, manipulations of the inputs result in new AI's outcome computations for exploratory purposes [W4313476346, W3119689140, W3130185945, UNMAPPED:76, UNMAPPED:128]. Such functionality can be incorporated into interactive explanations, where users can manipulate input values of a specific instance and observe the change in recidivism predictions [W3119689140]. When adjustments did not directly translate into an updated AI's outcome, users' feedback was considered for future improvement of the model [W3161926791, W4286565523, UNMAPPED:6, UNMAPPED:99]. Manual labeling after observing AI predictions can be leveraged to identify incorrect intent classifications from textual samples and re-train the models [UNMAPPED:6].\n\nAn opportunity to delegate decisions was observed in nine sequences of interactions, though with differences in the conditions for delegation. For instance, in some cases the users \"blindly\" delegate the decision to the AI without having access to their outcome and not being able to supervise it later [W3174333417, W4200195738, W4283209030, UNMAPPED:126]. For example, in stock investment decisions, people can choose to invest directly in specific stocks or delegate a portion of their funds to the AI for future investment decisions [W4283209030]. In others, the AI agent has the decision to delegate and the user is assigned some of the decision making tasks to be completed on their own [W4200195738, W4327810784], or presented with the AI's outcome as support, resulting in the AI-first pattern [UNMAPPED:15]. In addition, the user can object to the delegation decision of the AI and take charge of the decision if considered appropriate [W3172630084].\n\nLastly, the articles that we included in the \"Others\" category of interaction patterns can be separated into three groups. First, decision making tasks that involved more than one decision outcome [W2946657876, W2968461535] and corresponding support from the AI agent. Second, decision making problems where multiple instances of decision tasks can take place and the interaction with the AI agent is continuous [W4200633865, W3152997756, W4294243134, W4214917404, UNMAPPED:64]. Third, interactions that involved a third agent [W4225133198, W4308765676, W4309865588]. In addition, a different case results when independent solutions, from the human and the AI agent, to the decision making problem are averaged as the final verdict [W4308194276].",
+          "citations": [
+            "W3093066786",
+            "W4306149475",
+            "W3193357523",
+            "W3183362408",
+            "W3173265486",
+            "W4220694472",
+            "W3119689140",
+            "W4286565523",
+            "W4360991197",
+            "W3172630084",
+            "W4281566573",
+            "W4312055540",
+            "W4288086168",
+            "W4224308588",
+            "W4224241499",
+            "W4313476346",
+            "W3130185945",
+            "W3161926791",
+            "W3174333417",
+            "W4200195738",
+            "W4283209030",
+            "W4327810784",
+            "W2946657876",
+            "W2968461535",
+            "W4200633865",
+            "W3152997756",
+            "W4294243134",
+            "W4214917404",
+            "W4225133198",
+            "W4308765676",
+            "W4309865588",
+            "W4308194276"
+          ],
+          "tables_in_text": [],
+          "citations_unmapped": [
+            "101",
+            "18",
+            "53",
+            "76",
+            "128",
+            "6",
+            "99",
+            "126",
+            "15",
+            "64"
+          ]
+        },
+        {
+          "subsection_id": "s_3_3",
+          "subsection_index": 3,
+          "subsection_label": "3.3 Landscape Over Domains Evaluated in AI-Advised Human Decision Making",
+          "subsubsections": [],
+          "text": "What domains have been defined as contexts to evaluate AI-assisted decision making? The selected articles included in this survey cover a broad range of different domain categories previously identified [W4380365974]. Articles that included more than one experimental decision making task were counted toward more than one domain. **Table 1** presents a summary of the major domains and the different decision making tasks evaluated. Overall, the majority of the studies conducted human-AI interaction evaluations in real-world applications, with less than 15% formulating artificial tasks. We included medical related databases in our search strategy, which contributes to the large representation of decision making tasks on the healthcare domain (26/108). In addition to healthcare, decision making tasks that may involve high-stakes outside of an experimental setup were identified in the finance and business (15/108), and law domains (6/108). The second most common domain was in the context of generic tasks (20/108) that are low-effort processing for humans but have mostly been used to develop AI benchmarks and demonstrate technical feasibility of algorithms. Other domains that typically include tasks targeted to non-expert users are social media (8), labeling (8) and leisure (1). We assigned tasks with unique applications to the Other domain (6/108). Even though we identified multiple decision making tasks in applications that require a specialized population, making it more difficult to achieve a large sample of participants, the majority of human-AI interactions have been evaluated with non-expert uses (60/108). The type of AI systems behind the interactions with users in the studies that covered these decision-making tasks were distributed among three categories: simulated models or Wizard of Oz experiments (39/105), deep learning-based models (34/105), and shallow models (35/105).\n\n**Table 1. Domains and corresponding decision tasks used to study AI-assisted decision making.**\n\n{{TABLE:tbl_01}}\n\nIn what contexts were the interaction patterns observed during AI-assisted decision making processes? To better understand the existence and availability of the interaction patterns in different domains, we quantified the occurrence of patterns per domain and provide an overview describing the trends. **Figure 2** shows the distribution of interaction patterns within our taxonomy for different domains. Values equal to zero mean that certain interaction patterns were not observed in the studies included in this survey for a specific domain. Tables in the supplementary material provide more details on the interactions patterns for each paper included in this review.\n\nHuman-AI interactions in AI-advised decision makings in the healthcare domain mostly adhered to the AI-first assistance pattern (n=14), followed by Secondary assistance (n=7). Request-driven AI assistance was observed in a few cases (n=4) as well as AI-follow assistance (n=4). We identified one interaction that supported AI-guided dialogic user engagement, three interactions in the User-guided interactive adjustments, and one in which delegation was an option. Five sequences of interactions were in the \"Others\" category due to the higher complexity of the interactions. In the domain of finance and business, AI-first assistance was the most common type of interaction (n=6), followed by AI-follow assistance (n=4) and Secondary assistance (n=4). Some interactions supported Request-driven AI assistance (n=3), AI-guided dialogic user engagement (n=2), and delegation (n=3). We did no identify support for User-guided interactive adjustments. We identified four types of interaction patterns in the law and civic domain: AI-first assistance (n=4), AI-follow assistance (n=2), Request-driven assistance (n=2), and User-guided interactive adjustments (n=2). Decision-making tasks that involve professional related topics mostly followed AI-first assistance (n=4). Request-driven AI assistance and user-guided interactive adjustments were observed in one case each one. The other interaction patterns were not observed. Interaction patterns during decision making tasks involved in social media contexts were mostly of the AI-first (n=4), AI-follow (n=4), and Request-driven AI assistance types (n=4). We identified Secondary assistance in one case, and two cases in which User-guided interactive adjustments were enabled, in particular, for updating relevant terms for content moderation purposes. No Delegation or AI-guided dialogic user engagement was observed and two cases fell into the \"Others\" patterns category. During decision making tasks in generic applications, most of the interactions were dominated by the AI-first assistance (n=21), while only two cases involved the AI-follow assistance interaction. Regarding the more interactive patterns, two cases supported Request-driven AI assistance, two AI-guided dialogic user engagement, and one User-guided interactive adjustments. Only in one case the type of assistance was secondary. Delegation was featured in five cases. Labeling tasks mostly included AI-first assistance patterns (n=6), followed by Request-driven AI (n=4) and Secondary assistance (n=3), mostly clustering similar data points. We further identified AI-follow assistance and User-guided interactive adjustments once each one, and two types of interactions in the \"Others\" patterns category. Artificial decision making tasks were mostly dominated by AI-follow follow (n=8) and AI-first assistance (n=7). Request-driven AI assistance was featured in four cases and four interactions were in the \"Others\" patterns category. Lastly, AI-guided dialogic user engagement was the type of interaction in the leisure-related task and AI-first assistance in the task within the education domain. Interactions during decision-making tasks that belong to other domains mainly contained AI-first (n=4) and AI-follow (n=3) assistance types, or patterns in the \"Others\" category (n=3). Further, one case supported Request-driven AI assistance.\n\n**Figure 2. Percentage of interaction patterns observed in each domain of AI-assisted decision making tasks included in this survey.** The numbers in the cells denote the percentage values (e.g., 17% of the patterns identified in the healthcare domain correspond to Secondary assistance). One study can include multiple sequences of interaction and interaction patterns are not mutually exclusive.\n\n{{TABLE:tbl_02}}\n\nWhat evaluation methods and measures have been used in the study of AI-assisted decision making across domains? We describe the variety of evaluation measures used in the selected articles for our study of AI-assisted decision making. **Table 2** in the Appendix presents a summary for each domain, separated by whether they correspond to objective or subjective measurements, and the constructs evaluated with the metrics. Broadly, we can observe a joint use of objective and subjective measures used in empirical evaluations of AI support for decision making tasks across multiple domains, as indicated by a previous review on interactive explanations [W4366590516]. Objective measures covered four constructs overall. Efficacy is directly related to the joint (human and AI) task performance and is typically measured as the accuracy of decisions, errors, or other performance-related metrics. Trust and reliance construct is generally captured using agreement with AI advice or other variations (e.g., compliance frequency and over-reliance), weight of advice during AI-follow assistance, and delegation rate if the delegation pattern is present. Efficiency is considered during the execution of the decision-making task, directly measuring the actual decision time or more general total task time and exploration of other task functionalities. Although more commonly evaluated subjectively, questionnaires to capture AI model understanding have been developed [W3156106752].\n\nSome of the constructs captured through objective metrics can be evaluated from a subjective perspective as well, allowing researchers to identify potential mismatches between how users behaved and what they perceived during their interaction with AI. For instance, efficacy is easily quantifiable objectively, but has further been recorder from users' perceptions on their own, their AI partner's, or joint success to complete the task. Trust and reliance is another construct typically captured through standardized subjective questionnaires (e.g., [UNMAPPED:56, UNMAPPED:69]) that cover multiple dimensions, such as competence, reliability, trustworthiness, intention to comply, credibility, uncertainty, among others. This last construct was evaluated in all the domains covered in this review but one (professional), highlighting the importance of developing trustworthy AI systems for humans to interact with. As with trust and reliance, the evaluation of system usability was covered in almost all the domains, except for education. Usability measurements include multiple dimensions such as usefulness, acceptance, satisfaction with the system, potential implementation, and system complexity. Another construct naturally captured through users' perception is decision satisfaction and mental demand, including ratings on confidence in the task, cognitive load, task difficulty or complexity, frustration, and workload. In order to evaluate users' processing of the information presented by the AI, understanding of these systems is commonly evaluated, especially when explainability components are involved. The construct of fairness did not stand out in the most frequent subjective measures but we attribute this to the fact that we excluded works in which decision making tasks were the context for evaluating humans' perceptions of the AI's outcomes, usually involving judgments of fairness. We included the metrics that did not fit into the categories mentioned above in a separate group labeled other.",
+          "citations": [
+            "W4380365974",
+            "W4366590516",
+            "W3156106752",
+            "W2984353433",
+            "W3176975156"
+          ],
+          "tables_in_text": [
+            "tbl_01",
+            "tbl_02"
+          ],
+          "citations_unmapped": [
+            "56",
+            "69"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_4",
+      "section_index": 4,
+      "section_label": "4 Discussion",
+      "subsections": [
+        {
+          "subsection_id": "s_4_1",
+          "subsection_index": 1,
+          "subsection_label": "4.1 Limitations",
+          "subsubsections": [],
+          "text": "The works included in this survey are limited to published manuscripts that conduct empirical evaluations of human-AI interactions. This focus, while intentional, could have introduced certain limitations. The terminology used in the search could have excluded relevant work if the interaction design was not explicitly mentioned in the title or abstract, or even in the body of the text. Moreover, publication bias may have resulted in the exclusion of works relevant to this review. We also constrained our analysis to screen-based interfaces for AI-assistance, acknowledging that embodied AI might support additional interactions. Our strict selection criteria centered on studies encompassing complete decision-making tasks to ensure actual Human-AI interactions. Given the diversity of experimental designs and factors in the papers reviewed in this survey, we abstracted the interactions to discern patterns across the varied studies.",
+          "citations": [],
+          "tables_in_text": []
+        }
+      ],
+      "subsubsections": [],
+      "text": "In establishing the interaction patterns presented in this paper, we drew from our observations of the Human-AI interactions used in AI-advised decision-making scenarios in prior empirical studies. While many of these studies effectively described their interfaces and user study procedures, there were instances where the information provided was not sufficient for a complete recreation of the interactions. Consequently, we had to carefully interpret and encode the interactions from these papers to the best of our abilities.\n\nConstructing a taxonomy is inherently challenging due to the wide array of potential approaches that can be adopted. Specifically, in the domain of Human-AI interaction, interactions can be examined through various lenses (e.g., system-centric, oriented around user goal/task, distinguished by varying levels of granularity in interaction techniques). In this work, we have taken a preliminary step to structure an approach by integrating our perspectives with observations of interaction paradigms used in existing studies. We hope this framework can serve as a foundation for further expansion and refinement to be made in subsequent research.\n\nUsing our taxonomy, we characterized existing interactions adopted in empirical studies. The most frequently observed interaction was the AI-first assistance pattern, where the user is given a direct presentation of the AI's prediction for the decision-making task. Its popularity can be attributed to the straightforwardness of demonstrating the effects of incorporating AI assistance into a decision-making task. However, it presents challenges, notably the difficulty in measuring the actual influence of AI assistance on user decision-making. Since the AI's solution is revealed before the user has had the opportunity to process the task independently, it can be convenient for the user to either dismiss or follow the AI's recommendation without sufficient reflection. Noticeably, interaction patterns may engender different types of biases, and knowing them in advance may help guard against biases. For instance, the AI-first interaction also makes the user susceptible to the \"anchoring bias\", a phenomenon where a person's judgment is biased based on initial information. This bias can be avoided through the use of Secondary assistance, where the user must interpret supplementary information, determine its relevance, and decide how to incorporate it into their primary decision-making process. In addition, direct presentation of AI inferences can lead to a lack of \"sense of agency\" for the user, which refers to the subjective feeling of controlling one's actions, and influencing external events through them [W4213418985]. Request-driven AI assistance can empower the user with the choice to view AI inferences and foster a sense of agency. It is worth noting that merely 10 of the identified AI-first assistance occurrences permitted the user to request AI inferences. However, although Request-driven AI assistance gives the user more sense of agency, it can give rise to possible confirmation bias or anchoring bias as well, especially when the user seeks explanations for decision verification or knowledge acquisition [W3092259203].\n\nIn contrast, in the AI-follow assistance pattern, the user is given a chance to solve the problem on their own, thus, potentially minimizing anchoring bias. Yet, whether users actually restart their decision making process is open to question. An article found that participants in this \"two-step\" workflow rarely revised their provisional diagnoses when the AI inferences differed from their earlier assessment [W4283172359]. This hints at confirmation bias, a person's tendency to seek supporting evidence for their current hypothesis. In case the user does re-evaluate their prior assessments, the cognitive costs increase. Cognitive costs of re-examination, when new information becomes available, can be viewed as analogous to interruption and recovery on the initial task with new information [W4283172359]. Being the second most common pattern, the prevalence of the AI-follow pattern likely arises from a strong interest in disentangling the influence of AI advice on the human's decision [W3207598588]. Given their widespread adoption, understanding the pros and cons of AI-first and AI-follow approaches is crucial in developing AI systems that align with human cognitive processes and decision-making styles. Additionally, it is important to highlight the variability of data recorded regarding participants' decisions with respect to the scenario at hand.\n\nA finer analysis per domain revealed the limited use and support for diverse interaction patterns, represented by most cell values equal to zero in **Figure 2**. However, it is worth noticing that for high-stake domains, such as healthcare and finance, multiple interaction patterns have been explored when AI provides decision support. The choice of specific interaction patterns can be influenced by several factors including both design choices made by researchers and the intrinsic nature of the problems being addressed. In the former, the research intent and resources, including data availability and quality, may affect design choices. In the later, ethical and legal considerations play an important role, specially in high-stakes domains. In more specialized fields, domain experts have their unique set of capabilities that can directly influence the choice and efficacy of interactions with the AI. For these experts, Secondary assistance can be beneficial, since they have the insights to effectively use the supplementary AI information for the primary decision-making task. However, for non-experts, the most suitable and beneficial choice of interaction pattern is unclear. Directly presenting a solution to the decision making problem can result in over-reliance [UNMAPPED:77], whereas Secondary assistance can avoid anchoring effects, but may not satisfy user needs. There remain questions about the universality of certain interaction patterns across varied user groups and task scenarios.\n\nIn general, while the most common patterns were AI-first, AI-follow, or Secondary assistance, in which the human role was limited to supervising the AI predictions, we did also note the presence of more dynamic interactions (e.g., Request-driven AI assistance, AI-guided dialogic user engagement, User-guided interactive adjustments), although less frequently. Interactive elements can enhance the communication of explanations allowing users to interpret AI predictions through selection, mutation, and dialogue as suggested by [W4366590516]. Likewise, supporting human input and review in the field of Interactive Machine Learning requires the design of interface elements for sample review, model inspection, or feedback assignment [W2794079986]. Moving beyond supervising AI outputs, a different paradigm emerges when humans co-create solutions in partnership with AI systems, actively involving them in the decision-making process. By combining the strengths of each agent, human intuition and expertise synergize with AI's computational efficiency and data-driven insights for creating more robust solutions. Conversational user interfaces are central to enabling this rich interaction, which facilitates a two-way dialogue between humans and AI. Moreover, the concept of distributing decision-making responsibilities among different agents, as seen in delegation patterns, extends the assistance beyond individual decisions [W4224940987]. This leads to diverse collaborative strategies, ranging from working in parallel\u2014as exemplified in delegation scenarios where AI operates autonomously but in alignment with human intent\u2014to more coordinated efforts, such as the turn-taking dynamic inherent in conversational AI.\n\nFrom our thorough exploration of interaction patterns in a sample of over 100 articles, we have identified gaps and opportunities. Much of the HCI literature on AI assistance has concentrated on intermittent scenarios (i.e., turn-taking). This is in contrast to continuous user interaction scenarios, where user input is sustained and can receive AI feedback at any given moment, which would be a more realistic and organic setup. Another noticeable gap was regarding multi-agent teamwork collaboration. Most studies focus on interactions between a single user and a single AI, but there could be potential scenarios where an additional agent can be added. Also, while the current Delegation pattern allows the agent to change the assignment of decision-making, task coordination and allocation between agents can be explored. Moreover, we observed that the nature of the decision-making task is a notable point of consideration. A significant number of the interactions are evaluated within artificial tasks. Such controlled and simulated environments may not truly reflect the complexities faced in real-world applications. For instance, interactions in most studies end post-decisions, and decision-makers are not exposed to the full consequences of their choice [W2168447411]. Thus, even when labeled as high-stakes, the lack of real consequences can influence user engagement. We must think more about differences in how users behave in experimental tasks and in equivalent real-life scenarios to assess whether AI assistance truly adds value to decision problems and capitalizes on the findings of experimental evaluations.\n\nThe design choices for Human-AI interactions must be made with deliberation. Factors such as user psychology \u2013 including tendencies like confirmation bias and anchoring bias \u2013 user agency, and the cognitive costs in terms of time and effort, should all be taken into careful consideration.",
+      "citations": [
+        "W4213418985",
+        "W3092259203",
+        "W4283172359",
+        "W3207598588",
+        "W4366590516",
+        "W2794079986",
+        "W4224940987",
+        "W2168447411"
+      ],
+      "tables_in_text": [],
+      "citations_unmapped": [
+        "77"
+      ]
+    },
+    {
+      "section_id": "s_5",
+      "section_index": 5,
+      "section_label": "5 Conclusion",
+      "subsections": [],
+      "subsubsections": [],
+      "text": "In this paper, we presented a systematic review of human-AI interactions in AI-advised decision making tasks that informed and grounded the formulation of a taxonomy of interaction patterns. Our proposed taxonomy of interaction patterns provides a structured foundation for understanding and designing these crucial interactions. It reveals that current practices often lean toward AI-driven or human-led decision processes, with limited emphasis on fostering interactive functionalities throughout the interactions. Recognizing the significance of interaction design, we advocate for deliberate choices in system development to enhance collaboration between humans and AI. Moving forward, the taxonomy presented here serves as a valuable resource to inform the design and development of AI-based decision support systems, ultimately fostering more productive, engaging, and user-centered collaborations.",
+      "citations": [],
+      "tables_in_text": []
+    },
+    {
+      "section_id": "s_6",
+      "section_index": 6,
+      "section_label": "Appendix",
+      "subsections": [
+        {
+          "subsection_id": "s_6_1",
+          "subsection_index": 1,
+          "subsection_label": "A Search Strategy",
+          "subsubsections": [],
+          "text": "We used the following search string to screen titles, abstracts, and keywords in all the databases consulted:\n\n(artificial intelligence OR machine learning OR deep learning OR neural network OR ai technology OR ai assistance OR ai OR algorithm OR hybrid intelligence) AND (human-ai collaboration OR human-ai interaction OR human-centered OR human centered OR human-ai teaming) AND (decision-making tasks OR ai decisions OR ai-assisted decision OR decision-making OR ai predictions OR ai-assisted decision-making OR ai-assisted diagnosis) AND (interaction OR interaction design OR interaction paradigm OR interface design)\n\nWe excluded articles with (\"survey\" OR \"workshop\" OR \"guideline\" OR \"review\") AND (\"robot\" OR \"game\" OR \"gaming\" OR \"driving\" OR \"autonomous vehicle\" OR \"car\" OR \"AV\") in the title and abstract.",
+          "citations": [],
+          "tables_in_text": []
+        },
+        {
+          "subsection_id": "s_6_2",
+          "subsection_index": 2,
+          "subsection_label": "B Survey Findings",
+          "subsubsections": [],
+          "text": "**Figure 3. PRISMA diagram for article selection in this survey.**\n\n**Table 2. Metrics used to study AI-assisted decision making, grouped by domain.** We classify metrics by the construct they were capturing and whether they correspond to objective or subjective measures.\n\n{{TABLE:tbl_03}}",
+          "citations": [],
+          "tables_in_text": [
+            "tbl_03"
+          ]
+        }
+      ],
+      "subsubsections": [],
+      "text": "",
+      "citations": [],
+      "tables_in_text": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl_01",
+      "placeholder": "{{TABLE:tbl_01}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_02",
+      "placeholder": "{{TABLE:tbl_02}}",
+      "source_section_id": "s_3",
+      "source_subsection_id": "s_3_3",
+      "table_scope": "main_text"
+    },
+    {
+      "table_id": "tbl_03",
+      "placeholder": "{{TABLE:tbl_03}}",
+      "source_section_id": "s_6",
+      "source_subsection_id": "s_6_2",
+      "table_scope": "main_text"
+    }
+  ],
+  "tables_file": "W4406083100_tables.md"
+}
