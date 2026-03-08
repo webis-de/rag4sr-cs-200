@@ -19,6 +19,11 @@ Current top-level layout:
 
 ```text
 data/
+  raw/
+    sr4all_computer_science_subset.jsonl
+    md/
+      W1505282872.md
+      ... (200 markdown files)
   refs/
     sr_references_aligned_openalex_slim.jsonl
   structured/
@@ -123,6 +128,35 @@ Example row structure:
   ]
 }
 ```
+
+### 4) `data/raw/` (raw inputs used by the pipeline)
+
+This folder contains the pre-structured inputs used to generate the released artifacts.
+
+#### `data/raw/md/`
+
+- One markdown file per SR (`W*.md`), e.g. `W1505282872.md`.
+- These files include the original review narrative, numbered in-text citations (`[1]`, `[2]`, ...), and reference lists.
+- They are the input for:
+  - `src/0_md2json.py` (structure extraction),
+  - `src/1_parse_sr_refs.py` (reference parsing).
+
+#### `data/raw/sr4all_computer_science_subset.jsonl` (hint)
+
+This is a JSONL subset of candidate SR works in Computer Science (one work per line), used by `src/2_get_all_ref.py` to collect global cited OpenAlex IDs.
+
+Typical fields include:
+
+- **Bibliographic/core metadata**: `id`, `title`, `doi`, `abstract`, `year`, `type`, `source`, `language`, `field`, `subfield`, `authors`.
+- **Citation graph fields**: `referenced_works_count`, `referenced_works` (list of OpenAlex work URLs), `cited_by_count`.
+- **Discovery/retrieval helpers**: `topics`, `keywords`, `pdf_url`.
+- **SR-specific enrichment fields** (when available): `objective`, `research_questions`, `inclusion_criteria`, `exclusion_criteria`, `n_studies_initial`, `n_studies_final`, `year_range`, `year_range_normalized`, `exact_boolean_queries`, etc.
+
+In short:
+
+- `data/raw/md/` = raw review full text,
+- `data/raw/sr4all_computer_science_subset.jsonl` = raw OpenAlex-centered SR metadata + outbound citations,
+- `data/structured/` and `data/refs/` = processed/aligned outputs for downstream RAG4SR evaluation.
 
 ---
 
