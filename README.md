@@ -11,8 +11,6 @@ This repository provides:
 - **Dataset artifacts** for 200 computer science systematic reviews (SRs), centered on structured review text and aligned references.
 - **Pipeline scripts** (`src/`) used to build and align references and structured JSON data.
 
-If your main goal is to **use the released dataset**, start with the [Data folder guide](#data-folder-guide).
-
 ---
 
 ## Data folder guide
